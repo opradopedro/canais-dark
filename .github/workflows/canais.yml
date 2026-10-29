@@ -17,6 +17,11 @@ on:
         description: "teste (nao publica nada), old-tales, signal-lost, so-you-built-it, hora-muerta ou metricas"
         default: "teste"
         required: true
+  # gatilho por envio: mudar .github/disparar.txt na branch producao roda a tarefa escrita nele (1a linha).
+  # Serve para o Kiro ou o Claude dispararem um teste sem o Pedro precisar clicar.
+  push:
+    branches: [producao]
+    paths: [".github/disparar.txt"]
 
 concurrency:
   group: canais-producao
@@ -44,6 +49,8 @@ jobs:
       HF_HUB_DISABLE_SYMLINKS_WARNING: "1"
       GH_TOKEN: ${{ github.token }}
     steps:
+      - uses: actions/checkout@v4
+
       - name: Qual tarefa
         id: qual
         run: |
@@ -53,12 +60,10 @@ jobs:
             "35 12 * * *") T=so-you-built-it ;;
             "40 18 * * *") T=hora-muerta ;;
             "15 3 * * *") T=metricas ;;
-            *) T="${{ github.event.inputs.tarefa }}" ;;
+            *) if [ "${{ github.event_name }}" = push ]; then T=$(head -1 .github/disparar.txt | tr -d '\r '); else T="${{ github.event.inputs.tarefa }}"; fi ;;
           esac
           echo "tarefa=$T" >> "$GITHUB_OUTPUT"
           echo "Tarefa: $T"
-
-      - uses: actions/checkout@v4
 
       - name: Canal ligado?
         id: ligado
