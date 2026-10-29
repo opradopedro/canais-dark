@@ -17,7 +17,8 @@ function monta() {
   const parede = tmat('concreto', { color: 0xece6dc, relevo: 0.5 });
   uvMundo(box(30, 12, 0.4, parede, C.x, 6, -9), 3);
   uvMundo(box(0.4, 12, 24, parede, C.x - 12, 6, 0), 3);
-  W3.teto = box(30, 0.3, 24, mat(0xf2efe9, { roughness: 0.9 }), C.x, 12.15, 0);
+  W3.teto = box(30, 0.3, 24, new T3.MeshBasicMaterial({ color: 0xe8e3da }), C.x, 12.15, 0);
+  const luz = new T3.PointLight(0xfff1dc, 40, 30, 1.4); luz.position.set(C.x - 2, 9, 4); scene.add(luz);
   // fogao e panela
   box(4, 3.4, 2.6, mat(0xdadde0, { roughness: 0.4, metalness: 0.4 }), C.x - 4, 1.7, -7.4);
   box(4, 0.1, 2.6, mat(0x1b1c1f), C.x - 4, 3.45, -7.4);
@@ -25,7 +26,7 @@ function monta() {
   box(1.6, 0.12, 0.2, mat(0x111111), C.x - 2.3, 3.85, -7.3);
   // detector no teto
   W3.det = grupo(); W3.det.position.set(C.x + 1, 11.75, -2);
-  cyl(1.0, 1.1, 0.5, mat(0xf7f7f4, { roughness: 0.5 }), 32, W3.det);
+  cyl(1.0, 1.1, 0.5, mat(0xf7f7f4, { roughness: 0.5, emissive: 0x9a9a96 }), 32, W3.det);
   for (let i = 0; i < 16; i++) { const a = i / 16 * Math.PI * 2; box(0.08, 0.3, 0.3, mat(0xc9ccd0), Math.cos(a) * 1.02, -0.05, Math.sin(a) * 1.02, W3.det).rotation.y = -a; }
   W3.ledCasa = new T3.Mesh(new T3.SphereGeometry(0.09, 10, 8), new T3.MeshBasicMaterial({ color: 0x400000 })); W3.ledCasa.position.set(0.5, -0.28, 0.4); W3.det.add(W3.ledCasa);
   W3.ondas = [...Array(3)].map(() => { const m = new T3.Mesh(new T3.TorusGeometry(1, 0.05, 6, 40), new T3.MeshBasicMaterial({ color: 0xff3b30, transparent: true, opacity: 0, depthWrite: false })); m.rotation.x = Math.PI / 2; m.position.copy(W3.det.position).add(new T3.Vector3(0, -0.3, 0)); scene.add(m); return m; });
@@ -57,8 +58,8 @@ function monta() {
   W3.chipLuz = new T3.PointLight(0x7cf0ff, 0, 4, 2); W3.chipLuz.position.set(R.x + 1.1, -1.8, 2.2); scene.add(W3.chipLuz);
   W3.eletrons = [...Array(14)].map(() => { const m = new T3.Mesh(new T3.SphereGeometry(0.08, 8, 6), new T3.MeshBasicMaterial({ color: 0x9ff7ff })); scene.add(m); return m; });
   // fumaca entrando na camara
-  const sm = new T3.MeshStandardMaterial({ color: 0x6f737a, roughness: 1, transparent: true, opacity: 0.75, depthWrite: false });
-  W3.fumo = [...Array(18)].map((_, i) => { const m = new T3.Mesh(new T3.SphereGeometry(0.28 + rnd(i) * 0.22, 12, 8), sm); scene.add(m); m.userData = { y: lerp(-0.4, 2.6, rnd(i * 3.7)), z: (rnd(i * 1.9) - 0.5) * 2.2, f: rnd(i * 6.3) }; return m; });
+  const sm = new T3.MeshStandardMaterial({ color: 0x6f737a, roughness: 1, transparent: true, opacity: 0.55, depthWrite: false });
+  W3.fumo = [...Array(18)].map((_, i) => { const m = new T3.Mesh(new T3.SphereGeometry(0.16 + rnd(i) * 0.14, 12, 8), sm); scene.add(m); m.userData = { y: lerp(-0.4, 2.6, rnd(i * 3.7)), z: (rnd(i * 1.9) - 0.5) * 2.2, f: rnd(i * 6.3) }; return m; });
 }
 
 function estado(et, k) {
@@ -87,7 +88,7 @@ function atualiza(t, ctx) {
   W3.fumCasa.forEach((m, i) => {
     const u = (t * 0.12 + rnd(i * 4.4)) % 1; m.visible = S.fumCasa > 0.02;
     m.position.set(LOCAL.casa.x - 4 + Math.sin(u * 6 + i) * 0.8 + u * 4.5 * rnd(i * 2), 4 + u * 7.6, -7.3 + u * 5 * rnd(i * 5));
-    m.scale.setScalar(S.fumCasa * (0.6 + u * 1.6));
+    m.scale.setScalar(S.fumCasa * (0.4 + u * 0.9));
   });
   // fonte
   W3.fonteLuz.intensity = S.s >= 1 && S.s <= 6 ? 3 + Math.sin(t * 6) * 1 : 0;
@@ -141,7 +142,7 @@ function overlay(t, ctx) {
   if (et === 'fonte') { const [px, py] = proj(R.x, -0.9, 0); pill(px, py + 110, 'Americium-241', COL.yellow, COL.ink, 40, s); }
   if (et === 'alfa') pill(W / 2, 300, 'Alpha particles', COL.yellow, COL.ink, 40, s);
   if (et === 'ions') {
-    const [ax, ay] = proj(R.x - 2.3, 3.0, 0), [bx, by] = proj(R.x + 2.3, 3.0, 0);
+    const [ax, ay] = proj(R.x - 1.4, 3.0, 0), [bx, by] = proj(R.x + 1.4, 3.0, 0);
     pill(ax, ay - 70, '+', COL.red, '#fff', 48, s); pill(bx, by - 70, '−', '#2f7fe0', '#fff', 48, s);
     pill(W / 2, 300, 'Charged air', branco, COL.ink, 40, s);
   }
