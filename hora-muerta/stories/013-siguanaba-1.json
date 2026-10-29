@@ -1,0 +1,198 @@
+{
+ "codigo": "HM013",
+ "formato": "Leyenda",
+ "serie": "siguanaba",
+ "serie_titulo": "La Siguanaba | Hora Muerta",
+ "parte": 1,
+ "partes": 2,
+ "autor": "kiro",
+ "titulo": "La mujer del río me pidió que me acercara 😨 La Siguanaba Parte 1 #shorts",
+ "capa": "NO LE PIDAS QUE VOLTEE",
+ "descripcion": "En Centroamérica dicen que la Siguanaba lava ropa en el río a medianoche, siempre de espaldas.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú te habrías acercado?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #lasiguanaba #leyendas #centroamerica",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "leyendas",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "la siguanaba",
+  "leyendas de el salvador",
+  "leyendas de guatemala"
+ ],
+ "lineas": [
+  {
+   "texto": "Si ves a una mujer lavando en el río a medianoche, no le pidas que voltee.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Yo volvía solo de una fiesta, por el camino del río.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Y en una piedra, en medio del agua, una mujer lavaba ropa.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Pelo negro hasta la cintura, vestido blanco, y un guacal que brillaba como oro.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Cantaba bajito, sin voltear: acércate, que no te veo.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Me metí al agua hasta las rodillas. Ya casi la tocaba...",
+   "pausa": 0.6
+  },
+  {
+   "texto": "y ella, muy despacio, empezó a voltear la cabeza.",
+   "pausa": 1.0
+  },
+  {
+   "texto": "Parte dos, mañana, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "siguanaba",
+   "p": {
+    "dist": [
+     0.75,
+     0.68
+    ],
+    "zoom": 0.08,
+    "fy": 0.55
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "camino",
+   "p": {
+    "figura": false,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "siguanaba",
+   "p": {
+    "dist": [
+     0.95,
+     0.85
+    ],
+    "zoom": 0.1,
+    "fy": 0.55
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "siguanaba",
+   "p": {
+    "dist": [
+     0.7,
+     0.6
+    ],
+    "zoom": 0.08,
+    "fy": 0.6
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "siguanaba",
+   "p": {
+    "dist": [
+     0.6,
+     0.48
+    ],
+    "zoom": 0.08,
+    "fy": 0.6
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "siguanaba",
+   "p": {
+    "dist": [
+     0.45,
+     0.32
+    ],
+    "zoom": 0.1,
+    "fy": 0.6
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "siguanaba",
+   "p": {
+    "dist": [
+     0.3,
+     0.25
+    ],
+    "vira": [
+     0,
+     0.35
+    ],
+    "zoom": 0.1,
+    "fy": 0.58
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "PARTE 2",
+     "Mañana · {fecha_siguiente}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "acerca",
+   "linea": 5,
+   "en": 0.5
+  },
+  {
+   "tipo": "golpe",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  },
+  {
+   "tipo": "acerca",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  },
+  {
+   "tipo": "susto",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "que voltee",
+  "medianoche",
+  "oro",
+  "acércate",
+  "la tocaba",
+  "parte 2"
+ ],
+ "gancho": {
+  "cena": 6,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

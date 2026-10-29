@@ -1,4 +1,2 @@
 # (caminho do roteiro para desenhar a previa na nuvem)
-so-you-built-it/stories/018-water-well.json
-# volta 2
-# volta 3
+hora-muerta/stories/014-siguanaba-2.json

@@ -1,0 +1,215 @@
+{
+ "codigo": "HM014",
+ "formato": "Leyenda",
+ "serie": "siguanaba",
+ "serie_titulo": "La Siguanaba | Hora Muerta",
+ "parte": 2,
+ "partes": 2,
+ "anterior": "HM013",
+ "autor": "kiro",
+ "titulo": "Volteó y tenía cara de caballo 😨 La Siguanaba Parte 2 #shorts",
+ "capa": "TENÍA CARA DE CABALLO",
+ "descripcion": "Final de la historia de la Siguanaba: la mujer que lava en el río y nunca da la cara... hasta que te acercas.\n\n¿En tu país también la cuentan?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #lasiguanaba #leyendas #centroamerica",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "leyendas",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "la siguanaba",
+  "leyendas de el salvador",
+  "leyendas de guatemala"
+ ],
+ "lineas": [
+  {
+   "texto": "Parte dos. La mujer del río volteó, y no tenía cara de mujer.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Era una cara larga, de caballo, con los ojos rojos.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Y se rió tan fuerte que el río dejó de sonar.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Mi abuelo decía: es la Siguanaba, y busca a los que andan solos de noche.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Si la ves de frente, muerde tu cruz y no la sueltes.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Mordí la medallita de mi cuello hasta que me dolieron los dientes.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Cuando abrí los ojos, estaba solo en la orilla, y ella lavaba otra vez, lejos.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Si una mujer en el río te pide que te acerques... muerde tu cruz antes de que voltee.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "siguanaba",
+   "p": {
+    "dist": [
+     0.3,
+     0.26
+    ],
+    "vira": [
+     0.35,
+     1
+    ],
+    "zoom": 0.08,
+    "fy": 0.58
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "siguanaba",
+   "p": {
+    "dist": [
+     0.26,
+     0.18
+    ],
+    "vira": 1,
+    "zoom": 0.1,
+    "fy": 0.55
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "siguanaba",
+   "p": {
+    "dist": [
+     0.2,
+     0.15
+    ],
+    "vira": 1,
+    "zoom": 0.12,
+    "fy": 0.55
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "vela",
+   "p": {
+    "foto": true,
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "vela",
+   "p": {
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "siguanaba",
+   "p": {
+    "dist": [
+     0.2,
+     0.4
+    ],
+    "vira": 1,
+    "zoom": 0.08,
+    "fy": 0.58
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "siguanaba",
+   "p": {
+    "dist": [
+     0.95,
+     0.92
+    ],
+    "zoom": 0.06,
+    "fy": 0.55
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "siguanaba",
+   "p": {
+    "dist": [
+     0.7,
+     0.5
+    ],
+    "vira": [
+     0,
+     0.15
+    ],
+    "zoom": 0.1,
+    "fy": 0.58
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 0,
+   "en": "inicio",
+   "mas": -0.2
+  },
+  {
+   "tipo": "golpe",
+   "linea": 2,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 2,
+   "en": 0.4
+  },
+  {
+   "tipo": "acerca",
+   "linea": 5,
+   "en": 0.3
+  },
+  {
+   "tipo": "golpe",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  },
+  {
+   "tipo": "negro",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.8,
+   "dur": 1.0
+  }
+ ],
+ "destaque": [
+  "cara de mujer",
+  "de caballo",
+  "ojos rojos",
+  "la siguanaba",
+  "muerde tu cruz",
+  "antes de que voltee"
+ ],
+ "gancho": {
+  "cena": 2,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

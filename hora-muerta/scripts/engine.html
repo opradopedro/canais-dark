@@ -975,6 +975,55 @@ COMP.quarto = (t, lt, p) => {
   }
 };
 
+// mulher de costas lavando roupa numa pedra do rio, cabelo longo; ao virar mostra cara de cavalo (Siguanaba)
+// p.dist [a,b] distancia (1 longe, 0 perto); p.vira [a,b] quanto ela virou (0 costas, 1 de frente); o evento susto vira de vez
+COMP.siguanaba = (t, lt, p) => {
+  const sky = x.createLinearGradient(0, 0, 0, H * 0.42); sky.addColorStop(0, '#03050a'); sky.addColorStop(1, '#0e1622'); x.fillStyle = sky; x.fillRect(0, 0, W, H);
+  x.fillStyle = '#d5dbe4'; x.beginPath(); x.arc(W * 0.72, H * 0.12, 54, 0, 7); x.fill(); glow(W * 0.72, H * 0.12, 320, 'rgba(200,215,235,0.2)');
+  const hz = H * 0.42;
+  for (let i = 0; i < 9; i++) { const bx = (i / 8) * W, bh = 120 + rnd(i + 3) * 160; x.fillStyle = '#020305'; x.beginPath(); x.ellipse(bx, hz - 20, 120 + rnd(i) * 60, bh, 0, Math.PI, 0); x.fill(); }
+  x.fillStyle = '#04060a'; x.fillRect(0, hz - 24, W, 40);
+  const wg = x.createLinearGradient(0, hz, 0, H); wg.addColorStop(0, '#0c1420'); wg.addColorStop(1, '#02040a'); x.fillStyle = wg; x.fillRect(0, hz, W, H - hz);
+  for (let i = 0; i < 22; i++) { const yy = hz + 16 + i * i * 2.4, w = 36 + i * 8; x.fillStyle = `rgba(200,215,235,${0.16 - i * 0.005})`; x.fillRect(W * 0.72 - w / 2 + Math.sin(t * 2 + i) * (5 + i), yy, w, 3 + i * 0.2); }
+  const dist = rng(p.dist ?? [0.8, 0.6], lt), g = E.since(t, 'susto');
+  let vira = rng(p.vira ?? 0, lt); if (g >= 0) vira = Math.max(vira, ease(Math.min(1, g / 0.22)));
+  const sc = (0.25 + (1 - dist) * 1.1) * (1 + (g >= 0 ? ease(Math.min(1, g / 0.3)) * 0.12 : 0));
+  const fx = W * 0.5, fy = hz + 120 + (1 - dist) * 760;
+  x.save(); x.translate(fx, fy); x.scale(sc, sc);
+  // pedra e ondas em volta
+  x.fillStyle = '#0a0d12'; x.beginPath(); x.ellipse(0, 10, 260, 60, 0, 0, 7); x.fill();
+  for (let r = 0; r < 4; r++) { const k = (t * 0.5 + r / 4) % 1; x.strokeStyle = `rgba(200,215,235,${0.25 * (1 - k)})`; x.lineWidth = 4; x.beginPath(); x.ellipse(0, 30, 280 + k * 260, 50 + k * 40, 0, 0, 7); x.stroke(); }
+  // guacal dourado ao lado
+  x.fillStyle = '#c9a23a'; x.beginPath(); x.ellipse(230, -8, 62, 22, 0, 0, 7); x.fill(); x.fillStyle = '#6d5418'; x.beginPath(); x.ellipse(230, -16, 52, 12, 0, 0, 7); x.fill();
+  glow(fx + 230 * sc, fy - 10 * sc, 90, 'rgba(230,190,90,0.18)');
+  const fade = 0.75 + 0.15 * Math.sin(t * 1.3), lava = Math.sin(t * 5) * 26;
+  // vestido branco ajoelhado
+  x.fillStyle = `rgba(226,230,236,${fade})`; x.beginPath(); x.moveTo(-95, -300); x.lineTo(95, -300); x.lineTo(150, -10); x.quadraticCurveTo(0, 20, -150, -10); x.closePath(); x.fill();
+  // bracos lavando
+  x.strokeStyle = `rgba(214,206,196,${fade})`; x.lineWidth = 26; x.lineCap = 'round';
+  x.beginPath(); x.moveTo(-80, -270); x.quadraticCurveTo(-150, -150, -60 + lava, -30); x.stroke();
+  x.beginPath(); x.moveTo(80, -270); x.quadraticCurveTo(150, -150, 60 + lava, -30); x.stroke();
+  x.fillStyle = `rgba(226,230,236,${fade})`; x.fillRect(-90 + lava, -50, 180, 26);
+  // cabeca: de costas so cabelo; virando aparece a cara de cavalo
+  const hy = -360, gira = Math.sin(vira * Math.PI / 2);
+  x.fillStyle = '#050507';
+  x.beginPath(); x.ellipse(0, hy, 62, 74, 0, 0, 7); x.fill();
+  x.beginPath(); x.moveTo(-70, hy); x.quadraticCurveTo(-110 - Math.sin(t) * 8, -150, -90, -60); x.lineTo(90, -60); x.quadraticCurveTo(110 + Math.sin(t + 1) * 8, -150, 70, hy); x.closePath(); x.fill();
+  if (vira > 0.02) {
+    x.save(); x.translate(lerp(40, 0, gira), 0); x.scale(Math.max(0.15, gira), 1);
+    x.fillStyle = '#b6bba6'; x.beginPath(); x.moveTo(-58, hy - 70); x.quadraticCurveTo(0, hy - 110, 58, hy - 70); x.lineTo(44, hy + 150); x.quadraticCurveTo(0, hy + 205, -44, hy + 150); x.closePath(); x.fill();
+    x.strokeStyle = 'rgba(70,74,60,0.6)'; x.lineWidth = 5; for (const s of [-1, 1]) { x.beginPath(); x.moveTo(s * 30, hy - 20); x.quadraticCurveTo(s * 40, hy + 60, s * 22, hy + 140); x.stroke(); }
+    for (const s of [-1, 1]) { x.fillStyle = '#0a0606'; x.beginPath(); x.ellipse(s * 30, hy - 28, 19, 13, s * 0.3, 0, 7); x.fill(); x.fillStyle = '#ff3a2a'; x.beginPath(); x.arc(s * 30, hy - 28, 6, 0, 7); x.fill(); }
+    x.fillStyle = '#1c1a14'; for (const s of [-1, 1]) { x.beginPath(); x.ellipse(s * 16, hy + 170, 8, 13, 0, 0, 7); x.fill(); }
+    x.fillStyle = '#050507'; x.beginPath(); x.moveTo(-64, hy - 60); x.quadraticCurveTo(0, hy - 130, 64, hy - 60); x.lineTo(70, hy - 20); x.quadraticCurveTo(0, hy - 80, -70, hy - 20); x.closePath(); x.fill();
+    x.restore();
+    if (vira > 0.6) glow(fx, fy + (hy - 28) * sc, 160 * sc, `rgba(255,60,40,${0.25 * vira})`);
+  }
+  x.restore();
+  for (let i = 0; i < 16; i++) { const rx = (i / 15) * W + rnd(i) * 30, rh = 200 + rnd(i + 5) * 300, sw = Math.sin(t * 1.2 + i) * 16; x.strokeStyle = '#010202'; x.lineWidth = 9; x.beginPath(); x.moveTo(rx, H); x.quadraticCurveTo(rx + sw / 2, H - rh / 2, rx + sw, H - rh); x.stroke(); }
+  fog(t, 0.07, '140,150,170');
+};
+
 // cartela de texto (regras, "Parte 2 manana", etc.)
 COMP.texto = (t, lt, p) => {
   if (CALMO()) {
