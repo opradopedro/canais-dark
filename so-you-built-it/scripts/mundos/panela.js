@@ -16,12 +16,12 @@ function monta() {
   // queimador e chama
   const anel = new T3.Mesh(new T3.TorusGeometry(0.75, 0.06, 8, 40), mat(0x3a3c40, { metalness: 0.6 })); anel.rotation.x = Math.PI / 2; anel.position.y = 0.02; scene.add(anel);
   W3.chamas = [...Array(18)].map((_, i) => {
-    const m = new T3.Mesh(new T3.ConeGeometry(0.07, 0.3, 8), new T3.MeshBasicMaterial({ color: 0x3a7bff, transparent: true, opacity: 0.85 }));
-    const a = i / 18 * Math.PI * 2; m.position.set(Math.cos(a) * 0.75, 0.15, Math.sin(a) * 0.75); scene.add(m); return m;
+    const m = new T3.Mesh(new T3.ConeGeometry(0.05, 0.1, 8), new T3.MeshBasicMaterial({ color: 0x3a7bff, transparent: true, opacity: 0.85 }));
+    const a = i / 18 * Math.PI * 2; m.position.set(Math.cos(a) * 0.75, 0.05, Math.sin(a) * 0.75); scene.add(m); return m;
   });
   // panela cortada ao meio (metade de tras) + fundo
   const corpo = new T3.Mesh(new T3.CylinderGeometry(R, R, HP, 48, 1, true, Math.PI / 2, Math.PI), metal()); corpo.position.y = 0.1 + HP / 2; scene.add(corpo);
-  const fundo = new T3.Mesh(new T3.CircleGeometry(R, 48, Math.PI, Math.PI), metal()); fundo.rotation.x = -Math.PI / 2; fundo.position.y = 0.11; scene.add(fundo);
+  const fundo = new T3.Mesh(new T3.CircleGeometry(R, 48, 0, Math.PI), metal()); fundo.rotation.x = -Math.PI / 2; fundo.position.y = 0.11; scene.add(fundo);
   for (const s of [-1, 1]) { box(0.06, HP, 0.06, mat(0x9aa0a5, { metalness: 0.8 }), s * R, 0.1 + HP / 2, 0); box(0.7, 0.12, 0.2, mat(0x1b1b1b), s * (R + 0.35), 0.1 + HP * 0.85, -0.2); }
   // agua (metade) com face do corte
   W3.aguaMat = new T3.MeshStandardMaterial({ color: 0x3f9fe3, roughness: 0.1, transparent: true, opacity: 0.75, side: T3.DoubleSide });
@@ -124,7 +124,7 @@ function overlay(t, ctx) {
     x.restore(); pill(W / 2, H * 0.14, 'Steam pushes down', COL.red, '#fff', 40, s);
   }
   if (S.s === 6) {
-    const y0 = H * 0.16, x0 = W * 0.12, w = W * 0.62, k = ease(clamp((t - ctx.t0) * 0.8, 0, 1));
+    const y0 = H * 0.06, x0 = W * 0.08, w = W * 0.55, k = ease(clamp((t - ctx.t0) * 0.8, 0, 1));
     pill(x0 + 150, y0 - 10, 'Open pot', branco, COL.ink, 30, 1);
     x.fillStyle = 'rgba(0,0,0,0.25)'; x.fillRect(x0, y0 + 30, w, 34); x.fillStyle = '#ff7a3a'; x.fillRect(x0, y0 + 30, w * k, 34);
     pill(x0 + 190, y0 + 110, 'Pressure cooker', COL.green, '#fff', 30, 1);
