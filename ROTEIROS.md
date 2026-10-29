@@ -64,7 +64,9 @@ Se o pull trouxer um roteiro com o MESMO código que você usou (os dois escreve
 seu para o próximo número livre, ajuste o `anterior` e o `series.md`, rode o fiscal e envie de novo.
 
 ## O que NÃO fazer
-- Não publicar, não gastar narração: a produção diária (GitHub Actions) faz isso sozinha.
+- **Signal Lost e Old Tales:** quem escreve o roteiro não publica nem gasta narração. A produção diária no
+  GitHub Actions faz isso sozinha. **Hora Muerta e So You Built It** continuam narrando e subindo pelas
+  rotinas do Claude, como sempre.
 - Não apagar nem reescrever roteiro que já está no YouTube (o código dele aparece em `yt_upload.py publicados`).
 - Não pôr chave, token ou senha em nenhum arquivo.
 - Não mexer em `main`: a branch de trabalho é `producao`.
