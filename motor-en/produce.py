@@ -232,6 +232,14 @@ def produzir(c, historia, a, base):
     tts = [sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "tts_guard.py"),
            historia, base + "_voz.wav", base + "_tempos.json"]
     run(*(tts + (["--motor", a.motor] if a.motor else [])))
+    # legenda presa na voz limpa SEMPRE, antes de desenhar: a voz que vem da caixa ou com as marcas do Gemini
+    # fora do ar (timeout) deixava palavra adiantada ate 1,4 s depois de pausa (CL002 "Part two. Today", 29/10)
+    try:
+        import legenda_whisper
+        esperar_memoria("legenda na voz")
+        print("legenda na voz:", legenda_whisper.ajustar(base + "_voz.wav", base + "_tempos.json", c["idioma"]), flush=True)
+    except Exception as e:
+        print("legenda na voz falhou (fica a do tts, o revisar confere):", str(e)[:200], file=sys.stderr, flush=True)
     if a.teste:
         h = carregar(historia)
         tm = json.load(open(base + "_tempos.json"))
