@@ -51,6 +51,9 @@ function monta() {
   // controle na "mao" (na frente do sofa, apontando para a TV)
   W3.mao = grupo(); W3.mao.position.set(S.x + 1.5, 3.2, 3.6); W3.mao.rotation.y = Math.PI / 2 + 0.12; W3.mao.rotation.z = 0.12;
   controleSolido(0.42, W3.mao);
+  W3.brilho = new T3.Mesh(new T3.SphereGeometry(0.35, 20, 14),
+    new T3.MeshBasicMaterial({ color: 0xe2c4ff, transparent: true, opacity: 0.85, depthWrite: false }));
+  scene.add(W3.brilho);
   // feixe de luz: contas que viajam do controle ate o sensor
   W3.contaMat = new T3.MeshBasicMaterial({ color: 0xff2a5a, transparent: true, opacity: 0, depthWrite: false });
   W3.contas = Array.from({ length: NB }, () => { const c = new T3.Mesh(new T3.SphereGeometry(0.12, 10, 8), W3.contaMat); scene.add(c); return c; });
@@ -115,8 +118,11 @@ function atualiza(t, ctx) {
     b.position.copy(p); b.scale.setScalar(aceso((u - f * 0.3 + 1) % 1) ? 1.2 : 0.35);
   });
   W3.contaMat.opacity = enviando ? visivel : 0;
-  W3.ledMao.material.emissive = new T3.Color(piscando && et === 'camera' ? 0xff6aa0 : 0x000000);
-  W3.ledMao.material.emissiveIntensity = 2.5;
+  W3.ledMao.material.emissive = new T3.Color(piscando && et === 'camera' ? 0xc58bff : 0x000000);
+  W3.ledMao.material.emissiveIntensity = 4;
+  // na camera do celular o infravermelho aparece como um brilho roxo-branco
+  W3.brilho.visible = et === 'camera' && piscando;
+  W3.brilho.position.copy(W3.ledMao.getWorldPosition(new T3.Vector3()));
   // tela: escura no comeco, acende e mostra o volume subindo no final
   W3.telaMat.color.set(et === 'final' ? 0x3a6bd0 : et === 'sensor' ? 0x2a4f9a : 0x1b2a44);
   W3.luzSala.intensity = et === 'final' ? 18 : 6;
@@ -144,7 +150,7 @@ function atualiza(t, ctx) {
 
 // camera: alvo relativo ao lugar; troca de lugar = corte seco com zoom
 const CAM = {
-  sala: { y: 4.4, d: 18, h: 1.6, a: 0.42 }, camera: { y: 4.2, d: 9, h: 0.6, a: 1.25 }, botao: { y: 0.1, d: 9.5, h: 4.2, a: 0.35 },
+  sala: { y: 4.4, d: 18, h: 1.6, a: 0.42 }, camera: { y: 3.3, d: 4.2, h: 0.35, a: Math.PI - 0.5, x: 1.7, z: 3.4 }, botao: { y: 0.1, d: 9.5, h: 4.2, a: 0.35 },
   aperta: { y: 0.0, d: 5.5, h: 1.6, a: 0.05, x: -1.3 }, chip: { y: 0.0, d: 6, h: 2.4, a: 0.5, x: 2.4 },
   led: { y: 0.1, d: 7.5, h: 1.2, a: 0.9, x: 5.5 }, pulsos: { y: 0.1, d: 13, h: 1.8, a: 0.15, x: 7 },
   sensor: { y: 3.4, d: 7, h: 0.4, a: 0.25, x: 4.5, z: -6.5 }, final: { y: 5.6, d: 15, h: 1.0, a: 0.08, z: -2 },
