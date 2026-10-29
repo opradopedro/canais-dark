@@ -1,0 +1,194 @@
+{
+ "codigo": "SV006",
+ "formato": "Survivor",
+ "serie": "metro",
+ "serie_titulo": "The Front Car | Signal Lost",
+ "parte": 2,
+ "partes": 4,
+ "autor": "kiro",
+ "anterior": "SV005",
+ "titulo": "We counted six. Then seven 😨 Part 2 #horror #shorts",
+ "capa": "SIX OF US. THEN SEVEN.",
+ "descripcion": "The driver told us to count ourselves. We did it twice.\n\n> Part 3: {when_next}.\nWho do you think the seventh one was?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "subway",
+  "train",
+  "stuck in a tunnel"
+ ],
+ "lineas": [
+  {
+   "texto": "Part two. There were six of us left in my car.",
+   "pausa": 0.8,
+   "vel": 0.88
+  },
+  {
+   "texto": "A man in a suit walked up to the glass door to look inside.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "The glass fogged up. From the other side.",
+   "pausa": 0.9,
+   "vel": 0.84
+  },
+  {
+   "texto": "And a hand pressed into it. From the empty car.",
+   "pausa": 1.0,
+   "vel": 0.82
+  },
+  {
+   "texto": "Then the intercom: this is your driver. Stay in your car. Count yourselves.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "So we counted. One, two, three, four, five, six.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "We counted again. Seven.",
+   "pausa": 1.0,
+   "vel": 0.8
+  },
+  {
+   "texto": "And nobody could say who the seventh one was.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Part three, {when_next}.",
+   "pausa": 0.3,
+   "vel": 0.88
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0.8,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0.8,
+    "zoom": 0.14,
+    "fy": 0.45
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0.5,
+    "zoom": 0.2,
+    "fy": 0.42
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0.5,
+    "zoom": 0.22,
+    "fy": 0.42
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "STAY IN YOUR CAR",
+     "count yourselves"
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0.6,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0.6,
+    "parpadeo": true,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0.4,
+    "luz": 0.6,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "PART 3",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "mano",
+   "linea": 3,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 3,
+   "en": 0.4
+  },
+  {
+   "tipo": "golpe",
+   "linea": 6,
+   "en": 0.5
+  },
+  {
+   "tipo": "susto",
+   "linea": 6,
+   "en": 0.5
+  }
+ ],
+ "destaque": [
+  "six of us",
+  "fogged up",
+  "the other side",
+  "the empty car",
+  "count yourselves",
+  "seven",
+  "part three"
+ ],
+ "gancho": {
+  "cena": 3,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

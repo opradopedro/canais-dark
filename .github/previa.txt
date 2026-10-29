@@ -1,3 +1,2 @@
 # (caminho do roteiro para desenhar a previa na nuvem)
-so-you-built-it/stories/020-basement.json
-# volta 2
+signal-lost/stories/005-metro-1.json

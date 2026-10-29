@@ -1,0 +1,190 @@
+{
+ "codigo": "SV005",
+ "formato": "Survivor",
+ "serie": "metro",
+ "serie_titulo": "The Front Car | Signal Lost",
+ "parte": 1,
+ "partes": 4,
+ "autor": "kiro",
+ "titulo": "The front car emptied in ten seconds 😨 Part 1 #horror #shorts",
+ "capa": "THE FRONT CAR WAS EMPTY",
+ "descripcion": "Our train stopped in the tunnel. The lights went out for ten seconds. The front car was packed. Then it wasn't.\n\n> Part 2: {when_next}.\nWould you have looked through the glass?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "subway",
+  "train",
+  "stuck in a tunnel"
+ ],
+ "lineas": [
+  {
+   "texto": "Our train stopped in the tunnel at 11:52, between two stations.",
+   "pausa": 0.8,
+   "vel": 0.88
+  },
+  {
+   "texto": "Through the glass door, I could see the front car. Packed. Standing room only.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Then every light on the train went out.",
+   "pausa": 0.9,
+   "vel": 0.85
+  },
+  {
+   "texto": "Ten seconds. Then they flickered back on.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "The front car was empty. Every seat. Every pole.",
+   "pausa": 0.9,
+   "vel": 0.84
+  },
+  {
+   "texto": "Nobody walked past us. There was nowhere to go.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Then the intercom clicked on, and someone up front was breathing.",
+   "pausa": 1.0,
+   "vel": 0.82
+  },
+  {
+   "texto": "Part two, {when_next}.",
+   "pausa": 0.3,
+   "vel": 0.88
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "metro",
+   "p": {
+    "tunel": [
+     1,
+     0
+    ],
+    "gente": 14,
+    "frente": 0.9,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "metro",
+   "p": {
+    "gente": 14,
+    "frente": 0.9,
+    "zoom": 0.16,
+    "fy": 0.45
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "metro",
+   "p": {
+    "gente": 14,
+    "frente": [
+     0.9,
+     0.05
+    ],
+    "luz": [
+     1,
+     0.05
+    ],
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "parpadeo": true,
+    "frente": 0.85,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0.9,
+    "zoom": 0.18,
+    "fy": 0.45
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0.9,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0.7,
+    "luz": 0.75,
+    "zoom": 0.14,
+    "fy": 0.45
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "PART 2",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "apaga",
+   "linea": 2,
+   "en": 0.5
+  },
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.2
+  },
+  {
+   "tipo": "mano",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "susto",
+   "linea": 6,
+   "en": 0.6
+  }
+ ],
+ "destaque": [
+  "11:52",
+  "packed",
+  "went out",
+  "empty",
+  "nowhere to go",
+  "breathing",
+  "part two"
+ ],
+ "gancho": {
+  "cena": 6,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

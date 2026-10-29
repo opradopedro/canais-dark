@@ -1,0 +1,192 @@
+{
+ "codigo": "SV008",
+ "formato": "Survivor",
+ "serie": "metro",
+ "serie_titulo": "The Front Car | Signal Lost",
+ "parte": 4,
+ "partes": 4,
+ "autor": "kiro",
+ "anterior": "SV007",
+ "titulo": "The driver knocked on our window 🚇 Part 4 #horror #shorts",
+ "capa": "THE DRIVER WAS STILL IN HIS CAB",
+ "descripcion": "A man in a driver's uniform knocked on our window from the tracks. Then the real driver spoke.\n\nWould you have climbed out?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "subway",
+  "train",
+  "stuck in a tunnel"
+ ],
+ "lineas": [
+  {
+   "texto": "Part four. We stood in a circle, four flashlights pointing out.",
+   "pausa": 0.8,
+   "vel": 0.88
+  },
+  {
+   "texto": "Something knocked on the window. A man in a driver's uniform, down on the tracks.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "He smiled and said: the cab is safe. Open the window and climb out.",
+   "pausa": 0.9,
+   "vel": 0.84
+  },
+  {
+   "texto": "Then the intercom crackled: this is your driver. I never left my cab. Don't open anything.",
+   "pausa": 1.0,
+   "vel": 0.82
+  },
+  {
+   "texto": "We didn't. He knocked until five in the morning.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "At 5:03, the train moved.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "At the next station, the front car was full again. Every face pressed to the glass. Looking at us.",
+   "pausa": 1.0,
+   "vel": 0.8
+  },
+  {
+   "texto": "If your train ever stops in a tunnel, count yourselves. And never let it get dark.",
+   "pausa": 0.4,
+   "vel": 0.84
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0,
+    "luz": 0.25,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "ventana",
+   "p": {
+    "cara": true,
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "ventana",
+   "p": {
+    "cara": true,
+    "zoom": 0.16,
+    "fy": 0.45
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "I NEVER LEFT MY CAB",
+     "don't open anything"
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "reloj",
+   "p": {
+    "hora": "5:00",
+    "zoom": 0.07
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0.8,
+    "luz": 1,
+    "tunel": [
+     0,
+     1
+    ],
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "metro",
+   "p": {
+    "gente": 14,
+    "frente": 0.9,
+    "luz": 1,
+    "cara": true,
+    "zoom": 0.18,
+    "fy": 0.45
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "COUNT YOURSELVES",
+     "never let it get dark"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 1,
+   "en": 0.1
+  },
+  {
+   "tipo": "golpe",
+   "linea": 1,
+   "en": 0.35
+  },
+  {
+   "tipo": "flash",
+   "linea": 3,
+   "en": "inicio",
+   "mas": -0.1
+  },
+  {
+   "tipo": "susto",
+   "linea": 6,
+   "en": 0.55
+  },
+  {
+   "tipo": "negro",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.8,
+   "dur": 1.0
+  }
+ ],
+ "destaque": [
+  "four flashlights",
+  "driver's uniform",
+  "climb out",
+  "never left my cab",
+  "five in the morning",
+  "full again",
+  "looking at us",
+  "never let it get dark"
+ ],
+ "gancho": {
+  "cena": 6,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

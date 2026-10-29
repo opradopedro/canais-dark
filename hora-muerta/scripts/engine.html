@@ -1024,6 +1024,80 @@ COMP.siguanaba = (t, lt, p) => {
   fog(t, 0.07, '140,150,170');
 };
 
+// vagao de metro parado no tunel, visto do corredor; no fundo a porta de vidro para o vagao da frente
+// p.luz [a,b] luz do vagao (0 escuro, 1 aceso); p.parpadeo pisca; p.frente [a,b] luz do vagao da frente;
+// p.gente quantas pessoas aparecem no vagao da frente (0 = vazio); p.cara rosto colado no vidro (ou evento aparece);
+// p.tunel velocidade das luzes do tunel nas janelas (0 = parado); evento mano = marca de mao no vidro
+COMP.metro = (t, lt, p) => {
+  let L = rng(p.luz ?? 1, lt);
+  if (p.parpadeo) L *= rnd(Math.floor(t * 9)) > 0.3 ? 1 : 0.12;
+  const ap = E.since(t, 'apaga'); if (ap >= 0 && ap < 0.6) L *= 0.05;
+  const F = rng(p.frente ?? 0.8, lt), vx = W / 2, vy = H * 0.44, fw = W * 0.34, fh = H * 0.36;
+  const fx0 = vx - fw / 2, fx1 = vx + fw / 2, fy0 = vy - fh / 2, fy1 = vy + fh / 2;
+  const P = (a, b, d) => [lerp(a[0], b[0], d), lerp(a[1], b[1], d)];
+  const quad = (pts, cor) => { x.fillStyle = cor; x.beginPath(); x.moveTo(...pts[0]); for (const q of pts.slice(1)) x.lineTo(...q); x.closePath(); x.fill(); };
+  const c = (r, g, b, k = 1) => `rgb(${Math.round(r * (0.12 + 0.88 * L) * k)},${Math.round(g * (0.12 + 0.88 * L) * k)},${Math.round(b * (0.12 + 0.88 * L) * k)})`;
+  x.fillStyle = '#050608'; x.fillRect(0, 0, W, H);
+  const TL = [0, 0], TR = [W, 0], BL = [0, H], BR = [W, H], fTL = [fx0, fy0], fTR = [fx1, fy0], fBL = [fx0, fy1], fBR = [fx1, fy1];
+  quad([TL, TR, fTR, fTL], c(70, 74, 80)); quad([BL, BR, fBR, fBL], c(46, 44, 42));
+  quad([TL, fTL, fBL, BL], c(96, 100, 104)); quad([TR, fTR, fBR, BR], c(90, 94, 98));
+  // janelas laterais (tunel escuro, luzes passando quando anda)
+  const vel = rng(p.tunel ?? 0, lt);
+  for (const lado of [0, 1]) for (let i = 0; i < 3; i++) {
+    const d0 = 0.08 + i * 0.27, d1 = d0 + 0.17, nT = lado ? TR : TL, nB = lado ? BR : BL, fT = lado ? fTR : fTL, fB = lado ? fBR : fBL;
+    const a = P(P(nT, nB, 0.2), P(fT, fB, 0.2), d0), b = P(P(nT, nB, 0.2), P(fT, fB, 0.2), d1), cc = P(P(nT, nB, 0.48), P(fT, fB, 0.48), d1), d = P(P(nT, nB, 0.48), P(fT, fB, 0.48), d0);
+    quad([a, b, cc, d], '#020304');
+    if (vel > 0.01) { const u = (t * vel * 1.5 + i * 0.37 + lado * 0.5) % 1; const e = P(a, b, u), f = P(d, cc, u); x.strokeStyle = 'rgba(255,214,140,0.7)'; x.lineWidth = 10; x.beginPath(); x.moveTo(...e); x.lineTo(...f); x.stroke(); }
+  }
+  // bancos
+  for (const lado of [0, 1]) {
+    const nT = lado ? TR : TL, nB = lado ? BR : BL, fT = lado ? fTR : fTL, fB = lado ? fBR : fBL;
+    const a = P(nT, nB, 0.66), b = P(fT, fB, 0.66), cc = P(fT, fB, 0.82), d = P(nT, nB, 0.82);
+    const dx = lado ? -1 : 1;
+    quad([a, b, [b[0] + dx * 22, b[1]], [a[0] + dx * 190, a[1]]], c(40, 70, 120));
+    quad([[a[0] + dx * 190, a[1]], [b[0] + dx * 22, b[1]], cc, d], c(28, 48, 86));
+  }
+  // barras de segurar
+  x.lineCap = 'round';
+  for (const d of [0.25, 0.55]) for (const s of [-1, 1]) {
+    const top = P([vx + s * W * 0.32, 0], [vx + s * fw * 0.32, fy0], d), bot = P([vx + s * W * 0.32, H], [vx + s * fw * 0.32, fy1], d);
+    x.strokeStyle = c(190, 196, 200); x.lineWidth = lerp(26, 8, d); x.beginPath(); x.moveTo(...top); x.lineTo(...bot); x.stroke();
+  }
+  // luzes do teto
+  for (const s of [-1, 1]) { x.strokeStyle = `rgba(235,240,255,${0.15 + 0.85 * L})`; x.lineWidth = 16; x.beginPath(); x.moveTo(vx + s * W * 0.25, 30); x.lineTo(vx + s * fw * 0.25, fy0 + 6); x.stroke(); }
+  if (L > 0.5) glow(vx, H * 0.08, W * 0.7, `rgba(220,230,255,${0.12 * L})`);
+  // parede do fundo e porta de vidro
+  quad([fTL, fTR, fBR, fBL], c(80, 84, 90));
+  const dw = fw * 0.42, dx0 = vx - dw / 2, dy0 = fy0 + fh * 0.12, dh = fh * 0.82;
+  x.fillStyle = c(150, 156, 162); x.fillRect(dx0, dy0, dw, dh);
+  const gx = dx0 + dw * 0.12, gy = dy0 + dh * 0.1, gw = dw * 0.76, gh = dh * 0.5;
+  const fg = x.createLinearGradient(0, gy, 0, gy + gh); fg.addColorStop(0, `rgba(${200 * F + 8},${210 * F + 8},${220 * F + 10},1)`); fg.addColorStop(1, `rgba(${120 * F + 4},${126 * F + 4},${134 * F + 6},1)`);
+  x.fillStyle = fg; x.fillRect(gx, gy, gw, gh);
+  x.save(); x.beginPath(); x.rect(gx, gy, gw, gh); x.clip();
+  // o vagao da frente visto pelo vidro: corredor pequeno e pessoas sentadas
+  x.strokeStyle = `rgba(0,0,0,${0.25 * F + 0.1})`; x.lineWidth = 3;
+  for (const s of [-1, 1]) { x.beginPath(); x.moveTo(gx + gw / 2 + s * gw * 0.5, gy + gh); x.lineTo(gx + gw / 2 + s * gw * 0.12, gy + gh * 0.42); x.stroke(); }
+  const n = Math.round(p.gente ?? 0);
+  for (let i = 0; i < n; i++) {
+    const s = i % 2 ? -1 : 1, d = rnd(i * 3.1), px = gx + gw / 2 + s * lerp(gw * 0.38, gw * 0.14, d), py = gy + lerp(gh * 0.86, gh * 0.5, d), r = lerp(13, 6, d);
+    x.fillStyle = `rgba(20,20,24,${0.85})`; x.beginPath(); x.arc(px, py - r * 2.2, r, 0, 7); x.fill(); x.fillRect(px - r * 1.4, py - r * 1.3, r * 2.8, r * 2.6);
+  }
+  const ca = E.since(t, 'aparece'), kc = p.cara ? 1 : ca >= 0 ? ease(Math.min(1, ca / 0.25)) : 0;
+  if (kc > 0) creepyFace(gx + gw / 2, gy + gh * 0.62, gw / 260, kc, 'rgba(205,210,200,', 'sonrisa');
+  const mn = E.since(t, 'mano');
+  if (mn >= 0) {
+    x.fillStyle = `rgba(230,236,240,${Math.min(0.55, mn * 2)})`; const hx = gx + gw * 0.3, hy = gy + gh * 0.45;
+    x.beginPath(); x.ellipse(hx, hy, 22, 28, 0, 0, 7); x.fill();
+    for (let f = 0; f < 4; f++) { x.beginPath(); x.ellipse(hx - 18 + f * 12, hy - 42 - (f === 1 || f === 2 ? 8 : 0), 5, 16, 0, 0, 7); x.fill(); }
+    x.beginPath(); x.ellipse(hx + 28, hy - 6, 5, 14, -0.7, 0, 7); x.fill();
+  }
+  x.restore();
+  x.strokeStyle = c(40, 42, 46); x.lineWidth = 6; x.strokeRect(gx, gy, gw, gh);
+  if (F > 0.3) glow(gx + gw / 2, gy + gh / 2, gw * 0.9, `rgba(210,220,235,${0.12 * F})`);
+  x.fillStyle = `rgba(0,0,0,${0.55 * (1 - L)})`; x.fillRect(0, 0, W, H);
+  fog(t, 0.05, '120,130,150');
+};
+
 // cartela de texto (regras, "Parte 2 manana", etc.)
 COMP.texto = (t, lt, p) => {
   if (CALMO()) {

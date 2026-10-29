@@ -9,3 +9,10 @@ Quem continuar uma série (Kiro ou Claude) escreve as partes FALTA seguindo o re
 - SV003 parte 3/4: batidas e olhos na fresta (ver o roteiro). FEITO
 - SV004 parte 4/4: fuga pelo corredor (ver o roteiro). FEITO
 Cenas: relógio, elevator (cabine 3D), telefono, ojos, pasillo, texto. Sons gravados: batida em metal, choro, zumbido.
+
+## metro (SV005-SV008) - The Front Car - por: kiro (29/10)
+- SV005 parte 1/4: trem para no tunel 11:52; vagao da frente lotado visto pela porta de vidro; luzes apagam 10 s; vagao da frente vazio; interfone com respiracao. FEITO
+- SV006 parte 2/4: seis no vagao; homem vai ao vidro; vidro embaca do outro lado e aparece uma mao; motorista: fiquem no vagao, contem-se; contam seis, depois sete. FEITO
+- SV007 parte 3/4: a cada piscada some alguem perto da porta; alerta no celular: nao deixem escurecer, usem lanternas; luz do trem morre; quatro lanternas; algo ri ao lado da porta. FEITO
+- SV008 parte 4/4: homem de uniforme bate na janela pelos trilhos e pede para sairem; o motorista de verdade diz que nunca saiu da cabine; nao abrem; 5:03 o trem anda; na estacao o vagao da frente esta cheio de novo, rostos no vidro. FEITO
+Cenas: peca nova `metro` (p.luz, p.parpadeo, p.frente, p.gente, p.cara, p.tunel; eventos apaga, aparece, mano), ventana, telefono, reloj, texto.

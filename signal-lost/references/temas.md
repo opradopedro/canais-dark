@@ -25,7 +25,7 @@ estrada, onibus, agua). Tema que exige peca nova custa muito mais caro: deixe pa
   Peca: `ventana`, `pasillo`, `ojos`.
 - [ ] **Quarentena no apartamento** — alerta manda nao abrir a porta por 14 dias. No dia 9, a vizinha
   bate dizendo que o alerta acabou. Peca: `puerta`, `telefono`, `texto`.
-- [ ] **Metro parado no tunel** — trem para no tunel, luzes apagam, e o vagao da frente fica vazio
+- [x] **Metro parado no tunel** (SV005-SV008, peca metro) — trem para no tunel, luzes apagam, e o vagao da frente fica vazio
   entre uma olhada e outra. Peca: `pasillo`, `puerta`, `reloj`.
 - [ ] **Turno da madrugada no hospital** — enfermeiro no andar desativado; a campainha do quarto 412
   toca, e o 412 nao existe mais. Peca: `pasillo`, `puerta`, `telefono`.

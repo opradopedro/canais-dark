@@ -1,0 +1,196 @@
+{
+ "codigo": "SV007",
+ "formato": "Survivor",
+ "serie": "metro",
+ "serie_titulo": "The Front Car | Signal Lost",
+ "parte": 3,
+ "partes": 4,
+ "autor": "kiro",
+ "anterior": "SV006",
+ "titulo": "Every flicker, one of us was gone 😨 Part 3 #horror #shorts",
+ "capa": "DON'T LET IT GET DARK",
+ "descripcion": "Every time the lights flickered, someone near the front door was gone. Then one message got through.\n\n> Part 4: {when_next}.\nHow long would your phone battery last?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "subway",
+  "train",
+  "stuck in a tunnel"
+ ],
+ "lineas": [
+  {
+   "texto": "Part three. Every time the lights flickered, someone near the front door was gone.",
+   "pausa": 0.8,
+   "vel": 0.88
+  },
+  {
+   "texto": "Seven. Then six. Then five.",
+   "pausa": 0.9,
+   "vel": 0.84
+  },
+  {
+   "texto": "My phone found one bar of signal, and one message came through.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Trains stopped in tunnels: keep the lights on. Use your phone flashlights. Do not let it get dark.",
+   "pausa": 0.9,
+   "vel": 0.85
+  },
+  {
+   "texto": "We turned on every flashlight we had.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Then the train lights died for good.",
+   "pausa": 1.0,
+   "vel": 0.82
+  },
+  {
+   "texto": "Four little lights. Four of us. And right beside the front door, something laughed.",
+   "pausa": 1.0,
+   "vel": 0.8
+  },
+  {
+   "texto": "Part four, {when_next}.",
+   "pausa": 0.3,
+   "vel": 0.88
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0.5,
+    "parpadeo": true,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0.4,
+    "parpadeo": true,
+    "zoom": 0.12
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "telefono",
+   "p": {
+    "de": "EMERGENCY ALERT",
+    "hora": "1:14",
+    "msg": "",
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "telefono",
+   "p": {
+    "de": "EMERGENCY ALERT",
+    "hora": "1:14",
+    "msg": "Trains stopped in tunnels: keep the lights on. Use phone flashlights. Do not let it get dark.",
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0.3,
+    "luz": 0.5,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": [
+     0.3,
+     0
+    ],
+    "luz": [
+     0.5,
+     0.15
+    ],
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "metro",
+   "p": {
+    "gente": 0,
+    "frente": 0,
+    "luz": 0.15,
+    "zoom": 0.16,
+    "fy": 0.45
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "PART 4",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 1,
+   "en": 0.3
+  },
+  {
+   "tipo": "mensaje",
+   "linea": 3,
+   "en": "inicio"
+  },
+  {
+   "tipo": "apaga",
+   "linea": 5,
+   "en": 0.5
+  },
+  {
+   "tipo": "aparece",
+   "linea": 6,
+   "en": 0.7
+  },
+  {
+   "tipo": "susto",
+   "linea": 6,
+   "en": 0.7
+  }
+ ],
+ "destaque": [
+  "flickered",
+  "gone",
+  "five",
+  "one bar",
+  "do not let it get dark",
+  "died for good",
+  "laughed",
+  "part four"
+ ],
+ "gancho": {
+  "cena": 6,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
