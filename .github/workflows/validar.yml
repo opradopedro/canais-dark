@@ -1,0 +1,22 @@
+name: Fiscal dos roteiros
+
+# Confere todo roteiro que entra na branch producao, escrito pelo Kiro ou pelo Claude.
+# Se tiver erro, fica vermelho e o GitHub manda e-mail. A producao diaria nao usa roteiro quebrado:
+# ela tambem roda o fiscal antes (ver crew/rodar_canal.py).
+on:
+  push:
+    branches: [producao]
+    paths: ["*/stories/**", "hora-muerta/scripts/engine.html", "motor-en/validar_roteiros.py"]
+  pull_request:
+    paths: ["*/stories/**"]
+  workflow_dispatch:
+
+jobs:
+  fiscal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python motor-en/validar_roteiros.py
