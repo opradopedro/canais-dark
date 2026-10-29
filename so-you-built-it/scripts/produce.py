@@ -20,6 +20,7 @@ STORIES = os.path.join(SKILL, "stories")
 sys.path.insert(0, AQUI)
 from comum import carregar, resolver
 
+CONSERTOS = int(os.environ.get("CANAIS_CONSERTOS_YB", "2"))  # voltas de conserto da legenda antes de subir com aviso
 HORA_UTC = {"Curiosidade": 21, "Evolucao": 23}  # 17h e 19h em Nova York (EDT), pico do publico de lingua inglesa; no inverno caem 1 h antes
 
 # voz e ritmo do canal: animada (pedido do Pedro, 23/10: a Charon ficou sem energia) (o tts.py veio do Hora Muerta, que usa voz sussurrada e lenta)
@@ -120,8 +121,26 @@ def main():
             ocupados.add(up["publicar_em"][:13])
         json.dump(up, open(base + "_upload.json", "w"), ensure_ascii=False, indent=1)
         print("video:", base + ".mp4", flush=True)
-        if not revisar(base, "en") and a.subir:
-            sys.exit(f"NAO SUBIU {cod}: legenda fora da voz ou audio com problema (ver acima); conserte e rode de novo")
+        ok = revisar(base, "en")
+        # blindagem (pedido do Pedro, 29/10: o video nao trava, igual ao motor-en). Refaz o corte da voz a partir da
+        # narracao bruta guardada (nao gasta cota do Gemini TTS), desenha de novo e confere. Na 2a volta usa o Whisper
+        # "small", que erra menos as marcas. Se nada passar, sobe mesmo assim e avisa, para o canal nao parar.
+        volta = 0
+        while not ok and a.subir and volta < CONSERTOS:
+            volta += 1
+            print(f"CONSERTO {cod}: volta {volta} de {CONSERTOS}", flush=True)
+            if volta >= 2:
+                os.environ["LEGENDA_MODELO"] = "small"
+            try:
+                produzir(historia, a, base)
+            except Exception as e:
+                print(f"conserto {volta} caiu: {str(e)[:200]}", flush=True)
+                continue
+            ok = revisar(base, "en")
+        os.environ.pop("LEGENDA_MODELO", None)
+        if not ok and a.subir:
+            print(f"AVISO {cod}: a conferencia nao passou depois de {volta} conserto(s); subo mesmo assim para o canal nao parar",
+                  flush=True)
         vid = None
         if a.subir:
             import yt_upload

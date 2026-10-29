@@ -31,10 +31,10 @@ API = "https://generativelanguage.googleapis.com/v1beta"
 KOKORO_URL = "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-multi-lang-v1_0.tar.bz2"
 
 
-def _get(url, key, body=None):
+def _get(url, key, body=None, timeout=240):
     req = urllib.request.Request(url, json.dumps(body).encode() if body else None,
                                  {"Content-Type": "application/json", "x-goog-api-key": key})
-    return json.load(urllib.request.urlopen(req, timeout=240))
+    return json.load(urllib.request.urlopen(req, timeout=timeout))
 
 
 def modelos_tts(key):
@@ -208,10 +208,11 @@ def marcas(audio, linhas, key):
     try:
         for tent in range(3):
             try:
-                r = _get(f"{API}/models/{modelo_texto(key)}:generateContent", key, corpo); break
-            except urllib.error.HTTPError as e:
-                if e.code not in (429, 500, 503) or tent == 2:
+                r = _get(f"{API}/models/{modelo_texto(key)}:generateContent", key, corpo, timeout=120); break
+            except OSError as e:  # HTTPError e tambem "read operation timed out" (YB018, 29/10): tenta de novo
+                if (isinstance(e, urllib.error.HTTPError) and e.code not in (429, 500, 503)) or tent == 2:
                     raise
+                print(f"marcas: tentativa {tent + 1} falhou ({str(e)[:80]}); tento de novo", file=sys.stderr)
                 time.sleep(10 * (tent + 1))
         v = json.loads(r["candidates"][0]["content"]["parts"][0]["text"])
         v = [float(x) for x in v]
@@ -235,10 +236,12 @@ def marcas_whisper(audio, linhas):
         achado = L.casar([w for _, w in ws], L.ouvir(a16, os.environ.get("LEGENDA_IDIOMA", "es")))
         v = []
         for k in range(len(linhas)):
-            ts = [t for (kk, _), t in zip(ws, achado) if kk == k and t is not None]
+            ts = [(j, t) for j, t in enumerate(t for (kk, _), t in zip(ws, achado) if kk == k) if t is not None]
             if not ts:
                 return None
-            v.append(round(ts[0], 1))
+            # a 1a palavra achada pode ser a 3a da linha: recua ~0,3 s por palavra antes dela (YB018, 29/10)
+            j, t = ts[0]
+            v.append(round(max(v[-1] if v else 0.0, t - 0.3 * j), 1))
         if all(b >= a for a, b in zip(v, v[1:])):
             print("marcas whisper:", v, file=sys.stderr)
             return v

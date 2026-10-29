@@ -18,6 +18,7 @@ STORIES = os.path.join(os.path.dirname(AQUI), "stories")
 sys.path.insert(0, AQUI)
 from comum import carregar, resolver
 
+CONSERTOS = int(os.environ.get("CANAIS_CONSERTOS_HM", "2"))  # voltas de conserto da legenda antes de subir com aviso
 HORA_UTC = 0  # 21h em Brasilia (UTC-3) = 00h UTC do dia seguinte
 
 
@@ -150,10 +151,27 @@ def main():
         json.dump(up, open(base + "_upload.json", "w"), ensure_ascii=False, indent=1)
         print("video:", base + ".mp4", flush=True)
         ok = revisar(base, "es")
+        # blindagem (pedido do Pedro, 29/10: o video nao trava, igual ao motor-en). Refaz o corte da voz a partir da
+        # narracao bruta guardada (nao gasta cota do Gemini TTS), desenha de novo e confere. Na 2a volta usa o Whisper
+        # "small", que erra menos as marcas. Se nada passar, sobe mesmo assim e avisa, para o canal nao parar.
+        volta = 0
+        while not ok and a.subir and volta < CONSERTOS:
+            volta += 1
+            print(f"CONSERTO {cod}: volta {volta} de {CONSERTOS}", flush=True)
+            if volta >= 2:
+                os.environ["LEGENDA_MODELO"] = "small"
+            try:
+                produzir(historia, a, base)
+            except Exception as e:
+                print(f"conserto {volta} caiu: {str(e)[:200]}", flush=True)
+                continue
+            ok = revisar(base, "es")
+        os.environ.pop("LEGENDA_MODELO", None)
         if os.path.exists(base + "_voz.wav"):
             os.remove(base + "_voz.wav")
         if not ok and a.subir:
-            sys.exit(f"NAO SUBIU {cod}: legenda fora da voz ou audio com problema (ver acima); conserte e rode de novo")
+            print(f"AVISO {cod}: a conferencia nao passou depois de {volta} conserto(s); subo mesmo assim para o canal nao parar",
+                  flush=True)
         if a.subir:
             import yt_upload
             r = yt_upload.subir(base + "_upload.json")

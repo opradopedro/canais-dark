@@ -31,10 +31,10 @@ API = "https://generativelanguage.googleapis.com/v1beta"
 KOKORO_URL = "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-multi-lang-v1_0.tar.bz2"
 
 
-def _get(url, key, body=None):
+def _get(url, key, body=None, timeout=240):
     req = urllib.request.Request(url, json.dumps(body).encode() if body else None,
                                  {"Content-Type": "application/json", "x-goog-api-key": key})
-    return json.load(urllib.request.urlopen(req, timeout=240))
+    return json.load(urllib.request.urlopen(req, timeout=timeout))
 
 
 def modelos_tts(key):
@@ -160,10 +160,11 @@ def marcas(audio, linhas, key):
     try:
         for tent in range(3):
             try:
-                r = _get(f"{API}/models/{modelo_texto(key)}:generateContent", key, corpo); break
-            except urllib.error.HTTPError as e:
-                if e.code not in (429, 500, 503) or tent == 2:
+                r = _get(f"{API}/models/{modelo_texto(key)}:generateContent", key, corpo, timeout=120); break
+            except OSError as e:  # HTTPError e tambem "read operation timed out" (YB018, 29/10): tenta de novo
+                if (isinstance(e, urllib.error.HTTPError) and e.code not in (429, 500, 503)) or tent == 2:
                     raise
+                print(f"marcas: tentativa {tent + 1} falhou ({str(e)[:80]}); tento de novo", file=sys.stderr)
                 time.sleep(10 * (tent + 1))
         v = json.loads(r["candidates"][0]["content"]["parts"][0]["text"])
         v = [float(x) for x in v]
@@ -188,8 +189,11 @@ def marcas_whisper(audio, linhas):
         ini = legenda_whisper.casar([w for p in palavras_ for w in p], ouvidas)
         v, k = [], 0
         for p in palavras_:
-            achou = next((t for t in ini[k:k + len(p)] if t is not None), None)
-            v.append(achou); k += len(p)
+            # a 1a palavra achada pode ser a 3a da linha: a linha comecou antes. Sem recuar, o corte cai depois
+            # do comeco dela e a frase fica no pedaco anterior (YB018, 29/10: legenda 0,7 s atrasada)
+            j = next((j for j, t in enumerate(ini[k:k + len(p)]) if t is not None), None)
+            ant = next((x for x in reversed(v) if x is not None), 0.0)
+            v.append(None if j is None else max(ant, ini[k + j] - 0.3 * j)); k += len(p)
         if any(x is None for x in v) or any(b < a for a, b in zip(v, v[1:])):
             print("marcas whisper incompletas:", v, file=sys.stderr)
             return None
