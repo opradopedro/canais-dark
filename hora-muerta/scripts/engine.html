@@ -988,7 +988,7 @@ COMP.siguanaba = (t, lt, p) => {
   const dist = rng(p.dist ?? [0.8, 0.6], lt), g = E.since(t, 'susto');
   let vira = rng(p.vira ?? 0, lt); if (g >= 0) vira = Math.max(vira, ease(Math.min(1, g / 0.22)));
   const sc = (0.25 + (1 - dist) * 1.1) * (1 + (g >= 0 ? ease(Math.min(1, g / 0.3)) * 0.12 : 0));
-  const fx = W * 0.5, fy = hz + 120 + (1 - dist) * 760;
+  const fx = W * 0.5, fy = hz + 120 + (1 - dist) * 900;
   x.save(); x.translate(fx, fy); x.scale(sc, sc);
   // pedra e ondas em volta
   x.fillStyle = '#0a0d12'; x.beginPath(); x.ellipse(0, 10, 260, 60, 0, 0, 7); x.fill();
