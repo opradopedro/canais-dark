@@ -1,2 +1,2 @@
 # (caminho do roteiro para desenhar a previa na nuvem)
-signal-lost/stories/005-metro-1.json
+old-tales/stories/004-squire-1.json

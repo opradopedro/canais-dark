@@ -1,0 +1,162 @@
+{
+ "codigo": "CL005",
+ "formato": "You Wake Up",
+ "tema": "calmo",
+ "piano": 0,
+ "serie": "squire",
+ "serie_titulo": "You Wake Up as a Squire | Old Tales",
+ "parte": 2,
+ "partes": 3,
+ "autor": "kiro",
+ "anterior": "CL004",
+ "titulo": "Training to be a knight in 1300 ⚔️ Part 2 #history #shorts",
+ "capa": "A SQUIRE'S TRAINING",
+ "descripcion": "Wooden swords, sore arms, and a smith whose hammer makes the sparks fly. An afternoon as a medieval squire.\n\nPart 3: {when_next}, the day you become a knight.\nWhich job would you pick?\n\n#history #medieval #middleages #historyfacts #shorts",
+ "tags": [
+  "medieval life",
+  "middle ages",
+  "history",
+  "history facts",
+  "medieval knight",
+  "squire",
+  "castle life",
+  "life in 1300",
+  "you wake up in"
+ ],
+ "lineas": [
+  {
+   "texto": "Part two. Every afternoon, you train in the castle yard.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "You swing a wooden sword at a post in the ground. Again, and again, and again.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Your practice sword is heavier than a real one, so the real one will feel light.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Then you visit the smith. Every time his hammer falls, the sparks fly.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "He is making a horseshoe. He dips it in water, and it hisses like a snake.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "A coat of mail can take weeks of work. That is why it is worth so much.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "At night, the great hall fills with music, laughter, and woodsmoke.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "You fall asleep by the fire, your arms still aching.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Part three, {when_next}: the day you become a knight.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "vila",
+   "p": {
+    "hora": "dia",
+    "castelo": true,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "vila",
+   "p": {
+    "hora": "dia",
+    "castelo": true,
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "vila",
+   "p": {
+    "hora": "tarde",
+    "castelo": true,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "forja",
+   "p": {
+    "faiscas": true,
+    "zoom": 0.08,
+    "fy": 0.65
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "forja",
+   "p": {
+    "vapor": true,
+    "zoom": 0.12,
+    "fy": 0.8
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "forja",
+   "p": {
+    "malha": true,
+    "zoom": 0.08,
+    "fy": 0.35
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "salao",
+   "p": {
+    "hora": "noite",
+    "mesa": true,
+    "gente": 1,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "salao",
+   "p": {
+    "hora": "noite",
+    "camas": true,
+    "zoom": 0.08,
+    "fy": 0.75
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "PART 3",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "train",
+  "wooden sword",
+  "heavier",
+  "sparks",
+  "hisses",
+  "weeks",
+  "music",
+  "aching",
+  "become a knight"
+ ]
+}

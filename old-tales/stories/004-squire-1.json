@@ -1,0 +1,167 @@
+{
+ "codigo": "CL004",
+ "formato": "You Wake Up",
+ "tema": "calmo",
+ "piano": 0,
+ "serie": "squire",
+ "serie_titulo": "You Wake Up as a Squire | Old Tales",
+ "parte": 1,
+ "partes": 3,
+ "autor": "kiro",
+ "titulo": "You wake up as a squire in 1300 🛡️ Part 1 #history #shorts",
+ "capa": "YOU WAKE UP AS A SQUIRE",
+ "descripcion": "Straw beds in the great hall, rusty mail in a barrel of sand, and bread for plates. A morning as a squire in a medieval castle.\n\nPart 2: {when_next}, training and the forge.\nWould you last a week?\n\n#history #medieval #middleages #historyfacts #shorts",
+ "tags": [
+  "medieval life",
+  "middle ages",
+  "history",
+  "history facts",
+  "medieval knight",
+  "squire",
+  "castle life",
+  "life in 1300",
+  "you wake up in"
+ ],
+ "lineas": [
+  {
+   "texto": "You wake up in the year 1300. This time you are fourteen, a squire in a castle.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "You sleep on a straw mattress in the great hall, next to the other boys and the dogs.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Before your knight wakes up, you check his horse: water, hay, and clean hooves.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Then his armour. His mail is made of thousands of little iron rings, linked by hand.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Iron rusts, so you clean it the old way: rolled in a barrel of sand and vinegar.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "You help him dress. A padded coat first, then the heavy mail, then the cloth coat on top.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "At dinner, you serve at your lord's table. You even carve his meat.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "And the plates? Thick slices of old bread, called trenchers.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Part two, {when_next}: training and the forge.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "salao",
+   "p": {
+    "hora": "aurora",
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "salao",
+   "p": {
+    "hora": "aurora",
+    "camas": true,
+    "zoom": 0.08,
+    "fy": 0.75
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "vila",
+   "p": {
+    "hora": "aurora",
+    "castelo": true,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "forja",
+   "p": {
+    "malha": true,
+    "zoom": 0.12,
+    "fy": 0.3
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "forja",
+   "p": {
+    "malha": true,
+    "zoom": 0.1,
+    "fy": 0.85
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "salao",
+   "p": {
+    "armadura": true,
+    "zoom": 0.08,
+    "fy": 0.7
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "salao",
+   "p": {
+    "mesa": true,
+    "gente": 0.8,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "salao",
+   "p": {
+    "mesa": true,
+    "gente": 0.6,
+    "zoom": 0.16,
+    "fy": 0.64
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "PART 2",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "galo",
+   "linea": 0,
+   "en": "inicio",
+   "mas": 0.2
+  }
+ ],
+ "destaque": [
+  "fourteen",
+  "straw",
+  "horse",
+  "iron rings",
+  "sand and vinegar",
+  "padded coat",
+  "carve",
+  "trenchers",
+  "the forge"
+ ]
+}

@@ -1,0 +1,155 @@
+{
+    "codigo":  "CL006",
+    "formato":  "You Wake Up",
+    "tema":  "calmo",
+    "piano":  0,
+    "serie":  "squire",
+    "serie_titulo":  "You Wake Up as a Squire | Old Tales",
+    "parte":  3,
+    "partes":  3,
+    "autor":  "kiro",
+    "anterior":  "CL005",
+    "titulo":  "The day you become a knight in 1300 🗡️ Part 3 #history #shorts",
+    "capa":  "THE DAY YOU BECOME A KNIGHT",
+    "descripcion":  "Becoming a knight cost a fortune. Many squires never did. Today, your lord pays.\n\nWould you have stayed a squire?\n\n#history #medieval #middleages #historyfacts #shorts",
+    "tags":  [
+                 "medieval life",
+                 "middle ages",
+                 "history",
+                 "history facts",
+                 "medieval knight",
+                 "squire",
+                 "castle life",
+                 "life in 1300",
+                 "you wake up in"
+             ],
+    "lineas":  [
+                   {
+                       "texto":  "Part three. Years have passed. You are twenty-one now.",
+                       "pausa":  0.8
+                   },
+                   {
+                       "texto":  "Becoming a knight costs a fortune: horses, armour, a sword, and servants of your own.",
+                       "pausa":  0.8
+                   },
+                   {
+                       "texto":  "So much that many squires never became knights at all. Some kings had to order rich men to do it.",
+                       "pausa":  0.8
+                   },
+                   {
+                       "texto":  "But your lord will pay. The night before, by tradition, you pray in the chapel until dawn.",
+                       "pausa":  0.8
+                   },
+                   {
+                       "texto":  "In the morning, the great hall is full. Everyone is watching.",
+                       "pausa":  0.8
+                   },
+                   {
+                       "texto":  "You kneel. Your lord touches your shoulder with his sword. This is the dubbing.",
+                       "pausa":  1.0
+                   },
+                   {
+                       "texto":  "Then you are given spurs, the mark of a knight.",
+                       "pausa":  0.8
+                   },
+                   {
+                       "texto":  "Tonight, a new boy sleeps on your old straw mattress. Would you have stayed a squire?",
+                       "pausa":  0.3
+                   }
+               ],
+    "cenas":  [
+                  {
+                      "linea":  0,
+                      "comp":  "salao",
+                      "p":  {
+                                "hora":  "dia",
+                                "zoom":  0.06
+                            }
+                  },
+                  {
+                      "linea":  1,
+                      "comp":  "forja",
+                      "p":  {
+                                "malha":  true,
+                                "zoom":  0.06,
+                                "fy":  0.4
+                            }
+                  },
+                  {
+                      "linea":  2,
+                      "comp":  "vila",
+                      "p":  {
+                                "hora":  "tarde",
+                                "castelo":  true,
+                                "zoom":  0.06
+                            }
+                  },
+                  {
+                      "linea":  3,
+                      "comp":  "salao",
+                      "p":  {
+                                "hora":  "noite",
+                                "zoom":  0.06
+                            }
+                  },
+                  {
+                      "linea":  4,
+                      "comp":  "salao",
+                      "p":  {
+                                "gente":  1,
+                                "zoom":  0.06
+                            }
+                  },
+                  {
+                      "linea":  5,
+                      "comp":  "salao",
+                      "p":  {
+                                "espada":  true,
+                                "gente":  0.6,
+                                "toque":  [
+                                              0,
+                                              1
+                                          ],
+                                "zoom":  0.08,
+                                "fy":  0.7
+                            }
+                  },
+                  {
+                      "linea":  6,
+                      "comp":  "salao",
+                      "p":  {
+                                "espada":  true,
+                                "gente":  0.6,
+                                "toque":  1,
+                                "zoom":  0.06
+                            }
+                  },
+                  {
+                      "linea":  7,
+                      "comp":  "salao",
+                      "p":  {
+                                "hora":  "noite",
+                                "camas":  true,
+                                "zoom":  0.06,
+                                "fy":  0.75
+                            }
+                  }
+              ],
+    "eventos":  [
+                    {
+                        "tipo":  "sino",
+                        "linea":  4,
+                        "en":  0.2
+                    }
+                ],
+    "destaque":  [
+                     "twenty-one",
+                     "a fortune",
+                     "never became knights",
+                     "chapel",
+                     "watching",
+                     "dubbing",
+                     "spurs",
+                     "stayed a squire"
+                 ]
+}
