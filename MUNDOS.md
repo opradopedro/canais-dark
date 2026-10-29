@@ -69,3 +69,5 @@ Há dois tipos:
 ### Peça nova do engine.html (Hora Muerta)
 - `siguanaba`: mulher de costas lavando roupa numa pedra do rio, guacal dourado; p.dist [a,b], p.vira [a,b] (0 costas, 1 cara de cavalo); o evento `susto` faz ela virar de vez. Usada em HM013-014.
 - `metro`: corredor do vagao de metro parado no tunel, bancos, barras, janelas; porta de vidro no fundo mostra o vagao da frente. p.luz [a,b], p.parpadeo, p.frente [a,b], p.gente (0 = vazio), p.cara, p.tunel (luzes passando). Eventos: apaga, aparece (rosto no vidro), mano (marca de mao). Usada em SV005-008.
+- `salao` (Old Tales, calmo): salao do castelo com lareira, tapecarias, janelas em arco, juncos. p.hora aurora|dia|noite, p.mesa (trenchers), p.gente 0..1, p.camas (palha, meninos, cachorro), p.armadura (cavaleiro sendo vestido), p.espada + p.toque [a,b] (cerimonia de cavaleiro). Usada em CL004-006.
+- `forja` (Old Tales, calmo): ferreiro, fornalha, bigorna, cocho. p.faiscas, p.vapor (ferradura na agua), p.malha (cota de malha + barril de areia). Usada em CL004-006.

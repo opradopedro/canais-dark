@@ -38,3 +38,4 @@ funciona. Pecas que faltam: navio, vela de barco, mar aberto, caverna, templo, f
 - [ ] **Teseu e o Minotauro** (mito grego)
 - [ ] **Beowulf** (epico anglo-saxao)
 - [ ] **Ragnarok** (mitologia nordica)
+- [x] You wake up as a squire in 1300 (CL004-006, pecas salao e forja)
