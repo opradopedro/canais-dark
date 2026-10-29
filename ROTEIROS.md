@@ -40,10 +40,12 @@ O resumo de cada parte tem que bastar para outra pessoa escrever aquela parte se
   `eventos`, `destaque`. Opcional: `"autor": "kiro"` ou `"claude"`.
 - Parte que não é a última: a última fala promete a seguinte com o marcador `{when_next}` (EN) ou
   `{dia_siguiente}` (ES), e a cena final usa `{next_card}`. Nunca escreva "tomorrow" à mão.
-- Cenas: só peças que existem em `hora-muerta/scripts/engine.html` (`COMP.<nome>`). Peça nova só se a
-  história pedir; ela é só ADICIONADA, nunca mude uma peça que outro canal usa.
-- Prévia grátis (não gasta narração): `python motor-en/previa.py <roteiro> <pasta>`. OLHE os JPGs: a cena
-  tem que combinar com o texto.
+- Cenas: só peças que existem em `hora-muerta/scripts/engine.html` (`COMP.<nome>`), ou mundos 3D em
+  `so-you-built-it/scripts/mundos/`. A lista completa, e como criar um novo, está em **`MUNDOS.md`**: procure lá
+  antes de criar. Cenário novo é só ADICIONADO, nunca mude um que outro canal usa.
+- Prévia grátis (não gasta narração nem pesa o PC): escreva o caminho do roteiro em `.github/previa.txt` e envie
+  para a producao; os JPGs saem na Release `previas`. No PC: `python motor-en/previa.py <roteiro> <pasta>`.
+  OLHE os JPGs: a cena tem que combinar com o texto.
 - **Depois de CADA parte**: marque `FEITO` em `series.md`, rode o fiscal e faça commit + push. Partes pequenas,
   enviadas uma de cada vez: se o crédito acabar, nada se perde.
 

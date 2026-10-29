@@ -1,4 +1,4 @@
-"""Aplica os pedidos do painel ANTES da producao, com o Gemini (gratis), sem Claude e sem Kiro.
+﻿"""Aplica os pedidos do painel ANTES da producao, com o Gemini (gratis), sem Claude e sem Kiro.
 
 Roda no GitHub Actions antes de cada producao (canais.yml). Para o canal da vez:
   - "pedido" (Pedir mudanca) num video que ainda nao subiu: o Gemini reescreve SO o que foi pedido no roteiro,
@@ -8,7 +8,7 @@ Roda no GitHub Actions antes de cada producao (canais.yml). Para o canal da vez:
   - "ideia": fica aberta para a proxima escrita de roteiros.
 Uso: python motor-en/aplicar_pedidos.py <pasta do canal>
 """
-import csv, datetime as dt, glob, json, os, re, subprocess, sys, urllib.request
+import csv, datetime as dt, glob, importlib.util, json, os, re, subprocess, sys, urllib.request
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPO = os.environ.get("GITHUB_REPOSITORY", "opradopedro/canais-dark")
@@ -72,15 +72,35 @@ def fiscal_ok(pasta):
 
 
 def publicados(pasta):
-    """Codigos que ja estao no YouTube (agendados ou publicos): esses nao sao mais editados por aqui."""
+    """{codigo: item do painel} dos videos que ja estao no YouTube (agendados ou publicos)."""
     try:
-        r = subprocess.run([sys.executable, os.path.join(RAIZ, "motor-en", "painel_dados.py")], cwd=RAIZ,
-                           capture_output=True, text=True, timeout=300)
+        subprocess.run([sys.executable, os.path.join(RAIZ, "motor-en", "painel_dados.py")], cwd=RAIZ,
+                       capture_output=True, text=True, timeout=300)
         d = json.load(open(os.path.join(RAIZ, "painel-web", "dados.json"), encoding="utf-8"))
         c = next(c for c in d["canais"] if c["pasta"] == pasta)
-        return {i["codigo"]: i["estado"] for i in c["itens"] if i["estado"] != "roteiro"}
+        return {i["codigo"]: i for i in c["itens"] if i["estado"] != "roteiro"}
     except Exception:
         return None
+
+
+def apagar_agendado(pasta, video_id):
+    """Apaga do YouTube um video AGENDADO (ainda privado), para a producao refazer com a mudanca.
+    Recusa se o video ja estiver publico. Usa a chave do proprio canal."""
+    sys.path.insert(0, os.path.join(RAIZ, "motor-en"))
+    import painel_dados as pd
+    _, _, _, _, _, modulo, tvar, pref = next(c for c in pd.CANAIS if c[1] == pasta)
+    os.environ["YT_TOKEN_VAR"] = tvar
+    caminho = os.path.join(RAIZ, modulo)
+    sys.path.insert(0, os.path.dirname(caminho))
+    spec = importlib.util.spec_from_file_location("yt_apagar_" + pref, caminho)
+    m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+    token = m.access_token()
+    st = m.get("videos", token, part="status", id=video_id)["items"][0]["status"]
+    if st.get("privacyStatus") != "private" or not st.get("publishAt"):
+        raise RuntimeError("o video ja esta publico; nao apago")
+    req = urllib.request.Request(f"https://www.googleapis.com/youtube/v3/videos?id={video_id}", method="DELETE",
+                                 headers={"Authorization": "Bearer " + token})
+    urllib.request.urlopen(req, timeout=60)
 
 
 def main(pasta):
@@ -105,33 +125,42 @@ def main(pasta):
                     w.writerow(["data", "canal", "codigo", "voto", "comentario"])
                 w.writerow([dt.date.today().isoformat(), cid, cod, "gostei" if "gostei" in labels else "naogostei", texto[:300]])
             mudou = True
-            responder(n, "Voto registrado em metricas/votos.csv. A análise semanal usa isso. Obrigado!", fechar=True)
+            responder(n, "Voto registrado em metricas/votos.csv. A anÃ¡lise semanal usa isso. Obrigado!", fechar=True)
             continue
         if "pedido" not in labels or not cod:
             continue  # ideia: fica aberta para a escrita de roteiros
+        refazer = None
         if ja is not None and cod in ja:
-            responder(n, f"O {cod} já está no YouTube ({ja[cod]}), então não dá mais para mudar o roteiro por aqui. "
-                         "Se for grave, apague o vídeo agendado no YouTube Studio e reabra este pedido.", fechar=True)
-            continue
+            item = ja[cod]
+            if item["estado"] == "publicado":
+                responder(n, f"O {cod} jÃ¡ foi publicado, entÃ£o nÃ£o dÃ¡ mais para mudar. Fica registrado para os prÃ³ximos.", fechar=True)
+                continue
+            # agendado: so da para refazer se ainda faltar tempo para produzir de novo (render + conferencia)
+            quando_pub = dt.datetime.fromisoformat(item["publica_em"].replace("Z", "+00:00"))
+            if quando_pub - dt.datetime.now(dt.timezone.utc) < dt.timedelta(hours=4):
+                responder(n, f"O {cod} sai em menos de 4 horas ({item['publica_em']} UTC): nÃ£o dÃ¡ tempo de refazer. "
+                             "Se for grave, apague o agendamento no YouTube Studio.")
+                continue
+            refazer = item["youtube"].rsplit("/", 1)[-1]
         arqs = [f for f in glob.glob(os.path.join(RAIZ, pasta, "stories", "*.json"))
                 if json.load(open(f, encoding="utf-8")).get("codigo") == cod]
         if not arqs:
-            responder(n, f"Não achei o roteiro {cod} em {pasta}/stories. Confira o código."); continue
+            responder(n, f"NÃ£o achei o roteiro {cod} em {pasta}/stories. Confira o cÃ³digo."); continue
         arq = arqs[0]
         original = open(arq, encoding="utf-8").read()
         regras = open(os.path.join(RAIZ, "ROTEIROS.md"), encoding="utf-8").read()[:6000]
         prompt = (
-            "Você edita o roteiro (JSON) de um vídeo curto do YouTube. Aplique SOMENTE o pedido do dono do canal, "
-            "mudando o mínimo necessário. Mantenha exatamente o mesmo formato e os mesmos campos; mantenha o idioma "
-            "da narração; mantenha os marcadores entre chaves como {when_next}; o campo 'codigo' não muda. "
-            f"Peças de cena permitidas no campo 'comp': {', '.join(pecas())}. "
-            "Se mudar o número de falas ('lineas'), ajuste os índices 'linea' de 'cenas' e 'eventos' para continuarem válidos. "
+            "VocÃª edita o roteiro (JSON) de um vÃ­deo curto do YouTube. Aplique SOMENTE o pedido do dono do canal, "
+            "mudando o mÃ­nimo necessÃ¡rio. Mantenha exatamente o mesmo formato e os mesmos campos; mantenha o idioma "
+            "da narraÃ§Ã£o; mantenha os marcadores entre chaves como {when_next}; o campo 'codigo' nÃ£o muda. "
+            f"PeÃ§as de cena permitidas no campo 'comp': {', '.join(pecas())}. "
+            "Se mudar o nÃºmero de falas ('lineas'), ajuste os Ã­ndices 'linea' de 'cenas' e 'eventos' para continuarem vÃ¡lidos. "
             "Responda APENAS com o JSON completo do roteiro editado.\n\n"
             f"REGRAS DO CANAL (trecho):\n{regras}\n\nPEDIDO DO DONO:\n{texto}\n\nROTEIRO ATUAL:\n{original}")
         try:
             novo = json.loads(gemini(prompt))
             if novo.get("codigo") != cod:
-                raise ValueError("o Gemini mudou o código")
+                raise ValueError("o Gemini mudou o cÃ³digo")
             novo["editado_por_pedido"] = n
             open(arq, "w", encoding="utf-8").write(json.dumps(novo, ensure_ascii=False, indent=1) + "\n")
             ok, erros = fiscal_ok(pasta)
@@ -139,11 +168,20 @@ def main(pasta):
                 open(arq, "w", encoding="utf-8").write(original)
                 raise ValueError("o fiscal reprovou: " + "; ".join(erros[:3]))
         except Exception as e:
-            responder(n, f"Não consegui aplicar sozinho ({str(e)[:300]}). Deixei aberto para o Kiro ou o Claude.")
+            responder(n, f"NÃ£o consegui aplicar sozinho ({str(e)[:300]}). Deixei aberto para o Kiro ou o Claude.")
             continue
+        if refazer:
+            # roteiro ja mudou e passou no fiscal: tira o agendado antigo; a producao logo em seguida refaz o video
+            try:
+                apagar_agendado(pasta, refazer)
+            except Exception as e:
+                open(arq, "w", encoding="utf-8").write(original)
+                responder(n, f"NÃ£o consegui tirar o vÃ­deo agendado ({str(e)[:200]}). Nada foi mudado; deixei aberto.")
+                continue
         mudou = True
-        responder(n, f"Aplicado no roteiro `{os.path.relpath(arq, RAIZ)}` antes da produção. "
-                     "O vídeo sai já com a mudança.", fechar=True, etiqueta="feito")
+        extra = " O agendamento antigo foi apagado e o vÃ­deo Ã© refeito agora, no mesmo horÃ¡rio livre." if refazer else ""
+        responder(n, f"Aplicado no roteiro `{os.path.relpath(arq, RAIZ)}` antes da produÃ§Ã£o.{extra} "
+                     "O vÃ­deo sai jÃ¡ com a mudanÃ§a.", fechar=True, etiqueta="feito")
         print(f"{pasta}: pedido #{n} aplicado em {cod}")
     if mudou:
         subprocess.run(["git", "add", "-A", f"{pasta}/stories", "metricas"], cwd=RAIZ)

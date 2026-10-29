@@ -63,6 +63,38 @@ def youtube(modulo, token_var, prefixo):
         return {}, str(e)[:200]
 
 
+def gta():
+    """Radar GTA VI BR (Instagram): so leitura, da agenda.json do branch radar-gta6-midia do claude-skills.
+    A producao e a publicacao continuam na rotina do Claude; os pedidos (etiqueta gta) ficam para ela."""
+    base = "https://raw.githubusercontent.com/opradopedro/claude-skills/radar-gta6-midia/"
+    c = {"id": "gta", "nome": "Radar GTA VI BR", "pasta": "gta6", "idioma": "PT", "quando": "3 Reels/dia (Instagram)",
+         "aviso_youtube": "Instagram: produzido pela rotina do Claude. Aqui é só para ver; pedidos ficam para ela.", "itens": []}
+    try:
+        with urllib.request.urlopen(base + "agenda.json", timeout=30) as r:
+            agenda = json.load(r)
+    except Exception as e:
+        c["aviso_youtube"] += f" (não consegui ler a agenda: {str(e)[:80]})"
+        return c
+    for p in agenda.get("posts", []):
+        st = p.get("status", "")
+        if st in ("cancelado", "removido"):
+            continue
+        arq = p.get("arquivo", "")
+        cod = os.path.splitext(arq)[0].replace("radar_", "").upper() or p.get("data", "")
+        ficha = p.get("ficha") or {}
+        titulo = (p.get("legenda") or p.get("titulo") or ficha.get("tema") or arq).split("\n")[0][:120]
+        quando = f"{p.get('data', '')}T{p.get('hora', '12:00')}:00-03:00" if p.get("data") else None
+        it = {"codigo": cod, "titulo": titulo, "roteiro": [l for l in (p.get("roteiro") or p.get("legenda") or "").split("\n") if l.strip()][:20],
+              "formato": p.get("formato") or ficha.get("formato"), "arquivo": "claude-skills/radar-gta6-midia/agenda.json",
+              "estado": "publicado" if st == "postado" else "agendado", "publica_em": quando}
+        if p.get("link"):
+            it["youtube"] = p["link"]
+        if arq:
+            it["video"] = base + arq
+        c["itens"].append(it)
+    return c
+
+
 def main():
     agora = dt.datetime.now(dt.timezone.utc)
     canais = []
@@ -96,8 +128,7 @@ def main():
             itens.append(it)
         canais.append({"id": cid, "nome": nome, "pasta": pasta, "idioma": idioma, "quando": quando,
                        "aviso_youtube": erro, "itens": itens})
-    canais.append({"id": "gta", "nome": "Radar GTA VI BR", "pasta": "gta6", "idioma": "PT", "quando": "3 Reels/dia (Instagram)",
-                   "aviso_youtube": "Instagram: ainda roda pela rotina do Claude, fora deste painel", "itens": []})
+    canais.append(gta())
     os.makedirs(SAIDA, exist_ok=True)
     json.dump({"gerado": agora.strftime("%Y-%m-%dT%H:%M:%SZ"), "repo": REPO, "canais": canais},
               open(os.path.join(SAIDA, "dados.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

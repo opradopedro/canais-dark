@@ -1,0 +1,61 @@
+name: Previa das cenas
+
+# Desenha a previa gratis (JPGs) de um roteiro nos computadores do GitHub, sem gastar narracao e sem pesar o PC.
+# Para pedir: escreva o caminho do roteiro na 1a linha de .github/previa.txt e envie para a branch producao.
+# Os JPGs ficam na Release publica "previas": https://github.com/<repo>/releases/tag/previas
+on:
+  push:
+    branches: [producao]
+    paths: [".github/previa.txt"]
+  workflow_dispatch:
+    inputs:
+      roteiro:
+        description: "caminho do roteiro, ex.: so-you-built-it/stories/017-well.json"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: previa
+  cancel-in-progress: false
+
+jobs:
+  previa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      CAPA_SELO: PART
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Programas
+        run: |
+          echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | sudo debconf-set-selections
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu ttf-mscorefonts-installer > /dev/null
+          pip install -q numpy soundfile playwright tzdata
+          python -m playwright install --with-deps chromium > /dev/null
+      - uses: actions/cache/restore@v4
+        with:
+          path: so-you-built-it/scripts/vendor
+          key: three-${{ github.run_id }}
+          restore-keys: three-
+      - name: Desenhar
+        run: |
+          if [ "${{ github.event_name }}" = push ]; then R=$(grep -v '^#' .github/previa.txt | head -1 | tr -d '\r '); else R="${{ github.event.inputs.roteiro }}"; fi
+          echo "Roteiro: $R"
+          rm -rf /tmp/previa && mkdir -p /tmp/previa
+          python motor-en/previa.py "$R" /tmp/previa
+          ls /tmp/previa
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: so-you-built-it/scripts/vendor
+          key: three-${{ github.run_id }}
+      - name: Enviar JPGs para a Release "previas"
+        run: |
+          gh release view previas > /dev/null 2>&1 || gh release create previas --title "Previas das cenas" --notes "JPGs das previas (gerados pelo GitHub Actions)"
+          gh release upload previas /tmp/previa/*.jpg --clobber
