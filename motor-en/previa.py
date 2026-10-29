@@ -4,11 +4,13 @@ Uso: python motor-en/previa.py <historia.json> <pasta_saida>
 """
 import json, os, subprocess, sys
 
-MOTOR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "hora-muerta", "scripts")
+RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+historia, saida = sys.argv[1], sys.argv[2]
+# cada canal usa o proprio motor: So You Built It tem o dele (3D), os outros usam o do Hora Muerta
+MOTOR = os.path.join(RAIZ, "so-you-built-it" if "so-you-built-it" in os.path.abspath(historia) else "hora-muerta", "scripts")
 sys.path.insert(0, MOTOR)
 from comum import carregar  # noqa: E402
 
-historia, saida = sys.argv[1], sys.argv[2]
 os.makedirs(saida, exist_ok=True)
 h = carregar(historia)
 # a previa nao sabe a data real: troca os marcadores por um exemplo (numa copia, nunca no original)
@@ -35,5 +37,6 @@ for i, c in enumerate(h["cenas"]):
     b = segs[h["cenas"][i + 1]["linea"]]["t0"] if i + 1 < len(h["cenas"]) else dur
     pontos.append(round((a + b) / 2, 1))
 subprocess.run([sys.executable, os.path.join(MOTOR, "render.py"), historia, tp, base + ".mp4", "--teste", ",".join(map(str, pontos))], check=True)
-subprocess.run([sys.executable, os.path.join(MOTOR, "capa.py"), historia, tp, base + "_capa.jpg"], check=True)
+if os.path.exists(os.path.join(MOTOR, "capa.py")):  # So You Built It nao tem capa.py
+    subprocess.run([sys.executable, os.path.join(MOTOR, "capa.py"), historia, tp, base + "_capa.jpg"], check=True)
 print("previa:", saida)

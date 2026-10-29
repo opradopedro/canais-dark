@@ -1,0 +1,7 @@
+# Canais que o GitHub Actions produz e posta. Um por linha.
+# Para tirar um canal do GitHub (ex.: voltar para a rotina do Claude), ponha # na frente da linha.
+# NUNCA deixe o mesmo canal ligado aqui E numa rotina do Claude que tambem produz: o video sairia em dobro.
+signal-lost
+old-tales
+# hora-muerta       <- ligar so depois que a rotina do Claude parar de produzir o Hora Muerta
+# so-you-built-it   <- ligar so depois que a rotina do Claude parar de produzir o So You Built It

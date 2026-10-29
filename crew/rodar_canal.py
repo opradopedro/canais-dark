@@ -35,6 +35,14 @@ import tempfile
 # Onde esta o repositorio no seu computador. Mude aqui, ou defina a variavel CANAIS_REPO.
 REPO_PADRAO = r"C:\canais-dark"
 
+# Como cada canal e produzido. Signal Lost e Old Tales usam o motor-en; os outros, o proprio produce.py.
+CANAIS = {
+    "signal-lost": {},
+    "old-tales": {},
+    "hora-muerta": {"motor_proprio": True, "token": "YT_REFRESH_TOKEN_ES", "pasta_var": "HM_VIDEOS", "painel": "hm"},
+    "so-you-built-it": {"motor_proprio": True, "token": "YT_REFRESH_TOKEN_EN", "pasta_var": "YB_VIDEOS", "painel": "yb"},
+}
+
 # Memoria livre minima para comecar a produzir, em MB.
 # O PC do Pedro tem 8 GB. Fazer um video usa Chromium (desenha as cenas), Whisper (confere a
 # legenda) e FFmpeg (junta tudo): o pico passa de 2 GB. Sem essa folga, o Windows mata o
@@ -143,9 +151,20 @@ def _carregar_env(repo):
         os.environ[chave.strip()] = valor.strip().strip('"').strip("'")
 
 
+def _ativo(repo, canal):
+    """O GitHub/Crew so produz os canais listados em canais-ativos.txt (evita postar em dobro com outra automacao)."""
+    arq = os.path.join(repo, "canais-ativos.txt")
+    if not os.path.isfile(arq):
+        return True
+    ativos = {l.split("#")[0].strip() for l in open(arq, encoding="utf-8")}
+    return canal in ativos
+
+
 def _rodar(canal):
     """Produz e agenda a proxima serie do canal. Devolve um resumo curto em texto."""
     repo = _repo()
+    if not _ativo(repo, canal):
+        return f"[{canal}] desligado em canais-ativos.txt (outra automacao cuida dele): nada a fazer"
     _carregar_env(repo)
     falta_memoria = conferir_memoria()
     if falta_memoria:
@@ -158,13 +177,25 @@ def _rodar(canal):
         return f"[{canal}] FALHOU: roteiro com erro, nada foi produzido. Conserte e envie de novo:\n" + "\n".join(erros_canal[:8])
     saida = os.path.join(tempfile.gettempdir(), "canais", canal)
     os.makedirs(saida, exist_ok=True)
-    cmd = [sys.executable, os.path.join(repo, "motor-en", "produce.py"),
-           os.path.join(repo, canal), "--proximo", "--subir", "--saida", saida]
+    cfg = CANAIS.get(canal, {})
+    if cfg.get("motor_proprio"):
+        # Hora Muerta e So You Built It: cada um tem o proprio produce.py dentro de <canal>/scripts
+        cwd = os.path.join(repo, canal)
+        cmd = [sys.executable, os.path.join("scripts", "produce.py"), "--proximo", "--subir", "--saida", saida]
+        os.environ["YT_TOKEN_VAR"] = cfg["token"]
+        # copia leve de cada video para o painel (o GitHub Actions envia para a Release painel-<codigo do canal>)
+        os.environ[cfg["pasta_var"]] = os.path.join(repo, "painel-saida", cfg["painel"])
+        os.makedirs(os.environ[cfg["pasta_var"]], exist_ok=True)
+    else:
+        cwd = repo
+        cmd = [sys.executable, os.path.join(repo, "motor-en", "produce.py"),
+               os.path.join(repo, canal), "--proximo", "--subir", "--saida", saida]
+    limite = int(os.environ.get("CANAIS_TIMEOUT", "3300"))
     try:
-        r = subprocess.run(cmd, cwd=repo, capture_output=True, text=True, encoding="utf-8", errors="replace",
-                           timeout=3300)
+        r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, encoding="utf-8", errors="replace",
+                           timeout=limite)
     except subprocess.TimeoutExpired:
-        return (f"[{canal}] FALHOU: passou de 55 minutos (PC lento ou sem memoria). "
+        return (f"[{canal}] FALHOU: passou de {limite // 60} minutos (PC lento ou sem memoria). "
                 f"O que ja subiu esta salvo; a proxima execucao continua de onde parou.")
     linhas = (r.stdout or "").strip().splitlines()
 
@@ -203,6 +234,14 @@ def run_survival(ctx=None, *_a, **_k):
 
 def run_classics(ctx=None, *_a, **_k):
     return _entregar(ctx, _rodar("old-tales"))
+
+
+def run_hora_muerta(ctx=None, *_a, **_k):
+    return _entregar(ctx, _rodar("hora-muerta"))
+
+
+def run_so_you_built_it(ctx=None, *_a, **_k):
+    return _entregar(ctx, _rodar("so-you-built-it"))
 
 
 def run_metricas(ctx=None, *_a, **_k):
@@ -246,6 +285,26 @@ def run_teste(ctx=None, *_a, **_k):
     r = subprocess.run([sys.executable, os.path.join(repo, "motor-en", "sons.py")], cwd=repo,
                        capture_output=True, text=True, encoding="utf-8", errors="replace")
     out.append("sons: " + ("OK" if r.returncode == 0 else "ERRO " + r.stderr.strip()[-200:]))
+    # canais com motor proprio: token certo (so leitura) + previa das cenas do ultimo roteiro
+    for canal, cfg in CANAIS.items():
+        if not cfg.get("motor_proprio"):
+            continue
+        env = dict(os.environ, YT_TOKEN_VAR=cfg["token"])
+        if not env.get(cfg["token"]):
+            ok = False; out.append(f"[{canal}] falta a chave {cfg['token']} no cofre"); continue
+        acao = "canal" if canal == "so-you-built-it" else "publicados"
+        r = subprocess.run([sys.executable, os.path.join("scripts", "yt_upload.py"), acao], cwd=os.path.join(repo, canal),
+                           env=env, capture_output=True, text=True, encoding="utf-8", errors="replace")
+        ok &= r.returncode == 0
+        resumo = (r.stdout.strip().replace("\n", " ")[:160]) if r.returncode == 0 else "ERRO " + r.stderr.strip()[-300:]
+        out.append(f"[{canal}] YouTube ({acao}): {resumo}")
+        hist = sorted(__import__("glob").glob(os.path.join(repo, canal, "stories", "*.json")))
+        if hist:
+            r = subprocess.run([sys.executable, os.path.join(repo, "motor-en", "previa.py"), hist[-1],
+                                os.path.join(tempfile.gettempdir(), "previa-teste-" + canal)], cwd=repo,
+                               capture_output=True, text=True, encoding="utf-8", errors="replace")
+            ok &= r.returncode == 0
+            out.append(f"[{canal}] previa das cenas: " + ("OK" if r.returncode == 0 else "ERRO " + r.stderr.strip()[-300:]))
     texto = ("TESTE OK" if ok else "TESTE FALHOU") + "\n" + "\n".join(out)
     if ctx is None:
         print(texto)
@@ -258,7 +317,8 @@ def run_teste(ctx=None, *_a, **_k):
 if __name__ == "__main__":
     qual = sys.argv[1] if len(sys.argv) > 1 else "ambos"
     funcoes = {"survival": run_survival, "signal-lost": run_survival, "classics": run_classics,
-               "old-tales": run_classics, "metricas": run_metricas, "teste": run_teste}
+               "old-tales": run_classics, "hora-muerta": run_hora_muerta, "so-you-built-it": run_so_you_built_it,
+               "metricas": run_metricas, "teste": run_teste}
     texto = funcoes.get(qual, run)() or ""
     # no GitHub Actions, falha vira X vermelho e o GitHub manda e-mail ao Pedro
     if any(m in texto for m in ("FALHOU", "NAO RODEI", "NAO SUBIU", "VOZ FALHOU", "CANAL ERRADO", "SEM ROTEIRO")):

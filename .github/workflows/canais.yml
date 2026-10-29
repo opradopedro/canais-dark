@@ -1,17 +1,20 @@
-name: Canais (Signal Lost e Old Tales)
+name: Canais (producao diaria)
 
-# Roda nos computadores do GitHub: o PC do Pedro pode ficar desligado.
-# Horarios em UTC. A cota de voz do Gemini zera a meia-noite da California (3h de Nova York);
-# a producao vem depois disso e deixa o video AGENDADO no YouTube para a hora certa.
+# Roda nos computadores do GitHub: o PC do Pedro pode ficar desligado e o Claude nao gasta token com render.
+# Horarios em UTC. Cada canal so produz se estiver ligado em canais-ativos.txt (evita postar em dobro).
+# A cota de voz do Gemini zera a meia-noite da California (07h/08h UTC); a producao vem depois e deixa o
+# video AGENDADO no YouTube para a hora certa.
 on:
   schedule:
-    - cron: "30 8 * * *"    # Old Tales: produz 1 parte (sai ao meio-dia de NY)
-    - cron: "30 9 * * *"    # Signal Lost: produz 1 parte (sai as 19h de NY)
-    - cron: "15 3 * * *"    # metricas dos dois canais (fim do dia em NY)
+    - cron: "30 8 * * *"    # Old Tales (sai ao meio-dia de NY)
+    - cron: "30 9 * * *"    # Signal Lost (sai as 19h de NY)
+    - cron: "35 12 * * *"   # So You Built It (Curiosidade 21h UTC, Evolucao 23h UTC)
+    - cron: "40 18 * * *"   # Hora Muerta
+    - cron: "15 3 * * *"    # metricas dos canais (fim do dia em NY)
   workflow_dispatch:
     inputs:
       tarefa:
-        description: "teste (nao publica nada), old-tales, signal-lost ou metricas"
+        description: "teste (nao publica nada), old-tales, signal-lost, so-you-built-it, hora-muerta ou metricas"
         default: "teste"
         required: true
 
@@ -25,17 +28,21 @@ permissions:
 jobs:
   rodar:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 200
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
       YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
       YT_REFRESH_TOKEN_SURVIVAL: ${{ secrets.YT_REFRESH_TOKEN_SURVIVAL }}
       YT_REFRESH_TOKEN_CLASSICS: ${{ secrets.YT_REFRESH_TOKEN_CLASSICS }}
+      YT_REFRESH_TOKEN_ES: ${{ secrets.YT_REFRESH_TOKEN_ES }}
+      YT_REFRESH_TOKEN_EN: ${{ secrets.YT_REFRESH_TOKEN_EN }}
       FREESOUND_API_KEY: ${{ secrets.FREESOUND_API_KEY }}
       CANAIS_REPO: ${{ github.workspace }}
       CANAIS_SEM_ENV: "1"
+      CANAIS_TIMEOUT: "11000"
       HF_HUB_DISABLE_SYMLINKS_WARNING: "1"
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: Qual tarefa
         id: qual
@@ -43,6 +50,8 @@ jobs:
           case "${{ github.event.schedule }}" in
             "30 8 * * *") T=old-tales ;;
             "30 9 * * *") T=signal-lost ;;
+            "35 12 * * *") T=so-you-built-it ;;
+            "40 18 * * *") T=hora-muerta ;;
             "15 3 * * *") T=metricas ;;
             *) T="${{ github.event.inputs.tarefa }}" ;;
           esac
@@ -51,50 +60,79 @@ jobs:
 
       - uses: actions/checkout@v4
 
+      - name: Canal ligado?
+        id: ligado
+        run: |
+          T="${{ steps.qual.outputs.tarefa }}"
+          if [ "$T" = teste ] || [ "$T" = metricas ] || grep -qxF "$T" canais-ativos.txt; then
+            echo "sim=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "sim=0" >> "$GITHUB_OUTPUT"
+            echo "$T esta desligado em canais-ativos.txt (outra automacao cuida dele). Nada a fazer."
+          fi
+
       - uses: actions/setup-python@v5
+        if: steps.ligado.outputs.sim == '1'
         with:
           python-version: "3.12"
           cache: pip
           cache-dependency-path: .github/requirements-canais.txt
 
       - name: Programas (FFmpeg e fontes)
-        if: steps.qual.outputs.tarefa != 'metricas'
+        if: steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas'
         run: |
           echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | sudo debconf-set-selections
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-dejavu ttf-mscorefonts-installer > /dev/null
 
       - name: Pacotes Python
+        if: steps.ligado.outputs.sim == '1'
         run: pip install -q -r .github/requirements-canais.txt
 
       - name: Chromium
-        if: steps.qual.outputs.tarefa != 'metricas'
+        if: steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas'
         run: python -m playwright install --with-deps chromium > /dev/null
 
-      # caixa de narracoes + contador das 4 por dia, sons baixados e modelo do Whisper: guardados entre execucoes
+      # caixa de narracoes + contador, sons, modelo do Whisper, voz reserva e Three.js: guardados entre execucoes
       - name: Recuperar caixa de narracoes e sons
+        if: steps.ligado.outputs.sim == '1'
         uses: actions/cache/restore@v4
         with:
           path: |
             narracoes
             sons
             ~/.cache/huggingface
+            ~/.cache/hora-muerta
+            so-you-built-it/scripts/vendor
           key: canais-${{ github.run_id }}
           restore-keys: canais-
 
       - name: Rodar
-        id: rodar
+        if: steps.ligado.outputs.sim == '1'
         run: python crew/rodar_canal.py "${{ steps.qual.outputs.tarefa }}"
 
       - name: Guardar caixa de narracoes e sons
-        if: always() && steps.qual.outputs.tarefa != 'metricas'
+        if: always() && steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas'
         uses: actions/cache/save@v4
         with:
           path: |
             narracoes
             sons
             ~/.cache/huggingface
+            ~/.cache/hora-muerta
+            so-you-built-it/scripts/vendor
           key: canais-${{ github.run_id }}
+
+      # copia leve dos videos para o painel: fica numa Release publica (painel-hm / painel-yb)
+      - name: Enviar videos para o painel
+        if: always() && steps.ligado.outputs.sim == '1'
+        run: |
+          for c in hm yb; do
+            d="painel-saida/$c"
+            [ -d "$d" ] && [ -n "$(ls -A "$d" 2>/dev/null)" ] || continue
+            gh release view "painel-$c" > /dev/null 2>&1 || gh release create "painel-$c" --title "Painel $c" --notes "Videos para o painel (gerado pelo GitHub Actions)"
+            gh release upload "painel-$c" "$d"/* --clobber
+          done
 
       - name: Salvar metricas no repositorio
         if: steps.qual.outputs.tarefa == 'metricas'
