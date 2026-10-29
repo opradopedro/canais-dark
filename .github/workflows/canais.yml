@@ -122,7 +122,18 @@ jobs:
 
       - name: Rodar
         if: steps.ligado.outputs.sim == '1'
-        run: python crew/rodar_canal.py "${{ steps.qual.outputs.tarefa }}"
+        run: |
+          set -o pipefail
+          python crew/rodar_canal.py "${{ steps.qual.outputs.tarefa }}" 2>&1 | tee /tmp/rodar-log.txt
+
+      # se der erro, o log vai para a Release publica "logs" (Kiro e Claude leem sem entrar no GitHub)
+      - name: Enviar o erro para a Release "logs"
+        if: failure() && steps.ligado.outputs.sim == '1'
+        run: |
+          T="${{ steps.qual.outputs.tarefa }}"
+          tail -c 60000 /tmp/rodar-log.txt > "/tmp/${T}_ERRO.txt" 2>/dev/null || echo "sem log" > "/tmp/${T}_ERRO.txt"
+          gh release view logs > /dev/null 2>&1 || gh release create logs --title "Logs de erro" --notes "Ultimo erro de cada tarefa (gerado pelo GitHub Actions)"
+          gh release upload logs "/tmp/${T}_ERRO.txt" --clobber
 
       - name: Guardar caixa de narracoes e sons
         if: always() && steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas'

@@ -1,4 +1,1 @@
-teste
-# Mudar a 1a linha e enviar para a branch producao roda essa tarefa no GitHub Actions.
-# teste = confere tudo sem publicar nada. Outras: old-tales, signal-lost, so-you-built-it, hora-muerta, metricas.
-# 2026-10-29 01:05 teste da fase 1 (Hora Muerta e So You Built It no GitHub)
+old-tales
