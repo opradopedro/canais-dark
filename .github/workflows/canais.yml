@@ -1,0 +1,106 @@
+name: Canais (Signal Lost e Old Tales)
+
+# Roda nos computadores do GitHub: o PC do Pedro pode ficar desligado.
+# Horarios em UTC. A cota de voz do Gemini zera a meia-noite da California (3h de Nova York);
+# a producao vem depois disso e deixa o video AGENDADO no YouTube para a hora certa.
+on:
+  schedule:
+    - cron: "30 8 * * *"    # Old Tales: produz 1 parte (sai ao meio-dia de NY)
+    - cron: "30 9 * * *"    # Signal Lost: produz 1 parte (sai as 19h de NY)
+    - cron: "15 3 * * *"    # metricas dos dois canais (fim do dia em NY)
+  workflow_dispatch:
+    inputs:
+      tarefa:
+        description: "teste (nao publica nada), old-tales, signal-lost ou metricas"
+        default: "teste"
+        required: true
+
+concurrency:
+  group: canais-producao
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  rodar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN_SURVIVAL: ${{ secrets.YT_REFRESH_TOKEN_SURVIVAL }}
+      YT_REFRESH_TOKEN_CLASSICS: ${{ secrets.YT_REFRESH_TOKEN_CLASSICS }}
+      FREESOUND_API_KEY: ${{ secrets.FREESOUND_API_KEY }}
+      CANAIS_REPO: ${{ github.workspace }}
+      CANAIS_SEM_ENV: "1"
+      HF_HUB_DISABLE_SYMLINKS_WARNING: "1"
+    steps:
+      - name: Qual tarefa
+        id: qual
+        run: |
+          case "${{ github.event.schedule }}" in
+            "30 8 * * *") T=old-tales ;;
+            "30 9 * * *") T=signal-lost ;;
+            "15 3 * * *") T=metricas ;;
+            *) T="${{ github.event.inputs.tarefa }}" ;;
+          esac
+          echo "tarefa=$T" >> "$GITHUB_OUTPUT"
+          echo "Tarefa: $T"
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: .github/requirements-canais.txt
+
+      - name: Programas (FFmpeg e fontes)
+        if: steps.qual.outputs.tarefa != 'metricas'
+        run: |
+          echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | sudo debconf-set-selections
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu ttf-mscorefonts-installer > /dev/null
+
+      - name: Pacotes Python
+        run: pip install -q -r .github/requirements-canais.txt
+
+      - name: Chromium
+        if: steps.qual.outputs.tarefa != 'metricas'
+        run: python -m playwright install --with-deps chromium > /dev/null
+
+      # caixa de narracoes + contador das 4 por dia, sons baixados e modelo do Whisper: guardados entre execucoes
+      - name: Recuperar caixa de narracoes e sons
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            narracoes
+            sons
+            ~/.cache/huggingface
+          key: canais-${{ github.run_id }}
+          restore-keys: canais-
+
+      - name: Rodar
+        id: rodar
+        run: python crew/rodar_canal.py "${{ steps.qual.outputs.tarefa }}"
+
+      - name: Guardar caixa de narracoes e sons
+        if: always() && steps.qual.outputs.tarefa != 'metricas'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            narracoes
+            sons
+            ~/.cache/huggingface
+          key: canais-${{ github.run_id }}
+
+      - name: Salvar metricas no repositorio
+        if: steps.qual.outputs.tarefa == 'metricas'
+        run: |
+          git config user.name "canais-bot"
+          git config user.email "canais-bot@users.noreply.github.com"
+          git add metricas/*.csv
+          git diff --cached --quiet || git commit -m "metricas $(date -u +%F)"
+          git push

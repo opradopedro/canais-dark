@@ -1,0 +1,30 @@
+{
+ "nome": "Signal Lost",
+ "_nome_obs": "SUGESTAO. Troque pelo nome real do canal depois de criar no YouTube.",
+
+ "prefixo": "SV",
+ "idioma": "en",
+
+ "canal_titulo": "Signal Lost",
+ "_canal_titulo_obs": "TRAVA DE SEGURANCA: escreva aqui o nome EXATO do canal no YouTube. Enquanto estiver vazio, o programa avisa mas nao confere. Com o nome preenchido, ele se recusa a subir se o token for de outro canal.",
+
+ "fuso": "America/New_York",
+ "horas_locais": [19],
+ "_horas_obs": "UM video por dia, as 19h de Nova York. Ajusta sozinho no horario de verao. Para dobrar para 2 por dia, escreva [12, 19] aqui e troque 'fila' para 4.",
+
+ "token_var": "YT_REFRESH_TOKEN_SURVIVAL",
+ "voz": "Algenib",
+ "_voz_obs": "Voz grave e rouca do Gemini, combina com terror. Outras: Charon (calma), Puck (animada), Kore, Fenrir.",
+ "voz_tempo": "0.9",
+
+ "categoria": "24",
+ "crf": "26",
+ "fila": 2,
+ "_fila_obs": "Se ja houver 2 videos agendados no futuro (= 2 dias de conteudo), nao produz nada hoje.",
+
+ "partes_por_vez": 1,
+ "_partes_obs": "Produz UMA parte por execucao, nao a serie inteira. Poupa cota de voz do Gemini (o plano gratis da ~10 narracoes por dia, somando TODOS os canais que usam a mesma chave) e poupa memoria RAM (um render de 20 min em vez de quatro seguidos). Serie pela metade sempre continua, mesmo com a fila cheia. Para voltar a produzir a serie toda de uma vez, use 0.",
+
+ "pasta_videos_var": "SV_VIDEOS",
+ "pasta_videos": ""
+}
