@@ -1,0 +1,38 @@
+{
+ "codigo": "YB017",
+ "mundo": "controle",
+ "formato": "Curiosidade",
+ "autor": "kiro",
+ "titulo": "Your TV remote is shining a light at you 📺 #howitworks #shorts",
+ "capa": "YOUR REMOTE SHINES A LIGHT",
+ "descripcion": "Every button press is a burst of invisible light, flashing 38,000 times a second. Your phone camera can see it.\n\nWhat should we explain next?\n\n#howitworks #engineering #tvremote #infrared #shorts",
+ "tags": ["how it works", "engineering", "tv remote", "infrared", "remote control", "ir led", "shorts"],
+ "lineas": [
+  {"texto": "Your TV remote shines a light at your TV. You just can't see it.", "pausa": 0.3},
+  {"texto": "Point a phone camera at it and press a button. There it is.", "pausa": 0.3},
+  {"texto": "Inside, every button sits on a little rubber dome.", "pausa": 0.3},
+  {"texto": "Press it, and a carbon pad under the dome touches the board and closes a circuit.", "pausa": 0.3},
+  {"texto": "A tiny chip knows which button it was, and turns it into a code.", "pausa": 0.3},
+  {"texto": "Then an infrared LED flashes that code, in short bursts of light.", "pausa": 0.3},
+  {"texto": "Each burst blinks thirty-eight thousand times per second. Long gap, short gap: ones and zeros.", "pausa": 0.3},
+  {"texto": "A sensor on the TV ignores every light that doesn't blink at that exact speed, and reads the code.", "pausa": 0.3},
+  {"texto": "Volume up. Now you know. What should we explain next?", "pausa": 0.2}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "controle", "p": {"etapa": "sala"}},
+  {"linea": 1, "comp": "controle", "p": {"etapa": "camera"}},
+  {"linea": 2, "comp": "controle", "p": {"etapa": "botao"}},
+  {"linea": 3, "comp": "controle", "p": {"etapa": "aperta"}},
+  {"linea": 4, "comp": "controle", "p": {"etapa": "chip"}},
+  {"linea": 5, "comp": "controle", "p": {"etapa": "led"}},
+  {"linea": 6, "comp": "controle", "p": {"etapa": "pulsos"}},
+  {"linea": 7, "comp": "controle", "p": {"etapa": "sensor"}},
+  {"linea": 8, "comp": "controle", "p": {"etapa": "final"}}
+ ],
+ "eventos": [
+  {"tipo": "certo", "linea": 3, "en": 0.5},
+  {"tipo": "certo", "linea": 7, "en": 0.8},
+  {"tipo": "tada", "linea": 8, "en": 0.05}
+ ],
+ "destaque": []
+}
