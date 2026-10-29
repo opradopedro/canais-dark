@@ -3,5 +3,6 @@
 # NUNCA deixe o mesmo canal ligado aqui E numa rotina do Claude que tambem produz: o video sairia em dobro.
 signal-lost
 old-tales
-# hora-muerta       <- ligar so depois que a rotina do Claude parar de produzir o Hora Muerta
-# so-you-built-it   <- ligar so depois que a rotina do Claude parar de produzir o So You Built It
+hora-muerta
+so-you-built-it
+# ligados em 29/10/2026: o Pedro pausou as rotinas de producao do Hora Muerta e do So You Built It no Claude
