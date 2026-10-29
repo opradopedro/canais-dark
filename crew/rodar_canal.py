@@ -150,6 +150,12 @@ def _rodar(canal):
     falta_memoria = conferir_memoria()
     if falta_memoria:
         return f"[{canal}] {falta_memoria}"
+    # fiscal: nunca produzir a partir de roteiro quebrado (venha do Kiro ou do Claude)
+    fis = subprocess.run([sys.executable, os.path.join(repo, "motor-en", "validar_roteiros.py")], cwd=repo,
+                         capture_output=True, text=True, encoding="utf-8", errors="replace")
+    erros_canal = [l for l in fis.stdout.splitlines() if "ERRO" in l and (canal + os.sep in l or canal + "/" in l)]
+    if erros_canal:
+        return f"[{canal}] FALHOU: roteiro com erro, nada foi produzido. Conserte e envie de novo:\n" + "\n".join(erros_canal[:8])
     saida = os.path.join(tempfile.gettempdir(), "canais", canal)
     os.makedirs(saida, exist_ok=True)
     cmd = [sys.executable, os.path.join(repo, "motor-en", "produce.py"),
