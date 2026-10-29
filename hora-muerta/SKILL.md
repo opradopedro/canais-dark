@@ -14,23 +14,13 @@ no plano grátis e o upload usa a YouTube Data API.
 - Publicação: 1 Short por dia às 21h de Brasília (00h UTC), agendado como privado com `publishAt`.
   O Pedro pode vetar no YouTube Studio antes do horário.
 
-## Padrão de qualidade (esforço alto, pedido do Pedro em 23/10)
+## Padrão de qualidade (esforço padrão, pedido do Pedro em 28/10)
 
-O Pedro quer vídeos bonitos de ver e temas criativos e pouco batidos. Pesquisa de tema e motor gráfico são as
-duas partes onde **não se economiza raciocínio nem tempo**:
+Use o esforço padrão recomendado, sem rodadas extras: o Pedro pediu para economizar tokens.
 
-- **Pesquisa de tema:** antes de escrever, use WebSearch para achar lendas, casos e creepypastas latino-americanos pouco explorados em Shorts
-  (Reddit r/Paranormal, r/LetsNotMeet, r/latinoamerica, fóruns e folclore regional, Shorts virais de terror em
-  espanhol para ver o que já está saturado). Liste pelo menos 8 candidatos com nota de 1 a 5 em
-  originalidade (pouco contado em Shorts), gancho nos 2 primeiros segundos, potencial visual nas cenas em
-  código e se rende uma série de 2 partes ou mais. Fuja do que já foi muito usado por outros canais e do que já está em `stories/`; anote os bons que
-  sobrarem no backlog (`references/temas.md`). Confira os fatos que o roteiro afirma.
-- **Motor gráfico:** cada cena precisa ser bonita sozinha: composição, luz e sombra, textura, profundidade, movimento
-  com intenção e leitura clara do que está acontecendo. Melhore o motor quando um tema pedir. Renderize quadros de
-  teste em vários pontos, **olhe cada JPG** e faça pelo menos duas rodadas de ajuste antes do render final. Se um
-  quadro estiver feio, vazio, confuso ou repetido, conserte antes de subir.
-- O Pedro não precisa aprovar antes de subir ("Nunca espere minha aprovação pra subir"), então a conferência dos
-  quadros é a única revisão: trate-a como a de um editor exigente.
+- **Tema:** uma busca rápida por lendas e casos latino-americanos pouco contados em Shorts (Reddit, folclore regional) que rendam série de 2 partes ou mais; fuja do que já está em `stories/` e confira os fatos do roteiro.
+- **Motor gráfico:** renderize alguns quadros de teste, olhe os JPGs uma vez e conserte só o que estiver feio, vazio ou confuso.
+- O Pedro não precisa aprovar antes de subir, então essa conferência dos quadros é a única revisão.
 
 ## Rodar (rotina diária)
 
@@ -139,7 +129,7 @@ Formato de cada parte:
 
 Eventos globais: `susto` (flash vermelho, tranco de câmera, estrondo), `golpe` (batida, tremida),
 `flash`, `negro` (tela preta por `dur`), `apagon` (luz piscando com zumbido).
-Só som: `silbido` (assobio subindo notas), `grito` (lamento), `vibra` (celular), `apaga` (sopro), `cadenas` (corrente arrastando), `aullido` (uivo).
+Só som: `silbido` (assobio subindo notas), `grito` (lamento), `vibra` (celular), `apaga` (sopro), `cadenas` (corrente arrastando), `aullido` (uivo), `toc` (batida oca de madeira).
 
 Componentes (`comp`) e o que cada um aceita:
 
@@ -157,7 +147,9 @@ Componentes (`comp`) e o que cada um aceita:
 | `ojos` | mata com olhos vermelhos; com `perro` desenha um cachorro de frente (negro com contraluz, presas e bafo; `blanco` fantasma) | `n`, `cerca` [ini, fim], `perro`, `blanco`, `color` "r,g,b" | `acerca` |
 | `ventana` | janela vista de dentro | `cara` | `cara` (rosto e mãos no vidro) |
 | `rio` | rio ao luar, mulher de branco | `dist` | `grito` (avança e grita) |
-| `puerta` | porta abrindo | `abre` [ini, fim], `luz`, `garras` | `abre`, `mano` (dedos na borda), `susto` (olhos), `garras` (arranhões aparecem) |
+| `puerta` | porta abrindo | `abre` [ini, fim], `luz`, `garras`, `silueta` (vulto de vestido na luz; olhos vermelhos no `susto`) | `abre`, `mano` (dedos na borda), `susto` (olhos), `garras` (arranhões aparecem) |
+| `manglar` | manglar do Pacífico ao luar, raízes em arco, mulher de vestido florido na água (de costas) | `figura`, `dist` | `voltea` (vira com rosto sorrindo), `acerca` |
+| `pies` | close dos pés: um descalço e uma pata de palo em molinillo (Tunda) | `tipo` "madera"/"descalzos", `piso` "barro"/"tabla" | `toc` (a pata levanta e bate) |
 | `texto` | cartela de regra | `lineas` [título vermelho, subtítulo] | |
 
 Precisa de uma cena que não existe? Crie um `COMP.nome = (t, lt, p) => {...}` no `engine.html`
