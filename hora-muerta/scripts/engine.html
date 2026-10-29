@@ -1127,7 +1127,7 @@ COMP.salao = (t, lt, p) => {
   x.fillStyle = '#140c07'; x.beginPath(); x.moveTo(lx - 150, ly); x.lineTo(lx - 150, ly - 200); x.quadraticCurveTo(lx, ly - 300, lx + 150, ly - 200); x.lineTo(lx + 150, ly); x.closePath(); x.fill();
   glow(lx, ly - 80, 560 * fogo, `rgba(255,150,60,${noite ? 0.5 : 0.35})`);
   x.fillStyle = '#3a2412'; for (let i = 0; i < 3; i++) x.fillRect(lx - 90 + i * 20, ly - 30 - i * 10, 180 - i * 40, 22);
-  flame(lx, ly - 30, t, 1.6 * fogo);
+  flame(lx - 60, ly - 26, t + 1.3, 1.0 * fogo); flame(lx + 58, ly - 26, t + 2.1, 0.95 * fogo); flame(lx, ly - 30, t, 1.6 * fogo);
   // chao com juncos
   x.fillStyle = '#6e5634'; x.fillRect(0, H * 0.62, W, H * 0.38);
   x.strokeStyle = 'rgba(190,160,90,0.5)'; x.lineWidth = 3;
@@ -1136,20 +1136,20 @@ COMP.salao = (t, lt, p) => {
   // estrado com a mesa alta
   x.fillStyle = '#4a3220'; x.fillRect(W * 0.08, H * 0.6, W * 0.84, 26);
   if (p.mesa || g > 0) {
-    x.fillStyle = '#7b5532'; x.fillRect(W * 0.1, H * 0.665, W * 0.8, 30); x.fillStyle = '#5a3b22'; x.fillRect(W * 0.12, H * 0.69, 20, 120); x.fillRect(W * 0.86, H * 0.69, 20, 120);
-    x.fillStyle = '#efe6d2'; x.fillRect(W * 0.1, H * 0.66, W * 0.8, 10);
-    const n = Math.round(g * 9);
-    for (let i = 0; i < n; i++) { const px = W * (0.15 + i * 0.085), s = 0.2 + rnd(i) * 0.03; figure(px, H * 0.67, s, pele, { arms: 0.6 }); }
+    const n = Math.round(g * 7);
+    for (let i = 0; i < n; i++) { const px = W * (0.16 + i * 0.113), s = 0.36 + rnd(i) * 0.04; figure(px, H * 0.78, s, pele, { arms: 0.6 }); }
+    x.fillStyle = '#7b5532'; x.fillRect(W * 0.08, H * 0.745, W * 0.84, 34); x.fillStyle = '#5a3b22'; x.fillRect(W * 0.1, H * 0.77, 22, 150); x.fillRect(W * 0.87, H * 0.77, 22, 150);
+    x.fillStyle = '#efe6d2'; x.fillRect(W * 0.08, H * 0.74, W * 0.84, 10);
   }
   if (p.mesa) {
     for (let i = 0; i < 7; i++) {
       const px = W * (0.16 + i * 0.11);
-      x.fillStyle = '#9b6a36'; x.beginPath(); x.ellipse(px, H * 0.655, 44, 14, 0, 0, 7); x.fill();
-      x.fillStyle = '#c48a48'; x.beginPath(); x.ellipse(px, H * 0.65, 38, 10, 0, 0, 7); x.fill();
+      x.fillStyle = '#9b6a36'; x.beginPath(); x.ellipse(px, H * 0.737, 44, 14, 0, 0, 7); x.fill();
+      x.fillStyle = '#c48a48'; x.beginPath(); x.ellipse(px, H * 0.732, 38, 10, 0, 0, 7); x.fill();
     }
-    x.fillStyle = '#8a4a2a'; x.beginPath(); x.ellipse(W * 0.5, H * 0.64, 90, 34, 0, 0, 7); x.fill();
-    x.fillStyle = '#b26a3a'; x.beginPath(); x.ellipse(W * 0.5, H * 0.63, 70, 22, 0, 0, 7); x.fill();
-    for (const s of [-1, 1]) { x.fillStyle = '#7a6040'; x.fillRect(W * 0.5 + s * 160 - 18, H * 0.6, 36, 56); }
+    x.fillStyle = '#8a4a2a'; x.beginPath(); x.ellipse(W * 0.5, H * 0.725, 90, 34, 0, 0, 7); x.fill();
+    x.fillStyle = '#b26a3a'; x.beginPath(); x.ellipse(W * 0.5, H * 0.715, 70, 22, 0, 0, 7); x.fill();
+    for (const s of [-1, 1]) { x.fillStyle = '#7a6040'; x.fillRect(W * 0.5 + s * 160 - 18, H * 0.685, 36, 56); }
   }
   if (p.camas) {
     for (let i = 0; i < 3; i++) {
@@ -1234,7 +1234,7 @@ COMP.forja = (t, lt, p) => {
     x.strokeStyle = 'rgba(200,205,210,0.6)'; x.lineWidth = 2;
     for (let r = 0; r < 34; r++) for (let c = 0; c < 36; c++) { x.beginPath(); x.arc(mx - 200 + c * 11 + (r % 2) * 5.5, my + r * 11, 5, 0, 7); x.stroke(); }
     x.restore();
-    const bx = W * 0.3 + Math.sin(t * 1.4) * 40, by = H * 0.9, rot = Math.sin(t * 1.4) * 1.2;
+    const bx = W * 0.82 + Math.sin(t * 1.4) * 40, by = H * 0.9, rot = Math.sin(t * 1.4) * 1.2;
     x.save(); x.translate(bx, by); x.rotate(rot); x.fillStyle = '#7a5530'; x.beginPath(); x.ellipse(0, 0, 90, 110, 0, 0, 7); x.fill();
     x.strokeStyle = '#3a3c40'; x.lineWidth = 10; for (const yy of [-60, 0, 60]) { x.beginPath(); x.moveTo(-88, yy); x.lineTo(88, yy); x.stroke(); } x.restore();
   }

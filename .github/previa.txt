@@ -1,2 +1,2 @@
 # (caminho do roteiro para desenhar a previa na nuvem)
-old-tales/stories/004-squire-1.json
+old-tales/stories/006-squire-3.json
