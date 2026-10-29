@@ -14,7 +14,7 @@ Nada aqui gasta narração: o GitHub Actions narra e posta depois, sozinho.
 | 5 | FEITO (kiro, 29/10) | So You Built It | mundo `porao` (casa em corte com porão, pressão da água, dreno francês interno, poço com bomba de boia, válvula de retenção) | YB020 Evolucao "You built a basement. It flooded." |
 | 6 | FEITO (kiro, 29/10) | Signal Lost | peça `metro` (vagão de metrô parado no túnel, luzes piscando, vagão da frente vazio pela porta de vidro) | SV005-SV008 série "Metrô parado no túnel" (temas.md) |
 | 7 | FEITO (kiro, 29/10) | Old Tales | peças `salao` (salão do castelo, lareira enorme, mesa longa, tapeçarias) e `forja` (ferreiro, bigorna, faíscas) | CL004-CL006 série "You wake up as a squire in 1300" (fatos conferidos) |
-| 8 | FAZENDO (kiro, 29/10) | So You Built It | mundo `panela` (panela de pressão em corte, água a ~120 °C, válvula de peso, vapor) | YB021 Curiosidade "How a pressure cooker cooks faster" |
+| 8 | FEITO (kiro, 29/10) | So You Built It | mundo `panela` (panela de pressão em corte, água a ~120 °C, válvula de peso, vapor) | YB021 Curiosidade "How a pressure cooker cooks faster" |
 | 9 | PENDENTE | So You Built It | mundo `escada` (escada rolante em corte, degraus com 2 pares de rodas em 2 trilhos que se aproximam no topo) | YB022 Curiosidade "How escalator steps flatten at the top" |
 | 10 | PENDENTE | Hora Muerta | peças só se precisar | HM015-HM016 segunda série nova |
 | 11 | PENDENTE | So You Built It | mundo `arranhaceu` (prédio em solo mole, afunda, radier, estacas até a rocha, âncoras contra o lençol) | YB023 Evolucao "You built a skyscraper on soft ground" |
