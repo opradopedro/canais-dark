@@ -1,2 +1,2 @@
 # (caminho do roteiro para desenhar a previa na nuvem)
-hora-muerta/stories/013-siguanaba-1.json
+so-you-built-it/stories/019-smoke-detector.json

@@ -1,0 +1,38 @@
+{
+ "codigo": "YB019",
+ "mundo": "detector",
+ "formato": "Curiosidade",
+ "autor": "kiro",
+ "titulo": "Your smoke detector is a tiny nuclear device ☢️ #howitworks #shorts",
+ "capa": "THERE'S NUCLEAR STUFF IN YOUR CEILING",
+ "descripcion": "Most smoke detectors carry a speck of americium-241. It charges the air, and smoke breaks the current.\n\nWhat should we explain next?\n\n#howitworks #engineering #smokedetector #science #shorts",
+ "tags": ["how it works", "engineering", "smoke detector", "americium", "ionization", "science", "shorts"],
+ "lineas": [
+  {"texto": "The smoke detector on your ceiling has a tiny bit of nuclear material inside.", "pausa": 0.3},
+  {"texto": "Don't worry. It's less than a millionth of a gram, sealed in a metal button.", "pausa": 0.3},
+  {"texto": "It's called americium, and it keeps shooting out tiny alpha particles. They can't even get through paper.", "pausa": 0.3},
+  {"texto": "But they slam into the air between two metal plates, and give it an electric charge.", "pausa": 0.3},
+  {"texto": "So a tiny current flows across the gap, all day, every day.", "pausa": 0.3},
+  {"texto": "Then smoke drifts in.", "pausa": 0.3},
+  {"texto": "The smoke grabs those charged bits of air, and the current drops.", "pausa": 0.3},
+  {"texto": "The chip notices the drop, and screams.", "pausa": 0.3},
+  {"texto": "That's how it smells smoke without a nose. What should we explain next?", "pausa": 0.2}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "detector", "p": {"etapa": "teto"}},
+  {"linea": 1, "comp": "detector", "p": {"etapa": "fonte"}},
+  {"linea": 2, "comp": "detector", "p": {"etapa": "alfa"}},
+  {"linea": 3, "comp": "detector", "p": {"etapa": "ions"}},
+  {"linea": 4, "comp": "detector", "p": {"etapa": "corrente"}},
+  {"linea": 5, "comp": "detector", "p": {"etapa": "fumaca"}},
+  {"linea": 6, "comp": "detector", "p": {"etapa": "cai"}},
+  {"linea": 7, "comp": "detector", "p": {"etapa": "apita"}},
+  {"linea": 8, "comp": "detector", "p": {"etapa": "final"}}
+ ],
+ "eventos": [
+  {"tipo": "certo", "linea": 4, "en": 0.6},
+  {"tipo": "erro", "linea": 6, "en": 0.7},
+  {"tipo": "tada", "linea": 8, "en": 0.05}
+ ],
+ "destaque": []
+}
