@@ -4,7 +4,7 @@ Ordem sugerida: alternar Leyenda, Regla e Testigo. Marque aqui o código quando 
 
 ## Já roteirizados (séries de 2 partes)
 HM001-002 El reflejo (Testigo) · HM003-004 La regla de las 3:33 (Regla) · HM005-006 El Silbón (Leyenda)
-HM007-008 La Llorona (Leyenda) · HM009-010 El Cadejo (Leyenda) · HM011-012 La Tunda (Leyenda)
+HM007-008 La Llorona (Leyenda) · HM009-010 El Cadejo (Leyenda) · HM011-012 La Tunda (Leyenda) · HM013-014 La Siguanaba (Leyenda, peça siguanaba)
 
 ## Próximas séries prontas para virar roteiro
 - El último autobús: parte 1 o chofer grita "¡bájate ya!"; parte 2 explica que algo sentou ao lado dele e ainda o
@@ -17,7 +17,7 @@ HM007-008 La Llorona (Leyenda) · HM009-010 El Cadejo (Leyenda) · HM011-012 La 
 - La Tulivieja (Panamá): espírito do rio que procura o filho; parente da Llorona, pouco contada. `rio`
 - La Sayona (Venezuela): mulher de branco que seduz infiéis na estrada. `camino` + `rio`
 - El Sombrerón (Guatemala): homem baixinho de chapéu que trança o cabelo das moças. `ventana`, `camino`
-- La Siguanaba (Centroamérica): de costas é linda, de frente tem cara de cavalo. `rio`, susto no virar
+- [x] La Siguanaba (Centroamérica): HM013-014, peça `siguanaba`
 - El Coco / El Cuco: o que se esconde debaixo da cama. `puerta`, novo comp `cama`
 - La Luz Mala (Argentina): luzes no campo que levam para a morte. `ojos` com `color` amarelo
 - El Tunche (Peru): assobio na selva, igual ao Silbón. `ojos`, `silbido`

@@ -63,3 +63,6 @@ Há dois tipos:
 | `casa` | casa de camponês por dentro: fogo central, cama de palha, mesa, raio de sol | calmo | CL |
 | `mercado` | rua de feira medieval: casas de enxaimel, toldos, placas, gente, porcos, portão | calmo | CL |
 | `texto` | cartela de texto (no tema calmo vira pergaminho dourado) | os dois | todos |
+
+### Peça nova do engine.html (Hora Muerta)
+- `siguanaba`: mulher de costas lavando roupa numa pedra do rio, guacal dourado; p.dist [a,b], p.vira [a,b] (0 costas, 1 cara de cavalo); o evento `susto` faz ela virar de vez. Usada em HM013-014.
