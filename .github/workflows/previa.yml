@@ -48,7 +48,10 @@ jobs:
           if [ "${{ github.event_name }}" = push ]; then R=$(grep -v '^#' .github/previa.txt | head -1 | tr -d '\r '); else R="${{ github.event.inputs.roteiro }}"; fi
           echo "Roteiro: $R"
           rm -rf /tmp/previa && mkdir -p /tmp/previa
-          python motor-en/previa.py "$R" /tmp/previa
+          COD=$(python -c "import json,sys; print(json.load(open(sys.argv[1]))['codigo'])" "$R" 2>/dev/null || echo SEMCODIGO)
+          echo "COD=$COD" >> "$GITHUB_ENV"
+          set -o pipefail
+          python motor-en/previa.py "$R" /tmp/previa 2>&1 | tee /tmp/previa-log.txt
           ls /tmp/previa
       - uses: actions/cache/save@v4
         if: always()
@@ -59,3 +62,10 @@ jobs:
         run: |
           gh release view previas > /dev/null 2>&1 || gh release create previas --title "Previas das cenas" --notes "JPGs das previas (gerados pelo GitHub Actions)"
           gh release upload previas /tmp/previa/*.jpg --clobber
+      # se der erro, o log vai para a Release (quem fez o cenario le sem precisar entrar no GitHub)
+      - name: Enviar o erro para a Release "previas"
+        if: failure()
+        run: |
+          gh release view previas > /dev/null 2>&1 || gh release create previas --title "Previas das cenas" --notes "JPGs das previas"
+          cp /tmp/previa-log.txt "/tmp/${COD:-SEMCODIGO}_ERRO.txt" 2>/dev/null || echo "sem log" > "/tmp/${COD:-SEMCODIGO}_ERRO.txt"
+          gh release upload previas "/tmp/${COD:-SEMCODIGO}_ERRO.txt" --clobber
