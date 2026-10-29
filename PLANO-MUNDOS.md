@@ -1,4 +1,4 @@
-﻿# Plano de mundos, peças e roteiros (trabalho em lote)
+# Plano de mundos, peças e roteiros (trabalho em lote)
 
 Lista de trabalho que o Kiro ou o Claude seguem, um item por vez, de cima para baixo. Cada item cria o cenário
 (mundo 3D ou peça) E um roteiro de verdade que o usa, para a fila dos canais encher. Status: PENDENTE, FAZENDO
@@ -8,7 +8,7 @@ Nada aqui gasta narração: o GitHub Actions narra e posta depois, sozinho.
 | # | Status | Canal | Cenário novo | Roteiro |
 |---|---|---|---|---|
 | 1 | FEITO (kiro, 29/10) | So You Built It | mundo `controle` (controle remoto em corte, LED infravermelho piscando pulsos, sensor da TV, câmera do celular que mostra a luz) | YB017 Curiosidade "How a TV remote talks to the TV" (temas.md, nota 18) |
-| 2 | PENDENTE | So You Built It | mundo `poco` (terreno em corte tipo `fossa`: buraco, desmorona, revestimento, bomba manual, bomba elétrica, filtro, lençol) | YB018 Evolucao "You built a water well" |
+| 2 | FAZENDO (kiro, 29/10) | So You Built It | mundo `poco` (terreno em corte tipo `fossa`: buraco, desmorona, revestimento, bomba manual, bomba elétrica, filtro, lençol) | YB018 Evolucao "You built a water well" |
 | 3 | PENDENTE | Hora Muerta | peças só se precisar (prefira as existentes) | HM013-HM014 série nova de lenda latina (ver temas.md do HM; espanhol; mesmo formato das séries 001-012) |
 | 4 | PENDENTE | So You Built It | mundo `detector` (detector de fumaça em corte, câmara de ionização, amerício, corrente, fumaça corta, apita) | YB019 Curiosidade "How a smoke detector senses smoke" |
 | 5 | PENDENTE | So You Built It | mundo `porao` (casa em corte com porão, pressão da água, dreno francês interno, poço com bomba de boia, válvula de retenção) | YB020 Evolucao "You built a basement. It flooded." |

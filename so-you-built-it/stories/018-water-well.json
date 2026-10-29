@@ -1,0 +1,189 @@
+{
+ "codigo": "YB018",
+ "formato": "Evolucao",
+ "autor": "kiro",
+ "titulo": "You built a water well 💧 #engineering #shorts",
+ "capa": "YOU BUILT A WATER WELL",
+ "descripcion": "From a hole in the yard to a real water well, one problem at a time.\n\nWhat should we build next?\n\n#engineering #howitworks #waterwell #shorts",
+ "tags": [
+  "engineering",
+  "how it works",
+  "water well",
+  "well pump",
+  "groundwater",
+  "you built it",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "You need water. So you dig a hole until it fills up from the ground. Problem solved!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the walls are just loose dirt, and one night they cave in.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you line the hole with concrete rings. Now it stays open!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But pulling up one bucket at a time takes forever.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you cap the well and add a hand pump. Push the handle, and water comes out!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But in a dry summer, the water drops deeper. And a pump on top can only pull water up about twenty five feet.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you lower an electric pump all the way down. It pushes the water up instead, straight to a tank.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Gravel around the bottom keeps the sand out, and a sealed cap keeps dirty rain out.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a water well. What should we build next?",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "poco",
+   "p": {
+    "etapa": "buraco",
+    "passo": 1
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "poco",
+   "p": {
+    "etapa": "desmorona",
+    "passo": 1,
+    "ruim": "WALLS CAVE IN"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "poco",
+   "p": {
+    "etapa": "revestimento",
+    "passo": 2,
+    "bom": "STAYS OPEN"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "poco",
+   "p": {
+    "etapa": "balde",
+    "passo": 2,
+    "ruim": "TOO SLOW"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "poco",
+   "p": {
+    "etapa": "manual",
+    "passo": 3,
+    "bom": "WATER ON TAP"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "poco",
+   "p": {
+    "etapa": "seca",
+    "passo": 3,
+    "ruim": "PUMP RUNS DRY"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "poco",
+   "p": {
+    "etapa": "eletrica",
+    "passo": 4,
+    "bom": "PUSHED, NOT PULLED"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "poco",
+   "p": {
+    "etapa": "filtro",
+    "passo": 5,
+    "bom": "CLEAN WATER"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "poco",
+   "p": {
+    "etapa": "final",
+    "passo": 5,
+    "titulo": [
+     "YOU BUILT A",
+     "WATER WELL"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.55
+  },
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.5
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.7
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.7
+  },
+  {
+   "tipo": "tada",
+   "linea": 8,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "water",
+  "cave",
+  "concrete",
+  "forever",
+  "pump",
+  "deeper",
+  "electric",
+  "pushes",
+  "gravel",
+  "well"
+ ]
+}
