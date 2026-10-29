@@ -1,11 +1,11 @@
-﻿# Backlog de temas
+# Backlog de temas
 
 Marque `[x]` quando o roteiro entrar em `stories/`. Um tema por roteiro, sem repetir.
 
 ## Evolucao ("You built a ...": do jeito errado ao certo, um problema por cena)
 
 - [x] Septic tank (YB001)
-- [ ] Water well (buraco, desmorona, revestimento, bomba manual, bomba elétrica, filtro)
+- [x] Water well (buraco, desmorona, revestimento, bomba manual, bomba elétrica, filtro) (YB018, mundo poco)
 - [x] Swimming pool (YB009: buraco, vaza, casca projetada, algas, filtro de areia, piscina vazia boia com o lencol, valvula de alivio)
 - [ ] House foundation (casa afunda, sapata, estaca, viga baldrame, impermeabilização)
 - [ ] Retaining wall (barranco cai, muro tomba, drenagem, gabião, terra armada)
