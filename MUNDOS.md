@@ -30,6 +30,7 @@ Há dois tipos:
 |---|---|---|---|
 | `fossa` | terreno em corte com quintal e sobrado, camadas de solo, lençol freático | buraco, caixa, filtro | fossa, poço, cisterna, porão, fundação (qualquer coisa enterrada) |
 | `borracha` | vários lugares na mesma cena com corte e zoom | — | modelo para Curiosidades de objeto pequeno |
+| `detector` | cozinha com detector no teto, fogao e fumaca + camara de ionizacao em raio X (americio, particulas alfa, ions + e -, placas, circuito, medidor de corrente), apito | teto, fonte, alfa, ions, corrente, fumaca, cai, apita, final | detector de fumaca, radiacao, sensores, corrente eletrica |
 | `fechadura` | cilindro de fechadura em corte, pinos | — | fechadura, cadeado |
 | `geladeira` | geladeira em corte, ciclo do gás | — | geladeira, freezer, bomba de calor |
 | `microondas` | micro-ondas em corte, ondas | — | micro-ondas, forno |
