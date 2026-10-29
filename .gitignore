@@ -19,3 +19,4 @@ sons/
 
 # copias dos videos para o painel (vao para a Release, nao para o git)
 painel-saida/
+painel-web/dados.json

@@ -37,8 +37,8 @@ REPO_PADRAO = r"C:\canais-dark"
 
 # Como cada canal e produzido. Signal Lost e Old Tales usam o motor-en; os outros, o proprio produce.py.
 CANAIS = {
-    "signal-lost": {},
-    "old-tales": {},
+    "signal-lost": {"pasta_var": "SV_VIDEOS", "painel": "sv"},
+    "old-tales": {"pasta_var": "CL_VIDEOS", "painel": "cl"},
     "hora-muerta": {"motor_proprio": True, "token": "YT_REFRESH_TOKEN_ES", "pasta_var": "HM_VIDEOS", "painel": "hm"},
     "so-you-built-it": {"motor_proprio": True, "token": "YT_REFRESH_TOKEN_EN", "pasta_var": "YB_VIDEOS", "painel": "yb"},
 }
@@ -190,6 +190,9 @@ def _rodar(canal):
         cwd = repo
         cmd = [sys.executable, os.path.join(repo, "motor-en", "produce.py"),
                os.path.join(repo, canal), "--proximo", "--subir", "--saida", saida]
+        if os.environ.get("CANAIS_SEM_ENV") and cfg.get("pasta_var"):  # no GitHub: copia leve para o painel
+            os.environ[cfg["pasta_var"]] = os.path.join(repo, "painel-saida", cfg["painel"])
+            os.makedirs(os.environ[cfg["pasta_var"]], exist_ok=True)
     limite = int(os.environ.get("CANAIS_TIMEOUT", "3300"))
     try:
         r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, encoding="utf-8", errors="replace",

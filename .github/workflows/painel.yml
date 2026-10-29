@@ -1,0 +1,62 @@
+name: Painel online
+
+# Publica o painel (painel-web/) no GitHub Pages: https://opradopedro.github.io/canais-dark/
+# Atualiza depois de cada producao, quando entra roteiro novo e quando alguem mexe nos pedidos.
+on:
+  schedule:
+    - cron: "0 10 * * *"
+    - cron: "0 14 * * *"
+    - cron: "0 21 * * *"
+  push:
+    branches: [producao]
+    paths: ["*/stories/**", "painel-web/**", "motor-en/painel_dados.py"]
+  workflow_run:
+    workflows: ["Canais (producao diaria)"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  issues: write
+
+concurrency:
+  group: painel
+  cancel-in-progress: true
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN_SURVIVAL: ${{ secrets.YT_REFRESH_TOKEN_SURVIVAL }}
+      YT_REFRESH_TOKEN_CLASSICS: ${{ secrets.YT_REFRESH_TOKEN_CLASSICS }}
+      YT_REFRESH_TOKEN_ES: ${{ secrets.YT_REFRESH_TOKEN_ES }}
+      YT_REFRESH_TOKEN_EN: ${{ secrets.YT_REFRESH_TOKEN_EN }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: producao
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Etiquetas dos pedidos (uma vez)
+        run: |
+          for l in "painel:6b8fd6" "pedido:e0a93b" "gostei:4fb477" "naogostei:d9534f" "ideia:9b59b6" "feito:888888" \
+                   "sv:333333" "cl:333333" "hm:333333" "yb:333333" "gta:333333"; do
+            gh label create "${l%%:*}" --color "${l##*:}" --force > /dev/null 2>&1 || true
+          done
+      - name: Dados do painel
+        run: pip install -q tzdata && python motor-en/painel_dados.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: painel-web
+      - id: deploy
+        uses: actions/deploy-pages@v4

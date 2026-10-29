@@ -132,7 +132,7 @@ jobs:
       - name: Enviar videos para o painel
         if: always() && steps.ligado.outputs.sim == '1'
         run: |
-          for c in hm yb; do
+          for c in hm yb sv cl; do
             d="painel-saida/$c"
             [ -d "$d" ] && [ -n "$(ls -A "$d" 2>/dev/null)" ] || continue
             gh release view "painel-$c" > /dev/null 2>&1 || gh release create "painel-$c" --title "Painel $c" --notes "Videos para o painel (gerado pelo GitHub Actions)"
