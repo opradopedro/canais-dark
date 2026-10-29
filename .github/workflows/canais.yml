@@ -29,6 +29,7 @@ concurrency:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   rodar:
@@ -111,6 +112,13 @@ jobs:
             so-you-built-it/scripts/vendor
           key: canais-${{ github.run_id }}
           restore-keys: canais-
+
+      - name: Aplicar pedidos do painel (Gemini gratis)
+        if: steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas' && steps.qual.outputs.tarefa != 'teste'
+        continue-on-error: true
+        run: |
+          git config user.name "canais-bot"; git config user.email "canais-bot@users.noreply.github.com"
+          python motor-en/aplicar_pedidos.py "${{ steps.qual.outputs.tarefa }}"
 
       - name: Rodar
         if: steps.ligado.outputs.sim == '1'
