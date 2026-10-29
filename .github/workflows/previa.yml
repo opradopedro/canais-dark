@@ -45,7 +45,7 @@ jobs:
           restore-keys: three-
       - name: Desenhar
         run: |
-          if [ "${{ github.event_name }}" = push ]; then R=$(grep -v '^#' .github/previa.txt | head -1 | tr -d '\r '); else R="${{ github.event.inputs.roteiro }}"; fi
+          if [ "${{ github.event_name }}" = push ]; then R=$(sed 's/^\xEF\xBB\xBF//' .github/previa.txt | tr -d '\r' | grep -v '^#' | grep -v '^\s*$' | head -1 | tr -d ' '); else R="${{ github.event.inputs.roteiro }}"; fi
           echo "Roteiro: $R"
           rm -rf /tmp/previa && mkdir -p /tmp/previa
           COD=$(python -c "import json,sys; print(json.load(open(sys.argv[1]))['codigo'])" "$R" 2>/dev/null || echo SEMCODIGO)

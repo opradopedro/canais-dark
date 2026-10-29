@@ -61,7 +61,7 @@ jobs:
             "35 12 * * *") T=so-you-built-it ;;
             "40 18 * * *") T=hora-muerta ;;
             "15 3 * * *") T=metricas ;;
-            *) if [ "${{ github.event_name }}" = push ]; then T=$(head -1 .github/disparar.txt | tr -d '\r '); else T="${{ github.event.inputs.tarefa }}"; fi ;;
+            *) if [ "${{ github.event_name }}" = push ]; then T=$(sed 's/^\xEF\xBB\xBF//' .github/disparar.txt | head -1 | tr -d '\r '); else T="${{ github.event.inputs.tarefa }}"; fi ;;
           esac
           echo "tarefa=$T" >> "$GITHUB_OUTPUT"
           echo "Tarefa: $T"

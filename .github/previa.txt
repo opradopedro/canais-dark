@@ -1,3 +1,2 @@
-﻿# (caminho do roteiro para desenhar a previa no GitHub; mude a linha abaixo e envie para a producao)
+# (caminho do roteiro para desenhar a previa no GitHub; mude a linha abaixo e envie para a producao)
 so-you-built-it/stories/017-tv-remote.json
-# tentativa 2
