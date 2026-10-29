@@ -1,4 +1,4 @@
-# Backlog de temas
+﻿# Backlog de temas
 
 Marque `[x]` quando o roteiro entrar em `stories/`. Um tema por roteiro, sem repetir.
 
@@ -58,7 +58,7 @@ Marque `[x]` quando o roteiro entrar em `stories/`. Um tema por roteiro, sem rep
 - [x] How a toilet flushes without a pump (YB013; nota 19/20)
 - [ ] How a traffic light knows a car is waiting (pesquisa 27/10: laço indutivo no asfalto, o metal do carro muda a indutância; moto e bicicleta às vezes não acionam; nota 17/20)
 - [x] Why containers don't fall off ships in a storm (YB014, pedido do Pedro 27/10: twist lock nas 4 quinas, barras de peação em X, pesados embaixo, rolagem de 30°, peso declarado errado)
-- [ ] How a TV remote talks to the TV (ideia do Pedro no painel 28/10: LED infravermelho pisca um código de pulsos, o sensor da TV decodifica, a câmera do celular mostra a luz invisível; nota 18/20, PRÓXIMA Curiosidade)
+- [x] How a TV remote talks to the TV (YB017, mundo controle) (ideia do Pedro no painel 28/10: LED infravermelho pisca um código de pulsos, o sensor da TV decodifica, a câmera do celular mostra a luz invisível; nota 18/20, PRÓXIMA Curiosidade)
 - [ ] How escalator steps flatten at the top (pesquisa 27/10: cada degrau tem 2 pares de rodas em 2 trilhos; os trilhos se aproximam no topo e o degrau vira piso; nota 17/20)
 
 ## Pesquisa de 25/10 (Evolucao, nota curiosidade+surpresa+visual+cabe em 50 s, máx. 20)

@@ -1,4 +1,4 @@
-# Mundos e peças de cena (vale para o Kiro e para o Claude)
+﻿# Mundos e peças de cena (vale para o Kiro e para o Claude)
 
 Biblioteca de cenários para REAPROVEITAR. Criar cenário é a parte que mais gasta crédito; usar um que já
 existe é de graça. Antes de criar, procure aqui. Depois de criar, acrescente na tabela.
@@ -42,6 +42,7 @@ Há dois tipos:
 | `guindaste` | canteiro, prédio que cresce, poste com talha, guindaste de torre | — | guindaste, talha, obra |
 | `vaso` | vaso sanitário cortado por plano, sifão com água, caixa com boia | — | descarga, sifão, encanamento |
 | `navio` | mar aberto com ondas, porta-contêineres, corte do casco, lastro | — | navio, estabilidade, contêiner, flutuação |
+| `controle` | sala com TV e sofá + controle remoto em raio X (domos de borracha, pastilha de carbono, chip, LED infravermelho), feixe de luz, onda do código | sala, camera, botao, aperta, chip, led, pulsos, sensor, final | controle remoto, sensores, qualquer aparelho com botão e luz |
 | `tunel` | rio em corte com cidade, túnel cortado no eixo, escudo, tuneladora | — | túnel, metrô, escavação |
 
 ## Peças de cena (engine.html)
