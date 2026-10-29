@@ -177,6 +177,11 @@ def marcas(audio, linhas, key):
     return None
 
 
+class MarcasPalavra(list):
+    """Marcas tiradas do inicio da 1a palavra de cada linha (Whisper): precisas o bastante para cortar fora de silencio."""
+    palavra = True
+
+
 def marcas_whisper(audio, linhas):
     """Inicio de cada linha pelo Whisper local (sem cota e sem rede): casa as palavras ouvidas com o roteiro.
     Reserva das marcas do Gemini, que deram timeout duas vezes no YB009 (25/10)."""
@@ -187,13 +192,15 @@ def marcas_whisper(audio, linhas):
         ouvidas = legenda_whisper.ouvir(a16, os.environ.get("LEGENDA_IDIOMA", "en"))
         palavras_ = [l.split() for l in linhas]
         ini = legenda_whisper.casar([w for p in palavras_ for w in p], ouvidas)
-        v, k = [], 0
+        v, k = MarcasPalavra(), 0
+        v.exata = []
         for p in palavras_:
             # a 1a palavra achada pode ser a 3a da linha: a linha comecou antes. Sem recuar, o corte cai depois
             # do comeco dela e a frase fica no pedaco anterior (YB018, 29/10: legenda 0,7 s atrasada)
             j = next((j for j, t in enumerate(ini[k:k + len(p)]) if t is not None), None)
             ant = next((x for x in reversed(v) if x is not None), 0.0)
             v.append(None if j is None else max(ant, ini[k + j] - 0.3 * j)); k += len(p)
+            v.exata.append(j == 0)
         if any(x is None for x in v) or any(b < a for a, b in zip(v, v[1:])):
             print("marcas whisper incompletas:", v, file=sys.stderr)
             return None
@@ -243,6 +250,20 @@ def limites(audio, linhas, guia=None, minimo=0.25):
     a, b = voz[0], voz[-1]
     trechos = [(i, j) for i, j in trechos if i > a and j < b and (j - i) * 0.02 >= minimo]
     n = len(linhas) - 1
+    if guia and getattr(guia, "palavra", False):
+        # o Puck emenda linhas sem respiro nenhum ("...stays open! But pulling", YB018, 29/10): sem silencio ali, o
+        # corte caia no respiro seguinte, a frase ia para a linha anterior e a legenda saia 0,7 s atrasada.
+        # Com a marca do Whisper (inicio da 1a palavra, precisa), se nao houver silencio perto, corta no vale de
+        # energia logo antes dela. (i, j) = (m - 8, m + 4) faz o pedaco anterior acabar e o seguinte comecar em m.
+        for g, exata in zip(guia[1:], guia.exata[1:]):
+            q = int(round(g / 0.02))
+            if not exata:  # 1a palavra da linha nao foi ouvida: marca estimada, so serve de guia
+                continue
+            if any(i - 15 <= q <= j + 5 for i, j in trechos) or not (a + 12 < q < b - 12):  # ja ha silencio ali
+                continue
+            m = q - 10 + int(np.argmin(rms[q - 10:q + 2]))
+            trechos.append((m - 8, m + 4))
+        trechos.sort()
     if len(trechos) < n:
         return None
     # Escolhe os n cortes por programacao dinamica: cada linha deve ter tempo de VOZ (sem contar pausas)
@@ -372,7 +393,9 @@ def main():
                 if corte:
                     audio = audio[int(corte * SR):]
                 audio = esticar(audio, TEMPO)
-                pedacos = cortar(audio, linhas, marcas(audio, linhas, os.environ["GEMINI_API_KEY"]) or marcas_whisper(audio, linhas))
+                # Whisper primeiro (29/10): local, sem cota, e marca o inicio exato da palavra; o Gemini deu timeout
+                # em quase toda execucao no GitHub Actions e erra ~0,5 s
+                pedacos = cortar(audio, linhas, marcas_whisper(audio, linhas) or marcas(audio, linhas, os.environ["GEMINI_API_KEY"]))
             except Exception as e:
                 print("gemini falhou:", e, file=sys.stderr)
                 break
