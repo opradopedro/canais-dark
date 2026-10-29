@@ -29,7 +29,8 @@ function monta() {
     }
   }
   // agua no solo (faixa azul na face do corte)
-  W3.lencol = new T3.Mesh(new T3.PlaneGeometry(1, 1), new T3.MeshBasicMaterial({ color: 0x2f8fe0, transparent: true, opacity: 0.36, depthWrite: false })); scene.add(W3.lencol);
+  const lm = new T3.MeshBasicMaterial({ color: 0x2f8fe0, transparent: true, opacity: 0.36, depthWrite: false });
+  W3.lencois = [0, 1, 2].map(() => { const m = new T3.Mesh(new T3.PlaneGeometry(1, 1), lm); scene.add(m); return m; });
   W3.linha = new T3.Mesh(new T3.PlaneGeometry(1, 0.06), new T3.MeshBasicMaterial({ color: 0x7fd0ff })); scene.add(W3.linha);
   // terra que sai
   W3.terra = unidade(solid(B.x0, B.x1, 0, 1, B.z0, Z1 - 0.01, top, 2.2));
@@ -116,8 +117,9 @@ function atualiza(t, ctx) {
   W3.moveis.visible = S.moveis > 0; W3.moveis.scale.setScalar(Math.max(0.01, back(S.moveis)));
   // lencol
   const wt = S.wt;
-  W3.lencol.scale.set(X1 - X0, wt - AQB, 1); W3.lencol.position.set(0, (wt + AQB) / 2, Z1 + 0.012);
-  W3.linha.scale.x = X1 - X0; W3.linha.position.set(0, wt, Z1 + 0.014);
+  const faixa = (m, xa, xb, yt) => { m.visible = yt > AQB + 0.01; m.scale.set(xb - xa, Math.max(0.01, yt - AQB), 1); m.position.set((xa + xb) / 2, (yt + AQB) / 2, Z1 + 0.012); };
+  faixa(W3.lencois[0], X0, B.x0, wt); faixa(W3.lencois[1], B.x1, X1, wt); faixa(W3.lencois[2], B.x0, B.x1, Math.min(wt, PIT.y0));
+  W3.linha.scale.x = X1 - X0; W3.linha.position.set(0, wt, Z1 + 0.014); W3.linha.visible = wt < B.y0 || S.s < 4;
   // jatos pelas paredes
   W3.jatos.forEach((m) => {
     const u = m.userData, q = (t * 0.9 + u.f) % 1; m.visible = S.jatos > 0.05 && u.y < wt;
@@ -158,9 +160,9 @@ function atualiza(t, ctx) {
 }
 
 const CAM = {
-  cava: { y: -1.2, d: 16 }, vaza: { y: -2.0, d: 12, x: 1.6 }, manta: { y: -1.8, d: 14 }, sobe: { y: -2.4, d: 12, x: -0.6 },
-  dreno: { y: -2.6, d: 15 }, poco: { y: -3.2, d: 10, x: 2.8 }, bomba: { y: -3.0, d: 9.5, x: 3.0 }, valvula: { y: -1.8, d: 10, x: 3.4 },
-  final: { y: -1.0, d: 18 },
+  cava: { y: -0.6, d: 16 }, vaza: { y: -1.4, d: 12, x: 1.6 }, manta: { y: -1.2, d: 14 }, sobe: { y: -1.6, d: 12, x: -0.6 },
+  dreno: { y: -1.9, d: 15 }, poco: { y: -2.6, d: 10, x: 2.8 }, bomba: { y: -2.4, d: 9.5, x: 3.0 }, valvula: { y: -1.6, d: 10, x: 3.4 },
+  final: { y: -0.4, d: 18 },
 };
 function camera(t, ctx) { cameraPadrao(t, ctx, { x: 0, y: -1.5, d: 14, a: 0, h: 1.9, zFoco: Z1 }, p => CAM[p.etapa] || {}); }
 
