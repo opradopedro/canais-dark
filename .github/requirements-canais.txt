@@ -1,0 +1,6 @@
+numpy
+soundfile
+playwright
+faster-whisper
+sherpa-onnx
+tzdata
