@@ -12,7 +12,7 @@ Nada aqui gasta narração: o GitHub Actions narra e posta depois, sozinho.
 | 3 | FEITO (kiro, 29/10) | Hora Muerta | peças só se precisar (prefira as existentes) | HM013-HM014 série nova de lenda latina (ver temas.md do HM; espanhol; mesmo formato das séries 001-012) |
 | 4 | FEITO (kiro, 29/10) | So You Built It | mundo `detector` (detector de fumaça em corte, câmara de ionização, amerício, corrente, fumaça corta, apita) | YB019 Curiosidade "How a smoke detector senses smoke" |
 | 5 | FEITO (kiro, 29/10) | So You Built It | mundo `porao` (casa em corte com porão, pressão da água, dreno francês interno, poço com bomba de boia, válvula de retenção) | YB020 Evolucao "You built a basement. It flooded." |
-| 6 | FAZENDO (kiro, 29/10) | Signal Lost | peça `metro` (vagão de metrô parado no túnel, luzes piscando, vagão da frente vazio pela porta de vidro) | SV005-SV008 série "Metrô parado no túnel" (temas.md) |
+| 6 | FEITO (kiro, 29/10) | Signal Lost | peça `metro` (vagão de metrô parado no túnel, luzes piscando, vagão da frente vazio pela porta de vidro) | SV005-SV008 série "Metrô parado no túnel" (temas.md) |
 | 7 | PENDENTE | Old Tales | peças `salao` (salão do castelo, lareira enorme, mesa longa, tapeçarias) e `forja` (ferreiro, bigorna, faíscas) | CL004-CL006 série "You wake up as a squire in 1300" (fatos conferidos) |
 | 8 | PENDENTE | So You Built It | mundo `panela` (panela de pressão em corte, água a ~120 °C, válvula de peso, vapor) | YB021 Curiosidade "How a pressure cooker cooks faster" |
 | 9 | PENDENTE | So You Built It | mundo `escada` (escada rolante em corte, degraus com 2 pares de rodas em 2 trilhos que se aproximam no topo) | YB022 Curiosidade "How escalator steps flatten at the top" |
