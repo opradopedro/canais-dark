@@ -34,10 +34,10 @@ video, capa, video_sha, roteiro?: [frases], legenda?, serie?, serie_titulo?, par
 2. **Produza e suba** como a skill do canal manda.
 3. **Atualize o painel:**
    1. ArtifactData `get` em `canais`, doc `C`, com `out_dir /tmp/painel/atual` (guarde a `version`; na primeira vez o doc pode não existir).
-   2. Rode o script (de dentro do repo claude-skills, branch main):
+   2. Rode o script (de dentro do repo canais-dark, branch main):
       - Hora Muerta: `python3 painel/painel.py --canal hm --stories hora-muerta/stories --videos /mnt/project-files/canal-terror/videos --atual /tmp/painel/atual/canais/hm.json --saida /tmp/painel/hm`
       - So You Built It: `python3 painel/painel.py --canal yb --stories so-you-built-it/stories --videos /mnt/project-files/canal-engenharia/videos --atual /tmp/painel/atual/canais/yb.json --saida /tmp/painel/yb`
-      - Radar GTA VI: `python3 <claude-skills>/painel/painel.py --canal gta --radar <raiz do branch radar-gta6-midia> --atual /tmp/painel/atual/canais/gta.json --saida /tmp/painel/gta`
+      - Radar GTA VI: `python3 painel/painel.py --canal gta --radar <raiz do branch radar-gta6-midia do claude-skills> --atual /tmp/painel/atual/canais/gta.json --saida /tmp/painel/gta`
    3. Se imprimir `SUBIR`: envie os arquivos de `subir.json` com o Artifact tool (`url` P, `asset: true`, `file_paths` = a lista;
       até 25 por chamada), grave `/tmp/painel/<C>/urls.json` como `{"caminho local": "url do resultado"}` e rode o
       mesmo comando de novo com `--urls /tmp/painel/<C>/urls.json`. Repita até imprimir `PRONTO`.
