@@ -131,7 +131,7 @@ function atualiza(t, ctx) {
     m.position.set(u.x, FL + 4 * q * (1 - q) * 0.9, u.z); m.scale.setScalar(S.fontes);
   });
   W3.trincas.visible = S.s === 3 || (S.s === 4 && S.k < 0.3);
-  setH(W3.poca, FL, FL + S.poca); W3.poca.visible = S.poca > 0.01;
+  setH(W3.poca, FL, FL + Math.max(0.001, S.poca)); W3.poca.visible = S.poca > 0.01;
   W3.manta.visible = S.manta > 0; W3.manta.scale.y = Math.max(0.01, S.manta); W3.manta.position.y = 0;
   // dreno
   W3.dreno.visible = S.dreno > 0; W3.dreno.position.y = (1 - S.dreno) * -2;
@@ -145,7 +145,7 @@ function atualiza(t, ctx) {
   let nivel = 0.15, ligada = false;
   if (S.s === 5) nivel = lerp(0.1, 0.75, ease(clamp(S.k * 1.4 - 0.2, 0, 1)));
   if (S.s >= 6) { const c = (t * 0.22) % 1; ligada = c > 0.55; nivel = ligada ? lerp(0.8, 0.15, (c - 0.55) / 0.45) : lerp(0.15, 0.8, c / 0.55); }
-  W3.pitAgua.visible = S.pit > 0; setH(W3.pitAgua, PIT.y0 + 0.05, PIT.y0 + 0.05 + nivel);
+  setH(W3.pitAgua, PIT.y0 + 0.05, PIT.y0 + 0.05 + nivel); W3.pitAgua.visible = S.pit > 0;
   W3.bomba.visible = S.bomba > 0; W3.bomba.scale.setScalar(Math.max(0.01, back(S.bomba)));
   W3.boia.visible = W3.haste.visible = S.bomba > 0.5;
   W3.boia.position.set(3.35, PIT.y0 + 0.05 + nivel, Z1 - 0.35); W3.haste.position.set(3.35, PIT.y0 + 0.4, Z1 - 0.35); W3.haste.scale.y = Math.max(0.01, nivel - 0.35);
@@ -161,7 +161,7 @@ function atualiza(t, ctx) {
 
 const CAM = {
   cava: { y: -0.6, d: 16 }, vaza: { y: -1.4, d: 12, x: 1.6 }, manta: { y: -1.2, d: 14 }, sobe: { y: -1.6, d: 12, x: -0.6 },
-  dreno: { y: -1.9, d: 15 }, poco: { y: -2.6, d: 10, x: 2.8 }, bomba: { y: -2.4, d: 9.5, x: 3.0 }, valvula: { y: -1.6, d: 10, x: 3.4 },
+  dreno: { y: -1.9, d: 20 }, poco: { y: -2.6, d: 10, x: 2.8 }, bomba: { y: -2.4, d: 9.5, x: 3.0 }, valvula: { y: -1.6, d: 10, x: 3.4 },
   final: { y: -0.4, d: 18 },
 };
 function camera(t, ctx) { cameraPadrao(t, ctx, { x: 0, y: -1.5, d: 14, a: 0, h: 1.9, zFoco: Z1 }, p => CAM[p.etapa] || {}); }

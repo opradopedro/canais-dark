@@ -45,6 +45,7 @@ Há dois tipos:
 | `navio` | mar aberto com ondas, porta-contêineres, corte do casco, lastro | — | navio, estabilidade, contêiner, flutuação |
 | `controle` | sala com TV e sofá + controle remoto em raio X (domos de borracha, pastilha de carbono, chip, LED infravermelho), feixe de luz, onda do código | sala, camera, botao, aperta, chip, led, pulsos, sensor, final | controle remoto, sensores, qualquer aparelho com botão e luz |
 | `poco` | quintal com terreno em corte: buraco, desmorona, aneis de concreto, sarilho e balde, bomba manual com cano transparente, lencol que desce (linha 25 ft), bomba eletrica submersa + caixa d'agua, cascalho, tela, laje e chuva | buraco, desmorona, revestimento, balde, manual, seca, eletrica, filtro, final | poco, agua subterranea, bombas, solo em camadas |
+| `porao` | casa em corte com porao (moveis), agua do solo que empurra paredes e sobe pelo piso, manta, dreno frances no cascalho, poco de coleta com bomba de boia, cano de saida, valvula de retencao | cava, vaza, manta, sobe, dreno, poco, bomba, valvula, final | porao, impermeabilizacao, drenagem, bombas |
 | `tunel` | rio em corte com cidade, túnel cortado no eixo, escudo, tuneladora | — | túnel, metrô, escavação |
 
 ## Peças de cena (engine.html)
