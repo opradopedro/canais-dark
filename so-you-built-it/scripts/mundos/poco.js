@@ -183,7 +183,7 @@ function atualiza(t, ctx) {
   const bombeando = S.s === 4 || S.s === 5;
   W3.alavanca.rotation.z = bombeando ? Math.sin(t * 4.5) * 0.32 : 0;
   W3.baldeChao.visible = S.manual > 0.5;
-  W3.cano.visible = S.manual > 0.5; setH(W3.cano, CANO, 0.6);
+  setH(W3.cano, CANO, 0.6); W3.cano.visible = S.manual > 0.5;
   let colTop = 0.6;
   if (S.s === 5) colTop = lerp(0.6, CANO, ease(clamp(S.k * 2 - 0.55, 0, 1)));
   const colBot = Math.max(CANO, S.s === 5 && wt < CANO ? CANO : CANO);
@@ -226,7 +226,7 @@ function atualiza(t, ctx) {
 const CAM = {
   buraco: { y: -3.2, d: 15 }, desmorona: { y: -2.2, d: 11 }, revestimento: { y: -4.6, d: 16.5 },
   balde: { y: -1.6, d: 10.5 }, manual: { y: -1.2, d: 9.5, x: 0.3 }, seca: { y: -4.4, d: 17 },
-  eletrica: { x: 1.4, y: -3.6, d: 17.5 }, filtro: { y: -4.6, d: 16 }, final: { x: 1.2, y: -4.2, d: 18.5 },
+  eletrica: { x: 1.4, y: -3.0, d: 19 }, filtro: { y: -4.6, d: 16 }, final: { x: 1.2, y: -4.2, d: 18.5 },
 };
 function camera(t, ctx) { cameraPadrao(t, ctx, { x: 0, y: -4, d: 15, a: 0, h: 1.9, zFoco: Z1 }, p => CAM[p.etapa] || {}); }
 
@@ -235,16 +235,16 @@ function overlay(t, ctx) {
   const rotulo = (px, py, pz, txt, k, bg = 'rgba(255,255,255,0.92)', fg = COL.ink) => {
     if (k <= 0) return; const [a, b] = proj(px, py, pz); pill(a, b, txt, bg, fg, 34, back(clamp(k, 0, 1)));
   };
-  if (S.s === 0) rotulo(-3.6, S.wt + 0.45, Z1, 'Water table', (S.dig - 0.5) * 4);
+  if (S.s === 0) rotulo(2.3, S.wt + 0.45, Z1, 'Water table', (S.dig - 0.5) * 4);
   if (S.s === 2) rotulo(-2.4, -2.5, Z1, 'Concrete rings', (S.k - 0.3) * 5);
-  if (S.s === 4) rotulo(-1.4, 2.1, SZ, 'Hand pump', (S.k - 0.35) * 5);
+  if (S.s === 4) rotulo(-0.6, 2.3, SZ, 'Hand pump', (S.k - 0.35) * 5);
   if (S.limite > 0) {
     const [ax, ay] = proj(-3.8, LIMITE, Z1 + 0.02), [bx, by] = proj(3.8, LIMITE, Z1 + 0.02);
-    x.save(); x.globalAlpha = S.limite; x.strokeStyle = '#ff5a4e'; x.lineWidth = 7; x.setLineDash([22, 14]);
+    x.save(); x.globalAlpha = S.limite; x.strokeStyle = '#ff5a4e'; x.lineWidth = 10; x.setLineDash([22, 14]);
     x.beginPath(); x.moveTo(ax, ay); x.lineTo(bx, by); x.stroke(); x.restore();
     rotulo(-2.6, LIMITE + 0.55, Z1, '25 ft max', S.limite, COL.red, '#fff');
   }
-  if (S.s === 6) rotulo(-1.9, SH.y0 + 0.9, Z1, 'Electric pump', (S.epump - 0.8) * 5, COL.green, '#fff');
+  if (S.s === 6) rotulo(2.4, SH.y0 + 0.9, Z1, 'Electric pump', (S.epump - 0.8) * 5, COL.green, '#fff');
   if (S.s === 7) {
     rotulo(-2.6, -8.2, Z1, 'Gravel', (S.filtro - 0.4) * 4);
     rotulo(0, 1.6, SZ, 'Sealed cap', (S.filtro - 0.8) * 5);
