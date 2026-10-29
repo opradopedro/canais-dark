@@ -121,6 +121,7 @@ def ram_livre_mb():
 RAM_MIN_MB = int(os.environ.get("CANAIS_RAM_MIN_MB", "1200"))
 RAM_ESPERA_S = int(os.environ.get("CANAIS_RAM_ESPERA_MIN", "30")) * 60
 TENTATIVAS = int(os.environ.get("CANAIS_TENTATIVAS", "3"))
+RODADAS_CONSERTO = int(os.environ.get("CANAIS_CONSERTOS", "4"))  # voltas de conserto da legenda antes de subir com aviso
 
 
 def esperar_memoria(etapa):
@@ -250,6 +251,11 @@ def produzir(c, historia, a, base):
             base + ".mp4", "--teste", ",".join(map(str, pontos[:12])))
         run(sys.executable, os.path.join(MOTOR, "capa.py"), historia, base + "_tempos.json", base + "_capa.jpg")
         return
+    desenhar(c, historia, base)
+
+
+def desenhar(c, historia, base):
+    """Video + capa + trilha a partir da voz e dos tempos (pode rodar de novo depois de corrigir a legenda)."""
     run(sys.executable, os.path.join(MOTOR, "render.py"), historia, base + "_tempos.json", base + "_video.mp4")
     run(sys.executable, os.path.join(MOTOR, "capa.py"), historia, base + "_tempos.json", base + "_capa.jpg")
     # sons GRAVADOS (Freesound CC0) no lugar dos sintetizados: ver motor-en/mix_en.py e sons.py
@@ -262,6 +268,42 @@ def produzir(c, historia, a, base):
         "-af", f"afade=t=out:st={max(0.0, dur - 0.8):.2f}:d=0.8", "-c:a", "aac", "-b:a", "192k",
         "-movflags", "+faststart", "-shortest", base + ".mp4")
     os.remove(base + "_video.mp4")
+
+
+def corrigir_pelo_ouvido(base, idioma, modelo=None):
+    """Conserto automatico: o Whisper ouve a VOZ LIMPA e cada palavra fora do lugar vai para onde ela e ouvida.
+    So mexe nas palavras erradas (as vizinhas ficam), sempre dentro da linha e em ordem."""
+    import legenda_whisper as L
+    if modelo:
+        os.environ["LEGENDA_MODELO"] = modelo
+        L._M.clear()
+    esperar_memoria("conserto da legenda")
+    tp = base + "_tempos.json"
+    tempos = json.load(open(tp))
+    tela = L._tela(tempos)
+    voz = L.ler(base + "_voz.wav")
+    achado = L.casar([w for w, _, _ in tela], L.ouvir(voz, idioma))
+    mexidas, pos = 0, 0
+    for k, s in enumerate(tempos["segs"]):
+        nw = len(s["text"].split())
+        n = len(s.get("w") or [])
+        if n != nw:
+            pos += nw
+            continue
+        for j in range(n):
+            a = achado[pos + j] if pos + j < len(achado) else None
+            if a is None or j == 0:
+                continue
+            a = L._inicio_voz(voz, a, s["w"][j])
+            if abs(s["w"][j] - a) > 0.15:
+                s["w"][j] = round(min(max(a, s["t0"]), s["t1"] - 0.05), 3)
+                mexidas += 1
+        for j in range(1, n):
+            s["w"][j] = max(s["w"][j], round(s["w"][j - 1] + 0.066, 3))
+        pos += nw
+    json.dump(tempos, open(tp, "w"), ensure_ascii=False, indent=1)
+    print(f"conserto da legenda: {mexidas} palavra(s) movida(s) para onde a voz fala", flush=True)
+    return mexidas
 
 
 def revisar(base, idioma):
@@ -422,10 +464,24 @@ def main():
         print("video:", base + ".mp4", flush=True)
 
         ok = revisar(base, c["idioma"])
+        # blindagem (pedido do Pedro, 29/10): o video nao trava. Corrige a legenda pela voz, desenha de novo e confere,
+        # ate dar certo. Depois de RODADAS_CONSERTO voltas sem passar, sobe mesmo assim e avisa.
+        volta = 0
+        while not ok and not a.teste and volta < RODADAS_CONSERTO and os.path.exists(base + "_voz.wav"):
+            volta += 1
+            print(f"CONSERTO {cod}: volta {volta} de {RODADAS_CONSERTO}", flush=True)
+            try:
+                corrigir_pelo_ouvido(base, c["idioma"], modelo="small" if volta >= 2 else None)
+                desenhar(c, historia, base)
+            except Exception as e:
+                print(f"conserto {volta} caiu: {str(e)[:200]}", flush=True)
+                continue
+            ok = revisar(base, c["idioma"])
+        if not ok and a.subir:
+            print(f"AVISO {cod}: a conferencia nao passou depois de {volta} conserto(s); subo mesmo assim para o canal nao parar",
+                  flush=True)
         if os.path.exists(base + "_voz.wav"):
             os.remove(base + "_voz.wav")
-        if not ok and a.subir:
-            sys.exit(f"NAO SUBIU {cod}: legenda fora da voz ou audio com problema (ver acima); conserte e rode de novo")
         if a.subir:
             r = yt_upload.subir(base + "_upload.json", c.get("canal_titulo"))
             ids[cod] = r["id"]
