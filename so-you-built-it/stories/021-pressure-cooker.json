@@ -1,0 +1,38 @@
+{
+ "codigo": "YB021",
+ "mundo": "panela",
+ "formato": "Curiosidade",
+ "autor": "kiro",
+ "titulo": "Why a pressure cooker cooks 3x faster 🍲 #howitworks #shorts",
+ "capa": "WATER HOTTER THAN BOILING",
+ "descripcion": "An open pot can't get water past 100 °C. A pressure cooker traps the steam and pushes it to about 120 °C.\n\nWhat should we explain next?\n\n#howitworks #engineering #pressurecooker #science #shorts",
+ "tags": ["how it works", "engineering", "pressure cooker", "boiling point", "science", "cooking science", "shorts"],
+ "lineas": [
+  {"texto": "In an open pot, water can't get hotter than 100 degrees Celsius. No matter how big the fire.", "pausa": 0.3},
+  {"texto": "Extra heat just turns more water into steam, and the steam floats away.", "pausa": 0.3},
+  {"texto": "A pressure cooker traps that steam.", "pausa": 0.3},
+  {"texto": "A rubber ring seals the lid, so the steam has nowhere to go.", "pausa": 0.3},
+  {"texto": "The steam piles up and presses down on the water.", "pausa": 0.3},
+  {"texto": "And water under pressure can't boil until it reaches about 120 degrees.", "pausa": 0.3},
+  {"texto": "Twenty degrees hotter cooks food two or three times faster.", "pausa": 0.3},
+  {"texto": "Too much pressure? A little weight on top lifts up and lets steam hiss out.", "pausa": 0.3},
+  {"texto": "That's the hiss you hear in the kitchen. What should we explain next?", "pausa": 0.2}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "panela", "p": {"etapa": "aberta"}},
+  {"linea": 1, "comp": "panela", "p": {"etapa": "escapa"}},
+  {"linea": 2, "comp": "panela", "p": {"etapa": "tampa"}},
+  {"linea": 3, "comp": "panela", "p": {"etapa": "anel"}},
+  {"linea": 4, "comp": "panela", "p": {"etapa": "pressao"}},
+  {"linea": 5, "comp": "panela", "p": {"etapa": "termo"}},
+  {"linea": 6, "comp": "panela", "p": {"etapa": "comida"}},
+  {"linea": 7, "comp": "panela", "p": {"etapa": "valvula"}},
+  {"linea": 8, "comp": "panela", "p": {"etapa": "final"}}
+ ],
+ "eventos": [
+  {"tipo": "certo", "linea": 3, "en": 0.6},
+  {"tipo": "certo", "linea": 5, "en": 0.8},
+  {"tipo": "tada", "linea": 8, "en": 0.05}
+ ],
+ "destaque": []
+}

@@ -1,2 +1,2 @@
 # (caminho do roteiro para desenhar a previa na nuvem)
-old-tales/stories/006-squire-3.json
+so-you-built-it/stories/021-pressure-cooker.json
