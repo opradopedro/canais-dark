@@ -1,3 +1,2 @@
 # (caminho do roteiro para desenhar a previa na nuvem)
-so-you-built-it/stories/019-smoke-detector.json
-# volta 2
+so-you-built-it/stories/020-basement.json

@@ -1,0 +1,41 @@
+{
+ "codigo": "YB020",
+ "mundo": "porao",
+ "formato": "Evolucao",
+ "autor": "kiro",
+ "titulo": "You built a basement. It flooded. 🌊 #engineering #shorts",
+ "capa": "YOU BUILT A BASEMENT",
+ "descripcion": "From a hole under the house to a basement that stays dry, one problem at a time.\n\nWhat should we build next?\n\n#engineering #howitworks #basement #sumppump #shorts",
+ "tags": ["engineering", "how it works", "basement", "sump pump", "french drain", "waterproofing", "you built it", "shorts"],
+ "lineas": [
+  {"texto": "You want more space, so you dig under your house and build a basement. Problem solved!", "pausa": 0.3},
+  {"texto": "But the ground around it is full of water, and it pushes right through the walls.", "pausa": 0.3},
+  {"texto": "So you coat the outside of the walls with waterproofing. Dry walls!", "pausa": 0.3},
+  {"texto": "But after a big storm, the water rises under the floor and pushes up through the cracks.", "pausa": 0.3},
+  {"texto": "So you bury a pipe full of holes in gravel, all around the bottom. A French drain.", "pausa": 0.3},
+  {"texto": "It catches the water before it can push, and sends it to a pit in the corner.", "pausa": 0.3},
+  {"texto": "When the pit fills, a float lifts and switches on a pump, and it throws the water outside.", "pausa": 0.3},
+  {"texto": "And a check valve stops that water from falling back down the pipe.", "pausa": 0.3},
+  {"texto": "Congratulations! You just built a dry basement. What should we build next?", "pausa": 0.2}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "porao", "p": {"etapa": "cava", "passo": 1}},
+  {"linea": 1, "comp": "porao", "p": {"etapa": "vaza", "passo": 1, "ruim": "LEAKING WALLS"}},
+  {"linea": 2, "comp": "porao", "p": {"etapa": "manta", "passo": 2, "bom": "DRY WALLS"}},
+  {"linea": 3, "comp": "porao", "p": {"etapa": "sobe", "passo": 2, "ruim": "FLOODED FLOOR"}},
+  {"linea": 4, "comp": "porao", "p": {"etapa": "dreno", "passo": 3}},
+  {"linea": 5, "comp": "porao", "p": {"etapa": "poco", "passo": 3, "bom": "WATER CAUGHT"}},
+  {"linea": 6, "comp": "porao", "p": {"etapa": "bomba", "passo": 4, "bom": "PUMPED OUT"}},
+  {"linea": 7, "comp": "porao", "p": {"etapa": "valvula", "passo": 5}},
+  {"linea": 8, "comp": "porao", "p": {"etapa": "final", "passo": 5, "titulo": ["YOU BUILT A", "DRY BASEMENT"]}}
+ ],
+ "eventos": [
+  {"tipo": "erro", "linea": 1, "en": 0.55},
+  {"tipo": "erro", "linea": 3, "en": 0.6},
+  {"tipo": "certo", "linea": 2, "en": 0.6},
+  {"tipo": "certo", "linea": 5, "en": 0.7},
+  {"tipo": "certo", "linea": 6, "en": 0.7},
+  {"tipo": "tada", "linea": 8, "en": 0.05}
+ ],
+ "destaque": ["space", "walls", "waterproofing", "storm", "drain", "pit", "pump", "valve", "basement"]
+}
