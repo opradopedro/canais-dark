@@ -99,7 +99,7 @@ jobs:
         if: steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas'
         run: python -m playwright install --with-deps chromium > /dev/null
 
-      # caixa de narracoes + contador, sons, modelo do Whisper, voz reserva e Three.js: guardados entre execucoes
+      # caixa de narracoes + contador, sons, modelos do Whisper e do alinhador da legenda (torch), voz reserva e Three.js: guardados entre execucoes
       - name: Recuperar caixa de narracoes e sons
         if: steps.ligado.outputs.sim == '1'
         uses: actions/cache/restore@v4
@@ -108,6 +108,7 @@ jobs:
             narracoes
             sons
             ~/.cache/huggingface
+            ~/.cache/torch
             ~/.cache/hora-muerta
             so-you-built-it/scripts/vendor
           key: canais-${{ github.run_id }}
@@ -143,6 +144,7 @@ jobs:
             narracoes
             sons
             ~/.cache/huggingface
+            ~/.cache/torch
             ~/.cache/hora-muerta
             so-you-built-it/scripts/vendor
           key: canais-${{ github.run_id }}

@@ -1,6 +1,11 @@
+# torch so de CPU (~200 MB em vez de ~2,5 GB com CUDA): alinhamento forcado da legenda (motor-en/sincronia.py)
+--extra-index-url https://download.pytorch.org/whl/cpu
 numpy
 soundfile
 playwright
 faster-whisper
 sherpa-onnx
 tzdata
+torch==2.8.0+cpu
+torchaudio==2.8.0+cpu
+num2words

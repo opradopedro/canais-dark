@@ -274,7 +274,7 @@ Em ordem, do mais facil para o mais chato:
 | `FILA CHEIA` | Ja ha 2 videos esperando a vez | Nada, e normal |
 | `SEM ROTEIRO` | Acabaram as historias escritas | Me peca historias novas |
 | `CANAL ERRADO` | A chave e do outro canal. **Nada foi enviado** | Confira o `.env` |
-| `LEGENDA FORA DA VOZ` | A legenda escorregou do audio | Me manda a mensagem inteira |
+| `LEGENDA FORA DA VOZ` / `NAO SUBIU` | A legenda ficou fora da voz e o video foi barrado (nao subiu nada) | Me manda a mensagem inteira |
 | `VOZ FALHOU` | O Gemini nao respondeu agora | Espera e tenta de novo |
 | `vencido ou revogado` | A chave do YouTube caducou (7 dias) | Gere outra, ou publique o aplicativo |
 | `FUSO NAO ENCONTRADO` | Falta a tabela de fusos | `pip install tzdata` |

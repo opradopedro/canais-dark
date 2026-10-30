@@ -1272,26 +1272,39 @@ function subtitle(t) {
   if (!s) return;
   const words = s.text.split(' ').filter(Boolean), chunks = [], ini = [];
   for (let i = 0; i < words.length;) { let n = 0, len = 0; while (i + n < words.length && (n < 2 || len < 16) && n < 5) { len += words[i + n].length + 1; n++; if (/[.?!…:]$/.test(words[i + n - 1])) break; } chunks.push(words.slice(i, i + n).join(' ')); ini.push(i); i += n; }
-  let cur = chunks[chunks.length - 1];
+  let cur = chunks[chunks.length - 1], nVis = 99;
   if (s.w && s.w.length === words.length) {
-    // tempo de cada palavra medido na voz (tts.py): o bloco aparece 0,1 s antes da primeira palavra dele
-    let k = 0; for (let i = 0; i < words.length; i++) if (s.w[i] <= t + 0.1) k = i;
-    for (let c = 0; c < chunks.length; c++) if (ini[c] <= k) cur = chunks[c];
+    // tempo de cada palavra = alinhamento forcado da voz final (motor-en/sincronia.py, ja 1 quadro antes da voz).
+    // Estilo stories do Instagram (pedido do Pedro, 30/10): o bloco monta palavra por palavra, cada uma so entra
+    // quando a voz a fala. Nada de somar adianto aqui: o +0,1 s antigo mostrava o bloco inteiro antes da voz.
+    let k = -1; for (let i = 0; i < words.length; i++) if (s.w[i] <= t) k = i;
+    if (k < 0) return;
+    let c = 0; for (let j = 0; j < chunks.length; j++) if (ini[j] <= k) c = j;
+    cur = chunks[c]; nVis = k - ini[c] + 1;
   } else {
     const total = chunks.reduce((a, b) => a + b.length, 0), pp = (t - s.t0) / (s.t1 - s.t0) * total;
     let acc = 0;
     for (const ch of chunks) { acc += ch.length; if (pp <= acc) { cur = ch; break; } }
   }
-  x.font = '900 76px "Arial Black", Impact, system-ui, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle';
-  const lines = []; let line = '';
-  for (const w of cur.split(' ')) { const test = line ? line + ' ' + w : w; if (x.measureText(test).width > W - 300 && line) { lines.push(line); line = w; } else line = test; }
+  x.font = '900 76px "Arial Black", Impact, system-ui, sans-serif'; x.textAlign = 'left'; x.textBaseline = 'middle';
+  // quebra de linha pelo bloco INTEIRO: as palavras que ainda vao entrar ja tem lugar e o texto nao pula
+  const lines = []; let line = [];
+  for (const w of cur.split(' ')) { const test = [...line, w].join(' '); if (x.measureText(test.toUpperCase()).width > W - 300 && line.length) { lines.push(line); line = [w]; } else line.push(w); }
   lines.push(line);
-  lines.forEach((l, i) => {
+  let n = 0;
+  lines.forEach((ws, i) => {
     // zona segura do Shorts: o rodape (nome do canal, Inscrever-se, descricao) cobre de ~72% para baixo
     // e a coluna de botoes ocupa a direita, entao a legenda fica em 62% e puxada para a esquerda
-    const y = H * 0.62 + i * 90, cx = W / 2 - 50;
-    x.lineWidth = 14; x.strokeStyle = '#000'; x.lineJoin = 'round'; x.strokeText(l.toUpperCase(), cx, y);
-    x.fillStyle = RX && RX.test(l) ? (CALMO() ? '#ffcf6b' : '#ff3a2a') : '#f4efe6'; x.fillText(l.toUpperCase(), cx, y);
+    const l = ws.join(' '), y = H * 0.62 + i * 90, cx = W / 2 - 50;
+    let px = cx - x.measureText(l.toUpperCase()).width / 2;
+    x.lineWidth = 14; x.strokeStyle = '#000'; x.lineJoin = 'round';
+    x.fillStyle = RX && RX.test(l) ? (CALMO() ? '#ffcf6b' : '#ff3a2a') : '#f4efe6';
+    for (const w of ws) {
+      if (n++ >= nVis) return;
+      const u = w.toUpperCase();
+      x.strokeText(u, px, y); x.fillText(u, px, y);
+      px += x.measureText(u + ' ').width;
+    }
   });
 }
 function sceneAt(t) {

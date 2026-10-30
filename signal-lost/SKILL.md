@@ -71,8 +71,7 @@ subir se nao bater.
   que ja existem e se rende 3 ou 4 partes. Fuja do que ja esta em `stories/` e do que esta saturado.
 - **Conferencia visual:** rode com `--teste` e **olhe cada JPG** antes do render final. O primeiro
   quadro (gancho) precisa assustar. A legenda fica em 62% da altura: confira que nao cobre o essencial.
-- A legenda e o audio ja tem conferencia automatica (o motor ouve o MP4 final com o Whisper e
-  compara com a legenda; 85% das palavras reconhecidas, nenhuma fora mais de 0,3 s).
+- A legenda e o audio ja tem conferencia automatica. **Legenda colada na voz (REGRA do Pedro, 30/10, todos os canais):** o tempo de cada palavra sai do ALINHAMENTO FORÇADO do áudio final já mixado (`motor-en/sincronia.py`, wav2vec2 MMS_FA do torchaudio, CPU, grátis), nunca de estimativa nem do Whisper. A palavra entra 1 quadro antes da voz e nunca antes disso. Depois do MP4 pronto, `sincronia.conferir` alinha o arquivo final de novo e lê os quadros: toda palavra entre 0,12 s antes e 0,07 s depois da voz, áudio e vídeo começando juntos, legenda nos quadros sem deslocamento. Se reprovar, refaz uma vez; se reprovar de novo, imprime `NAO SUBIU ... LEGENDA FORA DA VOZ`, **não sobe** e a tarefa falha (log na Release "logs").
 
 ## Regras do canal
 

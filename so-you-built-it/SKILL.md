@@ -54,24 +54,19 @@ Tempo: o render em CPU leva uns 15 a 25 min por vídeo de 40 s. Cota do YouTube:
 
 ## Conferência obrigatória antes de subir (pedidos do Pedro, 23/10)
 
-- **Legenda presa na voz:** o `tts.py` passa a narração pelo Whisper (`scripts/legenda_whisper.py`, faster-whisper
-  no CPU, grátis) e grava o início real de cada palavra em `seg["w"]`. Depois do MP4 pronto, o `produce.py` ouve o
-  arquivo final de novo e compara com a legenda: precisa reconhecer 85% das palavras e nenhuma pode escorregar
-  mais de 0,3 s (o fim do vídeo é conferido à parte). Se falhar, imprime `LEGENDA FORA DA VOZ` e **não sobe**.
+- **Legenda colada na voz (REGRA do Pedro, 30/10, todos os canais):** o tempo de cada palavra sai do ALINHAMENTO FORÇADO do áudio final já mixado (`motor-en/sincronia.py`, wav2vec2 MMS_FA do torchaudio, CPU, grátis), nunca de estimativa nem do Whisper. A palavra entra 1 quadro antes da voz e nunca antes disso. Depois do MP4 pronto, `sincronia.conferir` alinha o arquivo final de novo e lê os quadros: toda palavra entre 0,12 s antes e 0,07 s depois da voz, áudio e vídeo começando juntos, legenda nos quadros sem deslocamento. Se reprovar, refaz uma vez; se reprovar de novo, imprime `NAO SUBIU ... LEGENDA FORA DA VOZ`, **não sobe** e a tarefa falha (log na Release "logs").
 - **Áudio sem estalo:** o Gemini solta o "t" do "next?" sozinho, 0,3 s depois da palavra, tão alto quanto a voz
   (era o "áudio estourado no final" do YB002). O `mix.py` abaixa em 18 dB toda ilha de som curta, aguda e cercada
   de silêncio, segura os sibilantes (de-esser acima de 5 kHz), faz um fade depois da última palavra e normaliza em 2
   passadas (o loudnorm dinâmico realçava chiado no silêncio). `mix.conferir_audio` procura clip e estalo isolado no
   fim; se achar, `AUDIO COM PROBLEMA` e não sobe.
-- Início de frase dentro da linha (depois de `.` `?` `!`): o Whisper marca essa palavra cedo e instável, dentro da pausa
-  (o YB004 foi barrado por 0,5 s). `legenda_whisper.py` acerta essas palavras pela energia real da voz (`_ataque`) tanto
-  no ajuste quanto na conferência.
 - **Tags lidas em voz alta:** o Gemini às vezes fala as tags de estilo ("Excited, energetic, your backyard...", YB009 em 24/10), o que
   bota palavras a mais na voz e desanda o corte das linhas. O modelo 3.8 faz isso quase sempre (YB006 e YB008 chegaram a ser
   agendados assim). O `tts.py` ouve os primeiros segundos com o Whisper e corta o áudio no silêncio depois da última tag.
 - Vídeo agendado com defeito: `python3 scripts/yt_upload.py apagar <id>` (só apaga se ainda não estiver público) e rode o
   `produce.py --proximo --subir` de novo; ele refaz o código que sumiu do canal e reaproveita o horário livre.
-- Rodar só a conferência: `python3 scripts/legenda_whisper.py conferir /tmp/yb/YB004.mp4 /tmp/yb/YB004_tempos.json --idioma en`.
+- Rodar só a conferência: `python3 ../motor-en/sincronia.py conferir /tmp/yb/YB004.mp4 /tmp/yb/YB004_tempos.json --idioma en`.
+- Medir um vídeo já publicado (sem tempos.json): `python3 ../motor-en/sincronia.py medir video.mp4 roteiro.txt --idioma en`.
 
 ## Painel dos canais (antes e depois de cada execução)
 
@@ -94,7 +89,8 @@ O Pedro acompanha, vota, pede mudanças e manda ideias em **https://claude.ai/ar
 | `scripts/render.py` | Chromium (swiftshader) quadro a quadro para FFmpeg, 30 fps; `--teste 1,5,9` salva JPGs |
 | `scripts/tts.py` | Gemini TTS com tempo de cada palavra; reserva Kokoro (`KOKORO_LANG=en`) |
 | `scripts/mix.py` | Voz sem música (`YB_MUSICA=1` volta a marimba), whoosh nas trocas de cena, efeitos `erro`, `certo`, `tada`, -14 LUFS |
-| `scripts/legenda_whisper.py` | Whisper acerta e confere a legenda palavra por palavra (`ajustar`, `conferir`) |
+| `../motor-en/sincronia.py` | Legenda: alinhamento forçado do áudio final (`ajustar`) e trava antes de subir (`conferir`) |
+| `scripts/legenda_whisper.py` | Whisper: só ajuda o `tts.py` a cortar a voz por linha (não marca mais a legenda) |
 | `scripts/yt_upload.py` | `subir`, `publicados` (códigos YBxxx pela tag) e `canal` (de quem é o token) |
 | `scripts/comum.py` | Converte cenas e eventos do roteiro em segundos |
 

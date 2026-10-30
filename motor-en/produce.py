@@ -121,7 +121,7 @@ def ram_livre_mb():
 RAM_MIN_MB = int(os.environ.get("CANAIS_RAM_MIN_MB", "1200"))
 RAM_ESPERA_S = int(os.environ.get("CANAIS_RAM_ESPERA_MIN", "30")) * 60
 TENTATIVAS = int(os.environ.get("CANAIS_TENTATIVAS", "3"))
-RODADAS_CONSERTO = int(os.environ.get("CANAIS_CONSERTOS", "4"))  # voltas de conserto da legenda antes de subir com aviso
+RODADAS_CONSERTO = int(os.environ.get("CANAIS_CONSERTOS", "1"))  # voltas de conserto antes de desistir (legenda ruim NAO sobe)
 
 
 def esperar_memoria(etapa):
@@ -233,15 +233,9 @@ def produzir(c, historia, a, base):
     tts = [sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "tts_guard.py"),
            historia, base + "_voz.wav", base + "_tempos.json"]
     run(*(tts + (["--motor", a.motor] if a.motor else [])))
-    # legenda presa na voz limpa SEMPRE, antes de desenhar: a voz que vem da caixa ou com as marcas do Gemini
-    # fora do ar (timeout) deixava palavra adiantada ate 1,4 s depois de pausa (CL002 "Part two. Today", 29/10)
-    try:
-        import legenda_whisper
-        esperar_memoria("legenda na voz")
-        print("legenda na voz:", legenda_whisper.ajustar(base + "_voz.wav", base + "_tempos.json", c["idioma"]), flush=True)
-    except Exception as e:
-        print("legenda na voz falhou (fica a do tts, o revisar confere):", str(e)[:200], file=sys.stderr, flush=True)
     if a.teste:
+        import sincronia
+        sincronia.ajustar(base + "_voz.wav", base + "_tempos.json", c["idioma"])
         h = carregar(historia)
         tm = json.load(open(base + "_tempos.json"))
         r = resolver(h, tm)
@@ -255,12 +249,17 @@ def produzir(c, historia, a, base):
 
 
 def desenhar(c, historia, base):
-    """Video + capa + trilha a partir da voz e dos tempos (pode rodar de novo depois de corrigir a legenda)."""
-    run(sys.executable, os.path.join(MOTOR, "render.py"), historia, base + "_tempos.json", base + "_video.mp4")
-    run(sys.executable, os.path.join(MOTOR, "capa.py"), historia, base + "_tempos.json", base + "_capa.jpg")
+    """Trilha + legenda alinhada + video + capa a partir da voz e dos tempos (pode rodar de novo no conserto)."""
+    import sincronia
     # sons GRAVADOS (Freesound CC0) no lugar dos sintetizados: ver motor-en/mix_en.py e sons.py
     run(sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "mix_en.py"), historia, base + "_voz.wav",
         base + "_tempos.json", base + "_trilha.m4a")
+    # a legenda sai do ALINHAMENTO FORCADO da trilha final (o que o espectador ouve), antes de desenhar
+    # (pedido do Pedro, 30/10: legenda atrasada nunca mais). O Whisper so serve para cortar a voz no tts.
+    esperar_memoria("legenda na voz")
+    print("legenda alinhada:", sincronia.ajustar(base + "_trilha.m4a", base + "_tempos.json", c["idioma"]), flush=True)
+    run(sys.executable, os.path.join(MOTOR, "render.py"), historia, base + "_tempos.json", base + "_video.mp4")
+    run(sys.executable, os.path.join(MOTOR, "capa.py"), historia, base + "_tempos.json", base + "_capa.jpg")
     # segunda trava contra chiado no fim: o som some suave nos ultimos 0,8 s de TODO video
     dur = float(json.load(open(base + "_tempos.json"))["dur"])
     run("ffmpeg", "-v", "error", "-y", "-i", base + "_video.mp4", "-i", base + "_trilha.m4a",
@@ -270,66 +269,28 @@ def desenhar(c, historia, base):
     os.remove(base + "_video.mp4")
 
 
-def corrigir_pelo_ouvido(base, idioma, modelo=None):
-    """Conserto automatico: o Whisper ouve a VOZ LIMPA e cada palavra fora do lugar vai para onde ela e ouvida.
-    So mexe nas palavras erradas (as vizinhas ficam), sempre dentro da linha e em ordem."""
-    import legenda_whisper as L
-    if modelo:
-        os.environ["LEGENDA_MODELO"] = modelo
-        L._M.clear()
-    esperar_memoria("conserto da legenda")
-    tp = base + "_tempos.json"
-    tempos = json.load(open(tp))
-    tela = L._tela(tempos)
-    voz = L.ler(base + "_voz.wav")
-    achado = L.casar([w for w, _, _ in tela], L.ouvir(voz, idioma))
-    mexidas, pos = 0, 0
-    for k, s in enumerate(tempos["segs"]):
-        nw = len(s["text"].split())
-        n = len(s.get("w") or [])
-        if n != nw:
-            pos += nw
-            continue
-        for j in range(n):
-            a = achado[pos + j] if pos + j < len(achado) else None
-            if a is None or j == 0:
-                continue
-            a = L._inicio_voz(voz, a, s["w"][j])
-            if abs(s["w"][j] - a) > 0.15:
-                s["w"][j] = round(min(max(a, s["t0"]), s["t1"] - 0.05), 3)
-                mexidas += 1
-        for j in range(1, n):
-            s["w"][j] = max(s["w"][j], round(s["w"][j - 1] + 0.066, 3))
-        pos += nw
-    json.dump(tempos, open(tp, "w"), ensure_ascii=False, indent=1)
-    print(f"conserto da legenda: {mexidas} palavra(s) movida(s) para onde a voz fala", flush=True)
-    return mexidas
-
-
 def revisar(base, idioma):
-    """Conferencia obrigatoria antes de subir: legenda acompanha a voz e audio sem estalo."""
-    import legenda_whisper
-    ok = True
-    voz = base + "_voz.wav"
+    """Conferencia obrigatoria antes de subir: legenda colada na voz (alinhamento forcado do MP4 final,
+    motor-en/sincronia.py) e audio sem estalo. Devolve (legenda ok, tudo ok)."""
+    import sincronia
     for t in range(1, TENTATIVAS + 1):
         esperar_memoria("conferencia da legenda")
         try:
-            rel = legenda_whisper.conferir(base + ".mp4", base + "_tempos.json", idioma,
-                                           voz=voz if os.path.exists(voz) else None)
+            rel = sincronia.conferir(base + ".mp4", base + "_tempos.json", idioma)
             break
-        except Exception as e:  # MemoryError incluido: o Whisper e a parte que mais come RAM
+        except Exception as e:  # MemoryError incluido
             rel = {"ok": False, "erro": str(e)[:200]}
             if t < TENTATIVAS:
                 print(f"conferencia caiu ({rel['erro']}), tentativa {t} de {TENTATIVAS}: espero 60 s", flush=True)
                 time.sleep(60)
     print(("LEGENDA OK " if rel["ok"] else "LEGENDA FORA DA VOZ ") + json.dumps(rel, ensure_ascii=False), flush=True)
-    ok &= bool(rel["ok"])
+    leg = ok = bool(rel["ok"])
     import mix
     if hasattr(mix, "conferir_audio"):
         prob = mix.conferir_audio(base + ".mp4")
         print("AUDIO OK" if not prob else "AUDIO COM PROBLEMA: " + "; ".join(prob), flush=True)
         ok &= not prob
-    return ok
+    return leg, ok
 
 
 def guardar(c, cod, base, up, vid):
@@ -463,22 +424,23 @@ def main():
         json.dump(up, open(base + "_upload.json", "w"), ensure_ascii=False, indent=1)
         print("video:", base + ".mp4", flush=True)
 
-        ok = revisar(base, c["idioma"])
-        # blindagem (pedido do Pedro, 29/10): o video nao trava. Corrige a legenda pela voz, desenha de novo e confere,
-        # ate dar certo. Depois de RODADAS_CONSERTO voltas sem passar, sobe mesmo assim e avisa.
+        leg, ok = revisar(base, c["idioma"])
+        # conserto: alinha e desenha de novo e confere. Audio com problema ainda sobe com aviso (29/10);
+        # LEGENDA FORA DA VOZ NAO SOBE (Pedro, 30/10): a execucao para aqui e o erro vai para a Release "logs".
         volta = 0
         while not ok and not a.teste and volta < RODADAS_CONSERTO and os.path.exists(base + "_voz.wav"):
             volta += 1
             print(f"CONSERTO {cod}: volta {volta} de {RODADAS_CONSERTO}", flush=True)
             try:
-                corrigir_pelo_ouvido(base, c["idioma"], modelo="small" if volta >= 2 else None)
                 desenhar(c, historia, base)
             except Exception as e:
                 print(f"conserto {volta} caiu: {str(e)[:200]}", flush=True)
                 continue
-            ok = revisar(base, c["idioma"])
+            leg, ok = revisar(base, c["idioma"])
+        if not leg and a.subir:
+            sys.exit(f"NAO SUBIU {cod}: LEGENDA FORA DA VOZ depois de {volta} conserto(s)")
         if not ok and a.subir:
-            print(f"AVISO {cod}: a conferencia nao passou depois de {volta} conserto(s); subo mesmo assim para o canal nao parar",
+            print(f"AVISO {cod}: o audio nao passou na conferencia depois de {volta} conserto(s); subo mesmo assim",
                   flush=True)
         if os.path.exists(base + "_voz.wav"):
             os.remove(base + "_voz.wav")

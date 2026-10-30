@@ -40,10 +40,9 @@ por parte.
 - `FILA CHEIA`: já há 2 ou mais vídeos agendados no futuro; não faz nada hoje (normal, dia sim dia não).
 - `SEM ROTEIRO`: escreva a próxima série (seção abaixo), confira os quadros com `--teste` e rode de novo.
   Nunca suba sem ter olhado os quadros de um roteiro novo.
-- `LEGENDA FORA DA VOZ` / `NAO SUBIU`: pedido do Pedro (23/10, para todas as páginas): a legenda tem que
-  acompanhar o áudio. O `tts.py` acerta cada palavra com o Whisper (`scripts/legenda_whisper.py`, faster-whisper,
-  espanhol) e o `produce.py` ouve o MP4 final e compara antes de subir (85% das palavras reconhecidas, nenhuma
-  fora mais de 0,3 s). Se reprovar, veja as `piores` palavras impressas, conserte (roteiro ou corte da voz) e rode de novo.
+- `LEGENDA FORA DA VOZ` / `NAO SUBIU`: **Legenda colada na voz (REGRA do Pedro, 30/10, todos os canais):** o tempo de cada palavra sai do ALINHAMENTO FORÇADO do áudio final já mixado (`motor-en/sincronia.py`, wav2vec2 MMS_FA do torchaudio, CPU, grátis), nunca de estimativa nem do Whisper. A palavra entra 1 quadro antes da voz e nunca antes disso. Depois do MP4 pronto, `sincronia.conferir` alinha o arquivo final de novo e lê os quadros: toda palavra entre 0,12 s antes e 0,07 s depois da voz, áudio e vídeo começando juntos, legenda nos quadros sem deslocamento. Se reprovar, refaz uma vez; se reprovar de novo, imprime `NAO SUBIU ... LEGENDA FORA DA VOZ`, **não sobe** e a tarefa falha (log na Release "logs").
+  Estilo stories: o bloco de legenda monta palavra por palavra (`engine.html`, `subtitle`). Se reprovar, veja as `piores`
+  palavras impressas (frase pulada pela voz aparece em `voz_nao_fala`), conserte o roteiro ou o corte da voz e rode de novo.
 
 Variáveis de ambiente (só no ambiente, nunca imprimir, nunca pedir no chat):
 `GEMINI_API_KEY`, `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN_ES`.

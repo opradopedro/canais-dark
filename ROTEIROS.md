@@ -65,6 +65,14 @@ git push origin producao
 Se o pull trouxer um roteiro com o MESMO código que você usou (os dois escreveram ao mesmo tempo), troque o
 seu para o próximo número livre, ajuste o `anterior` e o `series.md`, rode o fiscal e envie de novo.
 
+## Legenda (REGRA do Pedro, 30/10: vale para todos os canais)
+
+- A legenda é feita pelo motor a partir do áudio final (alinhamento forçado, `motor-en/sincronia.py`). Ninguém
+  cronometra legenda à mão nem por estimativa.
+- Uma palavra nunca aparece antes da voz nem atrasada. O motor barra o vídeo (`NAO SUBIU ... LEGENDA FORA DA VOZ`) se
+  qualquer palavra ficar fora de 0,12 s antes / 0,07 s depois da voz. Não desligue nem afrouxe essa trava.
+- No roteiro, escreva exatamente o que a voz vai falar: frase no texto que a voz não fala reprova o vídeo.
+
 ## O que NÃO fazer
 - **Signal Lost e Old Tales:** quem escreve o roteiro não publica nem gasta narração. A produção diária no
   GitHub Actions faz isso sozinha. **Hora Muerta e So You Built It** continuam narrando e subindo pelas

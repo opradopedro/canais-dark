@@ -290,7 +290,9 @@ function legenda(t) {
   if (!s) return;
   const words = s.text.split(' ').filter(Boolean), temW = s.w && s.w.length === words.length;
   let k = 0;
-  if (temW) { for (let i = 0; i < words.length; i++) if (s.w[i] <= t + 0.04) k = i; }
+  // tempo de cada palavra = alinhamento forcado da voz final (motor-en/sincronia.py), ja 1 quadro antes da voz
+  if (temW && t < s.w[0]) return;
+  if (temW) { for (let i = 0; i < words.length; i++) if (s.w[i] <= t) k = i; }
   else k = Math.min(words.length - 1, Math.floor((t - s.t0) / Math.max(0.1, s.t1 - s.t0) * words.length));
   const pal = words[k].replace(/[.,!?;:"“”]/g, ''), cap = pal.charAt(0).toUpperCase() + pal.slice(1);
   const ini = temW ? s.w[k] : s.t0, pop = 1 + 0.08 * Math.max(0, 1 - (t - ini) * 8);

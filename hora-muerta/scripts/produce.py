@@ -16,9 +16,10 @@ import argparse, datetime as dt, glob, json, os, subprocess, sys
 AQUI = os.path.dirname(os.path.abspath(__file__))
 STORIES = os.path.join(os.path.dirname(AQUI), "stories")
 sys.path.insert(0, AQUI)
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(AQUI)), "motor-en"))  # sincronia.py (legenda colada na voz)
 from comum import carregar, resolver
 
-CONSERTOS = int(os.environ.get("CANAIS_CONSERTOS_HM", "2"))  # voltas de conserto da legenda antes de subir com aviso
+CONSERTOS = int(os.environ.get("CANAIS_CONSERTOS_HM", "1"))  # voltas de conserto antes de desistir (legenda ruim NAO sobe)
 HORA_UTC = 0  # 21h em Brasilia (UTC-3) = 00h UTC do dia seguinte
 
 
@@ -45,15 +46,20 @@ def produzir(historia, a, base):
         os.environ["HM_SEM_KOKORO"] = "1"  # o Pedro reprovou a voz Kokoro: nunca publicar com ela
     tts = [sys.executable, f"{AQUI}/tts.py", historia, base + "_voz.wav", base + "_tempos.json"]
     run(*(tts + (["--motor", a.motor] if a.motor else [])))
+    import sincronia
     if a.teste:
+        sincronia.ajustar(base + "_voz.wav", base + "_tempos.json", "es")
         h = carregar(historia); tm = json.load(open(base + "_tempos.json")); r = resolver(h, tm)
         pontos = [0.3] + [round(c["t0"] + 1.2, 1) for c in r["cenas"][1:]] + [round(e["t"] + 0.25, 1) for e in r["eventos"] if e["tipo"] == "susto"]
         run(sys.executable, f"{AQUI}/render.py", historia, base + "_tempos.json", base + ".mp4", "--teste", ",".join(map(str, pontos[:12])))
         run(sys.executable, f"{AQUI}/capa.py", historia, base + "_tempos.json", base + "_capa.jpg")
         return
+    # trilha final primeiro; a legenda sai do ALINHAMENTO FORCADO dessa trilha (o que o espectador ouve) e so
+    # depois o video e desenhado (pedido do Pedro, 30/10: legenda atrasada nunca mais)
+    run(sys.executable, f"{AQUI}/mix.py", historia, base + "_voz.wav", base + "_tempos.json", base + "_trilha.m4a")
+    print("legenda alinhada:", sincronia.ajustar(base + "_trilha.m4a", base + "_tempos.json", "es"), flush=True)
     run(sys.executable, f"{AQUI}/render.py", historia, base + "_tempos.json", base + "_video.mp4")
     run(sys.executable, f"{AQUI}/capa.py", historia, base + "_tempos.json", base + "_capa.jpg")
-    run(sys.executable, f"{AQUI}/mix.py", historia, base + "_voz.wav", base + "_tempos.json", base + "_trilha.m4a")
     run("ffmpeg", "-v", "error", "-y", "-i", base + "_video.mp4", "-i", base + "_trilha.m4a", "-c:v", "libx264",
         "-crf", "26", "-preset", "slow", "-pix_fmt", "yuv420p", "-c:a", "copy", "-movflags", "+faststart", "-shortest", base + ".mp4")
     os.remove(base + "_video.mp4")  # a voz limpa fica para a conferencia da legenda (revisar) e sai depois
@@ -150,27 +156,26 @@ def main():
             up["publicar_em"] = slots[k]
         json.dump(up, open(base + "_upload.json", "w"), ensure_ascii=False, indent=1)
         print("video:", base + ".mp4", flush=True)
-        ok = revisar(base, "es")
-        # blindagem (pedido do Pedro, 29/10: o video nao trava, igual ao motor-en). Refaz o corte da voz a partir da
-        # narracao bruta guardada (nao gasta cota do Gemini TTS), desenha de novo e confere. Na 2a volta usa o Whisper
-        # "small", que erra menos as marcas. Se nada passar, sobe mesmo assim e avisa, para o canal nao parar.
+        leg, ok = revisar(base, "es")
+        # conserto: refaz a voz a partir da narracao bruta guardada (nao gasta cota do Gemini TTS), alinha e desenha
+        # de novo. Audio com problema ainda sobe com aviso (29/10); LEGENDA FORA DA VOZ NAO SOBE (Pedro, 30/10): a
+        # execucao para aqui (as partes seguintes da serie tambem esperam) e o erro vai para a Release "logs".
         volta = 0
         while not ok and a.subir and volta < CONSERTOS:
             volta += 1
             print(f"CONSERTO {cod}: volta {volta} de {CONSERTOS}", flush=True)
-            if volta >= 2:
-                os.environ["LEGENDA_MODELO"] = "small"
             try:
                 produzir(historia, a, base)
             except Exception as e:
                 print(f"conserto {volta} caiu: {str(e)[:200]}", flush=True)
                 continue
-            ok = revisar(base, "es")
-        os.environ.pop("LEGENDA_MODELO", None)
+            leg, ok = revisar(base, "es")
         if os.path.exists(base + "_voz.wav"):
             os.remove(base + "_voz.wav")
+        if not leg and a.subir:
+            sys.exit(f"NAO SUBIU {cod}: LEGENDA FORA DA VOZ depois de {volta} conserto(s)")
         if not ok and a.subir:
-            print(f"AVISO {cod}: a conferencia nao passou depois de {volta} conserto(s); subo mesmo assim para o canal nao parar",
+            print(f"AVISO {cod}: o audio nao passou na conferencia depois de {volta} conserto(s); subo mesmo assim",
                   flush=True)
         if a.subir:
             import yt_upload
@@ -181,24 +186,22 @@ def main():
 
 
 def revisar(base, idioma):
-    """Conferencia final do MP4, obrigatoria antes de subir (pedido do Pedro, 23/10): legenda acompanha a voz
-    (Whisper ouve o arquivo final) e o audio nao tem estalo nem corte."""
-    import legenda_whisper
-    ok = True
+    """Conferencia final do MP4, obrigatoria antes de subir: legenda colada na voz (alinhamento forcado do arquivo
+    final, motor-en/sincronia.py) e audio sem estalo nem corte. Devolve (legenda ok, tudo ok)."""
+    import sincronia
     try:
-        voz = base + "_voz.wav"
-        rel = legenda_whisper.conferir(base + ".mp4", base + "_tempos.json", idioma, voz=voz if os.path.exists(voz) else None)
+        rel = sincronia.conferir(base + ".mp4", base + "_tempos.json", idioma)
     except Exception as e:
         rel = {"ok": False, "erro": str(e)[:200]}
     print(("LEGENDA OK " if rel["ok"] else "LEGENDA FORA DA VOZ ") + json.dumps(rel, ensure_ascii=False), flush=True)
-    ok &= rel["ok"]
+    leg = ok = bool(rel["ok"])
     if os.path.exists(os.path.join(AQUI, "mix.py")):
         import mix
         if hasattr(mix, "conferir_audio"):
             prob = mix.conferir_audio(base + ".mp4")
             print("AUDIO OK" if not prob else "AUDIO COM PROBLEMA: " + "; ".join(prob), flush=True)
             ok &= not prob
-    return ok
+    return leg, ok
 
 
 def guardar(cod, base, up, vid):
