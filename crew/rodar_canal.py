@@ -285,6 +285,12 @@ def run_teste(ctx=None, *_a, **_k):
                                capture_output=True, text=True, encoding="utf-8", errors="replace")
             ok &= r.returncode == 0
             out.append(f"[{canal}] previa das cenas: " + ("OK" if r.returncode == 0 else "ERRO " + r.stderr.strip()[-300:]))
+    # alinhador da legenda (motor-en/sincronia.py): baixa o modelo uma vez (fica no cache) e alinha um audio de teste
+    r = subprocess.run([sys.executable, "-c", "import sys, numpy as np; sys.path.insert(0, 'motor-en'); import sincronia as S; "
+                        "print(S.alinhar(np.zeros(32000, np.float32), ['ok'], 'en'))"], cwd=repo,
+                       capture_output=True, text=True, encoding="utf-8", errors="replace")
+    ok &= r.returncode == 0
+    out.append("alinhador da legenda: " + ("OK" if r.returncode == 0 else "ERRO " + r.stderr.strip()[-300:]))
     r = subprocess.run([sys.executable, os.path.join(repo, "motor-en", "sons.py")], cwd=repo,
                        capture_output=True, text=True, encoding="utf-8", errors="replace")
     out.append("sons: " + ("OK" if r.returncode == 0 else "ERRO " + r.stderr.strip()[-200:]))
