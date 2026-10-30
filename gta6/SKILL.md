@@ -37,7 +37,7 @@ Referência: cortes de podcast do Flow Games/GameplayRJ no YouTube Shorts, mas s
 - Reels de 35 a 40 s, 1080x1920, narração em português pelo Google Cloud TTS (`tts_google.py`, quando houver a chave GOOGLE_TTS_API_KEY no ambiente) ou pela voz "Liam - Energetic, Social Media Creator" do vidIQ (id TX3LPaxmHKxFdv7VOQHJ).
 - Visual: imagens oficiais da Rockstar em HD (branch `radar-gta6-midia`, pasta `assets/`), trocando a cada 2 a 3 s com zoom e flash, imagens e enquadramentos diferentes de um vídeo para o outro. Título no topo, legenda grande sincronizada com a fala (fonte Anton, números e destaques em laranja), fontes e @radar.gta6br com logo embaixo do painel.
 - Tudo dentro da área segura do Reels: nada acima de y=170, abaixo de y=1690 ou à direita de x=930 a partir de y=1090. O `make_reel.py` atual já faz isso, com todos os textos centralizados em x=540 e fontes menores.
-- Legenda cronometrada pelo roteiro com `align2.py` (sem Whisper). Conferir quadros antes de publicar.
+- Legenda colada na voz (REGRA do Pedro, 30/10): `align2.py` cronometra cada palavra pelo alinhamento forçado da voz (`pipeline/sincronia.py`), o bloco monta palavra por palavra e `pipeline/checar_sync.py` confere o MP4 final; com `ATENÇÃO LEGENDA FORA DA VOZ`, não publicar. Conferir quadros antes de publicar.
 - Preferir movimento: quando houver trecho oficial em boa resolução ou animação por IA de imagem oficial (marcada como IA), usar. Os cortes do vidIQ a partir do YouTube saem em baixa resolução e não servem.
 - Gancho nos 2 primeiros segundos e pergunta no final para puxar comentário.
 
