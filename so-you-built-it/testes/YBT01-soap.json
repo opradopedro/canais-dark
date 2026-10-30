@@ -1,0 +1,43 @@
+{
+ "codigo": "YBT01",
+ "mundo": "sabao",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "titulo": "How soap actually removes grease 🧼 #howitworks #shorts",
+ "capa": "SOAP IS MADE FROM FAT",
+ "descripcion": "Water slides right over grease. Soap molecules grab it with one end and hold on to the water with the other. And the soap itself is made from fat.\n\nWhat should we explain next?\n\n#howitworks #science #soap #chemistry #shorts",
+ "tags": ["how it works", "science", "soap", "chemistry", "micelles", "saponification", "shorts"],
+ "lineas": [
+  {"texto": "Oil and water don't mix. So how does soap get grease off a plate?", "pausa": 0.3},
+  {"texto": "Rinse it with water alone, and the water just slides right over the oil.", "pausa": 0.3},
+  {"texto": "The secret is one tiny molecule.", "pausa": 0.3},
+  {"texto": "One end loves water. The other end, a long tail, hates water and loves oil.", "pausa": 0.3},
+  {"texto": "The tails dig into the grease, while the heads stay out in the water.", "pausa": 0.3},
+  {"texto": "Thousands of them wrap the grease into tiny balls called micelles.", "pausa": 0.3},
+  {"texto": "Now the grease is trapped inside, and the water can wash it away.", "pausa": 0.3},
+  {"texto": "And here's the wild part. Soap is made from fat, even used cooking oil.", "pausa": 0.3},
+  {"texto": "Mix the oil with lye, and the fat splits into soap and glycerin.", "pausa": 0.3},
+  {"texto": "Lye burns skin, so soap makers wear gloves and goggles, and let the bars cure for four weeks.", "pausa": 0.3},
+  {"texto": "Now you know. What should we explain next?", "pausa": 0.2}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "sabao", "p": {"etapa": "prato"}},
+  {"linea": 1, "comp": "sabao", "p": {"etapa": "repele"}},
+  {"linea": 2, "comp": "sabao", "p": {"etapa": "molecula"}},
+  {"linea": 3, "comp": "sabao", "p": {"etapa": "cabeca"}},
+  {"linea": 4, "comp": "sabao", "p": {"etapa": "mergulha"}},
+  {"linea": 5, "comp": "sabao", "p": {"etapa": "micela"}},
+  {"linea": 6, "comp": "sabao", "p": {"etapa": "enxague"}},
+  {"linea": 7, "comp": "sabao", "p": {"etapa": "oleo"}},
+  {"linea": 8, "comp": "sabao", "p": {"etapa": "saponifica"}},
+  {"linea": 9, "comp": "sabao", "p": {"etapa": "cura"}},
+  {"linea": 10, "comp": "sabao", "p": {"etapa": "final"}}
+ ],
+ "eventos": [
+  {"tipo": "erro", "linea": 1, "en": 0.75},
+  {"tipo": "certo", "linea": 5, "en": 0.6},
+  {"tipo": "certo", "linea": 8, "en": 0.75},
+  {"tipo": "tada", "linea": 10, "en": 0.05}
+ ],
+ "destaque": []
+}
