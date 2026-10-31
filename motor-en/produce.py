@@ -438,6 +438,11 @@ def main():
                 continue
             leg, ok = revisar(base, c["idioma"])
         if not leg and a.subir:
+            # a repescagem do mesmo dia (canais.yml) tenta de novo: apaga a voz guardada deste roteiro para ela
+            # ser gravada outra vez (a mesma gravacao reprovaria igual)
+            banco = os.environ.get("CANAIS_NARRACOES") or os.path.join(RAIZ, "narracoes")
+            for f in glob.glob(os.path.join(banco, f"{cod}_*.wav")):
+                os.remove(f)
             sys.exit(f"NAO SUBIU {cod}: LEGENDA FORA DA VOZ depois de {volta} conserto(s)")
         if not ok and a.subir:
             print(f"AVISO {cod}: o audio nao passou na conferencia depois de {volta} conserto(s); subo mesmo assim",

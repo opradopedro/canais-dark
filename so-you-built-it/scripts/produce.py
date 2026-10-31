@@ -21,6 +21,7 @@ sys.path.insert(0, AQUI)
 sys.path.append(os.path.join(os.path.dirname(SKILL), "motor-en"))  # sincronia.py (legenda colada na voz, todos os canais)
 from comum import carregar, resolver
 
+TENTATIVAS = int(os.environ.get("CANAIS_TENTATIVAS_YB", "2"))  # roteiros tentados por horario (barrado -> o seguinte)
 CONSERTOS = int(os.environ.get("CANAIS_CONSERTOS_YB", "1"))  # voltas de conserto antes de desistir (legenda ruim NAO sobe)
 HORA_UTC = {"Curiosidade": 21, "Evolucao": 23}  # 17h e 19h em Nova York (EDT), pico do publico de lingua inglesa; no inverno caem 1 h antes
 
@@ -88,74 +89,117 @@ def main():
                 raise
             print("canal fora do ar nesta sessao; seguindo sem consultar", flush=True)
         print("ja no canal:", ", ".join(sorted(ja)) or "nada", flush=True)
-    historias = a.historia
+    # cada item: (historia escolhida, formato do HORARIO, reservas para o mesmo horario se a escolhida for barrada)
+    vagas = [(h, None, []) for h in a.historia]
+    sem_roteiro = 0
     if a.proximo:
         agora = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         fila = [c for c, v in ja.items() if (v.get("publishAt") or "") > agora]
         formato_de = {carregar(f)["codigo"]: carregar(f).get("formato") for f in glob.glob(os.path.join(STORIES, "*.json"))}
-        historias = []
-        for formato in HORA_UTC:
+        pend_de = {fmt: [f for f in sorted(glob.glob(os.path.join(STORIES, "*.json")))
+                         if carregar(f).get("formato") == fmt and carregar(f)["codigo"] not in ja] for fmt in HORA_UTC}
+        usados = set()
+        # o formato com MENOS videos agendados escolhe primeiro (e o horario que fica vazio antes)
+        for formato in sorted(HORA_UTC, key=lambda fmt: len([c for c in fila if formato_de.get(c) == fmt])):
             # fila por formato: 4 Curiosidades agendadas nao podem travar a Evolucao do dia
             ff = [c for c in fila if formato_de.get(c) == formato]
             if a.subir and len(ff) >= a.fila:
                 print(f"FILA CHEIA {formato}: {len(ff)} ja agendados ({', '.join(sorted(ff))})", flush=True)
                 continue
-            pend = [f for f in sorted(glob.glob(os.path.join(STORIES, "*.json")))
-                    if carregar(f).get("formato") == formato and carregar(f)["codigo"] not in ja]
-            if pend:
-                historias.append(pend[0])
-            else:
-                print(f"SEM ROTEIRO {formato}: escreva o proximo (ver SKILL.md)", flush=True)
-        if not historias:
+            # BLINDAGEM (Pedro, 31/10: "nunca pode ficar sem video"): sem roteiro deste formato, o horario dele recebe
+            # um roteiro do outro formato; e se o escolhido for barrado na conferencia, o seguinte entra no lugar.
+            proprios = [f for f in pend_de[formato] if f not in usados]
+            outros = [f for fmt, fs in pend_de.items() if fmt != formato for f in fs if f not in usados]
+            if not proprios:
+                print(f"FALTA ROTEIRO {formato}: escreva o proximo (ver SKILL.md)"
+                      + (f"; o horario das {HORA_UTC[formato]}h UTC usa um roteiro de outro formato" if outros else ""),
+                      flush=True)
+            cands = proprios + outros
+            if cands:
+                vagas.append((cands[0], formato, cands[1:]))
+                usados.add(cands[0])
+            elif a.subir and not ff:
+                print(f"HORARIO VAZIO {formato}: nenhum roteiro em stories/ para as {HORA_UTC[formato]}h UTC", flush=True)
+                sem_roteiro += 1
+        for fmt, fs in pend_de.items():
+            resta = len([f for f in fs if f not in usados])
+            if resta < 2:
+                print(f"ESTOQUE BAIXO {fmt}: {resta} roteiro(s) pendente(s) depois de hoje; escreva mais (ver SKILL.md)", flush=True)
+        if not vagas and not sem_roteiro:
             if a.subir and fila:
                 print("FILA CHEIA: nada a fazer hoje"); return
             sys.exit("SEM ROTEIRO: nenhum roteiro pendente em stories/")
     ocupados = {v["publishAt"][:13] for v in ja.values() if v.get("publishAt")}
-    barrados = []
-    for historia in historias:
-        h = carregar(historia)
-        cod = h["codigo"]
-        if a.subir and cod in ja:
-            print(f"{cod} ja esta no canal"); continue
-        base = os.path.join(a.saida, cod)
-        produzir(historia, a, base)
-        if a.teste:
-            continue
-        up = {"arquivo": os.path.abspath(base + ".mp4"), "titulo": h["titulo"], "descripcion": h["descripcion"],
-              "tags": list(dict.fromkeys(h.get("tags", []) + [cod])), "categoria": "27", "sintetico": False}
-        if a.subir:
-            up["publicar_em"] = proximo_horario(h.get("formato"), ocupados)
-            ocupados.add(up["publicar_em"][:13])
-        json.dump(up, open(base + "_upload.json", "w"), ensure_ascii=False, indent=1)
-        print("video:", base + ".mp4", flush=True)
-        leg, ok = revisar(base, "en")
-        # conserto: refaz a voz a partir da narracao bruta guardada (nao gasta cota do Gemini TTS), alinha e desenha
-        # de novo. Audio com problema ainda sobe com aviso (29/10); LEGENDA FORA DA VOZ NAO SOBE (Pedro, 30/10).
-        volta = 0
-        while not ok and a.subir and volta < CONSERTOS:
-            volta += 1
-            print(f"CONSERTO {cod}: volta {volta} de {CONSERTOS}", flush=True)
-            try:
-                produzir(historia, a, base)
-            except Exception as e:
-                print(f"conserto {volta} caiu: {str(e)[:200]}", flush=True)
+    tentados = set()
+    barrados, vazios = [], sem_roteiro
+    for historia, formato_vaga, reservas in vagas:
+        fila_tentar = [historia] + list(reservas)
+        tentativas = 0
+        while fila_tentar and tentativas < TENTATIVAS:
+            historia = fila_tentar.pop(0)
+            if historia in tentados:
                 continue
-            leg, ok = revisar(base, "en")
-        if not leg and a.subir:
-            print(f"NAO SUBIU {cod}: LEGENDA FORA DA VOZ depois de {volta} conserto(s)", flush=True)
-            barrados.append(cod)
-            continue
-        if not ok and a.subir:
-            print(f"AVISO {cod}: o audio nao passou na conferencia depois de {volta} conserto(s); subo mesmo assim",
-                  flush=True)
-        vid = None
-        if a.subir:
-            import yt_upload
-            vid = yt_upload.subir(base + "_upload.json")["id"]
-            print(f"AGENDADO {cod} https://youtu.be/{vid} publica em {up['publicar_em']} (UTC)", flush=True)
-        guardar(cod, base, up, vid)
+            tentados.add(historia)
+            tentativas += 1
+            r = fazer(historia, formato_vaga, a, ja, ocupados)
+            if r != "barrado":
+                break
+            barrados.append(carregar(historia)["codigo"])
+            if fila_tentar and tentativas < TENTATIVAS and a.subir:
+                print(f"SUBSTITUTO: o horario recebe o proximo roteiro no lugar de {carregar(historia)['codigo']}", flush=True)
+        else:
+            if a.subir and tentativas:
+                print(f"HORARIO VAZIO {formato_vaga or ''}: nenhum roteiro passou na conferencia nesta execucao", flush=True)
+                vazios += 1
     if barrados:
-        sys.exit("LEGENDA FORA DA VOZ, nao subiu: " + ", ".join(barrados))
+        print("LEGENDA FORA DA VOZ, nao subiu: " + ", ".join(barrados), flush=True)
+    if vazios:  # so falha (e o GitHub manda e-mail) se um horario ficou mesmo sem video; a repescagem tenta de novo
+        sys.exit(f"HORARIO VAZIO: {vazios} horario(s) sem video nesta execucao (barrados: {', '.join(barrados) or 'nenhum'})")
+
+
+def fazer(historia, formato_vaga, a, ja, ocupados):
+    """Produz, confere e (com --subir) agenda UM roteiro. Devolve "ok", "pulado" ou "barrado"."""
+    h = carregar(historia)
+    cod = h["codigo"]
+    if a.subir and cod in ja:
+        print(f"{cod} ja esta no canal"); return "pulado"
+    base = os.path.join(a.saida, cod)
+    produzir(historia, a, base)
+    if a.teste:
+        return "ok"
+    up = {"arquivo": os.path.abspath(base + ".mp4"), "titulo": h["titulo"], "descripcion": h["descripcion"],
+          "tags": list(dict.fromkeys(h.get("tags", []) + [cod])), "categoria": "27", "sintetico": False}
+    if a.subir:
+        up["publicar_em"] = proximo_horario(formato_vaga or h.get("formato"), ocupados)
+    json.dump(up, open(base + "_upload.json", "w"), ensure_ascii=False, indent=1)
+    print("video:", base + ".mp4", flush=True)
+    leg, ok = revisar(base, "en")
+    # conserto: refaz a voz a partir da narracao bruta guardada (nao gasta cota do Gemini TTS), alinha e desenha
+    # de novo. Audio com problema ainda sobe com aviso (29/10); LEGENDA FORA DA VOZ NAO SOBE (Pedro, 30/10).
+    volta = 0
+    while not ok and a.subir and volta < CONSERTOS:
+        volta += 1
+        print(f"CONSERTO {cod}: volta {volta} de {CONSERTOS}", flush=True)
+        try:
+            produzir(historia, a, base)
+        except Exception as e:
+            print(f"conserto {volta} caiu: {str(e)[:200]}", flush=True)
+            continue
+        leg, ok = revisar(base, "en")
+    if not leg and a.subir:
+        print(f"NAO SUBIU {cod}: LEGENDA FORA DA VOZ depois de {volta} conserto(s)", flush=True)
+        return "barrado"
+    if not ok and a.subir:
+        print(f"AVISO {cod}: o audio nao passou na conferencia depois de {volta} conserto(s); subo mesmo assim",
+              flush=True)
+    vid = None
+    if a.subir:
+        import yt_upload
+        vid = yt_upload.subir(base + "_upload.json")["id"]
+        ocupados.add(up["publicar_em"][:13])
+        print(f"AGENDADO {cod} https://youtu.be/{vid} publica em {up['publicar_em']} (UTC)", flush=True)
+    guardar(cod, base, up, vid)
+    return "ok"
 
 
 def revisar(base, idioma):

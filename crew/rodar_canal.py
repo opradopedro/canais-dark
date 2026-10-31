@@ -193,6 +193,9 @@ def _rodar(canal):
         if os.environ.get("CANAIS_SEM_ENV") and cfg.get("pasta_var"):  # no GitHub: copia leve para o painel
             os.environ[cfg["pasta_var"]] = os.path.join(repo, "painel-saida", cfg["painel"])
             os.makedirs(os.environ[cfg["pasta_var"]], exist_ok=True)
+    if os.environ.get("CANAIS_REPESCAGEM") and canal == "so-you-built-it":
+        # repescagem (2a tentativa do dia, canais.yml): so produz o formato que tiver menos de 2 dias agendados
+        cmd += ["--fila", "2"]
     limite = int(os.environ.get("CANAIS_TIMEOUT", "3300"))
     try:
         r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, encoding="utf-8", errors="replace",
@@ -206,7 +209,10 @@ def _rodar(canal):
     importantes = [x for x in linhas if any(
         m in x for m in ("AGENDADO", "PUBLICADO", "FILA CHEIA", "SEM ROTEIRO", "CANAL ERRADO", "CODIGO ERRADO",
                          "NAO SUBIU", "LEGENDA FORA DA VOZ", "AUDIO COM PROBLEMA", "VOZ FALHOU", "LIMITE DE NARRACOES",
-                         "canal confirmado", "FUSO NAO ENCONTRADO", "FALTA A VARIAVEL", "POUCA MEMORIA"))]
+                         "canal confirmado", "FUSO NAO ENCONTRADO", "FALTA A VARIAVEL", "POUCA MEMORIA",
+                         "FALTA ROTEIRO", "ESTOQUE BAIXO", "SUBSTITUTO", "HORARIO VAZIO"))]
+    importantes += estoque(repo, canal, linhas)
+    alertar(canal, [x for x in importantes if any(m in x for m in ALERTA)])
     resumo = "\n".join(importantes) or "\n".join(linhas[-8:]) or "(sem saida)"
 
     if r.returncode != 0:
@@ -220,6 +226,41 @@ def _rodar(canal):
                      f"morto por falta de memoria. Feche os navegadores e rode de novo.")
         return f"[{canal}] FALHOU (codigo {r.returncode})\n{resumo}\n--- erro ---\n{cauda}{pista}"
     return f"[{canal}] OK (memoria livre: {memoria_livre_mb()} MB)\n{resumo}"
+
+
+# o que vira aviso para o Pedro (issue no GitHub, canais.yml): problema que pode deixar um dia sem video
+ALERTA = ("SEM ROTEIRO", "FALTA ROTEIRO", "ESTOQUE BAIXO", "NAO SUBIU", "HORARIO VAZIO", "VOZ FALHOU", "CANAL ERRADO")
+DIAS_DE_ESTOQUE = int(os.environ.get("CANAIS_DIAS_ESTOQUE", "4"))
+
+
+def estoque(repo, canal, linhas):
+    """Quantos roteiros ainda nao subiram. Avisa com DIAS_DE_ESTOQUE de antecedencia (o Kiro/Claude/Gemini escrevem)."""
+    ja = next((l.split(":", 1)[1] for l in linhas if l.startswith("ja no canal:")), None)
+    if ja is None:
+        return []
+    ja = {x.strip() for x in ja.split(",")}
+    import glob, json
+    pend = []
+    for f in sorted(glob.glob(os.path.join(repo, canal, "stories", "*.json"))):
+        try:
+            cod = json.load(open(f, encoding="utf-8")).get("codigo")
+        except Exception:
+            continue
+        if cod and cod not in ja:
+            pend.append(cod)
+    por_dia = 2 if canal == "so-you-built-it" else 1
+    if len(pend) >= DIAS_DE_ESTOQUE * por_dia:
+        return [f"estoque: {len(pend)} roteiro(s) prontos ({', '.join(pend)})"]
+    return [f"ESTOQUE BAIXO {canal}: so {len(pend)} roteiro(s) prontos ({', '.join(pend) or 'nenhum'}), "
+            f"menos de {DIAS_DE_ESTOQUE} dias. Escrever a proxima serie seguindo ROTEIROS.md"]
+
+
+def alertar(canal, linhas):
+    """Grava o aviso em /tmp/canais-alerta.txt; o canais.yml abre (ou atualiza) uma issue e o GitHub manda e-mail."""
+    if not linhas:
+        return
+    with open(os.path.join(tempfile.gettempdir(), "canais-alerta.txt"), "a", encoding="utf-8") as f:
+        f.write(f"[{canal}]\n" + "\n".join(dict.fromkeys(linhas)) + "\n")
 
 
 def _entregar(ctx, texto):
@@ -329,6 +370,7 @@ if __name__ == "__main__":
                "old-tales": run_classics, "hora-muerta": run_hora_muerta, "so-you-built-it": run_so_you_built_it,
                "metricas": run_metricas, "teste": run_teste}
     texto = funcoes.get(qual, run)() or ""
-    # no GitHub Actions, falha vira X vermelho e o GitHub manda e-mail ao Pedro
-    if any(m in texto for m in ("FALHOU", "NAO RODEI", "NAO SUBIU", "VOZ FALHOU", "CANAL ERRADO", "SEM ROTEIRO")):
+    # no GitHub Actions, falha vira X vermelho e o GitHub manda e-mail ao Pedro. So falha quando o programa do canal
+    # falhou de verdade: video barrado mas trocado pelo substituto nao e falha (vira aviso na issue, ver alertar).
+    if any(m in texto for m in ("FALHOU", "NAO RODEI")):
         sys.exit(1)

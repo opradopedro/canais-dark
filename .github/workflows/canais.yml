@@ -11,6 +11,13 @@ on:
     - cron: "35 12 * * *"   # So You Built It (Curiosidade 21h UTC, Evolucao 23h UTC)
     - cron: "40 18 * * *"   # Hora Muerta
     - cron: "15 3 * * *"    # metricas dos canais (fim do dia em NY)
+    # REPESCAGEM (Pedro, 31/10: "nunca pode ficar sem video, mesmo quando o workflow falhar"): 2a tentativa de cada
+    # canal no mesmo dia, antes do proximo horario de publicacao. Se a 1a deu certo, a fila esta cheia e nao faz nada;
+    # se falhou (video barrado, Gemini fora, cron atrasado/pulado pelo GitHub), produz de novo com voz nova.
+    - cron: "10 11 * * *"   # repescagem Old Tales
+    - cron: "40 14 * * *"   # repescagem Signal Lost
+    - cron: "45 16 * * *"   # repescagem So You Built It
+    - cron: "50 21 * * *"   # repescagem Hora Muerta
   workflow_dispatch:
     inputs:
       tarefa:
@@ -61,10 +68,15 @@ jobs:
             "35 12 * * *") T=so-you-built-it ;;
             "40 18 * * *") T=hora-muerta ;;
             "15 3 * * *") T=metricas ;;
+            "10 11 * * *") T=old-tales; R=1 ;;
+            "40 14 * * *") T=signal-lost; R=1 ;;
+            "45 16 * * *") T=so-you-built-it; R=1 ;;
+            "50 21 * * *") T=hora-muerta; R=1 ;;
             *) if [ "${{ github.event_name }}" = push ]; then T=$(sed 's/^\xEF\xBB\xBF//' .github/disparar.txt | head -1 | tr -d '\r '); else T="${{ github.event.inputs.tarefa }}"; fi ;;
           esac
           echo "tarefa=$T" >> "$GITHUB_OUTPUT"
-          echo "Tarefa: $T"
+          echo "repescagem=${R:-}" >> "$GITHUB_OUTPUT"
+          echo "Tarefa: $T${R:+ (repescagem)}"
 
       - name: Canal ligado?
         id: ligado
@@ -125,6 +137,7 @@ jobs:
         if: steps.ligado.outputs.sim == '1'
         run: |
           set -o pipefail
+          export CANAIS_REPESCAGEM="${{ steps.qual.outputs.repescagem }}"
           python crew/rodar_canal.py "${{ steps.qual.outputs.tarefa }}" 2>&1 | tee /tmp/rodar-log.txt
 
       # se der erro, o log vai para a Release publica "logs" (Kiro e Claude leem sem entrar no GitHub)
@@ -135,6 +148,18 @@ jobs:
           tail -c 60000 /tmp/rodar-log.txt > "/tmp/${T}_ERRO.txt" 2>/dev/null || echo "sem log" > "/tmp/${T}_ERRO.txt"
           gh release view logs > /dev/null 2>&1 || gh release create logs --title "Logs de erro" --notes "Ultimo erro de cada tarefa (gerado pelo GitHub Actions)"
           gh release upload logs "/tmp/${T}_ERRO.txt" --clobber
+
+      # roteiro acabando, video barrado ou horario vazio: abre (ou comenta) UMA issue e o GitHub manda e-mail ao Pedro.
+      # Vale mesmo quando a execucao passou (ex.: o substituto cobriu o horario), para ninguem ser pego de surpresa.
+      - name: Avisar o Pedro (issue)
+        if: always() && steps.ligado.outputs.sim == '1'
+        run: |
+          A=/tmp/canais-alerta.txt
+          [ -s "$A" ] || { echo "nada a avisar"; exit 0; }
+          T="Aviso dos canais: roteiro acabando ou video barrado"
+          N=$(gh issue list --state open --search "\"$T\" in:title" --json number --jq '.[0].number // empty')
+          { echo "Execucao: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"; echo; echo '```'; cat "$A"; echo '```'; } > /tmp/aviso.md
+          if [ -n "$N" ]; then gh issue comment "$N" --body-file /tmp/aviso.md; else gh issue create --title "$T" --body-file /tmp/aviso.md --assignee "${{ github.repository_owner }}"; fi
 
       - name: Guardar caixa de narracoes e sons
         if: always() && steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas'
