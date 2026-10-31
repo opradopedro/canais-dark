@@ -38,6 +38,7 @@ Há dois tipos:
 | `arcondicionado` | split interno e externo, ciclo | — | ar-condicionado, desumidificador |
 | `ponte` | rio em corte com pilar | — | ponte, pilar, ensecadeira |
 | `panela` | panela de pressao cortada ao meio no fogao: agua, comida, bolhas, vapor que escapa, tampa que trava, anel de borracha, moleculas de vapor presas, termometro 100->121 C, barras de tempo, peso da valvula que pula | aberta, escapa, tampa, anel, pressao, termo, comida, valvula, final | panela de pressao, ponto de ebulicao, vapor, cozinha |
+| `sabao` | sabao por dentro: prato com gordura, agua que escorre, molecula com cabeca e cauda, micelas prendendo a gordura, enxague, oleo usado + soda virando sabao e glicerina, barras curando | prato, repele, molecula, cabeca, mergulha, micela, enxague, oleo, saponifica, cura, final | sabao, detergente, gordura, quimica, limpeza |
 | `piscina` | piscina em corte com lençol | — | piscina, lago, tanque |
 | `bunker` | vala reaterrada com objeto trocável, raios gama na camada 2D | — | abrigo, porão, coisa enterrada |
 | `eletrico` | carro na rua com raio-x, bateria, inversor, motor em corte | — | carro elétrico, motor, bateria |

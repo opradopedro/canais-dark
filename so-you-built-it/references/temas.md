@@ -54,6 +54,7 @@ Marque `[x]` quando o roteiro entrar em `stories/`. Um tema por roteiro, sem rep
 - [ ] How a mechanical watch keeps time (mola, escape, balanço)
 - [ ] How a can opener cuts (roda dentada, lâmina giratória)
 - [x] How a pressure cooker cooks faster (ideia do Pedro no painel: água ferve a ~120 °C sob pressão, válvula de peso; nota 17/20)
+- [x] How soap removes grease and how it is made from used oil (YB036, ideia do Pedro, issue #7, mundo sabao; prioridade: próximo da fila)
  (YB021, mundo panela)
 - [ ] How a plane actually stays up (ideia do Pedro no painel: asa desvia o ar para baixo, ângulo de ataque; cuidado com o mito do "caminho mais longo"; nota 16/20)
 - [ ] How a stapler bends the staple (bigorna, ranhuras)
