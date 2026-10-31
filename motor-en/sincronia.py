@@ -190,8 +190,13 @@ def conferir(video, tempos_path, idioma="en", adianto=ADIANTO, atraso=ATRASO, fp
            "max_atraso": round(max(ds), 3) if ds else None, "max_adianto": round(-min(ds), 3) if ds else None,
            "piores": ["%s tela %.2fs voz %.2fs" % (w, t, a) for d, w, a, t in sorted(ruins, key=lambda r: -abs(r[0]))[:6]]}
     # 3+ palavras seguidas que a voz nao fala (nota ~0): roteiro e voz nao batem (frase pulada, tag lida em voz alta)
+    # Numero escrito em algarismo ("120") nao entra na conta: o num2words vira "one hundred and twenty" e a voz diz
+    # "a hundred twenty", entao a nota cai a ~0 mesmo com a palavra falada e no tempo certo, e derruba as vizinhas.
+    # Foi o que barrou o YB021 em 31/10 (tempo perfeito, max atraso 0,002 s). O TEMPO do numero continua conferido.
     seq, pior = 0, []
     for (w, _, _), n in zip(pal, nota):
+        if re.search(r"\d", w):
+            continue
         seq = seq + 1 if n < 0.1 else 0
         if seq >= 3:
             pior.append(w)
