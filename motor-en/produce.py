@@ -24,6 +24,7 @@ MOTOR = os.path.join(RAIZ, "hora-muerta", "scripts")  # motor testado, nunca alt
 sys.path.insert(0, MOTOR)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from comum import carregar, resolver  # noqa: E402  (vem do motor do canal-terror)
+from prioridade import ordenar_series  # noqa: E402  (ideia do Pedro entra na frente da fila)
 
 DIAS_EN = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 MESES_EN = ["January", "February", "March", "April", "May", "June",
@@ -366,6 +367,8 @@ def main():
         for f in sorted(glob.glob(os.path.join(c["stories"], "*.json"))):
             series.setdefault(serie_de(f)[0], []).append(f)
         pend = [fs for fs in series.values() if any(carregar(f)["codigo"] not in ja for f in fs)]
+        # REGRA do Pedro (31/10): serie pela metade termina primeiro; logo depois, ideia do Pedro ("prioridade": "pedro")
+        pend = ordenar_series(pend, ja, carregar)
         meio = bool(pend) and any(carregar(f)["codigo"] in ja for f in pend[0])
         if a.subir and len(fila) >= a.fila and not meio:
             print(f"FILA CHEIA: {len(fila)} videos ja agendados ({', '.join(sorted(fila))}); nada a fazer hoje")

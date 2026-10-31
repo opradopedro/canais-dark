@@ -20,6 +20,7 @@ STORIES = os.path.join(SKILL, "stories")
 sys.path.insert(0, AQUI)
 sys.path.append(os.path.join(os.path.dirname(SKILL), "motor-en"))  # sincronia.py (legenda colada na voz, todos os canais)
 from comum import carregar, resolver
+from prioridade import e_ideia, ordenar_roteiros  # motor-en/prioridade.py: ideia do Pedro na frente da fila
 
 TENTATIVAS = int(os.environ.get("CANAIS_TENTATIVAS_YB", "2"))  # roteiros tentados por horario (barrado -> o seguinte)
 CONSERTOS = int(os.environ.get("CANAIS_CONSERTOS_YB", "1"))  # voltas de conserto antes de desistir (legenda ruim NAO sobe)
@@ -96,8 +97,10 @@ def main():
         agora = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         fila = [c for c, v in ja.items() if (v.get("publishAt") or "") > agora]
         formato_de = {carregar(f)["codigo"]: carregar(f).get("formato") for f in glob.glob(os.path.join(STORIES, "*.json"))}
-        pend_de = {fmt: [f for f in sorted(glob.glob(os.path.join(STORIES, "*.json")))
-                         if carregar(f).get("formato") == fmt and carregar(f)["codigo"] not in ja] for fmt in HORA_UTC}
+        # REGRA do Pedro (31/10): ideia do Pedro ("prioridade": "pedro") e o proximo video a sair
+        pend_de = {fmt: ordenar_roteiros([f for f in sorted(glob.glob(os.path.join(STORIES, "*.json")))
+                                          if carregar(f).get("formato") == fmt and carregar(f)["codigo"] not in ja],
+                                         carregar) for fmt in HORA_UTC}
         usados = set()
         # o formato com MENOS videos agendados escolhe primeiro (e o horario que fica vazio antes)
         for formato in sorted(HORA_UTC, key=lambda fmt: len([c for c in fila if formato_de.get(c) == fmt])):
@@ -114,7 +117,9 @@ def main():
                 print(f"FALTA ROTEIRO {formato}: escreva o proximo (ver SKILL.md)"
                       + (f"; o horario das {HORA_UTC[formato]}h UTC usa um roteiro de outro formato" if outros else ""),
                       flush=True)
-            cands = proprios + outros
+            # ideia do Pedro de outro formato tambem passa na frente: ele quer a ideia no proximo horario livre
+            cands = [f for f in proprios + outros if e_ideia(carregar(f))] + \
+                    [f for f in proprios + outros if not e_ideia(carregar(f))]
             if cands:
                 vagas.append((cands[0], formato, cands[1:]))
                 usados.add(cands[0])

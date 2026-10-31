@@ -8,6 +8,26 @@ continua de onde parou, só lendo os arquivos.
 1. `git pull origin producao` (pegue o que o outro escreveu).
 2. Leia o `SKILL.md` do canal, o `references/temas.md` e o `references/series.md` (o plano das séries).
 3. Se houver série com parte marcada `FALTA` em `series.md`, **termine essa série primeiro**, seguindo o resumo que está lá.
+4. Depois disso, **as ideias do Pedro vêm antes de qualquer tema próprio** (ver a seção abaixo).
+
+## Ideia do Pedro = próximo vídeo (REGRA do Pedro, 31/10: vale para todos os canais)
+"Quando eu mandar uma ideia, esse vídeo é o próximo a sair. Se for história em sequência (estou na parte 2 de 4),
+saem a 3 e a 4 e logo depois entra a minha."
+
+- Onde chegam: issues abertas `[YB] Ideia de vídeo`, `[HM] ...`, `[SV] ...`, `[CL] ...` (botão "Ideia" do painel),
+  ou um pedido direto no chat. Liste com `gh api "repos/opradopedro/canais-dark/issues?state=open"`.
+  A produção diária avisa na issue "Aviso dos canais" (`IDEIA SEM ROTEIRO #n`) enquanto a ideia não virar roteiro.
+- Escreva o roteiro da ideia ANTES de qualquer tema do backlog, com estes dois campos no JSON:
+  `"prioridade": "pedro"` e `"ideia": "#<número da issue>"` (pedido pelo chat: `"ideia": "chat dd/mm"`).
+  Se a ideia for uma série, ponha os dois campos em TODAS as partes.
+- Código: o próximo número livre, como sempre. Não precisa renumerar nada: a produção (`motor-en/prioridade.py`,
+  usada pelos três `produce.py`) põe na frente da fila tudo que tem `"prioridade": "pedro"`.
+- Ordem que a produção segue: 1) série que já começou no YouTube termina; 2) ideias do Pedro (a mais antiga
+  primeiro); 3) o resto, na ordem dos arquivos. Vídeo que já está AGENDADO no YouTube não muda de data: a ideia
+  entra no primeiro horário livre depois dele. No So You Built It a ideia pega o primeiro horário livre, seja
+  Curiosidade ou Evolução.
+- Depois de enviar, comente na issue qual código ficou (ex.: "virou YB036, entra como próximo da fila") e feche.
+  Marque o tema como ideia do Pedro em `references/temas.md`.
 
 ## Os canais
 | Pasta | Canal | Formato | Código |
@@ -37,7 +57,8 @@ O resumo de cada parte tem que bastar para outra pessoa escrever aquela parte se
 - Arquivo `<canal>/stories/NNN-slug-P.json`, código na sequência (próximo número livre do canal).
 - Copie a estrutura de um roteiro existente do mesmo canal. Campos: `codigo`, `serie`, `serie_titulo`, `parte`,
   `partes`, `anterior` (código da parte anterior), `titulo`, `capa`, `descripcion`, `tags`, `lineas`, `cenas`,
-  `eventos`, `destaque`. Opcional: `"autor": "kiro"` ou `"claude"`.
+  `eventos`, `destaque`. Opcional: `"autor": "kiro"` ou `"claude"`. Ideia do Pedro: `"prioridade": "pedro"` e
+  `"ideia": "#n"` (seção acima).
 - Parte que não é a última: a última fala promete a seguinte com o marcador `{when_next}` (EN) ou
   `{dia_siguiente}` (ES), e a cena final usa `{next_card}`. Nunca escreva "tomorrow" à mão.
 - Cenas: só peças que existem em `hora-muerta/scripts/engine.html` (`COMP.<nome>`), ou mundos 3D em

@@ -18,6 +18,7 @@ STORIES = os.path.join(os.path.dirname(AQUI), "stories")
 sys.path.insert(0, AQUI)
 sys.path.append(os.path.join(os.path.dirname(os.path.dirname(AQUI)), "motor-en"))  # sincronia.py (legenda colada na voz)
 from comum import carregar, resolver
+from prioridade import ordenar_series  # motor-en/prioridade.py: ideia do Pedro entra na frente da fila
 
 CONSERTOS = int(os.environ.get("CANAIS_CONSERTOS_HM", "1"))  # voltas de conserto antes de desistir (legenda ruim NAO sobe)
 HORA_UTC = 0  # 21h em Brasilia (UTC-3) = 00h UTC do dia seguinte
@@ -110,6 +111,8 @@ def main():
         for f in sorted(glob.glob(os.path.join(STORIES, "*.json"))):
             series.setdefault(serie_de(f)[0], []).append(f)
         pend = [fs for fs in series.values() if any(carregar(f)["codigo"] not in ja for f in fs)]
+        # REGRA do Pedro (31/10): serie pela metade termina primeiro; logo depois, ideia do Pedro ("prioridade": "pedro")
+        pend = ordenar_series(pend, ja, carregar)
         # serie pela metade (parte 1 subiu, a 2 travou numa execucao anterior) termina hoje mesmo com a fila cheia:
         # a parte 1 promete a 2 para "manana"
         meio = bool(pend) and any(carregar(f)["codigo"] in ja for f in pend[0])

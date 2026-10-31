@@ -74,7 +74,7 @@ O Pedro acompanha, vota, pede mudanças e manda ideias em **https://claude.ai/ar
 (conta `yb`). Siga o passo a passo de `painel/README.md` (branch main):
 
 1. **Antes de produzir:** leia `pedidos` abertos e `ideias` novas com `canal == "yb"`, aplique e responda cada um
-   (ideia boa vira roteiro no backlog ou o próximo vídeo).
+   (ideia do Pedro vira o PRÓXIMO vídeo: `"prioridade": "pedro"`, ver ROTEIROS.md).
 2. **Depois de subir:** `python3 painel/painel.py --canal yb --stories so-you-built-it/stories
    --videos /mnt/project-files/canal-engenharia/videos --atual /tmp/painel/atual/canais/yb.json --saida /tmp/painel/yb`
    e grave o doc `canais/yb`, como o README explica.

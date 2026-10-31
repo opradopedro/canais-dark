@@ -8,7 +8,7 @@ Roda no GitHub Actions antes de cada producao (canais.yml). Para o canal da vez:
   - "ideia": fica aberta para a proxima escrita de roteiros.
 Uso: python motor-en/aplicar_pedidos.py <pasta do canal>
 """
-import csv, datetime as dt, glob, importlib.util, json, os, re, subprocess, sys, urllib.request
+import csv, datetime as dt, glob, importlib.util, json, os, re, subprocess, sys, tempfile, urllib.request
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPO = os.environ.get("GITHUB_REPOSITORY", "opradopedro/canais-dark")
@@ -103,8 +103,39 @@ def apagar_agendado(pasta, video_id):
     urllib.request.urlopen(req, timeout=60)
 
 
+def ideias_sem_roteiro(pasta):
+    """REGRA do Pedro (31/10): ideia dele e o proximo video a sair. O Gemini nao escreve roteiro sozinho, entao aqui
+    so avisa (issue "Aviso dos canais") quando ha ideia aberta deste canal que ainda nao virou roteiro com
+    "ideia": "#n" + "prioridade": "pedro". Quem escreve (Kiro/Claude) segue ROTEIROS.md."""
+    cid = ID[pasta]
+    abertas = [t for t in gh("GET", "issues?state=open&per_page=100") if "pull_request" not in t and (
+        t.get("title", "").startswith(f"[{cid.upper()}] Ideia")
+        or {"ideia", cid} <= {l["name"] for l in t.get("labels", [])})]
+    if not abertas:
+        return
+    ligadas = set()
+    for f in glob.glob(os.path.join(RAIZ, pasta, "stories", "*.json")):
+        try:
+            ligadas.add(str(json.load(open(f, encoding="utf-8")).get("ideia", "")).lstrip("#").strip())
+        except Exception:
+            pass
+    faltam = [t for t in abertas if str(t["number"]) not in ligadas]
+    for t in faltam:
+        corpo = (t.get("body") or "").split("\n---\n")[0]
+        resumo = " ".join(l.strip() for l in corpo.splitlines()[1:] if l.strip())[:160]
+        linha = (f"IDEIA SEM ROTEIRO #{t['number']} ({pasta}): {resumo or t['title']}. Escrever JA como proximo da fila: "
+                 f'"prioridade": "pedro", "ideia": "#{t["number"]}" (ROTEIROS.md)')
+        print(linha)
+        with open(os.path.join(tempfile.gettempdir(), "canais-alerta.txt"), "a", encoding="utf-8") as fa:
+            fa.write(f"[{pasta}]\n{linha}\n")
+
+
 def main(pasta):
     cid = ID[pasta]
+    try:
+        ideias_sem_roteiro(pasta)
+    except Exception as e:
+        print(f"{pasta}: nao consegui conferir as ideias ({str(e)[:200]})")
     tickets = gh("GET", f"issues?state=open&labels=painel,{cid}&per_page=50")
     if not tickets:
         print(f"{pasta}: nenhum pedido aberto"); return
