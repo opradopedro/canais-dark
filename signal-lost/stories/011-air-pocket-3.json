@@ -1,0 +1,198 @@
+{
+ "codigo": "SV011",
+ "formato": "Survivor",
+ "serie": "air-pocket",
+ "serie_titulo": "The Air Pocket | Signal Lost",
+ "parte": 3,
+ "partes": 3,
+ "autor": "claude",
+ "anterior": "SV010",
+ "origem": "gringa: México (espanhol) inspirada no mineiro resgatado após 13 dias na mina alagada El Rosario, Sinaloa (2026) https://www.aljazeera.com/video/newsfeed/2026/4/9/man-rescued-after-two-weeks-trapped-in-collapsed-mexico-mine (história e personagens fictícios)",
+ "titulo": "Real rescuers came from the other side 🔦 Part 3 #horror #shorts",
+ "capa": "HELP COMES FROM ABOVE",
+ "descripcion": "On day thirteen, two lights came. One from the deep end. One from above. I had to choose.\n\nWhich light would you trust?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "trapped underground",
+  "mine",
+  "flooded mine"
+ ],
+ "lineas": [
+  {
+   "texto": "Part three. The light kept knocking our signal, calling me down.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "I didn't move. I sat with my back to the rock for seven days.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "On day thirteen, I heard engines, and voices, and something splashed in from above.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Two divers with ropes, coming from the shaft, shouting my name.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Behind them, in the deep end, the other light went dark, and stayed dark.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Later the army told me their team was the only one in the water. Nobody came from below.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "They never found Ramon. Whatever lives down there learned our knock, and used it on him.",
+   "pausa": 1.0
+  },
+  {
+   "texto": "If you're ever trapped underground, help comes from above. Never swim toward a light from below.",
+   "pausa": 0.4
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "mina",
+   "p": {
+    "agua": 0.42,
+    "fundo": 1,
+    "lampada": 0.2,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "DAY 13",
+     "still waiting"
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "mina",
+   "p": {
+    "agua": 0.42,
+    "cima": [
+     0,
+     0.8
+    ],
+    "lampada": 0.2,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "mina",
+   "p": {
+    "agua": 0.42,
+    "cima": 1,
+    "lampada": 0.3,
+    "burbujas": true,
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "mina",
+   "p": {
+    "agua": 0.42,
+    "cima": 1,
+    "fundo": [
+     0.9,
+     0
+    ],
+    "lampada": 0.3,
+    "zoom": 0.14
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "ONLY ONE TEAM",
+     "nobody came from below"
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "mina",
+   "p": {
+    "agua": 0.42,
+    "fundo": [
+     0,
+     0.6
+    ],
+    "pisca": true,
+    "lampada": 0.2,
+    "zoom": 0.16
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "FROM ABOVE ONLY",
+     "never swim to a light below"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 0,
+   "en": "inicio",
+   "mas": -0.2
+  },
+  {
+   "tipo": "golpe",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "luz",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "susto",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "negro",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.8,
+   "dur": 1.0
+  }
+ ],
+ "destaque": [
+  "seven days",
+  "from above",
+  "the shaft",
+  "went dark",
+  "only one",
+  "learned our knock",
+  "from below"
+ ],
+ "gancho": {
+  "cena": 6,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

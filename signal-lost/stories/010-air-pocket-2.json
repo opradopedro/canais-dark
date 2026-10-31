@@ -1,0 +1,210 @@
+{
+ "codigo": "SV010",
+ "formato": "Survivor",
+ "serie": "air-pocket",
+ "serie_titulo": "The Air Pocket | Signal Lost",
+ "parte": 2,
+ "partes": 3,
+ "autor": "claude",
+ "anterior": "SV009",
+ "origem": "gringa: México (espanhol) inspirada no mineiro resgatado após 13 dias na mina alagada El Rosario, Sinaloa (2026) https://www.aljazeera.com/video/newsfeed/2026/4/9/man-rescued-after-two-weeks-trapped-in-collapsed-mexico-mine (história e personagens fictícios)",
+ "titulo": "The light under the water wanted me to swim to it 😰 Part 2 #horror #shorts",
+ "capa": "DON'T SWIM TO THE LIGHT",
+ "descripcion": "Every night the light under the water came a little closer. Then it started knocking our signal.\n\n> Part 3: {when_next}.\nWould you swim to it?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "trapped underground",
+  "mine",
+  "flooded mine"
+ ],
+ "lineas": [
+  {
+   "texto": "Part two. The light under the water came from a tunnel nobody had entered in forty years.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "It didn't move. It just waited, right below the surface.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "I wasn't alone in the pocket. Ramon, from my crew, had crawled in on the first night.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "On day six, our water was gone. And every night, the light came a little closer.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Ramon said: that's a diver. If we wait, we die here.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "He took off his boots and slid into the water. His lamp went down toward the light.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Both lights went out together. Then the light came back. Only one.",
+   "pausa": 1.0
+  },
+  {
+   "texto": "And it started knocking. Three knocks. Our signal. Calling me down.",
+   "pausa": 1.0
+  },
+  {
+   "texto": "Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "mina",
+   "p": {
+    "agua": 0.4,
+    "fundo": 0.7,
+    "lampada": 0.5,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "mina",
+   "p": {
+    "agua": 0.4,
+    "fundo": 0.8,
+    "lampada": 0.4,
+    "zoom": 0.12
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "mina",
+   "p": {
+    "agua": 0.4,
+    "lampada": 0.4,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "DAY 6",
+     "no water left"
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "mina",
+   "p": {
+    "agua": 0.42,
+    "fundo": 0.9,
+    "lampada": 0.3,
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "mina",
+   "p": {
+    "agua": 0.42,
+    "fundo": 0.9,
+    "lampada": 0.3,
+    "burbujas": true,
+    "zoom": 0.12
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "mina",
+   "p": {
+    "agua": 0.42,
+    "fundo": 0.9,
+    "pisca": true,
+    "lampada": 0.25,
+    "zoom": 0.14
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "mina",
+   "p": {
+    "agua": 0.42,
+    "fundo": 1,
+    "lampada": 0.2,
+    "zoom": 0.16
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "PART 3",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 0,
+   "en": "inicio",
+   "mas": -0.2
+  },
+  {
+   "tipo": "apaga",
+   "linea": 6,
+   "en": 0.3
+  },
+  {
+   "tipo": "luz",
+   "linea": 6,
+   "en": 0.75
+  },
+  {
+   "tipo": "golpe",
+   "linea": 7,
+   "en": 0.4
+  },
+  {
+   "tipo": "golpe",
+   "linea": 7,
+   "en": 0.55
+  },
+  {
+   "tipo": "golpe",
+   "linea": 7,
+   "en": 0.7
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": 0.9
+  }
+ ],
+ "destaque": [
+  "forty years",
+  "waited",
+  "ramon",
+  "day six",
+  "a diver",
+  "only one",
+  "three knocks",
+  "calling me down"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

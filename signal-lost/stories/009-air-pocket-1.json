@@ -1,0 +1,188 @@
+{
+ "codigo": "SV009",
+ "formato": "Survivor",
+ "serie": "air-pocket",
+ "serie_titulo": "The Air Pocket | Signal Lost",
+ "parte": 1,
+ "partes": 3,
+ "autor": "claude",
+ "origem": "gringa: México (espanhol) inspirada no mineiro resgatado após 13 dias na mina alagada El Rosario, Sinaloa (2026) https://www.aljazeera.com/video/newsfeed/2026/4/9/man-rescued-after-two-weeks-trapped-in-collapsed-mexico-mine (história e personagens fictícios)",
+ "titulo": "The mine flooded with me inside 😨 Part 1 #horror #shorts",
+ "capa": "THE WATER CAME AT 9 A.M.",
+ "descripcion": "A dam broke above the mine. Everyone ran. I didn't make it out.\n\n> Part 2: {when_next}.\nHow long could you last in the dark?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "trapped underground",
+  "mine",
+  "flooded mine"
+ ],
+ "lineas": [
+  {
+   "texto": "The dam above the mine broke, and the water came through the tunnel like a train.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Most of the crew ran for the shaft. I was too deep.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "I climbed into an old side gallery, higher than the rest. A pocket of air.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "One headlamp. Half a bottle of water. And the water stopped one meter below my feet.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "On the third day, I heard knocking. Three knocks, from under the water.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Rescue divers knock to find survivors. So I knocked back.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "A light came on under the water. But it came from the deep end, a tunnel flooded for forty years.",
+   "pausa": 1.0
+  },
+  {
+   "texto": "Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "mina",
+   "p": {
+    "agua": [
+     0.05,
+     0.55
+    ],
+    "lampada": 1,
+    "parpadeo": true,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "mina",
+   "p": {
+    "agua": 0.55,
+    "lampada": 1,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "mina",
+   "p": {
+    "agua": [
+     0.55,
+     0.4
+    ],
+    "lampada": 0.8,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "mina",
+   "p": {
+    "agua": 0.4,
+    "lampada": 0.7,
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "mina",
+   "p": {
+    "agua": 0.4,
+    "lampada": 0.6,
+    "burbujas": true,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "mina",
+   "p": {
+    "agua": 0.4,
+    "lampada": 0.6,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "mina",
+   "p": {
+    "agua": 0.4,
+    "lampada": 0.5,
+    "fundo": [
+     0,
+     0.8
+    ],
+    "zoom": 0.14
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "PART 2",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 0,
+   "en": 0.4
+  },
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.55
+  },
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.7
+  },
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.85
+  },
+  {
+   "tipo": "susto",
+   "linea": 6,
+   "en": 0.75
+  }
+ ],
+ "destaque": [
+  "the dam",
+  "too deep",
+  "air",
+  "half a bottle",
+  "three knocks",
+  "knocked back",
+  "deep end",
+  "forty years"
+ ],
+ "gancho": {
+  "cena": 6,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

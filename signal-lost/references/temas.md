@@ -34,5 +34,5 @@ estrada, onibus, agua). Tema que exige peca nova custa muito mais caro: deixe pa
 
 - [ ] Submarino / casco alagando
 - [ ] Estacao na Antartida (neve, tempestade)
-- [ ] Mina desabada
+- [x] Mina alagada (SV009-SV011, peça mina)
 - [ ] Aviao caido na floresta
