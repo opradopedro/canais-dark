@@ -1,0 +1,182 @@
+{
+ "codigo": "HM017",
+ "formato": "Regla",
+ "serie": "voz-bosque",
+ "serie_titulo": "La voz del bosque | Hora Muerta",
+ "parte": 1,
+ "partes": 2,
+ "autor": "claude",
+ "origem": "gringa: EUA (inglês) rumor viral no TikTok de 'feral people' nos parques nacionais (Great Smoky Mountains) https://news.yahoo.com/rumors-feral-people-national-parks-152401823.html",
+ "titulo": "En el bosque me llamaron con la voz de mi mamá 😨 Parte 1 #terror #shorts",
+ "capa": "NO CONTESTES",
+ "descripcion": "En un parque nacional de Estados Unidos, un guardabosques nos dio una sola regla.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú habrías contestado?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #leyendasurbanas #parquesnacionales",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "parques nacionales",
+  "leyendas urbanas",
+  "voces en el bosque"
+ ],
+ "lineas": [
+  {
+   "texto": "Si en el bosque escuchas tu nombre con la voz de tu madre, no contestes.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Eso nos dijo un guardabosques en un parque nacional de Estados Unidos.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Dijo que en esos bosques vive gente que nadie ha registrado. Gente que imita voces.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Esa noche, en la tienda de campaña, mi mamá dormía a mi lado.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Y desde los árboles, alguien me llamó. Con su voz. Exacta.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Me di la vuelta. Mi mamá seguía dormida junto a mí.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Entonces la voz dijo: ya te vi, hijo. Sal, que hace frío.",
+   "pausa": 1.0
+  },
+  {
+   "texto": "Parte dos, mañana, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "ojos",
+   "p": {
+    "n": 2,
+    "cerca": [
+     0.2,
+     0.3
+    ],
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "camino",
+   "p": {
+    "figura": false,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "camino",
+   "p": {
+    "figura": false,
+    "niebla": 0.6,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "reloj",
+   "p": {
+    "hora": "2:14"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "ojos",
+   "p": {
+    "n": 3,
+    "cerca": [
+     0.25,
+     0.35
+    ],
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "reloj",
+   "p": {
+    "hora": "2:15",
+    "parpadeo": true
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "ojos",
+   "p": {
+    "n": 6,
+    "cerca": [
+     0.4,
+     0.85
+    ],
+    "zoom": 0.12
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "PARTE 2",
+     "Mañana · {fecha_siguiente}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.75
+  },
+  {
+   "tipo": "acerca",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  },
+  {
+   "tipo": "golpe",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  },
+  {
+   "tipo": "susto",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "no contestes",
+  "imita voces",
+  "dormía a mi lado",
+  "su voz",
+  "ya te vi",
+  "parte 2"
+ ],
+ "gancho": {
+  "cena": 6,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

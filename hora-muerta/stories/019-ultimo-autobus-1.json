@@ -1,0 +1,171 @@
+{
+ "codigo": "HM019",
+ "formato": "Regla",
+ "serie": "ultimo-autobus",
+ "serie_titulo": "El último autobús | Hora Muerta",
+ "parte": 1,
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral (backlog references/temas.md: El último autobús)",
+ "titulo": "El chofer me gritó que me bajara 😨 El último autobús Parte 1 #terror #shorts",
+ "capa": "¡BÁJATE YA!",
+ "descripcion": "Era el único pasajero del último autobús. En una curva sin casas, alguien subió.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú te habrías bajado?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #autobus #relatoscortos",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "el último autobús",
+  "historias de choferes",
+  "relatos cortos de terror"
+ ],
+ "lineas": [
+  {
+   "texto": "Si el chofer del último autobús te grita que te bajes... bájate.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Era la una de la mañana, y yo era el único pasajero.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "En cada parada, el chofer me miraba por el espejo. Nervioso.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "En una curva sin casas, el autobús se detuvo y abrió la puerta.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Nadie subió. Pero el autobús se inclinó, como si entrara alguien muy pesado.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "El chofer se puso pálido, y me miró otra vez por el espejo.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Y gritó: ¡bájate ya! ¡Y no te des la vuelta!",
+   "pausa": 1.0
+  },
+  {
+   "texto": "Parte dos, mañana, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "autobus",
+   "p": {
+    "figura": true,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "autobus",
+   "p": {
+    "figura": false,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "autobus",
+   "p": {
+    "figura": false,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "camino",
+   "p": {
+    "figura": false,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "autobus",
+   "p": {
+    "figura": false,
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "autobus",
+   "p": {
+    "figura": false,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "autobus",
+   "p": {
+    "figura": true,
+    "lado": 1,
+    "zoom": 0.12
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "PARTE 2",
+     "Mañana · {fecha_siguiente}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.5
+  },
+  {
+   "tipo": "aparece",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  },
+  {
+   "tipo": "golpe",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  },
+  {
+   "tipo": "susto",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "bájate",
+  "único pasajero",
+  "nervioso",
+  "muy pesado",
+  "no te des la vuelta",
+  "parte 2"
+ ],
+ "gancho": {
+  "cena": 6,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

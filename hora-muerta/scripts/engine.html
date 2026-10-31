@@ -1241,6 +1241,42 @@ COMP.forja = (t, lt, p) => {
   x.fillStyle = 'rgba(255,140,60,0.05)'; x.fillRect(0, 0, W, H);
 };
 
+// Oso blanco DE PIE (Hora Muerta HM015-016, creepypasta "polar bear 2026"): patio de noche, cerca de madera, bicicleta
+// tirada en el pasto y un oso polar parado sobre dos patas, brazos colgando, ojos rojos.
+// p.dist [a,b] 1 lejos (junto a la cerca) .. 0 pegado a la camara; p.foto true = marco de foto de celular (flash, fecha);
+// p.bici (default true). Eventos: acerca (salta mas cerca), susto (ojos brillan).
+COMP.oso = (t, lt, p) => {
+  const d0 = Array.isArray(p.dist) ? lerp(p.dist[0], p.dist[1], ease(lt)) : (p.dist ?? 0.8);
+  const ac = E.since(t, 'acerca'), dist = Math.max(0, d0 - (ac >= 0 ? 0.25 * ease(Math.min(1, ac / 0.2)) : 0));
+  const sky = x.createLinearGradient(0, 0, 0, H * 0.6); sky.addColorStop(0, '#04060b'); sky.addColorStop(1, '#10151d'); x.fillStyle = sky; x.fillRect(0, 0, W, H);
+  const hz = H * 0.56;
+  x.fillStyle = '#0b100c'; x.fillRect(0, hz, W, H - hz);
+  for (let i = 0; i < 260; i++) { const gx = rnd(i * 2.3) * W, gy = hz + Math.pow(rnd(i * 5.1), 1.6) * (H - hz); x.strokeStyle = `rgba(30,48,30,${0.5 + rnd(i) * 0.4})`; x.lineWidth = 2; x.beginPath(); x.moveTo(gx, gy); x.lineTo(gx + (rnd(i * 3) - 0.5) * 8, gy - 8 - rnd(i * 7) * 16); x.stroke(); }
+  // cerca
+  x.fillStyle = '#1a1612'; x.fillRect(0, hz - 150, W, 14); x.fillRect(0, hz - 70, W, 14);
+  for (let i = 0; i < 14; i++) x.fillRect(i * 82 + 10, hz - 190, 22, 200);
+  // bicicleta tirada
+  if (p.bici !== false) { x.strokeStyle = '#2a2f36'; x.lineWidth = 7; for (const cx of [W * 0.18, W * 0.34]) { x.beginPath(); x.ellipse(cx, H * 0.8, 70, 26, 0, 0, 7); x.stroke(); } x.beginPath(); x.moveTo(W * 0.18, H * 0.8); x.lineTo(W * 0.26, H * 0.78); x.lineTo(W * 0.34, H * 0.8); x.stroke(); }
+  // oso: escala pela distancia
+  const s = lerp(3.2, 0.75, dist), cx = W / 2 + Math.sin(t * 0.7) * 6 * s, base = lerp(H * 1.25, hz + 10, dist), sw = Math.sin(t * 1.3) * 0.02;
+  glow(cx, base - 330 * s, 420 * s, 'rgba(200,215,235,0.10)');
+  x.save(); x.translate(cx, base); x.scale(s, s); x.rotate(sw);
+  const pel = x.createLinearGradient(-90, -520, 90, 0); pel.addColorStop(0, '#e8ebe6'); pel.addColorStop(1, '#9ea6a2');
+  x.fillStyle = pel;
+  for (const lx of [-42, 42]) { x.beginPath(); x.roundRect(lx - 30, -150, 60, 150, 26); x.fill(); }          // pernas
+  x.beginPath(); x.ellipse(0, -260, 95, 150, 0, 0, 7); x.fill();                                             // corpo
+  for (const ax of [-1, 1]) { x.beginPath(); x.ellipse(ax * 98, -250, 28, 105, ax * -0.12, 0, 7); x.fill(); } // bracos caidos
+  x.beginPath(); x.ellipse(0, -425, 70, 62, 0, 0, 7); x.fill();                                              // cabeca
+  x.beginPath(); x.ellipse(0, -395, 34, 26, 0, 0, 7); x.fillStyle = '#c9cec9'; x.fill();                      // focinho
+  x.fillStyle = '#e8ebe6'; for (const ox of [-48, 48]) { x.beginPath(); x.arc(ox, -475, 18, 0, 7); x.fill(); }   // orelhas
+  x.fillStyle = '#111'; x.beginPath(); x.ellipse(0, -405, 12, 8, 0, 0, 7); x.fill();
+  const su = E.since(t, 'susto'), ojo = su >= 0 ? 1 : 0.75;
+  for (const ox of [-24, 24]) { glow(ox, -438, 30, `rgba(255,40,30,${0.5 * ojo})`); x.fillStyle = `rgba(255,50,40,${ojo})`; x.beginPath(); x.arc(ox, -438, 6, 0, 7); x.fill(); }
+  x.restore();
+  if (p.foto) { x.strokeStyle = 'rgba(255,255,255,0.85)'; x.lineWidth = 10; x.strokeRect(60, 160, W - 120, H - 520); x.fillStyle = 'rgba(255,255,255,0.85)'; x.font = '600 44px system-ui, sans-serif'; x.textAlign = 'right'; x.fillText(p.fecha || '01.11.26  03:07', W - 90, H - 400); }
+  fog(t, 0.06, '140,150,170');
+};
+
 // cartela de texto (regras, "Parte 2 manana", etc.)
 COMP.texto = (t, lt, p) => {
   if (CALMO()) {

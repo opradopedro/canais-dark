@@ -1,0 +1,214 @@
+{
+ "codigo": "HM015",
+ "formato": "Testigo",
+ "serie": "oso-noviembre",
+ "serie_titulo": "El oso de noviembre | Hora Muerta",
+ "parte": 1,
+ "partes": 2,
+ "autor": "claude",
+ "origem": "gringa: EUA (inglês) creepypasta/TikTok 'Polar Bear 2026' https://knowyourmeme.com/memes/polar-bear-2026 (meme 'de novembro de 2026'; agora é novembro de 2026)",
+ "titulo": "El meme del oso era de noviembre de 2026 😨 Parte 1 #terror #shorts",
+ "capa": "NO ERA UN MEME",
+ "descripcion": "En 2023 todos compartieron la foto de un oso blanco de pie, 'un meme de noviembre de 2026'. Ya es noviembre de 2026.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú también la compartiste?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #creepypasta #oso2026",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "oso polar 2026",
+  "meme del futuro",
+  "creepypasta en español"
+ ],
+ "lineas": [
+  {
+   "texto": "En 2023, todo internet compartía una foto: un oso blanco, de pie, de noche.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Decían que era un meme del futuro. De noviembre de 2026.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Yo también la compartí. Me pareció gracioso.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "El primero de noviembre, a las tres de la mañana, me llegó esa foto otra vez.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Era el mismo oso, de pie. Pero el fondo... era mi patio.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Reconocí la cerca, y mi bicicleta tirada en el pasto.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Me asomé a la ventana. Estaba ahí, de pie, mirando mi casa.",
+   "pausa": 1.0
+  },
+  {
+   "texto": "Parte dos, mañana, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "oso",
+   "p": {
+    "dist": [
+     0.95,
+     0.85
+    ],
+    "foto": true,
+    "fecha": "11.2026",
+    "bici": false,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "telefono",
+   "p": {
+    "hora": "2023",
+    "de": "Grupo",
+    "msg": [
+     "meme de",
+     "noviembre 2026 jaja"
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "telefono",
+   "p": {
+    "hora": "2023",
+    "de": "Yo",
+    "msg": [
+     "compartido ✓"
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "telefono",
+   "p": {
+    "hora": "3:07",
+    "de": "Sin nombre",
+    "msg": [
+     "[foto]",
+     "ya es noviembre"
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "oso",
+   "p": {
+    "dist": [
+     0.9,
+     0.85
+    ],
+    "foto": true,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "oso",
+   "p": {
+    "dist": [
+     0.85,
+     0.8
+    ],
+    "foto": true,
+    "zoom": 0.1,
+    "fy": 0.8
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "oso",
+   "p": {
+    "dist": [
+     0.8,
+     0.45
+    ],
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "PARTE 2",
+     "Mañana · {fecha_siguiente}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "mensaje",
+   "linea": 1,
+   "en": 0.3
+  },
+  {
+   "tipo": "mensaje",
+   "linea": 2,
+   "en": 0.2
+  },
+  {
+   "tipo": "vibra",
+   "linea": 3,
+   "en": "inicio"
+  },
+  {
+   "tipo": "mensaje",
+   "linea": 3,
+   "en": 0.4
+  },
+  {
+   "tipo": "acerca",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  },
+  {
+   "tipo": "golpe",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  },
+  {
+   "tipo": "susto",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "oso blanco",
+  "noviembre de 2026",
+  "otra vez",
+  "mi patio",
+  "de pie",
+  "parte 2"
+ ],
+ "gancho": {
+  "cena": 6,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

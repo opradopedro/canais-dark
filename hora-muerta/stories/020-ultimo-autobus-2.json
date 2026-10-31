@@ -1,0 +1,187 @@
+{
+ "codigo": "HM020",
+ "formato": "Regla",
+ "serie": "ultimo-autobus",
+ "serie_titulo": "El último autobús | Hora Muerta",
+ "parte": 2,
+ "partes": 2,
+ "anterior": "HM019",
+ "autor": "claude",
+ "origem": "autoral (backlog references/temas.md: El último autobús)",
+ "titulo": "Lo que subió al autobús se bajó conmigo 😰 El último autobús Parte 2 #terror #shorts",
+ "capa": "SE BAJÓ CONMIGO",
+ "descripcion": "Me bajé del autobús a tiempo. O eso creí.\n\n¿Alguna vez fuiste el último pasajero?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #autobus #relatoscortos",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "el último autobús",
+  "historias de choferes",
+  "relatos cortos de terror"
+ ],
+ "lineas": [
+  {
+   "texto": "Parte dos. El chofer me gritaba que me bajara, sin darme la vuelta.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Corrí a la puerta. Detrás de mí, el asiento crujió.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Salté a la carretera, y el autobús se fue con las luces apagadas.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Al día siguiente, el chofer me explicó: esa curva tiene un pasajero que nunca paga.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Sube sin que lo veas, se sienta junto al último que queda, y se baja con él.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Esa noche, en la ventana de mi cuarto, vi mi reflejo.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Y a mi lado, sentado en mi cama, alguien que no estaba en el cuarto.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Por eso gritaba el chofer. Ya era tarde: se había bajado conmigo.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "autobus",
+   "p": {
+    "figura": true,
+    "lado": 1,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "autobus",
+   "p": {
+    "figura": true,
+    "lado": 1,
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "camino",
+   "p": {
+    "figura": false,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "pasillo",
+   "p": {
+    "dist": [
+     1,
+     0.9
+    ],
+    "figura": false
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "autobus",
+   "p": {
+    "figura": true,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "ventana",
+   "p": {
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "ventana",
+   "p": {
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "ventana",
+   "p": {
+    "zoom": 0.12
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 0,
+   "en": "inicio",
+   "mas": -0.2
+  },
+  {
+   "tipo": "golpe",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "voltea",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "cara",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "susto",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "golpe",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  },
+  {
+   "tipo": "negro",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.8,
+   "dur": 1.0
+  }
+ ],
+ "destaque": [
+  "nunca paga",
+  "el último",
+  "mi reflejo",
+  "alguien",
+  "conmigo"
+ ],
+ "gancho": {
+  "cena": 6,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

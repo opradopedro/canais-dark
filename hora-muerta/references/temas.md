@@ -5,9 +5,10 @@ Ordem sugerida: alternar Leyenda, Regla e Testigo. Marque aqui o código quando 
 ## Já roteirizados (séries de 2 partes)
 HM001-002 El reflejo (Testigo) · HM003-004 La regla de las 3:33 (Regla) · HM005-006 El Silbón (Leyenda)
 HM007-008 La Llorona (Leyenda) · HM009-010 El Cadejo (Leyenda) · HM011-012 La Tunda (Leyenda) · HM013-014 La Siguanaba (Leyenda, peça siguanaba)
+HM015-016 El oso de noviembre (Testigo, gringa EUA, peça oso) · HM017-018 La voz del bosque (Regla, gringa EUA) · HM019-020 El último autobús (Regla)
 
 ## Próximas séries prontas para virar roteiro
-- El último autobús: parte 1 o chofer grita "¡bájate ya!"; parte 2 explica que algo sentou ao lado dele e ainda o
+- [x] (HM019-020) El último autobús: parte 1 o chofer grita "¡bájate ya!"; parte 2 explica que algo sentou ao lado dele e ainda o
   segue no reflexo da janela. `autobus`, `ventana`
 - La ventana (Regla): parte 1 para quando ele abre a cortina; parte 2 a cara está do lado de dentro do vidro e vem a
   regla número dos. `texto`, `ventana`

@@ -1,0 +1,219 @@
+{
+ "codigo": "HM016",
+ "formato": "Testigo",
+ "serie": "oso-noviembre",
+ "serie_titulo": "El oso de noviembre | Hora Muerta",
+ "parte": 2,
+ "partes": 2,
+ "anterior": "HM015",
+ "autor": "claude",
+ "origem": "gringa: EUA (inglês) creepypasta/TikTok 'Polar Bear 2026' https://knowyourmeme.com/memes/polar-bear-2026 (meme 'de novembro de 2026'; agora é novembro de 2026)",
+ "titulo": "La foto era de dentro de mi casa 😰 El oso de noviembre Parte 2 #terror #shorts",
+ "capa": "ESTABA DENTRO DE CASA",
+ "descripcion": "La segunda foto no era del patio. Era de dentro de la casa.\n\n¿Todavía tienes la foto del oso en tu teléfono?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #creepypasta #oso2026",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "oso polar 2026",
+  "meme del futuro",
+  "creepypasta en español"
+ ],
+ "lineas": [
+  {
+   "texto": "Parte dos. El oso blanco estaba en mi patio, de pie, igual que en la foto.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Cerré la cortina. El teléfono vibró otra vez.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Otra foto. Esta vez, tomada desde dentro de mi casa.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Se veía mi espalda, frente a la ventana. Y detrás de mí, en el pasillo, algo blanco.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "No era un meme del futuro. Era una foto esperando su fecha.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Le llega a cada persona que la compartió, cuando por fin es noviembre de 2026.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Y lo que sale en la foto... viene a buscarte.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Si tú también la compartiste... no mires detrás de ti.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "oso",
+   "p": {
+    "dist": [
+     0.5,
+     0.45
+    ],
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "telefono",
+   "p": {
+    "hora": "3:09",
+    "de": "Sin nombre",
+    "msg": [
+     "[foto]",
+     "date la vuelta"
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "telefono",
+   "p": {
+    "hora": "3:09",
+    "de": "Sin nombre",
+    "msg": [
+     "[foto]",
+     "date la vuelta"
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "pasillo",
+   "p": {
+    "dist": [
+     0.8,
+     0.45
+    ],
+    "figura": true,
+    "parpadeo": true
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "reloj",
+   "p": {
+    "hora": "3:10"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "telefono",
+   "p": {
+    "hora": "3:10",
+    "de": "Sin nombre",
+    "msg": [
+     "ya es noviembre"
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "pasillo",
+   "p": {
+    "dist": [
+     0.4,
+     0.12
+    ],
+    "figura": true
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "oso",
+   "p": {
+    "dist": [
+     0.35,
+     0.05
+    ],
+    "bici": false,
+    "zoom": 0.12
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 0,
+   "en": "inicio",
+   "mas": -0.2
+  },
+  {
+   "tipo": "vibra",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "mensaje",
+   "linea": 2,
+   "en": 0.2
+  },
+  {
+   "tipo": "mensaje",
+   "linea": 5,
+   "en": 0.4
+  },
+  {
+   "tipo": "acerca",
+   "linea": 3,
+   "en": 0.5
+  },
+  {
+   "tipo": "susto",
+   "linea": 3,
+   "en": 0.75
+  },
+  {
+   "tipo": "acerca",
+   "linea": 6,
+   "en": 0.3
+  },
+  {
+   "tipo": "golpe",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  },
+  {
+   "tipo": "negro",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.8,
+   "dur": 1.0
+  }
+ ],
+ "destaque": [
+  "dentro de mi casa",
+  "algo blanco",
+  "su fecha",
+  "la compartió",
+  "detrás de ti"
+ ],
+ "gancho": {
+  "cena": 3,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
