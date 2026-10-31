@@ -1,0 +1,155 @@
+{
+ "codigo": "CL011",
+ "formato": "You Wake Up",
+ "tema": "calmo",
+ "piano": 0,
+ "serie": "winter-1300",
+ "serie_titulo": "You Wake Up in Winter 1300 | Old Tales",
+ "parte": 2,
+ "partes": 3,
+ "autor": "claude",
+ "anterior": "CL010",
+ "origem": "autoral (calendário medieval: November = 'blood month' em Beda, Martinmas 11/11 e matança/salga, Advento com jejum, 12 dias de Natal, galinhas de Natal pagas ao senhor)",
+ "titulo": "Christmas in the year 1300 🕯️ Part 2 #history #shorts",
+ "capa": "TWELVE DAYS OF CHRISTMAS",
+ "descripcion": "Advent fasting, a hen for the lord, and twelve days of rest. Christmas in a medieval village.\n\nPart 3: {when_next}.\nWhat would you eat first after the fast?\n\n#history #medieval #middleages #historyfacts #shorts",
+ "tags": [
+  "medieval life",
+  "middle ages",
+  "history",
+  "history facts",
+  "life in 1300",
+  "you wake up in",
+  "medieval christmas",
+  "advent",
+  "twelve days of christmas",
+  "medieval feast"
+ ],
+ "lineas": [
+  {
+   "texto": "Part two. December starts hungry. Advent is a time of fasting: no meat for weeks.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Fish, beans, bread, and a lot of waiting.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Then Christmas comes, and it doesn't last one day. It lasts twelve.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Most work in the fields stops. It's the longest break of your whole year.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Your rent is due too. Many villagers owe the lord a hen at Christmas.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "On some manors, the lord gives the tenants a Christmas dinner in return.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Bread, meat, ale, and music by the fire, in the middle of the darkest weeks.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Part three, {when_next}: the long, cold nights of January.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "casa",
+   "p": {
+    "foco": "mesa",
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "casa",
+   "p": {
+    "foco": "fogo",
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "vila",
+   "p": {
+    "hora": "tarde",
+    "sino": true,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "vila",
+   "p": {
+    "hora": "tarde",
+    "fogueira": true,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "salao",
+   "p": {
+    "hora": "dia",
+    "gente": 0.5,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "salao",
+   "p": {
+    "hora": "noite",
+    "mesa": true,
+    "gente": 1,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "salao",
+   "p": {
+    "hora": "noite",
+    "mesa": true,
+    "gente": 0.8,
+    "zoom": 0.14,
+    "fy": 0.6
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "PART 3",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "sino",
+   "linea": 2,
+   "en": 0.4
+  }
+ ],
+ "destaque": [
+  "advent",
+  "fasting",
+  "twelve",
+  "longest break",
+  "a hen",
+  "christmas dinner",
+  "music",
+  "january"
+ ]
+}

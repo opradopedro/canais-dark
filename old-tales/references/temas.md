@@ -39,3 +39,7 @@ funciona. Pecas que faltam: navio, vela de barco, mar aberto, caverna, templo, f
 - [ ] **Beowulf** (epico anglo-saxao)
 - [ ] **Ragnarok** (mitologia nordica)
 - [x] You wake up as a squire in 1300 (CL004-006, pecas salao e forja)
+
+## "You Wake Up in..." (formato atual)
+- [x] medieval-village CL001-003 · [x] squire CL004-006 · [x] lost-town / Stolzenberg CL007-009 (gringa Polônia) · [x] winter-1300 CL010-012
+- Ideias: monge copista (peça nova scriptorium), moleiro (peça moinho), peregrino a Santiago, cerco de castelo, peste de 1348 (cuidado com o tom calmo).

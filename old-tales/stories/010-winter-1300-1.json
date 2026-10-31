@@ -1,0 +1,158 @@
+{
+ "codigo": "CL010",
+ "formato": "You Wake Up",
+ "tema": "calmo",
+ "piano": 0,
+ "serie": "winter-1300",
+ "serie_titulo": "You Wake Up in Winter 1300 | Old Tales",
+ "parte": 1,
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (calendário medieval: November = 'blood month' em Beda, Martinmas 11/11 e matança/salga, Advento com jejum, 12 dias de Natal, galinhas de Natal pagas ao senhor)",
+ "titulo": "You wake up in November 1300 🥩 Part 1 #history #shorts",
+ "capa": "THE BLOOD MONTH",
+ "descripcion": "November in a medieval village: the month of slaughter, salt and smoke, getting ready for winter.\n\nPart 2: {when_next}.\nCould you live on salted meat until spring?\n\n#history #medieval #middleages #historyfacts #shorts",
+ "tags": [
+  "medieval life",
+  "middle ages",
+  "history",
+  "history facts",
+  "life in 1300",
+  "you wake up in",
+  "medieval winter",
+  "martinmas",
+  "medieval food",
+  "november"
+ ],
+ "lineas": [
+  {
+   "texto": "You wake up in a village in the year 1300. It's November, and the air smells of smoke.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "The old English name for this month was the blood month. Here's why.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "There isn't enough hay to feed every animal through the winter.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "So around Saint Martin's day, the eleventh, many pigs and cattle are slaughtered.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Nothing is wasted. Meat is packed in salt, hung in the smoke, made into sausages.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Salt is expensive, so a family's salt barrel matters as much as the meat in it.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Tonight there's a rare feast of fresh meat, because tomorrow it all goes in the salt.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Part two, {when_next}: the twelve days of Christmas.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "vila",
+   "p": {
+    "hora": "aurora",
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "casa",
+   "p": {
+    "foco": "fogo",
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "vila",
+   "p": {
+    "hora": "dia",
+    "colheita": true,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "vila",
+   "p": {
+    "hora": "dia",
+    "sino": true,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "casa",
+   "p": {
+    "foco": "fogo",
+    "zoom": 0.12,
+    "fy": 0.4
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "mercado",
+   "p": {
+    "multidao": 0.5,
+    "placas": true,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "salao",
+   "p": {
+    "hora": "noite",
+    "mesa": true,
+    "gente": 0.8,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "PART 2",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "galo",
+   "linea": 0,
+   "en": "inicio",
+   "mas": 0.2
+  },
+  {
+   "tipo": "sino",
+   "linea": 3,
+   "en": 0.4
+  }
+ ],
+ "destaque": [
+  "november",
+  "blood month",
+  "hay",
+  "saint martin",
+  "salt",
+  "expensive",
+  "feast",
+  "christmas"
+ ]
+}

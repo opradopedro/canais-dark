@@ -1,0 +1,151 @@
+{
+ "codigo": "CL009",
+ "formato": "You Wake Up",
+ "tema": "calmo",
+ "piano": 0,
+ "serie": "lost-town",
+ "serie_titulo": "You Wake Up in a Lost Town | Old Tales",
+ "parte": 3,
+ "partes": 3,
+ "autor": "claude",
+ "anterior": "CL008",
+ "origem": "gringa: Polônia (polonês) cidade medieval perdida de Stolzenberg achada com LiDAR na floresta perto de Sławoborze (2026) https://www.smithsonianmag.com/smart-news/archaeologists-unearth-traces-of-a-mysterious-medieval-city-that-was-abandoned-under-puzzling-circumstances-hundreds-of-years-ago-180988391/ + https://scienceinpoland.pl/en/news/news%2C111765%2Carchaeologists-discover-traces-forgotten-medieval-town.html (fatos da colonização: anos livres de renda, locator vira chefe hereditário, praça de mercado)",
+ "titulo": "This medieval town vanished for 600 years 🌲 Part 3 #history #shorts",
+ "capa": "THE TOWN THAT VANISHED",
+ "descripcion": "Stolzenberg was a real town in Pomerania. It emptied out, the forest swallowed it, and in 2026 lasers found it again.\n\nWhy do you think they left?\n\n#history #medieval #middleages #historyfacts #shorts",
+ "tags": [
+  "medieval life",
+  "middle ages",
+  "history",
+  "history facts",
+  "life in 1300",
+  "you wake up in",
+  "stolzenberg",
+  "lost medieval town",
+  "lidar",
+  "archaeology",
+  "poland"
+ ],
+ "lineas": [
+  {
+   "texto": "Part three. Not every new town makes it. Yours was called Stolzenberg.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Maybe the trade road moved. Maybe war came. Maybe people just left for bigger towns.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Nobody wrote down why. But by the 1500s, it was only a name for an empty place.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "The houses rotted. Trees grew in the market square. A forest covered everything.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "For centuries, people walked through those woods without knowing.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Then archaeologists in Poland flew lasers over the trees, and the ground showed a shape.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "A ring of earth bank, and a moat, still there, right where you dug them.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Would you have stayed in Stolzenberg, or left with everyone else?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "vila",
+   "p": {
+    "hora": "tarde",
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "mercado",
+   "p": {
+    "tarde": true,
+    "multidao": 0.1,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "vila",
+   "p": {
+    "hora": "tarde",
+    "passaros": false,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "vila",
+   "p": {
+    "hora": "aurora",
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "vila",
+   "p": {
+    "hora": "dia",
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "LIDAR",
+     "lasers through the trees"
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "vila",
+   "p": {
+    "hora": "tarde",
+    "fogueira": true,
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "vila",
+   "p": {
+    "hora": "aurora",
+    "castelo": true,
+    "zoom": 0.06
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "sino",
+   "linea": 0,
+   "en": 0.5
+  }
+ ],
+ "destaque": [
+  "stolzenberg",
+  "war",
+  "nobody wrote",
+  "forest",
+  "lasers",
+  "moat",
+  "stayed"
+ ]
+}

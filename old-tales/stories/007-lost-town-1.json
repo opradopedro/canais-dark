@@ -1,0 +1,151 @@
+{
+ "codigo": "CL007",
+ "formato": "You Wake Up",
+ "tema": "calmo",
+ "piano": 0,
+ "serie": "lost-town",
+ "serie_titulo": "You Wake Up in a Lost Town | Old Tales",
+ "parte": 1,
+ "partes": 3,
+ "autor": "claude",
+ "origem": "gringa: Polônia (polonês) cidade medieval perdida de Stolzenberg achada com LiDAR na floresta perto de Sławoborze (2026) https://www.smithsonianmag.com/smart-news/archaeologists-unearth-traces-of-a-mysterious-medieval-city-that-was-abandoned-under-puzzling-circumstances-hundreds-of-years-ago-180988391/ + https://scienceinpoland.pl/en/news/news%2C111765%2Carchaeologists-discover-traces-forgotten-medieval-town.html (fatos da colonização: anos livres de renda, locator vira chefe hereditário, praça de mercado)",
+ "titulo": "You wake up in a brand-new town in 1300 🏘️ Part 1 #history #shorts",
+ "capa": "A TOWN BUILT FROM NOTHING",
+ "descripcion": "Around 1300, new towns were planned from scratch across Pomerania. Settlers came for land and years without rent.\n\nPart 2: {when_next}.\nWould you have made the trip?\n\n#history #medieval #middleages #historyfacts #shorts",
+ "tags": [
+  "medieval life",
+  "middle ages",
+  "history",
+  "history facts",
+  "life in 1300",
+  "you wake up in",
+  "medieval town",
+  "pomerania",
+  "poland history",
+  "lost city"
+ ],
+ "lineas": [
+  {
+   "texto": "You wake up around the year 1300, in a cart full of families, heading east into Pomerania.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "A man rides ahead of you. He's the locator, hired by the duke to fill a brand-new town.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "His promise: a plot of land, and several years without paying any rent.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "For that, he gets the best plots and becomes the town's judge, and so will his sons.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "The town doesn't grow by itself. It's drawn on the ground with ropes, in straight lines.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "A big square in the middle for the market, and streets leaving from its corners.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Your first night, you sleep under the cart, on your own piece of land.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Part two, {when_next}: walls of earth, and a moat.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "vila",
+   "p": {
+    "hora": "aurora",
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "vila",
+   "p": {
+    "hora": "aurora",
+    "castelo": true,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "casa",
+   "p": {
+    "foco": "mesa",
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "salao",
+   "p": {
+    "hora": "dia",
+    "mesa": true,
+    "gente": 0.4,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "vila",
+   "p": {
+    "hora": "dia",
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "mercado",
+   "p": {
+    "multidao": 0.2,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "vila",
+   "p": {
+    "hora": "tarde",
+    "fogueira": true,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "PART 2",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "galo",
+   "linea": 0,
+   "en": "inicio",
+   "mas": 0.2
+  }
+ ],
+ "destaque": [
+  "1300",
+  "locator",
+  "without paying",
+  "judge",
+  "ropes",
+  "market",
+  "your own",
+  "moat"
+ ]
+}

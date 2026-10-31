@@ -1,0 +1,148 @@
+{
+ "codigo": "CL012",
+ "formato": "You Wake Up",
+ "tema": "calmo",
+ "piano": 0,
+ "serie": "winter-1300",
+ "serie_titulo": "You Wake Up in Winter 1300 | Old Tales",
+ "parte": 3,
+ "partes": 3,
+ "autor": "claude",
+ "anterior": "CL011",
+ "origem": "autoral (calendário medieval: November = 'blood month' em Beda, Martinmas 11/11 e matança/salga, Advento com jejum, 12 dias de Natal, galinhas de Natal pagas ao senhor)",
+ "titulo": "Surviving January in the year 1300 ❄️ Part 3 #history #shorts",
+ "capa": "THE LONGEST NIGHTS",
+ "descripcion": "Short days, expensive candles, the whole family around one fire. A medieval January.\n\nCould you sleep fourteen hours a night?\n\n#history #medieval #middleages #historyfacts #shorts",
+ "tags": [
+  "medieval life",
+  "middle ages",
+  "history",
+  "history facts",
+  "life in 1300",
+  "you wake up in",
+  "medieval winter",
+  "medieval life",
+  "candles",
+  "january"
+ ],
+ "lineas": [
+  {
+   "texto": "Part three. The twelve days are over. It's January, and the sun sets in the afternoon.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Candles cost money. Wax is for the church. At home, you burn smelly tallow, and not much of it.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "So when it gets dark, everyone gathers around the one fire in the middle of the house.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "The animals you kept alive may sleep at the other end of the same house. Their warmth helps.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "You mend tools, spin wool, and tell the same old stories again.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "You go to bed early, and you sleep long. The night is fourteen hours.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Every week, a few more minutes of light. Soon, the ploughs go back to the fields.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Would you rather spend winter in 1300, or summer?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "vila",
+   "p": {
+    "hora": "tarde",
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "casa",
+   "p": {
+    "foco": "mesa",
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "casa",
+   "p": {
+    "foco": "fogo",
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "casa",
+   "p": {
+    "foco": "cama",
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "casa",
+   "p": {
+    "foco": "fogo",
+    "zoom": 0.12,
+    "fy": 0.45
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "casa",
+   "p": {
+    "foco": "cama",
+    "zoom": 0.12,
+    "fy": 0.6
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "vila",
+   "p": {
+    "hora": "aurora",
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "vila",
+   "p": {
+    "hora": "aurora",
+    "castelo": true,
+    "zoom": 0.06
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "galo",
+   "linea": 6,
+   "en": 0.3
+  }
+ ],
+ "destaque": [
+  "january",
+  "candles",
+  "tallow",
+  "one fire",
+  "animals",
+  "stories",
+  "fourteen hours",
+  "1300"
+ ]
+}

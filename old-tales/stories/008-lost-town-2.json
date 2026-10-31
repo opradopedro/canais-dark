@@ -1,0 +1,153 @@
+{
+ "codigo": "CL008",
+ "formato": "You Wake Up",
+ "tema": "calmo",
+ "piano": 0,
+ "serie": "lost-town",
+ "serie_titulo": "You Wake Up in a Lost Town | Old Tales",
+ "parte": 2,
+ "partes": 3,
+ "autor": "claude",
+ "anterior": "CL007",
+ "origem": "gringa: Polônia (polonês) cidade medieval perdida de Stolzenberg achada com LiDAR na floresta perto de Sławoborze (2026) https://www.smithsonianmag.com/smart-news/archaeologists-unearth-traces-of-a-mysterious-medieval-city-that-was-abandoned-under-puzzling-circumstances-hundreds-of-years-ago-180988391/ + https://scienceinpoland.pl/en/news/news%2C111765%2Carchaeologists-discover-traces-forgotten-medieval-town.html (fatos da colonização: anos livres de renda, locator vira chefe hereditário, praça de mercado)",
+ "titulo": "Building a medieval town by hand 🏰 Part 2 #history #shorts",
+ "capa": "WALLS MADE OF EARTH",
+ "descripcion": "A rampart of earth, a moat, a market and a town law. Life in a planned medieval town around 1300.\n\nPart 3: {when_next}.\nWhich job would you pick?\n\n#history #medieval #middleages #historyfacts #shorts",
+ "tags": [
+  "medieval life",
+  "middle ages",
+  "history",
+  "history facts",
+  "life in 1300",
+  "you wake up in",
+  "medieval town",
+  "pomerania",
+  "poland history",
+  "lost city"
+ ],
+ "lineas": [
+  {
+   "texto": "Part two. Your new town has no stone walls. Stone is too expensive.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "So everyone digs. A deep ditch all around, and the dirt piled up into a high bank.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "The ditch fills with water: a moat. The bank gets a fence of sharp wooden stakes.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Your town runs on German town law. The same rules as hundreds of towns around you.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Market day comes every week. Salt, cloth, pots and fish come in through the gate.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "The smith is the busiest man in town. Nails, hinges, plough blades.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "At night, the gate closes, and the moat keeps the dark outside.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Part three, {when_next}: the day your town disappears.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "vila",
+   "p": {
+    "hora": "dia",
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "vila",
+   "p": {
+    "hora": "dia",
+    "colheita": false,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "vila",
+   "p": {
+    "hora": "tarde",
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "salao",
+   "p": {
+    "hora": "dia",
+    "gente": 0.6,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "mercado",
+   "p": {
+    "portao": true,
+    "multidao": 0.7,
+    "placas": true,
+    "zoom": 0.06
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "forja",
+   "p": {
+    "faiscas": true,
+    "zoom": 0.08
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "vila",
+   "p": {
+    "hora": "tarde",
+    "fogueira": true,
+    "sino": true,
+    "zoom": 0.1
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "lineas": [
+     "PART 3",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "sino",
+   "linea": 6,
+   "en": 0.3
+  }
+ ],
+ "destaque": [
+  "stone",
+  "ditch",
+  "moat",
+  "town law",
+  "market day",
+  "smith",
+  "the gate",
+  "disappears"
+ ]
+}
