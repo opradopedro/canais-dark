@@ -1,0 +1,244 @@
+{
+ "codigo": "YB026",
+ "mundo": "terreno",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "gringa: Japão (japonês) https://en.wikipedia.org/wiki/Seismic_base_isolation (menshin: isolamento sísmico, muito comum no Japão desde Kobe 1995)",
+ "titulo": "You built a house in earthquake country 🇯🇵 #engineering #shorts",
+ "capa": "YOU BUILT A QUAKE-PROOF HOUSE",
+ "descripcion": "From a house that cracks in every quake to one that floats while the ground shakes, the way Japan does it.\n\nWhat should we build next?\n\n#engineering #howitworks #earthquake #shorts",
+ "tags": [
+  "engineering",
+  "how it works",
+  "earthquake",
+  "base isolation",
+  "japan",
+  "seismic",
+  "you built it",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "You live in Japan, where the ground shakes, so you build a solid house on footings. Problem solved!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But in an earthquake, the ground jerks back and forth, and the house jerks with it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The top whips harder than the bottom, and the walls crack.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you put steel bars inside the concrete walls. Now they don't crack.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But a stiff house passes every jolt to everything inside, and the furniture goes flying.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you cut the house off from the ground, and set it on thick pads of rubber and steel.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now the ground slides back and forth under it, and the house barely moves.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The pads are stiff up and down, so it doesn't bounce, but soft sideways.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "In Japan, thousands of buildings, even hospitals, already sit on pads like these.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built an earthquake proof house. What should we build next?",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "etapa": "casa",
+    "foco": "casa",
+    "casa": "casa",
+    "sapata": 1
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "etapa": "treme",
+    "foco": "casa",
+    "casa": "casa",
+    "sapata": 1,
+    "treme": 1,
+    "rotulo": "SHAKING",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "etapa": "racha",
+    "foco": "casa",
+    "casa": "casa",
+    "sapata": 1,
+    "treme": 1,
+    "racha": [
+     0,
+     1
+    ],
+    "rotulo": "CRACKS",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "etapa": "aco",
+    "foco": "casa",
+    "casa": "casa",
+    "sapata": 1,
+    "rotulo": "STEEL INSIDE",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "etapa": "duro",
+    "foco": "casa",
+    "casa": "casa",
+    "sapata": 1,
+    "treme": 1,
+    "rotulo": "TOO STIFF",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "etapa": "apoios",
+    "foco": "casa",
+    "casa": "casa",
+    "sapata": 1,
+    "isola": 1,
+    "rotulo": "BASE ISOLATION",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "etapa": "isola",
+    "foco": "casa",
+    "casa": "casa",
+    "sapata": 1,
+    "isola": 1,
+    "treme": 1
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "etapa": "pads",
+    "foco": "casa",
+    "casa": "casa",
+    "sapata": 1,
+    "isola": 1,
+    "treme": 0.6,
+    "marcas": [
+     {
+      "t": "Rubber + steel",
+      "x": 0,
+      "y": -0.6,
+      "cor": "green"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "etapa": "japao",
+    "foco": "casa",
+    "casa": "predio",
+    "sapata": 1,
+    "isola": 1,
+    "treme": 1
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "terreno",
+   "p": {
+    "etapa": "final",
+    "foco": "casa",
+    "casa": "casa",
+    "sapata": 1,
+    "isola": 1
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 4,
+   "en": 0.7
+  },
+  {
+   "tipo": "certo",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.7
+  },
+  {
+   "tipo": "tada",
+   "linea": 9,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "japan",
+  "earthquake",
+  "cracks",
+  "steel",
+  "stiff",
+  "rubber",
+  "barely",
+  "thousands"
+ ]
+}

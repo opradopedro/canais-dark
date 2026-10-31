@@ -1,0 +1,249 @@
+{
+ "codigo": "YB028",
+ "mundo": "terreno",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "gringa: Índia (hindi/marathi) buracos de Mumbai em toda monção (tema viral todo ano) https://en.wikipedia.org/wiki/Pothole",
+ "titulo": "You built a road. The rain destroyed it. 🛣️ #engineering #shorts",
+ "capa": "YOU BUILT A ROAD",
+ "descripcion": "Every monsoon, roads turn into potholes. Here is how a road is built to survive the rain, one problem at a time.\n\nWhat should we build next?\n\n#engineering #howitworks #roads #shorts",
+ "tags": [
+  "engineering",
+  "how it works",
+  "road",
+  "potholes",
+  "asphalt",
+  "monsoon",
+  "you built it",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Your village needs a road, so you just drive on the dirt. Problem solved!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But when the monsoon arrives, the dirt turns into deep mud.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you spread a layer of gravel. Now the wheels have something hard to grip.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But heavy trucks push the gravel down into the soft mud underneath.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you build a thick base of crushed rock, packed tight, and seal it with asphalt.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But rain sits in puddles, seeps into tiny cracks, and soaks the base.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Every truck pumps that wet base out, and the road breaks into potholes.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you make the middle a little higher, and the water runs off to the sides.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And you dig ditches along both edges, to carry the water away from the base.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a road. What should we build next?",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "etapa": "terra",
+    "foco": "estrada",
+    "estrada": "lama"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "etapa": "lama",
+    "foco": "estrada",
+    "estrada": "lama",
+    "chuva": 1,
+    "rotulo": "MUD",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "etapa": "cascalho",
+    "foco": "estrada",
+    "estrada": "cascalho",
+    "rotulo": "GRAVEL",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "etapa": "afunda",
+    "foco": "estrada",
+    "estrada": "cascalho",
+    "chuva": 1,
+    "umido": 1,
+    "rotulo": "RUTS",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "etapa": "asfalto",
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "rotulo": "BASE + ASPHALT",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "etapa": "poca",
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "chuva": 1,
+    "umido": [
+     0,
+     1
+    ],
+    "rotulo": "WATER INSIDE",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "etapa": "buraco",
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "chuva": 1,
+    "umido": 1,
+    "buraco": [
+     0,
+     1
+    ],
+    "rotulo": "POTHOLES",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "etapa": "abaulado",
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "abaulado": 1,
+    "chuva": 1,
+    "rotulo": "CROWN",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "etapa": "valeta",
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "abaulado": 1,
+    "valeta": 1,
+    "chuva": 1,
+    "rotulo": "DITCHES",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "terreno",
+   "p": {
+    "etapa": "final",
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "abaulado": 1,
+    "valeta": 1
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.7
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.7
+  },
+  {
+   "tipo": "erro",
+   "linea": 6,
+   "en": 0.7
+  },
+  {
+   "tipo": "certo",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 9,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "monsoon",
+  "mud",
+  "gravel",
+  "trucks",
+  "asphalt",
+  "cracks",
+  "potholes",
+  "higher",
+  "ditches"
+ ]
+}

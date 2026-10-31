@@ -1,0 +1,231 @@
+{
+ "codigo": "YB029",
+ "mundo": "terreno",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "gringa: Japão (japonês) https://en.wikipedia.org/wiki/2025_Yashio_sinkhole (cratera de Yashio, Saitama, cano de esgoto corroído)",
+ "titulo": "Why a road in Japan swallowed a truck 🕳️ #howitworks #shorts",
+ "capa": "THE ROAD JUST VANISHED",
+ "descripcion": "A busy street in Japan opened up and swallowed a truck. The cause had been growing under it for decades.\n\nWhat should we explain next?\n\n#howitworks #engineering #sinkhole #science #shorts",
+ "tags": [
+  "how it works",
+  "sinkhole",
+  "japan",
+  "sewer",
+  "road collapse",
+  "engineering",
+  "infrastructure",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "In Japan, a busy road suddenly opened up and swallowed a truck. How does a road just vanish?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The answer was a giant sewer pipe, buried under the street.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Sewage gives off a gas that turns into acid, and over decades it eats the concrete.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Once there's a crack, the soil around it falls into the pipe, and the water carries it away.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Grain by grain, a hidden cave grows under the road.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "From above, the asphalt looks perfectly fine. It's just a thin lid over the hole.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Until something heavy rolls over it, and the lid gives way.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "After that, Japan ordered checks of its big old sewer pipes, to find the weak spots first.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The hole starts years before anyone sees it. Now you know.",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "etapa": "abre",
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "abaulado": 1,
+    "cano": 1,
+    "cavidade": 1,
+    "colapso": [
+     0,
+     1
+    ],
+    "rotulo": "SINKHOLE",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "etapa": "cano",
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "abaulado": 1,
+    "cano": 1,
+    "marcas": [
+     {
+      "t": "Sewer pipe",
+      "x": -9.5,
+      "y": -1.6
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "etapa": "acido",
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "abaulado": 1,
+    "cano": 1,
+    "rotulo": "CORRODED PIPE",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "etapa": "leva",
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "abaulado": 1,
+    "cano": 1,
+    "cavidade": [
+     0,
+     0.4
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "etapa": "caverna",
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "abaulado": 1,
+    "cano": 1,
+    "cavidade": [
+     0.4,
+     0.95
+    ],
+    "rotulo": "HIDDEN CAVE",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "etapa": "tampa",
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "abaulado": 1,
+    "cano": 1,
+    "cavidade": 0.95
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "etapa": "cai",
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "abaulado": 1,
+    "cano": 1,
+    "cavidade": 1,
+    "colapso": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "etapa": "inspecao",
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "abaulado": 1,
+    "cano": 1,
+    "rotulo": "INSPECTIONS",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "etapa": "final",
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "abaulado": 1,
+    "cano": 1,
+    "cavidade": 0.5
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 0,
+   "en": 0.7
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.7
+  },
+  {
+   "tipo": "erro",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 7,
+   "en": 0.7
+  },
+  {
+   "tipo": "tada",
+   "linea": 8,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "japan",
+  "truck",
+  "sewer",
+  "acid",
+  "soil",
+  "cave",
+  "lid",
+  "checks"
+ ]
+}

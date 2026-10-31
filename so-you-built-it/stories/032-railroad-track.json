@@ -1,0 +1,208 @@
+{
+ "codigo": "YB032",
+ "mundo": "terreno",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "autoral",
+ "titulo": "You built a railroad. It sank. 🚂 #engineering #shorts",
+ "capa": "YOU BUILT A RAILROAD",
+ "descripcion": "Why train tracks sit on piles of rocks: from rails on the dirt to a track that lasts, one problem at a time.\n\nWhat should we build next?\n\n#engineering #howitworks #railroad #shorts",
+ "tags": [
+  "engineering",
+  "how it works",
+  "railroad",
+  "train tracks",
+  "ballast",
+  "rails",
+  "you built it",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "You need a railroad, so you lay the steel rails right on the dirt. Problem solved!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But a train weighs thousands of tons, and the thin rails dig into the ground.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you set the rails on wide crossties, to spread the weight out.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But rain soaks the dirt under the ties, and they sink unevenly. The track goes wavy.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you build the whole track on a thick bed of crushed rock. That's ballast.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Water drains straight through the gaps, so the ground under it stays firm.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The sharp edges lock together, so the ties can't slide, and weeds can't take root.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And when the track settles, a machine just packs the rocks back under the ties.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a railroad. What should we build next?",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "etapa": "terra",
+    "foco": "trilho",
+    "trilho": "terra"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "etapa": "afunda",
+    "foco": "trilho",
+    "trilho": "terra",
+    "afunda_trilho": [
+     0,
+     0.15
+    ],
+    "rotulo": "RAILS SINK",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "etapa": "dormente",
+    "foco": "trilho",
+    "trilho": "dormente",
+    "rotulo": "CROSSTIES",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "etapa": "lama",
+    "foco": "trilho",
+    "trilho": "dormente",
+    "chuva": 1,
+    "afunda_trilho": [
+     0,
+     0.15
+    ],
+    "rotulo": "WAVY TRACK",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "etapa": "brita",
+    "foco": "trilho",
+    "trilho": "brita",
+    "rotulo": "BALLAST",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "etapa": "drena",
+    "foco": "trilho",
+    "trilho": "brita",
+    "chuva": 1,
+    "rotulo": "DRAINS",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "etapa": "trava",
+    "foco": "trilho",
+    "trilho": "brita"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "etapa": "socar",
+    "foco": "trilho",
+    "trilho": "brita",
+    "afunda_trilho": [
+     0.06,
+     0
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "etapa": "final",
+    "foco": "estrada",
+    "trilho": "brita"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.7
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 8,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "train",
+  "dig",
+  "crossties",
+  "rain",
+  "wavy",
+  "rock",
+  "ballast",
+  "drains",
+  "machine"
+ ]
+}

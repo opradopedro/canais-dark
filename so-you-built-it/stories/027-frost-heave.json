@@ -1,0 +1,228 @@
+{
+ "codigo": "YB027",
+ "mundo": "terreno",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "autoral",
+ "titulo": "Why houses up north need foundations 4 feet deep 🥶 #howitworks #shorts",
+ "capa": "THE GROUND LIFTS HOUSES",
+ "descripcion": "Frozen ground swells and lifts houses. That is why footings in cold places go below the frost line.\n\nWhat should we explain next?\n\n#howitworks #engineering #foundation #science #shorts",
+ "tags": [
+  "how it works",
+  "frost heave",
+  "foundation",
+  "frost line",
+  "construction",
+  "engineering",
+  "winter",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Why do houses up north need foundations four feet deep?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Water in the soil freezes in winter, and ice takes up about nine percent more space than water.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So the frozen ground swells, and lifts anything sitting in it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "In spring it thaws and drops back down. But never evenly.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Up and down, every year, until the walls crack and the doors stop closing.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But frost only reaches so deep. Below that line, the ground never freezes.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So builders set the footings below the frost line. In Minnesota, that's up to five feet.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The ice can lift the dirt around them, but not the house standing on them.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Down south, a few inches is enough. Now you know.",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "etapa": "pergunta",
+    "foco": "fundo",
+    "casa": "casa",
+    "sapata": 1,
+    "marcas": [
+     {
+      "t": "4 feet",
+      "x": 0,
+      "y": -1.3
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "etapa": "gelo",
+    "foco": "casa",
+    "casa": "casa",
+    "sapata": 1,
+    "lencol": -0.6,
+    "rotulo": "ICE = +9%"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "etapa": "sobe",
+    "foco": "casa",
+    "casa": "casa",
+    "sapata": 1,
+    "afunda": [
+     0,
+     -0.3
+    ],
+    "rotulo": "FROST HEAVE",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "etapa": "desce",
+    "foco": "casa",
+    "casa": "casa",
+    "sapata": 1,
+    "afunda": [
+     -0.3,
+     0.1
+    ],
+    "inclina": [
+     0,
+     2
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "etapa": "racha",
+    "foco": "casa",
+    "casa": "casa",
+    "sapata": 1,
+    "afunda": 0.1,
+    "inclina": 2,
+    "racha": [
+     0,
+     1
+    ],
+    "rotulo": "CRACKS",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "etapa": "linha",
+    "foco": "fundo",
+    "casa": "casa",
+    "marcas": [
+     {
+      "t": "Frost line",
+      "x": 0,
+      "y": -1.3,
+      "cor": "red"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "etapa": "abaixo",
+    "foco": "fundo",
+    "casa": "casa",
+    "baldrame": 1,
+    "estacas": [
+     0,
+     1.6
+    ],
+    "rotulo": "BELOW THE FROST LINE",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "etapa": "firme",
+    "foco": "casa",
+    "casa": "casa",
+    "baldrame": 1,
+    "estacas": 1.6
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "etapa": "final",
+    "foco": "casa",
+    "casa": "casa",
+    "baldrame": 1,
+    "estacas": 1.6
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 8,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "four",
+  "freezes",
+  "nine",
+  "lifts",
+  "crack",
+  "frost",
+  "five",
+  "south"
+ ]
+}

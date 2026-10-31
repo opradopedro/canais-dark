@@ -1,0 +1,249 @@
+{
+ "codigo": "YB034",
+ "mundo": "terreno",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "autoral",
+ "titulo": "You built a fence. The posts rotted. 🪵 #engineering #shorts",
+ "capa": "YOU BUILT A FENCE",
+ "descripcion": "From a post that tips over to one that stands for decades, one problem at a time.\n\nWhat should we build next?\n\n#engineering #howitworks #fence #shorts",
+ "tags": [
+  "engineering",
+  "how it works",
+  "fence post",
+  "wood rot",
+  "diy",
+  "concrete",
+  "you built it",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Your fence needs posts, so you dig a shallow hole and push one in. Problem solved!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the wind pushes on the fence, and the short post tips right over.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you bury about a third of the post's length in the ground.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But a few years later, the wood rots right at the ground line, and it snaps.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's where the wood stays wet and still gets air. Perfect food for fungus.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you set the post in concrete.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But rain runs down the post and gets trapped in the concrete cup. It rots anyway.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you put gravel at the bottom of the hole, so the water drains away.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And you use pressure treated wood, soaked with chemicals that fungus can't eat.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a fence that lasts. What should we build next?",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "etapa": "raso",
+    "foco": "poste",
+    "poste": 1,
+    "poste_prof": 0.35
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "etapa": "tomba",
+    "foco": "poste",
+    "poste": 1,
+    "poste_prof": 0.35,
+    "poste_inclina": [
+     0,
+     14
+    ],
+    "rotulo": "IT TIPS",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "etapa": "fundo",
+    "foco": "poste",
+    "poste": 1,
+    "poste_prof": 0.95,
+    "rotulo": "DEEPER",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "etapa": "podre",
+    "foco": "poste",
+    "poste": 1,
+    "poste_prof": 0.95,
+    "podre": 1,
+    "poste_inclina": [
+     0,
+     10
+    ],
+    "rotulo": "ROT",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "etapa": "fungo",
+    "foco": "poste",
+    "poste": 1,
+    "poste_prof": 0.95,
+    "podre": 1,
+    "poste_inclina": 10
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "etapa": "concreto",
+    "foco": "poste",
+    "poste": 1,
+    "poste_prof": 0.95,
+    "poste_base": "concreto",
+    "rotulo": "CONCRETE",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "etapa": "copo",
+    "foco": "poste",
+    "poste": 1,
+    "poste_prof": 0.95,
+    "poste_base": "concreto",
+    "podre": 1,
+    "chuva": 1,
+    "rotulo": "TRAPPED WATER",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "etapa": "cascalho",
+    "foco": "poste",
+    "poste": 1,
+    "poste_prof": 0.95,
+    "poste_base": "cascalho",
+    "chuva": 1,
+    "rotulo": "GRAVEL DRAIN",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "etapa": "tratado",
+    "foco": "poste",
+    "poste": 1,
+    "poste_prof": 0.95,
+    "poste_base": "cascalho",
+    "rotulo": "TREATED WOOD",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "terreno",
+   "p": {
+    "etapa": "final",
+    "foco": "poste",
+    "poste": 1,
+    "poste_prof": 0.95,
+    "poste_base": "cascalho"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.7
+  },
+  {
+   "tipo": "certo",
+   "linea": 5,
+   "en": 0.5
+  },
+  {
+   "tipo": "erro",
+   "linea": 6,
+   "en": 0.7
+  },
+  {
+   "tipo": "certo",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 9,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "wind",
+  "third",
+  "rots",
+  "fungus",
+  "concrete",
+  "trapped",
+  "gravel",
+  "treated"
+ ]
+}

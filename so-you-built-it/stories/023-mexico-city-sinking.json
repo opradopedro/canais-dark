@@ -1,0 +1,229 @@
+{
+ "codigo": "YB023",
+ "mundo": "terreno",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "gringa: México (espanhol) https://www.jpl.nasa.gov/news/nasa-isro-mission-maps-mexico-city-sinking/ (NISAR, viral no México) + Ángel de la Independencia, 14 degraus a mais desde 1910",
+ "titulo": "This monument needed 14 new steps. The city sank 😳 #howitworks #shorts",
+ "capa": "THE CITY IS SINKING",
+ "descripcion": "Mexico City sinks up to about an inch a month in some spots. The reason is under the streets.\n\nWhat should we explain next?\n\n#howitworks #engineering #mexicocity #science #shorts",
+ "tags": [
+  "how it works",
+  "mexico city",
+  "sinking city",
+  "subsidence",
+  "groundwater",
+  "engineering",
+  "geology",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "When this monument in Mexico City opened in 1910, you walked straight up to it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Today you need to climb fourteen extra steps. The monument didn't grow. The city sank.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The city was built on top of an old lake. Under the streets is soft clay full of water.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Millions of people pump their drinking water from wells under that clay.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "As the water leaves, the clay dries out and squeezes together, like a sponge.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So the ground and everything on it slowly drops. In some places, almost an inch every month.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the monument stands on piles that go down to firm ground, so it stays put.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The street drops around it, and every few years, workers add another step.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The monument is fine. The city is the one going down. Now you know.",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "etapa": "abre",
+    "foco": "coluna",
+    "coluna": 1,
+    "degraus": 0
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "etapa": "degraus",
+    "foco": "coluna",
+    "coluna": 1,
+    "solo_cede": [
+     0,
+     1.2
+    ],
+    "degraus": [
+     0,
+     6
+    ],
+    "rotulo": "THE CITY SANK",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "etapa": "lago",
+    "foco": "fundo",
+    "casa": "casa",
+    "lencol": -0.6,
+    "marcas": [
+     {
+      "t": "Old lake clay",
+      "x": 0,
+      "y": -3.5
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "etapa": "poco",
+    "foco": "fundo",
+    "casa": "casa",
+    "poco": 1,
+    "lencol": [
+     -0.6,
+     -2.5
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "etapa": "seca",
+    "foco": "fundo",
+    "casa": "casa",
+    "poco": 1,
+    "lencol": [
+     -2.5,
+     -5
+    ],
+    "solo_cede": [
+     0,
+     0.8
+    ],
+    "rotulo": "CLAY SHRINKS",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "etapa": "afunda",
+    "foco": "casa",
+    "casa": "casa",
+    "poco": 1,
+    "lencol": -5,
+    "solo_cede": [
+     0.8,
+     1.2
+    ],
+    "racha": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "etapa": "estacas",
+    "foco": "coluna",
+    "coluna": 1,
+    "solo_cede": 1.2,
+    "degraus": 0,
+    "rotulo": "ON PILES",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "etapa": "novo",
+    "foco": "coluna",
+    "coluna": 1,
+    "solo_cede": 1.2,
+    "degraus": [
+     0,
+     7
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "etapa": "final",
+    "foco": "coluna",
+    "coluna": 1,
+    "solo_cede": 1.2,
+    "degraus": 7
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.7
+  },
+  {
+   "tipo": "erro",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 8,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "fourteen",
+  "sank",
+  "lake",
+  "clay",
+  "pump",
+  "inch",
+  "piles",
+  "step"
+ ]
+}

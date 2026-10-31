@@ -1,0 +1,267 @@
+{
+ "codigo": "YB030",
+ "mundo": "terreno",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "gringa: México (espanhol) https://en.wikipedia.org/wiki/Torre_Latinoamericana (361 estacas, resistiu a 1957 e 1985) + afundamento da CDMX (NISAR)",
+ "titulo": "You built a skyscraper on an old lake 🏙️ #engineering #shorts",
+ "capa": "YOU BUILT IT ON A LAKE",
+ "descripcion": "Mexico City sits on soft lake clay. Here is how a tower stays up there, one problem at a time.\n\nWhat should we build next?\n\n#engineering #howitworks #skyscraper #shorts",
+ "tags": [
+  "engineering",
+  "how it works",
+  "skyscraper",
+  "foundation",
+  "mexico city",
+  "piles",
+  "you built it",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "You're building a skyscraper in Mexico City, on an old lake bed. So you set it on footings. Problem solved!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the soft clay squeezes like toothpaste, and the tower sinks.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you pour one giant concrete slab under the whole building, to spread the weight.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the clay is softer on one side, and the whole tower starts to tilt.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you dig a deep basement. The dirt you remove weighs as much as the tower, so it floats.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the city pumps water from under the clay, and the ground sinks anyway.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you drive piles through the clay, down to a hard layer of sand far below.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The Torre Latinoamericana was built like this, on three hundred sixty one piles.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And it came through the huge earthquakes of 1957 and 1985 still standing.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a skyscraper on a lake. What should we build next?",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "etapa": "sapata",
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 1
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "etapa": "afunda",
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 1,
+    "afunda": [
+     0,
+     1.2
+    ],
+    "peso": 1,
+    "rotulo": "SINKING",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "etapa": "radier",
+    "foco": "fundo",
+    "casa": "predio",
+    "radier": 1,
+    "rotulo": "CONCRETE RAFT",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "etapa": "inclina",
+    "foco": "predio",
+    "casa": "predio",
+    "radier": 1,
+    "afunda": 0.5,
+    "inclina": [
+     0,
+     3
+    ],
+    "rotulo": "TILTING",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "etapa": "caixa",
+    "foco": "fundo",
+    "casa": "predio",
+    "caixa": 1,
+    "lencol": -1,
+    "rotulo": "FLOATING BOX",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "etapa": "cede",
+    "foco": "fundo",
+    "casa": "predio",
+    "caixa": 1,
+    "poco": 1,
+    "lencol": [
+     -1,
+     -4
+    ],
+    "solo_cede": [
+     0,
+     0.8
+    ],
+    "rotulo": "GROUND DROPS",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "etapa": "estacas",
+    "foco": "fundo",
+    "casa": "predio",
+    "caixa": 1,
+    "estacas": [
+     0,
+     6.8
+    ],
+    "marcas": [
+     {
+      "t": "Hard sand",
+      "x": 0,
+      "y": -7.0,
+      "cor": "green"
+     }
+    ],
+    "rotulo": "PILES",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "etapa": "torre",
+    "foco": "predio",
+    "casa": "predio",
+    "caixa": 1,
+    "estacas": 6.8
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "etapa": "terremoto",
+    "foco": "predio",
+    "casa": "predio",
+    "caixa": 1,
+    "estacas": 6.8,
+    "treme": 1,
+    "rotulo": "STILL STANDING",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "terreno",
+   "p": {
+    "etapa": "final",
+    "foco": "predio",
+    "casa": "predio",
+    "caixa": 1,
+    "estacas": 6.8
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.7
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.7
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 9,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "mexico",
+  "toothpaste",
+  "slab",
+  "tilt",
+  "floats",
+  "pumping",
+  "piles",
+  "sixty",
+  "earthquakes"
+ ]
+}

@@ -1,0 +1,212 @@
+{
+ "codigo": "YB031",
+ "mundo": "terreno",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "gringa: Itália (italiano) https://en.wikipedia.org/wiki/Venice#Foundations (estacas de madeira sem oxigênio; Salute ~1,1 milhão de estacas)",
+ "titulo": "Venice stands on wood that never rots 🇮🇹 #howitworks #shorts",
+ "capa": "A CITY ON WOODEN STICKS",
+ "descripcion": "Venice stands on millions of wooden piles. Wood in the ground should rot in years, but these have lasted centuries.\n\nWhat should we explain next?\n\n#howitworks #engineering #venice #science #shorts",
+ "tags": [
+  "how it works",
+  "venice",
+  "italy",
+  "wooden piles",
+  "foundation",
+  "engineering",
+  "history",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Venice is a whole city built on water. So what is it standing on?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Millions of wooden logs, hammered straight down into the mud.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But wood in the ground should rot in a few years. Just look at an old fence post.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Rot is fungus eating the wood, and fungus needs air to live.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The Venice logs are always underwater, packed in mud, where there's almost no oxygen.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So the fungus can't grow, and the wood soaks up minerals and turns hard.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Some of those logs have been down there for many centuries.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "One church alone, Santa Maria della Salute, stands on about a million of them.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Keep wood away from air, and it can last almost forever. Now you know.",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "etapa": "cidade",
+    "foco": "casa",
+    "casa": "casa",
+    "lencol": -0.2
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "etapa": "estacas",
+    "foco": "fundo",
+    "casa": "casa",
+    "estacas": [
+     0,
+     5
+    ],
+    "madeira": 1,
+    "lencol": -0.2,
+    "rotulo": "WOODEN PILES",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "etapa": "poste",
+    "foco": "poste",
+    "poste": 1,
+    "poste_prof": 0.8,
+    "podre": 1,
+    "poste_inclina": [
+     0,
+     8
+    ],
+    "rotulo": "ROT",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "etapa": "fungo",
+    "foco": "poste",
+    "poste": 1,
+    "poste_prof": 0.8,
+    "podre": 1,
+    "poste_inclina": 8
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "etapa": "sem_ar",
+    "foco": "fundo",
+    "casa": "casa",
+    "estacas": 5,
+    "madeira": 1,
+    "lencol": -0.2,
+    "rotulo": "NO OXYGEN",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "etapa": "duro",
+    "foco": "fundo",
+    "casa": "casa",
+    "estacas": 5,
+    "madeira": 1,
+    "lencol": -0.2
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "etapa": "seculos",
+    "foco": "casa",
+    "casa": "casa",
+    "estacas": 5,
+    "madeira": 1,
+    "lencol": -0.2
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "etapa": "igreja",
+    "foco": "fundo",
+    "casa": "predio",
+    "estacas": 6,
+    "madeira": 1,
+    "lencol": -0.2,
+    "rotulo": "1,000,000 PILES",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "etapa": "final",
+    "foco": "fundo",
+    "casa": "casa",
+    "estacas": 5,
+    "madeira": 1,
+    "lencol": -0.2
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.7
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.7
+  },
+  {
+   "tipo": "tada",
+   "linea": 8,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "venice",
+  "wooden",
+  "rot",
+  "fungus",
+  "oxygen",
+  "minerals",
+  "centuries",
+  "million"
+ ]
+}

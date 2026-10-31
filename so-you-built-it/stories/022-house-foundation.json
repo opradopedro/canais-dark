@@ -1,0 +1,283 @@
+{
+ "codigo": "YB022",
+ "mundo": "terreno",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "autoral",
+ "titulo": "You built a house. It sank. 🏚️ #engineering #shorts",
+ "capa": "YOU BUILT A HOUSE",
+ "descripcion": "From a house sitting on the dirt to one that stays put for a hundred years, one problem at a time.\n\nWhat should we build next?\n\n#engineering #howitworks #foundation #shorts",
+ "tags": [
+  "engineering",
+  "how it works",
+  "foundation",
+  "house foundation",
+  "piles",
+  "construction",
+  "you built it",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "You need a house, so you build it right on top of the ground. Problem solved!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the topsoil is soft, and the heavy walls slowly sink into it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And they sink unevenly, so the walls crack.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you pour wide concrete feet under every wall. Footings spread the weight out.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But dig deeper, and under the topsoil there's thick, soft clay that still squeezes down.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you drive concrete piles all the way down, until they stand on solid rock.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A concrete beam ties the tops together, so every wall moves as one.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But water creeps up through the concrete and rots the bottom of the walls.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you wrap the beam in a waterproof layer before the walls go up.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a house foundation. What should we build next?",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "etapa": "chao",
+    "foco": "casa",
+    "casa": "casa"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "etapa": "afunda",
+    "foco": "casa",
+    "casa": "casa",
+    "afunda": [
+     0,
+     0.35
+    ],
+    "peso": 1,
+    "rotulo": "IT SINKS",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "etapa": "racha",
+    "foco": "casa",
+    "casa": "casa",
+    "afunda": 0.35,
+    "inclina": [
+     0,
+     2.5
+    ],
+    "racha": [
+     0,
+     1
+    ],
+    "rotulo": "CRACKS",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "etapa": "sapata",
+    "foco": "casa",
+    "casa": "casa",
+    "sapata": 1,
+    "rotulo": "FOOTINGS",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "etapa": "argila",
+    "foco": "fundo",
+    "casa": "casa",
+    "sapata": 1,
+    "afunda": [
+     0,
+     0.25
+    ],
+    "marcas": [
+     {
+      "t": "Soft clay",
+      "x": 0,
+      "y": -3.5,
+      "cor": "red"
+     }
+    ],
+    "rotulo": "SOFT CLAY",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "etapa": "estacas",
+    "foco": "fundo",
+    "casa": "casa",
+    "sapata": 1,
+    "estacas": [
+     0,
+     8.2
+    ],
+    "marcas": [
+     {
+      "t": "Rock",
+      "x": 0,
+      "y": -8.4,
+      "cor": "green"
+     }
+    ],
+    "rotulo": "PILES",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "etapa": "baldrame",
+    "foco": "casa",
+    "casa": "casa",
+    "baldrame": 1,
+    "estacas": 8.2,
+    "rotulo": "GRADE BEAM",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "etapa": "umido",
+    "foco": "casa",
+    "casa": "casa",
+    "baldrame": 1,
+    "estacas": 8.2,
+    "lencol": [
+     -2.5,
+     -0.3
+    ],
+    "rotulo": "DAMP WALLS",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "etapa": "manta",
+    "foco": "casa",
+    "casa": "casa",
+    "baldrame": 1,
+    "manta": 1,
+    "estacas": 8.2,
+    "lencol": -1.2,
+    "rotulo": "WATERPROOFING",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "terreno",
+   "p": {
+    "etapa": "final",
+    "foco": "fundo",
+    "casa": "casa",
+    "baldrame": 1,
+    "manta": 1,
+    "estacas": 8.2
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.55
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.5
+  },
+  {
+   "tipo": "certo",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 5,
+   "en": 0.7
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 9,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "sink",
+  "cracks",
+  "footings",
+  "clay",
+  "piles",
+  "rock",
+  "waterproof",
+  "foundation"
+ ]
+}

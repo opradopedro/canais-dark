@@ -1,0 +1,176 @@
+{
+ "codigo": "YB035",
+ "mundo": "terreno",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "autoral",
+ "titulo": "Why sidewalks have lines every few feet 🧱 #howitworks #shorts",
+ "capa": "WHY THE LINES?",
+ "descripcion": "Those grooves in the sidewalk are not decoration. They tell the concrete exactly where to crack.\n\nWhat should we explain next?\n\n#howitworks #engineering #concrete #science #shorts",
+ "tags": [
+  "how it works",
+  "sidewalk",
+  "concrete",
+  "control joints",
+  "construction",
+  "engineering",
+  "cracks",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Why does every sidewalk have lines cut into it every few feet?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Concrete shrinks as it dries, and it shrinks again every cold night.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the ground under it grips the slab, so the slab tears itself apart.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A long slab will crack. There's no way to stop it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So builders cut a groove about a quarter of the way through.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now that line is the weakest spot, so the crack happens right there, hidden inside the groove.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And when a tree root pushes up, only one square lifts, not the whole sidewalk.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The cracks are still there. You just can't see them. Now you know.",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "etapa": "pergunta",
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "etapa": "encolhe",
+    "foco": "calcada",
+    "calcada": 1
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "etapa": "trinca",
+    "foco": "calcada",
+    "calcada": 1,
+    "trinca": [
+     0,
+     1
+    ],
+    "rotulo": "CRACK",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "etapa": "inevitavel",
+    "foco": "calcada",
+    "calcada": 1,
+    "trinca": 1
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "etapa": "junta",
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "rotulo": "CONTROL JOINT",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "etapa": "escondida",
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "trinca": [
+     0,
+     0.5
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "etapa": "raiz",
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "etapa": "final",
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.7
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 7,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "lines",
+  "shrinks",
+  "grips",
+  "crack",
+  "groove",
+  "weakest",
+  "root"
+ ]
+}

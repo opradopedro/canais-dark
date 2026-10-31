@@ -1,0 +1,239 @@
+{
+ "codigo": "YB024",
+ "mundo": "terreno",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "autoral",
+ "titulo": "You built a wall to hold a hill. It fell. ⛰️ #engineering #shorts",
+ "capa": "YOU BUILT A RETAINING WALL",
+ "descripcion": "From a dug-out slope to a wall that holds a hill for good, one problem at a time.\n\nWhat should we build next?\n\n#engineering #howitworks #retainingwall #shorts",
+ "tags": [
+  "engineering",
+  "how it works",
+  "retaining wall",
+  "landslide",
+  "drainage",
+  "gabion",
+  "you built it",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Your backyard ends in a hill, and you want more flat space.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you dig the slope straight down and flatten the yard. Problem solved!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But after the first heavy rain, the wet dirt slides right into the yard.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you build a tall concrete wall to hold the dirt back.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But rain soaks into the hill behind it, and that water pushes on the wall almost twice as hard.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Until one day the whole wall leans forward.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you fill the space behind it with gravel, and leave holes at the bottom.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now the water just pours out, and the wall only holds the dirt.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Or skip the concrete: wire baskets full of rocks are heavy and let the water right through.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a retaining wall. What should we build next?",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "etapa": "natural",
+    "foco": "muro",
+    "encosta": "natural"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "etapa": "corte",
+    "foco": "muro",
+    "encosta": "corte"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "etapa": "desaba",
+    "foco": "muro",
+    "encosta": "desaba",
+    "chuva": 1,
+    "rotulo": "LANDSLIDE",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "etapa": "muro",
+    "foco": "muro",
+    "encosta": "muro",
+    "rotulo": "RETAINING WALL",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "etapa": "agua",
+    "foco": "muro",
+    "encosta": "muro",
+    "chuva": 1,
+    "agua_muro": [
+     0,
+     0.8
+    ],
+    "carga": 1
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "etapa": "tomba",
+    "foco": "muro",
+    "encosta": "muro",
+    "agua_muro": 0.8,
+    "carga": 1,
+    "muro_inclina": [
+     0,
+     7
+    ],
+    "rotulo": "IT LEANS",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "etapa": "dreno",
+    "foco": "muro",
+    "encosta": "muro",
+    "dreno": 1,
+    "agua_muro": [
+     0.6,
+     0.1
+    ],
+    "rotulo": "DRAINAGE",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "etapa": "escoa",
+    "foco": "muro",
+    "encosta": "muro",
+    "dreno": 1,
+    "chuva": 1,
+    "agua_muro": 0.05
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "etapa": "gabiao",
+    "foco": "muro",
+    "encosta": "gabiao",
+    "rotulo": "GABIONS",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "terreno",
+   "p": {
+    "etapa": "final",
+    "foco": "muro",
+    "encosta": "muro",
+    "dreno": 1
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 1,
+   "en": 0.8
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 4,
+   "en": 0.7
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.5
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 9,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "hill",
+  "slides",
+  "wall",
+  "water",
+  "twice",
+  "leans",
+  "gravel",
+  "holes",
+  "rocks"
+ ]
+}
