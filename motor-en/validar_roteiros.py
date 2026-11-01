@@ -22,6 +22,10 @@ CANAIS = {
     "so-you-built-it": None,
 }
 
+# a partir destes codigos (inclusive) so vale estilo flat; os anteriores sao series do estilo antigo
+FLAT_DESDE = {"hora-muerta": 21, "signal-lost": 12, "old-tales": 13}
+PECAS_FLAT_FIXAS = {"retrato", "texto"}
+
 
 def pecas(engine):
     txt = open(os.path.join(RAIZ, engine), encoding="utf-8").read()
@@ -50,6 +54,8 @@ def conferir(canal, engine):
         h["_arq"] = nome; hs.append(h)
     pref = prefixo(canal, [h.get("codigo", "") for h in hs])
     comps = pecas(engine) if engine else None
+    global PECAS_FLAT
+    PECAS_FLAT = PECAS_FLAT_FIXAS | {c for c in (comps or ()) if c.startswith("f_")}
     vistos = {}
     for h in hs:
         n, cod = h["_arq"], h.get("codigo", "")
@@ -77,6 +83,16 @@ def conferir(canal, engine):
                 erros.append(f"{n}: evento '{e.get('tipo')}' aponta para a fala {e['linea']}, que nao existe")
         if canal == "old-tales" and h.get("tema") != "calmo":
             erros.append(f"{n}: Old Tales precisa de \"tema\": \"calmo\" (sem flash vermelho, legenda dourada)")
+        # REGRA do Pedro (01/11): historia nova de Hora Muerta, Signal Lost e Old Tales so no estilo flat
+        num = int(re.sub(r"\D", "", cod) or 0)
+        if canal in FLAT_DESDE and num >= FLAT_DESDE[canal]:
+            if h.get("visual") != "flat":
+                erros.append(f"{n}: historia nova precisa de \"visual\": \"flat\" (estilo novo, ESTILO-VISUAL.md)")
+            velhas = sorted({c.get("comp") for c in h.get("cenas") or []} - PECAS_FLAT)
+            if velhas:
+                erros.append(f"{n}: pecas do estilo antigo {velhas}; use so pecas flat (f_*, retrato, texto)")
+        if canal == "signal-lost" and h.get("visual") == "flat" and h.get("paleta") != "sv":
+            erros.append(f"{n}: Signal Lost no estilo flat precisa de \"paleta\": \"sv\"")
         partes, parte = int(h.get("partes", 1) or 1), int(h.get("parte", 1) or 1)
         fala = json.dumps(h.get("lineas"), ensure_ascii=False)
         if parte < partes and not any(m in fala for m in ("{when_next}", "{dia_siguiente}", "{fecha_siguiente}", "{next_day}", "{next_date}")):
