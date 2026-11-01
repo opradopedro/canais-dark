@@ -199,7 +199,8 @@
     "escala": [
      1.6,
      1.8
-    ]
+    ],
+    "vela": 0
    }
   },
   {
@@ -217,7 +218,8 @@
      "titulo": "NOTA EN LA REJA",
      "texto": "No contestes. Ya estoy adentro.",
      "y": 0.2
-    }
+    },
+    "vela": 0
    }
   },
   {
