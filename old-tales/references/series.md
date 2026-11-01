@@ -32,3 +32,17 @@ Origem: autoral. Fatos: November = "blood month" (Beda), matança perto de Marti
 - CL011 parte 2/3: Advento de jejum, doze dias de Natal, galinha ao senhor, jantar no salão. DESCARTADO (01/11, estilo antigo; arquivo em descartados/)
 - CL012 parte 3/3 (última): janeiro, sebo, um fogo só, animais na outra ponta da casa, histórias, dormir cedo, dias crescendo. Pergunta final. DESCARTADO (01/11, estilo antigo; arquivo em descartados/)
 Cenas: vila, casa, salao, mercado, texto.
+
+## brewster (CL013-CL015) — You Wake Up with the Brewster — por: claude (01/11). PRIMEIRA SÉRIE NO ESTILO FLAT
+- Estilo: `"visual": "flat"`, tema calmo. Peças: `f_aldeia`, `f_casa`, `retrato`, `texto`. Personagens: Agnes, 34, a cervejeira
+  (touca branca, vestido vinho) e o ale-taster (chapéu verde, barba). HUD: Day 1 · Dawn → Noon → Afternoon → Night · Year 1300.
+- Fatos (J. Bennett, *Ale, Beer and Brewsters in England*; Assize of Bread and Ale): em 1300 a cerveja inglesa era feita
+  sobretudo por mulheres em casa; sem lúpulo, estragava em poucos dias; malte = cevada molhada, brotada, seca e moída;
+  ale-stake (vara com ramo verde na porta) = cerveja fresca à venda; ale-taster escolhido pela corte local; preço fixado por
+  lei pelo preço do grão; medida oficial; multas tão frequentes que funcionavam como licença; cucking stool para fraude.
+- CL013 parte 1/3: acorda na casa da cervejeira; Agnes, 34; lista de tarefas (molhar, secar, moer); ao meio-dia, o ramo
+  verde na vara. Pergunta: o que o ramo diz? FEITO
+- CL014 parte 2/3: ale-stake; o ale-taster bate; checa gosto, preço (lei, preço do grão) e jarra (tamanho oficial); ele
+  franze a testa. Pergunta: passou? FEITO
+- CL015 parte 3/3 (última): passou; multa quase todo mês = licença; fraude grave ia para o cucking stool; noite com os
+  vizinhos no fogo; dorme na palha. Pergunta final calma. FEITO

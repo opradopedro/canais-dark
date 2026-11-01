@@ -1,0 +1,234 @@
+{
+ "formato": "You Wake Up",
+ "tema": "calmo",
+ "piano": 0,
+ "visual": "flat",
+ "serie": "brewster",
+ "serie_titulo": "You Wake Up with the Brewster | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (estilo flat, 01/11). Fatos: J. Bennett, Ale, Beer and Brewsters in England; Assize of Bread and Ale",
+ "tags": [
+  "medieval life",
+  "middle ages",
+  "history",
+  "history facts",
+  "medieval ale",
+  "brewster",
+  "life in 1300",
+  "you wake up in",
+  "medieval village"
+ ],
+ "codigo": "CL014",
+ "parte": 2,
+ "anterior": "CL013",
+ "titulo": "The ale-taster knocks on your door 🍺 Part 2 #history #shorts",
+ "capa": "THE ALE-TASTER",
+ "descripcion": "A green branch on a pole meant fresh ale for sale. Then the village ale-taster came to check it.\n\nPart 3: {when_next}.\nWould her ale pass?\n\n#history #medieval #middleages #historyfacts #shorts",
+ "lineas": [
+  {
+   "texto": "The branch means fresh ale for sale. It's called an ale-stake.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Soon, a man in a good coat knocks on the door.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He's the ale-taster, chosen by the village court.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He checks three things: the taste, the price, and the jug.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "The price is set by law, and it follows the price of grain.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And the jug must be the official size, never smaller.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Agnes pours. He drinks. He frowns.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Did her ale pass? Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_aldeia",
+   "p": {
+    "hud": {
+     "dia": "Day 1",
+     "hora": "Afternoon",
+     "lugar": "Year 1300",
+     "ceu": "tarde"
+    },
+    "ceu": "tarde",
+    "poste": true,
+    "foco": [
+     0.6,
+     0.55
+    ],
+    "escala": [
+     1.3,
+     1.5
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "ale-stake",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_aldeia",
+   "p": {
+    "ceu": "tarde",
+    "poste": true,
+    "pessoas": [
+     {
+      "x": [
+       0.1,
+       0.55
+      ],
+      "anda": 1,
+      "roupa": "#3f5a3a",
+      "capuz": true,
+      "corCapuz": "#3a4a2e"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "chapeu": "chapeu",
+     "corChapeu": "#3a4a2e",
+     "barba": true,
+     "cabelo": "#4a3a24",
+     "pele": "#c2875e",
+     "roupa": "#3f5a3a",
+     "detalhe": "#e3b75f"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "The ale-taster",
+     "sub": "chosen by the village court",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "chapeu": "chapeu",
+     "corChapeu": "#3a4a2e",
+     "barba": true,
+     "cabelo": "#4a3a24",
+     "pele": "#c2875e",
+     "roupa": "#3f5a3a",
+     "detalhe": "#e3b75f",
+     "olhar": -1
+    },
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "What he checks",
+     "itens": [
+      "The taste",
+      "The price",
+      "The jug"
+     ],
+     "y": 0.12
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_casa",
+   "p": {
+    "fogo": 0.8,
+    "barris": 4,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "price set by law",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_casa",
+   "p": {
+    "fogo": 0.8,
+    "barris": 4,
+    "foco": [
+     0.8,
+     0.5
+    ],
+    "escala": [
+     1.4,
+     1.7
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "official size only",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "chapeu": "chapeu",
+     "corChapeu": "#3a4a2e",
+     "barba": true,
+     "cabelo": "#4a3a24",
+     "pele": "#c2875e",
+     "roupa": "#3f5a3a",
+     "detalhe": "#e3b75f",
+     "expressao": "bravo"
+    },
+    "zoomRosto": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Did it pass?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "ale-stake",
+  "good coat",
+  "ale-taster",
+  "three things",
+  "law",
+  "grain",
+  "official size",
+  "frowns"
+ ]
+}

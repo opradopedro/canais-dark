@@ -1,0 +1,253 @@
+{
+ "formato": "You Wake Up",
+ "tema": "calmo",
+ "piano": 0,
+ "visual": "flat",
+ "serie": "brewster",
+ "serie_titulo": "You Wake Up with the Brewster | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (estilo flat, 01/11). Fatos: J. Bennett, Ale, Beer and Brewsters in England; Assize of Bread and Ale",
+ "tags": [
+  "medieval life",
+  "middle ages",
+  "history",
+  "history facts",
+  "medieval ale",
+  "brewster",
+  "life in 1300",
+  "you wake up in",
+  "medieval village"
+ ],
+ "codigo": "CL013",
+ "parte": 1,
+ "titulo": "You wake up in 1300 in the brewster's house 🍺 Part 1 #history #shorts",
+ "capa": "THE VILLAGE BREWSTER",
+ "descripcion": "In 1300, most of the village ale was brewed by women at home. A day with Agnes, the brewster.\n\nPart 2: {when_next}.\nWhat does the green branch mean?\n\n#history #medieval #middleages #historyfacts #shorts",
+ "lineas": [
+  {
+   "texto": "You wake up in 1300, in the house of the village brewster.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "This is Agnes. She's thirty-four, and half the village drinks her ale.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Her ale keeps only a few days, so she brews almost every week.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Your jobs: soak the barley, dry the sprouts, grind the malt.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "By noon, the mash is steaming in her big pot.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then Agnes ties a green branch to a pole by the door.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Every neighbour knows what it means.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "What does the branch say? Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_aldeia",
+   "p": {
+    "hud": {
+     "dia": "Day 1",
+     "hora": "Dawn",
+     "lugar": "Year 1300",
+     "ceu": "aurora"
+    },
+    "ceu": "aurora",
+    "galinhas": true,
+    "pessoas": [
+     {
+      "touca": true,
+      "saia": true,
+      "roupa": "#8c2f39",
+      "x": [
+       0.12,
+       0.3
+      ],
+      "anda": 1
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "chapeu": "touca",
+     "pele": "#e0ad86",
+     "cabelo": "#7a4a2a",
+     "roupa": "#8c2f39",
+     "detalhe": "#efe4cc",
+     "expressao": "sorriso"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Agnes, 34",
+     "sub": "the village brewster",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_casa",
+   "p": {
+    "fogo": 0.7,
+    "barris": 3,
+    "foco": [
+     0.75,
+     0.5
+    ],
+    "escala": [
+     1.3,
+     1.5
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "good for only a few days",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "chapeu": "touca",
+     "pele": "#e0ad86",
+     "cabelo": "#7a4a2a",
+     "roupa": "#8c2f39",
+     "detalhe": "#efe4cc",
+     "olhar": 1
+    },
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "Your jobs today",
+     "itens": [
+      "Soak the barley",
+      "Dry the sprouts",
+      "Grind the malt"
+     ],
+     "y": 0.12
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_casa",
+   "p": {
+    "hud": {
+     "dia": "Day 1",
+     "hora": "Noon",
+     "lugar": "Year 1300",
+     "ceu": "dia"
+    },
+    "fogo": 1,
+    "caldeirao": true,
+    "barris": 2,
+    "cabra": true
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_aldeia",
+   "p": {
+    "ceu": "dia",
+    "poste": true,
+    "pessoas": [
+     {
+      "touca": true,
+      "saia": true,
+      "roupa": "#8c2f39",
+      "x": 0.55
+     }
+    ],
+    "foco": [
+     0.6,
+     0.55
+    ],
+    "escala": [
+     1.2,
+     1.4
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_aldeia",
+   "p": {
+    "ceu": "dia",
+    "poste": true,
+    "galinhas": true,
+    "pessoas": [
+     {
+      "x": [
+       0.05,
+       0.3
+      ],
+      "anda": 1,
+      "capuz": true,
+      "roupa": "#6b4a2e"
+     },
+     {
+      "x": [
+       0.95,
+       0.75
+      ],
+      "anda": 1,
+      "olhar": -1,
+      "capuz": true,
+      "roupa": "#3f5a3a"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "What does it say?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "galo",
+   "linea": 0,
+   "en": "inicio",
+   "mas": 0.2
+  }
+ ],
+ "destaque": [
+  "brewster",
+  "Agnes",
+  "few days",
+  "barley",
+  "malt",
+  "noon",
+  "green branch",
+  "knows"
+ ]
+}

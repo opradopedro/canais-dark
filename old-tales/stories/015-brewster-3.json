@@ -1,0 +1,235 @@
+{
+ "formato": "You Wake Up",
+ "tema": "calmo",
+ "piano": 0,
+ "visual": "flat",
+ "serie": "brewster",
+ "serie_titulo": "You Wake Up with the Brewster | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (estilo flat, 01/11). Fatos: J. Bennett, Ale, Beer and Brewsters in England; Assize of Bread and Ale",
+ "tags": [
+  "medieval life",
+  "middle ages",
+  "history",
+  "history facts",
+  "medieval ale",
+  "brewster",
+  "life in 1300",
+  "you wake up in",
+  "medieval village"
+ ],
+ "codigo": "CL015",
+ "parte": 3,
+ "anterior": "CL014",
+ "titulo": "Why the brewster paid a fine every month 🍺 Part 3 #history #shorts",
+ "capa": "A FINE EVERY MONTH",
+ "descripcion": "Medieval brewsters paid small fines so often that the fines worked like a licence to brew. The end of a day with Agnes.\n\nWould you rather brew the ale, or taste it?\n\n#history #medieval #middleages #historyfacts #shorts",
+ "lineas": [
+  {
+   "texto": "The ale passed. He was only frowning at the cold.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "But Agnes still pays a small fine, almost every month.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Fines were so common, they worked like a licence to brew.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "A real cheat, with weak ale or a short jug, got worse.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Some towns used a cucking stool, a chair to shame dishonest brewers.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Tonight, the neighbours crowd around her fire, with full cups.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You fall asleep on the straw, smelling of malt.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Would you rather brew the ale, or taste it?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "chapeu": "chapeu",
+     "corChapeu": "#3a4a2e",
+     "barba": true,
+     "cabelo": "#4a3a24",
+     "pele": "#c2875e",
+     "roupa": "#3f5a3a",
+     "detalhe": "#e3b75f",
+     "expressao": "sorriso"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "passed",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "chapeu": "touca",
+     "pele": "#e0ad86",
+     "cabelo": "#7a4a2a",
+     "roupa": "#8c2f39",
+     "detalhe": "#efe4cc"
+    },
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "Agnes's fines",
+     "itens": [
+      "March",
+      "April",
+      "May"
+     ],
+     "y": 0.12
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_casa",
+   "p": {
+    "fogo": 0.8,
+    "caldeirao": true,
+    "barris": 3,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "a fine = a licence",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "chapeu": "chapeu",
+     "corChapeu": "#3a4a2e",
+     "barba": true,
+     "cabelo": "#4a3a24",
+     "pele": "#c2875e",
+     "roupa": "#3f5a3a",
+     "detalhe": "#e3b75f",
+     "expressao": "bravo"
+    },
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "A real cheat",
+     "itens": [
+      "Weak ale",
+      "A short jug"
+     ],
+     "marcados": 2,
+     "y": 0.12
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_aldeia",
+   "p": {
+    "ceu": "tarde",
+    "sino": true,
+    "pessoas": [
+     {
+      "x": 0.4,
+      "capuz": true,
+      "roupa": "#6b4a2e"
+     },
+     {
+      "x": 0.6,
+      "olhar": -1,
+      "roupa": "#3f5a3a"
+     }
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the cucking stool",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_casa",
+   "p": {
+    "hud": {
+     "dia": "Day 1",
+     "hora": "Night",
+     "lugar": "Year 1300",
+     "ceu": "noite"
+    },
+    "noite": true,
+    "fogo": 1,
+    "barris": 2,
+    "pessoa": {
+     "touca": true,
+     "saia": true,
+     "roupa": "#8c2f39",
+     "x": 0.28
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_casa",
+   "p": {
+    "noite": true,
+    "fogo": [
+     0.8,
+     0.3
+    ],
+    "foco": [
+     0.25,
+     0.6
+    ],
+    "escala": [
+     1.3,
+     1.6
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Brew it or taste it?",
+     "Tell us below"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "passed",
+  "fine",
+  "licence",
+  "cheat",
+  "cucking stool",
+  "full cups",
+  "malt",
+  "brew"
+ ]
+}
