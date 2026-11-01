@@ -1340,7 +1340,13 @@ const PALS = {
         fonteTit: '700 {s}px Georgia, "Times New Roman", serif', fonteTxt: 'italic 400 {s}px Georgia, "Times New Roman", serif' },
 };
 const PAL = { pele: ['#f3d2b3', '#e0ad86', '#c2875e', '#93603f', '#64402a'] };
-function TF() { return PALS[CALMO() ? 'cl' : 'hm']; }
+// Signal Lost = "Sinal" ("paleta": "sv" no roteiro): azul-petroleo frio, ciano de tela, luz de sodio amarela,
+// cartoes de vidro escuro com letra de terminal, HUD de sinal do celular no canto esquerdo.
+PALS.sv = { fundo1: '#12303a', fundo2: '#04090c', parede: 'rgba(255,255,255,0.04)', creme: '#e6f1f2', papel: 'rgba(8,18,22,0.92)', tinta: '#e6f1f2',
+            destaque: '#4fe3ff', acento: '#ffd166', acento2: '#ff4d5e', perigo: '#ff4d5e', ok: '#4fe3ff', luz: 'rgba(255,209,102,0.16)',
+            fonteTit: '900 {s}px "Arial Black", system-ui, sans-serif', fonteTxt: '700 {s}px "Courier New", "DejaVu Sans Mono", monospace' };
+function SV() { return !!(ST && ST.paleta === 'sv'); }
+function TF() { return PALS[SV() ? 'sv' : CALMO() ? 'cl' : 'hm']; }
 const fonte = (k, s) => TF()[k].replace('{s}', s);
 function fundoFlat(c1, c2, luz) {
   const g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, c1); g.addColorStop(1, c2); x.fillStyle = g; x.fillRect(0, 0, W, H);
@@ -1353,8 +1359,9 @@ function caixa(px, py, w, h, fundo, borda, r = 18) {
 // papel (HM: bilhete com fita adesiva, levemente torto; CL: pergaminho com pontas enroladas)
 function papel(px, py, w, h, rot = -0.02) {
   const T = TF();
-  x.save(); x.translate(px + w / 2, py + h / 2); x.rotate(CALMO() ? 0 : rot); x.translate(-w / 2, -h / 2);
+  x.save(); x.translate(px + w / 2, py + h / 2); x.rotate(CALMO() || SV() ? 0 : rot); x.translate(-w / 2, -h / 2);
   x.fillStyle = 'rgba(0,0,0,0.35)'; x.fillRect(8, 12, w, h);
+  if (SV()) { x.fillStyle = T.papel; x.beginPath(); x.roundRect(0, 0, w, h, 16); x.fill(); x.strokeStyle = 'rgba(79,227,255,0.35)'; x.lineWidth = 2; x.stroke(); x.fillStyle = T.destaque; x.fillRect(0, 14, 6, h - 28); x.restore(); return; }
   x.fillStyle = T.papel; x.fillRect(0, 0, w, h);
   if (CALMO()) {
     for (const yy of [-14, h - 10]) { x.fillStyle = '#d8c39a'; x.beginPath(); x.roundRect(-18, yy, w + 36, 24, 12); x.fill(); x.fillStyle = 'rgba(90,60,30,0.25)'; x.fillRect(-18, yy + 16, w + 36, 6); }
@@ -1378,7 +1385,8 @@ function pessoa(cx, cy, s, o = {}) {
   if (o.detalhe) { x.fillStyle = o.detalhe; x.beginPath(); x.moveTo(-150, 140); x.quadraticCurveTo(0, 290, 150, 140); x.quadraticCurveTo(0, 210, -150, 140); x.fill(); }
   x.fillStyle = pele; x.beginPath(); x.roundRect(-44, 20, 88, 100, 30); x.fill();
   if (o.chapeu === 'capuz') { x.fillStyle = o.corChapeu || roupa; x.beginPath(); x.ellipse(0, -130, 205, 225, 0, 0, 7); x.fill(); }
-  if (o.cabeloTipo === 'longo') { x.fillStyle = cab; x.beginPath(); x.ellipse(0, -90, 175, 230, 0, 0, 7); x.fill(); }
+  // cabelo comprido: so nas laterais e atras da cabeca (nunca embaixo do queixo, para nao parecer barba)
+  if (o.cabeloTipo === 'longo') { x.fillStyle = cab; x.beginPath(); x.ellipse(0, -150, 178, 170, 0, 0, 7); x.fill(); x.beginPath(); x.roundRect(-182, -170, 82, 290, 36); x.roundRect(100, -170, 82, 290, 36); x.fill(); }
   // cabeca: oval largo
   x.fillStyle = pele; x.beginPath(); x.ellipse(0, -130, 150, 165, 0, 0, 7); x.fill();
   x.beginPath(); x.ellipse(-150, -110, 24, 34, 0, 0, 7); x.ellipse(150, -110, 24, 34, 0, 0, 7); x.fill();
@@ -1420,6 +1428,18 @@ function pessoa(cx, cy, s, o = {}) {
 function hud(h, a = 1) {
   if (!h) return;
   const T = TF(); x.save(); x.globalAlpha = a; x.textBaseline = 'middle';
+  if (SV()) {
+    // barras de sinal (p.sinal 0..4; 0 = "NO SIGNAL" piscando), hora em letra de terminal, lugar embaixo
+    const sn = h.sinal ?? 0, px = 56, py = 150, tt = (ST.__t || 0);
+    for (let i = 0; i < 4; i++) { x.fillStyle = i < sn ? T.destaque : 'rgba(230,241,242,0.25)'; x.fillRect(px + i * 22, py - i * 12, 14, 22 + i * 12); }
+    x.textAlign = 'left'; x.font = fonte('fonteTxt', 34);
+    if (sn === 0 && Math.floor(tt * 2) % 2 === 0) { x.fillStyle = T.perigo; x.fillText('NO SIGNAL', px + 104, py + 6); }
+    else if (sn > 0) { x.fillStyle = T.destaque; x.fillText('SIGNAL', px + 104, py + 6); }
+    x.fillStyle = T.creme; x.font = fonte('fonteTit', 64); x.fillText([h.hora, h.ampm].filter(Boolean).join(' '), px, py + 86);
+    const sub = [h.dia, h.lugar].filter(Boolean).join(' · ');
+    if (sub) { x.font = fonte('fonteTxt', 30); x.fillStyle = T.acento; x.fillText(sub.toUpperCase(), px, py + 140); }
+    x.restore(); return;
+  }
   if (CALMO()) {
     const txt = [h.dia, h.hora, h.lugar].filter(Boolean).join('  ·  ');
     x.font = fonte('fonteTit', 40); const w = x.measureText(txt).width + 170, px = 40, py = 120;
@@ -1457,7 +1477,7 @@ function cartao(c, lt) {
   if (tipo === 'nome') {
     x.font = fonte('fonteTit', 56); const w = Math.max(x.measureText(c.titulo || '').width, 300) + 110, px = 70;
     papel(px, cy, w, c.sub ? 150 : 100, -0.03);
-    x.save(); x.translate(px + w / 2, cy + 75); x.rotate(CALMO() ? 0 : -0.03);
+    x.save(); x.translate(px + w / 2, cy + 75); x.rotate(CALMO() || SV() ? 0 : -0.03);
     x.textAlign = 'center'; x.fillStyle = T.tinta; x.font = fonte('fonteTit', 56); x.fillText(c.titulo || '', 0, c.sub ? -22 : 0);
     if (c.sub) { x.fillStyle = T.perigo; x.font = fonte('fonteTxt', 36); x.fillText(c.sub, 0, 36); }
     x.restore();
@@ -1468,7 +1488,7 @@ function cartao(c, lt) {
     linhas.push(ln);
     const h = 110 + Math.max(1, linhas.length) * 52;
     papel(px, cy, w, h, 0.02);
-    x.save(); x.translate(px, cy); x.rotate(CALMO() ? 0 : 0.02); x.textAlign = 'left';
+    x.save(); x.translate(px, cy); x.rotate(CALMO() || SV() ? 0 : 0.02); x.textAlign = 'left';
     x.fillStyle = T.perigo; x.font = fonte('fonteTit', 28); x.fillText(c.titulo || '', 36, 46);
     x.fillStyle = T.tinta; x.font = fonte('fonteTxt', 44); linhas.forEach((l, i) => x.fillText(l, 36, 100 + i * 52));
     x.restore();
@@ -1476,7 +1496,7 @@ function cartao(c, lt) {
     const itens = c.itens || [], px = 110, w = W - 260, h = 110 + itens.length * 70;
     const marc = c.marcados ?? Math.floor(clamp(lt * 1.15) * (itens.length + 0.999));
     papel(px, cy, w, h, -0.015);
-    x.save(); x.translate(px, cy); x.rotate(CALMO() ? 0 : -0.015); x.textAlign = 'left';
+    x.save(); x.translate(px, cy); x.rotate(CALMO() || SV() ? 0 : -0.015); x.textAlign = 'left';
     x.fillStyle = T.perigo; x.font = fonte('fonteTit', 34); x.fillText(c.titulo || '', 36, 50);
     itens.forEach((it, i) => {
       const ok = i < marc, yy = 116 + i * 70;
@@ -1486,8 +1506,8 @@ function cartao(c, lt) {
     x.restore();
   } else {
     x.font = fonte('fonteTit', 42); const w = x.measureText(c.titulo || '').width + 70;
-    x.save(); x.translate(W / 2, cy + 40); x.rotate(CALMO() ? 0 : -0.04);
-    x.fillStyle = c.fundo || T.destaque; x.fillRect(-w / 2, -40, w, 80); x.fillStyle = c.cor || T.tinta; x.textAlign = 'center'; x.fillText(c.titulo || '', 0, 2);
+    x.save(); x.translate(W / 2, cy + 40); x.rotate(CALMO() || SV() ? 0 : -0.04);
+    x.fillStyle = c.fundo || T.destaque; x.fillRect(-w / 2, -40, w, 80); x.fillStyle = c.cor || (SV() ? '#04090c' : T.tinta); x.textAlign = 'center'; x.fillText(c.titulo || '', 0, 2);
     x.restore();
   }
   x.restore();
@@ -1511,7 +1531,7 @@ COMP.retrato = (t, lt, p) => {
   // vela acesa no canto (HM) ou fogo baixo (CL): luz que mexe
   const fx = W * 0.14, fy = H * 0.5, k = 0.8 + 0.2 * Math.sin(t * 7) + 0.1 * Math.sin(t * 17);
   glow(fx, fy - 60, 260 * k, CALMO() ? 'rgba(255,170,80,0.25)' : 'rgba(246,178,74,0.3)');
-  if (!CALMO()) { x.fillStyle = T.papel; x.fillRect(fx - 18, fy - 40, 36, 110); x.fillStyle = '#ffd27a'; x.beginPath(); x.ellipse(fx, fy - 62, 11, 22 * k, 0, 0, 7); x.fill(); }
+  if (!CALMO() && !SV()) { x.fillStyle = T.papel; x.fillRect(fx - 18, fy - 40, 36, 110); x.fillStyle = '#ffd27a'; x.beginPath(); x.ellipse(fx, fy - 62, 11, 22 * k, 0, 0, 7); x.fill(); }
   const zr = rng(p.zoomRosto ?? 0, lt), s = 1.2 + zr * 0.45;
   // queixo acima de 62% da altura: a legenda fica no peito, nunca em cima da boca
   pessoa(W / 2, H * 0.53 - zr * 90, s, { ...(p.pessoa || {}), t });
@@ -1815,6 +1835,91 @@ COMP.f_casa = (t, lt, p) => {
   x.restore();
 };
 
+// ---------- pecas flat de estrada (Signal Lost e Hora Muerta) ----------
+// f_onibus: dentro de um onibus a noite, visto do fundo: corredor, bancos, janelas com postes passando, motorista e
+// retrovisor la na frente. Cores pelo canal (TF()).
+// p = {passageiros: N (bancos ocupados, 0..6), vulto: 0..1 (alguem sentado no banco vazio da frente, aparece aos poucos),
+//      porta: 0..1 (porta da frente aberta), parado: true (postes nao passam), afunda: 0..1 (onibus inclina como se alguem
+//      pesado subisse), espelho: true (olhos do motorista no retrovisor), luzes: 'piscam', foco/escala}
+// Ex.: {"comp":"f_onibus","p":{"passageiros":0,"espelho":true}}
+COMP.f_onibus = (t, lt, p) => {
+  const T = TF(), af = rng(p.afunda ?? 0, lt), pis = p.luzes === 'piscam' ? (rnd(Math.floor(t * 9)) > 0.25 ? 1 : 0.25) : 1;
+  x.save(); camFlat(p, lt);
+  x.translate(W / 2, H * 0.6); x.rotate(-af * 0.05); x.translate(-W / 2, -H * 0.6 + af * 30);
+  fundoFlat(T.fundo1, T.fundo2);
+  const vx = W / 2, vy = H * 0.36;
+  // teto com luzes
+  x.fillStyle = 'rgba(0,0,0,0.25)'; x.beginPath(); x.moveTo(0, 0); x.lineTo(W, 0); x.lineTo(vx + 140, vy - 170); x.lineTo(vx - 140, vy - 170); x.fill();
+  for (let i = 0; i < 5; i++) { const u = i / 5, y = lerp(40, vy - 160, u), w = lerp(260, 50, u); x.fillStyle = `rgba(255,236,190,${(0.75 - u * 0.3) * pis})`; x.beginPath(); x.roundRect(vx - w / 2, y, w, lerp(26, 8, u), 8); x.fill(); }
+  // janelas dos dois lados (paineis em perspectiva), postes passando
+  for (const lado of [-1, 1]) for (let i = 0; i < 5; i++) {
+    const u0 = i / 5, u1 = (i + 0.82) / 5, ex0 = lado < 0 ? lerp(0, vx - 140, u0) : lerp(W, vx + 140, u0), ex1 = lado < 0 ? lerp(0, vx - 140, u1) : lerp(W, vx + 140, u1);
+    const t0 = lerp(H * 0.08, vy - 150, u0), b0 = lerp(H * 0.42, vy - 10, u0), t1 = lerp(H * 0.08, vy - 150, u1), b1 = lerp(H * 0.42, vy - 10, u1);
+    x.fillStyle = '#0a1420'; x.beginPath(); x.moveTo(ex0, t0); x.lineTo(ex1, t1); x.lineTo(ex1, b1); x.lineTo(ex0, b0); x.fill();
+    if (!p.parado) { const q = ((t * 1.6 + i * 0.37 + (lado > 0 ? 0.5 : 0)) % 1); if (q < 0.25) { const px = lerp(ex0, ex1, q * 4); x.fillStyle = `rgba(255,209,102,${0.5 * (1 - q * 4)})`; x.fillRect(px - 5, lerp(t0, t1, q * 4), 10, lerp(b0 - t0, b1 - t1, q * 4)); } }
+  }
+  // corredor
+  x.fillStyle = 'rgba(0,0,0,0.3)'; x.beginPath(); x.moveTo(vx - 120, H); x.lineTo(vx + 120, H); x.lineTo(vx + 40, vy); x.lineTo(vx - 40, vy); x.fill();
+  // frente: para-brisa, motorista, retrovisor, porta
+  x.fillStyle = '#1a2a3a'; x.fillRect(vx - 140, vy - 170, 280, 120); x.fillStyle = 'rgba(255,209,102,0.25)'; x.beginPath(); x.moveTo(vx - 100, vy - 50); x.lineTo(vx - 10, vy - 120); x.lineTo(vx + 10, vy - 120); x.lineTo(vx + 100, vy - 50); x.fill();
+  const ab = rng(p.porta ?? 0, lt); x.fillStyle = ab > 0.05 ? '#05080c' : '#2a3a4a'; x.fillRect(vx + 70, vy - 160, 60 * (1 - ab * 0.7) + 10, 150);
+  x.fillStyle = '#23303e'; x.beginPath(); x.roundRect(vx - 120, vy - 90, 90, 90, 20); x.fill(); x.fillStyle = PAL.pele[3]; x.beginPath(); x.arc(vx - 75, vy - 110, 26, 0, 7); x.fill(); x.fillStyle = '#23303e'; x.beginPath(); x.ellipse(vx - 75, vy - 128, 30, 14, 0, Math.PI, 0); x.fill();
+  x.fillStyle = '#3a4a5a'; x.beginPath(); x.roundRect(vx - 30, vy - 175, 90, 32, 8); x.fill();
+  if (p.espelho) { x.fillStyle = '#c9d4e0'; x.beginPath(); x.roundRect(vx - 24, vy - 170, 78, 22, 6); x.fill(); x.fillStyle = '#1c1220'; x.beginPath(); x.ellipse(vx - 2, vy - 159, 6, 4, 0, 0, 7); x.ellipse(vx + 26, vy - 159, 6, 4, 0, 0, 7); x.fill(); }
+  // bancos (do fundo para a frente)
+  const ocup = p.passageiros ?? 0, vu = rng(p.vulto ?? 0, lt);
+  for (let r = 5; r >= 0; r--) for (const lado of [-1, 1]) {
+    const u = r / 6, cx = vx + lado * lerp(330, 85, u), base = lerp(H * 1.02, vy + 10, u), sc = lerp(1.6, 0.35, u);
+    x.save(); x.translate(cx, base); x.scale(sc, sc);
+    x.fillStyle = T.perigo === '#ff4d5e' ? '#1f5a6a' : '#6b2a3a'; x.beginPath(); x.roundRect(-110, -260, 220, 200, [40, 40, 10, 10]); x.fill(); x.fillStyle = 'rgba(0,0,0,0.25)'; x.fillRect(-110, -80, 220, 20);
+    const idx = r * 2 + (lado > 0 ? 1 : 0);
+    if (idx < ocup * 2 && idx % 3 === 1) { x.fillStyle = '#2e2a3a'; x.beginPath(); x.arc(0, -300, 40, 0, 7); x.fill(); x.beginPath(); x.roundRect(-60, -270, 120, 90, 30); x.fill(); }
+    if (r === 3 && lado > 0 && vu > 0.02) { x.globalAlpha = vu; x.fillStyle = '#05080c'; x.beginPath(); x.ellipse(0, -330, 46, 56, 0, 0, 7); x.fill(); x.beginPath(); x.roundRect(-75, -290, 150, 110, 40); x.fill();
+      x.fillStyle = T.destaque; x.beginPath(); x.arc(-14, -335, 5, 0, 7); x.arc(14, -335, 5, 0, 7); x.fill(); x.globalAlpha = 1; }
+    x.restore();
+  }
+  x.restore();
+};
+
+// f_posto: posto de gasolina sozinho numa estrada no meio do mato, a noite. Toldo com luz forte, 2 bombas, loja com
+// vitrine e balconista, placa alta, estrada, pinheiros escuros, carro que chega.
+// p = {luz: 'piscam' (luz do toldo falha), carro: 0..1 (carro entra pela direita e para; "farol": false = farois apagados),
+//      farol: true, balconista: true (pessoa atras da vitrine), vulto: 0..1 (alguem parado na beira do mato), chuva: true,
+//      placa: "texto" (placa alta, ex. "OPEN 24H"), foco/escala}
+// Ex.: {"comp":"f_posto","p":{"carro":[0,1],"farol":false,"placa":"OPEN 24H"}}
+COMP.f_posto = (t, lt, p) => {
+  const T = TF(), pis = p.luz === 'piscam' ? (rnd(Math.floor(t * 8)) > 0.3 ? 1 : 0.2) : 1;
+  x.save(); camFlat(p, lt);
+  fundoFlat(T.fundo1, T.fundo2);
+  for (let i = 0; i < 30; i++) { x.fillStyle = `rgba(230,241,242,${0.4 * Math.abs(Math.sin(t + i))})`; x.beginPath(); x.arc(rnd(i * 3.3) * W, rnd(i * 1.9) * H * 0.25, 2, 0, 7); x.fill(); }
+  // pinheiros
+  for (let fila = 0; fila < 2; fila++) for (let i = 0; i < 12; i++) { const px = (i + 0.5) / 12 * W + (rnd(i + fila * 9) - 0.5) * 80, by = H * (0.42 + fila * 0.03), hh = 220 + rnd(i * 7 + fila) * 160;
+    x.fillStyle = fila ? '#0a1a1e' : '#0f2329'; x.beginPath(); x.moveTo(px - 70, by); x.lineTo(px, by - hh); x.lineTo(px + 70, by); x.fill(); }
+  // chao e estrada
+  x.fillStyle = '#0c171b'; x.fillRect(0, H * 0.44, W, H * 0.56);
+  x.fillStyle = '#1b262b'; x.fillRect(0, H * 0.78, W, H * 0.12); x.fillStyle = 'rgba(255,209,102,0.6)'; for (let i = 0; i < 6; i++) x.fillRect(i * 200 + 30, H * 0.835, 110, 10);
+  // loja
+  const lx = W * 0.06, lb = H * 0.62; x.fillStyle = '#20343c'; x.fillRect(lx, lb - 300, 420, 300);
+  x.fillStyle = `rgba(200,240,255,${0.75 * pis})`; x.fillRect(lx + 30, lb - 240, 250, 150); glow(lx + 155, lb - 165, 240, `rgba(200,240,255,${0.15 * pis})`);
+  if (p.balconista !== false) { x.fillStyle = '#16262c'; x.beginPath(); x.arc(lx + 190, lb - 170, 24, 0, 7); x.fill(); x.beginPath(); x.roundRect(lx + 160, lb - 145, 60, 55, 16); x.fill(); }
+  x.fillStyle = '#0a1418'; x.fillRect(lx + 310, lb - 200, 80, 200);
+  // toldo e bombas
+  const tx = W * 0.62, tb = H * 0.66; x.fillStyle = '#e6f1f2'; x.fillRect(tx - 260, tb - 380, 520, 50); x.fillStyle = T.perigo; x.fillRect(tx - 260, tb - 340, 520, 12);
+  x.fillStyle = '#2a3a42'; x.fillRect(tx - 200, tb - 330, 26, 330); x.fillRect(tx + 174, tb - 330, 26, 330);
+  x.fillStyle = `rgba(255,250,230,${0.18 * pis})`; x.beginPath(); x.moveTo(tx - 260, tb - 330); x.lineTo(tx + 260, tb - 330); x.lineTo(tx + 360, tb + 20); x.lineTo(tx - 360, tb + 20); x.fill();
+  for (const bx of [tx - 90, tx + 70]) { x.fillStyle = '#e6f1f2'; x.beginPath(); x.roundRect(bx - 38, tb - 170, 76, 170, 10); x.fill(); x.fillStyle = '#0b1418'; x.fillRect(bx - 24, tb - 150, 48, 34); x.fillStyle = T.destaque; x.fillRect(bx - 18, tb - 140, 36, 12); }
+  // placa alta
+  if (p.placa) { const px = W * 0.9, py = H * 0.2; x.fillStyle = '#2a3a42'; x.fillRect(px - 8, py, 16, H * 0.44); x.fillStyle = '#0b1418'; x.beginPath(); x.roundRect(px - 120, py - 60, 220, 90, 10); x.fill(); x.fillStyle = `rgba(255,77,94,${pis})`; x.font = fonte('fonteTit', 34); x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText(p.placa, px - 10, py - 15); }
+  // vulto na beira do mato
+  const vu = rng(p.vulto ?? 0, lt); if (vu > 0.02) { x.globalAlpha = vu; x.fillStyle = '#020506'; const vx = W * 0.32, vb = H * 0.47; x.beginPath(); x.ellipse(vx, vb - 190, 22, 28, 0, 0, 7); x.fill(); x.beginPath(); x.roundRect(vx - 30, vb - 165, 60, 165, 20); x.fill(); x.fillStyle = T.destaque; x.beginPath(); x.arc(vx - 8, vb - 192, 3, 0, 7); x.arc(vx + 8, vb - 192, 3, 0, 7); x.fill(); x.globalAlpha = 1; }
+  // carro que chega
+  const ca = rng(p.carro ?? 0, lt); if (ca > 0.01) { const cx = lerp(W * 1.3, W * 0.66, ease(ca)), cb = H * 0.8; x.fillStyle = '#2b3138'; x.beginPath(); x.roundRect(cx - 190, cb - 110, 380, 80, 20); x.fill(); x.beginPath(); x.roundRect(cx - 110, cb - 170, 220, 70, [30, 30, 0, 0]); x.fill();
+    x.fillStyle = '#0a1418'; x.fillRect(cx - 95, cb - 160, 85, 50); x.fillRect(cx + 5, cb - 160, 85, 50); x.fillStyle = '#0b0b0b'; x.beginPath(); x.arc(cx - 110, cb - 30, 36, 0, 7); x.arc(cx + 110, cb - 30, 36, 0, 7); x.fill();
+    if (p.farol !== false) { x.fillStyle = 'rgba(255,240,200,0.9)'; x.fillRect(cx - 196, cb - 96, 20, 22); x.fillStyle = 'rgba(255,240,200,0.12)'; x.beginPath(); x.moveTo(cx - 190, cb - 96); x.lineTo(cx - 600, cb - 160); x.lineTo(cx - 600, cb + 20); x.fill(); } }
+  if (p.chuva) { x.strokeStyle = 'rgba(200,230,240,0.25)'; x.lineWidth = 2; for (let i = 0; i < 80; i++) { const rx = (rnd(i) * W + t * 60) % W, ry = (rnd(i * 2.1) * H + t * 900) % H; x.beginPath(); x.moveTo(rx, ry); x.lineTo(rx - 8, ry + 30); x.stroke(); } }
+  x.restore();
+};
+
 // cartela de texto (regras, "Parte 2 manana", etc.)
 COMP.texto = (t, lt, p) => {
   if (FLAT()) {
@@ -1920,6 +2025,7 @@ function drawScene(i, t) {
   }
 }
 window.render = function (t) {
+  ST.__t = t;
   x.setTransform(1, 0, 0, 1, 0, 0); x.globalAlpha = 1;
   const g = ST.gancho;
   if (g && t < g.dur) drawScene(g.cena, g.t); else drawScene(sceneAt(t), t);

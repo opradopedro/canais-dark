@@ -28,8 +28,9 @@ Nada aqui gasta narração: o GitHub Actions narra e posta depois, sozinho.
 | 19 | FEITO (claude, 01/11) | Hora Muerta | peças flat `f_panteon`, `f_pueblo` | HM021-HM022 "Las reglas del panteón" (1ª série flat; use como modelo) |
 | 20 | FEITO em parte (claude, 01/11: `f_aldeia`, `f_casa` + série CL013-CL015 brewster); FALTA `f_moinho` | Old Tales | peças flat `f_aldeia`, `f_casa`, `f_moinho` | CL série nova no estilo flat (ex.: "You wake up as the miller's apprentice") |
 | 21 | PENDENTE | Hora Muerta | peças flat `f_cocina`, `f_telefono`, `f_altar` | HM série nova no estilo flat |
-| 22 | PENDENTE | Hora Muerta | peças flat `f_rio`, `f_cuarto`, `f_carretera` | HM série de lenda no estilo flat (Llorona/Siguanaba/Patasola) |
+| 22 | PENDENTE (`f_onibus` já feito em 01/11, usado em HM023-024) | Hora Muerta | peças flat `f_rio`, `f_cuarto`, `f_carretera` | HM série de lenda no estilo flat (Llorona/Siguanaba/Patasola) |
 | 23 | PENDENTE | Old Tales | peças flat `f_mercado`, `f_castelo`, `f_campo`, `f_mosteiro` | CL série nova no estilo flat |
+| 24 | PENDENTE | Signal Lost | peças flat `f_floresta` (trilha/torre de guarda no mato), `f_corredor` (corredor de prédio/hospital) com `"paleta": "sv"` | SV série nova no estilo flat (`f_posto` e `f_onibus` já existem) |
 
 ## Como fazer um item (resumo)
 1. `git pull origin producao`; marque o item como `FAZENDO (kiro|claude, data)` e envie.

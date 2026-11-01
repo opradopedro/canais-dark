@@ -1,2 +1,2 @@
 # (caminho do roteiro para desenhar a previa na nuvem)
-hora-muerta/stories/021-reglas-panteon-1.json
+signal-lost/stories/012-route-9-1.json

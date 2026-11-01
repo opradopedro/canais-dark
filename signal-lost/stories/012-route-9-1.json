@@ -1,0 +1,258 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "route-9",
+ "serie_titulo": "The Night Shift on Route 9 | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (estilo flat, 01/11)",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "gas station",
+  "night shift",
+  "night shift rules"
+ ],
+ "codigo": "SV012",
+ "parte": 1,
+ "titulo": "A text came in with no signal 😨 Part 1 #horror #shorts",
+ "capa": "DON'T OPEN THE DOOR",
+ "descripcion": "The last gas station on Route 9 has three rules taped to the register. At 2:14, a car pulled in with its headlights off.\n\n> Part 2: {when_next}.\nWould you have opened the door?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "There's a gas station on Route 9 with rules nobody explains.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I'm Dana, twenty-three, and I work the night shift there.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The owner taped three rules to the register.",
+   "pausa": 0.4
+  },
+  {
+   "texto": "Lock the door at two. Never go outside. Don't look at the trees.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "At 2:14, a car pulled in with its headlights off.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Nobody got out. The engine just kept running.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Then my phone buzzed. No signal, but a text came in.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Don't open the door for her.",
+   "pausa": 1.0
+  },
+  {
+   "texto": "Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_posto",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "1:58",
+     "ampm": "AM",
+     "lugar": "Route 9",
+     "sinal": 1
+    },
+    "placa": "OPEN 24H"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#5a3a24",
+     "cabeloTipo": "longo",
+     "roupa": "#1f5a6a",
+     "detalhe": "#ffd166",
+     "expressao": "sorriso"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Dana, 23",
+     "sub": "night clerk",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_posto",
+   "p": {
+    "placa": "OPEN 24H",
+    "foco": [
+     0.22,
+     0.5
+    ],
+    "escala": [
+     1.5,
+     1.9
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "3 rules on the register",
+     "y": 0.26
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#5a3a24",
+     "cabeloTipo": "longo",
+     "roupa": "#1f5a6a",
+     "detalhe": "#ffd166",
+     "olhar": 1
+    },
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "NIGHT SHIFT RULES",
+     "itens": [
+      "Lock up at 2",
+      "Stay inside",
+      "Don't look at trees"
+     ],
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_posto",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "2:14",
+     "ampm": "AM",
+     "lugar": "Route 9",
+     "sinal": 0
+    },
+    "placa": "OPEN 24H",
+    "carro": [
+     0,
+     1
+    ],
+    "farol": false
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_posto",
+   "p": {
+    "carro": 1,
+    "farol": false,
+    "foco": [
+     0.66,
+     0.72
+    ],
+    "escala": [
+     1.5,
+     1.8
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "engine running",
+     "y": 0.26
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#5a3a24",
+     "cabeloTipo": "longo",
+     "roupa": "#1f5a6a",
+     "detalhe": "#ffd166",
+     "expressao": "surpresa"
+    },
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "TEXT · NO SIGNAL",
+     "texto": "Don't open the door for her.",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_posto",
+   "p": {
+    "carro": 1,
+    "farol": false,
+    "vulto": [
+     0,
+     1
+    ],
+    "luz": "piscam"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Who is she?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.5
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "Route 9",
+  "Dana",
+  "three rules",
+  "trees",
+  "2:14",
+  "headlights off",
+  "kept running",
+  "no signal",
+  "her"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

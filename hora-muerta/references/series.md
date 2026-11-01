@@ -43,3 +43,8 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 - HM022 parte 2/2: a coisa da tumba sem nome copia letra, passo e cara; do panteão ela vê a luz da casa dela acesa (mora sozinha);
   reacende a vela e espera o amanhecer; em casa, porta aberta: "adentro" era a casa dela; na janela alguém com a cara dela a espera. FEITO
 
+## HM023-HM024 El último autobús (Regla, versão flat) — origem: autoral, refeita de HM019-020 (descartados/) — por: claude (01/11)
+- Estilo flat. Gancho do rodízio: número estranho ("un solo pasajero, pero el chofer cuenta dos"). Peças: `f_onibus`, `f_pueblo`, `retrato`, `texto`.
+- Personagens: Julián, 19, estudante (jaqueta azul); Don Ramiro, chofer da Ruta 14 (chapéu, bigode grisalho). HUD: Noche 1 · Ruta 14, 12:58 → 1:10 AM.
+- HM023 parte 1/2: 3 regras do chofer; 1:10 numa curva sem casas a porta abre, ninguém sobe, mas o ônibus afunda; chofer pálido no espelho: "¡bájate ya!". FEITO
+- HM024 parte 2/2: a coisa não tem corpo, só peso; regra que faltava: senta junto ao último passageiro e desce onde ele descer; por isso o chofer o fez descer longe de casa; ele chega ao amanhecer; à noite o colchão afunda ao lado dele: ela o esperava em casa. FEITO

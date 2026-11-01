@@ -1,0 +1,10 @@
+{"codigo":"FLAT05","_obs":"Teste paleta sv, f_posto, f_onibus (nunca publicado).","visual":"flat","paleta":"sv","titulo":"teste",
+ "lineas":[{"texto":"one two three four five six","pausa":0.3},{"texto":"one two three four five six","pausa":0.3},{"texto":"one two three four five six","pausa":0.3},{"texto":"one two three four five six","pausa":0.3},{"texto":"one two three four five six","pausa":0.3},{"texto":"one two three four five six","pausa":0.3}],
+ "cenas":[
+  {"linea":0,"comp":"f_posto","p":{"hud":{"dia":"Night 1","hora":"2:14","ampm":"AM","lugar":"Route 9","sinal":0},"placa":"OPEN 24H","carro":[0,1],"cartao":{"tipo":"rotulo","titulo":"no cars since midnight","y":0.24}}},
+  {"linea":1,"comp":"retrato","p":{"pessoa":{"pele":"#e0ad86","cabelo":"#5a3a24","roupa":"#1f5a6a","detalhe":"#ffd166","expressao":"neutro"},"cartao":{"tipo":"nome","titulo":"Dana, 23","sub":"night clerk","y":0.24}}},
+  {"linea":2,"comp":"retrato","p":{"pessoa":{"pele":"#e0ad86","cabelo":"#5a3a24","roupa":"#1f5a6a","detalhe":"#ffd166"},"cartao":{"tipo":"lista","titulo":"NIGHT SHIFT RULES","itens":["Lock the door at 2","Don't go outside","Don't look at the trees"],"y":0.24}}},
+  {"linea":3,"comp":"f_posto","p":{"luz":"piscam","vulto":[0,1],"farol":false,"carro":1,"cartao":{"tipo":"msg","titulo":"TEXT · UNKNOWN","texto":"Don't open the door for her.","y":0.24}}},
+  {"linea":4,"comp":"f_onibus","p":{"passageiros":2,"espelho":true}},
+  {"linea":5,"comp":"f_onibus","p":{"passageiros":0,"vulto":[0,1],"afunda":[0,1],"porta":1,"parado":true,"luzes":"piscam"}}
+ ],"eventos":[],"destaque":["shift","rules","door"]}

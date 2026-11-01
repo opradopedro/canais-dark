@@ -1,0 +1,264 @@
+{
+ "formato": "Regla",
+ "visual": "flat",
+ "serie": "ultimo-autobus-flat",
+ "serie_titulo": "El último autobús | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral; refeita no estilo flat a partir de HM019-020 (descartados/), 01/11",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "el último autobús",
+  "historias de choferes",
+  "relatos cortos de terror"
+ ],
+ "codigo": "HM023",
+ "parte": 1,
+ "titulo": "El chofer contó dos pasajeros 😨 El último autobús Parte 1 #terror #shorts",
+ "capa": "¡BÁJATE YA!",
+ "descripcion": "El último autobús llevaba un solo pasajero, pero el chofer contó dos.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú te habrías bajado?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #autobus #relatoscortos",
+ "lineas": [
+  {
+   "texto": "El último autobús lleva un solo pasajero, pero el chofer cuenta dos.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "El pasajero es Julián, diecinueve años, y vuelve de la universidad.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "El chofer tiene tres reglas: siéntate adelante, no duermas, no mires atrás.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "A la una y diez, en una curva sin casas, el autobús se detiene.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "La puerta se abre, y nadie sube.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Pero el autobús se hunde, como si entrara alguien muy pesado.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "El chofer mira el espejo, y se pone pálido.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Y grita: ¡bájate ya, y no te des la vuelta!",
+   "pausa": 1.0
+  },
+  {
+   "texto": "¿Quién subió? Parte dos, mañana, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_onibus",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "12:58",
+     "ampm": "AM",
+     "lugar": "Ruta 14"
+    },
+    "passageiros": 0,
+    "espelho": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "1 pasajero · 2 en la cuenta",
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#2e1d14",
+     "roupa": "#2f5a7a",
+     "detalhe": "#efe4cc",
+     "expressao": "sorriso"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Julián, 19",
+     "sub": "vuelve de la universidad",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#93603f",
+     "cabelo": "#9a8a7a",
+     "bigode": true,
+     "corBarba": "#9a8a7a",
+     "chapeu": "chapeu",
+     "corChapeu": "#3a3a4a",
+     "roupa": "#3a3a4a",
+     "detalhe": "#d6354a"
+    },
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "LAS REGLAS DEL CHOFER",
+     "itens": [
+      "Siéntate adelante",
+      "No duermas",
+      "No mires atrás"
+     ],
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_onibus",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "1:10",
+     "ampm": "AM",
+     "lugar": "Ruta 14"
+    },
+    "passageiros": 0,
+    "parado": true
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_onibus",
+   "p": {
+    "passageiros": 0,
+    "parado": true,
+    "porta": [
+     0,
+     1
+    ],
+    "foco": [
+     0.55,
+     0.32
+    ],
+    "escala": [
+     1.4,
+     1.8
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_onibus",
+   "p": {
+    "passageiros": 0,
+    "parado": true,
+    "porta": 1,
+    "afunda": [
+     0,
+     1
+    ],
+    "luzes": "piscam"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_onibus",
+   "p": {
+    "passageiros": 0,
+    "parado": true,
+    "porta": 1,
+    "afunda": 1,
+    "espelho": true,
+    "foco": [
+     0.5,
+     0.27
+    ],
+    "escala": [
+     1.8,
+     2.4
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#93603f",
+     "cabelo": "#9a8a7a",
+     "bigode": true,
+     "corBarba": "#9a8a7a",
+     "chapeu": "chapeu",
+     "corChapeu": "#3a3a4a",
+     "roupa": "#3a3a4a",
+     "detalhe": "#d6354a",
+     "expressao": "medo"
+    },
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "¡bájate ya!",
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "¿Quién subió?",
+     "Parte 2 · mañana, {fecha_siguiente}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 5,
+   "en": 0.5
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "un solo",
+  "cuenta dos",
+  "Julián",
+  "tres reglas",
+  "una y diez",
+  "nadie",
+  "muy pesado",
+  "pálido",
+  "bájate",
+  "subió"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

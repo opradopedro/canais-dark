@@ -40,22 +40,27 @@ saem a 3 e a 4 e logo depois entra a minha."
 Regras de cada canal: no `SKILL.md` da pasta. Para o Old Tales: `"tema": "calmo"` e `"piano": 0` sempre, nada
 assustador, e cada fato histórico conferido em fonte confiável (nada de mito).
 
-## Estilo novo: Hora Muerta e Old Tales (REGRA do Pedro, 01/11)
-Gráficos limpos e história contada com ritmo, INSPIRADOS num vídeo que o Pedro mandou, mas com identidade própria:
-"só se inspire, não faça exatamente igual". Guia completo: **`ESTILO-VISUAL.md`** (leia as seções 2 e 3 antes de
-escrever).
+## Estilo novo: Hora Muerta, Signal Lost e Old Tales (REGRA do Pedro, 01/11)
+Gráficos limpos e história contada com ritmo, INSPIRADOS num vídeo que o Pedro mandou, mas com identidade própria de
+cada canal: "só se inspire, não faça exatamente igual". Guia completo: **`ESTILO-VISUAL.md`** (seções 2 e 3).
 
-Todo roteiro NOVO desses dois canais (a partir de 01/11) segue isto:
-- `"visual": "flat"` no JSON. Cenas com peças `f_*` (ou `retrato`/`texto`) e os campos `hud` e `cartao`.
+- **Toda história nova** desses 3 canais é no estilo flat. O fiscal barra quem não for: a partir de HM021, SV012 e
+  CL013, o roteiro precisa de `"visual": "flat"` e só pode usar peças `f_*`, `retrato` e `texto`.
+  Signal Lost também leva `"paleta": "sv"`; Old Tales continua com `"tema": "calmo"` e `"piano": 0`.
+- **Séries que já começaram no YouTube** terminam no estilo antigo. As que não tinham começado foram para
+  `<canal>/descartados/` (01/11): não volte com elas; para reaproveitar, reescreva no estilo flat com código novo.
+- **Peças flat que já existem** (use estas antes de criar outra): `retrato`, `texto`, `f_panteon`, `f_pueblo`,
+  `f_onibus`, `f_posto` (terror) e `f_aldeia`, `f_casa` (Old Tales). A lista com parâmetros está no `MUNDOS.md`.
+  Se a história pedir um lugar que não existe, adapte a história a esses lugares ou crie a peça (seções 5 e 6 do guia).
 - Estrutura: gancho concreto (0–5 s) → quem é (nome, idade, ofício, cartão `nome`) → como funciona (regras/plano em
-  lista de 3, cartão `lista`) → virada com hora exata (cartão `msg`/`rotulo`) → pergunta aberta + aviso da parte 2.
-- Gancho: use o rodízio da seção 3 do `ESTILO-VISUAL.md`; não repita o mesmo tipo em duas séries seguidas.
+  lista de 3, cartão `lista`) → virada com hora exata (cartão `msg`/`rotulo`) → pergunta aberta + aviso da próxima parte.
+- Gancho: use o rodízio da seção 3 do `ESTILO-VISUAL.md`; não repita o mesmo tipo em duas séries seguidas do canal.
 - Frases de 3 a 10 palavras, uma ideia por frase, números e horas concretos, uma linha por plano (corte a cada
-  1,5–3 s; `"en"` na cena corta no meio de uma linha).
+  1,5–3 s; `"en"` na cena corta no meio de uma linha). No Hora Muerta, evite ponto no meio da linha: use vírgula.
 - Proibido copiar a referência: nada de "luckiest person alive", "forgot one thing", "Tell me in the comments" como
   fórmula, nem trem/maquinista/zumbi.
-- Hora Muerta: 3ª pessoa (ou "yo" testemunha), 40–58 s. Old Tales: 2ª pessoa ("you"), calmo, pergunta de curiosidade.
-- Séries já começadas terminam no estilo antigo (não misture estilos dentro de uma série).
+- Modelos prontos para copiar: `hora-muerta/stories/021-*` a `024-*`, `signal-lost/stories/012-*` a `014-*`,
+  `old-tales/stories/013-*` a `015-*`.
 
 ## Passo 1: o plano da série (ANTES de escrever qualquer parte)
 Em `<canal>/references/series.md`, acrescente um bloco assim e já faça commit + push:

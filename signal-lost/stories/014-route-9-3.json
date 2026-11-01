@@ -1,0 +1,280 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "route-9",
+ "serie_titulo": "The Night Shift on Route 9 | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (estilo flat, 01/11)",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "gas station",
+  "night shift",
+  "night shift rules"
+ ],
+ "codigo": "SV014",
+ "parte": 3,
+ "anterior": "SV013",
+ "titulo": "She can only come in if you look 😱 Part 3 #horror #shorts",
+ "capa": "DON'T LOOK AT HER",
+ "descripcion": "The back door at the Route 9 station has no lock. The owner finally explained why the rules exist. The end.\n\nCould you keep your eyes closed?\n\nNarrated fiction. New story every week.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "In the dark, the knocking moved to the back door.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The back door has no lock. The owner never fixed it.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "I called the owner. He answered on the first ring.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He said: she can only come in if you look at her.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "So I closed my eyes, and counted to two hundred.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "The door opened. Cold air. Wet footsteps on the tile.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "They walked past me, and out the front door.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "At dawn, the car was gone, and the gas can was on the counter, full.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Now I know why rule three is there.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_posto",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "2:19",
+     "ampm": "AM",
+     "lugar": "Route 9",
+     "sinal": 0
+    },
+    "luz": "piscam",
+    "carro": 1,
+    "farol": false,
+    "foco": [
+     0.22,
+     0.5
+    ],
+    "escala": [
+     1.4,
+     1.6
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#5a3a24",
+     "cabeloTipo": "longo",
+     "roupa": "#1f5a6a",
+     "detalhe": "#ffd166",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "no lock",
+     "y": 0.26
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#5a3a24",
+     "cabeloTipo": "longo",
+     "roupa": "#1f5a6a",
+     "detalhe": "#ffd166",
+     "expressao": "medo",
+     "olhar": -1
+    },
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "CALL · OWNER",
+     "texto": "Ringing...",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#5a3a24",
+     "cabeloTipo": "longo",
+     "roupa": "#1f5a6a",
+     "detalhe": "#ffd166",
+     "expressao": "surpresa"
+    },
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "CALL · OWNER",
+     "texto": "She can only come in if you look at her.",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#5a3a24",
+     "cabeloTipo": "longo",
+     "roupa": "#1f5a6a",
+     "detalhe": "#ffd166",
+     "expressao": "triste"
+    },
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "1 · 2 · 3 ... 200",
+     "y": 0.26
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_posto",
+   "p": {
+    "luz": "piscam",
+    "carro": 1,
+    "farol": false,
+    "chuva": true,
+    "foco": [
+     0.22,
+     0.5
+    ],
+    "escala": [
+     1.6,
+     1.9
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_posto",
+   "p": {
+    "luz": "piscam",
+    "carro": 1,
+    "farol": false,
+    "chuva": true,
+    "vulto": [
+     1,
+     0
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_posto",
+   "p": {
+    "hud": {
+     "dia": "Morning",
+     "hora": "6:02",
+     "ampm": "AM",
+     "lugar": "Route 9",
+     "sinal": 2
+    },
+    "placa": "OPEN 24H",
+    "carro": 0,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "gas can: full",
+     "y": 0.26
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_posto",
+   "p": {
+    "placa": "OPEN 24H",
+    "vulto": [
+     0,
+     1
+    ],
+    "foco": [
+     0.32,
+     0.42
+    ],
+    "escala": [
+     1.6,
+     2.2
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 0,
+   "en": 0.5
+  },
+  {
+   "tipo": "golpe",
+   "linea": 5,
+   "en": 0.3
+  },
+  {
+   "tipo": "susto",
+   "linea": 8,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "back door",
+  "no lock",
+  "first ring",
+  "look at her",
+  "two hundred",
+  "cold air",
+  "out the front door",
+  "full",
+  "rule three"
+ ],
+ "gancho": {
+  "cena": 8,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

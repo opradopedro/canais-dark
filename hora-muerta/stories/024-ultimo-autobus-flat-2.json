@@ -1,0 +1,283 @@
+{
+ "formato": "Regla",
+ "visual": "flat",
+ "serie": "ultimo-autobus-flat",
+ "serie_titulo": "El último autobús | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral; refeita no estilo flat a partir de HM019-020 (descartados/), 01/11",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "el último autobús",
+  "historias de choferes",
+  "relatos cortos de terror"
+ ],
+ "codigo": "HM024",
+ "parte": 2,
+ "anterior": "HM023",
+ "titulo": "Lo que subió al autobús se bajó conmigo 😰 El último autobús Parte 2 #terror #shorts",
+ "capa": "SE BAJA CONTIGO",
+ "descripcion": "Lo que sube en esa curva no tiene cuerpo, solo peso. Final de El último autobús.\n\n¿Tú habrías mirado atrás?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #autobus #relatoscortos",
+ "lineas": [
+  {
+   "texto": "Lo que subió en la curva no tiene cuerpo, solo peso.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Julián se bajó sin mirar atrás, y el autobús siguió vacío.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Al día siguiente, el chofer le explicó la regla que faltaba:",
+   "pausa": 0.4
+  },
+  {
+   "texto": "lo que sube en esa curva se sienta junto al último pasajero,",
+   "pausa": 0.3
+  },
+  {
+   "texto": "y se baja donde él se baje.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Por eso lo bajó en medio de la nada, lejos de su casa.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Julián caminó dos horas, y llegó con el amanecer.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Esa noche, el colchón de su cama se hundió a su lado.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Algo muy pesado lo había esperado en casa.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_onibus",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "1:11",
+     "ampm": "AM",
+     "lugar": "Ruta 14"
+    },
+    "passageiros": 0,
+    "parado": true,
+    "porta": 1,
+    "afunda": 1,
+    "vulto": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_pueblo",
+   "p": {
+    "janelas": 0,
+    "marta": {
+     "roupa": "#2f5a7a",
+     "pele": "#e0ad86",
+     "cabelo": "#2e1d14",
+     "x": [
+      0.25,
+      0.5
+     ],
+     "anda": 1
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "hud": {
+     "dia": "Día 2",
+     "hora": "7:30",
+     "ampm": "PM",
+     "lugar": "Terminal"
+    },
+    "pessoa": {
+     "pele": "#93603f",
+     "cabelo": "#9a8a7a",
+     "bigode": true,
+     "corBarba": "#9a8a7a",
+     "chapeu": "chapeu",
+     "corChapeu": "#3a3a4a",
+     "roupa": "#3a3a4a",
+     "detalhe": "#d6354a"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Don Ramiro",
+     "sub": "chofer de la Ruta 14",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#93603f",
+     "cabelo": "#9a8a7a",
+     "bigode": true,
+     "corBarba": "#9a8a7a",
+     "chapeu": "chapeu",
+     "corChapeu": "#3a3a4a",
+     "roupa": "#3a3a4a",
+     "detalhe": "#d6354a",
+     "olhar": -1
+    },
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "LA REGLA QUE FALTABA",
+     "itens": [
+      "Se sienta a tu lado",
+      "Se baja contigo"
+     ],
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_onibus",
+   "p": {
+    "passageiros": 0,
+    "vulto": 1,
+    "foco": [
+     0.6,
+     0.6
+    ],
+    "escala": [
+     1.2,
+     1.6
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#2e1d14",
+     "roupa": "#2f5a7a",
+     "detalhe": "#efe4cc",
+     "expressao": "triste"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "lejos de su casa",
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_pueblo",
+   "p": {
+    "amanhecer": [
+     0.2,
+     0.7
+    ],
+    "janelas": 0,
+    "casa": "apagada",
+    "marta": {
+     "roupa": "#2f5a7a",
+     "pele": "#e0ad86",
+     "cabelo": "#2e1d14",
+     "x": [
+      0.3,
+      0.55
+     ],
+     "anda": 1
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_pueblo",
+   "p": {
+    "hud": {
+     "dia": "Noche 2",
+     "hora": "1:10",
+     "ampm": "AM",
+     "lugar": "Casa de Julián"
+    },
+    "janelas": 0,
+    "casa": "vulto",
+    "foco": [
+     0.72,
+     0.52
+    ],
+    "escala": [
+     1.6,
+     2.2
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#2e1d14",
+     "roupa": "#2f5a7a",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    },
+    "zoomRosto": [
+     0,
+     1
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "susto",
+   "linea": 8,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "sin cuerpo",
+  "solo peso",
+  "vacío",
+  "la regla",
+  "último pasajero",
+  "se baja",
+  "lejos",
+  "amanecer",
+  "se hundió",
+  "esperado"
+ ],
+ "gancho": {
+  "cena": 8,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

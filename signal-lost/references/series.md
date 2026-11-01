@@ -23,3 +23,10 @@ Origem: gringa: México (espanhol), inspirada no mineiro resgatado após 13 dias
 - SV010 parte 2/3: a luz espera; Ramon, colega, está no bolsão; dia 6 sem água; Ramon acha que é mergulhador e nada até ela; as duas luzes apagam, volta só uma, que bate o sinal deles chamando para baixo. DESCARTADO (01/11, estilo antigo; arquivo em descartados/)
 - SV011 parte 3/3 (última): ele não se mexe; dia 13 chegam mergulhadores de verdade pelo poço, de cima; a luz do fundo apaga; o exército diz que só a equipe deles estava na água; Ramon nunca foi achado: o que vive lá aprendeu a batida. Regra: socorro vem de cima, nunca nade para uma luz que vem de baixo. DESCARTADO (01/11, estilo antigo; arquivo em descartados/)
 Cenas: peça nova `mina` (p.agua, p.lampada, p.parpadeo, p.fundo, p.pisca, p.cima, p.burbujas; evento luz), texto.
+
+## SV012-SV014 The Night Shift on Route 9 — origem: autoral — por: claude (01/11). PRIMEIRA SÉRIE NO ESTILO FLAT
+- Estilo flat com `"paleta": "sv"` (identidade "Sinal": azul-petróleo, ciano, luz de sódio, cartões de vidro com letra de terminal, HUD de sinal do celular).
+  Peças: `f_posto`, `retrato`, `texto`. Personagens: Dana, 23, balconista da noite (narra em 1ª pessoa); a mulher de cabelo preto e sorriso fixo.
+- SV012 parte 1/3: posto na Route 9 com 3 regras (trancar às 2, não sair, não olhar as árvores); 2:14 um carro entra de farol apagado, motor ligado, ninguém desce; SMS sem sinal: "Don't open the door for her." FEITO
+- SV013 parte 2/3: mulher bate no vidro com galão vazio pedindo ajuda; mas o carro dela é o da bomba 2, ligado; Dana não sai (regra 2); ela para de piscar; luzes das bombas apagam. FEITO
+- SV014 parte 3/3: batida vai para a porta dos fundos, sem tranca; dono atende: "ela só entra se você olhar para ela"; Dana fecha os olhos e conta até 200; passos molhados passam e saem; de manhã o galão está cheio no balcão; "agora sei por que existe a regra três" (vulto nas árvores). FEITO

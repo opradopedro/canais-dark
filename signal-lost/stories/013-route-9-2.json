@@ -1,0 +1,270 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "route-9",
+ "serie_titulo": "The Night Shift on Route 9 | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (estilo flat, 01/11)",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "gas station",
+  "night shift",
+  "night shift rules"
+ ],
+ "codigo": "SV013",
+ "parte": 2,
+ "anterior": "SV012",
+ "titulo": "She asked me to open the door 😰 Part 2 #horror #shorts",
+ "capa": "SHE STOPPED BLINKING",
+ "descripcion": "A woman knocked on the glass with an empty gas can. But her car was already at pump two, still running.\n\n> Part 3: {when_next}.\nWould you have gone outside?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "There was no her. Just the car, and the dark trees.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then someone knocked on the glass door, soft, three times.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "A woman, smiling, holding an empty gas can.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "She said her car ran out, and she needed help.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "But her car was the one at pump two, still running.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "I didn't move. Rule two: never go outside.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "She kept smiling, and she stopped blinking.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Then the lights over the pumps went out.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_posto",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "2:16",
+     "ampm": "AM",
+     "lugar": "Route 9",
+     "sinal": 0
+    },
+    "carro": 1,
+    "farol": false,
+    "foco": [
+     0.5,
+     0.4
+    ],
+    "escala": [
+     1.2,
+     1.4
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_posto",
+   "p": {
+    "carro": 1,
+    "farol": false,
+    "foco": [
+     0.22,
+     0.5
+    ],
+    "escala": [
+     1.6,
+     1.9
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#f3d2b3",
+     "cabelo": "#1c1220",
+     "cabeloTipo": "longo",
+     "roupa": "#3a3a4a",
+     "detalhe": "#e6f1f2",
+     "expressao": "sorriso"
+    },
+    "janela": false,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "empty gas can",
+     "y": 0.26
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#f3d2b3",
+     "cabelo": "#1c1220",
+     "cabeloTipo": "longo",
+     "roupa": "#3a3a4a",
+     "detalhe": "#e6f1f2",
+     "expressao": "sorriso",
+     "olhar": -1
+    },
+    "janela": false,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "SHE SAID",
+     "texto": "My car ran out. Can you help me?",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_posto",
+   "p": {
+    "carro": 1,
+    "farol": false,
+    "foco": [
+     0.66,
+     0.72
+    ],
+    "escala": [
+     1.6,
+     1.9
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "pump 2 · still running",
+     "y": 0.26
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#5a3a24",
+     "cabeloTipo": "longo",
+     "roupa": "#1f5a6a",
+     "detalhe": "#ffd166",
+     "expressao": "bravo"
+    },
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "NIGHT SHIFT RULES",
+     "itens": [
+      "Lock up at 2",
+      "Stay inside",
+      "Don't look at trees"
+     ],
+     "marcados": 2,
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#f3d2b3",
+     "cabelo": "#1c1220",
+     "cabeloTipo": "longo",
+     "roupa": "#3a3a4a",
+     "detalhe": "#e6f1f2",
+     "expressao": "sorriso"
+    },
+    "janela": false,
+    "zoomRosto": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_posto",
+   "p": {
+    "carro": 1,
+    "farol": false,
+    "luz": "piscam",
+    "vulto": 1
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "The lights went out",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "apagon",
+   "linea": 7,
+   "en": 0.4,
+   "dur": 1.5
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "no her",
+  "three times",
+  "smiling",
+  "needed help",
+  "pump two",
+  "still running",
+  "never go outside",
+  "stopped blinking",
+  "went out"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

@@ -34,4 +34,4 @@ def resolver(h, timing):
             gancho = {"cena": g["cena"], "t": ev["t"] + g.get("mas", 0.4), "dur": g.get("dur", 0.8)}
     return {"segs": segs, "cenas": cenas, "eventos": eventos, "destaque": h.get("destaque", []),
             "gancho": gancho, "dur": timing["dur"], "tema": h.get("tema"),
-            "visual": h.get("visual")}
+            "visual": h.get("visual"), "paleta": h.get("paleta")}

@@ -1,6 +1,6 @@
 # Estilo visual "flat" (Hora Muerta e Old Tales) — guia para o Kiro e para o Claude
 
-Pedido do Pedro (01/11/2026): os vídeos de terror (Hora Muerta) e do Old Tales devem ficar bonitos como um vídeo de
+Pedido do Pedro (01/11/2026): os vídeos de terror (Hora Muerta e Signal Lost) e do Old Tales devem ficar bonitos como um vídeo de
 referência que ele mandou (desenho animado plano e limpo) e contar a história de um jeito parecido.
 **Correção do Pedro no mesmo dia: "só se inspire, não faça exatamente igual".** A referência é INSPIRAÇÃO de
 qualidade e ritmo. Cada canal tem a SUA identidade (seção 2). Não copie cores, relógio, cartões, frases nem o
@@ -24,7 +24,11 @@ Tudo continua de custo zero: canvas 2D no `hora-muerta/scripts/engine.html`, ren
 
 ## 2. Identidade de cada canal (o que é NOSSO)
 
-O motor escolhe sozinho pelo canal: Old Tales tem `"tema": "calmo"`; o resto é Hora Muerta.
+O motor escolhe pelo roteiro: Old Tales tem `"tema": "calmo"`; Signal Lost tem `"paleta": "sv"`; o resto é Hora Muerta.
+
+**Signal Lost — "Sinal"**: fundo azul-petróleo `#12303a` → `#04090c`, destaque ciano `#4fe3ff`, luz de sódio `#ffd166`,
+vermelho `#ff4d5e`; HUD no canto ESQUERDO com barras de sinal do celular ("NO SIGNAL" piscando quando `sinal` = 0),
+hora grande e lugar; cartões de vidro escuro com faixa ciano e letra de terminal (Courier); narração em 1ª pessoa.
 
 | | Hora Muerta — "Veladora" | Old Tales — "Pergaminho" |
 |---|---|---|
