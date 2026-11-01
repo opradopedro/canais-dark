@@ -86,6 +86,10 @@ subir se nao bater.
 
 ## Escrever uma serie nova
 
+> **Estilo novo (Pedro, 01/11):** toda série nova usa `"visual": "flat"` + `"paleta": "sv"` e o jeito de contar do
+> `ESTILO-VISUAL.md` e da seção "Estilo novo" do `ROTEIROS.md` (o fiscal barra o resto a partir de SV012). Vale por cima do que estiver diferente abaixo.
+
+
 Um arquivo por parte: `stories/NNN-slug-P.json` (NNN = numero seguido, P = parte). Codigo `SVNNN`.
 Modelo completo e testado: a serie `elevator` (`001` a `004`).
 
