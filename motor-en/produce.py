@@ -315,6 +315,20 @@ def guardar(c, cod, base, up, vid):
     json.dump(meta, open(os.path.join(pasta, cod + ".json"), "w"), ensure_ascii=False, indent=1)
 
 
+def sair_barrado(cod, voltas, ja):
+    """Video barrado na conferencia. Se o canal ainda tem video agendado no futuro, NADA sai do ar: sai com codigo 3
+    (rodar_canal.py deixa o workflow verde, avisa na issue e a proxima execucao tenta de novo). Sem video agendado,
+    sai com erro (workflow vermelho = um horario ficou mesmo vazio)."""
+    agora = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    fila = sorted(k for k, v in ja.items() if (v.get("publishAt") or "") > agora)
+    msg = f"NAO SUBIU {cod}: LEGENDA FORA DA VOZ depois de {voltas} conserto(s)"
+    if fila:
+        print(f"{msg}. Fila ainda tem {len(fila)} agendado(s) ({', '.join(fila)}): nada sai do ar; "
+              f"a proxima execucao tenta de novo", flush=True)
+        sys.exit(3)
+    sys.exit(msg)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("canal", help="pasta do canal (tem canal.json e stories/)")
@@ -440,13 +454,22 @@ def main():
                 print(f"conserto {volta} caiu: {str(e)[:200]}", flush=True)
                 continue
             leg, ok = revisar(base, c["idioma"])
+        banco = os.environ.get("CANAIS_NARRACOES") or os.path.join(RAIZ, "narracoes")
         if not leg and a.subir:
-            # a repescagem do mesmo dia (canais.yml) tenta de novo: apaga a voz guardada deste roteiro para ela
-            # ser gravada outra vez (a mesma gravacao reprovaria igual)
-            banco = os.environ.get("CANAIS_NARRACOES") or os.path.join(RAIZ, "narracoes")
+            # 2a chance na MESMA execucao (01/11): grava a voz de novo (a mesma gravacao reprovaria igual)
+            print(f"VOZ NOVA {cod}: a legenda nao bateu; gravo a narracao outra vez", flush=True)
             for f in glob.glob(os.path.join(banco, f"{cod}_*.wav")):
                 os.remove(f)
-            sys.exit(f"NAO SUBIU {cod}: LEGENDA FORA DA VOZ depois de {volta} conserto(s)")
+            try:
+                produzir(c, historia, a, base)
+                leg, ok = revisar(base, c["idioma"])
+            except Exception as e:
+                print(f"voz nova caiu: {str(e)[:200]}", flush=True)
+        if not leg and a.subir:
+            # a repescagem do mesmo dia (canais.yml) tenta de novo: apaga a voz guardada deste roteiro
+            for f in glob.glob(os.path.join(banco, f"{cod}_*.wav")):
+                os.remove(f)
+            sair_barrado(cod, volta, ja)
         if not ok and a.subir:
             print(f"AVISO {cod}: o audio nao passou na conferencia depois de {volta} conserto(s); subo mesmo assim",
                   flush=True)
