@@ -53,11 +53,13 @@ Há dois tipos:
 
 ## Peças FLAT (estilo novo de Hora Muerta e Old Tales, 01/11) — guia: `ESTILO-VISUAL.md`
 Só com `"visual": "flat"` no roteiro. Nome `f_<nome>` (exceto o exemplo `retrato`). Kit: `TF()` (paleta do canal), `fonte`, `fundoFlat`, `caixa`, `papel`,
-`pessoa`; o motor desenha `hud` e `cartao` a partir do `p` de qualquer cena.
+`pessoa`, `corpoFlat` (pessoa de corpo inteiro, anda e carrega lanterna), `velaFlat`, `cempa`, `camFlat` (câmera com `foco`/`escala`); o motor desenha `hud` e `cartao` a partir do `p` de qualquer cena.
 
 | Peça | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
 | `retrato` | close de um personagem flat com rosto (respira, pisca); fundo do canal: HM violeta com janela de lua e vela, CL verde com janela em arco e fogo | `pessoa:{chapeu, cabeloTipo, barba, bigode, oculos, pele, roupa, detalhe, expressao, olhar}`, `zoomRosto`, `janela`, `fundo`, `luz` | apresentar personagem, reação, regras/plano (com `cartao`) |
+| `f_panteon` | cemitério de povoado à noite: lua, igreja ao fundo, cruzes e lápides com cempasúchil, caminho de pétalas, tumba sem nome com vela, portão de ferro | `vela` 0..1, `tumba` 0..1 (abre), `reja` 0..1, `nota` (papel no portão), `marta` {x, y, s, lanterna, saia, cabeloTipo...} (pessoa de corpo inteiro), `foco`/`escala` (câmera) | cemitério, velório, Día de Muertos, lendas de túmulo |
+| `f_pueblo` | rua de povoado latino: casas coloridas, papel picado balançando, igreja com sino, poste, cachorro; a casa da direita é "a casa da personagem" | `janelas` 0..1, `casa` 'apagada'/'acesa'/'vulto', `porta` 0..1, `amanhecer` 0..1, `chamado` "texto", `cachorro`, `poste` 'pisca', `sino`, `marta` {x: [de, ate], anda: 1, ...}, `foco`/`escala` | qualquer história de povoado, rua à noite, volta pra casa |
 
 ## Peças de cena (engine.html)
 | Peça | O que mostra | Clima | Canais |

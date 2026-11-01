@@ -1,3 +1,2 @@
 # (caminho do roteiro para desenhar a previa na nuvem)
-so-you-built-it/stories/021-pressure-cooker.json
-# volta 2
+hora-muerta/stories/021-reglas-panteon-1.json

@@ -1,0 +1,24 @@
+{
+ "codigo": "FLAT03",
+ "_obs": "Teste das pecas f_panteon e f_pueblo (fora de stories/: nunca e publicado).",
+ "visual": "flat",
+ "titulo": "teste f_panteon e f_pueblo",
+ "lineas": [
+  {"texto": "Uno dos tres cuatro cinco seis.", "pausa": 0.3},
+  {"texto": "Uno dos tres cuatro cinco seis.", "pausa": 0.3},
+  {"texto": "Uno dos tres cuatro cinco seis.", "pausa": 0.3},
+  {"texto": "Uno dos tres cuatro cinco seis.", "pausa": 0.3},
+  {"texto": "Uno dos tres cuatro cinco seis.", "pausa": 0.3},
+  {"texto": "Uno dos tres cuatro cinco seis.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_panteon", "p": {"hud": {"dia": "Noche 1", "hora": "11:52", "ampm": "PM", "lugar": "Panteón"}, "vela": 1, "marta": {"x": 0.32, "lanterna": true, "cabeloTipo": "coque", "cabelo": "#b9b2a8", "saia": true, "roupa": "#4a3a6a"}}},
+  {"linea": 1, "comp": "f_panteon", "p": {"vela": 0, "tumba": [0, 1], "foco": [0.55, 0.5], "escala": [1.5, 1.8]}},
+  {"linea": 2, "comp": "f_panteon", "p": {"reja": 0, "nota": true, "foco": [0.15, 0.48], "escala": 1.7}},
+  {"linea": 3, "comp": "f_pueblo", "p": {"janelas": 0.4, "cachorro": true, "marta": {"x": [0.3, 0.42], "anda": 1, "lanterna": true, "cabeloTipo": "coque", "cabelo": "#b9b2a8", "saia": true}}},
+  {"linea": 4, "comp": "f_pueblo", "p": {"janelas": 0, "casa": "vulto", "chamado": "«¡Marta!»", "poste": "pisca"}},
+  {"linea": 5, "comp": "f_pueblo", "p": {"janelas": 0.1, "casa": "acesa", "porta": [0, 1], "amanhecer": [0.2, 0.8], "foco": [0.8, 0.5], "escala": 1.5}}
+ ],
+ "eventos": [],
+ "destaque": []
+}

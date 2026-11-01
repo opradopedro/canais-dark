@@ -1,0 +1,300 @@
+{
+ "codigo": "HM022",
+ "formato": "Regla",
+ "visual": "flat",
+ "serie": "reglas-panteon",
+ "serie_titulo": "Las reglas del panteón | Hora Muerta",
+ "parte": 2,
+ "partes": 2,
+ "anterior": "HM021",
+ "autor": "claude",
+ "origem": "autoral (estilo flat, 01/11)",
+ "titulo": "Volvió a casa y alguien dormía en su cama 😰 Las reglas del panteón Parte 2 #terror #shorts",
+ "capa": "YA ESTOY ADENTRO",
+ "descripcion": "La nota tenía la letra de Marta, pero ella no la escribió. Final de Las reglas del panteón.\n\n¿Tú habrías vuelto a casa?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #panteon #relatoscortos",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "panteón",
+  "cementerio",
+  "reglas de terror",
+  "relatos cortos de terror"
+ ],
+ "lineas": [
+  {
+   "texto": "La nota tenía la letra de Marta, pero ella no la escribió.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "La tumba sin nombre estaba abierta, y vacía.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Lo que dormía ahí aprende a copiar: la letra, el paso, la cara.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Desde el panteón, Marta miró al pueblo, y vio su casa.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "La luz de su ventana estaba encendida, y ella vive sola.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Encendió la vela otra vez, y no se movió hasta el amanecer.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A las seis volvió a casa, y la puerta estaba abierta.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Ya estoy adentro, decía la nota, y no hablaba del panteón.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "En la ventana, alguien con su cara la estaba esperando.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_panteon",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:12",
+     "ampm": "AM",
+     "lugar": "Panteón de San Juan"
+    },
+    "nota": true,
+    "vela": 0,
+    "foco": [
+     0.15,
+     0.46
+    ],
+    "escala": [
+     1.8,
+     1.6
+    ],
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "NOTA EN LA REJA",
+     "texto": "No contestes. Ya estoy adentro.",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_panteon",
+   "p": {
+    "vela": 0,
+    "tumba": [
+     0,
+     1
+    ],
+    "foco": [
+     0.58,
+     0.48
+    ],
+    "escala": [
+     1.5,
+     1.9
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "cabeloTipo": "coque",
+     "cabelo": "#b9b2a8",
+     "oculos": true,
+     "roupa": "#4a3a6a",
+     "detalhe": "#d6354a",
+     "pele": "#c2875e",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "LO QUE COPIA",
+     "itens": [
+      "La letra",
+      "El paso",
+      "La cara"
+     ],
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_pueblo",
+   "p": {
+    "janelas": 0,
+    "casa": "apagada",
+    "foco": [
+     0.6,
+     0.45
+    ],
+    "escala": [
+     1.0,
+     1.2
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_pueblo",
+   "p": {
+    "janelas": 0,
+    "casa": "acesa",
+    "foco": [
+     0.75,
+     0.5
+    ],
+    "escala": [
+     1.3,
+     1.6
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "vive sola",
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_panteon",
+   "p": {
+    "vela": [
+     0,
+     1
+    ],
+    "tumba": [
+     1,
+     0
+    ],
+    "marta": {
+     "lanterna": true,
+     "cabeloTipo": "coque",
+     "cabelo": "#b9b2a8",
+     "saia": true,
+     "roupa": "#4a3a6a",
+     "pele": "#c2875e"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_pueblo",
+   "p": {
+    "hud": {
+     "dia": "Día 2",
+     "hora": "6:00",
+     "ampm": "AM",
+     "lugar": "San Juan"
+    },
+    "janelas": 0.1,
+    "amanhecer": [
+     0.3,
+     0.6
+    ],
+    "porta": 1,
+    "cachorro": true,
+    "marta": {
+     "lanterna": true,
+     "cabeloTipo": "coque",
+     "cabelo": "#b9b2a8",
+     "saia": true,
+     "roupa": "#4a3a6a",
+     "pele": "#c2875e",
+     "x": [
+      0.2,
+      0.45
+     ],
+     "anda": 1
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_pueblo",
+   "p": {
+    "amanhecer": 0.6,
+    "porta": 1,
+    "casa": "apagada",
+    "foco": [
+     0.75,
+     0.52
+    ],
+    "escala": [
+     1.4,
+     1.7
+    ],
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "LA NOTA",
+     "texto": "Ya estoy adentro.",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_pueblo",
+   "p": {
+    "amanhecer": 0.6,
+    "porta": 1,
+    "casa": "vulto",
+    "foco": [
+     0.72,
+     0.52
+    ],
+    "escala": [
+     1.8,
+     2.4
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 1,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 8,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "no la escribió",
+  "vacía",
+  "copiar",
+  "su casa",
+  "sola",
+  "amanecer",
+  "abierta",
+  "adentro",
+  "su cara"
+ ],
+ "gancho": {
+  "cena": 8,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

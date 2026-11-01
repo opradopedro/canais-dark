@@ -1,0 +1,287 @@
+{
+ "codigo": "HM021",
+ "formato": "Regla",
+ "visual": "flat",
+ "serie": "reglas-panteon",
+ "serie_titulo": "Las reglas del panteón | Hora Muerta",
+ "parte": 1,
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral (estilo flat, 01/11; gancho do rodízio: regra quebrada)",
+ "titulo": "Encontró una nota con su propia letra 😨 Las reglas del panteón Parte 1 #terror #shorts",
+ "capa": "SU PROPIA LETRA",
+ "descripcion": "Doña Marta cuida el panteón desde hace treinta años. Tiene tres reglas. Esta noche rompió una.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Quién escribió la nota?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #panteon #relatoscortos",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "panteón",
+  "cementerio",
+  "reglas de terror",
+  "relatos cortos de terror"
+ ],
+ "lineas": [
+  {
+   "texto": "Doña Marta tiene tres reglas, y esta noche rompió una.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Cuida el panteón de San Juan desde hace treinta años.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Cerrar la reja a las doce, no contestar si la llaman,",
+   "pausa": 0.4
+  },
+  {
+   "texto": "y nunca dejar que se apague la vela de la tumba sin nombre.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Esa noche se durmió, y a las tres y diez despertó.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "La vela estaba apagada, y en la reja había una nota.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Decía: no contestes, ya estoy adentro.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Era su propia letra.",
+   "pausa": 1.0
+  },
+  {
+   "texto": "¿Quién la escribió? Parte dos, mañana, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_panteon",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "11:52",
+     "ampm": "PM",
+     "lugar": "Panteón de San Juan"
+    },
+    "vela": 1,
+    "marta": {
+     "lanterna": true,
+     "cabeloTipo": "coque",
+     "cabelo": "#b9b2a8",
+     "saia": true,
+     "roupa": "#4a3a6a",
+     "pele": "#c2875e"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "3 reglas",
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "cabeloTipo": "coque",
+     "cabelo": "#b9b2a8",
+     "oculos": true,
+     "roupa": "#4a3a6a",
+     "detalhe": "#d6354a",
+     "pele": "#c2875e",
+     "expressao": "sorriso"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Doña Marta, 67",
+     "sub": "cuida el panteón",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "cabeloTipo": "coque",
+     "cabelo": "#b9b2a8",
+     "oculos": true,
+     "roupa": "#4a3a6a",
+     "detalhe": "#d6354a",
+     "pele": "#c2875e",
+     "olhar": -1
+    },
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "LAS REGLAS DE MARTA",
+     "itens": [
+      "Reja cerrada a las 12",
+      "No contestar",
+      "Vela siempre encendida"
+     ],
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_panteon",
+   "p": {
+    "vela": 1,
+    "foco": [
+     0.58,
+     0.48
+    ],
+    "escala": [
+     1.5,
+     1.8
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "retrato",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:10",
+     "ampm": "AM",
+     "lugar": "Panteón de San Juan"
+    },
+    "pessoa": {
+     "cabeloTipo": "coque",
+     "cabelo": "#b9b2a8",
+     "oculos": true,
+     "roupa": "#4a3a6a",
+     "detalhe": "#d6354a",
+     "pele": "#c2875e",
+     "expressao": "surpresa"
+    },
+    "zoomRosto": [
+     0,
+     0.6
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_panteon",
+   "p": {
+    "vela": 0,
+    "foco": [
+     0.58,
+     0.48
+    ],
+    "escala": 1.8
+   }
+  },
+  {
+   "linea": 5,
+   "en": 0.55,
+   "comp": "f_panteon",
+   "p": {
+    "nota": true,
+    "foco": [
+     0.15,
+     0.46
+    ],
+    "escala": [
+     1.6,
+     1.8
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_panteon",
+   "p": {
+    "nota": true,
+    "foco": [
+     0.15,
+     0.46
+    ],
+    "escala": 1.8,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "NOTA EN LA REJA",
+     "texto": "No contestes. Ya estoy adentro.",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "cabeloTipo": "coque",
+     "cabelo": "#b9b2a8",
+     "oculos": true,
+     "roupa": "#4a3a6a",
+     "detalhe": "#d6354a",
+     "pele": "#c2875e",
+     "expressao": "medo"
+    },
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "su propia letra",
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "¿Quién la escribió?",
+     "Parte 2 · mañana, {fecha_siguiente}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "tres reglas",
+  "panteón",
+  "vela",
+  "nota",
+  "adentro",
+  "propia letra",
+  "escribió"
+ ],
+ "gancho": {
+  "cena": 8,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

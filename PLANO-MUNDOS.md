@@ -25,7 +25,7 @@ Nada aqui gasta narração: o GitHub Actions narra e posta depois, sozinho.
 | 16 | PENDENTE | So You Built It | mundo `arrimo` (barranco, muro tomba, água atrás do muro, barbacã e brita, gabião) | YB026 Evolucao "You built a retaining wall" |
 | 17 | PENDENTE | Signal Lost | peça `ilha` (praia de ilha pequena à noite, fogueira, mar, vulto na água) | SV012-SV014 série "Náufrago na ilha" |
 | 18 | PENDENTE | So You Built It | mundo `escavadeira` (Bagger 288, roda de caçambas, esteiras de km) | YB027 Curiosidade "How a bucket-wheel excavator digs nonstop" |
-| 19 | PENDENTE | Hora Muerta | peças flat `f_panteon`, `f_pueblo` (ESTILO-VISUAL.md seção 7) | HM série nova no estilo flat, `"visual": "flat"` (gancho do rodízio, seção 3) |
+| 19 | FEITO (claude, 01/11) | Hora Muerta | peças flat `f_panteon`, `f_pueblo` | HM021-HM022 "Las reglas del panteón" (1ª série flat; use como modelo) |
 | 20 | PENDENTE | Old Tales | peças flat `f_aldeia`, `f_casa`, `f_moinho` | CL série nova no estilo flat (ex.: "You wake up as the miller's apprentice") |
 | 21 | PENDENTE | Hora Muerta | peças flat `f_cocina`, `f_telefono`, `f_altar` | HM série nova no estilo flat |
 | 22 | PENDENTE | Hora Muerta | peças flat `f_rio`, `f_cuarto`, `f_carretera` | HM série de lenda no estilo flat (Llorona/Siguanaba/Patasola) |

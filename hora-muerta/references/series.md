@@ -33,3 +33,13 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 ## HM019-HM020 El último autobús (Regla) — origem: autoral (backlog)
 - HM019 parte 1/2: único passageiro à 1h; curva sem casas, porta abre, ninguém sobe mas o ônibus afunda como se alguém pesado entrasse; motorista grita "¡bájate ya! ¡no te des la vuelta!". FEITO
 - HM020 parte 2/2: ele desce; o motorista explica que a curva tem um passageiro que senta junto ao último e desce com ele; no reflexo da janela do quarto, alguém sentado na cama ao lado. FEITO
+
+## HM021-HM022 Las reglas del panteón (Regla) — origem: autoral — por: claude (01/11). PRIMEIRA SÉRIE NO ESTILO FLAT
+- Estilo: `"visual": "flat"` (ESTILO-VISUAL.md). Gancho do rodízio: regra quebrada. Peças: `f_panteon`, `f_pueblo`, `retrato`, `texto`.
+- Personagem: Doña Marta, 67, cuida o panteão de San Juan há 30 anos (coque grisalho, óculos, roupa violeta com xale vermelho).
+  HUD: "Noche 1 · Panteón de San Juan", relógio 11:52 PM → 3:10 AM → 3:12 AM; parte 2 termina "Día 2 · San Juan" 6:00 AM.
+- HM021 parte 1/2: 3 regras (reja às 12, não responder se chamarem, vela da tumba sem nome sempre acesa); ela dorme, acorda 3:10,
+  vela apagada, nota na reja com a letra dela: "No contestes, ya estoy adentro". Fecha "¿Quién la escribió?". FEITO
+- HM022 parte 2/2: a coisa da tumba sem nome copia letra, passo e cara; do panteão ela vê a luz da casa dela acesa (mora sozinha);
+  reacende a vela e espera o amanhecer; em casa, porta aberta: "adentro" era a casa dela; na janela alguém com a cara dela a espera. FEITO
+

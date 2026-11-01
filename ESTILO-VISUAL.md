@@ -99,6 +99,9 @@ Nunca abaixo de 0.55 (legenda e botões do Shorts). Corte no meio de uma linha: 
   'surpresa'|'bravo'|'triste', olhar: -1..1, t})` — busto com rosto; `cx, cy` = queixo; respira e pisca sozinho.
 - Já existentes: `glow`, `ease`, `lerp`, `rng(valor_ou_[de,ate], lt)`, `rnd(seed)`, `E.since/E.pulse`.
 - Peça-exemplo: `COMP.retrato` (close de personagem, fundo do canal com janela e vela/fogo).
+- Cenários prontos: `f_panteon`, `f_pueblo` (copie a estrutura deles). Ajudantes: `corpoFlat` (pessoa de corpo inteiro que
+  anda e carrega lanterna), `velaFlat`, `cempa` (flor), `camFlat(p, lt)` (câmera: `p.foco` [x, y] + `p.escala`, já travada
+  para nunca mostrar borda preta). Chame `camFlat` logo no começo da peça, dentro de `x.save()`/`x.restore()`.
 
 ## 6. Regras para criar uma peça flat nova (Kiro)
 
@@ -119,8 +122,7 @@ Nunca abaixo de 0.55 (legenda e botões do Shorts). Corte no meio de uma linha: 
 ## 7. Peças flat a criar (lista de trabalho, na ordem — também em `PLANO-MUNDOS.md`, itens 19 a 23)
 
 **Hora Muerta (lendas e regras latinas, espanhol)**
-- `f_panteon` — cemitério com cruzes, velas no chão, portão de ferro (`p.reja` aberta 0..1), névoa clara, lua; `p.figura`.
-- `f_pueblo` — rua de povoado de noite: casas coloridas, poste, cachorro, igreja ao fundo; `p.gente`, `p.janela_acesa`.
+- ~~`f_panteon`~~ e ~~`f_pueblo`~~ — FEITAS (01/11). Modelo de série completa: `hora-muerta/stories/021-reglas-panteon-1.json` e `022-...-2.json`.
 - `f_carretera` — estrada de terra de lado com veículo (`p.veiculo`: 'autobus'|'camioneta'|'bicicleta'), postes, morros, olhos no mato.
 - `f_cocina` — cozinha de avó: fogão a lenha, panela, altar com fotos e velas, porta do quintal (`p.porta`).
 - `f_rio` — beira de rio com pedra e lua refletida, mulher de costas com cabelo longo; `p.vira` 0..1 (rosto sem sangue).
