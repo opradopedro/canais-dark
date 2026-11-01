@@ -1,0 +1,23 @@
+{
+ "codigo": "FLAT02",
+ "_obs": "Roteiro de TESTE do estilo flat do Old Tales (tema calmo, fora de stories/: nunca e publicado). Ver ESTILO-VISUAL.md.",
+ "visual": "flat",
+ "tema": "calmo",
+ "titulo": "teste do estilo flat (Old Tales)",
+ "lineas": [
+  {"texto": "You wake up in 1300, as the miller's new apprentice.", "pausa": 0.5},
+  {"texto": "This is Walter. He's 52, and the whole village needs him.", "pausa": 0.5},
+  {"texto": "Your day: carry the grain, check the wheel, keep the stones apart.", "pausa": 0.5},
+  {"texto": "By noon, a farmer is shouting at the door.", "pausa": 0.5},
+  {"texto": "What did Walter take from his sack?", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "retrato", "p": {"hud": {"dia": "Day 1", "hora": "Dawn", "lugar": "Year 1300", "ceu": "aurora"}, "pessoa": {"chapeu": "capuz", "corChapeu": "#6b4a2e", "roupa": "#6b4a2e", "pele": "#e0ad86", "expressao": "surpresa"}}},
+  {"linea": 1, "comp": "retrato", "p": {"pessoa": {"barba": true, "corBarba": "#9a8a7a", "cabelo": "#9a8a7a", "chapeu": "chapeu", "corChapeu": "#4a3a24", "roupa": "#8c2f39", "pele": "#c2875e", "expressao": "sorriso"}, "cartao": {"tipo": "nome", "titulo": "Walter, 52", "sub": "the village miller", "y": 0.13}}},
+  {"linea": 2, "comp": "retrato", "p": {"pessoa": {"chapeu": "capuz", "corChapeu": "#6b4a2e", "roupa": "#6b4a2e", "pele": "#e0ad86"}, "cartao": {"tipo": "lista", "titulo": "Your day at the mill", "itens": ["Carry the grain", "Check the wheel", "Keep the stones apart"], "y": 0.12}}},
+  {"linea": 3, "comp": "retrato", "p": {"hud": {"dia": "Day 1", "hora": "Noon", "lugar": "Year 1300", "ceu": "dia"}, "pessoa": {"barba": true, "corBarba": "#9a8a7a", "cabelo": "#9a8a7a", "chapeu": "chapeu", "corChapeu": "#4a3a24", "roupa": "#8c2f39", "pele": "#c2875e", "expressao": "bravo"}, "zoomRosto": [0, 0.8]}},
+  {"linea": 4, "comp": "texto", "p": {"hud": false, "lineas": ["What did he take?", "Part 2 · tomorrow"]}}
+ ],
+ "eventos": [],
+ "destaque": ["apprentice", "Walter", "grain", "shouting", "sack"]
+}

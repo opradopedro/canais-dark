@@ -1325,143 +1325,194 @@ COMP.mina = (t, lt, p) => {
   fog(t, 0.05, '120,130,130');
 };
 
-// ================= ESTILO FLAT (visual "desenho animado limpo", guia: ESTILO-VISUAL.md) =================
-// Liga com "visual": "flat" no roteiro. Sem granulado, vinheta leve, legenda em caixa normal com palavra-chave
-// amarela, HUD de relogio no canto e cartoes (nome, mensagem, lista). Pecas antigas continuam iguais.
+// ================= ESTILO FLAT (visual limpo de cada canal, guia: ESTILO-VISUAL.md) =================
+// Liga com "visual": "flat" no roteiro. Cada canal tem identidade PROPRIA (inspiracao, nao copia):
+//   Hora Muerta  = "Veladora": noite violeta, luz de vela, cempasuchil laranja, cartoes de papel com fita, relogio redondo.
+//   Old Tales    = "Pergaminho" (vem de "tema": "calmo"): verde-floresta e ocre, faixa de pergaminho, letra serifada, dourado.
+// Pecas antigas continuam iguais; roteiro sem "visual" nao muda nada.
 function FLAT() { return !!(ST && ST.visual === 'flat'); }
-const PAL = {
-  noite: '#1e2638', noite2: '#2a3550', ceu: '#33415f', chao: '#262d3d', tinta: '#141924',
-  creme: '#f4ead8', amarelo: '#ffd23f', laranja: '#f08a3c', verde: '#7ee081', vermelho: '#e2453c', azul: '#7fb2e5',
-  pele: ['#f1c9a5', '#d9a07a', '#b97850', '#8a5636', '#5e3a24'],
+const PALS = {
+  hm: { fundo1: '#2a1f3d', fundo2: '#140f22', parede: 'rgba(255,255,255,0.05)', creme: '#efe4cc', papel: '#efe4cc', tinta: '#2a1a14',
+        destaque: '#ff8a2a', acento: '#f6b24a', acento2: '#7fe0c4', perigo: '#d6354a', ok: '#7fe0c4', luz: 'rgba(246,178,74,0.20)',
+        fonteTit: '900 {s}px "Arial Black", system-ui, sans-serif', fonteTxt: 'italic 700 {s}px Georgia, "Times New Roman", serif' },
+  cl: { fundo1: '#3c5238', fundo2: '#1b2519', parede: 'rgba(255,240,200,0.06)', creme: '#f1e3c2', papel: '#f1e3c2', tinta: '#3a2614',
+        destaque: '#f2c66d', acento: '#e3b75f', acento2: '#8c2f39', perigo: '#8c2f39', ok: '#5c7d3a', luz: 'rgba(255,214,140,0.20)',
+        fonteTit: '700 {s}px Georgia, "Times New Roman", serif', fonteTxt: 'italic 400 {s}px Georgia, "Times New Roman", serif' },
 };
-// fundo liso em degrade suave (2 cores) com uma luz redonda opcional
+const PAL = { pele: ['#f3d2b3', '#e0ad86', '#c2875e', '#93603f', '#64402a'] };
+function TF() { return PALS[CALMO() ? 'cl' : 'hm']; }
+const fonte = (k, s) => TF()[k].replace('{s}', s);
 function fundoFlat(c1, c2, luz) {
   const g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, c1); g.addColorStop(1, c2); x.fillStyle = g; x.fillRect(0, 0, W, H);
-  if (luz) glow(luz[0] * W, luz[1] * H, luz[2] || 520, luz[3] || 'rgba(255,230,180,0.18)');
+  if (luz) glow(luz[0] * W, luz[1] * H, luz[2] || 520, luz[3] || TF().luz);
 }
-// caixa arredondada com borda fina (base de todos os cartoes)
 function caixa(px, py, w, h, fundo, borda, r = 18) {
   x.fillStyle = fundo; x.beginPath(); x.roundRect(px, py, w, h, r); x.fill();
   if (borda) { x.strokeStyle = borda; x.lineWidth = 3; x.stroke(); }
 }
-// Personagem flat (busto). cx,cy = centro do queixo; s = escala (1 = rosto de ~300 px de altura).
-// o = {pele, cabelo, roupa, faixa, gola, chapeu:'bone'|'capuz'|'touca'|'elmo'|'', barba:bool, cabeloTipo:'curto'|'longo'|'careca',
-//      expressao:'neutro'|'medo'|'sorriso'|'surpresa'|'bravo', olhar:-1..1 (para onde olha), t}
-function pessoa(cx, cy, s, o = {}) {
-  const t = o.t || 0, pele = o.pele || PAL.pele[1], cab = o.cabelo || '#3a2618', roupa = o.roupa || '#2c3a55';
-  const ex = o.expressao || 'neutro', ol = (o.olhar || 0) * 10, resp = Math.sin(t * 2.2) * 4;
-  x.save(); x.translate(cx, cy + resp); x.scale(s, s);
-  // tronco
-  x.fillStyle = roupa; x.beginPath(); x.moveTo(-300, 520); x.quadraticCurveTo(-290, 120, -120, 90); x.lineTo(120, 90); x.quadraticCurveTo(290, 120, 300, 520); x.fill();
-  if (o.faixa) { x.fillStyle = o.faixa; x.fillRect(-300, 380, 600, 22); x.fillStyle = 'rgba(255,255,255,0.75)'; x.fillRect(-300, 404, 600, 8); }
-  if (o.gola) { x.fillStyle = o.gola; x.beginPath(); x.moveTo(-95, 92); x.lineTo(0, 190); x.lineTo(95, 92); x.lineTo(60, 92); x.lineTo(0, 150); x.lineTo(-60, 92); x.fill(); }
-  // pescoco
-  x.fillStyle = pele; x.fillRect(-50, 20, 100, 90); x.fillStyle = 'rgba(0,0,0,0.12)'; x.fillRect(-50, 20, 100, 30);
-  if (o.chapeu === 'capuz') { x.fillStyle = o.corChapeu || roupa; x.beginPath(); x.ellipse(0, -150, 210, 230, 0, 0, 7); x.fill(); }
-  if (o.cabeloTipo === 'longo') { x.fillStyle = cab; x.beginPath(); x.roundRect(-165, -260, 330, 330, 120); x.fill(); }
-  // orelhas e rosto
-  x.fillStyle = pele;
-  x.beginPath(); x.ellipse(-150, -120, 28, 40, 0, 0, 7); x.ellipse(150, -120, 28, 40, 0, 0, 7); x.fill();
-  x.beginPath(); x.roundRect(-150, -290, 300, 330, [120, 120, 140, 140]); x.fill();
-  // cabelo
-  if (o.cabeloTipo !== 'careca' && o.chapeu !== 'capuz') { x.fillStyle = cab; x.beginPath(); x.ellipse(0, -260, 160, 80, 0, Math.PI, 0); x.fill(); x.fillRect(-160, -262, 22, 120); x.fillRect(138, -262, 22, 120); }
-  // olhos (piscam a cada ~3 s)
-  const pis = (t % 3.1) > 2.98 ? 0.15 : 1, aberto = ex === 'medo' || ex === 'surpresa' ? 1.35 : 1;
-  for (const sx of [-1, 1]) {
-    x.fillStyle = '#fff'; x.beginPath(); x.ellipse(sx * 58, -120, 24, 16 * aberto * pis, 0, 0, 7); x.fill();
-    x.fillStyle = PAL.tinta; x.beginPath(); x.arc(sx * 58 + ol, -120, 10 * Math.min(1, pis * 2), 0, 7); x.fill();
-    // sobrancelha
-    const inc = ex === 'bravo' ? -sx * 0.25 : ex === 'medo' ? sx * 0.25 : 0, sy = ex === 'surpresa' || ex === 'medo' ? -172 : -160;
-    x.save(); x.translate(sx * 58, sy); x.rotate(inc); x.fillStyle = cab; x.beginPath(); x.roundRect(-30, -6, 60, 12, 6); x.fill(); x.restore();
-  }
-  // nariz
-  x.strokeStyle = 'rgba(0,0,0,0.25)'; x.lineWidth = 6; x.lineCap = 'round'; x.beginPath(); x.moveTo(0, -95); x.quadraticCurveTo(-12, -55, 6, -50); x.stroke();
-  // barba
-  if (o.barba) { x.fillStyle = o.corBarba || cab; x.beginPath(); x.moveTo(-150, -60); x.quadraticCurveTo(-140, 50, 0, 60); x.quadraticCurveTo(140, 50, 150, -60); x.quadraticCurveTo(80, -20, 0, -25); x.quadraticCurveTo(-80, -20, -150, -60); x.fill(); }
-  // boca
-  x.strokeStyle = '#5a2a22'; x.fillStyle = '#5a2a22'; x.lineWidth = 7;
-  if (ex === 'sorriso') { x.beginPath(); x.arc(0, -20, 34, 0.2, Math.PI - 0.2); x.stroke(); }
-  else if (ex === 'medo' || ex === 'surpresa') { x.beginPath(); x.ellipse(0, -10, 22, 30, 0, 0, 7); x.fill(); }
-  else if (ex === 'bravo') { x.beginPath(); x.moveTo(-30, -5); x.lineTo(30, -5); x.stroke(); }
-  else { x.beginPath(); x.moveTo(-26, -10); x.quadraticCurveTo(0, -2, 26, -10); x.stroke(); }
-  // chapeus
-  if (o.chapeu === 'bone') {
-    x.fillStyle = o.corChapeu || '#2c3a55'; x.beginPath(); x.ellipse(0, -255, 175, 95, 0, Math.PI, 0); x.fill();
-    x.beginPath(); x.roundRect(-195, -262, 390, 34, 16); x.fill();
-    x.fillStyle = PAL.laranja; x.beginPath(); x.arc(0, -300, 22, 0, 7); x.fill(); x.fillStyle = o.corChapeu || '#2c3a55'; x.beginPath(); x.arc(0, -300, 11, 0, 7); x.fill();
-  } else if (o.chapeu === 'touca') {
-    x.fillStyle = o.corChapeu || '#7a4a2a'; x.beginPath(); x.ellipse(0, -250, 170, 110, 0, Math.PI, 0); x.fill(); x.fillRect(-170, -262, 340, 40);
-  } else if (o.chapeu === 'elmo') {
-    x.fillStyle = o.corChapeu || '#8e98a6'; x.beginPath(); x.ellipse(0, -240, 172, 120, 0, Math.PI, 0); x.fill(); x.fillRect(-172, -250, 344, 50);
-    x.fillStyle = 'rgba(255,255,255,0.25)'; x.fillRect(-120, -330, 40, 70);
+// papel (HM: bilhete com fita adesiva, levemente torto; CL: pergaminho com pontas enroladas)
+function papel(px, py, w, h, rot = -0.02) {
+  const T = TF();
+  x.save(); x.translate(px + w / 2, py + h / 2); x.rotate(CALMO() ? 0 : rot); x.translate(-w / 2, -h / 2);
+  x.fillStyle = 'rgba(0,0,0,0.35)'; x.fillRect(8, 12, w, h);
+  x.fillStyle = T.papel; x.fillRect(0, 0, w, h);
+  if (CALMO()) {
+    for (const yy of [-14, h - 10]) { x.fillStyle = '#d8c39a'; x.beginPath(); x.roundRect(-18, yy, w + 36, 24, 12); x.fill(); x.fillStyle = 'rgba(90,60,30,0.25)'; x.fillRect(-18, yy + 16, w + 36, 6); }
+  } else {
+    x.fillStyle = 'rgba(255,255,240,0.55)'; x.save(); x.translate(w / 2, -6); x.rotate(0.05); x.fillRect(-70, -16, 140, 34); x.restore();
+    x.strokeStyle = 'rgba(120,90,60,0.18)'; x.lineWidth = 2; for (let yy = 70; yy < h - 10; yy += 52) { x.beginPath(); x.moveTo(24, yy); x.lineTo(w - 24, yy); x.stroke(); }
   }
   x.restore();
 }
-// HUD fixo no canto (estilo "DAY 1 / 2:58 AM / NIGHT TRAIN 742"). hud = {dia, hora, ampm, lugar}
+// Personagem flat (busto). cx,cy = queixo; s = escala. Olhos ovais escuros com brilho (sem branco do olho), bochecha corada.
+// o = {pele, cabelo, cabeloTipo:'curto'|'longo'|'coque'|'careca', roupa, detalhe (cor da gola/xale), chapeu:'chapeu'|'capuz'|'touca'|'elmo'|'',
+//      corChapeu, barba, bigode, oculos, expressao:'neutro'|'medo'|'sorriso'|'surpresa'|'bravo'|'triste', olhar:-1..1, t}
+function pessoa(cx, cy, s, o = {}) {
+  const t = o.t || 0, pele = o.pele || PAL.pele[2], cab = o.cabelo || '#2e1d14', roupa = o.roupa || '#4a3a6a';
+  const ex = o.expressao || 'neutro', ol = (o.olhar || 0) * 9, resp = Math.sin(t * 2) * 3;
+  x.save(); x.translate(cx, cy + resp); x.scale(s, s);
+  // sombra comprida no chao/parede (assinatura do estilo)
+  x.fillStyle = 'rgba(0,0,0,0.18)'; x.beginPath(); x.ellipse(70, 470, 330, 60, 0, 0, 7); x.fill();
+  // tronco: ombros caidos, forma de gota
+  x.fillStyle = roupa; x.beginPath(); x.moveTo(-270, 520); x.bezierCurveTo(-270, 200, -170, 110, 0, 105); x.bezierCurveTo(170, 110, 270, 200, 270, 520); x.fill();
+  if (o.detalhe) { x.fillStyle = o.detalhe; x.beginPath(); x.moveTo(-150, 140); x.quadraticCurveTo(0, 290, 150, 140); x.quadraticCurveTo(0, 210, -150, 140); x.fill(); }
+  x.fillStyle = pele; x.beginPath(); x.roundRect(-44, 20, 88, 100, 30); x.fill();
+  if (o.chapeu === 'capuz') { x.fillStyle = o.corChapeu || roupa; x.beginPath(); x.ellipse(0, -130, 205, 225, 0, 0, 7); x.fill(); }
+  if (o.cabeloTipo === 'longo') { x.fillStyle = cab; x.beginPath(); x.ellipse(0, -90, 175, 230, 0, 0, 7); x.fill(); }
+  // cabeca: oval largo
+  x.fillStyle = pele; x.beginPath(); x.ellipse(0, -130, 150, 165, 0, 0, 7); x.fill();
+  x.beginPath(); x.ellipse(-150, -110, 24, 34, 0, 0, 7); x.ellipse(150, -110, 24, 34, 0, 0, 7); x.fill();
+  if (o.cabeloTipo !== 'careca' && o.chapeu !== 'capuz') {
+    x.fillStyle = cab; x.beginPath(); x.moveTo(-152, -120); x.bezierCurveTo(-160, -300, 160, -300, 152, -120); x.bezierCurveTo(90, -230, -40, -210, -152, -120); x.fill();
+    if (o.cabeloTipo === 'coque') { x.beginPath(); x.arc(0, -300, 55, 0, 7); x.fill(); }
+  }
+  // bochechas
+  x.fillStyle = 'rgba(220,90,80,0.22)'; x.beginPath(); x.ellipse(-82, -70, 30, 18, 0, 0, 7); x.ellipse(82, -70, 30, 18, 0, 0, 7); x.fill();
+  // olhos: ovais escuros com brilho; piscam a cada ~3,4 s
+  const pis = (t % 3.4) > 3.28 ? 0.12 : 1, ab = ex === 'medo' || ex === 'surpresa' ? 1.3 : ex === 'triste' ? 0.8 : 1;
+  for (const sx of [-1, 1]) {
+    x.fillStyle = '#1c1220'; x.beginPath(); x.ellipse(sx * 55 + ol, -125, 15 * ab, 21 * ab * pis, 0, 0, 7); x.fill();
+    if (pis > 0.5) { x.fillStyle = '#fff'; x.beginPath(); x.arc(sx * 55 + ol + 5, -133, 5, 0, 7); x.fill(); }
+    const inc = ex === 'bravo' ? -sx * 0.3 : ex === 'medo' || ex === 'triste' ? sx * 0.3 : 0, sy = ex === 'surpresa' || ex === 'medo' ? -178 : -166;
+    x.save(); x.translate(sx * 55, sy); x.rotate(inc); x.strokeStyle = cab; x.lineWidth = 9; x.lineCap = 'round'; x.beginPath(); x.moveTo(-24, 0); x.quadraticCurveTo(0, -8, 24, 0); x.stroke(); x.restore();
+  }
+  if (o.oculos) { x.strokeStyle = '#1c1220'; x.lineWidth = 6; for (const sx of [-1, 1]) { x.beginPath(); x.arc(sx * 55, -125, 36, 0, 7); x.stroke(); } x.beginPath(); x.moveTo(-19, -125); x.lineTo(19, -125); x.stroke(); }
+  // nariz: gota
+  x.fillStyle = 'rgba(120,50,30,0.25)'; x.beginPath(); x.ellipse(0, -82, 16, 12, 0, 0, 7); x.fill();
+  if (o.barba) { x.fillStyle = o.corBarba || cab; x.beginPath(); x.moveTo(-145, -90); x.bezierCurveTo(-130, 60, 130, 60, 145, -90); x.bezierCurveTo(80, -10, -80, -10, -145, -90); x.fill(); }
+  if (o.bigode) { x.fillStyle = o.corBarba || cab; x.beginPath(); x.ellipse(-24, -55, 30, 12, 0.2, 0, 7); x.ellipse(24, -55, 30, 12, -0.2, 0, 7); x.fill(); }
+  // boca
+  x.strokeStyle = '#5a2228'; x.fillStyle = '#5a2228'; x.lineWidth = 7; x.lineCap = 'round';
+  if (ex === 'sorriso') { x.beginPath(); x.arc(0, -42, 26, 0.25, Math.PI - 0.25); x.stroke(); }
+  else if (ex === 'medo' || ex === 'surpresa') { x.beginPath(); x.ellipse(0, -30, 16, 22, 0, 0, 7); x.fill(); }
+  else if (ex === 'triste') { x.beginPath(); x.arc(0, -10, 24, Math.PI + 0.35, -0.35); x.stroke(); }
+  else if (ex === 'bravo') { x.beginPath(); x.moveTo(-22, -32); x.lineTo(22, -32); x.stroke(); }
+  else { x.beginPath(); x.moveTo(-14, -34); x.lineTo(14, -34); x.stroke(); }
+  // chapeus
+  const cc = o.corChapeu || '#3a2a20';
+  if (o.chapeu === 'chapeu') { x.fillStyle = cc; x.beginPath(); x.ellipse(0, -235, 245, 40, 0, 0, 7); x.fill(); x.beginPath(); x.roundRect(-120, -340, 240, 115, [60, 60, 8, 8]); x.fill(); x.fillStyle = TF().destaque; x.fillRect(-120, -258, 240, 18); }
+  else if (o.chapeu === 'touca') { x.fillStyle = o.corChapeu || '#efe4cc'; x.beginPath(); x.ellipse(0, -230, 175, 105, 0, Math.PI, 0); x.fill(); x.beginPath(); x.ellipse(0, -232, 182, 22, 0, 0, 7); x.fill(); }
+  else if (o.chapeu === 'elmo') { x.fillStyle = o.corChapeu || '#9aa3ad'; x.beginPath(); x.ellipse(0, -215, 170, 125, 0, Math.PI, 0); x.fill(); x.fillRect(-10, -215, 20, 120); x.fillStyle = 'rgba(255,255,255,0.3)'; x.fillRect(-110, -300, 30, 60); }
+  x.restore();
+}
+// HUD. Hora Muerta: relogio de ponteiro redondo no canto DIREITO + hora e lugar embaixo. Old Tales: faixa de pergaminho
+// no canto esquerdo com sol/lua. h = {dia, hora, ampm, lugar, ceu:'aurora'|'dia'|'tarde'|'noite' (so CL)}
 function hud(h, a = 1) {
   if (!h) return;
-  x.save(); x.globalAlpha = a; x.textAlign = 'left'; x.textBaseline = 'alphabetic';
-  if (h.dia) { x.fillStyle = PAL.vermelho; x.beginPath(); x.arc(62, 152, 9, 0, 7); x.fill(); x.font = '800 34px "Arial Black", system-ui, sans-serif'; x.fillText(String(h.dia).toUpperCase(), 80, 164); }
-  if (h.hora) {
-    x.fillStyle = PAL.creme; x.font = '900 92px "Arial Black", system-ui, sans-serif'; x.fillText(h.hora, 52, 250);
-    if (h.ampm) { const w = x.measureText(h.hora).width; x.font = '900 42px "Arial Black", system-ui, sans-serif'; x.fillText(h.ampm, 62 + w, 250); }
+  const T = TF(); x.save(); x.globalAlpha = a; x.textBaseline = 'middle';
+  if (CALMO()) {
+    const txt = [h.dia, h.hora, h.lugar].filter(Boolean).join('  ·  ');
+    x.font = fonte('fonteTit', 40); const w = x.measureText(txt).width + 170, px = 40, py = 120;
+    x.fillStyle = 'rgba(0,0,0,0.3)'; x.fillRect(px + 6, py + 8, w, 76);
+    x.fillStyle = T.papel; x.beginPath(); x.moveTo(px, py); x.lineTo(px + w, py); x.lineTo(px + w - 26, py + 38); x.lineTo(px + w, py + 76); x.lineTo(px, py + 76); x.fill();
+    const ceu = h.ceu || 'dia', sol = ceu !== 'noite';
+    x.fillStyle = sol ? (ceu === 'dia' ? '#e8a830' : '#e07a3a') : '#5b6f8f'; x.beginPath(); x.arc(px + 50, py + 38, 24, 0, 7); x.fill();
+    if (!sol) { x.fillStyle = T.papel; x.beginPath(); x.arc(px + 60, py + 30, 20, 0, 7); x.fill(); }
+    x.fillStyle = T.tinta; x.textAlign = 'left'; x.fillText(txt, px + 92, py + 40);
+  } else {
+    const cx = W - 130, cy = 175, r = 72;
+    glow(cx, cy, 170, 'rgba(246,178,74,0.18)');
+    x.fillStyle = T.papel; x.beginPath(); x.arc(cx, cy, r, 0, 7); x.fill(); x.strokeStyle = T.tinta; x.lineWidth = 6; x.stroke();
+    for (let i = 0; i < 12; i++) { const an = i / 12 * Math.PI * 2; x.fillStyle = T.tinta; x.beginPath(); x.arc(cx + Math.sin(an) * (r - 14), cy - Math.cos(an) * (r - 14), i % 3 ? 3 : 6, 0, 7); x.fill(); }
+    const m = /(\d+):(\d+)/.exec(h.hora || ''); const hh = m ? +m[1] : 3, mm = m ? +m[2] : 0;
+    const ah = ((hh % 12) + mm / 60) / 12 * Math.PI * 2, am = mm / 60 * Math.PI * 2;
+    x.strokeStyle = T.tinta; x.lineCap = 'round'; x.lineWidth = 9; x.beginPath(); x.moveTo(cx, cy); x.lineTo(cx + Math.sin(ah) * 36, cy - Math.cos(ah) * 36); x.stroke();
+    x.strokeStyle = T.perigo; x.lineWidth = 6; x.beginPath(); x.moveTo(cx, cy); x.lineTo(cx + Math.sin(am) * 56, cy - Math.cos(am) * 56); x.stroke();
+    x.textAlign = 'right'; x.fillStyle = T.creme; x.font = fonte('fonteTit', 46);
+    x.fillText([h.hora, h.ampm].filter(Boolean).join(' '), W - 58, cy + r + 52);
+    const sub = [h.dia, h.lugar].filter(Boolean).join(' · ');
+    if (sub) { x.font = fonte('fonteTxt', 32); x.fillStyle = T.acento; x.fillText(sub, W - 58, cy + r + 100); }
   }
-  if (h.lugar) { x.fillStyle = 'rgba(244,234,216,0.65)'; x.font = '800 28px system-ui, sans-serif'; x.fillText(String(h.lugar).toUpperCase().split('').join(String.fromCharCode(8202)), 54, 294); }
   x.restore();
 }
-// Cartoes por cima da cena (fora do zoom). c = {tipo, y (0..1), titulo, sub, texto, itens:[...], marcados:N, cor}
-//   tipo 'nome'  -> plaquinha "JOELL, 45 / NIGHT TRAIN DRIVER"
-//   tipo 'msg'   -> mensagem de radio/celular que se digita sozinha (titulo pequeno + texto)
-//   tipo 'lista' -> lista com caixinhas; os itens vao sendo marcados ao longo da cena (ou 'marcados' fixos)
-//   tipo 'rotulo'-> etiqueta curta (ex.: "120 KM/H", "TOO DANGEROUS")
+// Cartoes por cima da cena (fora do zoom). c = {tipo, y (0..1), titulo, sub, texto, itens:[...], marcados:N}
+//   'nome'  -> etiqueta de papel (HM) / faixa de pergaminho (CL) com nome e quem e
+//   'msg'   -> bilhete/carta que se escreve sozinho
+//   'lista' -> regras numeradas (HM) / lista do dia (CL); os itens vao sendo marcados ao longo da cena
+//   'rotulo'-> etiqueta curta
 function cartao(c, lt) {
   if (!c) return;
-  const tipo = c.tipo || 'rotulo', a = ease(lt * 6), cy = (c.y ?? 0.2) * H;
-  x.save(); x.globalAlpha = a; x.translate(0, (1 - a) * 30); x.textBaseline = 'middle';
+  const T = TF(), tipo = c.tipo || 'rotulo', a = ease(lt * 6), cy = (c.y ?? 0.2) * H;
+  x.save(); x.globalAlpha = a; x.translate(0, (1 - a) * 24); x.textBaseline = 'middle';
   if (tipo === 'nome') {
-    x.font = '900 52px "Arial Black", system-ui, sans-serif'; const w1 = x.measureText(c.titulo || '').width;
-    x.font = '800 26px system-ui, sans-serif'; const w2 = x.measureText(String(c.sub || '').toUpperCase()).width + 40;
-    const w = Math.max(w1, w2) + 80, px = W / 2 - w / 2;
-    caixa(px, cy, w, c.sub ? 132 : 92, 'rgba(18,22,34,0.92)', 'rgba(244,234,216,0.55)');
-    x.textAlign = 'center'; x.fillStyle = PAL.creme; x.font = '900 52px "Arial Black", system-ui, sans-serif'; x.fillText(c.titulo || '', W / 2, cy + 50);
-    if (c.sub) { x.fillStyle = 'rgba(244,234,216,0.7)'; x.font = '800 26px system-ui, sans-serif'; x.fillText(String(c.sub).toUpperCase(), W / 2, cy + 100); }
+    x.font = fonte('fonteTit', 56); const w = Math.max(x.measureText(c.titulo || '').width, 300) + 110, px = 70;
+    papel(px, cy, w, c.sub ? 150 : 100, -0.03);
+    x.save(); x.translate(px + w / 2, cy + 75); x.rotate(CALMO() ? 0 : -0.03);
+    x.textAlign = 'center'; x.fillStyle = T.tinta; x.font = fonte('fonteTit', 56); x.fillText(c.titulo || '', 0, c.sub ? -22 : 0);
+    if (c.sub) { x.fillStyle = T.perigo; x.font = fonte('fonteTxt', 36); x.fillText(c.sub, 0, 36); }
+    x.restore();
   } else if (tipo === 'msg') {
-    const px = 90, w = W - 180, txt = c.texto || '', n = Math.floor(clamp(lt * 1.6) * txt.length);
-    x.font = '800 40px system-ui, sans-serif'; const linhas = []; let ln = '';
-    for (const pw of txt.slice(0, n).split(' ')) { const tt = ln ? ln + ' ' + pw : pw; if (x.measureText(tt).width > w - 60 && ln) { linhas.push(ln); ln = pw; } else ln = tt; }
+    const px = 110, w = W - 260, txt = c.texto || '', n = Math.floor(clamp(lt * 1.6) * txt.length);
+    x.font = fonte('fonteTxt', 44); const linhas = []; let ln = '';
+    for (const pw of txt.slice(0, n).split(' ')) { const tt = ln ? ln + ' ' + pw : pw; if (x.measureText(tt).width > w - 70 && ln) { linhas.push(ln); ln = pw; } else ln = tt; }
     linhas.push(ln);
-    const h = 90 + linhas.length * 52;
-    caixa(px, cy, w, h, 'rgba(70,10,14,0.92)', c.cor || PAL.vermelho, 10);
-    x.textAlign = 'left'; x.fillStyle = 'rgba(255,200,190,0.85)'; x.font = '800 26px system-ui, sans-serif'; x.fillText(String(c.titulo || '').toUpperCase(), px + 30, cy + 36);
-    x.fillStyle = '#fff'; x.font = '800 40px system-ui, sans-serif'; linhas.forEach((l, i) => x.fillText(l, px + 30, cy + 84 + i * 52));
+    const h = 110 + Math.max(1, linhas.length) * 52;
+    papel(px, cy, w, h, 0.02);
+    x.save(); x.translate(px, cy); x.rotate(CALMO() ? 0 : 0.02); x.textAlign = 'left';
+    x.fillStyle = T.perigo; x.font = fonte('fonteTit', 28); x.fillText(c.titulo || '', 36, 46);
+    x.fillStyle = T.tinta; x.font = fonte('fonteTxt', 44); linhas.forEach((l, i) => x.fillText(l, 36, 100 + i * 52));
+    x.restore();
   } else if (tipo === 'lista') {
-    const itens = c.itens || [], px = 120, w = W - 240, h = 96 + itens.length * 66;
+    const itens = c.itens || [], px = 110, w = W - 260, h = 110 + itens.length * 70;
     const marc = c.marcados ?? Math.floor(clamp(lt * 1.15) * (itens.length + 0.999));
-    caixa(px, cy, w, h, 'rgba(14,18,28,0.94)', 'rgba(244,234,216,0.5)');
-    x.textAlign = 'left'; x.fillStyle = PAL.amarelo; x.font = '900 30px "Arial Black", system-ui, sans-serif'; x.fillText(String(c.titulo || '').toUpperCase(), px + 34, cy + 46);
+    papel(px, cy, w, h, -0.015);
+    x.save(); x.translate(px, cy); x.rotate(CALMO() ? 0 : -0.015); x.textAlign = 'left';
+    x.fillStyle = T.perigo; x.font = fonte('fonteTit', 34); x.fillText(c.titulo || '', 36, 50);
     itens.forEach((it, i) => {
-      const ok = i < marc, yy = cy + 106 + i * 66;
-      x.strokeStyle = ok ? PAL.verde : 'rgba(244,234,216,0.6)'; x.lineWidth = 4; x.strokeRect(px + 36, yy - 18, 36, 36);
-      if (ok) { x.beginPath(); x.moveTo(px + 42, yy); x.lineTo(px + 52, yy + 10); x.lineTo(px + 68, yy - 12); x.stroke(); }
-      x.fillStyle = ok ? PAL.verde : 'rgba(244,234,216,0.75)'; x.font = '900 42px "Arial Black", system-ui, sans-serif'; x.fillText(it, px + 96, yy + 2);
+      const ok = i < marc, yy = 116 + i * 70;
+      x.fillStyle = T.tinta; x.font = fonte('fonteTxt', 44); x.fillText((i + 1) + '.  ' + it, 40, yy);
+      if (ok) { x.strokeStyle = CALMO() ? T.ok : T.perigo; x.lineWidth = 6; x.lineCap = 'round'; x.beginPath(); x.moveTo(w - 110, yy); x.lineTo(w - 90, yy + 20); x.lineTo(w - 50, yy - 26); x.stroke(); }
     });
+    x.restore();
   } else {
-    x.font = '900 40px "Arial Black", system-ui, sans-serif'; const w = x.measureText(String(c.titulo || '').toUpperCase()).width + 60;
-    caixa(W / 2 - w / 2, cy, w, 72, c.fundo || 'rgba(18,22,34,0.92)', c.cor || PAL.creme, 12);
-    x.textAlign = 'center'; x.fillStyle = c.cor || PAL.creme; x.fillText(String(c.titulo || '').toUpperCase(), W / 2, cy + 38);
+    x.font = fonte('fonteTit', 42); const w = x.measureText(c.titulo || '').width + 70;
+    x.save(); x.translate(W / 2, cy + 40); x.rotate(CALMO() ? 0 : -0.04);
+    x.fillStyle = c.fundo || T.destaque; x.fillRect(-w / 2, -40, w, 80); x.fillStyle = c.cor || T.tinta; x.textAlign = 'center'; x.fillText(c.titulo || '', 0, 2);
+    x.restore();
   }
   x.restore();
 }
 
-// PECA-EXEMPLO do estilo flat: close de um personagem (serve para qualquer canal: piloto, campones, monge, chofer).
-// p = {fundo:[c1,c2], luz:[x,y,r,cor], pessoa:{...opcoes de pessoa()}, zoomRosto:0..1 (aproxima no rosto), cartao, hud}
-// Ex.: {"comp":"retrato","p":{"pessoa":{"chapeu":"bone","barba":true,"expressao":"medo"},"cartao":{"tipo":"lista",...}}}
+// PECA-EXEMPLO: close de um personagem (serve para qualquer canal). Fundo muda sozinho pelo canal.
+// p = {pessoa:{...opcoes de pessoa()}, zoomRosto:0..1 ou [de,ate], janela:true (janela com lua/sol atras), fundo:[c1,c2], luz:[x,y,r,cor]}
 COMP.retrato = (t, lt, p) => {
-  const f = p.fundo || [PAL.noite2, PAL.noite];
-  fundoFlat(f[0], f[1], p.luz || [0.78, 0.12, 380, 'rgba(255,240,200,0.16)']);
-  // janela/parede de fundo simples para dar lugar
-  x.fillStyle = 'rgba(0,0,0,0.22)'; x.beginPath(); x.roundRect(W * 0.08, H * 0.2, W * 0.84, H * 0.42, 30); x.fill();
-  const zr = rng(p.zoomRosto ?? 0, lt), s = 1.25 + zr * 0.45;
+  const T = TF(), f = p.fundo || [T.fundo1, T.fundo2];
+  fundoFlat(f[0], f[1], p.luz || [0.25, 0.3, 520]);
+  if (p.janela !== false) {
+    // janela em arco (CL) ou janela com cortina e lua (HM)
+    const jx = W * 0.72, jy = H * 0.24, jw = 230, jh = 330;
+    x.fillStyle = 'rgba(0,0,0,0.3)'; x.beginPath(); x.roundRect(jx - jw / 2 - 16, jy - 16, jw + 32, jh + 32, CALMO() ? [130, 130, 8, 8] : 8); x.fill();
+    x.fillStyle = CALMO() ? '#c9d7e0' : '#2f3f6a'; x.beginPath(); x.roundRect(jx - jw / 2, jy, jw, jh, CALMO() ? [115, 115, 4, 4] : 4); x.fill();
+    if (!CALMO()) { glow(jx + 40, jy + 90, 120, 'rgba(255,250,220,0.35)'); x.fillStyle = '#f3ecd2'; x.beginPath(); x.arc(jx + 40, jy + 90, 34, 0, 7); x.fill(); }
+    else { x.fillStyle = '#7d9a63'; x.beginPath(); x.ellipse(jx, jy + jh, jw * 0.7, 90, 0, Math.PI, 0); x.fill(); }
+    x.fillStyle = 'rgba(0,0,0,0.35)'; x.fillRect(jx - 4, jy, 8, jh); x.fillRect(jx - jw / 2, jy + jh * 0.5, jw, 8);
+    if (!CALMO()) { const bal = Math.sin(t * 0.8) * 10; x.fillStyle = '#6b2a3a'; x.beginPath(); x.moveTo(jx - jw / 2 - 20, jy - 20); x.quadraticCurveTo(jx - jw / 2 + 40 + bal, jy + jh * 0.5, jx - jw / 2 - 10, jy + jh + 30); x.lineTo(jx - jw / 2 - 40, jy + jh + 30); x.lineTo(jx - jw / 2 - 40, jy - 20); x.fill(); }
+  }
+  // vela acesa no canto (HM) ou fogo baixo (CL): luz que mexe
+  const fx = W * 0.14, fy = H * 0.5, k = 0.8 + 0.2 * Math.sin(t * 7) + 0.1 * Math.sin(t * 17);
+  glow(fx, fy - 60, 260 * k, CALMO() ? 'rgba(255,170,80,0.25)' : 'rgba(246,178,74,0.3)');
+  if (!CALMO()) { x.fillStyle = T.papel; x.fillRect(fx - 18, fy - 40, 36, 110); x.fillStyle = '#ffd27a'; x.beginPath(); x.ellipse(fx, fy - 62, 11, 22 * k, 0, 0, 7); x.fill(); }
+  const zr = rng(p.zoomRosto ?? 0, lt), s = 1.2 + zr * 0.45;
   // queixo acima de 62% da altura: a legenda fica no peito, nunca em cima da boca
   pessoa(W / 2, H * 0.53 - zr * 90, s, { ...(p.pessoa || {}), t });
 };
@@ -1470,14 +1521,14 @@ COMP.retrato = (t, lt, p) => {
 COMP.texto = (t, lt, p) => {
   if (FLAT()) {
     // cartela flat: fundo azul-noite liso, 1a linha grande branca (palavra final em vermelho), resto em creme
-    fundoFlat(PAL.noite, PAL.tinta); x.textAlign = 'center'; x.textBaseline = 'middle';
+    fundoFlat(TF().fundo1, TF().fundo2, [0.5, 0.75, 600]); x.textAlign = 'center'; x.textBaseline = 'middle';
     (p.lineas || []).forEach((l, i) => {
       const a = ease((lt * 6) - i * 0.6); x.globalAlpha = a; const y = H * 0.36 + i * 140 + (1 - a) * 30;
       if (i === 0) {
-        x.font = '900 104px "Arial Black", system-ui, sans-serif'; const ws = l.split(' '), ult = ws.pop(), ini = ws.join(' ');
+        x.font = fonte('fonteTit', 100); const ws = l.split(' '), ult = ws.pop(), ini = ws.join(' ');
         const w0 = ini ? x.measureText(ini + ' ').width : 0, w1 = x.measureText(ult).width, x0 = W / 2 - (w0 + w1) / 2;
-        x.textAlign = 'left'; x.fillStyle = '#ffffff'; if (ini) x.fillText(ini, x0, y); x.fillStyle = CALMO() ? PAL.amarelo : PAL.vermelho; x.fillText(ult, x0 + w0, y); x.textAlign = 'center';
-      } else { x.font = '800 56px system-ui, sans-serif'; x.fillStyle = PAL.creme; x.fillText(l, W / 2, y); }
+        x.textAlign = 'left'; x.fillStyle = TF().creme; if (ini) x.fillText(ini, x0, y); x.fillStyle = TF().destaque; x.fillText(ult, x0 + w0, y); x.textAlign = 'center';
+      } else { x.font = fonte('fonteTxt', 58); x.fillStyle = TF().acento; x.fillText(l, W / 2, y); }
       x.globalAlpha = 1;
     });
     return;
@@ -1543,7 +1594,7 @@ function subtitle(t) {
     for (const w of ws) {
       if (n++ >= nVis) return;
       const u = UP(w);
-      if (FL) { x.lineWidth = 12; x.fillStyle = RXW && RXW.test(w.replace(/[^\p{L}\p{N}]/gu, '')) ? PAL.amarelo : '#ffffff'; }
+      if (FL) { x.lineWidth = 12; x.fillStyle = RXW && RXW.test(w.replace(/[^\p{L}\p{N}]/gu, '')) ? TF().destaque : '#ffffff'; }
       x.strokeText(u, px, y); x.fillText(u, px, y);
       px += x.measureText(u + ' ').width;
     }

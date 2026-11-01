@@ -52,12 +52,12 @@ Há dois tipos:
 | `tunel` | rio em corte com cidade, túnel cortado no eixo, escudo, tuneladora | — | túnel, metrô, escavação |
 
 ## Peças FLAT (estilo novo de Hora Muerta e Old Tales, 01/11) — guia: `ESTILO-VISUAL.md`
-Só com `"visual": "flat"` no roteiro. Nome `f_<nome>` (exceto o exemplo `retrato`). Kit: `PAL`, `fundoFlat`, `caixa`,
+Só com `"visual": "flat"` no roteiro. Nome `f_<nome>` (exceto o exemplo `retrato`). Kit: `TF()` (paleta do canal), `fonte`, `fundoFlat`, `caixa`, `papel`,
 `pessoa`; o motor desenha `hud` e `cartao` a partir do `p` de qualquer cena.
 
 | Peça | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
-| `retrato` | close de um personagem flat com rosto (respira, pisca), fundo azul-noite | `pessoa:{chapeu, barba, pele, roupa, faixa, gola, expressao, olhar}`, `zoomRosto`, `fundo`, `luz` | apresentar personagem, reação, plano em lista (com `cartao`) |
+| `retrato` | close de um personagem flat com rosto (respira, pisca); fundo do canal: HM violeta com janela de lua e vela, CL verde com janela em arco e fogo | `pessoa:{chapeu, cabeloTipo, barba, bigode, oculos, pele, roupa, detalhe, expressao, olhar}`, `zoomRosto`, `janela`, `fundo`, `luz` | apresentar personagem, reação, regras/plano (com `cartao`) |
 
 ## Peças de cena (engine.html)
 | Peça | O que mostra | Clima | Canais |

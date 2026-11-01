@@ -41,25 +41,21 @@ Regras de cada canal: no `SKILL.md` da pasta. Para o Old Tales: `"tema": "calmo"
 assustador, e cada fato histórico conferido em fonte confiável (nada de mito).
 
 ## Estilo novo: Hora Muerta e Old Tales (REGRA do Pedro, 01/11)
-"Quero que os vídeos de terror e do Old Tales tenham gráficos assim [desenho plano e limpo] e que a história seja
-contada do mesmo jeito." Guia completo, com a análise do vídeo de referência: **`ESTILO-VISUAL.md`**.
+Gráficos limpos e história contada com ritmo, INSPIRADOS num vídeo que o Pedro mandou, mas com identidade própria:
+"só se inspire, não faça exatamente igual". Guia completo: **`ESTILO-VISUAL.md`** (leia as seções 2 e 3 antes de
+escrever).
 
 Todo roteiro NOVO desses dois canais (a partir de 01/11) segue isto:
 - `"visual": "flat"` no JSON. Cenas com peças `f_*` (ou `retrato`/`texto`) e os campos `hud` e `cartao`.
-- **Gancho** (1ª frase): "Si [situação extrema], podrías ser [vantagem]... a menos que [uma falha]." /
-  Old Tales: "If you woke up in 1300 as [quem], you'd [vantagem]... unless you forget one thing."
-- **Personagem** com nome, idade e ofício nos primeiros 10 s (fala + `cartao` tipo `nome`). Hora Muerta em 3ª
-  pessoa; Old Tales continua em 2ª pessoa ("you"), mas com um personagem de apoio com nome.
-- **Frases curtas** (3 a 10 palavras), uma ideia por frase, uma linha por plano. Corte de cena a cada 1,5–3 s
-  (use `"en"` na cena para cortar no meio de uma linha).
-- **Números e horas concretos**: "A las 3:04...", "faltan 12 km", "comida para una semana". O relógio do `hud`
-  avança junto.
-- **Plano em lista de 3** que o público confere (`cartao` tipo `lista`) + falsa segurança ("Pensó en todo.").
-- **Fim da parte 1**: "Pero olvidó una cosa. ¿Qué olvidó? Te leo en los comentarios." + aviso da parte 2
-  (`{dia_siguiente}` / `{when_next}`), cartela `texto` com a pergunta. Parte 2 responde na 1ª frase e explica a
-  reviravolta. Old Tales: a pergunta é calma e curiosa ("What would you have forgotten?"), nada de susto.
-- Duração continua a do canal (Hora Muerta 40–58 s). Frase curta = mais planos no mesmo tempo, não vídeo mais longo.
-- Séries antigas que já começaram terminam no estilo antigo (não misture estilos dentro de uma série).
+- Estrutura: gancho concreto (0–5 s) → quem é (nome, idade, ofício, cartão `nome`) → como funciona (regras/plano em
+  lista de 3, cartão `lista`) → virada com hora exata (cartão `msg`/`rotulo`) → pergunta aberta + aviso da parte 2.
+- Gancho: use o rodízio da seção 3 do `ESTILO-VISUAL.md`; não repita o mesmo tipo em duas séries seguidas.
+- Frases de 3 a 10 palavras, uma ideia por frase, números e horas concretos, uma linha por plano (corte a cada
+  1,5–3 s; `"en"` na cena corta no meio de uma linha).
+- Proibido copiar a referência: nada de "luckiest person alive", "forgot one thing", "Tell me in the comments" como
+  fórmula, nem trem/maquinista/zumbi.
+- Hora Muerta: 3ª pessoa (ou "yo" testemunha), 40–58 s. Old Tales: 2ª pessoa ("you"), calmo, pergunta de curiosidade.
+- Séries já começadas terminam no estilo antigo (não misture estilos dentro de uma série).
 
 ## Passo 1: o plano da série (ANTES de escrever qualquer parte)
 Em `<canal>/references/series.md`, acrescente um bloco assim e já faça commit + push:

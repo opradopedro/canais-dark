@@ -4,11 +4,9 @@ Cada série tem um bloco antes de as partes serem escritas. Marque FEITO quando 
 Quem continuar uma série (Kiro ou Claude) escreve as partes FALTA seguindo o resumo. Regras: `ROTEIROS.md`.
 
 
-> **Estilo novo (01/11, pedido do Pedro):** séries planejadas a partir de agora usam `"visual": "flat"` e o
-> jeito de contar do `ESTILO-VISUAL.md` (gancho "...a menos que olvides una cosa", personagem com nome e idade,
-> hora na tela, lista de 3, "olvidó una cosa" + pergunta no fim). No bloco da série, escreva também quais peças
-> `f_*` cada parte usa e o que o `hud`/`cartao` mostra.
-
+> **Estilo novo (01/11, pedido do Pedro):** séries planejadas a partir de agora usam `"visual": "flat"` e o jeito
+> de contar das seções 2 e 3 do `ESTILO-VISUAL.md` (identidade própria do canal, inspirada e não copiada). No bloco
+> da série, escreva também: tipo de gancho do rodízio, peças `f_*` de cada parte e o que o `hud`/`cartao` mostra.
 ## medieval-village (CL001-CL003) — You Wake Up in 1300 — por: kiro
 - CL001 parte 1/3: acorda numa vila inglesa em 1300; cama de palha que coça; sem relógio, o sino da igreja marca o dia; fogo no meio da casa, sem chaminé; pão escuro e cerveja fraca no café, até as crianças; quase todos são camponeses; alguns dias trabalha de graça nas terras do senhor; vela custa caro, o dia acaba com o sol. FEITO (publicado)
 - CL002 parte 2/3: dia de feira na cidade; mercado novo não podia abrir a menos de ~7 milhas de outro; pedágio no portão; ruas com lama e porcos; placas com desenho porque quase ninguém lia; vende ovos e queijo, compra sal; padeiro que roubava ia para o pelourinho; sino do toque de recolher, cobrir o fogo, portões fecham. FEITO
