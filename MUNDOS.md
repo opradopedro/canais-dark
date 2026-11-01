@@ -51,6 +51,14 @@ Há dois tipos:
 | `terreno` | quintal com solo em corte (grama, terra, argila mole cinza, areia, rocha) e PECAS LIGADAS POR PARAMETRO em cada cena (sem etapas fixas): casa/predio/torre de Pisa que afunda, inclina, racha e treme; sapata, estacas (concreto ou madeira), radier, baldrame, manta, subsolo-caixa, apoios de borracha; lencol, poco com bomba, argila que encolhe; monumento com degraus; encosta, corte, deslizamento, muro de arrimo, dreno+barbacas, gabiao; estrada (lama, cascalho, base, asfalto, abaulado, valetas, buraco, cano de esgoto, caverna, cratera); ferrovia (trilho, dormente, lastro); calcada com junta e raiz; poste de cerca (podre, concreto, cascalho); chuva, setas, rotulos | lista completa de `p` no comentario do topo de `terreno.js` (foco, casa, afunda, inclina, estacas, encosta, estrada, trilho, poste...) | fundacao, solo, terremoto, muro, estrada, ferrovia, calcada, cerca, cidade que afunda, Pisa, Veneza (YB022-YB035) |
 | `tunel` | rio em corte com cidade, túnel cortado no eixo, escudo, tuneladora | — | túnel, metrô, escavação |
 
+## Peças FLAT (estilo novo de Hora Muerta e Old Tales, 01/11) — guia: `ESTILO-VISUAL.md`
+Só com `"visual": "flat"` no roteiro. Nome `f_<nome>` (exceto o exemplo `retrato`). Kit: `PAL`, `fundoFlat`, `caixa`,
+`pessoa`; o motor desenha `hud` e `cartao` a partir do `p` de qualquer cena.
+
+| Peça | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+| `retrato` | close de um personagem flat com rosto (respira, pisca), fundo azul-noite | `pessoa:{chapeu, barba, pele, roupa, faixa, gola, expressao, olhar}`, `zoomRosto`, `fundo`, `luz` | apresentar personagem, reação, plano em lista (com `cartao`) |
+
 ## Peças de cena (engine.html)
 | Peça | O que mostra | Clima | Canais |
 |---|---|---|---|

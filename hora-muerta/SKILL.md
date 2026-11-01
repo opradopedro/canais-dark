@@ -85,6 +85,10 @@ Siga o passo a passo de [../painel/README.md](../painel/README.md) com `C = hm`:
 
 ## Escrever uma série nova
 
+> **Estilo novo (Pedro, 01/11):** séries novas usam `"visual": "flat"` e o jeito de contar do `ESTILO-VISUAL.md`
+> (raiz do repo) e da seção "Estilo novo" do `ROTEIROS.md`. Isso vale por cima do que estiver diferente abaixo.
+
+
 Um arquivo por parte: `stories/NNN-slug-P.json` (NNN = número do código, P = parte), códigos seguidos.
 Use o backlog de [references/temas.md](references/temas.md) e as regras de lá.
 

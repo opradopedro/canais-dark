@@ -3,6 +3,12 @@
 Cada série: 2 partes, espanhol neutro, 40 a 58 s cada. A parte 1 para no pior momento.
 Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 
+
+> **Estilo novo (01/11, pedido do Pedro):** séries planejadas a partir de agora usam `"visual": "flat"` e o
+> jeito de contar do `ESTILO-VISUAL.md` (gancho "...a menos que olvides una cosa", personagem com nome e idade,
+> hora na tela, lista de 3, "olvidó una cosa" + pergunta no fim). No bloco da série, escreva também quais peças
+> `f_*` cada parte usa e o que o `hud`/`cartao` mostra.
+
 ## HM013-HM014 La Siguanaba (Leyenda, Centroamérica) — autor kiro, 29/10
 - Fatos (folclore de El Salvador, Guatemala, Honduras): mulher de cabelo longo que lava roupa no rio à noite,
   às vezes com um guacal de ouro; de costas é bonita, quando o homem chega perto ela vira e tem cara de cavalo,

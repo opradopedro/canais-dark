@@ -1,0 +1,24 @@
+{
+ "codigo": "FLAT01",
+ "_obs": "Roteiro de TESTE do estilo flat (fora de stories/: nunca e publicado). Serve de modelo para o Kiro. Ver ESTILO-VISUAL.md.",
+ "visual": "flat",
+ "titulo": "teste do estilo flat",
+ "lineas": [
+  {"texto": "Si el autobús se apaga en medio de la nada, podrías ser el más afortunado.", "pausa": 0.5},
+  {"texto": "A menos que olvides una sola cosa.", "pausa": 0.6},
+  {"texto": "Él es Tomás. Tiene cincuenta y dos años.", "pausa": 0.4},
+  {"texto": "Revisó todo: gasolina, puertas, la radio.", "pausa": 0.5},
+  {"texto": "Y entonces la radio habló sola.", "pausa": 0.5},
+  {"texto": "¿Qué olvidó Tomás? Te leo en los comentarios.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "retrato", "p": {"hud": {"dia": "Noche 1", "hora": "2:58", "ampm": "AM", "lugar": "Ruta 9"}, "pessoa": {"chapeu": "bone", "pele": "#d9a07a", "barba": true, "roupa": "#2c3a55", "faixa": "#f08a3c", "gola": "#e9e2d6"}, "cartao": {"tipo": "rotulo", "titulo": "¿El más afortunado?", "y": 0.2, "cor": "#ffd23f"}}},
+  {"linea": 1, "comp": "retrato", "p": {"pessoa": {"chapeu": "bone", "barba": true, "expressao": "surpresa", "faixa": "#f08a3c", "gola": "#e9e2d6"}, "zoomRosto": [0, 1]}},
+  {"linea": 2, "comp": "retrato", "p": {"pessoa": {"chapeu": "bone", "barba": true, "expressao": "sorriso", "faixa": "#f08a3c", "gola": "#e9e2d6"}, "cartao": {"tipo": "nome", "titulo": "TOMÁS, 52", "sub": "chofer nocturno", "y": 0.17}}},
+  {"linea": 3, "comp": "retrato", "p": {"pessoa": {"chapeu": "bone", "barba": true, "faixa": "#f08a3c", "gola": "#e9e2d6", "olhar": -1}, "cartao": {"tipo": "lista", "titulo": "Plan de Tomás", "itens": ["Gasolina", "Puertas", "Radio"], "y": 0.17}}},
+  {"linea": 4, "comp": "retrato", "p": {"hud": {"dia": "Noche 1", "hora": "3:04", "ampm": "AM", "lugar": "Ruta 9"}, "pessoa": {"chapeu": "bone", "barba": true, "expressao": "medo", "faixa": "#f08a3c", "gola": "#e9e2d6"}, "cartao": {"tipo": "msg", "titulo": "Radio · canal 16", "texto": "No abras la puerta. No es tu pasajero.", "y": 0.17}}},
+  {"linea": 5, "comp": "texto", "p": {"hud": false, "lineas": ["¿QUÉ OLVIDÓ?", "Te leo en los comentarios"]}}
+ ],
+ "eventos": [{"tipo": "susto", "linea": 4, "en": "fin"}],
+ "destaque": ["afortunado", "una sola cosa", "Tomás", "radio", "olvidó"]
+}

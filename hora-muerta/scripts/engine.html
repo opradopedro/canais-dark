@@ -8,7 +8,7 @@
 const W = 1080, H = 1920;
 const c = document.getElementById('c'), x = c.getContext('2d');
 let ST = { segs: [], cenas: [], eventos: [], destaque: [], gancho: null, dur: 1 };
-let RX = null;
+let RX = null, RXW = null;
 
 function rnd(seed) { const s = Math.sin(seed * 12.9898) * 43758.5453; return s - Math.floor(s); }
 const clamp = v => v < 0 ? 0 : v > 1 ? 1 : v;
@@ -1325,8 +1325,163 @@ COMP.mina = (t, lt, p) => {
   fog(t, 0.05, '120,130,130');
 };
 
+// ================= ESTILO FLAT (visual "desenho animado limpo", guia: ESTILO-VISUAL.md) =================
+// Liga com "visual": "flat" no roteiro. Sem granulado, vinheta leve, legenda em caixa normal com palavra-chave
+// amarela, HUD de relogio no canto e cartoes (nome, mensagem, lista). Pecas antigas continuam iguais.
+function FLAT() { return !!(ST && ST.visual === 'flat'); }
+const PAL = {
+  noite: '#1e2638', noite2: '#2a3550', ceu: '#33415f', chao: '#262d3d', tinta: '#141924',
+  creme: '#f4ead8', amarelo: '#ffd23f', laranja: '#f08a3c', verde: '#7ee081', vermelho: '#e2453c', azul: '#7fb2e5',
+  pele: ['#f1c9a5', '#d9a07a', '#b97850', '#8a5636', '#5e3a24'],
+};
+// fundo liso em degrade suave (2 cores) com uma luz redonda opcional
+function fundoFlat(c1, c2, luz) {
+  const g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, c1); g.addColorStop(1, c2); x.fillStyle = g; x.fillRect(0, 0, W, H);
+  if (luz) glow(luz[0] * W, luz[1] * H, luz[2] || 520, luz[3] || 'rgba(255,230,180,0.18)');
+}
+// caixa arredondada com borda fina (base de todos os cartoes)
+function caixa(px, py, w, h, fundo, borda, r = 18) {
+  x.fillStyle = fundo; x.beginPath(); x.roundRect(px, py, w, h, r); x.fill();
+  if (borda) { x.strokeStyle = borda; x.lineWidth = 3; x.stroke(); }
+}
+// Personagem flat (busto). cx,cy = centro do queixo; s = escala (1 = rosto de ~300 px de altura).
+// o = {pele, cabelo, roupa, faixa, gola, chapeu:'bone'|'capuz'|'touca'|'elmo'|'', barba:bool, cabeloTipo:'curto'|'longo'|'careca',
+//      expressao:'neutro'|'medo'|'sorriso'|'surpresa'|'bravo', olhar:-1..1 (para onde olha), t}
+function pessoa(cx, cy, s, o = {}) {
+  const t = o.t || 0, pele = o.pele || PAL.pele[1], cab = o.cabelo || '#3a2618', roupa = o.roupa || '#2c3a55';
+  const ex = o.expressao || 'neutro', ol = (o.olhar || 0) * 10, resp = Math.sin(t * 2.2) * 4;
+  x.save(); x.translate(cx, cy + resp); x.scale(s, s);
+  // tronco
+  x.fillStyle = roupa; x.beginPath(); x.moveTo(-300, 520); x.quadraticCurveTo(-290, 120, -120, 90); x.lineTo(120, 90); x.quadraticCurveTo(290, 120, 300, 520); x.fill();
+  if (o.faixa) { x.fillStyle = o.faixa; x.fillRect(-300, 380, 600, 22); x.fillStyle = 'rgba(255,255,255,0.75)'; x.fillRect(-300, 404, 600, 8); }
+  if (o.gola) { x.fillStyle = o.gola; x.beginPath(); x.moveTo(-95, 92); x.lineTo(0, 190); x.lineTo(95, 92); x.lineTo(60, 92); x.lineTo(0, 150); x.lineTo(-60, 92); x.fill(); }
+  // pescoco
+  x.fillStyle = pele; x.fillRect(-50, 20, 100, 90); x.fillStyle = 'rgba(0,0,0,0.12)'; x.fillRect(-50, 20, 100, 30);
+  if (o.chapeu === 'capuz') { x.fillStyle = o.corChapeu || roupa; x.beginPath(); x.ellipse(0, -150, 210, 230, 0, 0, 7); x.fill(); }
+  if (o.cabeloTipo === 'longo') { x.fillStyle = cab; x.beginPath(); x.roundRect(-165, -260, 330, 330, 120); x.fill(); }
+  // orelhas e rosto
+  x.fillStyle = pele;
+  x.beginPath(); x.ellipse(-150, -120, 28, 40, 0, 0, 7); x.ellipse(150, -120, 28, 40, 0, 0, 7); x.fill();
+  x.beginPath(); x.roundRect(-150, -290, 300, 330, [120, 120, 140, 140]); x.fill();
+  // cabelo
+  if (o.cabeloTipo !== 'careca' && o.chapeu !== 'capuz') { x.fillStyle = cab; x.beginPath(); x.ellipse(0, -260, 160, 80, 0, Math.PI, 0); x.fill(); x.fillRect(-160, -262, 22, 120); x.fillRect(138, -262, 22, 120); }
+  // olhos (piscam a cada ~3 s)
+  const pis = (t % 3.1) > 2.98 ? 0.15 : 1, aberto = ex === 'medo' || ex === 'surpresa' ? 1.35 : 1;
+  for (const sx of [-1, 1]) {
+    x.fillStyle = '#fff'; x.beginPath(); x.ellipse(sx * 58, -120, 24, 16 * aberto * pis, 0, 0, 7); x.fill();
+    x.fillStyle = PAL.tinta; x.beginPath(); x.arc(sx * 58 + ol, -120, 10 * Math.min(1, pis * 2), 0, 7); x.fill();
+    // sobrancelha
+    const inc = ex === 'bravo' ? -sx * 0.25 : ex === 'medo' ? sx * 0.25 : 0, sy = ex === 'surpresa' || ex === 'medo' ? -172 : -160;
+    x.save(); x.translate(sx * 58, sy); x.rotate(inc); x.fillStyle = cab; x.beginPath(); x.roundRect(-30, -6, 60, 12, 6); x.fill(); x.restore();
+  }
+  // nariz
+  x.strokeStyle = 'rgba(0,0,0,0.25)'; x.lineWidth = 6; x.lineCap = 'round'; x.beginPath(); x.moveTo(0, -95); x.quadraticCurveTo(-12, -55, 6, -50); x.stroke();
+  // barba
+  if (o.barba) { x.fillStyle = o.corBarba || cab; x.beginPath(); x.moveTo(-150, -60); x.quadraticCurveTo(-140, 50, 0, 60); x.quadraticCurveTo(140, 50, 150, -60); x.quadraticCurveTo(80, -20, 0, -25); x.quadraticCurveTo(-80, -20, -150, -60); x.fill(); }
+  // boca
+  x.strokeStyle = '#5a2a22'; x.fillStyle = '#5a2a22'; x.lineWidth = 7;
+  if (ex === 'sorriso') { x.beginPath(); x.arc(0, -20, 34, 0.2, Math.PI - 0.2); x.stroke(); }
+  else if (ex === 'medo' || ex === 'surpresa') { x.beginPath(); x.ellipse(0, -10, 22, 30, 0, 0, 7); x.fill(); }
+  else if (ex === 'bravo') { x.beginPath(); x.moveTo(-30, -5); x.lineTo(30, -5); x.stroke(); }
+  else { x.beginPath(); x.moveTo(-26, -10); x.quadraticCurveTo(0, -2, 26, -10); x.stroke(); }
+  // chapeus
+  if (o.chapeu === 'bone') {
+    x.fillStyle = o.corChapeu || '#2c3a55'; x.beginPath(); x.ellipse(0, -255, 175, 95, 0, Math.PI, 0); x.fill();
+    x.beginPath(); x.roundRect(-195, -262, 390, 34, 16); x.fill();
+    x.fillStyle = PAL.laranja; x.beginPath(); x.arc(0, -300, 22, 0, 7); x.fill(); x.fillStyle = o.corChapeu || '#2c3a55'; x.beginPath(); x.arc(0, -300, 11, 0, 7); x.fill();
+  } else if (o.chapeu === 'touca') {
+    x.fillStyle = o.corChapeu || '#7a4a2a'; x.beginPath(); x.ellipse(0, -250, 170, 110, 0, Math.PI, 0); x.fill(); x.fillRect(-170, -262, 340, 40);
+  } else if (o.chapeu === 'elmo') {
+    x.fillStyle = o.corChapeu || '#8e98a6'; x.beginPath(); x.ellipse(0, -240, 172, 120, 0, Math.PI, 0); x.fill(); x.fillRect(-172, -250, 344, 50);
+    x.fillStyle = 'rgba(255,255,255,0.25)'; x.fillRect(-120, -330, 40, 70);
+  }
+  x.restore();
+}
+// HUD fixo no canto (estilo "DAY 1 / 2:58 AM / NIGHT TRAIN 742"). hud = {dia, hora, ampm, lugar}
+function hud(h, a = 1) {
+  if (!h) return;
+  x.save(); x.globalAlpha = a; x.textAlign = 'left'; x.textBaseline = 'alphabetic';
+  if (h.dia) { x.fillStyle = PAL.vermelho; x.beginPath(); x.arc(62, 152, 9, 0, 7); x.fill(); x.font = '800 34px "Arial Black", system-ui, sans-serif'; x.fillText(String(h.dia).toUpperCase(), 80, 164); }
+  if (h.hora) {
+    x.fillStyle = PAL.creme; x.font = '900 92px "Arial Black", system-ui, sans-serif'; x.fillText(h.hora, 52, 250);
+    if (h.ampm) { const w = x.measureText(h.hora).width; x.font = '900 42px "Arial Black", system-ui, sans-serif'; x.fillText(h.ampm, 62 + w, 250); }
+  }
+  if (h.lugar) { x.fillStyle = 'rgba(244,234,216,0.65)'; x.font = '800 28px system-ui, sans-serif'; x.fillText(String(h.lugar).toUpperCase().split('').join(String.fromCharCode(8202)), 54, 294); }
+  x.restore();
+}
+// Cartoes por cima da cena (fora do zoom). c = {tipo, y (0..1), titulo, sub, texto, itens:[...], marcados:N, cor}
+//   tipo 'nome'  -> plaquinha "JOELL, 45 / NIGHT TRAIN DRIVER"
+//   tipo 'msg'   -> mensagem de radio/celular que se digita sozinha (titulo pequeno + texto)
+//   tipo 'lista' -> lista com caixinhas; os itens vao sendo marcados ao longo da cena (ou 'marcados' fixos)
+//   tipo 'rotulo'-> etiqueta curta (ex.: "120 KM/H", "TOO DANGEROUS")
+function cartao(c, lt) {
+  if (!c) return;
+  const tipo = c.tipo || 'rotulo', a = ease(lt * 6), cy = (c.y ?? 0.2) * H;
+  x.save(); x.globalAlpha = a; x.translate(0, (1 - a) * 30); x.textBaseline = 'middle';
+  if (tipo === 'nome') {
+    x.font = '900 52px "Arial Black", system-ui, sans-serif'; const w1 = x.measureText(c.titulo || '').width;
+    x.font = '800 26px system-ui, sans-serif'; const w2 = x.measureText(String(c.sub || '').toUpperCase()).width + 40;
+    const w = Math.max(w1, w2) + 80, px = W / 2 - w / 2;
+    caixa(px, cy, w, c.sub ? 132 : 92, 'rgba(18,22,34,0.92)', 'rgba(244,234,216,0.55)');
+    x.textAlign = 'center'; x.fillStyle = PAL.creme; x.font = '900 52px "Arial Black", system-ui, sans-serif'; x.fillText(c.titulo || '', W / 2, cy + 50);
+    if (c.sub) { x.fillStyle = 'rgba(244,234,216,0.7)'; x.font = '800 26px system-ui, sans-serif'; x.fillText(String(c.sub).toUpperCase(), W / 2, cy + 100); }
+  } else if (tipo === 'msg') {
+    const px = 90, w = W - 180, txt = c.texto || '', n = Math.floor(clamp(lt * 1.6) * txt.length);
+    x.font = '800 40px system-ui, sans-serif'; const linhas = []; let ln = '';
+    for (const pw of txt.slice(0, n).split(' ')) { const tt = ln ? ln + ' ' + pw : pw; if (x.measureText(tt).width > w - 60 && ln) { linhas.push(ln); ln = pw; } else ln = tt; }
+    linhas.push(ln);
+    const h = 90 + linhas.length * 52;
+    caixa(px, cy, w, h, 'rgba(70,10,14,0.92)', c.cor || PAL.vermelho, 10);
+    x.textAlign = 'left'; x.fillStyle = 'rgba(255,200,190,0.85)'; x.font = '800 26px system-ui, sans-serif'; x.fillText(String(c.titulo || '').toUpperCase(), px + 30, cy + 36);
+    x.fillStyle = '#fff'; x.font = '800 40px system-ui, sans-serif'; linhas.forEach((l, i) => x.fillText(l, px + 30, cy + 84 + i * 52));
+  } else if (tipo === 'lista') {
+    const itens = c.itens || [], px = 120, w = W - 240, h = 96 + itens.length * 66;
+    const marc = c.marcados ?? Math.floor(clamp(lt * 1.15) * (itens.length + 0.999));
+    caixa(px, cy, w, h, 'rgba(14,18,28,0.94)', 'rgba(244,234,216,0.5)');
+    x.textAlign = 'left'; x.fillStyle = PAL.amarelo; x.font = '900 30px "Arial Black", system-ui, sans-serif'; x.fillText(String(c.titulo || '').toUpperCase(), px + 34, cy + 46);
+    itens.forEach((it, i) => {
+      const ok = i < marc, yy = cy + 106 + i * 66;
+      x.strokeStyle = ok ? PAL.verde : 'rgba(244,234,216,0.6)'; x.lineWidth = 4; x.strokeRect(px + 36, yy - 18, 36, 36);
+      if (ok) { x.beginPath(); x.moveTo(px + 42, yy); x.lineTo(px + 52, yy + 10); x.lineTo(px + 68, yy - 12); x.stroke(); }
+      x.fillStyle = ok ? PAL.verde : 'rgba(244,234,216,0.75)'; x.font = '900 42px "Arial Black", system-ui, sans-serif'; x.fillText(it, px + 96, yy + 2);
+    });
+  } else {
+    x.font = '900 40px "Arial Black", system-ui, sans-serif'; const w = x.measureText(String(c.titulo || '').toUpperCase()).width + 60;
+    caixa(W / 2 - w / 2, cy, w, 72, c.fundo || 'rgba(18,22,34,0.92)', c.cor || PAL.creme, 12);
+    x.textAlign = 'center'; x.fillStyle = c.cor || PAL.creme; x.fillText(String(c.titulo || '').toUpperCase(), W / 2, cy + 38);
+  }
+  x.restore();
+}
+
+// PECA-EXEMPLO do estilo flat: close de um personagem (serve para qualquer canal: piloto, campones, monge, chofer).
+// p = {fundo:[c1,c2], luz:[x,y,r,cor], pessoa:{...opcoes de pessoa()}, zoomRosto:0..1 (aproxima no rosto), cartao, hud}
+// Ex.: {"comp":"retrato","p":{"pessoa":{"chapeu":"bone","barba":true,"expressao":"medo"},"cartao":{"tipo":"lista",...}}}
+COMP.retrato = (t, lt, p) => {
+  const f = p.fundo || [PAL.noite2, PAL.noite];
+  fundoFlat(f[0], f[1], p.luz || [0.78, 0.12, 380, 'rgba(255,240,200,0.16)']);
+  // janela/parede de fundo simples para dar lugar
+  x.fillStyle = 'rgba(0,0,0,0.22)'; x.beginPath(); x.roundRect(W * 0.08, H * 0.2, W * 0.84, H * 0.42, 30); x.fill();
+  const zr = rng(p.zoomRosto ?? 0, lt), s = 1.25 + zr * 0.45;
+  // queixo acima de 62% da altura: a legenda fica no peito, nunca em cima da boca
+  pessoa(W / 2, H * 0.53 - zr * 90, s, { ...(p.pessoa || {}), t });
+};
+
 // cartela de texto (regras, "Parte 2 manana", etc.)
 COMP.texto = (t, lt, p) => {
+  if (FLAT()) {
+    // cartela flat: fundo azul-noite liso, 1a linha grande branca (palavra final em vermelho), resto em creme
+    fundoFlat(PAL.noite, PAL.tinta); x.textAlign = 'center'; x.textBaseline = 'middle';
+    (p.lineas || []).forEach((l, i) => {
+      const a = ease((lt * 6) - i * 0.6); x.globalAlpha = a; const y = H * 0.36 + i * 140 + (1 - a) * 30;
+      if (i === 0) {
+        x.font = '900 104px "Arial Black", system-ui, sans-serif'; const ws = l.split(' '), ult = ws.pop(), ini = ws.join(' ');
+        const w0 = ini ? x.measureText(ini + ' ').width : 0, w1 = x.measureText(ult).width, x0 = W / 2 - (w0 + w1) / 2;
+        x.textAlign = 'left'; x.fillStyle = '#ffffff'; if (ini) x.fillText(ini, x0, y); x.fillStyle = CALMO() ? PAL.amarelo : PAL.vermelho; x.fillText(ult, x0 + w0, y); x.textAlign = 'center';
+      } else { x.font = '800 56px system-ui, sans-serif'; x.fillStyle = PAL.creme; x.fillText(l, W / 2, y); }
+      x.globalAlpha = 1;
+    });
+    return;
+  }
   if (CALMO()) {
     // cartela calma: pergaminho escuro, dourado, sem tremor
     const g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#2a1d12'); g.addColorStop(1, '#120c07');
@@ -1371,21 +1526,24 @@ function subtitle(t) {
     for (const ch of chunks) { acc += ch.length; if (pp <= acc) { cur = ch; break; } }
   }
   x.font = '900 76px "Arial Black", Impact, system-ui, sans-serif'; x.textAlign = 'left'; x.textBaseline = 'middle';
+  const FL = FLAT(), UP = w => FL ? w : w.toUpperCase();
+  if (FL) x.font = '900 70px "Arial Black", Impact, system-ui, sans-serif';
   // quebra de linha pelo bloco INTEIRO: as palavras que ainda vao entrar ja tem lugar e o texto nao pula
   const lines = []; let line = [];
-  for (const w of cur.split(' ')) { const test = [...line, w].join(' '); if (x.measureText(test.toUpperCase()).width > W - 300 && line.length) { lines.push(line); line = [w]; } else line.push(w); }
+  for (const w of cur.split(' ')) { const test = [...line, w].join(' '); if (x.measureText(UP(test)).width > W - 300 && line.length) { lines.push(line); line = [w]; } else line.push(w); }
   lines.push(line);
   let n = 0;
   lines.forEach((ws, i) => {
     // zona segura do Shorts: o rodape (nome do canal, Inscrever-se, descricao) cobre de ~72% para baixo
     // e a coluna de botoes ocupa a direita, entao a legenda fica em 62% e puxada para a esquerda
     const l = ws.join(' '), y = H * 0.62 + i * 90, cx = W / 2 - 50;
-    let px = cx - x.measureText(l.toUpperCase()).width / 2;
+    let px = cx - x.measureText(UP(l)).width / 2;
     x.lineWidth = 14; x.strokeStyle = '#000'; x.lineJoin = 'round';
     x.fillStyle = RX && RX.test(l) ? (CALMO() ? '#ffcf6b' : '#ff3a2a') : '#f4efe6';
     for (const w of ws) {
       if (n++ >= nVis) return;
-      const u = w.toUpperCase();
+      const u = UP(w);
+      if (FL) { x.lineWidth = 12; x.fillStyle = RXW && RXW.test(w.replace(/[^\p{L}\p{N}]/gu, '')) ? PAL.amarelo : '#ffffff'; }
       x.strokeText(u, px, y); x.fillText(u, px, y);
       px += x.measureText(u + ' ').width;
     }
@@ -1405,6 +1563,12 @@ function drawScene(i, t) {
   (COMP[sc.comp] || COMP.texto)(t, lt, p);
   x.restore();
   if (p.niebla) fog(t, p.niebla, '120,130,150');
+  if (FLAT()) {
+    // HUD: vale o da cena mais recente que tem "hud" (fica na tela ate outra cena trocar; "hud": false esconde)
+    let hh = null; for (let k = i; k >= 0; k--) if (ST.cenas[k].p && ST.cenas[k].p.hud !== undefined) { hh = ST.cenas[k].p.hud; break; }
+    hud(hh);
+    cartao(p.cartao, lt); if (p.cartao2) cartao(p.cartao2, clamp(lt - 0.25));
+  }
 }
 window.render = function (t) {
   x.setTransform(1, 0, 0, 1, 0, 0); x.globalAlpha = 1;
@@ -1412,15 +1576,19 @@ window.render = function (t) {
   if (g && t < g.dur) drawScene(g.cena, g.t); else drawScene(sceneAt(t), t);
   if (g && t < g.dur && t > g.dur - 0.12) { x.fillStyle = '#000'; x.fillRect(0, 0, W, H); }
   for (const e of ST.eventos) if (e.tipo === 'negro' && t >= e.t && t < e.t + (e.dur || 0.4)) { x.fillStyle = '#000'; x.fillRect(0, 0, W, H); }
-  const fl = CALMO() ? 0 : Math.max(E.pulse(t, 'susto', 0.14), E.pulse(t, 'flash', 0.14)); if (fl > 0) { x.fillStyle = `rgba(200,30,20,${0.4 * fl})`; x.fillRect(0, 0, W, H); }
+  const fl = CALMO() || FLAT() ? 0 : Math.max(E.pulse(t, 'susto', 0.14), E.pulse(t, 'flash', 0.14)); if (fl > 0) { x.fillStyle = `rgba(200,30,20,${0.4 * fl})`; x.fillRect(0, 0, W, H); }
   if (ST.eventos.some(e => e.tipo === 'apagon' && t >= e.t && t < e.t + (e.dur || 1.5)) && rnd(Math.floor(t * 16)) > 0.4) { x.fillStyle = 'rgba(0,0,0,0.75)'; x.fillRect(0, 0, W, H); }
-  vignette(CALMO() ? 0.4 : 0.85);
-  x.globalAlpha = CALMO() ? 0.035 : 0.08; x.drawImage(grains[Math.floor(t * 24) % 6], 0, 0, W, H); x.globalAlpha = 1;
+  if (FLAT()) { const sf = E.pulse(t, 'susto', 0.18); if (sf > 0) { x.fillStyle = `rgba(255,255,255,${0.35 * sf})`; x.fillRect(0, 0, W, H); } vignette(0.35); }
+  else { vignette(CALMO() ? 0.4 : 0.85);
+  x.globalAlpha = CALMO() ? 0.035 : 0.08; x.drawImage(grains[Math.floor(t * 24) % 6], 0, 0, W, H); x.globalAlpha = 1; }
   subtitle(t);
   if (t > ST.dur - 0.8) { x.fillStyle = `rgba(0,0,0,${clamp((t - ST.dur + 0.8) / 0.8)})`; x.fillRect(0, 0, W, H); }
 };
 window.setup = h => {
   ST = h;
   RX = h.destaque && h.destaque.length ? new RegExp(h.destaque.join('|'), 'i') : null;
+  // estilo flat: pinta so as PALAVRAS do destaque (nao a linha inteira)
+  const ws = (h.destaque || []).flatMap(d => d.split(/\s+/)).filter(w => w.length > 2).map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  RXW = ws.length ? new RegExp('^(' + ws.join('|') + ')$', 'iu') : null;
 };
 </script></body></html>

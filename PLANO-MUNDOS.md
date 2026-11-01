@@ -2,7 +2,7 @@
 
 Lista de trabalho que o Kiro ou o Claude seguem, um item por vez, de cima para baixo. Cada item cria o cenário
 (mundo 3D ou peça) E um roteiro de verdade que o usa, para a fila dos canais encher. Status: PENDENTE, FAZENDO
-(com quem e quando), FEITO. Regras: `ROTEIROS.md` e `MUNDOS.md`. Prévia sempre na nuvem (`.github/previa.txt`).
+(com quem e quando), FEITO. Regras: `ROTEIROS.md` e `MUNDOS.md`. Itens 19+ seguem o `ESTILO-VISUAL.md` (visual flat, prioridade do Pedro em 01/11: fazer antes dos itens 9-18). Prévia sempre na nuvem (`.github/previa.txt`).
 Nada aqui gasta narração: o GitHub Actions narra e posta depois, sozinho.
 
 | # | Status | Canal | Cenário novo | Roteiro |
@@ -25,6 +25,11 @@ Nada aqui gasta narração: o GitHub Actions narra e posta depois, sozinho.
 | 16 | PENDENTE | So You Built It | mundo `arrimo` (barranco, muro tomba, água atrás do muro, barbacã e brita, gabião) | YB026 Evolucao "You built a retaining wall" |
 | 17 | PENDENTE | Signal Lost | peça `ilha` (praia de ilha pequena à noite, fogueira, mar, vulto na água) | SV012-SV014 série "Náufrago na ilha" |
 | 18 | PENDENTE | So You Built It | mundo `escavadeira` (Bagger 288, roda de caçambas, esteiras de km) | YB027 Curiosidade "How a bucket-wheel excavator digs nonstop" |
+| 19 | PENDENTE | Hora Muerta | peças flat `f_horizonte`, `f_carretera`, `f_cabina` (ESTILO-VISUAL.md seção 5) | HM série nova no estilo flat (ex.: "El último tren" ou backlog de temas.md), `"visual": "flat"` |
+| 20 | PENDENTE | Hora Muerta | peças flat `f_radio`, `f_foto`, `f_mapa` | usar na mesma série do item 19 ou na seguinte |
+| 21 | PENDENTE | Old Tales | peças flat `f_aldeia`, `f_casa` | CL série nova no estilo flat (ex.: "You wake up as a miller in 1300") |
+| 22 | PENDENTE | Hora Muerta | peças flat `f_pueblo`, `f_rio`, `f_cuarto` | HM série de lenda no estilo flat (Llorona/Siguanaba/Patasola) |
+| 23 | PENDENTE | Old Tales | peças flat `f_mercado`, `f_castelo`, `f_campo`, `f_mosteiro` | CL série nova no estilo flat |
 
 ## Como fazer um item (resumo)
 1. `git pull origin producao`; marque o item como `FAZENDO (kiro|claude, data)` e envie.
