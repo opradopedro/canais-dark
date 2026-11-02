@@ -55,6 +55,8 @@ Marque `[x]` quando o roteiro entrar em `stories/`. Um tema por roteiro, sem rep
 - [ ] How a can opener cuts (roda dentada, lâmina giratória)
 - [x] How a pressure cooker cooks faster (ideia do Pedro no painel: água ferve a ~120 °C sob pressão, válvula de peso; nota 17/20)
 - [x] How soap removes grease and how it is made from used oil (YB036, ideia do Pedro, issue #7, mundo sabao; prioridade: próximo da fila)
+- [x] How an igloo is built and why it stays warm (YB037 Evolucao, ideia do Pedro, issue #6, mundo iglu: monte que o vento leva, blocos em espiral sem forma, porta no chão x túnel mais baixo, banco elevado; prioridade: próximo da fila)
+- [x] How a ballpoint pen works (YB038 Curiosidade, ideia do Pedro, issue #8, mundo caneta: esfera de ~1 mm, borda dobrada, tinta pastosa, furinho de ar, Biro 1938; prioridade: próximo da fila)
  (YB021, mundo panela)
 - [ ] How a plane actually stays up (ideia do Pedro no painel: asa desvia o ar para baixo, ângulo de ataque; cuidado com o mito do "caminho mais longo"; nota 16/20)
 - [ ] How a stapler bends the staple (bigorna, ranhuras)

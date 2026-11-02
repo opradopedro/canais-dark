@@ -21,3 +21,9 @@ Mundo novo `terreno` (ver MUNDOS.md). Estoque anterior: YB021 (Curiosidade).
 | YB033 | Curiosidade | expansive clay | autoral | FEITO |
 | YB034 | Evolucao | fence post | autoral | FEITO |
 | YB035 | Curiosidade | sidewalk control joints | autoral | FEITO |
+
+## Ideias do Pedro (02/11/2026) — por: claude
+| Código | Formato | Tema | Origem | Estado |
+|---|---|---|---|---|
+| YB037 | Evolucao | igloo (mundo iglu) | ideia do Pedro, issue #6 | FEITO |
+| YB038 | Curiosidade | ballpoint pen (mundo caneta) | ideia do Pedro, issue #8 | FEITO |

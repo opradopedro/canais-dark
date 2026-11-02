@@ -1,0 +1,196 @@
+{
+ "codigo": "YB037",
+ "mundo": "iglu",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "ideia do Pedro (issue #6)",
+ "prioridade": "pedro",
+ "ideia": "#6",
+ "titulo": "You built an igloo. It blew away. 🧊 #engineering #shorts",
+ "capa": "YOU BUILT AN IGLOO",
+ "descripcion": "A pile of snow blows away. Blocks laid in a spiral hold themselves up, a sunken tunnel traps the cold air, and a raised bench keeps you in the warm air.\n\nWhat should we build next?\n\n#engineering #igloo #howitworks #science #shorts",
+ "tags": [
+  "engineering",
+  "igloo",
+  "how it works",
+  "snow",
+  "arctic",
+  "survival",
+  "insulation",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "You're stuck in the Arctic at forty below, so you pile up snow for shelter. Problem solved!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But loose snow is soft, and the wind just blows your pile away.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you cut hard blocks from wind-packed snow, and stack them in a circle.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Each row leans in a little more, in a spiral, so every block rests on the one before it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "No frame, no wood. The dome holds itself up.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But your door is at floor level, and all the warm air pours right out.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you dig the entrance lower than the floor. Cold air is heavy, so it stays trapped down there.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And you sleep on a raised snow bench, up where the warm air collects.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Snow is mostly trapped air, so the walls hold in your body heat.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It's forty below outside, and close to freezing inside. Warm enough to survive.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built an igloo. What should we build next?",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "iglu",
+   "p": {
+    "etapa": "monte"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "iglu",
+   "p": {
+    "etapa": "sopra"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "iglu",
+   "p": {
+    "etapa": "blocos"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "iglu",
+   "p": {
+    "etapa": "espiral"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "iglu",
+   "p": {
+    "etapa": "domo"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "iglu",
+   "p": {
+    "etapa": "porta"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "iglu",
+   "p": {
+    "etapa": "tunel"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "iglu",
+   "p": {
+    "etapa": "banco"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "iglu",
+   "p": {
+    "etapa": "isola"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "iglu",
+   "p": {
+    "etapa": "quente"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "iglu",
+   "p": {
+    "etapa": "final"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.5
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.5
+  },
+  {
+   "tipo": "certo",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 10,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "forty",
+  "wind",
+  "blocks",
+  "spiral",
+  "dome",
+  "door",
+  "lower",
+  "bench",
+  "air",
+  "survive"
+ ]
+}
