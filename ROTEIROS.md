@@ -33,12 +33,15 @@ saem a 3 e a 4 e logo depois entra a minha."
 | Pasta | Canal | Formato | Código |
 |---|---|---|---|
 | `signal-lost/` | Signal Lost (EN) | terror de sobrevivência, séries de 3 a 4 partes, 1/dia às 19h NY | `SVnnn` |
-| `old-tales/` | Old Tales (EN) | "You wake up in..." na Idade Média (~1300), 2ª pessoa, fatos reais, calmo e bonito, 1/dia ao meio-dia NY | `CLnnn` |
+| `old-tales/` | Old Tales (EN) | histórias e contos antigos: um dia na época (medieval etc.), soldado (Esparta, Roma...) e mitos (China/Wukong em destaque), 1/dia ao meio-dia NY | `CLnnn` |
 | `hora-muerta/` | Hora Muerta (ES) | terror, séries de 2 partes | `HMnnn` |
 | `so-you-built-it/` | So You Built It (EN) | engenharia 3D, formatos Evolucao e Curiosidade | `YBnnn` |
 
-Regras de cada canal: no `SKILL.md` da pasta. Para o Old Tales: `"tema": "calmo"` e `"piano": 0` sempre, nada
-assustador, e cada fato histórico conferido em fonte confiável (nada de mito).
+Regras de cada canal: no `SKILL.md` da pasta. Old Tales (REGRA do Pedro, 02/11: "não só coisas calmas"):
+`"tema"` = `"calmo"` (um dia na época), `"epico"` (soldado, batalha) ou `"mito"` (mitologia); `"paleta"` = nada
+(medieval), `"grecia"` ou `"china"`; `"piano": 0` sempre; sem susto de terror. Fato histórico conferido em fonte
+confiável; mito fiel à versão tradicional, dizendo a fonte na descrição. Detalhes na seção "LINHA DO CANAL" do
+`old-tales/SKILL.md`.
 
 ## Estilo novo: Hora Muerta, Signal Lost e Old Tales (REGRA do Pedro, 01/11)
 Gráficos limpos e história contada com ritmo, INSPIRADOS num vídeo que o Pedro mandou, mas com identidade própria de
@@ -46,7 +49,7 @@ cada canal: "só se inspire, não faça exatamente igual". Guia completo: **`EST
 
 - **Toda história nova** desses 3 canais é no estilo flat. O fiscal barra quem não for: a partir de HM021, SV012 e
   CL013, o roteiro precisa de `"visual": "flat"` e só pode usar peças `f_*`, `retrato` e `texto`.
-  Signal Lost também leva `"paleta": "sv"`; Old Tales continua com `"tema": "calmo"` e `"piano": 0`.
+  Signal Lost também leva `"paleta": "sv"`; Old Tales leva `"tema"` calmo/epico/mito e `"piano": 0`.
 - **Séries que já começaram no YouTube** terminam no estilo antigo. As que não tinham começado foram para
   `<canal>/descartados/` (01/11): não volte com elas; para reaproveitar, reescreva no estilo flat com código novo.
 - **Peças flat que já existem** (use estas antes de criar outra): `retrato`, `texto`, `f_panteon`, `f_pueblo`,
@@ -94,7 +97,7 @@ O resumo de cada parte tem que bastar para outra pessoa escrever aquela parte se
 
 ## Passo 3: o fiscal (obrigatório antes de cada push)
 `python motor-en/validar_roteiros.py` precisa terminar em `ROTEIROS OK`. Ele pega código repetido, peça de
-cena que não existe, série quebrada, falta de `{when_next}`, Old Tales sem tema calmo. O GitHub roda o mesmo
+cena que não existe, série quebrada, falta de `{when_next}`, Old Tales sem tema calmo/epico/mito. O GitHub roda o mesmo
 fiscal em todo push e a produção diária não usa canal com roteiro quebrado.
 
 ## Enviar

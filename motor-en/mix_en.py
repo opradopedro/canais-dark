@@ -4,7 +4,7 @@ Uso: python motor-en/mix_en.py historia.json voz.wav tempos.json trilha.m4a
 
 Camadas:
   1. voz (mesmo tratamento do motor: sem eco, so tira o ronco e segura os picos)
-  2. musica: tema "calmo" = musica de alaude gravada, baixinha; terror = piano grave do motor (como antes)
+  2. musica: tema "calmo"/"epico"/"mito" (Old Tales) = musica de alaude gravada, baixinha; terror = piano grave do motor (como antes)
   3. ambiente de cada cena (passaros na vila, fogo na casa, zumbido no elevador...), troca suave entre cenas
   4. efeitos pontuais gravados nos eventos (sino, batida na porta, choro...)
 Musica e ambiente abaixam sozinhos enquanto a voz fala (a voz sempre fica na frente).
@@ -60,7 +60,7 @@ def envelope_voz(v, n):
 def main(historia, voz, tempos, saida):
     h = carregar(historia); tm = json.load(open(tempos)); r = resolver(h, tm)
     dur = tm["dur"]; n = int(dur * SR) + SR
-    calmo = h.get("tema") == "calmo"
+    calmo = h.get("tema") in ("calmo", "epico", "mito")  # Old Tales: os 3 temas usam a musica de alaude
     tmp = tempfile.mkdtemp(); vt = os.path.join(tmp, "v.wav")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", voz, "-af",
                     "aresample=44100,highpass=f=70,acompressor=threshold=0.1:ratio=2.5:attack=15:release=200,volume=1.5",

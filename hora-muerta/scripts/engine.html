@@ -612,7 +612,9 @@ COMP.puerta = (t, lt, p) => {
 };
 
 // Modo calmo (canal Old Tales): sem flash vermelho, vinheta leve, legenda dourada. Vem de "tema": "calmo".
-function CALMO() { return !!(ST && ST.tema === 'calmo'); }
+// Old Tales (REGRA do Pedro, 02/11): o canal nao e so calmo. "calmo" = dia a dia, "epico" = batalha/soldado,
+// "mito" = mitologia. Os tres usam a identidade do Old Tales (sem flash vermelho, legenda dourada, cartoes de pergaminho).
+function CALMO() { return !!(ST && ['calmo', 'epico', 'mito'].includes(ST.tema)); }
 
 // ---------- pecas bonitas (Idade Media) ----------
 function casinha(cx, base, s, noite, t, fumaca = true) {
@@ -1346,7 +1348,19 @@ PALS.sv = { fundo1: '#12303a', fundo2: '#04090c', parede: 'rgba(255,255,255,0.04
             destaque: '#4fe3ff', acento: '#ffd166', acento2: '#ff4d5e', perigo: '#ff4d5e', ok: '#4fe3ff', luz: 'rgba(255,209,102,0.16)',
             fonteTit: '900 {s}px "Arial Black", system-ui, sans-serif', fonteTxt: '700 {s}px "Courier New", "DejaVu Sans Mono", monospace' };
 function SV() { return !!(ST && ST.paleta === 'sv'); }
-function TF() { return PALS[SV() ? 'sv' : CALMO() ? 'cl' : 'hm']; }
+// Old Tales por epoca ("paleta" no roteiro): sem paleta = medieval (cl); "grecia" = Esparta/Grecia; "china" = China antiga e mitos.
+// Novas epocas (egito, roma, nordico, japao...) entram aqui como PALS.cl_<nome> e na lista do validador.
+PALS.cl_grecia = { fundo1: '#7a3b22', fundo2: '#2a130b', parede: 'rgba(255,230,190,0.06)', creme: '#f3e2c4', papel: '#f3e2c4', tinta: '#1d1310',
+  destaque: '#f0a43a', acento: '#d9893b', acento2: '#1d1310', perigo: '#a8321f', ok: '#7c8f4a', luz: 'rgba(255,190,120,0.20)',
+  fonteTit: '700 {s}px Georgia, "Times New Roman", serif', fonteTxt: 'italic 400 {s}px Georgia, "Times New Roman", serif' };
+PALS.cl_china = { fundo1: '#24434a', fundo2: '#0e1b1e', parede: 'rgba(255,240,210,0.06)', creme: '#f4e8cf', papel: '#f4e8cf', tinta: '#2b1712',
+  destaque: '#f4c542', acento: '#c8372d', acento2: '#3fa88b', perigo: '#c8372d', ok: '#3fa88b', luz: 'rgba(255,214,120,0.20)',
+  fonteTit: '700 {s}px Georgia, "Times New Roman", serif', fonteTxt: 'italic 400 {s}px Georgia, "Times New Roman", serif' };
+function TF() {
+  if (SV()) return PALS.sv;
+  if (CALMO()) return PALS['cl_' + (ST.paleta || '')] || PALS.cl;
+  return PALS.hm;
+}
 const fonte = (k, s) => TF()[k].replace('{s}', s);
 function fundoFlat(c1, c2, luz) {
   const g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, c1); g.addColorStop(1, c2); x.fillStyle = g; x.fillRect(0, 0, W, H);
@@ -2046,4 +2060,27 @@ window.setup = h => {
   const ws = (h.destaque || []).flatMap(d => d.split(/\s+/)).filter(w => w.length > 2).map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
   RXW = ws.length ? new RegExp('^(' + ws.join('|') + ')$', 'iu') : null;
 };
-</script></body></html>
+</script>
+<!-- PECAS EXTRAS (KIRO-PROMPT.md): um arquivo por pacote em pecas/, uma linha por arquivo, em ordem. Nao apague linhas. -->
+<script src="pecas/00-leia.js"></script>
+<script src="pecas/01-kit-efeitos.js"></script>
+<script src="pecas/02-kit-figuras.js"></script>
+<script src="pecas/03-kit-objetos.js"></script>
+<script src="pecas/04-kit-grafismos.js"></script>
+<script src="pecas/05-china-wukong.js"></script>
+<script src="pecas/06-china-historica.js"></script>
+<script src="pecas/07-grecia-esparta.js"></script>
+<script src="pecas/08-medieval.js"></script>
+<script src="pecas/09-hm-casa.js"></script>
+<script src="pecas/10-hm-lugares.js"></script>
+<script src="pecas/11-hm-criaturas.js"></script>
+<script src="pecas/12-sv-lugares.js"></script>
+<script src="pecas/13-sv-lugares2.js"></script>
+<script src="pecas/14-roma.js"></script>
+<script src="pecas/15-nordico.js"></script>
+<script src="pecas/16-egito.js"></script>
+<script src="pecas/17-japao.js"></script>
+<script src="pecas/18-mitos-gregos.js"></script>
+<script src="pecas/19-china-mitos2.js"></script>
+<!-- FIM PECAS EXTRAS -->
+</body></html>

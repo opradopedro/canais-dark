@@ -32,6 +32,34 @@ Nada aqui gasta narração: o GitHub Actions narra e posta depois, sozinho.
 | 23 | PENDENTE | Old Tales | peças flat `f_mercado`, `f_castelo`, `f_campo`, `f_mosteiro` | CL série nova no estilo flat |
 | 24 | PENDENTE | Signal Lost | peças flat `f_floresta` (trilha/torre de guarda no mato), `f_corredor` (corredor de prédio/hospital) com `"paleta": "sv"` | SV série nova no estilo flat (`f_posto` e `f_onibus` já existem) |
 
+## Pacotes do Kiro (REPERTÓRIO GRANDE, pedido do Pedro em 02/11) — PRIORIDADE sobre a tabela de cima
+Prompt pronto para colar no Kiro: **`KIRO-PROMPT.md`, seção A**. O que cada pacote tem: seção E do mesmo arquivo.
+Cada pacote é um arquivo próprio em `hora-muerta/scripts/pecas/` (já criado e ligado no `engine.html`), então
+vários agentes podem trabalhar ao mesmo tempo, um pacote cada. Faça 01, 02 e 03 primeiro. Os itens 20 a 24 da
+tabela de cima estão dentro dos pacotes 08, 09, 10 e 12 (fazer lá, não aqui).
+
+| Pacote | Status | Arquivo | O que tem |
+|---|---|---|---|
+| 01 | PENDENTE | `pecas/01-kit-efeitos.js` | efeitos e céus (chuva, neve, névoa, fogo, fumaça, flechas, céus, lua) |
+| 02 | PENDENTE | `pecas/02-kit-figuras.js` | figuras de corpo inteiro (30 figurinos: hoplita, samurai, monge, hanfu...) e 20 animais |
+| 03 | PENDENTE | `pecas/03-kit-objetos.js` | objetos, armas e veículos + peça `f_objeto` (close) |
+| 04 | PENDENTE | `pecas/04-kit-grafismos.js` | grafismos: mapa, linha do tempo, título de época, duelo, ficha, contagem, regras |
+| 05 | PENDENTE | `pecas/05-china-wukong.js` | China: Jornada ao Oeste (Wukong e companheiros, dragão, 9 cenários) |
+| 06 | PENDENTE | `pecas/06-china-historica.js` | China antiga real (Chang'an, palácio, Grande Muralha, templo, arrozal, bambu, Lago Oeste) |
+| 07 | PENDENTE | `pecas/07-grecia-esparta.js` | Grécia e Esparta (Esparta, agogê, syssitia, falange, Termópilas, templo, ágora, Egeu) |
+| 08 | PENDENTE | `pecas/08-medieval.js` | medieval (moinho, mercado, castelo, campo, mosteiro, forja, igreja, taverna, cerco, porto, torneio) |
+| 09 | PENDENTE | `pecas/09-hm-casa.js` | Hora Muerta casa (cocina, cuarto, altar, telefono, bano, azotea, vecindad, sala) |
+| 10 | PENDENTE | `pecas/10-hm-lugares.js` | Hora Muerta lugares (rio, carretera, hacienda, iglesia, escuela, milpa, selva, puente, pozo, feria...) |
+| 11 | PENDENTE | `pecas/11-hm-criaturas.js` | Hora Muerta criaturas (llorona, charro negro, cadejo, lechuza, duende, nahual...) + `f_aparicion` |
+| 12 | PENDENTE | `pecas/12-sv-lugares.js` | Signal Lost (floresta, corredor, elevador, motel, garagem, mercado, cabana, farol, névoa, lago gelado) |
+| 13 | PENDENTE | `pecas/13-sv-lugares2.js` | Signal Lost 2 (bunker, shopping, rádio, avião, navio, deserto, estação polar, escritório, subúrbio, ilha) |
+| 14 | PENDENTE | `pecas/14-roma.js` | Roma + paleta `roma` |
+| 15 | PENDENTE | `pecas/15-nordico.js` | nórdico + paleta `nordico` (Thor, Odin, Loki) |
+| 16 | PENDENTE | `pecas/16-egito.js` | Egito + paleta `egito` (Anúbis, pesagem do coração) |
+| 17 | PENDENTE | `pecas/17-japao.js` | Japão + paleta `japao` (Momotaro, kitsune, oni) |
+| 18 | PENDENTE | `pecas/18-mitos-gregos.js` | mitos gregos (Olimpo, labirinto, ciclope, sereias, submundo, Ícaro, Troia) |
+| 19 | PENDENTE | `pecas/19-china-mitos2.js` | mitos chineses 2 (10 sóis, palácio da lua, Nüwa, Pangu, ponte de pegas, Nezha, Mulan) |
+
 ## Como fazer um item (resumo)
 1. `git pull origin producao`; marque o item como `FAZENDO (kiro|claude, data)` e envie.
 2. Leia o `SKILL.md` do canal e um cenário parecido que já existe (copie a estrutura).

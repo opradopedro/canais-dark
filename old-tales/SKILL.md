@@ -1,9 +1,33 @@
 ---
 name: canal-classics
-description: Produz e agenda no YouTube os Shorts do canal Old Tales Retold (ingles) — historias classicas que já existem (Shakespeare, Odisseia, Poe, mitos) narradas e animadas, ao meio-dia de Nova York. Reaproveita o motor do canal-terror.
+description: Produz e agenda no YouTube os Shorts do canal Old Tales (ingles) — historias e contos antigos (dia a dia medieval, um dia de soldado de Esparta, outras epocas) e mitologias (com destaque para a China antiga e Jornada ao Oeste), narrados e animados, ao meio-dia de Nova York. Reaproveita o motor do canal-terror.
 ---
 
-# Canal Old Tales Retold (classicos narrados, ingles)
+# Canal Old Tales (historias antigas e mitos, ingles)
+
+## LINHA DO CANAL (REGRA do Pedro, 02/11/2026) — vale por cima de tudo abaixo
+
+"Não quero só coisas calmas no Old Tales, mas histórias ou contos antigos." O canal conta **histórias e contos
+antigos**, em 3 frentes, revezando entre elas (não fazer 2 séries seguidas da mesma frente):
+
+| Frente | `"tema"` | O que é | Exemplos |
+|---|---|---|---|
+| **Um dia na época** | `"calmo"` | "You wake up as..." em 2ª pessoa, dia a dia real de uma época, fatos conferidos | camponês em 1300, cervejeira, moleiro, monge copista, peregrino |
+| **Soldado / vida dura** | `"epico"` | um dia (ou uma campanha) de quem viveu a guerra ou um treino duro, fatos conferidos | soldado de Esparta (agogê, syssitia, Termópilas), legionário romano, arqueiro em Agincourt, viking num ataque, samurai, guarda da Grande Muralha |
+| **Mitos e lendas** | `"mito"` | contos de mitologia contados como caso, fiéis à versão tradicional | **China (favorito do Pedro):** Sun Wukong / Jornada ao Oeste, Nezha, Houyi e Chang'e, Nüwa, Pangu, Cobra Branca, Vaqueiro e Tecelã; também grego, nórdico, egípcio, japonês |
+
+- **Paleta por época** (`"paleta"` no roteiro): sem paleta = medieval (verde/pergaminho); `"grecia"` = Esparta,
+  Grécia e mitos gregos (terracota e preto, de vaso grego); `"china"` = China antiga e mitos chineses (jade, laca
+  vermelha, dourado). Época nova (Roma, Egito, nórdico, Japão) = paleta nova `PALS.cl_<nome>` no motor + validador.
+- **Tom:** pode ter tensão, batalha, monstro e morte, sempre contados como um contador de histórias (voz Algieba,
+  quente), sem sangue explícito, sem susto de terror (sem flash vermelho, sem grito). O que fica é a sensação de
+  "eu estive lá". Todas as frentes seguem o estilo flat e o jeito de contar do `ESTILO-VISUAL.md`.
+- **Fatos:** "Um dia na época" e "Soldado" = fatos históricos conferidos em fonte confiável (anote a fonte no
+  `series.md`). "Mitos" = fiel à versão tradicional (ex.: *Jornada ao Oeste*, de Wu Cheng'en, séc. XVI); diga na
+  descrição de onde vem o conto. Nunca invente "fato" histórico.
+- **Mito em 2ª pessoa funciona:** "You are a stone monkey. You were born from a rock." Ou narrado em 3ª pessoa
+  como caso. Escolha um e mantenha na série.
+- Backlog com ideias nas 3 frentes: `references/temas.md`. Cenários que faltam: `KIRO-PROMPT.md` (raiz).
 
 Canal faceless de Shorts em ingles que conta **historias que ja existem**: tragedias de Shakespeare,
 cantos da Odisseia, contos de Poe, mitos gregos e nordicos, lendas arturianas. A historia nao e

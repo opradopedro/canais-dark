@@ -9,7 +9,7 @@ Sai com erro (e o GitHub fica vermelho) se achar:
   - peca de cena que nao existe no motor (engine.html)
   - serie quebrada (parte faltando, "anterior" errado)
   - parte que promete a seguinte sem o marcador {when_next}
-  - Old Tales sem "tema": "calmo"
+  - Old Tales sem "tema" calmo/epico/mito ou com paleta de epoca que nao existe
 """
 import glob, json, os, re, sys
 
@@ -23,12 +23,25 @@ CANAIS = {
 }
 
 # a partir destes codigos (inclusive) so vale estilo flat; os anteriores sao series do estilo antigo
+TEMAS_CL = {"calmo", "epico", "mito"}
+PALETAS_CL = {None, "grecia", "china", "roma", "nordico", "egito", "japao"}  # roma/nordico/egito/japao: PALS.cl_<nome> vem dos pacotes 14-17 (KIRO-PROMPT.md)
 FLAT_DESDE = {"hora-muerta": 21, "signal-lost": 12, "old-tales": 13}
 PECAS_FLAT_FIXAS = {"retrato", "texto"}
 
 
+def _motor_txt(engine):
+    """engine.html + os arquivos de pecas/ que ele carrega com <script src> (pecas extras do Kiro)."""
+    txt = open(engine, encoding="utf-8").read()
+    base = os.path.dirname(engine)
+    for src in re.findall(r'<script src="(pecas/[^"]+)"', txt):
+        arq = os.path.join(base, src)
+        if os.path.exists(arq):
+            txt += "\n" + open(arq, encoding="utf-8").read()
+    return txt
+
+
 def pecas(engine):
-    txt = open(os.path.join(RAIZ, engine), encoding="utf-8").read()
+    txt = _motor_txt(os.path.join(RAIZ, engine))
     return set(re.findall(r"COMP\.(\w+)\s*=", txt))
 
 
@@ -81,8 +94,11 @@ def conferir(canal, engine):
         for e in h.get("eventos") or []:
             if isinstance(e.get("linea"), int) and not 0 <= e["linea"] < len(lineas):
                 erros.append(f"{n}: evento '{e.get('tipo')}' aponta para a fala {e['linea']}, que nao existe")
-        if canal == "old-tales" and h.get("tema") != "calmo":
-            erros.append(f"{n}: Old Tales precisa de \"tema\": \"calmo\" (sem flash vermelho, legenda dourada)")
+        # REGRA do Pedro (02/11): Old Tales nao e so calmo. tema = calmo (dia a dia), epico (soldado, batalha) ou mito
+        if canal == "old-tales" and h.get("tema") not in TEMAS_CL:
+            erros.append(f"{n}: Old Tales precisa de \"tema\" entre {sorted(TEMAS_CL)} (identidade do canal: legenda dourada, sem flash vermelho)")
+        if canal == "old-tales" and h.get("paleta") not in PALETAS_CL:
+            erros.append(f"{n}: paleta '{h.get('paleta')}' nao existe no Old Tales; use uma de {sorted(p for p in PALETAS_CL if p)} ou nenhuma (medieval)")
         # REGRA do Pedro (01/11): historia nova de Hora Muerta, Signal Lost e Old Tales so no estilo flat
         num = int(re.sub(r"\D", "", cod) or 0)
         if canal in FLAT_DESDE and num >= FLAT_DESDE[canal]:
@@ -112,8 +128,35 @@ def conferir(canal, engine):
     return len(hs), erros, avisos
 
 
+def conferir_pecas_js():
+    """Pecas extras do Kiro (hora-muerta/scripts/pecas/*.js): todas carregadas pelo engine.html e sem erro de sintaxe."""
+    import shutil, subprocess
+    erros = []
+    eng = os.path.join(RAIZ, "hora-muerta", "scripts", "engine.html")
+    if not os.path.exists(eng):
+        return erros
+    carregadas = set(re.findall(r'<script src="pecas/([^"]+)"', open(eng, encoding="utf-8").read()))
+    node = shutil.which("node")
+    for arq in sorted(glob.glob(os.path.join(RAIZ, "hora-muerta", "scripts", "pecas", "*.js"))):
+        nome = os.path.basename(arq)
+        if nome not in carregadas:
+            erros.append(f"pecas/{nome}: falta a linha <script src=\"pecas/{nome}\"></script> no bloco PECAS EXTRAS do engine.html")
+        if node:
+            r = subprocess.run([node, "--check", arq], capture_output=True, text=True)
+            if r.returncode:
+                erros.append(f"pecas/{nome}: erro de JavaScript: {next((l for l in r.stderr.splitlines() if 'Error' in l), r.stderr.strip()[:200])}")
+    for nome in carregadas - {os.path.basename(a) for a in glob.glob(os.path.join(RAIZ, "hora-muerta", "scripts", "pecas", "*.js"))}:
+        erros.append(f"engine.html carrega pecas/{nome}, mas o arquivo nao existe")
+    return erros
+
+
 def main():
     total_erros = 0
+    ej = conferir_pecas_js()
+    print(f"pecas extras (js): {len(ej)} erro(s)")
+    for e in ej:
+        print("  ERRO  ", e)
+    total_erros += len(ej)
     for canal, engine in CANAIS.items():
         if not os.path.isdir(os.path.join(RAIZ, canal, "stories")):
             continue

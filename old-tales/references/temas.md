@@ -1,4 +1,51 @@
-# Backlog de temas — Old Tales Retold
+# Backlog de temas — Old Tales
+
+## NOVO (REGRA do Pedro, 02/11/2026): 3 frentes, revezando — ver "LINHA DO CANAL" no SKILL.md
+Tudo no estilo flat. Ao escrever uma série, marque `[x]`. Peças entre parênteses: as que o Kiro vai criar
+(`KIRO-PROMPT.md`); até existirem, use `f_aldeia`, `f_casa`, `retrato`, `texto`.
+
+### Frente 1 — Um dia na época (`"tema": "calmo"`)
+- [ ] Aprendiz do moleiro, 1300 (`f_moinho`)
+- [ ] Monge copista no scriptorium: tinta de galha, pergaminho de pele, iluminura com ouro (`f_mosteiro`)
+- [ ] Dia de feira: pedágio, pesos e medidas, pelourinho (`f_mercado`)
+- [ ] Colheita de agosto: foice, respiga, dízimo (`f_campo`)
+- [ ] Peregrino a Santiago: concha, hospedarias, caminho (`f_estrada_antiga`, `f_igreja`)
+- [ ] Um dia em Roma antiga: ínsula, termas, pão grátis (`f_roma_rua`, `f_termas`) — paleta nova `roma`
+- [ ] Um dia no Egito: construtor das pirâmides, cerveja como salário (`f_nilo`, `f_piramide`) — paleta nova `egito`
+- [ ] Um dia na Chang'an da dinastia Tang: mercado do leste e oeste, toque de recolher com tambor (`f_china_rua`) — paleta `china`
+
+### Frente 2 — Soldado / vida dura (`"tema": "epico"`)
+- [ ] **Um dia de um menino espartano**: agogê aos 7 anos, um manto por ano, comida pouca de propósito, roubar sem ser pego (Plutarco, *Vida de Licurgo*) (`f_esparta`, `f_quartel`) — paleta `grecia`
+- [ ] **Hoplita espartano**: syssitia e caldo negro, escudo "com ele ou sobre ele", falange (`f_falange`)
+- [ ] **Termópilas, 480 a.C.**: 300 espartanos + aliados, o desfiladeiro, Efialtes, "lutaremos à sombra" (Heródoto, livro 7) (`f_desfiladeiro`)
+- [ ] Legionário romano: marcha de 30 km com 30 kg, acampamento todo dia (`f_acampamento_romano`) — paleta `roma`
+- [ ] Arqueiro inglês em Agincourt, 1415 (`f_campo`, `f_acampamento`)
+- [ ] Viking num ataque, 793 em Lindisfarne (`f_drakkar`, `f_mosteiro`) — paleta nova `nordico`
+- [ ] Guarda da Grande Muralha: torres de fumaça de sinal (`f_muralha_china`) — paleta `china`
+- [ ] Samurai no Japão feudal (`f_castelo_japao`) — paleta nova `japao`
+- [ ] Cerco de castelo, 1300: trabuco, fome, minas sob o muro (`f_cerco`)
+
+### Frente 3 — Mitos e lendas (`"tema": "mito"`) — China em destaque (pedido do Pedro)
+- [ ] **Sun Wukong, série longa (Jornada ao Oeste, Wu Cheng'en)**: nasce da pedra / Montanha das Flores e Frutas e
+  a cachoeira da Cortina d'Água / aprende as 72 transformações e a nuvem salto / rouba o bastão do Rei Dragão do Mar
+  do Leste / apaga o nome do Livro da Morte / come os pêssegos da imortalidade / "Grande Sábio Igual ao Céu" e o caos
+  no Céu de Jade / a aposta com Buda: a palma da mão / preso 500 anos sob a montanha / Tang Sanzang e a faixa de ouro
+  (`f_montanha_flores`, `f_cachoeira`, `f_palacio_dragao`, `f_ceu_jade`, `f_pomar_pessegos`, `f_palma_buda`, `wukong`)
+- [ ] Os companheiros: Zhu Bajie (porco) e Sha Wujing; a Montanha Flamejante e o leque de folha de bananeira
+- [ ] Nezha contra o Rei Dragão (`f_palacio_dragao`, `f_mar_china`)
+- [ ] Houyi e os 10 sóis; Chang'e na lua (`f_ceu_china`, `f_lua_china`)
+- [ ] Nüwa conserta o céu e cria as pessoas de barro (`f_ceu_china`)
+- [ ] Pangu separa o céu e a terra (`f_ovo_cosmico`)
+- [ ] Lenda da Cobra Branca (Lago Oeste, Pagode Leifeng) (`f_lago_china`)
+- [ ] O Vaqueiro e a Tecelã: a ponte de pegas (`f_ceu_china`)
+- [ ] Hua Mulan (Balada de Mulan) — frente 2 + 3
+- [ ] Mitos gregos: Orfeu, Ícaro, Teseu e o Minotauro, Perseu e Medusa, Odisseia (ciclope, sereias) — paleta `grecia`
+- [ ] Nórdicos: Thor e a pesca da serpente, Ragnarok — paleta `nordico`
+- [ ] Egípcios: Osíris e Set, a pesagem do coração — paleta `egito`
+- [ ] Japoneses: Momotaro, Urashima Taro — paleta `japao`
+
+---
+## Histórico (antes de 02/11)
 
 Marque `[x]` quando a serie estiver escrita em `stories/`. Todas as obras abaixo estao em
 **dominio publico**.

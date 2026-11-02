@@ -60,7 +60,9 @@ def gemini(prompt):
 
 
 def pecas():
-    txt = open(os.path.join(RAIZ, "hora-muerta", "scripts", "engine.html"), encoding="utf-8").read()
+    sys.path.insert(0, os.path.join(RAIZ, "motor-en"))
+    from validar_roteiros import _motor_txt  # engine.html + pecas/*.js
+    txt = _motor_txt(os.path.join(RAIZ, "hora-muerta", "scripts", "engine.html"))
     return sorted(set(re.findall(r"COMP\.(\w+)\s*=", txt)))
 
 

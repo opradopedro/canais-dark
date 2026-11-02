@@ -92,3 +92,82 @@ Só com `"visual": "flat"` no roteiro. Nome `f_<nome>` (exceto o exemplo `retrat
 - `forja` (Old Tales, calmo): ferreiro, fornalha, bigorna, cocho. p.faiscas, p.vapor (ferradura na agua), p.malha (cota de malha + barril de areia). Usada em CL004-006.
 - `oso` (Hora Muerta): quintal à noite com cerca e bicicleta, urso polar DE PÉ com olhos vermelhos. p.dist [a,b] (1 longe, 0 colado), p.foto (moldura de foto de celular com data p.fecha), p.bici. Eventos acerca, susto. Usada em HM015-016.
 - `mina` (Signal Lost): galeria de mina em perspectiva com quadros de madeira, trilho, água escura que sobe, luz do capacete. p.agua [a,b], p.lampada, p.parpadeo, p.fundo [a,b] (luz debaixo da água no fundo), p.pisca, p.cima (luz de resgate de cima), p.burbujas. Evento luz. Usada em SV009-011.
+
+## Peças dos pacotes do Kiro (`hora-muerta/scripts/pecas/`, ver KIRO-PROMPT.md)
+Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não se atrapalham).
+
+### Pacote 01 (01-kit-efeitos)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 02 (02-kit-figuras)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 03 (03-kit-objetos)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 04 (04-kit-grafismos)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 05 (05-china-wukong)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 06 (06-china-historica)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 07 (07-grecia-esparta)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 08 (08-medieval)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 09 (09-hm-casa)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 10 (10-hm-lugares)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 11 (11-hm-criaturas)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 12 (12-sv-lugares)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 13 (13-sv-lugares2)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 14 (14-roma)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 15 (15-nordico)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 16 (16-egito)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 17 (17-japao)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 18 (18-mitos-gregos)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|
+
+### Pacote 19 (19-china-mitos2)
+| Peça/função | O que mostra | Parâmetros | Serve para |
+|---|---|---|---|

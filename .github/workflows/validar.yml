@@ -6,7 +6,7 @@ name: Fiscal dos roteiros
 on:
   push:
     branches: [producao]
-    paths: ["*/stories/**", "hora-muerta/scripts/engine.html", "motor-en/validar_roteiros.py"]
+    paths: ["*/stories/**", "hora-muerta/scripts/engine.html", "hora-muerta/scripts/pecas/**", "motor-en/validar_roteiros.py"]
   pull_request:
     paths: ["*/stories/**"]
   workflow_dispatch:

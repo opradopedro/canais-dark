@@ -24,7 +24,12 @@ Tudo continua de custo zero: canvas 2D no `hora-muerta/scripts/engine.html`, ren
 
 ## 2. Identidade de cada canal (o que é NOSSO)
 
-O motor escolhe pelo roteiro: Old Tales tem `"tema": "calmo"`; Signal Lost tem `"paleta": "sv"`; o resto é Hora Muerta.
+O motor escolhe pelo roteiro: Old Tales tem `"tema"` = `"calmo"`, `"epico"` ou `"mito"`; Signal Lost tem `"paleta": "sv"`; o resto é Hora Muerta.
+
+**Old Tales por época (02/11):** o canal agora vai além de 1300 (dia a dia, soldados, mitos). `"paleta"` escolhe a cor:
+sem paleta = "Pergaminho" medieval (abaixo); `"grecia"` = terracota `#7a3b22` → `#2a130b`, destaque laranja de vaso
+`#f0a43a`, preto `#1d1310`; `"china"` = jade-noite `#24434a` → `#0e1b1e`, destaque dourado `#f4c542`, laca vermelha
+`#c8372d`, jade `#3fa88b`. Mesma faixa de pergaminho, mesmas fontes serifadas: muda a cor e os cenários.
 
 **Signal Lost — "Sinal"**: fundo azul-petróleo `#12303a` → `#04090c`, destaque ciano `#4fe3ff`, luz de sódio `#ffd166`,
 vermelho `#ff4d5e`; HUD no canto ESQUERDO com barras de sinal do celular ("NO SIGNAL" piscando quando `sinal` = 0),
@@ -109,7 +114,8 @@ Nunca abaixo de 0.55 (legenda e botões do Shorts). Corte no meio de uma linha: 
 
 ## 6. Regras para criar uma peça flat nova (Kiro)
 
-1. `git pull origin producao`. Nome `COMP.f_<nome>`, no bloco ESTILO FLAT, antes de `COMP.texto`. Nunca altere peça
+1. `git pull origin producao`. Nome `COMP.f_<nome>`. Desde 02/11 a peça nova vai no arquivo do pacote em
+   `hora-muerta/scripts/pecas/NN-nome.js` (ver `KIRO-PROMPT.md`), não mais dentro do `engine.html`. Nunca altere peça
    que já existe.
 2. Comentário acima da peça: todos os `p.` aceitos e um exemplo de cena.
 3. Cores só de `TF()`; formas arredondadas; cor chapada; uma sombra suave. Sem `grains`, `fog` preto, `vignette`
@@ -123,7 +129,7 @@ Nunca abaixo de 0.55 (legenda e botões do Shorts). Corte no meio de uma linha: 
    mesma família dos exemplos, e NÃO da referência.
 7. Linha na tabela do `MUNDOS.md`, `python motor-en/validar_roteiros.py` = `ROTEIROS OK`, commit e push na `producao`.
 
-## 7. Peças flat a criar (lista de trabalho, na ordem — também em `PLANO-MUNDOS.md`, itens 19 a 23)
+## 7. Peças flat a criar — LISTA COMPLETA AGORA NO `KIRO-PROMPT.md` (19 pacotes, 02/11). Abaixo, a lista antiga (já incluída lá)
 
 **Hora Muerta (lendas e regras latinas, espanhol)**
 - ~~`f_panteon`~~ e ~~`f_pueblo`~~ — FEITAS (01/11). Modelo de série completa: `hora-muerta/stories/021-reglas-panteon-1.json` e `022-...-2.json`.
@@ -134,7 +140,7 @@ Nunca abaixo de 0.55 (legenda e botões do Shorts). Corte no meio de uma linha: 
 - `f_telefono` — telefone de disco ou celular em close tocando; nome na tela (`p.quien`).
 - `f_altar` — altar de Día de Muertos com fotos, cempasúchil e velas; `p.foto` que muda.
 
-**Old Tales (1300, inglês, calmo)**
+**Old Tales (1300, inglês) — mais épocas e mitos no `KIRO-PROMPT.md`**
 - `f_aldeia` — vila de lado: casas de palha, fumaça, igreja, campo; `p.ceu` muda o céu; camponeses andando.
 - `f_casa` — interior: fogo no chão, fumaça pelo telhado, cama de palha, panela, galinhas.
 - `f_moinho` — moinho d'água com roda girando, sacos de grão, pedras de moer em corte.
