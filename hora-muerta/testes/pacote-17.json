@@ -1,0 +1,33 @@
+{
+ "codigo": "PKG17",
+ "_obs": "Teste do pacote 17 (Japao). Fora de stories/.",
+ "visual": "flat",
+ "tema": "epico",
+ "paleta": "japao",
+ "titulo": "teste pacote 17 - japao",
+ "lineas": [
+  {"texto": "El castillo.", "pausa": 0.3},
+  {"texto": "La aldea.", "pausa": 0.3},
+  {"texto": "El torii en el agua.", "pausa": 0.3},
+  {"texto": "El dojo.", "pausa": 0.3},
+  {"texto": "El mar.", "pausa": 0.3},
+  {"texto": "El palacio del dragon.", "pausa": 0.3},
+  {"texto": "Momotaro.", "pausa": 0.3},
+  {"texto": "El Oni.", "pausa": 0.3},
+  {"texto": "El Kitsune.", "pausa": 0.3},
+  {"texto": "El Tanuki.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_castelo_japao", "p": {}},
+  {"linea": 1, "comp": "f_vila_japao", "p": {}},
+  {"linea": 2, "comp": "f_torii", "p": {}},
+  {"linea": 3, "comp": "f_dojo", "p": {}},
+  {"linea": 4, "comp": "f_mar_japao", "p": {}},
+  {"linea": 5, "comp": "f_palacio_dragao_mar", "p": {}},
+  {"linea": 6, "comp": "f_dojo", "p": {"pers": "momotaro"}},
+  {"linea": 7, "comp": "f_dojo", "p": {"pers": "oni"}},
+  {"linea": 8, "comp": "f_dojo", "p": {"pers": "kitsune"}},
+  {"linea": 9, "comp": "f_dojo", "p": {"pers": "tanuki"}}
+ ],
+ "destaque": []
+}

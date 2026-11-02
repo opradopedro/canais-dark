@@ -56,7 +56,7 @@ tabela de cima estão dentro dos pacotes 08, 09, 10 e 12 (fazer lá, não aqui).
 | 14 | FEITO (kiro, 02/11) | `pecas/14-roma.js` | Roma + paleta `roma` (rua, coliseu, acampamento, termas, forum, estrada, domus) |
 | 15 | FEITO (kiro, 02/11) | `pecas/15-nordico.js` | nórdico + paleta `nordico` (fiorde, salão, aldeia, ataque, yggdrasil, bifrost, mar norte + Thor, Odin, Loki) |
 | 16 | FEITO (kiro, 02/11) | `pecas/16-egito.js` | Egito + paleta `egito` (nilo, piramide, vila, tumba, templo, julgamento + Anúbis, Osiris, Rá) |
-| 17 | PENDENTE | `pecas/17-japao.js` | Japão + paleta `japao` (Momotaro, kitsune, oni) |
+| 17 | FEITO (kiro, 02/11) | `pecas/17-japao.js` | Japão + paleta `japao` (castelo, vila, torii, dojo, mar, palacio dragao + Momotaro, Oni, Kitsune, Tanuki) |
 | 18 | PENDENTE | `pecas/18-mitos-gregos.js` | mitos gregos (Olimpo, labirinto, ciclope, sereias, submundo, Ícaro, Troia) |
 | 19 | PENDENTE | `pecas/19-china-mitos2.js` | mitos chineses 2 (10 sóis, palácio da lua, Nüwa, Pangu, ponte de pegas, Nezha, Mulan) |
 

@@ -338,6 +338,15 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 17 (17-japao)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `PALS.cl_japao` | paleta (vermelho torii, sumi-e branco/preto, rosa sakura, verde) | — | Old Tales Japão (`"paleta":"japao"`) |
+| `COMP.f_castelo_japao` | castelo de telhados em camadas, topo dourado, cerejeiras | — | castelo |
+| `COMP.f_vila_japao` | montanha nevada, arrozal, casas de madeira, ponte vermelha | — | vila |
+| `COMP.f_torii` | portão vermelho na água com reflexo (Itsukushima) | — | torii |
+| `COMP.f_dojo` | shoji em grade, tatame, samurai treinando; `p.pers` opcional | `p.pers` momotaro/oni/kitsune/tanuki | dojo |
+| `COMP.f_mar_japao` | onda grande estilizada própria (não Hokusai), barco de pesca | — | mar |
+| `COMP.f_palacio_dragao_mar` | palácio submerso, bolhas, tartaruga (Urashima Taro) | — | palácio do dragão |
+| `momotaro` / `oni` / `kitsune` / `tanuki` | personagens (oni sem gore) | `o` (oni: `o.cor`) | personagens |
+| `p17_sakura` / `p17_telhado` | cerejeira e telhado curvo (helpers) | — | reuso interno |
 
 ### Pacote 18 (18-mitos-gregos)
 | Peça/função | O que mostra | Parâmetros | Serve para |
