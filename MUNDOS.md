@@ -269,6 +269,17 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 12 (12-sv-lugares)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `COMP.f_floresta` | trilha no mato à noite, feixe de lanterna, árvores altas, torre de guarda, olhos | `p.torre`, `p.ojos` | floresta Signal Lost |
+| `COMP.f_corredor` | corredor de hospital/prédio, fluorescente piscando, EXIT, maca, vulto no fim | `p.pisca`, `p.vulto` 0..1 | corredor |
+| `COMP.f_elevador` | elevador, display de andar que muda sozinho, porta abrindo | `p.andar` 0..1, `p.abre` 0..1 | elevador |
+| `COMP.f_motel` | motel: neon que falha, portas numeradas, máquina de gelo, carro | — | motel de estrada |
+| `COMP.f_garagem` | estacionamento: pilares A1/B2..., luz piscando, carro com alarme | `p.alarme` | garagem subterrânea |
+| `COMP.f_mercado_noite` | supermercado 24h vazio, corredores, freezer, carrinho sozinho | — | loja 24h |
+| `COMP.f_cabana` | cabana na neve: janela acesa, chaminé, pegadas chegando à porta | `p.pegadas` | cabana |
+| `COMP.f_farol` | farol na costa: feixe girando, ondas, barco ao longe | `p.barco` | farol |
+| `COMP.f_estrada_nevoa` | estrada reta com névoa, faróis, placa MILE, figura no acostamento | — | estrada na névoa |
+| `COMP.f_lago_gelado` | lago congelado, rachaduras, algo sob o gelo | `p.racha` 0..1 | lago gelado |
+| `p12_hud` | HUD de sinal do celular no canto (marca do canal) | `barras` 0..4 | assinatura SV |
 
 ### Pacote 13 (13-sv-lugares2)
 | Peça/função | O que mostra | Parâmetros | Serve para |

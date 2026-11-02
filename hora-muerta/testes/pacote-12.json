@@ -1,0 +1,32 @@
+{
+ "codigo": "PKG12",
+ "_obs": "Teste do pacote 12 (Signal Lost lugares). Fora de stories/.",
+ "visual": "flat",
+ "paleta": "sv",
+ "titulo": "test package 12 - signal lost places",
+ "lineas": [
+  {"texto": "The forest trail.", "pausa": 0.3},
+  {"texto": "The hospital corridor.", "pausa": 0.3},
+  {"texto": "The elevator.", "pausa": 0.3},
+  {"texto": "The roadside motel.", "pausa": 0.3},
+  {"texto": "The parking garage.", "pausa": 0.3},
+  {"texto": "The 24h store.", "pausa": 0.3},
+  {"texto": "The cabin in the snow.", "pausa": 0.3},
+  {"texto": "The lighthouse.", "pausa": 0.3},
+  {"texto": "The foggy road.", "pausa": 0.3},
+  {"texto": "The frozen lake.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_floresta", "p": {"torre": true, "ojos": true}},
+  {"linea": 1, "comp": "f_corredor", "p": {"pisca": true, "vulto": 0.8}},
+  {"linea": 2, "comp": "f_elevador", "p": {"andar": 1, "abre": 0.6}},
+  {"linea": 3, "comp": "f_motel", "p": {}},
+  {"linea": 4, "comp": "f_garagem", "p": {"alarme": true}},
+  {"linea": 5, "comp": "f_mercado_noite", "p": {}},
+  {"linea": 6, "comp": "f_cabana", "p": {"pegadas": true}},
+  {"linea": 7, "comp": "f_farol", "p": {"barco": true}},
+  {"linea": 8, "comp": "f_estrada_nevoa", "p": {}},
+  {"linea": 9, "comp": "f_lago_gelado", "p": {"racha": 0.8}}
+ ],
+ "destaque": []
+}
