@@ -1,0 +1,33 @@
+{
+ "codigo": "PKG19",
+ "_obs": "Teste do pacote 19 (china mitos 2). Fora de stories/.",
+ "visual": "flat",
+ "tema": "mito",
+ "paleta": "china",
+ "titulo": "teste pacote 19 - china mitos 2",
+ "lineas": [
+  {"texto": "Los diez soles.", "pausa": 0.3},
+  {"texto": "El palacio de la luna.", "pausa": 0.3},
+  {"texto": "Nuwa repara el cielo.", "pausa": 0.3},
+  {"texto": "Pangu.", "pausa": 0.3},
+  {"texto": "El puente de urracas.", "pausa": 0.3},
+  {"texto": "Nezha.", "pausa": 0.3},
+  {"texto": "Mulan en casa.", "pausa": 0.3},
+  {"texto": "Mulan en el ejercito.", "pausa": 0.3},
+  {"texto": "Houyi.", "pausa": 0.3},
+  {"texto": "Chang'e.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_dez_sois", "p": {"flechas": 0.5}},
+  {"linea": 1, "comp": "f_palacio_lua", "p": {}},
+  {"linea": 2, "comp": "f_nuwa", "p": {"conserta": 0.6}},
+  {"linea": 3, "comp": "f_pangu", "p": {}},
+  {"linea": 4, "comp": "f_ponte_pegas", "p": {"encontro": true}},
+  {"linea": 5, "comp": "f_nezha", "p": {}},
+  {"linea": 6, "comp": "f_mulan", "p": {"cena": "casa"}},
+  {"linea": 7, "comp": "f_mulan", "p": {"cena": "exercito"}},
+  {"linea": 8, "comp": "f_palacio_lua", "p": {"pers": "houyi"}},
+  {"linea": 9, "comp": "f_palacio_lua", "p": {"pers": "change"}}
+ ],
+ "destaque": []
+}

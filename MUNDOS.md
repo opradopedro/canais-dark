@@ -364,3 +364,13 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 19 (19-china-mitos2)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `COMP.f_dez_sois` | 10 sóis-pássaro, terra rachando, Houyi com arco | `p.flechas` 0..1 | mito dos 10 sóis |
+| `COMP.f_palacio_lua` | palácio na lua, Chang'e, coelho de jade, osmanthus; `p.pers` opcional | `p.pers` houyi/change/... | palácio da lua |
+| `COMP.f_nuwa` | céu rachado, Nüwa serpente-mulher, pedras de 5 cores, gente de barro | `p.conserta` 0..1 | mito de Nüwa |
+| `COMP.f_pangu` | ovo cósmico, Pangu separando céu e terra | — | mito de Pangu |
+| `COMP.f_ponte_pegas` | Via Láctea, ponte de pegas, Vaqueiro e Tecelã | `p.encontro` | Qixi |
+| `COMP.f_nezha` | Nezha nas rodas de fogo, faixa, mar revolto, dragão | — | Nezha |
+| `COMP.f_mulan` | Mulan no espelho (casa) ou montada no exército (norte) | `p.cena` casa/exercito | Mulan |
+| `houyi` / `change` / `nuwa` / `nezha` / `mulan` / `coelhoJade` | personagens míticos | `o` | personagens |
+| `p19_solAve` | sol-pássaro (corvo de 3 pernas) helper | `cx, cy, r, vivo` | reuso interno |
+

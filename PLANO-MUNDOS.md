@@ -58,7 +58,7 @@ tabela de cima estão dentro dos pacotes 08, 09, 10 e 12 (fazer lá, não aqui).
 | 16 | FEITO (kiro, 02/11) | `pecas/16-egito.js` | Egito + paleta `egito` (nilo, piramide, vila, tumba, templo, julgamento + Anúbis, Osiris, Rá) |
 | 17 | FEITO (kiro, 02/11) | `pecas/17-japao.js` | Japão + paleta `japao` (castelo, vila, torii, dojo, mar, palacio dragao + Momotaro, Oni, Kitsune, Tanuki) |
 | 18 | FEITO (kiro, 02/11) | `pecas/18-mitos-gregos.js` | mitos gregos (Olimpo, labirinto, ciclope, sereias, submundo, Ícaro, Troia + Zeus, Hades, Medusa, Minotauro, Ciclope) |
-| 19 | PENDENTE | `pecas/19-china-mitos2.js` | mitos chineses 2 (10 sóis, palácio da lua, Nüwa, Pangu, ponte de pegas, Nezha, Mulan) |
+| 19 | FEITO (kiro, 02/11) | `pecas/19-china-mitos2.js` | mitos chineses 2 (10 sóis, palácio da lua, Nüwa, Pangu, ponte de pegas, Nezha, Mulan + Houyi, Chang'e, Nüwa, Nezha, Mulan, coelho de jade) |
 
 ## Como fazer um item (resumo)
 1. `git pull origin producao`; marque o item como `FAZENDO (kiro|claude, data)` e envie.
