@@ -46,7 +46,7 @@ tabela de cima estão dentro dos pacotes 08, 09, 10 e 12 (fazer lá, não aqui).
 | 04 | FEITO (kiro, 02/11) | `pecas/04-kit-grafismos.js` | grafismos: mapa, linha do tempo, título de época, duelo, ficha, contagem, regras |
 | 05 | FEITO (kiro, 02/11) | `pecas/05-china-wukong.js` | China: Jornada ao Oeste (Wukong e companheiros, dragão, 9 cenários) |
 | 06 | FEITO (kiro, 02/11) | `pecas/06-china-historica.js` | China antiga real (Chang'an, palácio, Grande Muralha, templo, arrozal, bambu, Lago Oeste) |
-| 07 | PENDENTE | `pecas/07-grecia-esparta.js` | Grécia e Esparta (Esparta, agogê, syssitia, falange, Termópilas, templo, ágora, Egeu) |
+| 07 | FAZENDO (kiro, 02/11) | `pecas/07-grecia-esparta.js` | Grécia e Esparta (Esparta, agogê, syssitia, falange, Termópilas, templo, ágora, Egeu) |
 | 08 | PENDENTE | `pecas/08-medieval.js` | medieval (moinho, mercado, castelo, campo, mosteiro, forja, igreja, taverna, cerco, porto, torneio) |
 | 09 | PENDENTE | `pecas/09-hm-casa.js` | Hora Muerta casa (cocina, cuarto, altar, telefono, bano, azotea, vecindad, sala) |
 | 10 | PENDENTE | `pecas/10-hm-lugares.js` | Hora Muerta lugares (rio, carretera, hacienda, iglesia, escuela, milpa, selva, puente, pozo, feria...) |
