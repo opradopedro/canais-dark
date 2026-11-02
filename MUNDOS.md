@@ -99,6 +99,26 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 01 (01-kit-efeitos)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `fxChuva(t,f,vento)` | riscos de chuva inclinados + respingos | `f` 0..1, `vento` | qualquer cena de chuva |
+| `fxNeve(t,f)` | flocos redondos caindo com balanço | `f` 0..1 | inverno, neve |
+| `fxNevoa(t,f,y)` | faixas translúcidas deslizando na altura `y` | `f` 0..1, `y` 0..1 | névoa de floresta/mar |
+| `fxFumaca(cx,cy,t,f)` | coluna de bolinhas subindo | `f` 0..1 | chaminé, incenso, fogueira |
+| `fxFogo(cx,cy,s,t)` | fogueira/tocha flat, 3 camadas + brilho | `s` tamanho | fogueira, tocha, lareira |
+| `fxFagulhas(cx,cy,t,f)` | faíscas subindo | `f` 0..1 | forja, fogueira |
+| `fxFolhas(t,f,cor)` | folhas de outono girando ao cair | `f`, `cor` | outono, campo |
+| `fxPetalas(t,f,cor)` | pétalas caindo (pêssego, cempasúchil) | `f`, `cor` | flor, magia, Dia de Muertos |
+| `fxVagalumes(t,f)` | pontinhos verdes que piscam e flutuam | `f` 0..1 | selva, noite |
+| `fxPoeira(t,f,y)` | poeira do chão (estrada, batalha) | `f`, `y` | falange, estrada |
+| `fxRelampago(t,quando)` | clarão + raio em zigue-zague | `quando` t(s) do flash | tempestade |
+| `fxOndas(y,t,c1,c2)` | mar/rio flat em 3 camadas | `y` linha d'água, `c1/c2` | mar, rio, lago |
+| `fxRaiosLuz(cx,cy,t,f)` | feixes de luz divinos | `f` 0..1 | igreja, céu divino, Buda |
+| `fxBrilhoMagico(cx,cy,t,f)` | estrelinhas girando | `f` 0..1 | magia, imortalidade |
+| `fxPuff(cx,cy,t,t0)` | nuvem de fumaça que estoura | `t0` instante | transformação, sumiço |
+| `fxFlechas(t,t0,f)` | saraivada de flechas no céu | `t0`, `f` | Termópilas, cerco |
+| `ceuFlat(tipo,t)` | céu inteiro com sol/lua e nuvens | `tipo`: aurora/dia/tarde/por/noite/tempestade/eclipse/boreal/dez_sois/estrelas | fundo de qualquer cena ao ar livre |
+| `luaFlat(cx,cy,r,fase,t)` | lua com fase e halo | `fase` 0..1 | noite |
+| `estrelasFlat(t,n)` | estrelas piscando (posições fixas) | `n` quantidade | céu noturno |
+| `COMP.f_ceu` | só o céu (passagem de tempo, abertura) | `tipo`, `lua`, `chuva`, `neve`, `nevoa`, `relampago` | plano de céu, transição de tempo |
 
 ### Pacote 02 (02-kit-figuras)
 | Peça/função | O que mostra | Parâmetros | Serve para |

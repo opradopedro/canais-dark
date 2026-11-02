@@ -1,0 +1,31 @@
+{
+ "codigo": "PKG01",
+ "_obs": "Teste do pacote 01 (efeitos e ceus). Fora de stories/: nunca e publicado. Uma cena por tipo de ceu e por efeito.",
+ "visual": "flat",
+ "titulo": "teste pacote 01 - efeitos e ceus",
+ "lineas": [
+  {"texto": "Ceu de aurora sobre o horizonte.", "pausa": 0.3},
+  {"texto": "Dia claro com nuvens passando.", "pausa": 0.3},
+  {"texto": "Fim de tarde alaranjado.", "pausa": 0.3},
+  {"texto": "Por do sol roxo.", "pausa": 0.3},
+  {"texto": "Noite com lua e estrelas.", "pausa": 0.3},
+  {"texto": "Tempestade com raio e chuva.", "pausa": 0.3},
+  {"texto": "Eclipse do sol.", "pausa": 0.3},
+  {"texto": "Aurora boreal verde.", "pausa": 0.3},
+  {"texto": "Dez sois no ceu, mito chines.", "pausa": 0.3},
+  {"texto": "Ceu de neve e nevoa.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_ceu", "p": {"tipo": "aurora"}},
+  {"linea": 1, "comp": "f_ceu", "p": {"tipo": "dia"}},
+  {"linea": 2, "comp": "f_ceu", "p": {"tipo": "tarde"}},
+  {"linea": 3, "comp": "f_ceu", "p": {"tipo": "por"}},
+  {"linea": 4, "comp": "f_ceu", "p": {"tipo": "noite", "lua": 1}},
+  {"linea": 5, "comp": "f_ceu", "p": {"tipo": "tempestade", "relampago": 0.2, "chuva": 1}},
+  {"linea": 6, "comp": "f_ceu", "p": {"tipo": "eclipse"}},
+  {"linea": 7, "comp": "f_ceu", "p": {"tipo": "boreal"}},
+  {"linea": 8, "comp": "f_ceu", "p": {"tipo": "dez_sois"}},
+  {"linea": 9, "comp": "f_ceu", "p": {"tipo": "noite", "neve": 1, "nevoa": 1}}
+ ],
+ "destaque": []
+}
