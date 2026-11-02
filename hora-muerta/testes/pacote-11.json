@@ -1,0 +1,37 @@
+{
+ "codigo": "PKG11",
+ "_obs": "Teste do pacote 11 (Hora Muerta criaturas via f_aparicion). Fora de stories/.",
+ "visual": "flat",
+ "titulo": "teste pacote 11 - hora muerta criaturas",
+ "lineas": [
+  {"texto": "La Llorona junto al rio.", "pausa": 0.3},
+  {"texto": "El Charro Negro.", "pausa": 0.3},
+  {"texto": "El Cadejo.", "pausa": 0.3},
+  {"texto": "La Lechuza bruja.", "pausa": 0.3},
+  {"texto": "El Duende.", "pausa": 0.3},
+  {"texto": "El Nahual.", "pausa": 0.3},
+  {"texto": "El Sombreron.", "pausa": 0.3},
+  {"texto": "La Siguanaba.", "pausa": 0.3},
+  {"texto": "La Tunda.", "pausa": 0.3},
+  {"texto": "La Patasola.", "pausa": 0.3},
+  {"texto": "La mano peluda.", "pausa": 0.3},
+  {"texto": "La nina muneca.", "pausa": 0.3},
+  {"texto": "La monja sin rostro.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_aparicion", "p": {"quien": "llorona", "lugar": "f_rio", "dist": [0.6, 0.95]}},
+  {"linea": 1, "comp": "f_aparicion", "p": {"quien": "charro_negro", "lugar": "f_cerro", "dist": [0.6, 0.95]}},
+  {"linea": 2, "comp": "f_aparicion", "p": {"quien": "cadejo", "lugar": "f_cerro", "dist": [0.4, 0.95]}},
+  {"linea": 3, "comp": "f_aparicion", "p": {"quien": "lechuza_bruja", "lugar": "f_milpa", "dist": [0.5, 0.9]}},
+  {"linea": 4, "comp": "f_aparicion", "p": {"quien": "duende", "lugar": "f_selva", "dist": [0.5, 0.95]}},
+  {"linea": 5, "comp": "f_aparicion", "p": {"quien": "nahual", "lugar": "f_milpa", "dist": [0.4, 0.9]}},
+  {"linea": 6, "comp": "f_aparicion", "p": {"quien": "sombreron", "lugar": "f_puente", "dist": [0.4, 0.9]}},
+  {"linea": 7, "comp": "f_aparicion", "p": {"quien": "siguanaba", "lugar": "f_rio", "dist": [0.5, 0.95]}},
+  {"linea": 8, "comp": "f_aparicion", "p": {"quien": "tunda", "lugar": "f_selva", "dist": [0.5, 0.9]}},
+  {"linea": 9, "comp": "f_aparicion", "p": {"quien": "patasola", "lugar": "f_selva", "dist": [0.5, 0.95]}},
+  {"linea": 10, "comp": "f_aparicion", "p": {"quien": "mano_peluda", "lugar": "f_cerro", "dist": [0.6, 1]}},
+  {"linea": 11, "comp": "f_aparicion", "p": {"quien": "nina_muneca", "lugar": "f_cerro", "dist": [0.5, 0.95]}},
+  {"linea": 12, "comp": "f_aparicion", "p": {"quien": "monja", "lugar": "f_iglesia", "dist": [0.5, 0.95]}}
+ ],
+ "destaque": []
+}

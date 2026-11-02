@@ -251,6 +251,20 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 11 (11-hm-criaturas)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `llorona` | vestido branco, cabelo longo cobrindo o rosto, olhos | `o.dist/vira/olhos` | La Llorona |
+| `charro_negro` | figura a cavalo, chapéu largo, olhos de brasa | `o.dist` | El Charro Negro |
+| `cadejo` | cão preto de olhos vermelhos | `o.dist` | El Cadejo |
+| `lechuza_bruja` | coruja com rosto de bruja, olhos amarelos | `o.dist` | La Lechuza |
+| `duende` | pequeno, chapéu pontudo vermelho | `o.dist` | El Duende |
+| `nahual` | meio homem meio coiote, focinho, olhos de brasa | `o.dist` | El Nahual |
+| `sombreron` | silhueta com chapéu enorme | `o.dist` | El Sombrerón |
+| `p11_siguanaba` | vestido branco, cabelo longo, rosto vazio ao virar (chave `siguanaba`) | `o.dist/vira/olhos` | La Siguanaba |
+| `tunda` | mulher com uma perna de pilão (molinillo) | `o.dist/olhos` | La Tunda |
+| `patasola` | silhueta de uma perna só, olhos vermelhos | `o.dist` | La Patasola |
+| `mano_peluda` | mão peluda saindo do chão (debaixo da cama) | `o.dist` 0..1 (subida) | La mano peluda |
+| `nina_muneca` | boneca de vestido, franja, olhos vazios ao virar | `o.dist/vira` | niña muñeca |
+| `monja` | hábito e véu, rosto vazio, cruz no peito | `o.dist/olhos` | monja sin rostro |
+| `COMP.f_aparicion` | fundo simples + criatura que se aproxima | `p.quien`, `p.lugar` (peça de fundo), `p.dist` [a,b] | aparição em cena |
 
 ### Pacote 12 (12-sv-lugares)
 | Peça/função | O que mostra | Parâmetros | Serve para |
