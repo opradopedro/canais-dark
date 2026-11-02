@@ -1,0 +1,29 @@
+{
+ "codigo": "PKG07",
+ "_obs": "Teste do pacote 07 (Grecia/Esparta). Fora de stories/.",
+ "visual": "flat",
+ "tema": "epico",
+ "paleta": "grecia",
+ "titulo": "teste pacote 07 - grecia esparta",
+ "lineas": [
+  {"texto": "A vila de Esparta.", "pausa": 0.3},
+  {"texto": "O treino da agoge.", "pausa": 0.3},
+  {"texto": "O caldo negro.", "pausa": 0.3},
+  {"texto": "A falange avancando.", "pausa": 0.3},
+  {"texto": "O desfiladeiro de Termopilas.", "pausa": 0.3},
+  {"texto": "O templo do oraculo.", "pausa": 0.3},
+  {"texto": "A praca de Atenas.", "pausa": 0.3},
+  {"texto": "O mar Egeu.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_esparta", "p": {"ceu": "dia", "treino": true}},
+  {"linea": 1, "comp": "f_agoge", "p": {"atividade": "luta"}},
+  {"linea": 2, "comp": "f_syssitia", "p": {"caldo": true}},
+  {"linea": 3, "comp": "f_falange", "p": {"avanca": 0.6}},
+  {"linea": 4, "comp": "f_termopilas", "p": {"flechas": 2.0, "atras": true}},
+  {"linea": 5, "comp": "f_templo_grego", "p": {"oraculo": true}},
+  {"linea": 6, "comp": "f_agora", "p": {}},
+  {"linea": 7, "comp": "f_mar_egeu", "p": {}}
+ ],
+ "destaque": []
+}

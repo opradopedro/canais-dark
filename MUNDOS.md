@@ -192,6 +192,14 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 07 (07-grecia-esparta)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `COMP.f_esparta` | vila de Esparta SEM muralha, monte Taigeto, templos, oliveiras, rio | `p.ceu`, `p.treino` | abertura espartana |
+| `COMP.f_agoge` | pátio de treino: meninos (corrida/luta/frio/fome) + instrutor | `p.atividade` corrida/luta/frio/fome | criação dos guerreiros |
+| `COMP.f_syssitia` | refeitório; `caldo` = close da tigela de caldo negro | `p.caldo` | comida espartana |
+| `COMP.f_falange` | hoplitas de lado, escudos Λ sobrepostos, lanças, flautista | `p.avanca` 0..1 | formação de batalha |
+| `COMP.f_termopilas` | desfiladeiro: montanha, mar, muro, exército persa, flechas | `p.flechas` t(s), `p.atras` (traição) | a batalha |
+| `COMP.f_templo_grego` | templo com colunas, frontão, estátua, oráculo com fumaça | `p.oraculo` | Delfos, religião |
+| `COMP.f_agora` | praça de Atenas: estoa, filósofo, ânforas | — | democracia, filosofia |
+| `COMP.f_mar_egeu` | mar azul, trirreme, ilhas, golfinhos | `p.tempestade` | viagem marítima |
 
 ### Pacote 08 (08-medieval)
 | Peça/função | O que mostra | Parâmetros | Serve para |
