@@ -311,6 +311,16 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 15 (15-nordico)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `PALS.cl_nordico` | paleta fria (fiorde azul-cinza, gelo, prata/sangue) | — | Old Tales nórdico (`"paleta":"nordico"`) |
+| `COMP.f_fiorde` | montanhas com neve, água, drakkar chegando | — | fiorde |
+| `COMP.f_salao_viking` | casa longa: teto em A, escudos, fogo central, banquete; `p.deus` opcional | `p.deus` thor/odin/loki | salão viking |
+| `COMP.f_aldeia_viking` | casas de turfa, ovelhas, neve, aurora | — | aldeia |
+| `COMP.f_ataque` | praia com drakkars, mosteiro em chamas (Lindisfarne 793) | — | ataque viking |
+| `COMP.f_yggdrasil` | árvore do mundo, 9 mundos em orbes, raízes | — | mito Yggdrasil |
+| `COMP.f_bifrost` | ponte arco-íris até o portão de Asgard | — | Bifrost |
+| `COMP.f_mar_norte` | tempestade, ondas, drakkar, serpente Jörmungandr | `p.serpente` | mar do norte |
+| `thor` / `odin` / `loki` | deuses (Mjolnir+raio / tapa-olho+lança+corvos / chifres) | `o` (thor: `o.raio`) | personagens míticos |
+| `p15_drakkar` | barco viking com vela e escudos (helper) | `cx, cy, s, t` | reuso interno |
 
 ### Pacote 16 (16-egito)
 | Peça/função | O que mostra | Parâmetros | Serve para |

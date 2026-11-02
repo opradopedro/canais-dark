@@ -1,0 +1,33 @@
+{
+ "codigo": "PKG15",
+ "_obs": "Teste do pacote 15 (nordico). Fora de stories/.",
+ "visual": "flat",
+ "tema": "epico",
+ "paleta": "nordico",
+ "titulo": "teste pacote 15 - nordico",
+ "lineas": [
+  {"texto": "El fiordo.", "pausa": 0.3},
+  {"texto": "El salon vikingo.", "pausa": 0.3},
+  {"texto": "La aldea.", "pausa": 0.3},
+  {"texto": "El ataque a Lindisfarne.", "pausa": 0.3},
+  {"texto": "Yggdrasil.", "pausa": 0.3},
+  {"texto": "El Bifrost.", "pausa": 0.3},
+  {"texto": "El mar del norte.", "pausa": 0.3},
+  {"texto": "Thor.", "pausa": 0.3},
+  {"texto": "Odin.", "pausa": 0.3},
+  {"texto": "Loki.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_fiorde", "p": {}},
+  {"linea": 1, "comp": "f_salao_viking", "p": {}},
+  {"linea": 2, "comp": "f_aldeia_viking", "p": {}},
+  {"linea": 3, "comp": "f_ataque", "p": {}},
+  {"linea": 4, "comp": "f_yggdrasil", "p": {}},
+  {"linea": 5, "comp": "f_bifrost", "p": {}},
+  {"linea": 6, "comp": "f_mar_norte", "p": {"serpente": true}},
+  {"linea": 7, "comp": "f_salao_viking", "p": {"deus": "thor"}},
+  {"linea": 8, "comp": "f_salao_viking", "p": {"deus": "odin"}},
+  {"linea": 9, "comp": "f_salao_viking", "p": {"deus": "loki"}}
+ ],
+ "destaque": []
+}
