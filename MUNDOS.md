@@ -179,6 +179,15 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 06 (06-china-historica)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `COMP.f_china_rua` | rua de Chang'an: muros, portões, lanternas, telhados curvos, mercadores | `p.noite`, `p.tambor` | cidade imperial, Rota da Seda |
+| `COMP.f_palacio_china` | pátio imperial: escadaria, colunas vermelhas, telhado amarelo, leões | `p.trono`, `p.audiencia` | corte, imperador |
+| `COMP.f_muralha_china` | Grande Muralha serpenteando, torres de sinal com fumaça | `p.sinal` N torres, `p.estacao` | fronteira, aviso de guerra |
+| `COMP.f_templo_china` | pagode de 3 níveis na montanha, névoa, sino, monge | `p.sino`, `p.neve` | templo, retiro |
+| `COMP.f_arrozal` | terraços de arroz espelhados, búfalo, camponês | `p.chuva` | campo, trabalho |
+| `COMP.f_bambuzal` | floresta de bambu balançando, luz entrando | `p.vento`, `p.luta` (duelo) | floresta, luta |
+| `COMP.f_lago_china` | Lago Oeste: pagode, ponte de arco, salgueiros, lua | `p.cobra` (cobra branca), `p.chuva` | lenda da Serpente Branca |
+| `COMP.f_rio_china` | rio largo, junco à vela, montanhas karst, pescador | — | viagem de rio |
+| `COMP.f_casa_china` | interior: biombo de papel, janela redonda, mesa de chá | — | casa antiga |
 
 ### Pacote 07 (07-grecia-esparta)
 | Peça/função | O que mostra | Parâmetros | Serve para |

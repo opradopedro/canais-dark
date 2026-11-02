@@ -1,0 +1,31 @@
+{
+ "codigo": "PKG06",
+ "_obs": "Teste do pacote 06 (China historica). Fora de stories/.",
+ "visual": "flat",
+ "tema": "mito",
+ "paleta": "china",
+ "titulo": "teste pacote 06 - china historica",
+ "lineas": [
+  {"texto": "A rua de Chang'an.", "pausa": 0.3},
+  {"texto": "O palacio imperial.", "pausa": 0.3},
+  {"texto": "A Grande Muralha.", "pausa": 0.3},
+  {"texto": "Um templo na montanha.", "pausa": 0.3},
+  {"texto": "Os terracos de arroz.", "pausa": 0.3},
+  {"texto": "A floresta de bambu.", "pausa": 0.3},
+  {"texto": "O Lago Oeste a noite.", "pausa": 0.3},
+  {"texto": "O rio com os picos.", "pausa": 0.3},
+  {"texto": "Uma casa por dentro.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_china_rua", "p": {"noite": false}},
+  {"linea": 1, "comp": "f_palacio_china", "p": {"trono": true, "audiencia": true}},
+  {"linea": 2, "comp": "f_muralha_china", "p": {"sinal": 3, "estacao": "inverno"}},
+  {"linea": 3, "comp": "f_templo_china", "p": {"sino": true, "neve": true}},
+  {"linea": 4, "comp": "f_arrozal", "p": {"chuva": true}},
+  {"linea": 5, "comp": "f_bambuzal", "p": {"vento": 0.8, "luta": true}},
+  {"linea": 6, "comp": "f_lago_china", "p": {"cobra": true}},
+  {"linea": 7, "comp": "f_rio_china", "p": {}},
+  {"linea": 8, "comp": "f_casa_china", "p": {}}
+ ],
+ "destaque": []
+}
