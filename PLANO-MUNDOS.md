@@ -48,7 +48,7 @@ tabela de cima estão dentro dos pacotes 08, 09, 10 e 12 (fazer lá, não aqui).
 | 06 | FEITO (kiro, 02/11) | `pecas/06-china-historica.js` | China antiga real (Chang'an, palácio, Grande Muralha, templo, arrozal, bambu, Lago Oeste) |
 | 07 | FEITO (kiro, 02/11) | `pecas/07-grecia-esparta.js` | Grécia e Esparta (Esparta, agogê, syssitia, falange, Termópilas, templo, ágora, Egeu) |
 | 08 | FEITO (kiro, 02/11) | `pecas/08-medieval.js` | medieval (moinho, mercado, castelo, campo, mosteiro, forja, igreja, taverna, cerco, porto, torneio) |
-| 09 | FAZENDO (kiro, 02/11) | `pecas/09-hm-casa.js` | Hora Muerta casa (cocina, cuarto, altar, telefono, bano, azotea, vecindad, sala) |
+| 09 | FEITO (kiro, 02/11) | `pecas/09-hm-casa.js` | Hora Muerta casa (cocina, cuarto, altar, telefono, bano, azotea, vecindad, sala) |
 | 10 | PENDENTE | `pecas/10-hm-lugares.js` | Hora Muerta lugares (rio, carretera, hacienda, iglesia, escuela, milpa, selva, puente, pozo, feria...) |
 | 11 | PENDENTE | `pecas/11-hm-criaturas.js` | Hora Muerta criaturas (llorona, charro negro, cadejo, lechuza, duende, nahual...) + `f_aparicion` |
 | 12 | PENDENTE | `pecas/12-sv-lugares.js` | Signal Lost (floresta, corredor, elevador, motel, garagem, mercado, cabana, farol, névoa, lago gelado) |

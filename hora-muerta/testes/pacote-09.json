@@ -1,0 +1,27 @@
+{
+ "codigo": "PKG09",
+ "_obs": "Teste do pacote 09 (Hora Muerta casa). Fora de stories/.",
+ "visual": "flat",
+ "titulo": "teste pacote 09 - hora muerta casa",
+ "lineas": [
+  {"texto": "La cocina de la abuela.", "pausa": 0.3},
+  {"texto": "El cuarto con el espejo.", "pausa": 0.3},
+  {"texto": "El altar de muertos.", "pausa": 0.3},
+  {"texto": "El telefono sonando.", "pausa": 0.3},
+  {"texto": "El bano con vapor.", "pausa": 0.3},
+  {"texto": "La azotea de noche.", "pausa": 0.3},
+  {"texto": "La vecindad.", "pausa": 0.3},
+  {"texto": "La sala.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_cocina", "p": {"abuela": true, "olla": true, "porta": 0.4}},
+  {"linea": 1, "comp": "f_cuarto", "p": {"espejo": true, "sombra": true}},
+  {"linea": 2, "comp": "f_altar", "p": {"foto": true, "vela_apaga": 0.6}},
+  {"linea": 3, "comp": "f_telefono", "p": {"tipo": "disco"}},
+  {"linea": 4, "comp": "f_bano", "p": {"escrito": "VETE"}},
+  {"linea": 5, "comp": "f_azotea", "p": {"vulto": true}},
+  {"linea": 6, "comp": "f_vecindad", "p": {"puerta": true}},
+  {"linea": 7, "comp": "f_sala", "p": {"tele": true, "toca": true}}
+ ],
+ "destaque": []
+}

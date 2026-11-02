@@ -222,6 +222,14 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 09 (09-hm-casa)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `COMP.f_cocina` | cozinha de avó: fogão a lenha, panela, altar de parede, porta do quintal | `p.porta` 0..1, `p.abuela`, `p.olla` | casa da avó |
+| `COMP.f_cuarto` | quarto: cama, janela com lua, espelho (reflexo atrasado), porta com sombra | `p.espejo`, `p.sombra` | o quarto |
+| `COMP.f_altar` | altar de Dia de Muertos: papel picado, fotos, cempasúchil, velas, caveira | `p.foto`, `p.vela_apaga` 0..1 | Dia de Muertos |
+| `COMP.f_telefono` | close de telefone de disco (tremendo) ou celular | `p.tipo` disco/celular, `p.quien`, `p.texto` | a ligação |
+| `COMP.f_bano` | banheiro: azulejos, espelho embaçado com letra no vapor, torneira pingando | `p.escrito` | mensagem no vapor |
+| `COMP.f_azotea` | laje à noite: tanque, varal, antenas, vulto em outra laje | `p.vulto` | terror na laje |
+| `COMP.f_vecindad` | pátio de cortiço: portas numeradas, uma acesa, escada de ferro | `p.puerta` | vizinhança |
+| `COMP.f_sala` | sala: sofá, TV de tubo com chuvisco, cortina, porta | `p.tele`, `p.toca` | sala de casa |
 
 ### Pacote 10 (10-hm-lugares)
 | Peça/função | O que mostra | Parâmetros | Serve para |
