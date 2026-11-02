@@ -162,6 +162,19 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 05 (05-china-wukong)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `wukong(cx,base,s,o,t)` | Sun Wukong: macaco dourado, rosto coração, faixa e bastão | `o.pose` parado/pula/luta/senta_nuvem/ri/preso, `o.faixa`, `o.bastao`, `o.expressao`, `o.olhar` | protagonista da série |
+| `zhuBajie` `shaWujing` `tangSanzang` `reiDragao` `imperadorJade` `soldadoCeleste` `budaGigante` | companheiros e figuras da jornada | `(cx,base,s,o,t)` | cenas da jornada |
+| `dragaoChines(cx,cy,s,o,t)` | dragão longo serpenteando + pérola | `o.voa` | China, mito |
+| `nuvemSalto(cx,cy,s,t)` | a nuvem voadora do Wukong | — | voo |
+| `COMP.f_montanha_flores` | Montanha das Flores e Frutas, pedra mágica, macacos, cachoeira | `p.pedra`, `p.racha` 0..1, `p.macacos` N, `p.petalas` | abertura da série |
+| `COMP.f_cachoeira` | Caverna da Cortina d'Água, trono, cortina na frente | `p.atravessa`, `p.trono` | o rei macaco |
+| `COMP.f_palacio_dragao` | palácio do Rei Dragão no fundo do mar, pilar de ferro | `p.pilar` 0..1, `p.dragao` | o bastão mágico |
+| `COMP.f_ceu_jade` | Céu de Jade, palácios dourados, portão, caos | `p.caos` 0..1, `p.portao` | rebelião no céu |
+| `COMP.f_pomar_pessegos` | pomar dos pêssegos da imortalidade, guardas | `p.come`, `p.guardas` | roubo dos pêssegos |
+| `COMP.f_palma_buda` | mão gigante de Buda, 5 dedos como pilares | `p.voa`, `p.fecha` 0..1 | aprisionamento |
+| `COMP.f_montanha_preso` | montanha dos 5 elementos, Wukong preso, estações | `p.estacao`, `p.anos` N | 500 anos preso |
+| `COMP.f_caminho_oeste` | estrada para o oeste, os 4 peregrinos, parallax | `p.terreno` montanha/deserto/floresta/rio | a jornada |
+| `COMP.f_montanha_flamejante` | montanha em chamas, calor ondulando | `p.apaga` 0..1 | episódio do leque |
 
 ### Pacote 06 (06-china-historica)
 | Peça/função | O que mostra | Parâmetros | Serve para |

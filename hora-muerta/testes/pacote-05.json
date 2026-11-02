@@ -1,0 +1,31 @@
+{
+ "codigo": "PKG05",
+ "_obs": "Teste do pacote 05 (Wukong). Fora de stories/.",
+ "visual": "flat",
+ "tema": "mito",
+ "paleta": "china",
+ "titulo": "teste pacote 05 - jornada ao oeste",
+ "lineas": [
+  {"texto": "A Montanha das Flores e Frutas.", "pausa": 0.3},
+  {"texto": "A Caverna da Cortina de Agua.", "pausa": 0.3},
+  {"texto": "O palacio do Rei Dragao.", "pausa": 0.3},
+  {"texto": "O Ceu de Jade em caos.", "pausa": 0.3},
+  {"texto": "O pomar dos pessegos.", "pausa": 0.3},
+  {"texto": "A palma de Buda.", "pausa": 0.3},
+  {"texto": "Preso na montanha, 500 anos.", "pausa": 0.3},
+  {"texto": "O caminho para o oeste.", "pausa": 0.3},
+  {"texto": "A Montanha Flamejante.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_montanha_flores", "p": {"pedra": true, "racha": 0.7, "macacos": 4, "petalas": true}},
+  {"linea": 1, "comp": "f_cachoeira", "p": {"atravessa": true, "trono": true}},
+  {"linea": 2, "comp": "f_palacio_dragao", "p": {"pilar": 0.6, "dragao": true}},
+  {"linea": 3, "comp": "f_ceu_jade", "p": {"caos": 0.8, "portao": true}},
+  {"linea": 4, "comp": "f_pomar_pessegos", "p": {"come": true, "guardas": true}},
+  {"linea": 5, "comp": "f_palma_buda", "p": {"voa": true, "fecha": 0.2}},
+  {"linea": 6, "comp": "f_montanha_preso", "p": {"estacao": "inverno", "anos": 500}},
+  {"linea": 7, "comp": "f_caminho_oeste", "p": {"terreno": "montanha"}},
+  {"linea": 8, "comp": "f_montanha_flamejante", "p": {"apaga": 0.3}}
+ ],
+ "destaque": []
+}
