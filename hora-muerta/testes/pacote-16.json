@@ -1,0 +1,31 @@
+{
+ "codigo": "PKG16",
+ "_obs": "Teste do pacote 16 (Egito). Fora de stories/.",
+ "visual": "flat",
+ "tema": "epico",
+ "paleta": "egito",
+ "titulo": "teste pacote 16 - egito",
+ "lineas": [
+  {"texto": "El Nilo.", "pausa": 0.3},
+  {"texto": "La piramide en obra.", "pausa": 0.3},
+  {"texto": "La villa de obreros.", "pausa": 0.3},
+  {"texto": "La tumba.", "pausa": 0.3},
+  {"texto": "El templo.", "pausa": 0.3},
+  {"texto": "El juicio del corazon.", "pausa": 0.3},
+  {"texto": "Anubis.", "pausa": 0.3},
+  {"texto": "Osiris.", "pausa": 0.3},
+  {"texto": "Ra.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_nilo", "p": {"cheia": 0.7}},
+  {"linea": 1, "comp": "f_piramide", "p": {}},
+  {"linea": 2, "comp": "f_vila_operarios", "p": {}},
+  {"linea": 3, "comp": "f_tumba", "p": {}},
+  {"linea": 4, "comp": "f_templo_egito", "p": {}},
+  {"linea": 5, "comp": "f_julgamento", "p": {"pesa": 0.6}},
+  {"linea": 6, "comp": "f_templo_egito", "p": {"deus": "anubis"}},
+  {"linea": 7, "comp": "f_templo_egito", "p": {"deus": "osiris"}},
+  {"linea": 8, "comp": "f_templo_egito", "p": {"deus": "ra"}}
+ ],
+ "destaque": []
+}

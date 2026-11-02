@@ -325,6 +325,15 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 16 (16-egito)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `PALS.cl_egito` | paleta egípcia (areia, ouro, azul-nilo, turquesa) | — | Old Tales Egito (`"paleta":"egito"`) |
+| `COMP.f_nilo` | rio com papiro, feluca, crocodilo, cheia | `p.cheia` 0..1 | o Nilo |
+| `COMP.f_piramide` | obra: pirâmide em degraus, rampa, trenó, água no chão (fato), operários | — | construção da pirâmide |
+| `COMP.f_vila_operarios` | Deir el-Medina: casas de tijolo, pão e cerveja (salário) | — | vila de operários |
+| `COMP.f_tumba` | corredor com hieróglifos, sarcófago dourado, tochas | — | tumba |
+| `COMP.f_templo_egito` | colunas papiriformes, estátua; `p.deus` opcional | `p.deus` anubis/osiris/ra | templo |
+| `COMP.f_julgamento` | pesagem do coração: balança, pena, Anúbis, Ammit | `p.pesa` 0..1 | mito do julgamento |
+| `anubis` / `osiris` / `ra` | deuses (chacal / múmia+Atef / barca solar) | `o` | personagens míticos |
+| `p16_hieros` | faixa de hieróglifos (helper) | `px, py, w, h` | reuso interno |
 
 ### Pacote 17 (17-japao)
 | Peça/função | O que mostra | Parâmetros | Serve para |
