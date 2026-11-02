@@ -1,0 +1,31 @@
+{
+ "codigo": "PKG18",
+ "_obs": "Teste do pacote 18 (mitos gregos). Fora de stories/.",
+ "visual": "flat",
+ "tema": "mito",
+ "paleta": "grecia",
+ "titulo": "teste pacote 18 - mitos gregos",
+ "lineas": [
+  {"texto": "El Olimpo.", "pausa": 0.3},
+  {"texto": "El laberinto.", "pausa": 0.3},
+  {"texto": "El ciclope.", "pausa": 0.3},
+  {"texto": "Las sirenas.", "pausa": 0.3},
+  {"texto": "El inframundo.", "pausa": 0.3},
+  {"texto": "Icaro.", "pausa": 0.3},
+  {"texto": "Troya.", "pausa": 0.3},
+  {"texto": "Hades.", "pausa": 0.3},
+  {"texto": "Medusa.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_olimpo", "p": {}},
+  {"linea": 1, "comp": "f_labirinto", "p": {"fio": 0.8, "minotauro": true}},
+  {"linea": 2, "comp": "f_mar_ciclope", "p": {}},
+  {"linea": 3, "comp": "f_sereias", "p": {}},
+  {"linea": 4, "comp": "f_submundo", "p": {}},
+  {"linea": 5, "comp": "f_icaro", "p": {"derrete": 0.6}},
+  {"linea": 6, "comp": "f_troia", "p": {"cavalo": true}},
+  {"linea": 7, "comp": "f_olimpo", "p": {"pers": "hades"}},
+  {"linea": 8, "comp": "f_olimpo", "p": {"pers": "medusa"}}
+ ],
+ "destaque": []
+}

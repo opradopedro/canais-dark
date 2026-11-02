@@ -351,6 +351,15 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 18 (18-mitos-gregos)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `COMP.f_olimpo` | palácio nas nuvens, colunas, trono, Zeus com raio; `p.pers` opcional | `p.pers` zeus/hades/medusa | Olimpo |
+| `COMP.f_labirinto` | corredores vistos de cima, fio de Ariadne, Minotauro | `p.fio` 0..1, `p.minotauro` | labirinto |
+| `COMP.f_mar_ciclope` | ilha, caverna, ovelhas, ciclope, barco fugindo | — | ciclope (Odisseia) |
+| `COMP.f_sereias` | rochedo, sereias-pássaro, Ulisses amarrado ao mastro | — | as sereias |
+| `COMP.f_submundo` | rio Estige, Caronte na barca, Cérbero de 3 cabeças, almas | — | submundo |
+| `COMP.f_icaro` | sol forte, asas de cera derretendo, mar, penas caindo | `p.derrete` 0..1 | Ícaro |
+| `COMP.f_troia` | muralha com ameias, portão, cavalo de madeira | `p.cavalo` | Troia |
+| `zeus` / `hades` / `medusa` / `minotauro` / `ciclope` | personagens míticos | `o` (zeus: `o.raio`) | personagens |
+| `p18_coluna` | coluna dórica (helper) | `cx, baseY, h, w` | reuso interno |
 
 ### Pacote 19 (19-china-mitos2)
 | Peça/função | O que mostra | Parâmetros | Serve para |
