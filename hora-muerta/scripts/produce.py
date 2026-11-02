@@ -144,7 +144,19 @@ def main():
         h = carregar(historia)
         cod = h["codigo"]
         base = os.path.join(a.saida, cod)
-        produzir(historia, a, base)
+        try:
+            produzir(historia, a, base)
+        except Exception as e:
+            # qualquer quebra (render, voz, mix): se ja ha video agendado, nada sai do ar (codigo 3, workflow verde)
+            agora = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            fila = sorted(c for c, v in ja.items() if (v.get("publishAt") or "") > agora)
+            if a.subir and fila:
+                import traceback; traceback.print_exc()
+                print(f"NAO SUBIU {cod}: producao quebrou ({type(e).__name__}: {str(e)[:300]}). Fila ainda tem "
+                      f"{len(fila)} agendado(s) ({', '.join(fila)}): nada sai do ar; a proxima execucao tenta de novo",
+                      flush=True)
+                sys.exit(3)
+            raise
         if a.teste:
             continue
         desc = h["descripcion"]

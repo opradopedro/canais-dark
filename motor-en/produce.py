@@ -315,13 +315,13 @@ def guardar(c, cod, base, up, vid):
     json.dump(meta, open(os.path.join(pasta, cod + ".json"), "w"), ensure_ascii=False, indent=1)
 
 
-def sair_barrado(cod, voltas, ja):
+def sair_barrado(cod, voltas, ja, motivo=None):
     """Video barrado na conferencia. Se o canal ainda tem video agendado no futuro, NADA sai do ar: sai com codigo 3
     (rodar_canal.py deixa o workflow verde, avisa na issue e a proxima execucao tenta de novo). Sem video agendado,
     sai com erro (workflow vermelho = um horario ficou mesmo vazio)."""
     agora = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     fila = sorted(k for k, v in ja.items() if (v.get("publishAt") or "") > agora)
-    msg = f"NAO SUBIU {cod}: LEGENDA FORA DA VOZ depois de {voltas} conserto(s)"
+    msg = f"NAO SUBIU {cod}: " + (motivo or f"LEGENDA FORA DA VOZ depois de {voltas} conserto(s)")
     if fila:
         print(f"{msg}. Fila ainda tem {len(fila)} agendado(s) ({', '.join(fila)}): nada sai do ar; "
               f"a proxima execucao tenta de novo", flush=True)
@@ -425,7 +425,14 @@ def main():
         if not cod.startswith(c["prefixo"]):
             sys.exit(f"CODIGO ERRADO: {cod} nao comeca com {c['prefixo']} (roteiro na pasta do canal errado?)")
         base = os.path.join(a.saida, cod)
-        produzir(c, historia, a, base)
+        try:
+            produzir(c, historia, a, base)
+        except Exception as e:
+            # qualquer quebra na producao (render, voz, mix): se ja ha video agendado, nada sai do ar (codigo 3)
+            import traceback; traceback.print_exc()
+            if a.subir:
+                sair_barrado(cod, 0, ja, f"producao quebrou ({type(e).__name__}: {str(e)[:300]})")
+            raise
         if a.teste:
             continue
         desc = h.get("descripcion") or h.get("description", "")

@@ -186,7 +186,13 @@ COMP.telefono = (t, lt, p) => {
   const m = E.since(t, 'mensaje');
   if (m >= 0 && p.msg) {
     x.globalAlpha = ease(m / 0.5);
-    const lines = p.msg, hh = 110 + lines.length * 46;
+    x.font = '400 32px system-ui, sans-serif';
+    // msg pode vir como lista de linhas ou como texto corrido (SV007 travou o render em 02/11): quebra em linhas
+    const lines = Array.isArray(p.msg) ? p.msg : String(p.msg).split(' ').reduce((ls, w) => {
+      const k = ls.length - 1;
+      if (k >= 0 && x.measureText(ls[k] + ' ' + w).width <= 360) ls[k] += ' ' + w; else ls.push(w);
+      return ls;
+    }, []), hh = 110 + lines.length * 46;
     x.fillStyle = 'rgba(230,236,250,0.93)'; x.beginPath(); x.roundRect(-210, -150, 420, hh, 30); x.fill();
     x.fillStyle = '#1b2540'; x.textAlign = 'left'; x.font = '700 40px system-ui, sans-serif'; x.fillText(p.de || 'Mamá', -180, -90);
     x.font = '400 32px system-ui, sans-serif'; lines.forEach((l, i) => x.fillText(l, -180, -30 + i * 46)); x.globalAlpha = 1;

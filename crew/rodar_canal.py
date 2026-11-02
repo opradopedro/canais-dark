@@ -221,7 +221,7 @@ def _rodar(canal):
         return f"[{canal}] OK COM AVISO: barrado nesta execucao, mas ha video agendado; tento de novo depois\n{resumo}"
     if r.returncode != 0:
         erro = (r.stderr or "").strip().splitlines()
-        cauda = "\n".join(erro[-8:])
+        cauda = "\n".join(erro[-40:])  # o erro de verdade (ex.: JS do render) fica antes do traceback
         # morte por falta de memoria nao deixa mensagem de erro util: avisa o que foi
         agora = memoria_livre_mb()
         pista = ""
