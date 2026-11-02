@@ -454,21 +454,9 @@ def main():
                 print(f"conserto {volta} caiu: {str(e)[:200]}", flush=True)
                 continue
             leg, ok = revisar(base, c["idioma"])
-        banco = os.environ.get("CANAIS_NARRACOES") or os.path.join(RAIZ, "narracoes")
         if not leg and a.subir:
-            # 2a chance na MESMA execucao (01/11): grava a voz de novo (a mesma gravacao reprovaria igual)
-            print(f"VOZ NOVA {cod}: a legenda nao bateu; gravo a narracao outra vez", flush=True)
-            for f in glob.glob(os.path.join(banco, f"{cod}_*.wav")):
-                os.remove(f)
-            try:
-                produzir(c, historia, a, base)
-                leg, ok = revisar(base, c["idioma"])
-            except Exception as e:
-                print(f"voz nova caiu: {str(e)[:200]}", flush=True)
-        if not leg and a.subir:
-            # a repescagem do mesmo dia (canais.yml) tenta de novo: apaga a voz guardada deste roteiro
-            for f in glob.glob(os.path.join(banco, f"{cod}_*.wav")):
-                os.remove(f)
+            # a voz fica guardada (Pedro, 02/11: narracao tem cota; o erro e da legenda, nao da voz):
+            # a proxima execucao so refaz o alinhamento e o desenho com a MESMA narracao
             sair_barrado(cod, volta, ja)
         if not ok and a.subir:
             print(f"AVISO {cod}: o audio nao passou na conferencia depois de {volta} conserto(s); subo mesmo assim",

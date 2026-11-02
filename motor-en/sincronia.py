@@ -209,11 +209,17 @@ def conferir(video, tempos_path, idioma="en", adianto=ADIANTO, atraso=ATRASO, fp
         seq = seq + 1 if n < 0.1 else 0
         if seq >= 3:
             pior.append(w)
+    # REGRA do Pedro (02/11): a narracao tem cota e nao pode ser refeita por causa da legenda. Palavra escrita um
+    # pouco diferente da fala NAO barra (vira so aviso); o que barra e TEMPO (atrasada/adiantada, acima) e lingua
+    # trocada / audio errado: a maioria das palavras sem nota (> 40%).
     if pior:
-        out["ok"] = False
         out["voz_nao_fala"] = pior[:8]
+    surdas = sum(1 for (w, _, _), n in zip(pal, nota) if n < 0.1 and not re.search(r"\d", w))
+    if pal and surdas / len(pal) > 0.4:
+        out["ok"] = False
+        out["motivo"] = f"{surdas} de {len(pal)} palavras que a voz nao fala: lingua trocada ou audio errado"
     if tempos.get("legenda") != "alinhamento":
-        out["motivo"] = "tempos.json nao passou pelo alinhamento (sincronia.ajustar) antes do render"
+        out["motivo_tempos"] = "tempos.json nao passou pelo alinhamento (sincronia.ajustar) antes do render"
     out["trilhas"] = trilhas(video)
     out["ok"] &= out["trilhas"]["ok"]
     q = quadros(video, tempos, fps=fps)
