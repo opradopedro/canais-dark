@@ -234,6 +234,19 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 10 (10-hm-lugares)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `COMP.f_rio` | beira de rio à noite, lua refletida, mulher de costas (Llorona), névoa | `p.vira` 0..1 | lenda da Llorona |
+| `COMP.f_carretera` | estrada de terra, veículo, postes, morros, olhos no mato | `p.veiculo` autobus/camioneta/bicicleta/a_pie, `p.ojos` | estrada de noite |
+| `COMP.f_hacienda` | fazenda abandonada: arcos, portão de ferro, fonte seca, janela acesa | — | hacienda |
+| `COMP.f_iglesia` | igreja por dentro: vitral, santos de manto, velas, confessionário | `p.confesion` | igreja do povoado |
+| `COMP.f_escuela` | sala de aula vazia: carteiras, quadro com giz escrevendo sozinho | `p.escrito` 0..1 | escola assombrada |
+| `COMP.f_milpa` | milharal à noite, espantalho que mexe, lua, trilha | `p.mueve` 0..1 | a milpa |
+| `COMP.f_selva` | mata fechada: cipós, rio, patasola (vulto de uma perna só) | `p.patasola` | a selva |
+| `COMP.f_puente` | ponte de pedra em arco sobre barranco, névoa, figura no meio | `p.figura` | o puente |
+| `COMP.f_pozo` | poço de pedra com teto e balde, mão saindo | `p.mano` 0..1 | o poço |
+| `COMP.f_feria` | parque abandonado: roda-gigante parada, carrossel girando sozinho | `p.gira` 0..1 | feira abandonada |
+| `COMP.f_cerro` | morro com cruz no topo, procissão de velas subindo | — | o cerro da cruz |
+| `COMP.f_estacion` | estação de trem vazia (SEM trem), telheiro, relógio, trilhos | — | estação vazia |
+| `COMP.f_panaderia` | padaria de madrugada: forno aceso, pães, padeiro sozinho | — | padaria |
 
 ### Pacote 11 (11-hm-criaturas)
 | Peça/função | O que mostra | Parâmetros | Serve para |

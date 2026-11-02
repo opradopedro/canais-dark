@@ -1,0 +1,37 @@
+{
+ "codigo": "PKG10",
+ "_obs": "Teste do pacote 10 (Hora Muerta lugares). Fora de stories/.",
+ "visual": "flat",
+ "titulo": "teste pacote 10 - hora muerta lugares",
+ "lineas": [
+  {"texto": "El rio de la Llorona.", "pausa": 0.3},
+  {"texto": "La carretera de noche.", "pausa": 0.3},
+  {"texto": "La hacienda abandonada.", "pausa": 0.3},
+  {"texto": "La iglesia del pueblo.", "pausa": 0.3},
+  {"texto": "La escuela vacia.", "pausa": 0.3},
+  {"texto": "La milpa y el espantapajaros.", "pausa": 0.3},
+  {"texto": "La selva cerrada.", "pausa": 0.3},
+  {"texto": "El puente sobre el barranco.", "pausa": 0.3},
+  {"texto": "El pozo del patio.", "pausa": 0.3},
+  {"texto": "La feria abandonada.", "pausa": 0.3},
+  {"texto": "El cerro de la cruz.", "pausa": 0.3},
+  {"texto": "La estacion vacia.", "pausa": 0.3},
+  {"texto": "La panaderia de madrugada.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_rio", "p": {"vira": 0.7}},
+  {"linea": 1, "comp": "f_carretera", "p": {"veiculo": "autobus", "ojos": true}},
+  {"linea": 2, "comp": "f_hacienda", "p": {}},
+  {"linea": 3, "comp": "f_iglesia", "p": {"confesion": true}},
+  {"linea": 4, "comp": "f_escuela", "p": {"escrito": 0.8}},
+  {"linea": 5, "comp": "f_milpa", "p": {"mueve": 1}},
+  {"linea": 6, "comp": "f_selva", "p": {"patasola": true}},
+  {"linea": 7, "comp": "f_puente", "p": {"figura": true}},
+  {"linea": 8, "comp": "f_pozo", "p": {"mano": 0.8}},
+  {"linea": 9, "comp": "f_feria", "p": {"gira": 1}},
+  {"linea": 10, "comp": "f_cerro", "p": {}},
+  {"linea": 11, "comp": "f_estacion", "p": {}},
+  {"linea": 12, "comp": "f_panaderia", "p": {}}
+ ],
+ "destaque": []
+}
