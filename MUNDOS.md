@@ -149,6 +149,15 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 04 (04-kit-grafismos)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `COMP.f_mapa` | mapa de pergaminho com terra/rios/montanhas, rota tracejada, pinos | `p.regiao`, `p.rota` [[x,y]], `p.pontos` [{x,y,nome}] | mostrar onde fica / rota de viagem |
+| `COMP.f_linha_tempo` | faixa de anos com marcos e marcador que anda | `p.de`, `p.ate`, `p.rotulo`, `p.marcos` [{ano,texto}] | datar eventos |
+| `COMP.f_titulo_epoca` | cartela de abertura com moldura por paleta | `p.titulo`, `p.sub` | abrir um vídeo |
+| `COMP.f_duelo` | tela dividida na diagonal, 2 figuras + símbolo | `p.esq`, `p.dir` (figura), `p.meio` ("VS") | confronto, comparação |
+| `COMP.f_ficha` | ficha: busto + linhas com ícone entrando uma a uma | `p.pessoa`, `p.titulo`, `p.linhas` [{icone,texto}] (idade/peso/fome/frio/dinheiro/espada/hora/perigo) | apresentar personagem |
+| `COMP.f_contagem` | número grande que conta de/até | `p.de`, `p.ate`, `p.rotulo` | "300 Spartans", "72 forms" |
+| `COMP.f_comparar` | duas colunas then/now ou rule/reality | `p.esq` {titulo,itens}, `p.dir` {…} | contraste |
+| `COMP.f_regras` | lista grande em papel com visto | `p.titulo`, `p.itens`, `p.marcados` | regras, tarefas do dia |
+| `COMP.f_porta_tempo` | transição: o mundo dobra e revela luz | — | virar de época/cena |
 
 ### Pacote 05 (05-china-wukong)
 | Peça/função | O que mostra | Parâmetros | Serve para |

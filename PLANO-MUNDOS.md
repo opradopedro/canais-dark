@@ -43,7 +43,7 @@ tabela de cima estão dentro dos pacotes 08, 09, 10 e 12 (fazer lá, não aqui).
 | 01 | FEITO (kiro, 02/11) | `pecas/01-kit-efeitos.js` | efeitos e céus (chuva, neve, névoa, fogo, fumaça, flechas, céus, lua) |
 | 02 | FEITO (kiro, 02/11) | `pecas/02-kit-figuras.js` | figuras de corpo inteiro (30 figurinos: hoplita, samurai, monge, hanfu...) e 20 animais |
 | 03 | FEITO (kiro, 02/11) | `pecas/03-kit-objetos.js` | objetos, armas e veículos + peça `f_objeto` (close) |
-| 04 | FAZENDO (kiro, 02/11) | `pecas/04-kit-grafismos.js` | grafismos: mapa, linha do tempo, título de época, duelo, ficha, contagem, regras |
+| 04 | FEITO (kiro, 02/11) | `pecas/04-kit-grafismos.js` | grafismos: mapa, linha do tempo, título de época, duelo, ficha, contagem, regras |
 | 05 | PENDENTE | `pecas/05-china-wukong.js` | China: Jornada ao Oeste (Wukong e companheiros, dragão, 9 cenários) |
 | 06 | PENDENTE | `pecas/06-china-historica.js` | China antiga real (Chang'an, palácio, Grande Muralha, templo, arrozal, bambu, Lago Oeste) |
 | 07 | PENDENTE | `pecas/07-grecia-esparta.js` | Grécia e Esparta (Esparta, agogê, syssitia, falange, Termópilas, templo, ágora, Egeu) |

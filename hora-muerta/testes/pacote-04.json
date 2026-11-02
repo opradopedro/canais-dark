@@ -1,0 +1,31 @@
+{
+ "codigo": "PKG04",
+ "_obs": "Teste do pacote 04 (grafismos). Fora de stories/.",
+ "visual": "flat",
+ "tema": "epico",
+ "paleta": "grecia",
+ "titulo": "teste pacote 04 - grafismos",
+ "lineas": [
+  {"texto": "Um mapa da Grecia com a rota.", "pausa": 0.3},
+  {"texto": "A linha do tempo das batalhas.", "pausa": 0.3},
+  {"texto": "A cartela de abertura.", "pausa": 0.3},
+  {"texto": "O duelo de dois guerreiros.", "pausa": 0.3},
+  {"texto": "A ficha do personagem.", "pausa": 0.3},
+  {"texto": "A contagem: 300.", "pausa": 0.3},
+  {"texto": "Regra contra realidade.", "pausa": 0.3},
+  {"texto": "As tres regras.", "pausa": 0.3},
+  {"texto": "A porta do tempo.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_mapa", "p": {"regiao": "grecia", "rota": [[0.2, 0.5], [0.5, 0.4], [0.8, 0.3]], "pontos": [{"x": 0.8, "y": 0.3, "nome": "Sparta"}]}},
+  {"linea": 1, "comp": "f_linha_tempo", "p": {"de": 490, "ate": 479, "rotulo": "BC", "marcos": [{"ano": 490, "texto": "Marathon"}, {"ano": 480, "texto": "Thermopylae"}]}},
+  {"linea": 2, "comp": "f_titulo_epoca", "p": {"titulo": "Sparta, 480 BC", "sub": "The Hot Gates"}},
+  {"linea": 3, "comp": "f_duelo", "p": {"esq": {"figurino": "hoplita", "arma": "lanca"}, "dir": {"figurino": "legionario", "arma": "espada"}, "meio": "VS"}},
+  {"linea": 4, "comp": "f_ficha", "p": {"pessoa": {"figurino": "hoplita"}, "titulo": "Leon, 20", "linhas": [{"icone": "espada", "texto": "Trained since 7"}, {"icone": "frio", "texto": "No cloak"}, {"icone": "perigo", "texto": "Outnumbered"}]}},
+  {"linea": 5, "comp": "f_contagem", "p": {"de": 0, "ate": 300, "rotulo": "Spartans"}},
+  {"linea": 6, "comp": "f_comparar", "p": {"esq": {"titulo": "RULE", "itens": ["Hold the line", "No retreat", "Shield up"]}, "dir": {"titulo": "REALITY", "itens": ["A path found", "Betrayal", "Surrounded"]}}},
+  {"linea": 7, "comp": "f_regras", "p": {"titulo": "THE LAWS", "itens": ["Never flee", "Never yield", "Come back with your shield"]}},
+  {"linea": 8, "comp": "f_porta_tempo", "p": {}}
+ ],
+ "destaque": []
+}
