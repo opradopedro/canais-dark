@@ -53,7 +53,7 @@ tabela de cima estão dentro dos pacotes 08, 09, 10 e 12 (fazer lá, não aqui).
 | 11 | FEITO (kiro, 02/11) | `pecas/11-hm-criaturas.js` | Hora Muerta criaturas (llorona, charro negro, cadejo, lechuza, duende, nahual, sombreron, siguanaba, tunda, patasola, mano peluda, nina muneca, monja) + `f_aparicion` |
 | 12 | FEITO (kiro, 02/11) | `pecas/12-sv-lugares.js` | Signal Lost (floresta, corredor, elevador, motel, garagem, mercado, cabana, farol, névoa, lago gelado) |
 | 13 | FEITO (kiro, 02/11) | `pecas/13-sv-lugares2.js` | Signal Lost 2 (bunker, shopping, rádio, avião, navio, deserto, estação polar, escritório, subúrbio, ilha) |
-| 14 | PENDENTE | `pecas/14-roma.js` | Roma + paleta `roma` |
+| 14 | FEITO (kiro, 02/11) | `pecas/14-roma.js` | Roma + paleta `roma` (rua, coliseu, acampamento, termas, forum, estrada, domus) |
 | 15 | PENDENTE | `pecas/15-nordico.js` | nórdico + paleta `nordico` (Thor, Odin, Loki) |
 | 16 | PENDENTE | `pecas/16-egito.js` | Egito + paleta `egito` (Anúbis, pesagem do coração) |
 | 17 | PENDENTE | `pecas/17-japao.js` | Japão + paleta `japao` (Momotaro, kitsune, oni) |

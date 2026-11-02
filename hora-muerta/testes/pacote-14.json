@@ -1,0 +1,27 @@
+{
+ "codigo": "PKG14",
+ "_obs": "Teste do pacote 14 (Roma). Fora de stories/.",
+ "visual": "flat",
+ "tema": "epico",
+ "paleta": "roma",
+ "titulo": "teste pacote 14 - roma",
+ "lineas": [
+  {"texto": "La calle de Roma.", "pausa": 0.3},
+  {"texto": "El Coliseo.", "pausa": 0.3},
+  {"texto": "El campamento.", "pausa": 0.3},
+  {"texto": "Las termas.", "pausa": 0.3},
+  {"texto": "El foro.", "pausa": 0.3},
+  {"texto": "La via romana.", "pausa": 0.3},
+  {"texto": "La domus.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_roma_rua", "p": {"carroca": true}},
+  {"linea": 1, "comp": "f_coliseu", "p": {}},
+  {"linea": 2, "comp": "f_acampamento_romano", "p": {}},
+  {"linea": 3, "comp": "f_termas", "p": {}},
+  {"linea": 4, "comp": "f_forum", "p": {}},
+  {"linea": 5, "comp": "f_estrada_romana", "p": {}},
+  {"linea": 6, "comp": "f_domus", "p": {}}
+ ],
+ "destaque": []
+}

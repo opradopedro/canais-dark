@@ -298,6 +298,15 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 14 (14-roma)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `PALS.cl_roma` | paleta romana (vermelho imperial, ouro, mármore) | — | Old Tales Roma (`"paleta":"roma"`) |
+| `COMP.f_roma_rua` | rua romana: ínsulas, lojas, fontanário, carroça | `p.carroca` | rua de Roma |
+| `COMP.f_coliseu` | arena com arquibancada, público, dois gladiadores | — | Coliseu |
+| `COMP.f_acampamento_romano` | paliçada, tendas vermelhas em grade, legionário | — | acampamento |
+| `COMP.f_termas` | arco e colunas de mármore, piscina, mosaico, vapor | — | termas |
+| `COMP.f_forum` | templo com colunas, tribuna (rostra), orador | — | fórum |
+| `COMP.f_estrada_romana` | via de pedra em perspectiva, marco de milha, legião | — | via romana |
+| `COMP.f_domus` | casa rica: afresco, átrio, compluvio, implúvio, mosaico | — | domus |
+| `p14_coluna` | coluna romana (helper) | `cx, baseY, h, w` | reuso interno |
 
 ### Pacote 15 (15-nordico)
 | Peça/função | O que mostra | Parâmetros | Serve para |
