@@ -1,0 +1,35 @@
+{
+ "codigo": "PKG03",
+ "_obs": "Teste do pacote 03 (objetos). Fora de stories/. Um objeto por categoria em close.",
+ "visual": "flat",
+ "titulo": "teste pacote 03 - objetos",
+ "lineas": [
+  {"texto": "Uma vela acesa.", "pausa": 0.3},
+  {"texto": "Lanterna de papel chinesa.", "pausa": 0.3},
+  {"texto": "Um livro iluminado.", "pausa": 0.3},
+  {"texto": "Um pessego da imortalidade.", "pausa": 0.3},
+  {"texto": "Uma chave antiga.", "pausa": 0.3},
+  {"texto": "Uma ampulheta.", "pausa": 0.3},
+  {"texto": "O bastao de ouro do Wukong.", "pausa": 0.3},
+  {"texto": "Caveira de acucar.", "pausa": 0.3},
+  {"texto": "Um celular tocando.", "pausa": 0.3},
+  {"texto": "Um barco viking.", "pausa": 0.3},
+  {"texto": "Um carro velho na estrada.", "pausa": 0.3},
+  {"texto": "Uma viatura de policia.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_objeto", "p": {"obj": "vela", "rotulo": "la vela"}},
+  {"linea": 1, "comp": "f_objeto", "p": {"obj": "lanterna_papel"}},
+  {"linea": 2, "comp": "f_objeto", "p": {"obj": "livro", "rotulo": "the book"}},
+  {"linea": 3, "comp": "f_objeto", "p": {"obj": "pessego"}},
+  {"linea": 4, "comp": "f_objeto", "p": {"obj": "chave", "gira": true}},
+  {"linea": 5, "comp": "f_objeto", "p": {"obj": "ampulheta"}},
+  {"linea": 6, "comp": "f_objeto", "p": {"obj": "bastao_ouro"}},
+  {"linea": 7, "comp": "f_objeto", "p": {"obj": "caveira_acucar"}},
+  {"linea": 8, "comp": "f_objeto", "p": {"obj": "celular", "texto": "MAMA"}},
+  {"linea": 9, "comp": "f_objeto", "p": {"obj": "drakkar", "s": 1.6}},
+  {"linea": 10, "comp": "f_objeto", "p": {"obj": "carro_velho", "s": 1.8, "anda": true}},
+  {"linea": 11, "comp": "f_objeto", "p": {"obj": "viatura", "s": 1.8}}
+ ],
+ "destaque": []
+}

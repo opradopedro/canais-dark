@@ -136,6 +136,15 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 03 (03-kit-objetos)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `obj_<nome>(cx,cy,s,o,t)` | desenha um objeto centrado em cx,cy | `o.cor`, `o.texto` (celular), `o.tamanho` (bastao), `o.anda` (veículos) | compor objetos dentro de cenas |
+| luz | vela, lamparina, tocha, lanterna_papel, lampiao, lanterna_eletrica, fogueira | — | iluminação de cena |
+| escrita | pergaminho, livro, carta, selo, rolo_chines, mapa, bilhete, foto, jornal | — | documento em close ou cena |
+| comida/casa | pao, jarra, caldeirao, cesto, saco_grao, queijo, pessego, tigela_arroz, bule_cha, cabaca, ovo, moedas, chave, sino, tambor, ampulheta | — | mesa, cozinha, mercado |
+| armas | espada, lanca, escudo_esparta, arco, elmo_corintio, bastao_ouro, katana, trabuco, estandarte | `bastao_ouro` cresce com `o.tamanho` | guerra, mito |
+| fé/mistério | cruz, rosario, veladora, cempasuchil, caveira_acucar, incensario, amuleto, estatua_buda, leque, espelho | — | altar, templo, Dia de Muertos |
+| moderno | celular, radio_com, chave_carro, mapa_papel, bussola | `celular` mostra `o.texto` na tela | terror, Signal Lost |
+| veículos | carroca, carruagem, barco_remo, junco, drakkar, trirreme, galera, carro_velho, caminhonete, bicicleta, moto, ambulancia, viatura | `o.anda` gira a roda | estrada, mar |
+| `COMP.f_objeto` | um objeto grande em close, fundo liso + luz, etiqueta opcional | `p.obj`, `p.rotulo`, `p.gira`, `p.brilho`, `p.s`, `p.cor`, `p.texto` | mostrar um objeto importante |
 
 ### Pacote 04 (04-kit-grafismos)
 | Peça/função | O que mostra | Parâmetros | Serve para |
