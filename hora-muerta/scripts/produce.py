@@ -176,7 +176,14 @@ def main():
         if os.path.exists(base + "_voz.wav"):
             os.remove(base + "_voz.wav")
         if not leg and a.subir:
-            sys.exit(f"NAO SUBIU {cod}: LEGENDA FORA DA VOZ depois de {volta} conserto(s)")
+            agora = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            fila = sorted(c for c, v in ja.items() if (v.get("publishAt") or "") > agora)
+            msg = f"NAO SUBIU {cod}: LEGENDA FORA DA VOZ depois de {volta} conserto(s)"
+            if fila:  # ainda ha video agendado: nada sai do ar; workflow verde, aviso na issue (rodar_canal.py)
+                print(f"{msg}. Fila ainda tem {len(fila)} agendado(s) ({', '.join(fila)}): nada sai do ar; "
+                      f"a proxima execucao tenta de novo", flush=True)
+                sys.exit(3)
+            sys.exit(msg)
         if not ok and a.subir:
             print(f"AVISO {cod}: o audio nao passou na conferencia depois de {volta} conserto(s); subo mesmo assim",
                   flush=True)

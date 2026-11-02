@@ -215,6 +215,10 @@ def _rodar(canal):
     alertar(canal, [x for x in importantes if any(m in x for m in ALERTA)])
     resumo = "\n".join(importantes) or "\n".join(linhas[-8:]) or "(sem saida)"
 
+    if r.returncode == 3:
+        # produce.py: video barrado, mas o canal ainda tem video agendado (nada sai do ar). Workflow fica verde
+        # (o Pedro nao recebe e-mail de falha), o aviso vai para a issue e a proxima execucao tenta de novo.
+        return f"[{canal}] OK COM AVISO: barrado nesta execucao, mas ha video agendado; tento de novo depois\n{resumo}"
     if r.returncode != 0:
         erro = (r.stderr or "").strip().splitlines()
         cauda = "\n".join(erro[-8:])

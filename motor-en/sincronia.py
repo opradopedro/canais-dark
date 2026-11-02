@@ -170,6 +170,13 @@ def ajustar(audio, tempos_path, idioma="en"):
     return {"ok": True, "palavras": len(pal)}
 
 
+NUMEROS_EXTENSO = set(
+    "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen "
+    "eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred thousand "
+    "cero uno una dos tres cuatro cinco seis siete ocho nueve diez once doce trece catorce quince dieciséis "
+    "veinte treinta cuarenta cincuenta cien mil".split())
+
+
 def conferir(video, tempos_path, idioma="en", adianto=ADIANTO, atraso=ATRASO, fps=FPS):
     """Trava final: ouve o MP4 pronto e compara o inicio de cada palavra na voz com o quadro em que ela entra na tela.
     d = tela - voz. Passa se TODAS ficarem em [-adianto, +atraso], audio e video comecam juntos e os quadros batem."""
@@ -193,18 +200,26 @@ def conferir(video, tempos_path, idioma="en", adianto=ADIANTO, atraso=ATRASO, fp
     # Numero escrito em algarismo ("120") nao entra na conta: o num2words vira "one hundred and twenty" e a voz diz
     # "a hundred twenty", entao a nota cai a ~0 mesmo com a palavra falada e no tempo certo, e derruba as vizinhas.
     # Foi o que barrou o YB021 em 31/10 (tempo perfeito, max atraso 0,002 s). O TEMPO do numero continua conferido.
+    # Numero por extenso numa contagem ("One, two, three, four, five, six.") tambem nao entra: palavra curta,
+    # falada rapido e sussurrada, o alinhador da nota ~0 com o tempo certo. Barrou o SV006 em 01/11 (max atraso 0,003 s).
     seq, pior = 0, []
     for (w, _, _), n in zip(pal, nota):
-        if re.search(r"\d", w):
+        if re.search(r"\d", w) or re.sub(r"[^\wáéíóúñ]", "", w.lower()) in NUMEROS_EXTENSO:
             continue
         seq = seq + 1 if n < 0.1 else 0
         if seq >= 3:
             pior.append(w)
+    # REGRA do Pedro (02/11): a narracao tem cota e nao pode ser refeita por causa da legenda. Palavra escrita um
+    # pouco diferente da fala NAO barra (vira so aviso); o que barra e TEMPO (atrasada/adiantada, acima) e lingua
+    # trocada / audio errado: a maioria das palavras sem nota (> 40%).
     if pior:
-        out["ok"] = False
         out["voz_nao_fala"] = pior[:8]
+    surdas = sum(1 for (w, _, _), n in zip(pal, nota) if n < 0.1 and not re.search(r"\d", w))
+    if pal and surdas / len(pal) > 0.4:
+        out["ok"] = False
+        out["motivo"] = f"{surdas} de {len(pal)} palavras que a voz nao fala: lingua trocada ou audio errado"
     if tempos.get("legenda") != "alinhamento":
-        out["motivo"] = "tempos.json nao passou pelo alinhamento (sincronia.ajustar) antes do render"
+        out["motivo_tempos"] = "tempos.json nao passou pelo alinhamento (sincronia.ajustar) antes do render"
     out["trilhas"] = trilhas(video)
     out["ok"] &= out["trilhas"]["ok"]
     q = quadros(video, tempos, fps=fps)
