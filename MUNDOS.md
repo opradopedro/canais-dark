@@ -284,6 +284,16 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 13 (13-sv-lugares2)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `COMP.f_bunker` | porta blindada redonda, painel de rádio com onda, beliche, contador de dias | `p.dias` 0..1 | bunker |
+| `COMP.f_shopping` | shopping morto: escada rolante parada, fonte seca, vitrine com manequim | `p.vira` 0..1 | shopping abandonado |
+| `COMP.f_radio` | estação de rádio: painel, onda de voz, microfone, antena na janela | `p.voz` 0..1 | estação de rádio |
+| `COMP.f_aviao` | cabine de avião à noite: assentos, janela com asa, luz SEATBELT | — | voo noturno |
+| `COMP.f_navio` | convés na tempestade: mar revolto, contêineres, mastro com luz | — | navio |
+| `COMP.f_deserto` | estrada no deserto, posto ao longe, cacto, luz estranha no céu | `p.luz` | estrada no deserto |
+| `COMP.f_estacao_polar` | base polar: módulos, antena, aurora, pegadas/cães, porta batendo | — | base de pesquisa |
+| `COMP.f_escritorio` | escritório vazio: baias, monitores ligados, impressora sozinha | — | escritório à noite |
+| `COMP.f_suburbio` | rua de subúrbio: casas iguais acesas, uma diferente/apagada, poste | `p.casa` 0..1 | subúrbio |
+| `COMP.f_ilha` | praia à noite: fogueira, mar, destroços, vulto na água | `p.vulto` | ilha pequena |
 
 ### Pacote 14 (14-roma)
 | Peça/função | O que mostra | Parâmetros | Serve para |

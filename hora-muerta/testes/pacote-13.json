@@ -1,0 +1,32 @@
+{
+ "codigo": "PKG13",
+ "_obs": "Teste do pacote 13 (Signal Lost lugares 2). Fora de stories/.",
+ "visual": "flat",
+ "paleta": "sv",
+ "titulo": "test package 13 - signal lost places 2",
+ "lineas": [
+  {"texto": "The bunker.", "pausa": 0.3},
+  {"texto": "The dead mall.", "pausa": 0.3},
+  {"texto": "The radio station.", "pausa": 0.3},
+  {"texto": "The red-eye flight.", "pausa": 0.3},
+  {"texto": "The ship in the storm.", "pausa": 0.3},
+  {"texto": "The desert road.", "pausa": 0.3},
+  {"texto": "The polar base.", "pausa": 0.3},
+  {"texto": "The empty office.", "pausa": 0.3},
+  {"texto": "The quiet suburb.", "pausa": 0.3},
+  {"texto": "The small island.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_bunker", "p": {"dias": 0.7}},
+  {"linea": 1, "comp": "f_shopping", "p": {"vira": 0.8}},
+  {"linea": 2, "comp": "f_radio", "p": {"voz": 0.8}},
+  {"linea": 3, "comp": "f_aviao", "p": {}},
+  {"linea": 4, "comp": "f_navio", "p": {}},
+  {"linea": 5, "comp": "f_deserto", "p": {"luz": true}},
+  {"linea": 6, "comp": "f_estacao_polar", "p": {}},
+  {"linea": 7, "comp": "f_escritorio", "p": {}},
+  {"linea": 8, "comp": "f_suburbio", "p": {"casa": 0.6}},
+  {"linea": 9, "comp": "f_ilha", "p": {"vulto": true}}
+ ],
+ "destaque": []
+}
