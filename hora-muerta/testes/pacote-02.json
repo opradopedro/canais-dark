@@ -1,0 +1,35 @@
+{
+ "codigo": "PKG02",
+ "_obs": "Teste do pacote 02 (figuras e animais). Fora de stories/. Uma cena por amostra importante.",
+ "visual": "flat",
+ "titulo": "teste pacote 02 - figuras e animais",
+ "lineas": [
+  {"texto": "Hoplita de Esparta com lanca e escudo.", "pausa": 0.3},
+  {"texto": "Cavaleiro medieval com espada.", "pausa": 0.3},
+  {"texto": "Monge copiando, e uma dama.", "pausa": 0.3},
+  {"texto": "Samurai e um hanfu chines.", "pausa": 0.3},
+  {"texto": "Legionario romano e viking.", "pausa": 0.3},
+  {"texto": "Farao do Egito.", "pausa": 0.3},
+  {"texto": "Vaqueiro e policial de hoje.", "pausa": 0.3},
+  {"texto": "Multidao em falange.", "pausa": 0.3},
+  {"texto": "Um cavalo andando.", "pausa": 0.3},
+  {"texto": "Um lobo a espreita.", "pausa": 0.3},
+  {"texto": "Um macaco e um corvo.", "pausa": 0.3},
+  {"texto": "Uma carpa koi na agua.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_figura", "p": {"figurino": "hoplita", "arma": "lanca", "escudo": "esparta"}},
+  {"linea": 1, "comp": "f_figura", "p": {"figurino": "cavaleiro", "arma": "espada"}},
+  {"linea": 2, "comp": "f_figura", "p": {"figurino": "monge", "pose": "reza"}},
+  {"linea": 3, "comp": "f_figura", "p": {"figurino": "samurai", "arma": "espada"}},
+  {"linea": 4, "comp": "f_figura", "p": {"figurino": "legionario", "escudo": "romano", "arma": "lanca"}},
+  {"linea": 5, "comp": "f_figura", "p": {"figurino": "farao"}},
+  {"linea": 6, "comp": "f_figura", "p": {"figurino": "vaqueiro"}},
+  {"linea": 7, "comp": "f_figura", "p": {"figurino": "policial", "x": 0.7}},
+  {"linea": 8, "comp": "f_figura", "p": {"animal": "cavalo", "anda": 1}},
+  {"linea": 9, "comp": "f_figura", "p": {"animal": "lobo", "olhar": -1}},
+  {"linea": 10, "comp": "f_figura", "p": {"animal": "macaco"}},
+  {"linea": 11, "comp": "f_figura", "p": {"animal": "carpa_koi"}}
+ ],
+ "destaque": []
+}

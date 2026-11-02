@@ -123,6 +123,15 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 02 (02-kit-figuras)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `figura(cx,base,s,o,t)` | pessoa de corpo inteiro no traço flat | `o.figurino`, `o.pose` (parado/anda/corre/aponta/ajoelha/luta/reza/carrega/senta), `o.olhar` -1/1, `o.arma`, `o.escudo`, `o.expressao`, `o.pele/cabelo/roupa` | qualquer personagem de época numa cena |
+| figurinos | campones, camponesa, monge, freira, cavaleiro, escudeiro, senhor, dama, ferreiro, mercador, hoplita, menino_esparta, legionario, viking, samurai, ashigaru, hanfu, hanfu_f, monge_budista, imperador_china, soldado_china, egipcio, farao, pastor, peregrino, vaqueiro, abuela, padre, policial, enfermeira, motorista, guarda_florestal, mochileiro | `o.figurino` = nome | roupa certa para cada época/canal |
+| armas | lanca, espada, arco, bastao, foice, tocha, lanterna | `o.arma` | mão da figura |
+| escudos | esparta (Λ), romano, viking, redondo | `o.escudo` | braço de trás |
+| `multidao(x0,x1,base,s,n,o,t)` | grupo/fila/falange de figuras | `o.formacao` fila/falange/grupo, `o.figurino` | exército, feira, procissão |
+| `cavalo` `boi` `burro` `porco` `ovelha` `cabra` `cachorro` `gato` `lobo` `cervo` `urso` `macaco` | animais de 4 patas / corpo | `(cx,base,s,o,t)`; `o.anda`, `o.olhar` -1/1, `o.cor` | cenas com bichos |
+| `corvo` `coruja` `garca` | aves | idem | céu, floresta, lago |
+| `peixe` `carpa_koi` `cobra` | aquáticos/serpente | `(cx,cy,s,o,t)` | água, mito |
+| `COMP.f_figura` | vitrine: 1 figura OU 1 animal no fundo do canal | `p.figurino` **ou** `p.animal`, `p.arma`, `p.escudo`, `p.pose`, `p.x`, `p.s` | plano simples de um personagem |
 
 ### Pacote 03 (03-kit-objetos)
 | Peça/função | O que mostra | Parâmetros | Serve para |
