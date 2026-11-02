@@ -1,0 +1,40 @@
+{
+ "codigo": "PKG08",
+ "_obs": "Teste do pacote 08 (medieval). Fora de stories/.",
+ "visual": "flat",
+ "tema": "calmo",
+ "titulo": "teste pacote 08 - medieval",
+ "lineas": [
+  {"texto": "O moinho d'agua.", "pausa": 0.3},
+  {"texto": "A feira.", "pausa": 0.3},
+  {"texto": "O castelo.", "pausa": 0.3},
+  {"texto": "O salao do senhor.", "pausa": 0.3},
+  {"texto": "A colheita.", "pausa": 0.3},
+  {"texto": "O mosteiro.", "pausa": 0.3},
+  {"texto": "A forja.", "pausa": 0.3},
+  {"texto": "A igreja.", "pausa": 0.3},
+  {"texto": "A estrada dos peregrinos.", "pausa": 0.3},
+  {"texto": "A taverna.", "pausa": 0.3},
+  {"texto": "O cerco.", "pausa": 0.3},
+  {"texto": "O porto.", "pausa": 0.3},
+  {"texto": "A floresta.", "pausa": 0.3},
+  {"texto": "O torneio.", "pausa": 0.3}
+ ],
+ "cenas": [
+  {"linea": 0, "comp": "f_moinho", "p": {"moleiro": true}},
+  {"linea": 1, "comp": "f_mercado", "p": {"pelourinho": true, "pedagio": true}},
+  {"linea": 2, "comp": "f_castelo", "p": {"ponte": 0.5, "bandeiras": true}},
+  {"linea": 3, "comp": "f_salao", "p": {"senhor": true}},
+  {"linea": 4, "comp": "f_campo", "p": {"estacao": "outono"}},
+  {"linea": 5, "comp": "f_mosteiro", "p": {"livro": true}},
+  {"linea": 6, "comp": "f_forja", "p": {}},
+  {"linea": 7, "comp": "f_igreja", "p": {"missa": true}},
+  {"linea": 8, "comp": "f_estrada_antiga", "p": {}},
+  {"linea": 9, "comp": "f_taverna", "p": {}},
+  {"linea": 10, "comp": "f_cerco", "p": {"tiro": 0.5}},
+  {"linea": 11, "comp": "f_porto", "p": {}},
+  {"linea": 12, "comp": "f_floresta_medieval", "p": {}},
+  {"linea": 13, "comp": "f_torneio", "p": {"choque": 0.4}}
+ ],
+ "destaque": []
+}

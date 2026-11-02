@@ -204,6 +204,20 @@ Cada pacote acrescenta as suas linhas na própria seção (assim os agentes não
 ### Pacote 08 (08-medieval)
 | Peça/função | O que mostra | Parâmetros | Serve para |
 |---|---|---|---|
+| `COMP.f_moinho` | moinho d'água com roda girando, sacos de grão | `p.moleiro` | vida da vila |
+| `COMP.f_mercado` | feira: barracas listradas, placas, porco, pelourinho, pedágio | `p.pelourinho`, `p.pedagio` | dia de feira |
+| `COMP.f_castelo` | castelo de fora: muralha, torres, bandeiras, ponte levadiça, fosso | `p.ponte` 0..1, `p.bandeiras` | o castelo |
+| `COMP.f_salao` | salão: lareira enorme, tapeçarias, mesa, senhor e servos | `p.senhor` | corte do senhor |
+| `COMP.f_campo` | colheita: trigo balançando, foice, carroça | `p.estacao` | trabalho no campo |
+| `COMP.f_mosteiro` | scriptorium: monges copiando à luz de janela alta, livro | `p.livro` | mosteiro |
+| `COMP.f_forja` | forja: fornalha, bigorna com faíscas, têmpera na água | — | ferreiro |
+| `COMP.f_igreja` | igreja por dentro: vitral com raios, velas, padre | `p.missa` | igreja de 1300 |
+| `COMP.f_estrada_antiga` | estrada de terra, peregrinos, cruz de pedra, hospedaria | `p.chuva` | viagem, peregrinação |
+| `COMP.f_taverna` | taverna: barris, fogo, mesas, gente rindo, cantor | — | taverna |
+| `COMP.f_cerco` | muralha sob cerco: trabuco, escadas, arqueiros | `p.tiro` 0..1 | guerra de cerco |
+| `COMP.f_porto` | porto: coca (navio 1 mastro), guindaste de roda, gaivotas | — | porto medieval |
+| `COMP.f_floresta_medieval` | floresta do senhor: veado, caçador | `p.neve` | caça, floresta |
+| `COMP.f_torneio` | justa: 2 cavaleiros galopando, arquibancada com bandeiras | `p.choque` 0..1 | torneio |
 
 ### Pacote 09 (09-hm-casa)
 | Peça/função | O que mostra | Parâmetros | Serve para |
