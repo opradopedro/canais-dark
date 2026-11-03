@@ -62,7 +62,7 @@ def usadas_hoje(somar=0):
     except Exception:
         dados = {}
     hoje = dia_google()
-    dados[hoje] = int(dados.get(hoje, 0)) + somar
+    dados[hoje] = max(0, int(dados.get(hoje, 0)) + somar)
     if somar:
         dados = {k: dados[k] for k in sorted(dados)[-14:]}  # guarda so as ultimas 2 semanas
         tmp = CONTADOR + ".tmp"
@@ -126,8 +126,15 @@ def gemini_com_banco(linhas, key):
     if n >= LIMITE:
         raise RuntimeError(f"LIMITE DE NARRACOES: {n} de {LIMITE} ja usadas hoje (dia do Google {dia_google()}); "
                            f"tente depois da meia-noite da California (5h no Brasil)")
-    usadas_hoje(1)  # conta ANTES de chamar: se cair no meio, melhor sobrar do que estourar
-    audio = _gemini_real(linhas, key)
+    usadas_hoje(1)  # conta ANTES de chamar: se o processo morrer no meio, melhor sobrar do que estourar
+    try:
+        audio = _gemini_real(linhas, key)
+    except Exception as e:
+        # o Gemini NAO entregou audio (fora do ar, 503/429): nada foi gasto, devolve a conta. Antes (CL015, 03/11)
+        # cada tentativa com o Gemini fora comia uma das 4 do dia e travava os outros canais com LIMITE falso.
+        usadas_hoje(-1)
+        print(f"GEMINI FORA DO AR: {str(e)[:200]}", flush=True)
+        raise
     tmp = arq + ".tmp.wav"
     tts.sf.write(tmp, audio, tts.SR)
     os.replace(tmp, arq)  # so aparece no banco quando estiver inteiro

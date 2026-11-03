@@ -140,20 +140,41 @@ def esperar_memoria(etapa):
     print(f"memoria segue baixa ({livre} MB) apos {RAM_ESPERA_S // 60} min: tentando {etapa} assim mesmo", flush=True)
 
 
+# Voz (tts_guard.py): quando o Gemini sai do ar (503/429 em todos os modelos, CL015 em 03/11) a queda costuma durar
+# varios minutos. Em vez de 3 tentativas com 60 s, a voz espera mais entre elas. A conta de narracoes do dia so e
+# gasta quando o Gemini entrega audio (tts_guard.py devolve a conta na falha), entao esperar nao custa nada.
+ESPERAS_VOZ_MIN = [int(x) for x in os.environ.get("CANAIS_ESPERAS_VOZ", "3,8,15,25").split(",") if x.strip()]
+
+
+def _cauda_erro(texto, n=3):
+    """As ultimas linhas uteis do erro de uma etapa (vao para o aviso na issue, para saber a causa sem abrir o log)."""
+    linhas = [x.strip() for x in (texto or "").splitlines() if x.strip() and not x.startswith("  File ")]
+    return " | ".join(linhas[-n:])[-400:]
+
+
 def run(*cmd):
     nome = " ".join(os.path.basename(x) if os.path.isabs(x) else x for x in cmd)
     etapa = os.path.basename(cmd[1]) if len(cmd) > 1 and cmd[0] == sys.executable else os.path.basename(cmd[0])
-    for t in range(1, TENTATIVAS + 1):
+    esperas = [60] * (TENTATIVAS - 1)
+    if etapa == "tts_guard.py":
+        esperas = [m * 60 for m in ESPERAS_VOZ_MIN]
+    for t in range(1, len(esperas) + 2):
         esperar_memoria(etapa)
         print("+", nome, flush=True)
-        r = subprocess.run(cmd)
+        # o erro continua aparecendo no log normal, mas guardamos o fim dele para o aviso
+        r = subprocess.run(cmd, stderr=subprocess.PIPE, text=True, encoding="utf-8", errors="replace")
+        if r.stderr:
+            sys.stderr.write(r.stderr); sys.stderr.flush()
         if r.returncode == 0:
             return
-        if t < TENTATIVAS:
-            print(f"ETAPA CAIU: {etapa} (codigo {r.returncode}), tentativa {t} de {TENTATIVAS}. "
-                  f"Espero 60 s e repito.", flush=True)
-            time.sleep(60)
-    raise subprocess.CalledProcessError(r.returncode, cmd)
+        if "LIMITE DE NARRACOES" in (r.stderr or ""):
+            print("LIMITE DE NARRACOES do dia atingido: nao adianta repetir agora (a repescagem tenta de novo)", flush=True)
+            break
+        if t <= len(esperas):
+            print(f"ETAPA CAIU: {etapa} (codigo {r.returncode}: {_cauda_erro(r.stderr, 1)}), tentativa {t} de "
+                  f"{len(esperas) + 1}. Espero {esperas[t - 1] // 60 or 1} min e repito.", flush=True)
+            time.sleep(esperas[t - 1])
+    raise subprocess.CalledProcessError(r.returncode, cmd, stderr=_cauda_erro(r.stderr))
 
 
 def proximo_horario(c, ocupados):
@@ -431,7 +452,13 @@ def main():
             # qualquer quebra na producao (render, voz, mix): se ja ha video agendado, nada sai do ar (codigo 3)
             import traceback; traceback.print_exc()
             if a.subir:
-                sair_barrado(cod, 0, ja, f"producao quebrou ({type(e).__name__}: {str(e)[:300]})")
+                causa = getattr(e, "stderr", None)
+                if isinstance(e, subprocess.CalledProcessError):
+                    passo = os.path.basename(e.cmd[1]) if len(e.cmd) > 1 and e.cmd[0] == sys.executable else os.path.basename(e.cmd[0])
+                    resumo = f"{passo} falhou (codigo {e.returncode})"
+                else:
+                    resumo = f"{type(e).__name__}: {str(e)[:300]}"
+                sair_barrado(cod, 0, ja, f"producao quebrou ({resumo})" + (f". Causa: {causa}" if causa else ""))
             raise
         if a.teste:
             continue

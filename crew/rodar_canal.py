@@ -208,11 +208,11 @@ def _rodar(canal):
     # resumo: so o que interessa no relatorio do Crew
     importantes = [x for x in linhas if any(
         m in x for m in ("AGENDADO", "PUBLICADO", "FILA CHEIA", "SEM ROTEIRO", "CANAL ERRADO", "CODIGO ERRADO",
-                         "NAO SUBIU", "LEGENDA FORA DA VOZ", "AUDIO COM PROBLEMA", "VOZ FALHOU", "LIMITE DE NARRACOES",
+                         "NAO SUBIU", "LEGENDA FORA DA VOZ", "AUDIO COM PROBLEMA", "VOZ FALHOU", "LIMITE DE NARRACOES", "GEMINI FORA DO AR",
                          "canal confirmado", "FUSO NAO ENCONTRADO", "FALTA A VARIAVEL", "POUCA MEMORIA",
                          "FALTA ROTEIRO", "ESTOQUE BAIXO", "SUBSTITUTO", "HORARIO VAZIO"))]
     importantes += estoque(repo, canal, linhas)
-    alertar(canal, [x for x in importantes if any(m in x for m in ALERTA)])
+    alertar(canal, [x for x in importantes if any(m in x for m in ALERTA) and not folga_na_fila(x)])
     resumo = "\n".join(importantes) or "\n".join(linhas[-8:]) or "(sem saida)"
 
     if r.returncode == 3:
@@ -235,6 +235,15 @@ def _rodar(canal):
 # o que vira aviso para o Pedro (issue no GitHub, canais.yml): problema que pode deixar um dia sem video
 ALERTA = ("SEM ROTEIRO", "FALTA ROTEIRO", "ESTOQUE BAIXO", "NAO SUBIU", "HORARIO VAZIO", "VOZ FALHOU", "CANAL ERRADO")
 DIAS_DE_ESTOQUE = int(os.environ.get("CANAIS_DIAS_ESTOQUE", "4"))
+
+
+def folga_na_fila(linha):
+    """'NAO SUBIU' com 2 ou mais videos ja agendados nao vira e-mail: nada sai do ar e a proxima execucao (ou a
+    repescagem do dia) tenta de novo. Pedido do Pedro (03/11): aviso so quando ha risco de dia sem video.
+    Continua no log do Actions. Com 0 ou 1 agendado, avisa (amanha pode ficar vazio)."""
+    import re
+    m = re.search(r"NAO SUBIU .*Fila ainda tem (\d+) agendado", linha)
+    return bool(m) and int(m.group(1)) >= 2
 
 
 def estoque(repo, canal, linhas):
