@@ -1,0 +1,182 @@
+{
+ "formato": "Soldier",
+ "tema": "epico",
+ "piano": 0,
+ "visual": "flat",
+ "paleta": "grecia",
+ "serie": "spartan-boy",
+ "serie_titulo": "You Wake Up in Sparta | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (frente soldado, 03/11). Fatos: Plutarco, Vida de Licurgo 12-17; Plutarco, Ditos das mulheres espartanas",
+ "tags": [
+  "sparta",
+  "spartan",
+  "ancient greece",
+  "history",
+  "history facts",
+  "agoge",
+  "spartan training",
+  "ancient history",
+  "you wake up in"
+ ],
+ "codigo": "CL018",
+ "parte": 3,
+ "anterior": "CL017",
+ "titulo": "How Spartans voted with bread 🛡️ Part 3 #history #shorts",
+ "capa": "WITH IT, OR ON IT",
+ "descripcion": "To join a Spartan dining group, every man dropped a ball of bread in a bowl. One flattened ball meant no. The end of your life in Sparta.\n\nSource: Plutarch, Life of Lycurgus; Sayings of Spartan Women.\n\nCould you have lasted in Sparta?\n\n#history #sparta #ancientgreece #historyfacts #shorts",
+ "lineas": [
+  {
+   "texto": "A ball of bread. That's how they vote.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Each man drops soft bread into a bowl.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A flattened one means no. One no, and you're out.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "You're in. Every month, you bring barley, wine, cheese and figs.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Dinner is black broth, made with pork and blood.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Then comes war. Your mother hands you your shield.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Come back with it, or on it.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Could you have lasted in Sparta?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_objeto",
+   "p": {
+    "hud": {
+     "dia": "Age 20",
+     "hora": "Evening",
+     "lugar": "Sparta",
+     "ceu": "tarde"
+    },
+    "obj": "pao",
+    "rotulo": "a ballot of bread",
+    "gira": true
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_syssitia",
+   "p": {}
+  },
+  {
+   "linea": 2,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "THE VOTE",
+    "itens": [
+     "Round ball: yes",
+     "Flat ball: no",
+     "One no: you're out"
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_syssitia",
+   "p": {
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "Your monthly share",
+     "itens": [
+      "Barley",
+      "Wine",
+      "Cheese and figs"
+     ],
+     "y": 0.12
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_syssitia",
+   "p": {
+    "caldo": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "black broth",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#2a1a10",
+     "cabeloTipo": "coque",
+     "roupa": "#e9e4d6",
+     "detalhe": "#9a2d22",
+     "expressao": "neutro"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Your mother",
+     "sub": "hands you the shield",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_falange",
+   "p": {
+    "avanca": [
+     0,
+     0.6
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "with it, or on it",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Could you have lasted",
+     "in Sparta?"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "bread",
+  "bowl",
+  "flattened",
+  "barley",
+  "black broth",
+  "shield",
+  "on it",
+  "lasted"
+ ]
+}

@@ -46,3 +46,17 @@ Cenas: vila, casa, salao, mercado, texto.
   franze a testa. Pergunta: passou? FEITO
 - CL015 parte 3/3 (última): passou; multa quase todo mês = licença; fraude grave ia para o cucking stool; noite com os
   vizinhos no fogo; dorme na palha. Pergunta final calma. FEITO
+
+## spartan-boy (CL016-CL018) — You Wake Up in Sparta — por: claude (03/11). Frente SOLDADO
+- Origem: autoral. `"tema": "epico"`, `"paleta": "grecia"`. Gancho: você no lugar. Peças: `f_esparta`, `f_agoge`, `f_syssitia`, `f_falange`, `f_ficha`, `f_comparar`, `f_regras`, `f_objeto`, `retrato`, `texto`.
+- Fatos: Plutarco, *Vida de Licurgo* 12-17 (agogê aos 7; aos 12 sem túnica, um manto por ano, cama de juncos arrancados do Eurotas sem faca; comida curta de propósito; roubar era esperado, apanhava quem fosse pego; menino da raposa; voto da syssitia com bolinhas de pão, uma achatada = não; cota mensal de cevada, vinho, queijo e figos; caldo negro) e *Ditos das mulheres espartanas* ("com ele ou sobre ele").
+- CL016 parte 1/3: 7 anos, sai de casa para a agogê; bando de meninos com um mais velho; aos 12: sem túnica, um manto, juncos do rio, comida pouca de propósito. Pergunta: como você come? FEITO
+- CL017 parte 2/3: rouba; apanha por ser pego, não por roubar; menino da raposa (Plutarco); aos 20 pede para entrar num refeitório. Pergunta: um voto te barra, como? FEITO
+- CL018 parte 3/3 (última): voto com bola de pão; cota mensal; caldo negro; a mãe entrega o escudo: com ele ou sobre ele. Pergunta final. FEITO
+
+## monkey-king (CL019-CL021) — The Monkey King — por: claude (03/11). Frente MITO
+- Origem: autoral. Fonte: *Jornada ao Oeste* (Wu Cheng'en, séc. XVI), cap. 1-7. `"tema": "mito"`, `"paleta": "china"`, 3ª pessoa. Gancho: objeto/pedra que racha. Peças do pacote 05 + `f_rio_china`, `f_contagem`, `f_regras`, `retrato`, `texto`.
+- CL019 parte 1/3: pedra na Montanha das Flores e Frutas racha, macaco de pedra, olhos de luz até o Céu; desafio da cachoeira; vira Rei Macaco. Pergunta: por que ele chorou? FEITO
+- CL020 parte 2/3: chora porque vai morrer; cruza o mar; Subodhi o chama Sun Wukong; 72 transformações e salto de nuvem (108 mil li); pilar de ferro do Rei Dragão do Mar do Leste. FEITO
+- CL021 parte 3/3 (última): cavalariço do Céu (cargo mais baixo), vai embora; come os pêssegos da imortalidade; exércitos não o param; aposta da palma do Buda; 5 pilares eram dedos; 500 anos sob a montanha. Pergunta final. FEITO
+- Próximas da frente mito: continuar a Jornada (Tang Sanzang solta o Wukong, cap. 14) ou outro mito chinês do backlog.

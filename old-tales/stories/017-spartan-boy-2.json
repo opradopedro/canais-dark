@@ -1,0 +1,205 @@
+{
+ "formato": "Soldier",
+ "tema": "epico",
+ "piano": 0,
+ "visual": "flat",
+ "paleta": "grecia",
+ "serie": "spartan-boy",
+ "serie_titulo": "You Wake Up in Sparta | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (frente soldado, 03/11). Fatos: Plutarco, Vida de Licurgo 12-17; Plutarco, Ditos das mulheres espartanas",
+ "tags": [
+  "sparta",
+  "spartan",
+  "ancient greece",
+  "history",
+  "history facts",
+  "agoge",
+  "spartan training",
+  "ancient history",
+  "you wake up in"
+ ],
+ "codigo": "CL017",
+ "parte": 2,
+ "anterior": "CL016",
+ "titulo": "Spartan boys were TOLD to steal food 🛡️ Part 2 #history #shorts",
+ "capa": "STEAL. DON'T GET CAUGHT",
+ "descripcion": "Spartan boys were kept hungry and expected to steal. Getting caught meant a whipping, for being clumsy, not for stealing.\n\nSource: Plutarch, Life of Lycurgus.\n\nWould you have taken the risk?\n\n#history #sparta #ancientgreece #historyfacts #shorts",
+ "lineas": [
+  {
+   "texto": "You steal. That's the answer, and your trainers expect it.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You creep into gardens and dining halls, and take what you can.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Get caught, and you're whipped.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Not for stealing. For being caught.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Plutarch tells of a boy who hid a stolen fox under his cloak.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "It bit him, and he never made a sound.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "At twenty, you ask to join a men's dining group.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "One vote can keep you out. How? Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "retrato",
+   "p": {
+    "hud": {
+     "dia": "Age 12",
+     "hora": "Night",
+     "lugar": "Sparta",
+     "ceu": "noite"
+    },
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#3a2416",
+     "cabeloTipo": "curto",
+     "roupa": "#b23b2e",
+     "detalhe": "#f0a43a",
+     "expressao": "sorriso",
+     "olhar": 1
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the answer: steal",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_esparta",
+   "p": {
+    "ceu": "noite",
+    "foco": [
+     0.4,
+     0.6
+    ],
+    "escala": [
+     1.2,
+     1.5
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_agoge",
+   "p": {
+    "atividade": "luta"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_comparar",
+   "p": {
+    "esq": {
+     "titulo": "STEAL",
+     "itens": [
+      "Allowed",
+      "Expected",
+      "Smart"
+     ]
+    },
+    "dir": {
+     "titulo": "CAUGHT",
+     "itens": [
+      "Whipped",
+      "Shamed",
+      "Clumsy"
+     ]
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_figura",
+   "p": {
+    "figurino": "menino_esparta",
+    "x": 0.4,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Plutarch's story",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#3a2416",
+     "cabeloTipo": "curto",
+     "roupa": "#b23b2e",
+     "detalhe": "#f0a43a",
+     "expressao": "neutro"
+    },
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "not a sound",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_syssitia",
+   "p": {
+    "hud": {
+     "dia": "Age 20",
+     "hora": "Evening",
+     "lugar": "Sparta",
+     "ceu": "tarde"
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "One vote. How?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "steal",
+  "gardens",
+  "whipped",
+  "being caught",
+  "fox",
+  "sound",
+  "twenty",
+  "vote"
+ ]
+}

@@ -1,0 +1,220 @@
+{
+ "formato": "Soldier",
+ "tema": "epico",
+ "piano": 0,
+ "visual": "flat",
+ "paleta": "grecia",
+ "serie": "spartan-boy",
+ "serie_titulo": "You Wake Up in Sparta | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (frente soldado, 03/11). Fatos: Plutarco, Vida de Licurgo 12-17; Plutarco, Ditos das mulheres espartanas",
+ "tags": [
+  "sparta",
+  "spartan",
+  "ancient greece",
+  "history",
+  "history facts",
+  "agoge",
+  "spartan training",
+  "ancient history",
+  "you wake up in"
+ ],
+ "codigo": "CL016",
+ "parte": 1,
+ "titulo": "You wake up in Sparta, age 7 🛡️ Part 1 #history #shorts",
+ "capa": "AGE 7: YOU LEAVE HOME",
+ "descripcion": "At seven, every Spartan boy left home for the agoge. One cloak a year, a bed of river reeds, and never enough food.\n\nSource: Plutarch, Life of Lycurgus.\n\nCould you have lasted?\n\n#history #sparta #ancientgreece #historyfacts #shorts",
+ "lineas": [
+  {
+   "texto": "You wake up in Sparta. You are seven, and today you leave home.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Every Spartan boy goes to the agoge, the state's training school.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You live in a pack of boys, led by an older boy.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At twelve, the rules get harder.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "No tunic. One cloak, for the whole year.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You sleep on reeds you pulled from the river, by hand.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And the food? Never quite enough, on purpose.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "So how do you eat? Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_esparta",
+   "p": {
+    "hud": {
+     "dia": "Age 7",
+     "hora": "Dawn",
+     "lugar": "Sparta",
+     "ceu": "aurora"
+    },
+    "ceu": "aurora"
+   }
+  },
+  {
+   "linea": 0,
+   "en": 0.55,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#3a2416",
+     "cabeloTipo": "curto",
+     "roupa": "#b23b2e",
+     "detalhe": "#f0a43a",
+     "expressao": "triste"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "You, 7",
+     "sub": "a Spartan boy",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_esparta",
+   "p": {
+    "ceu": "dia",
+    "treino": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the agoge",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_agoge",
+   "p": {
+    "atividade": "corrida"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_ficha",
+   "p": {
+    "hud": {
+     "dia": "Age 12",
+     "hora": "Winter",
+     "lugar": "Sparta",
+     "ceu": "tarde"
+    },
+    "pessoa": {
+     "figurino": "menino_esparta"
+    },
+    "titulo": "You, 12",
+    "linhas": [
+     {
+      "icone": "idade",
+      "texto": "Age 12"
+     },
+     {
+      "icone": "frio",
+      "texto": "Cold"
+     },
+     {
+      "icone": "fome",
+      "texto": "Hungry"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_agoge",
+   "p": {
+    "atividade": "frio",
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "Your rules",
+     "itens": [
+      "No tunic",
+      "One cloak a year",
+      "Reeds for a bed"
+     ],
+     "marcados": 2,
+     "y": 0.12
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_esparta",
+   "p": {
+    "ceu": "tarde",
+    "foco": [
+     0.5,
+     0.8
+    ],
+    "escala": [
+     1.2,
+     1.6
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the river Eurotas",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_agoge",
+   "p": {
+    "atividade": "fome",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "never enough",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "How do you eat?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "Sparta",
+  "agoge",
+  "pack",
+  "twelve",
+  "cloak",
+  "reeds",
+  "on purpose",
+  "eat"
+ ]
+}

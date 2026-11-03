@@ -1,0 +1,186 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "piano": 0,
+ "visual": "flat",
+ "paleta": "china",
+ "serie": "monkey-king",
+ "serie_titulo": "The Monkey King | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (frente mito, 03/11). Fonte: Jornada ao Oeste (Wu Cheng'en, séc. XVI), capítulos 1-7",
+ "tags": [
+  "sun wukong",
+  "monkey king",
+  "journey to the west",
+  "chinese mythology",
+  "mythology",
+  "myths and legends",
+  "chinese legends",
+  "history",
+  "old tales"
+ ],
+ "codigo": "CL020",
+ "parte": 2,
+ "anterior": "CL019",
+ "titulo": "How the Monkey King got his magic staff 🐒 Part 2 #mythology #shorts",
+ "capa": "72 TRANSFORMATIONS",
+ "descripcion": "Afraid of dying, the Monkey King crossed the sea to find a master, learned 72 transformations, and took an iron pillar from the Dragon King.\n\nFrom Journey to the West, by Wu Cheng'en (16th century), chapters 1-3.\n\nWhich power would you pick?\n\n#mythology #monkeyking #sunwukong #chinesemythology #shorts",
+ "lineas": [
+  {
+   "texto": "He cried because, one day, even a king must die.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "So he crossed the sea, looking for a master.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The master, Subodhi, gave him a name: Sun Wukong.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He learned seventy-two transformations, and the cloud somersault.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "One somersault: a hundred and eight thousand li.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "For a weapon, he visited the Dragon King of the Eastern Sea.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He took an iron pillar that could shrink into a needle.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Soon, Heaven itself would know his name. Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_cachoeira",
+   "p": {
+    "hud": {
+     "dia": "Chapter 1",
+     "hora": "Night",
+     "lugar": "Water Curtain Cave",
+     "ceu": "noite"
+    },
+    "trono": true
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_rio_china",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "across the sea",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#e9e4d6",
+     "barba": true,
+     "corBarba": "#e9e4d6",
+     "cabeloTipo": "coque",
+     "roupa": "#3fa88b",
+     "detalhe": "#f4c542",
+     "expressao": "sorriso"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Subodhi",
+     "sub": "the master",
+     "y": 0.13
+    },
+    "cartao2": {
+     "tipo": "rotulo",
+     "titulo": "Sun Wukong",
+     "y": 0.3
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_contagem",
+   "p": {
+    "de": 0,
+    "ate": 72,
+    "rotulo": "transformations"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_contagem",
+   "p": {
+    "de": 0,
+    "ate": 108000,
+    "rotulo": "li in one jump"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_palacio_dragao",
+   "p": {
+    "hud": {
+     "dia": "Chapter 3",
+     "hora": "Deep sea",
+     "lugar": "Dragon Palace",
+     "ceu": "noite"
+    },
+    "pilar": 0.3,
+    "dragao": true
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_palacio_dragao",
+   "p": {
+    "pilar": [
+     0.2,
+     1
+    ],
+    "dragao": false,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the golden-hooped staff",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Heaven is next",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "die",
+  "sea",
+  "Sun Wukong",
+  "seventy-two",
+  "thousand",
+  "Dragon King",
+  "needle",
+  "Heaven"
+ ]
+}

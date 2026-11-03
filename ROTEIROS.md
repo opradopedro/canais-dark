@@ -65,6 +65,14 @@ cada canal: "só se inspire, não faça exatamente igual". Guia completo: **`EST
 - Modelos prontos para copiar: `hora-muerta/stories/021-*` a `024-*`, `signal-lost/stories/012-*` a `014-*`,
   `old-tales/stories/013-*` a `015-*`.
 
+## Estoque mínimo (REGRA do Pedro, 03/11: "nunca mais" aviso de ESTOQUE BAIXO)
+- Cada canal precisa ter SEMPRE pelo menos **10 dias** de roteiros prontos em `stories/` que ainda não subiram
+  (Old Tales, Hora Muerta e Signal Lost: 10 roteiros; So You Built It: 20). A produção avisa com 4 dias.
+- Quem escreve (rotina semanal de sexta, Kiro ou Claude em qualquer conversa) completa até **14 dias** à frente,
+  não só até a sexta seguinte. Assim o estoque nunca cai abaixo do aviso entre uma rotina e outra.
+- Para contar: a produção diária escreve `estoque: N roteiro(s) prontos (...)` no log do Actions de cada canal
+  (ou `ESTOQUE BAIXO` na issue "Aviso dos canais"). Na dúvida, escreva 14 dias a partir do próximo código livre.
+
 ## Passo 1: o plano da série (ANTES de escrever qualquer parte)
 Em `<canal>/references/series.md`, acrescente um bloco assim e já faça commit + push:
 

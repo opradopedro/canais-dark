@@ -48,3 +48,20 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 - Personagens: Julián, 19, estudante (jaqueta azul); Don Ramiro, chofer da Ruta 14 (chapéu, bigode grisalho). HUD: Noche 1 · Ruta 14, 12:58 → 1:10 AM.
 - HM023 parte 1/2: 3 regras do chofer; 1:10 numa curva sem casas a porta abre, ninguém sobe, mas o ônibus afunda; chofer pálido no espelho: "¡bájate ya!". FEITO
 - HM024 parte 2/2: a coisa não tem corpo, só peso; regra que faltava: senta junto ao último passageiro e desce onde ele descer; por isso o chofer o fez descer longe de casa; ele chega ao amanhecer; à noite o colchão afunda ao lado dele: ela o esperava em casa. FEITO
+
+## Semana de 4/11 a 9/11/2026 — por: claude (03/11, estoque baixo). 1 gringa (EUA), 2 autorais. Rodízio de ganchos: pregunta directa → objeto fuera de lugar → oficio curioso.
+
+## HM025-HM026 La llamada de la abuela (Pregunta directa) — origem: autoral
+- Personagem: Lupita, 28, enfermeira, mora sozinha na casa da avó. 3 conselhos da avó: reza, fecha o pátio, não atende de madrugada. Peças: `f_telefono`, `f_cocina`, `f_cuarto`, `f_altar`, `f_pueblo`, `retrato`, `texto`.
+- HM025 parte 1/2: 3:04, o celular diz "Abuelita", número cancelado há 5 anos; ela atende, voz igual: "Mija, ábreme la puerta del patio". FEITO
+- HM026 parte 2/2: não abre porque a avó nunca dizia "mija", só "Lupe"; a voz agora vem do pátio: "ya sé que no soy ella"; maçaneta gira, ela reza; 6h a porta segue fechada; mensagem nova: "mañana sí me abres". FEITO
+
+## HM027-HM028 El hombre del sombrero (Objeto fuera de lugar) — origem: gringa: EUA, lenda do Hat Man (paralisia do sono, viral TikTok/Reddit) https://en.wikipedia.org/wiki/Hat_Man_(folklore)
+- Personagem: Andrés, 31, vigia noturno. Peças: `f_sala`, `f_cuarto`, `f_ceu`, `f_regras`, `retrato`, `texto`.
+- HM027 parte 1/2: chapéu no cabide que não é de ninguém; 3:33 acorda sem se mexer; homem alto de chapéu na porta, sem rosto; o chapéu sumiu do cabide. FEITO
+- HM028 parte 2/2: nos EUA chamam de Hat Man; chega às 3, olha da porta, deixa algo; põe o chapéu no peito dele; 6h o chapéu continua lá, morno; desde então alguém bate na porta às 3. FEITO
+
+## HM029-HM030 El pozo de Don Chuy (Oficio curioso) — origem: autoral
+- Personagens: Don Chuy, 62, tampa o poço do povoado à meia-noite há 40 anos; Beto, 16, o neto. Peças: `f_pozo`, `f_pueblo`, `f_cocina`, `f_regras`, `retrato`, `texto`.
+- HM029 parte 1/2: regras (tampa às 12, pedra em cima, não responde se pedirem água); Don Chuy doente, Beto chega 12:10; tampa já aberta, água soando; voz do fundo: "tengo sed, bájame la cubeta". FEITO
+- HM030 parte 2/2: o balde desce sozinho, a corda estica; Beto corta e tampa; o avô: o poço secou há 40 anos, o que vive lá sobe quando lhe dão água; mãos de Beto molhadas; a torneira da cozinha começa a pingar. FEITO

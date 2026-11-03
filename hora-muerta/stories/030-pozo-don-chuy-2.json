@@ -1,0 +1,230 @@
+{
+ "formato": "Regla",
+ "visual": "flat",
+ "serie": "pozo-don-chuy",
+ "serie_titulo": "El pozo de Don Chuy | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral (03/11). Gancho: oficio curioso",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "el pozo",
+  "leyendas de pueblo"
+ ],
+ "codigo": "HM030",
+ "parte": 2,
+ "anterior": "HM029",
+ "titulo": "El pozo se secó hace 40 años 😰 Parte 2 #terror #shorts",
+ "capa": "SE SECÓ HACE 40 AÑOS",
+ "descripcion": "Beto no contestó, pero la cubeta bajó sola. Final de El pozo de Don Chuy.\n\n¿Tú habrías cortado la cuerda?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "Beto no contestó, pero la cubeta bajó sola.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "La cuerda se tensó, como si alguien pesado subiera.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Beto cortó la cuerda, y puso la tapa con la piedra.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "En casa, su abuelo lo esperaba despierto, muy serio.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Ese pozo se secó hace cuarenta años, mijo.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Lo que vive ahí abajo sube cuando le dan agua.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Beto miró sus manos, todavía mojadas.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Y en la cocina, la llave del agua empezó a gotear.",
+   "pausa": 1.0
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_pozo",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "12:12",
+     "ampm": "AM",
+     "lugar": "El pozo del pueblo"
+    },
+    "mano": 0
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_pozo",
+   "p": {
+    "mano": [
+     0,
+     0.8
+    ],
+    "foco": [
+     0.5,
+     0.7
+    ],
+    "escala": [
+     1.2,
+     1.5
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#93603f",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "curto",
+     "roupa": "#2f7a4a",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "cuerda cortada",
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_cocina",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "12:40",
+     "ampm": "AM",
+     "lugar": "Casa de Don Chuy"
+    },
+    "porta": 0
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#93603f",
+     "cabelo": "#d0ccc4",
+     "cabeloTipo": "curto",
+     "bigode": true,
+     "corBarba": "#d0ccc4",
+     "chapeu": "chapeu",
+     "corChapeu": "#c8a86a",
+     "roupa": "#6a4a3a",
+     "detalhe": "#efe4cc",
+     "expressao": "triste"
+    },
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "DON CHUY",
+     "texto": "Se secó hace 40 años",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "LO QUE VIVE ABAJO",
+    "itens": [
+     "No tiene agua",
+     "Pide agua",
+     "Sube si se la dan"
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#93603f",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "curto",
+     "roupa": "#2f7a4a",
+     "detalhe": "#efe4cc",
+     "expressao": "medo",
+     "olhar": -1
+    },
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "manos mojadas",
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_cocina",
+   "p": {
+    "porta": 0,
+    "olla": false,
+    "foco": [
+     0.3,
+     0.55
+    ],
+    "escala": [
+     1.3,
+     1.6
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 1,
+   "en": 0.5
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "sola",
+  "pesado",
+  "cortó",
+  "abuelo",
+  "cuarenta",
+  "agua",
+  "mojadas",
+  "gotear"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

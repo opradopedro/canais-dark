@@ -1,0 +1,212 @@
+{
+ "formato": "Regla",
+ "visual": "flat",
+ "serie": "llamada-abuela",
+ "serie_titulo": "La llamada de la abuela | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral (03/11). Gancho: pregunta directa",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "llamada de un muerto",
+  "abuela"
+ ],
+ "codigo": "HM026",
+ "parte": 2,
+ "anterior": "HM025",
+ "titulo": "La voz de mi abuela estaba en el patio 😰 Parte 2 #terror #shorts",
+ "capa": "MAÑANA SÍ ME ABRES",
+ "descripcion": "Lupita no abrió, porque su abuela nunca le decía mija. Final de La llamada de la abuela.\n\n¿Tú habrías abierto?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "Lupita no abrió, porque su abuela nunca le decía mija.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Siempre le decía Lupe, y nada más.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "La voz volvió a hablar, pero ya no en el teléfono.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Venía del patio, pegada a la puerta.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Lupe, ya sé que no soy ella, ábreme.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "La perilla empezó a girar sola, y Lupita rezó en voz alta.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "A las seis salió el sol, y la puerta seguía cerrada.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Pero en el celular había un mensaje nuevo: mañana sí me abres.",
+   "pausa": 1.0
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "retrato",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:06",
+     "ampm": "AM",
+     "lugar": "Casa de la abuela"
+    },
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "longo",
+     "roupa": "#5a7fa8",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "nunca le decía mija",
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_altar",
+   "p": {
+    "foto": true,
+    "vela_apaga": 0,
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "La abuela",
+     "sub": "le decía Lupe",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "celular",
+    "quien": "Abuelita",
+    "texto": "llamada terminada"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_cocina",
+   "p": {
+    "porta": 0,
+    "foco": [
+     0.85,
+     0.65
+    ],
+    "escala": [
+     1.4,
+     1.8
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_cocina",
+   "p": {
+    "porta": 0,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "DESDE EL PATIO",
+     "texto": "No soy ella, ábreme",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_cocina",
+   "p": {
+    "porta": [
+     0,
+     0.08
+    ],
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "LOS CONSEJOS DE LA ABUELA",
+     "itens": [
+      "Reza",
+      "Cierra el patio",
+      "No contestes de madrugada"
+     ],
+     "marcados": 1,
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_pueblo",
+   "p": {
+    "hud": {
+     "dia": "Día 2",
+     "hora": "6:00",
+     "ampm": "AM",
+     "lugar": "Casa de la abuela"
+    },
+    "amanecer": 1,
+    "casa": "apagada",
+    "porta": 0
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "celular",
+    "quien": "Abuelita",
+    "texto": "mañana sí me abres"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 5,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "mija",
+  "Lupe",
+  "teléfono",
+  "patio",
+  "ábreme",
+  "girar",
+  "cerrada",
+  "mañana"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

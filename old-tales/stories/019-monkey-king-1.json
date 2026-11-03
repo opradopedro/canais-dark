@@ -1,0 +1,177 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "piano": 0,
+ "visual": "flat",
+ "paleta": "china",
+ "serie": "monkey-king",
+ "serie_titulo": "The Monkey King | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (frente mito, 03/11). Fonte: Jornada ao Oeste (Wu Cheng'en, séc. XVI), capítulos 1-7",
+ "tags": [
+  "sun wukong",
+  "monkey king",
+  "journey to the west",
+  "chinese mythology",
+  "mythology",
+  "myths and legends",
+  "chinese legends",
+  "history",
+  "old tales"
+ ],
+ "codigo": "CL019",
+ "parte": 1,
+ "titulo": "The monkey who was born from a stone 🐒 Part 1 #mythology #shorts",
+ "capa": "BORN FROM A STONE",
+ "descripcion": "Before he was Sun Wukong, he was a monkey born from a stone on Flower-Fruit Mountain.\n\nFrom Journey to the West, by Wu Cheng'en (16th century), chapter 1.\n\nWhat would make a king cry?\n\n#mythology #monkeyking #sunwukong #chinesemythology #shorts",
+ "lineas": [
+  {
+   "texto": "On a mountain in the eastern sea, a stone sat since the world began.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "One day it cracked, and a monkey made of stone stepped out.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "His eyes shot two beams of light, all the way to Heaven.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "The monkeys found a waterfall, and made a deal.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Whoever jumps through and comes back, becomes our king.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The stone monkey jumped.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Behind the water was a cave, and he became the Monkey King.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Years later, at a feast, he began to cry. Why? Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_montanha_flores",
+   "p": {
+    "hud": {
+     "dia": "Chapter 1",
+     "hora": "Dawn",
+     "lugar": "Flower-Fruit Mountain",
+     "ceu": "aurora"
+    },
+    "pedra": true,
+    "racha": 0,
+    "macacos": 0,
+    "petalas": true
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_montanha_flores",
+   "p": {
+    "pedra": true,
+    "racha": [
+     0,
+     1
+    ],
+    "macacos": 0,
+    "foco": [
+     0.5,
+     0.5
+    ],
+    "escala": [
+     1.2,
+     1.5
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_ceu_jade",
+   "p": {
+    "caos": 0,
+    "portao": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "light reaches Heaven",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_montanha_flores",
+   "p": {
+    "pedra": false,
+    "macacos": 5
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "THE DEAL",
+    "itens": [
+     "Jump through the falls",
+     "Come back alive",
+     "Become king"
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_cachoeira",
+   "p": {
+    "atravessa": true,
+    "trono": false
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_cachoeira",
+   "p": {
+    "atravessa": false,
+    "trono": true,
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "The Monkey King",
+     "sub": "Water Curtain Cave",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Why did he cry?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "stone",
+  "monkey",
+  "Heaven",
+  "waterfall",
+  "king",
+  "jumped",
+  "cave",
+  "cry"
+ ]
+}

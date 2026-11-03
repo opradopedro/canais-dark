@@ -1,0 +1,233 @@
+{
+ "formato": "Regla",
+ "visual": "flat",
+ "serie": "llamada-abuela",
+ "serie_titulo": "La llamada de la abuela | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral (03/11). Gancho: pregunta directa",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "llamada de un muerto",
+  "abuela"
+ ],
+ "codigo": "HM025",
+ "parte": 1,
+ "titulo": "Mi abuela me llamó 5 años después del funeral 😨 Parte 1 #terror #shorts",
+ "capa": "LLAMA ABUELITA",
+ "descripcion": "A las 3:04 el celular de Lupita dice Abuelita. Ese número lo dieron de baja hace cinco años.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú habrías contestado?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "¿Qué harías si tu abuela te llamara, cinco años después del funeral?",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Lupita, veintiocho años, enfermera, vive sola en la casa de su abuela.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "La abuela le dejó tres consejos: reza, cierra el patio, y no contestes de madrugada.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "A las tres y cuatro, el celular vibra.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "En la pantalla dice: Abuelita.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Ese número lo dieron de baja hace cinco años.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Lupita contesta, y escucha su voz, igualita.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Mija, ábreme la puerta del patio, que hace frío.",
+   "pausa": 1.0
+  },
+  {
+   "texto": "¿Quién está afuera? Parte dos, mañana, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_telefono",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:04",
+     "ampm": "AM",
+     "lugar": "Casa de la abuela"
+    },
+    "tipo": "celular",
+    "quien": "Abuelita",
+    "texto": "llamando..."
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "longo",
+     "roupa": "#5a7fa8",
+     "detalhe": "#efe4cc",
+     "expressao": "sorriso"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Lupita, 28",
+     "sub": "enfermera",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_cocina",
+   "p": {
+    "porta": 0,
+    "abuela": false,
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "LOS CONSEJOS DE LA ABUELA",
+     "itens": [
+      "Reza",
+      "Cierra el patio",
+      "No contestes de madrugada"
+     ],
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_cuarto",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:04",
+     "ampm": "AM",
+     "lugar": "Su cuarto"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "celular",
+    "quien": "Abuelita",
+    "texto": "llamando..."
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "longo",
+     "roupa": "#5a7fa8",
+     "detalhe": "#efe4cc",
+     "expressao": "surpresa"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "número dado de baja",
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "longo",
+     "roupa": "#5a7fa8",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    },
+    "zoomRosto": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_cocina",
+   "p": {
+    "porta": [
+     0,
+     0.3
+    ],
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "LA VOZ",
+     "texto": "Mija, ábreme el patio",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "¿Quién está afuera?",
+     "Parte 2 · mañana, {fecha_siguiente}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.2
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "abuela",
+  "Lupita",
+  "tres consejos",
+  "tres y cuatro",
+  "Abuelita",
+  "cinco años",
+  "igualita",
+  "ábreme",
+  "afuera"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

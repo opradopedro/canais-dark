@@ -1,0 +1,176 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "piano": 0,
+ "visual": "flat",
+ "paleta": "china",
+ "serie": "monkey-king",
+ "serie_titulo": "The Monkey King | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (frente mito, 03/11). Fonte: Jornada ao Oeste (Wu Cheng'en, séc. XVI), capítulos 1-7",
+ "tags": [
+  "sun wukong",
+  "monkey king",
+  "journey to the west",
+  "chinese mythology",
+  "mythology",
+  "myths and legends",
+  "chinese legends",
+  "history",
+  "old tales"
+ ],
+ "codigo": "CL021",
+ "parte": 3,
+ "anterior": "CL020",
+ "titulo": "The bet that trapped the Monkey King 🐒 Part 3 #mythology #shorts",
+ "capa": "500 YEARS UNDER A MOUNTAIN",
+ "descripcion": "Sun Wukong ate the peaches of immortality and fought all of Heaven, until the Buddha offered him a bet.\n\nFrom Journey to the West, by Wu Cheng'en (16th century), chapters 4-7.\n\nWould you have taken that bet?\n\n#mythology #monkeyking #sunwukong #chinesemythology #shorts",
+ "lineas": [
+  {
+   "texto": "Heaven gave him a job: keeper of the heavenly horses.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He found out it was the lowest post, and stormed off.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Later, set to guard the peach garden, he ate the peaches of immortality.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Heaven's armies could not stop him.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "So the Buddha made a bet: jump out of my palm.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He flew to five pillars at the end of the world, and wrote his name.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The pillars were the Buddha's fingers. The hand became a mountain.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Five hundred years under it. Would you have made that bet?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_ceu_jade",
+   "p": {
+    "hud": {
+     "dia": "Chapter 4",
+     "hora": "Day",
+     "lugar": "Heaven",
+     "ceu": "dia"
+    },
+    "caos": 0,
+    "portao": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "keeper of the horses",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_ceu_jade",
+   "p": {
+    "caos": [
+     0,
+     0.5
+    ],
+    "portao": true
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_pomar_pessegos",
+   "p": {
+    "come": true,
+    "guardas": true
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_ceu_jade",
+   "p": {
+    "caos": 1,
+    "portao": false
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_palma_buda",
+   "p": {
+    "hud": {
+     "dia": "Chapter 7",
+     "hora": "Day",
+     "lugar": "The West",
+     "ceu": "dia"
+    },
+    "voa": true,
+    "fecha": 0
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_palma_buda",
+   "p": {
+    "voa": true,
+    "fecha": 0.2,
+    "foco": [
+     0.5,
+     0.3
+    ],
+    "escala": [
+     1.2,
+     1.4
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_palma_buda",
+   "p": {
+    "voa": false,
+    "fecha": [
+     0.2,
+     1
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_montanha_preso",
+   "p": {
+    "estacao": "inverno",
+    "anos": 500,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "500 years",
+     "y": 0.14
+    }
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "horses",
+  "lowest",
+  "peaches",
+  "armies",
+  "bet",
+  "pillars",
+  "fingers",
+  "bet"
+ ]
+}

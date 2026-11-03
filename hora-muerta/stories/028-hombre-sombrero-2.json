@@ -1,0 +1,218 @@
+{
+ "formato": "Regla",
+ "visual": "flat",
+ "serie": "hombre-sombrero",
+ "serie_titulo": "El hombre del sombrero | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "gringa: EUA, leyenda del Hat Man (parálisis del sueño, viral en TikTok/Reddit) https://en.wikipedia.org/wiki/Hat_Man_(folklore). Historia y texto nuestros. Gancho: objeto fuera de lugar",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "hat man",
+  "hombre del sombrero",
+  "parálisis del sueño"
+ ],
+ "codigo": "HM028",
+ "parte": 2,
+ "anterior": "HM027",
+ "titulo": "El hombre del sombrero me dejó algo 😰 Parte 2 #terror #shorts",
+ "capa": "VIENE POR SU SOMBRERO",
+ "descripcion": "En Estados Unidos miles dicen haber visto al Hat Man. Andrés lo vio acercarse hasta su cama. Final de El hombre del sombrero.\n\n¿Lo has visto tú?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "En Estados Unidos, miles dicen haberlo visto, y le llaman el Hat Man.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Aparece cuando no puedes moverte, y solo mira.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Dicen que hace tres cosas: llega a las tres, mira desde la puerta, y deja algo.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Andrés lo vio acercarse, paso a paso, hasta la cama.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Se inclinó, y le puso el sombrero sobre el pecho.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "A las seis, Andrés pudo moverse, y el hombre ya no estaba.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "El sombrero sí, sobre su pecho, todavía tibio.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Desde entonces, cada noche a las tres, alguien toca su puerta.",
+   "pausa": 1.0
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_ceu",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:34",
+     "ampm": "AM",
+     "lugar": "Su cuarto"
+    },
+    "tipo": "noite",
+    "lua": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "el Hat Man",
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_cuarto",
+   "p": {
+    "sombra": true
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "LO QUE HACE",
+    "itens": [
+     "Llega a las tres",
+     "Mira desde la puerta",
+     "Deja algo"
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_cuarto",
+   "p": {
+    "sombra": true,
+    "foco": [
+     0.6,
+     0.6
+    ],
+    "escala": [
+     1.2,
+     1.5
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#b97a50",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "corBarba": "#1e130c",
+     "roupa": "#3a4a5a",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    },
+    "zoomRosto": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_cuarto",
+   "p": {
+    "hud": {
+     "dia": "Día 2",
+     "hora": "6:00",
+     "ampm": "AM",
+     "lugar": "Su cuarto"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#b97a50",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "corBarba": "#1e130c",
+     "roupa": "#3a4a5a",
+     "detalhe": "#efe4cc",
+     "expressao": "surpresa",
+     "chapeu": "chapeu",
+     "corChapeu": "#14101c"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "todavía tibio",
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_sala",
+   "p": {
+    "hud": {
+     "dia": "Noche 2",
+     "hora": "3:00",
+     "ampm": "AM",
+     "lugar": "Casa de Andrés"
+    },
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "TOC, TOC",
+     "texto": "a las tres",
+     "y": 0.2
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.5
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "Hat Man",
+  "mira",
+  "tres cosas",
+  "paso a paso",
+  "pecho",
+  "seis",
+  "tibio",
+  "toca"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

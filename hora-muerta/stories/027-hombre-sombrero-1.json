@@ -1,0 +1,208 @@
+{
+ "formato": "Regla",
+ "visual": "flat",
+ "serie": "hombre-sombrero",
+ "serie_titulo": "El hombre del sombrero | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "gringa: EUA, leyenda del Hat Man (parálisis del sueño, viral en TikTok/Reddit) https://en.wikipedia.org/wiki/Hat_Man_(folklore). Historia y texto nuestros. Gancho: objeto fuera de lugar",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "hat man",
+  "hombre del sombrero",
+  "parálisis del sueño"
+ ],
+ "codigo": "HM027",
+ "parte": 1,
+ "titulo": "En mi perchero hay un sombrero que no es de nadie 😨 Parte 1 #terror #shorts",
+ "capa": "NO ES DE NADIE",
+ "descripcion": "Andrés despertó a las 3:33 sin poder moverse. En la puerta, un hombre alto con sombrero.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Te ha pasado?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "En el perchero de Andrés hay un sombrero que no es de nadie.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Andrés, treinta y un años, vigilante nocturno, vive solo.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Esa noche le tocó descanso, y durmió con la luz apagada.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A las tres y treinta y tres despertó, y no pudo moverse.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "En la puerta había un hombre alto, con sombrero de ala ancha.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "No tenía cara, solo sombra.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Y en el perchero, el sombrero ya no estaba.",
+   "pausa": 1.0
+  },
+  {
+   "texto": "¿Quién es el hombre del sombrero? Parte dos, mañana, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_sala",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "11:40",
+     "ampm": "PM",
+     "lugar": "Casa de Andrés"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "un sombrero ajeno",
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#b97a50",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "corBarba": "#1e130c",
+     "roupa": "#3a4a5a",
+     "detalhe": "#efe4cc",
+     "expressao": "neutro"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Andrés, 31",
+     "sub": "vigilante nocturno",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_cuarto",
+   "p": {}
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:33",
+     "ampm": "AM",
+     "lugar": "Su cuarto"
+    },
+    "pessoa": {
+     "pele": "#b97a50",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "corBarba": "#1e130c",
+     "roupa": "#3a4a5a",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "no puede moverse",
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_cuarto",
+   "p": {
+    "sombra": true,
+    "foco": [
+     0.88,
+     0.6
+    ],
+    "escala": [
+     1.3,
+     1.6
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_cuarto",
+   "p": {
+    "sombra": true,
+    "espejo": true
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_sala",
+   "p": {
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "EL PERCHERO",
+     "texto": "vacío",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "¿Quién es él?",
+     "Parte 2 · mañana, {fecha_siguiente}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.3
+  },
+  {
+   "tipo": "susto",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "sombrero",
+  "Andrés",
+  "descanso",
+  "tres y treinta y tres",
+  "ala ancha",
+  "sombra",
+  "ya no estaba",
+  "hombre"
+ ],
+ "gancho": {
+  "cena": 6,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

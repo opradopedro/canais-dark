@@ -1,0 +1,243 @@
+{
+ "formato": "Regla",
+ "visual": "flat",
+ "serie": "pozo-don-chuy",
+ "serie_titulo": "El pozo de Don Chuy | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral (03/11). Gancho: oficio curioso",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "el pozo",
+  "leyendas de pueblo"
+ ],
+ "codigo": "HM029",
+ "parte": 1,
+ "titulo": "Su trabajo es tapar el pozo a las doce 😨 Parte 1 #terror #shorts",
+ "capa": "BÁJAME LA CUBETA",
+ "descripcion": "Don Chuy tapa el pozo del pueblo cada noche a las doce. Esta noche fue su nieto, y llegó diez minutos tarde.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú habrías bajado la cubeta?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "El trabajo de Don Chuy es tapar el pozo del pueblo, cada noche a las doce.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Don Chuy, sesenta y dos años, lo hace desde hace cuarenta.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Sus reglas: tapa a las doce, pon la piedra encima, y no contestes si piden agua.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Esta noche se enfermó, y mandó a su nieto Beto.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Beto llegó a las doce y diez, diez minutos tarde.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "La tapa ya estaba quitada, y adentro sonaba el agua.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Una voz desde el fondo dijo: tengo sed, bájame la cubeta.",
+   "pausa": 1.0
+  },
+  {
+   "texto": "¿Quién pide agua desde el fondo? Parte dos, mañana, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_pozo",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "11:55",
+     "ampm": "PM",
+     "lugar": "El pozo del pueblo"
+    },
+    "mano": 0,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "tapar el pozo a las 12",
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#93603f",
+     "cabelo": "#d0ccc4",
+     "cabeloTipo": "curto",
+     "bigode": true,
+     "corBarba": "#d0ccc4",
+     "chapeu": "chapeu",
+     "corChapeu": "#c8a86a",
+     "roupa": "#6a4a3a",
+     "detalhe": "#efe4cc",
+     "expressao": "neutro"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Don Chuy, 62",
+     "sub": "tapa el pozo hace 40 años",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#93603f",
+     "cabelo": "#d0ccc4",
+     "cabeloTipo": "curto",
+     "bigode": true,
+     "corBarba": "#d0ccc4",
+     "chapeu": "chapeu",
+     "corChapeu": "#c8a86a",
+     "roupa": "#6a4a3a",
+     "detalhe": "#efe4cc",
+     "expressao": "bravo",
+     "olhar": 1
+    },
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "LAS REGLAS DEL POZO",
+     "itens": [
+      "Tapa a las doce",
+      "Pon la piedra encima",
+      "No contestes si piden agua"
+     ],
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#93603f",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "curto",
+     "roupa": "#2f7a4a",
+     "detalhe": "#efe4cc",
+     "expressao": "sorriso"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Beto, 16",
+     "sub": "el nieto",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_pueblo",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "12:10",
+     "ampm": "AM",
+     "lugar": "San Juan"
+    },
+    "marta": {
+     "x": [
+      0.1,
+      0.6
+     ],
+     "anda": 1,
+     "lanterna": true
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_pozo",
+   "p": {
+    "mano": 0,
+    "foco": [
+     0.5,
+     0.7
+    ],
+    "escala": [
+     1.3,
+     1.6
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_pozo",
+   "p": {
+    "mano": [
+     0,
+     0.5
+    ],
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "DESDE EL FONDO",
+     "texto": "Tengo sed, bájame la cubeta",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "¿Quién pide agua?",
+     "Parte 2 · mañana, {fecha_siguiente}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 5,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "pozo",
+  "Don Chuy",
+  "piden agua",
+  "Beto",
+  "diez minutos",
+  "quitada",
+  "cubeta",
+  "fondo"
+ ],
+ "gancho": {
+  "cena": 6,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
