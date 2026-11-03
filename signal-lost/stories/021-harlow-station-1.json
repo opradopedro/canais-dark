@@ -1,0 +1,231 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "harlow-station",
+ "serie_titulo": "Harlow Station | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "gringa: Japão, inspirada na lenda de internet Kisaragi Station (2ch, 2004; filmes 2022 e 2025) https://en.wikipedia.org/wiki/Kisaragi_Station (história, lugar e personagens nossos)",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "kisaragi station",
+  "last train",
+  "train horror",
+  "station that doesn't exist",
+  "missing"
+ ],
+ "codigo": "SV021",
+ "parte": 1,
+ "titulo": "My train stopped at a station that isn't on the map 😨 Part 1 #horror #shorts",
+ "capa": "NOT ON ANY MAP",
+ "descripcion": "Nora's last train home takes twenty minutes and six stops. Tonight it ran for forty minutes, then stopped at Harlow.\n\n> Part 2: {when_next}.\nWould you get off?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "My train stopped at a station that isn't on any map.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I'm Nora, twenty-eight, a nurse.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Every night, the 11:40 home. Twenty minutes, six stops.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Tonight, after forty minutes, we still hadn't stopped.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Everyone else in the car was asleep. Everyone.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then the doors opened at a platform called Harlow.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "No town. No lights. Just a man, waving me out.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "My sister texted: where are you?",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_estacion",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "12:20",
+     "ampm": "AM",
+     "lugar": "???",
+     "sinal": 1
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "HARLOW",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Nora, 28",
+     "sub": "night nurse",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#2a1a12",
+     "cabeloTipo": "coque",
+     "roupa": "#4a7a8a",
+     "detalhe": "#e6f1f2",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_onibus",
+   "p": {
+    "passageiros": 4,
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "MY RIDE HOME",
+     "itens": [
+      "11:40 train",
+      "20 minutes",
+      "6 stops"
+     ],
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_onibus",
+   "p": {
+    "passageiros": 4,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "12:20",
+     "ampm": "AM",
+     "lugar": "40 min, no stop",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_onibus",
+   "p": {
+    "passageiros": 4,
+    "luzes": "piscam",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "all asleep",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_estacion",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "HARLOW · not on the map",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "waving me out",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#d8b89a",
+     "cabelo": "#202020",
+     "cabeloTipo": "curto",
+     "chapeu": "chapeu",
+     "roupa": "#1c2530",
+     "detalhe": "#c0c0c0",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "celular",
+    "quien": "Sis",
+    "texto": "where are you?"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Where is Harlow?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 5,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "any map",
+  "Nora",
+  "six stops",
+  "forty minutes",
+  "asleep",
+  "Harlow",
+  "waving",
+  "where are you"
+ ],
+ "gancho": {
+  "cena": 6,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

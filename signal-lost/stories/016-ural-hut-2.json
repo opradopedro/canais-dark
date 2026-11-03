@@ -1,0 +1,293 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "ural-hut",
+ "serie_titulo": "The Hut on the Pass | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "gringa: Rússia, inspirada no Incidente do Passo Dyatlov (Urais, 1959), em alta de novo no YouTube russo https://en.wikipedia.org/wiki/Dyatlov_Pass_incident (personagens e história fictícios)",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "ural mountains",
+  "dyatlov pass",
+  "skiing",
+  "mountain horror",
+  "count your group"
+ ],
+ "codigo": "SV016",
+ "parte": 2,
+ "anterior": "SV015",
+ "titulo": "My friends were already safe in the village 😰 Part 2 #horror #shorts",
+ "capa": "WHO SAT BY THE FIRE",
+ "descripcion": "The footprints stopped at the door. Then one bar of signal, and a message from the rescue station.\n\n> Part 3: {when_next}.\nWho was sitting by the fire?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "The footprints stopped at the door. Nobody knocked.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Pavel, the biggest of us, wanted to go look.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I pointed at the door. Rule one: stay inside.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At 2:30, my phone found one bar of signal.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A message from the rescue station.",
+   "pausa": 0.4
+  },
+  {
+   "texto": "Mira, where are you? Your three friends are here with us.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "They came down to the village at sunset. Safe.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "So who was sitting by my fire?",
+   "pausa": 0.8
+  },
+  {
+   "texto": "The one I called Pavel smiled, and said: count again.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_cabana",
+   "p": {
+    "pegadas": 1,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "1:14",
+     "ampm": "AM",
+     "lugar": "Ural Pass",
+     "sinal": 0
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Pavel, 30",
+     "sub": "my friend?",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#e8c4a6",
+     "cabelo": "#3a2a1e",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#8a3a2e",
+     "detalhe": "#e6f1f2"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "CARVED IN THE DOOR",
+     "itens": [
+      "Stay inside",
+      "Count every hour",
+      "Never answer a knock"
+     ],
+     "y": 0.24,
+     "marcados": 1
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "expressao": "bravo"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "2:30",
+     "ampm": "AM",
+     "lugar": "Ural Pass",
+     "sinal": 1
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "1 bar of signal",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_estacao_polar",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "rescue station",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "RESCUE STATION",
+     "texto": "Your 3 friends are here.",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "expressao": "surpresa"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_estrada_nevoa",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "safe since sunset",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "PAVEL",
+     "texto": "Count again.",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#e8c4a6",
+     "cabelo": "#3a2a1e",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#8a3a2e",
+     "detalhe": "#e6f1f2",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Count again",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 5,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 8,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "stopped",
+  "Pavel",
+  "stay inside",
+  "one bar",
+  "rescue",
+  "here with us",
+  "Safe",
+  "my fire",
+  "count again"
+ ],
+ "gancho": {
+  "cena": 8,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

@@ -1,0 +1,224 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "channel-16",
+ "serie_titulo": "Channel 16 | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (03/11). Gancho: número estranho (barco que afundou em 1987 pede socorro)",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "lighthouse",
+  "lighthouse keeper",
+  "mayday",
+  "maine",
+  "ghost ship",
+  "radio horror"
+ ],
+ "codigo": "SV018",
+ "parte": 1,
+ "titulo": "A boat that sank in 1987 called for help 😨 Part 1 #horror #shorts",
+ "capa": "MAYDAY FROM 1987",
+ "descripcion": "Eli runs the radio at an old lighthouse in Maine. At 3:07 AM, the Marguerite called for help. She sank in 1987.\n\n> Part 2: {when_next}.\nWould you have answered?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "At 3:07 AM, a boat called for help.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "It sank in 1987.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "I'm Eli, thirty-one. I run the lighthouse radio in Maine.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The last keeper left me three rules.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Answer every mayday. Keep the light turning. Never answer the Marguerite.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Tonight a storm cut the power, and the backup kicked in.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Channel sixteen crackled: Mayday, Marguerite, three souls aboard.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Out on the water, a light blinked back at me.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Three short, three long, three short. Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_radio",
+   "p": {
+    "voz": 1,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "3:07",
+     "ampm": "AM",
+     "lugar": "Pike Head Light",
+     "sinal": 0
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "MARGUERITE",
+     "sank · 1987"
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Eli, 31",
+     "sub": "lighthouse radio",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#8d5a3b",
+     "cabelo": "#1c1410",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#2b4a5e",
+     "detalhe": "#ffd166",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_farol",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Pike Head Light · Maine",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "THE KEEPER'S RULES",
+     "itens": [
+      "Answer every mayday",
+      "Keep the light turning",
+      "Never answer the Marguerite"
+     ],
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#8d5a3b",
+     "cabelo": "#1c1410",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#2b4a5e",
+     "detalhe": "#ffd166",
+     "olhar": 1
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_farol",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "power out · backup on",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_radio",
+   "p": {
+    "voz": 1,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "CHANNEL 16",
+     "texto": "Mayday. Marguerite. 3 souls.",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_farol",
+   "p": {
+    "barco": 1
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "· · ·  — — —  · · ·",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 1,
+   "en": 0.3
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "help",
+  "1987",
+  "Eli",
+  "three rules",
+  "Marguerite",
+  "storm",
+  "Mayday",
+  "blinked",
+  "three short"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

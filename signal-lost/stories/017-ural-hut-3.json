@@ -1,0 +1,259 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "ural-hut",
+ "serie_titulo": "The Hut on the Pass | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "gringa: Rússia, inspirada no Incidente do Passo Dyatlov (Urais, 1959), em alta de novo no YouTube russo https://en.wikipedia.org/wiki/Dyatlov_Pass_incident (personagens e história fictícios)",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "ural mountains",
+  "dyatlov pass",
+  "skiing",
+  "mountain horror",
+  "count your group"
+ ],
+ "codigo": "SV017",
+ "parte": 3,
+ "anterior": "SV016",
+ "titulo": "Something up there counts with me 😱 Part 3 #horror #shorts",
+ "capa": "IT COUNTS WITH YOU",
+ "descripcion": "Mira counted again, and finally understood rule two. The end of The Hut on the Pass.\n\nWould you have run?\n\nNarrated fiction. New story every week.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "I counted again. One. Just me.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "But I could still hear three people breathing.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then I understood rule two.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You count every hour to notice who joined.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "I climbed out the back window, into the snow.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I skied down in the dark for three hours.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At dawn, rescuers found the hut locked from inside.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Carved under the rules, a new line: four went in.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Now I never count out loud. Something up there counts with me.",
+   "pausa": 0.5
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "2:41",
+     "ampm": "AM",
+     "lugar": "Ural Pass",
+     "sinal": 1
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "COUNT: 1",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_cabana",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "3 people breathing",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "CARVED IN THE DOOR",
+     "itens": [
+      "Stay inside",
+      "Count every hour",
+      "Never answer a knock"
+     ],
+     "y": 0.24,
+     "marcados": 2
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "olhar": 1
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "RULE TWO",
+     "texto": "Notice who joined.",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "expressao": "surpresa"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_cabana",
+   "p": {
+    "pegadas": 1
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_floresta",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "5:40",
+     "ampm": "AM",
+     "lugar": "the slope",
+     "sinal": 2
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_cabana",
+   "p": {
+    "hud": {
+     "dia": "Day 2",
+     "hora": "7:02",
+     "ampm": "AM",
+     "lugar": "Ural Pass",
+     "sinal": 2
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "locked from inside",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "FOUR WENT IN",
+     "carved under the rules"
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166"
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 0,
+   "en": 0.5
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "One",
+  "breathing",
+  "rule two",
+  "who joined",
+  "window",
+  "three hours",
+  "locked",
+  "four went in",
+  "counts"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

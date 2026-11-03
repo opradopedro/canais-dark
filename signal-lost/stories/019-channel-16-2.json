@@ -1,0 +1,220 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "channel-16",
+ "serie_titulo": "Channel 16 | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (03/11). Gancho: número estranho (barco que afundou em 1987 pede socorro)",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "lighthouse",
+  "lighthouse keeper",
+  "mayday",
+  "maine",
+  "ghost ship",
+  "radio horror"
+ ],
+ "codigo": "SV019",
+ "parte": 2,
+ "anterior": "SV018",
+ "titulo": "The radio said my name 😰 Part 2 #horror #shorts",
+ "capa": "TURN OFF THE LIGHT",
+ "descripcion": "S.O.S., blinking at the lighthouse window. The coast guard said no boat was out. Then the radio used Eli's name.\n\n> Part 3: {when_next}.\nWhat would you do?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "S, O, S. Blinking right at my window.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Every rule said answer a mayday. Except this one.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "So I called the coast guard on the landline.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "They said no boat was out tonight. Not one.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Then the radio spoke again, and it said my name.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Eli, we see your light. Turn it off, so we can come in.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "A lighthouse keeps ships away from the rocks.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Whatever was out there wanted to come closer.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_farol",
+   "p": {
+    "barco": 1,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "3:09",
+     "ampm": "AM",
+     "lugar": "Pike Head Light",
+     "sinal": 0
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "THE KEEPER'S RULES",
+     "itens": [
+      "Answer every mayday",
+      "Keep the light turning",
+      "Never answer the Marguerite"
+     ],
+     "y": 0.24,
+     "marcados": 1
+    },
+    "pessoa": {
+     "pele": "#8d5a3b",
+     "cabelo": "#1c1410",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#2b4a5e",
+     "detalhe": "#ffd166",
+     "expressao": "bravo"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "disco",
+    "quien": "U.S. Coast Guard",
+    "texto": "calling..."
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "COAST GUARD",
+     "texto": "No boats out tonight.",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#8d5a3b",
+     "cabelo": "#1c1410",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#2b4a5e",
+     "detalhe": "#ffd166",
+     "expressao": "surpresa"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_radio",
+   "p": {
+    "voz": 1
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_radio",
+   "p": {
+    "voz": 1,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "CHANNEL 16",
+     "texto": "Eli, turn off the light.",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_farol",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "light = stay away",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_farol",
+   "p": {
+    "barco": 1
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Who is out there?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "S, O, S",
+  "except",
+  "coast guard",
+  "Not one",
+  "my name",
+  "Turn it off",
+  "rocks",
+  "closer"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

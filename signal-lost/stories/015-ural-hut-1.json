@@ -1,0 +1,251 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "ural-hut",
+ "serie_titulo": "The Hut on the Pass | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "gringa: Rússia, inspirada no Incidente do Passo Dyatlov (Urais, 1959), em alta de novo no YouTube russo https://en.wikipedia.org/wiki/Dyatlov_Pass_incident (personagens e história fictícios)",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "ural mountains",
+  "dyatlov pass",
+  "skiing",
+  "mountain horror",
+  "count your group"
+ ],
+ "codigo": "SV015",
+ "parte": 1,
+ "titulo": "We counted four. Five voices answered 😨 Part 1 #horror #shorts",
+ "capa": "FIVE VOICES ANSWERED",
+ "descripcion": "A mountain hut in the Urals has three rules carved into its door. At 1:12 AM, Mira counted her group out loud.\n\n> Part 2: {when_next}.\nWould you have counted again?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "A hut in the Urals has rules carved in its door.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I'm Mira, twenty-six, a ski guide.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "In February, I took three friends over the pass.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The door said: stay inside, count every hour, never answer a knock.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At 1:12 AM, I counted us out loud. Four.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then five voices answered. One of them was mine.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Outside, fresh footprints led straight to the door.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Bare feet, in the snow, at forty below.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Whose feet? Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_cabana",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "11:48",
+     "ampm": "PM",
+     "lugar": "Ural Pass",
+     "sinal": 0
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Mira, 26",
+     "sub": "ski guide",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_floresta",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "4 skiers · the pass",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "CARVED IN THE DOOR",
+     "itens": [
+      "Stay inside",
+      "Count every hour",
+      "Never answer a knock"
+     ],
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "olhar": 1
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "1:12",
+     "ampm": "AM",
+     "lugar": "Ural Pass",
+     "sinal": 0
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "COUNT: 4",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166"
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "WE COUNTED",
+     "texto": "1, 2, 3, 4... 5.",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "expressao": "surpresa"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_cabana",
+   "p": {
+    "pegadas": 1
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_cabana",
+   "p": {
+    "pegadas": 1,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "bare feet · -40°",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Whose feet?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 5,
+   "en": 0.3
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "Urals",
+  "Mira",
+  "three friends",
+  "never answer",
+  "Four",
+  "five voices",
+  "footprints",
+  "Bare feet"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

@@ -1,0 +1,220 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "harlow-station",
+ "serie_titulo": "Harlow Station | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "gringa: Japão, inspirada na lenda de internet Kisaragi Station (2ch, 2004; filmes 2022 e 2025) https://en.wikipedia.org/wiki/Kisaragi_Station (história, lugar e personagens nossos)",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "kisaragi station",
+  "last train",
+  "train horror",
+  "station that doesn't exist",
+  "missing"
+ ],
+ "codigo": "SV023",
+ "parte": 3,
+ "anterior": "SV022",
+ "titulo": "I came home. It had been eleven days 😱 Part 3 #horror #shorts",
+ "capa": "ELEVEN DAYS LATER",
+ "descripcion": "Nora walked toward the drum, all night, along the tracks. When her phone came back, the date was wrong. The end of Harlow Station.\n\nWould you have stayed with the man?\n\nNarrated fiction. New story every week.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "I chose the drum, and walked along the tracks.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Behind me, the man kept calling my name. Softer each time.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "After an hour, a crossing light, and a bell.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then a car stopped. A stranger offered me a ride.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "I said no, and kept walking.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At 5:12, the lights of a real gas station.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "My phone came back on. It had been eleven days.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "My sister reported me missing the first night.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And those texts? She never sent them.",
+   "pausa": 0.6
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_estrada_nevoa",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "12:40",
+     "ampm": "AM",
+     "lugar": "the tracks",
+     "sinal": 0
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_estacion",
+   "p": {
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "THE MAN",
+     "texto": "Nora... Nora...",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_estrada_nevoa",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "crossing light",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_carretera",
+   "p": {
+    "veiculo": "camioneta",
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "A STRANGER",
+     "texto": "Need a ride?",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "no thanks",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#2a1a12",
+     "cabeloTipo": "coque",
+     "roupa": "#4a7a8a",
+     "detalhe": "#e6f1f2",
+     "expressao": "bravo"
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_posto",
+   "p": {
+    "hud": {
+     "dia": "Day ?",
+     "hora": "5:12",
+     "ampm": "AM",
+     "lugar": "Route 2",
+     "sinal": 2
+    },
+    "placa": "OPEN 24H"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "celular",
+    "quien": "Nov 14",
+    "texto": "11 days later"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "MISSING · day 1",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#2a1a12",
+     "cabeloTipo": "coque",
+     "roupa": "#4a7a8a",
+     "detalhe": "#e6f1f2",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "celular",
+    "quien": "Sis",
+    "texto": "(no messages sent)"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 6,
+   "en": 0.5
+  },
+  {
+   "tipo": "susto",
+   "linea": 8,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "drum",
+  "my name",
+  "bell",
+  "stranger",
+  "no",
+  "gas station",
+  "eleven days",
+  "missing",
+  "never sent"
+ ],
+ "gancho": {
+  "cena": 8,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

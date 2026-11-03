@@ -1,0 +1,226 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "harlow-station",
+ "serie_titulo": "Harlow Station | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "gringa: Japão, inspirada na lenda de internet Kisaragi Station (2ch, 2004; filmes 2022 e 2025) https://en.wikipedia.org/wiki/Kisaragi_Station (história, lugar e personagens nossos)",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "kisaragi station",
+  "last train",
+  "train horror",
+  "station that doesn't exist",
+  "missing"
+ ],
+ "codigo": "SV022",
+ "parte": 2,
+ "anterior": "SV021",
+ "titulo": "The man on the platform said wait with me 😰 Part 2 #horror #shorts",
+ "capa": "WAIT WITH ME",
+ "descripcion": "Nora stepped off at Harlow. The man on the platform wanted her to wait for the dawn train. Her sister wanted her to walk.\n\n> Part 3: {when_next}.\nWho would you trust?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "I stepped off. The doors closed behind me.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The train left without a sound.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The man said: next train is at dawn. Wait with me.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "I asked where we were. He only smiled.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "My sister texted: stay off the platform. Walk toward the noise.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Far away, I heard a drum, and a bell.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The man said: don't walk toward that. Stay here.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "My map loaded. The blue dot was in an empty field.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_estacion",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "12:22",
+     "ampm": "AM",
+     "lugar": "Harlow",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_estacion",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "no sound",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "THE MAN",
+     "texto": "Wait with me.",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#d8b89a",
+     "cabelo": "#202020",
+     "cabeloTipo": "curto",
+     "chapeu": "chapeu",
+     "roupa": "#1c2530",
+     "detalhe": "#c0c0c0",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#d8b89a",
+     "cabelo": "#202020",
+     "cabeloTipo": "curto",
+     "chapeu": "chapeu",
+     "roupa": "#1c2530",
+     "detalhe": "#c0c0c0",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "celular",
+    "quien": "Sis",
+    "texto": "walk toward the noise"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_estrada_nevoa",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "a drum · a bell",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "THE MAN",
+     "texto": "Don't. Stay here.",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#d8b89a",
+     "cabelo": "#202020",
+     "cabeloTipo": "curto",
+     "chapeu": "chapeu",
+     "roupa": "#1c2530",
+     "detalhe": "#c0c0c0",
+     "expressao": "bravo"
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "celular",
+    "texto": "???",
+    "rotulo": "empty field"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Stay or walk?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 6,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "doors closed",
+  "without a sound",
+  "Wait with me",
+  "smiled",
+  "Walk",
+  "drum",
+  "Stay here",
+  "empty field"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

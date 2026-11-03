@@ -1,0 +1,222 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "channel-16",
+ "serie_titulo": "Channel 16 | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (03/11). Gancho: número estranho (barco que afundou em 1987 pede socorro)",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "lighthouse",
+  "lighthouse keeper",
+  "mayday",
+  "maine",
+  "ghost ship",
+  "radio horror"
+ ],
+ "codigo": "SV020",
+ "parte": 3,
+ "anterior": "SV019",
+ "titulo": "The light stopped turning by itself 😱 Part 3 #horror #shorts",
+ "capa": "THE KEEPER'S LOGBOOK",
+ "descripcion": "At 4:00 the lighthouse lens stopped turning. Eli climbed the stairs, and the old logbook explained rule two. The end of Channel 16.\n\nWould you have climbed the stairs?\n\nNarrated fiction. New story every week.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "At 4:00, the light stopped turning by itself.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The motor was fine. Something was holding the lens.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I climbed the stairs and pushed with both hands.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Downstairs, a woman's voice kept saying: almost there.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "The lens moved. The beam swept the water.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "In it, three people were standing on the waves.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "They turned, and walked back into the dark.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At dawn, I found the old logbook. 1987.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The keeper turned off the light that night. Now I know why rule two exists.",
+   "pausa": 0.5
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_farol",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "4:00",
+     "ampm": "AM",
+     "lugar": "Pike Head Light",
+     "sinal": 0
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "light stopped",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "something holds the lens",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#8d5a3b",
+     "cabelo": "#1c1410",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#2b4a5e",
+     "detalhe": "#ffd166",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_farol",
+   "p": {}
+  },
+  {
+   "linea": 3,
+   "comp": "f_radio",
+   "p": {
+    "voz": 1,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "CHANNEL 16",
+     "texto": "Almost there...",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_farol",
+   "p": {
+    "barco": 1
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_farol",
+   "p": {
+    "barco": 1,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "3 people on the waves",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_farol",
+   "p": {}
+  },
+  {
+   "linea": 7,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "livro",
+    "rotulo": "LOGBOOK · 1987",
+    "hud": {
+     "dia": "Day 2",
+     "hora": "6:15",
+     "ampm": "AM",
+     "lugar": "Pike Head Light",
+     "sinal": 2
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "THE KEEPER'S RULES",
+     "itens": [
+      "Answer every mayday",
+      "Keep the light turning",
+      "Never answer the Marguerite"
+     ],
+     "y": 0.24,
+     "marcados": 2
+    },
+    "pessoa": {
+     "pele": "#8d5a3b",
+     "cabelo": "#1c1410",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#2b4a5e",
+     "detalhe": "#ffd166"
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 0,
+   "en": 0.5
+  },
+  {
+   "tipo": "susto",
+   "linea": 5,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "stopped",
+  "holding",
+  "pushed",
+  "almost there",
+  "lens",
+  "three people",
+  "dark",
+  "logbook",
+  "rule two"
+ ],
+ "gancho": {
+  "cena": 5,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
