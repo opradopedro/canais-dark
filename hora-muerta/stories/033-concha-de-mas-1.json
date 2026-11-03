@@ -1,0 +1,199 @@
+{
+ "formato": "Numero",
+ "visual": "flat",
+ "serie": "concha-de-mas",
+ "serie_titulo": "La concha de más | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral (03/11). Gancho: número extraño",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "panadería",
+  "panadero",
+  "pan dulce",
+  "madrugada"
+ ],
+ "codigo": "HM033",
+ "parte": 1,
+ "titulo": "Metí 40 conchas al horno y salieron 41 😨 Parte 1 #terror #shorts",
+ "capa": "SALIERON 41",
+ "descripcion": "Don Efraín contó cuarenta conchas, dos veces. A las 4:20 salieron cuarenta y una. La de más estaba fría, y mordida.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Qué estaba comiendo en la oscuridad?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "Don Efraín mete cuarenta conchas al horno. Salen cuarenta y una.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Don Efraín, cincuenta y ocho años, panadero del pueblo.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Amasa a las tres, hornea a las cuatro, abre a las seis.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A las cuatro y veinte, saca la charola.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Cuarenta y una. Él contó cuarenta, dos veces.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "La de más está fría, y tiene una mordida.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Atrás, entre los costales, alguien mastica despacio.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "¿Quién se comió el pan? Parte dos, mañana, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_panaderia",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "4:20",
+     "ampm": "AM",
+     "lugar": "Panadería La Espiga"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Don Efraín, 58",
+     "sub": "panadero",
+     "y": 0.2
+    },
+    "pessoa": {
+     "pele": "#a8714a",
+     "cabelo": "#bdbdbd",
+     "cabeloTipo": "curto",
+     "bigode": true,
+     "roupa": "#f2efe6",
+     "detalhe": "#c0392b",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_panaderia",
+   "p": {
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "SU RUTINA",
+     "itens": [
+      "Amasa a las 3",
+      "Hornea a las 4",
+      "Abre a las 6"
+     ],
+     "y": 0.2,
+     "marcados": 2
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_panaderia",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "4:20 · la charola",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_contagem",
+   "p": {
+    "de": 40,
+    "ate": 41,
+    "rotulo": "conchas"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "pao",
+    "rotulo": "fría y mordida"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#a8714a",
+     "cabelo": "#bdbdbd",
+     "cabeloTipo": "curto",
+     "bigode": true,
+     "roupa": "#f2efe6",
+     "detalhe": "#c0392b",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "¿Quién comió?",
+     "Parte 2 · mañana, {fecha_siguiente}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 6,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "cuarenta y una",
+  "Efraín",
+  "tres",
+  "cuatro y veinte",
+  "dos veces",
+  "mordida",
+  "mastica"
+ ],
+ "gancho": {
+  "cena": 6,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

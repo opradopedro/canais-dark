@@ -1,0 +1,231 @@
+{
+ "formato": "Pregunta",
+ "visual": "flat",
+ "serie": "puente-conejo",
+ "serie_titulo": "El puente del conejo | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "gringa: EUA, lenda do Bunny Man Bridge (Clifton, Virgínia), viral todo Halloween https://en.wikipedia.org/wiki/Bunny_Man (história nossa, sem violência). Gancho: pregunta directa",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "bunny man",
+  "puente embrujado",
+  "leyenda urbana",
+  "apuesta"
+ ],
+ "codigo": "HM035",
+ "parte": 1,
+ "titulo": "Algo me tocó el hombro en el puente 😨 Parte 1 #terror #shorts",
+ "capa": "NO VOLTEES",
+ "descripcion": "Daniel aceptó cruzar el puente viejo a medianoche, solo y sin linterna. A la mitad, oyó pasos cortos detrás.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú habrías volteado?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "¿Cruzarías un puente a medianoche, solo por una apuesta?",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Daniel, diecisiete años, aceptó la apuesta de sus primos.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Cruzar solo, sin linterna, y no mirar atrás.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A las doce en punto, Daniel entra al puente.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A la mitad, escucha pasos detrás. Pasos cortos, como saltitos.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Del otro lado, sus primos dejan de reír.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Le gritan: ¡no voltees, Daniel, no voltees!",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Y una mano peluda le toca el hombro.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "¿Qué estaba detrás? Parte dos, mañana, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_puente",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "11:58",
+     "ampm": "PM",
+     "lugar": "El puente viejo"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Daniel, 17",
+     "sub": "aceptó la apuesta",
+     "y": 0.2
+    },
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#241810",
+     "cabeloTipo": "curto",
+     "roupa": "#3a6a3a",
+     "detalhe": "#efe4cc",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "LA APUESTA",
+     "itens": [
+      "Cruza solo",
+      "Sin linterna",
+      "No mires atrás"
+     ],
+     "y": 0.2
+    },
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#241810",
+     "cabeloTipo": "curto",
+     "roupa": "#3a6a3a",
+     "detalhe": "#efe4cc",
+     "olhar": 1
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_puente",
+   "p": {
+    "figura": true,
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "12:00",
+     "ampm": "AM",
+     "lugar": "El puente viejo"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_puente",
+   "p": {
+    "figura": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "pasos cortos",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_carretera",
+   "p": {
+    "veiculo": "camioneta",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "sus primos dejan de reír",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_carretera",
+   "p": {
+    "veiculo": "camioneta",
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "SUS PRIMOS",
+     "texto": "¡No voltees!",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#241810",
+     "cabeloTipo": "curto",
+     "roupa": "#3a6a3a",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "¿Qué había?",
+     "Parte 2 · mañana, {fecha_siguiente}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.5
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "medianoche",
+  "Daniel",
+  "no mirar atrás",
+  "doce en punto",
+  "saltitos",
+  "dejan de reír",
+  "no voltees",
+  "mano peluda"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

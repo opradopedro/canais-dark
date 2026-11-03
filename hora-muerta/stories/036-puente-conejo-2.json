@@ -1,0 +1,202 @@
+{
+ "formato": "Pregunta",
+ "visual": "flat",
+ "serie": "puente-conejo",
+ "serie_titulo": "El puente del conejo | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "gringa: EUA, lenda do Bunny Man Bridge (Clifton, Virgínia), viral todo Halloween https://en.wikipedia.org/wiki/Bunny_Man (história nossa, sem violência). Gancho: pregunta directa",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "bunny man",
+  "puente embrujado",
+  "leyenda urbana",
+  "apuesta"
+ ],
+ "codigo": "HM036",
+ "parte": 2,
+ "anterior": "HM035",
+ "titulo": "En el video, alguien cruzaba conmigo 😰 Parte 2 #terror #shorts",
+ "capa": "OCHENTA Y OCHO PASOS",
+ "descripcion": "Detrás de Daniel había un hombre con máscara de conejo. Él no volteó. Final de El puente del conejo.\n\n¿Tú habrías aguantado sin voltear?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "Detrás de Daniel había un hombre con máscara de conejo.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "En Virginia le dicen Bunny Man, y cuida su puente hace un siglo.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Daniel no volteó. Siguió caminando, contando sus pasos.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Ochenta y ocho pasos, y la mano seguía en su hombro.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Al salir del puente, la mano se soltó.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Sus primos lo abrazaron, blancos como el papel.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Pero en el video de sus primos, Daniel no cruzaba solo.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Una máscara de conejo, pegada a su espalda, sonreía.",
+   "pausa": 0.6
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_puente",
+   "p": {
+    "figura": true,
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "12:01",
+     "ampm": "AM",
+     "lugar": "El puente viejo"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "BUNNY MAN",
+     "Virginia, EE. UU."
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "LA APUESTA",
+     "itens": [
+      "Cruza solo",
+      "Sin linterna",
+      "No mires atrás"
+     ],
+     "y": 0.2,
+     "marcados": 2
+    },
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#241810",
+     "cabeloTipo": "curto",
+     "roupa": "#3a6a3a",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_contagem",
+   "p": {
+    "de": 1,
+    "ate": 88,
+    "rotulo": "pasos"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_puente",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "12:03",
+     "ampm": "AM",
+     "lugar": "El puente viejo"
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_carretera",
+   "p": {
+    "veiculo": "camioneta"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "celular",
+    "texto": "REC 0:41",
+    "rotulo": "el video"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "no cruzaba solo",
+     "y": 0.2
+    },
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#241810",
+     "cabeloTipo": "curto",
+     "roupa": "#3a6a3a",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "máscara de conejo",
+  "Bunny Man",
+  "no volteó",
+  "ochenta y ocho",
+  "se soltó",
+  "blancos",
+  "no cruzaba solo",
+  "sonreía"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

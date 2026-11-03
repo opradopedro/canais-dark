@@ -65,3 +65,20 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 - Personagens: Don Chuy, 62, tampa o poço do povoado à meia-noite há 40 anos; Beto, 16, o neto. Peças: `f_pozo`, `f_pueblo`, `f_cocina`, `f_regras`, `retrato`, `texto`.
 - HM029 parte 1/2: regras (tampa às 12, pedra em cima, não responde se pedirem água); Don Chuy doente, Beto chega 12:10; tampa já aberta, água soando; voz do fundo: "tengo sed, bájame la cubeta". FEITO
 - HM030 parte 2/2: o balde desce sozinho, a corda estica; Beto corta e tampa; o avô: o poço secou há 40 anos, o que vive lá sobe quando lhe dão água; mãos de Beto molhadas; a torneira da cozinha começa a pingar. FEITO
+
+## Semana de 10/11 a 17/11/2026 — por: claude (rotina de terça, 03/11). Estoque antes: HM023-HM030 (8 dias). 2 gringas (EUA), 1 autoral. Rodízio de ganchos: regla rota → número extraño → pregunta directa.
+
+## HM031-HM032 La voz de la milpa (Regla rota) — origem: gringa: EUA, trend "mimic" (criatura que imita vozes; TikTok/Reddit, jogo Secret of the Mimic) https://dailydot.com/secret-of-the-mimic-tiktok
+- Personagens: Rosa, 34, professora do rancho (coque, roupa violeta); Tomás, o filho; o pai dela, morto há 2 anos na milpa. Peças: `f_milpa`, `f_cocina`, `f_cuarto`, `f_altar`, `retrato`, `texto`.
+- HM031 parte 1/2: regras do pai (fecha a janela, não sai à milpa, não responde se chamarem); 2:10 a voz de Tomás grita "mamá, ayúdame" do milharal; Tomás está dormindo na cama; a voz ri. FEITO
+- HM032 parte 2/2: o que vive na milpa não tem voz própria ("mimic" nos EUA); a voz vira a do pai morto: "Rosita, ábreme"; 6h o espantalho sumiu da cruz; Tomás dormindo murmura "ya voy, abuelo". FEITO
+
+## HM033-HM034 La concha de más (Número extraño) — origem: autoral
+- Personagem: Don Efraín, 58, padeiro (bigode grisalho, avental). Peças: `f_panaderia`, `f_contagem`, `f_objeto`, `f_pueblo`, `retrato`, `texto`.
+- HM033 parte 1/2: rotina (amassa 3, assa 4, abre 6); 4:20 tira a fôrma: 41 conchas, contou 40 duas vezes; a de mais está fria e mordida; alguém mastiga entre os sacos. FEITO
+- HM034 parte 2/2: uma menina magra, descalça, pede pão com voz de velha; ele lembra o avô (a quem chega com fome de madrugada, dá-se pão) e dá a fôrma sem olhar nos olhos; ela come 40 em um minuto; 6h a padaria sem pão e 40 moedas de prata de 1910; desde então assa uma a mais e alguém sempre come. FEITO
+
+## HM035-HM036 El puente del conejo (Pregunta directa) — origem: gringa: EUA, lenda do Bunny Man Bridge (Clifton, Virgínia) https://en.wikipedia.org/wiki/Bunny_Man (sem violência)
+- Personagem: Daniel, 17 (roupa verde); os primos. Peças: `f_puente`, `f_carretera`, `f_contagem`, `f_objeto`, `retrato`, `texto`.
+- HM035 parte 1/2: aposta (cruzar sozinho, sem lanterna, sem olhar para trás); 12:00 entra na ponte; passos curtinhos atrás; os primos param de rir e gritam "não vire!"; uma mão peluda toca o ombro dele. FEITO
+- HM036 parte 2/2: atrás havia um homem com máscara de coelho (Bunny Man, Virgínia); Daniel não vira e conta 88 passos com a mão no ombro; a mão solta na saída; no vídeo dos primos ele não cruzava sozinho: a máscara grudada nas costas sorria. FEITO

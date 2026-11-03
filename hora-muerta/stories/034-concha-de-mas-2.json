@@ -1,0 +1,198 @@
+{
+ "formato": "Numero",
+ "visual": "flat",
+ "serie": "concha-de-mas",
+ "serie_titulo": "La concha de más | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral (03/11). Gancho: número extraño",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "panadería",
+  "panadero",
+  "pan dulce",
+  "madrugada"
+ ],
+ "codigo": "HM034",
+ "parte": 2,
+ "anterior": "HM033",
+ "titulo": "Una niña con voz de vieja me pidió pan 😰 Parte 2 #terror #shorts",
+ "capa": "CUARENTA MONEDAS",
+ "descripcion": "Entre los costales había una niña descalza que pedía pan con voz de vieja. Final de La concha de más.\n\n¿Tú le habrías dado pan?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "Entre los costales había una niña flaca, descalza.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Pidió pan con voz de vieja.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Su abuelo decía: a quien llega con hambre de madrugada, se le da.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Don Efraín le dio la charola, sin mirarla a los ojos.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "La niña comió cuarenta conchas en un minuto.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "A las seis, el pueblo encontró la panadería sin pan.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "En el mostrador, cuarenta monedas de plata, de mil novecientos diez.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Desde entonces hornea una de más, y alguien siempre se la come.",
+   "pausa": 0.6
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_panaderia",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "4:22",
+     "ampm": "AM",
+     "lugar": "Panadería La Espiga"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "LA NIÑA",
+     "texto": "Deme pan...",
+     "y": 0.2
+    },
+    "pessoa": {
+     "pele": "#d9c2a8",
+     "cabelo": "#2a2a2a",
+     "cabeloTipo": "longo",
+     "roupa": "#8a8a7a",
+     "detalhe": "#5a5a50",
+     "expressao": "triste"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "al hambre se le da pan",
+     "y": 0.2
+    },
+    "pessoa": {
+     "pele": "#a8714a",
+     "cabelo": "#bdbdbd",
+     "cabeloTipo": "curto",
+     "bigode": true,
+     "roupa": "#f2efe6",
+     "detalhe": "#c0392b",
+     "olhar": 1
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_panaderia",
+   "p": {}
+  },
+  {
+   "linea": 4,
+   "comp": "f_contagem",
+   "p": {
+    "de": 40,
+    "ate": 0,
+    "rotulo": "conchas"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_pueblo",
+   "p": {
+    "amanecer": 1,
+    "hud": {
+     "dia": "Día 2",
+     "hora": "6:00",
+     "ampm": "AM",
+     "lugar": "Panadería La Espiga"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "moedas",
+    "rotulo": "40 monedas · 1910"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#a8714a",
+     "cabelo": "#bdbdbd",
+     "cabeloTipo": "curto",
+     "bigode": true,
+     "roupa": "#f2efe6",
+     "detalhe": "#c0392b"
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 1,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 4,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "descalza",
+  "voz de vieja",
+  "hambre",
+  "sin mirarla",
+  "un minuto",
+  "sin pan",
+  "monedas",
+  "una de más"
+ ],
+ "gancho": {
+  "cena": 4,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

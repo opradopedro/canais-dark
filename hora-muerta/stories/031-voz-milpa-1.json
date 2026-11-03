@@ -1,0 +1,219 @@
+{
+ "formato": "Regla",
+ "visual": "flat",
+ "serie": "voz-milpa",
+ "serie_titulo": "La voz de la milpa | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "gringa: EUA, trend de terror 'mimic' (criatura que imita vozes para fazer a pessoa sair; TikTok/Reddit, jogo Secret of the Mimic) https://dailydot.com/secret-of-the-mimic-tiktok (história nossa). Gancho: regla rota",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "mimic",
+  "voz que imita",
+  "milpa",
+  "espantapájaros"
+ ],
+ "codigo": "HM031",
+ "parte": 1,
+ "titulo": "La milpa gritó con la voz de mi hijo 😨 Parte 1 #terror #shorts",
+ "capa": "MAMÁ, AYÚDAME",
+ "descripcion": "A las 2:10, alguien grita desde el maíz con la voz de Tomás. Pero Tomás está dormido en su cama.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú habrías salido?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "Rosa tiene una regla: si la milpa te llama, no contestas.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Rosa, treinta y cuatro años, maestra del rancho.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Su papá le dejó tres reglas para la cosecha.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Cierra la ventana, no salgas a la milpa, y no contestes.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A las dos y diez, alguien grita desde el maíz.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Es la voz de su hijo, Tomás: mamá, ayúdame.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Rosa corre al cuarto. Tomás está dormido en su cama.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Y desde la milpa, la voz de Tomás se ríe.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "¿Quién habla con su voz? Parte dos, mañana, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_milpa",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "1:58",
+     "ampm": "AM",
+     "lugar": "Rancho El Mezquite"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Rosa, 34",
+     "sub": "maestra del rancho",
+     "y": 0.2
+    },
+    "pessoa": {
+     "pele": "#b97a52",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "coque",
+     "roupa": "#7a4a8a",
+     "detalhe": "#f0a43a",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_cocina",
+   "p": {
+    "porta": 0,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "las reglas de su papá",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "LAS REGLAS DE PAPÁ",
+     "itens": [
+      "Cierra la ventana",
+      "No salgas a la milpa",
+      "No contestes si te llaman"
+     ],
+     "y": 0.2
+    },
+    "pessoa": {
+     "pele": "#b97a52",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "coque",
+     "roupa": "#7a4a8a",
+     "detalhe": "#f0a43a",
+     "olhar": 1
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_milpa",
+   "p": {
+    "mueve": 0.3,
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "2:10",
+     "ampm": "AM",
+     "lugar": "La milpa"
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_milpa",
+   "p": {
+    "mueve": 0.6,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "DESDE EL MAÍZ",
+     "texto": "¡Mamá, ayúdame!",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_cuarto",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Tomás, dormido",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_milpa",
+   "p": {
+    "mueve": 1
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "¿Quién llama?",
+     "Parte 2 · mañana, {fecha_siguiente}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.3
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "no contestas",
+  "Rosa",
+  "tres reglas",
+  "no salgas",
+  "dos y diez",
+  "mamá, ayúdame",
+  "dormido",
+  "se ríe"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}

@@ -1,0 +1,220 @@
+{
+ "formato": "Regla",
+ "visual": "flat",
+ "serie": "voz-milpa",
+ "serie_titulo": "La voz de la milpa | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "gringa: EUA, trend de terror 'mimic' (criatura que imita vozes para fazer a pessoa sair; TikTok/Reddit, jogo Secret of the Mimic) https://dailydot.com/secret-of-the-mimic-tiktok (história nossa). Gancho: regla rota",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "mimic",
+  "voz que imita",
+  "milpa",
+  "espantapájaros"
+ ],
+ "codigo": "HM032",
+ "parte": 2,
+ "anterior": "HM031",
+ "titulo": "La voz de mi papá muerto pedía que abriera 😰 Parte 2 #terror #shorts",
+ "capa": "YA VOY, ABUELO",
+ "descripcion": "Lo que vive en la milpa no tiene voz propia: copia las de tu casa. Final de La voz de la milpa.\n\n¿Tú habrías abierto?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "Lo que vive en la milpa no tiene voz propia.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "En Estados Unidos le dicen mimic: copia voces para que salgas.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Rosa cierra la ventana y abraza a Tomás.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Entonces la voz cambia. Ahora es la de su papá.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Rosita, soy tu papá, ábreme.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Su papá murió hace dos años, en esa misma milpa.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A las seis, el espantapájaros ya no está en su cruz.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Y Tomás, dormido, murmura: ya voy, abuelo.",
+   "pausa": 0.6
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_milpa",
+   "p": {
+    "mueve": 1,
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "2:12",
+     "ampm": "AM",
+     "lugar": "La milpa"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "mimic: copia voces",
+     "y": 0.2
+    },
+    "pessoa": {
+     "pele": "#b97a52",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "coque",
+     "roupa": "#7a4a8a",
+     "detalhe": "#f0a43a",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_cuarto",
+   "p": {
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "LAS REGLAS DE PAPÁ",
+     "itens": [
+      "Cierra la ventana",
+      "No salgas a la milpa",
+      "No contestes si te llaman"
+     ],
+     "y": 0.2,
+     "marcados": 1
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#b97a52",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "coque",
+     "roupa": "#7a4a8a",
+     "detalhe": "#f0a43a",
+     "expressao": "surpresa"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_cocina",
+   "p": {
+    "porta": 0,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "DESDE EL PATIO",
+     "texto": "Rosita, soy tu papá",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_altar",
+   "p": {
+    "foto": true,
+    "vela_apaga": [
+     0,
+     1
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Su papá",
+     "sub": "murió en la milpa",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_milpa",
+   "p": {
+    "hud": {
+     "dia": "Día 2",
+     "hora": "6:00",
+     "ampm": "AM",
+     "lugar": "La milpa"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "la cruz, vacía",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_cuarto",
+   "p": {
+    "sombra": 1,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "TOMÁS, DORMIDO",
+     "texto": "Ya voy, abuelo.",
+     "y": 0.2
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 3,
+   "en": 0.5
+  },
+  {
+   "tipo": "susto",
+   "linea": 7,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "voz propia",
+  "mimic",
+  "abraza",
+  "su papá",
+  "ábreme",
+  "dos años",
+  "espantapájaros",
+  "abuelo"
+ ],
+ "gancho": {
+  "cena": 7,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
