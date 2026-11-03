@@ -1,0 +1,204 @@
+{
+ "formato": "Soldier",
+ "tema": "epico",
+ "piano": 0,
+ "visual": "flat",
+ "paleta": "roma",
+ "serie": "roman-legionary",
+ "serie_titulo": "You Join the Roman Legion | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (frente soldado, 03/11). Fatos: Vegetius, De Re Militari I.9-10 (20 milhas em 5 horas, armas de treino com o dobro do peso); contubernium de 8; soldo de 225 denários e prêmio de 3.000 denários (Augusto, Res Gestae/Cassius Dio 55.23) https://en.wikipedia.org/wiki/Roman_legion",
+ "tags": [
+  "roman legion",
+  "roman soldier",
+  "legionary",
+  "ancient rome",
+  "history",
+  "history facts",
+  "roman army",
+  "you wake up in",
+  "old tales"
+ ],
+ "codigo": "CL025",
+ "parte": 1,
+ "titulo": "You join the Roman legion, age 17 ⚔️ Part 1 #history #shorts",
+ "capa": "25 YEARS OF SERVICE",
+ "descripcion": "You sign up at seventeen. Twenty-five years of service, a training sword twice as heavy as the real one, and twenty miles in five hours.\n\nSource: Vegetius, De Re Militari, book 1.\n\nWould you sign?\n\n#history #ancientrome #romanlegion #historyfacts #shorts",
+ "lineas": [
+  {
+   "texto": "You are seventeen, and you just joined the Roman legion.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You swear an oath. Twenty-five years of service.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Training starts with a wooden sword, twice as heavy as a real one.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You strike a wooden post, for hours, every day.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then you march. Twenty Roman miles, in five hours.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "With your armor, your food, your tools, and your stakes.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "If you fall behind, nobody waits.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And tonight, after the march, the real work begins. Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_estrada_romana",
+   "p": {
+    "hud": {
+     "dia": "Age 17",
+     "hora": "Dawn",
+     "lugar": "Roman camp",
+     "ceu": "aurora"
+    }
+   }
+  },
+  {
+   "linea": 0,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "You, 17",
+     "sub": "new legionary",
+     "y": 0.13
+    },
+    "pessoa": {
+     "pele": "#d0a07a",
+     "cabelo": "#2a1a10",
+     "cabeloTipo": "curto",
+     "roupa": "#a8322a",
+     "detalhe": "#d8b04a",
+     "expressao": "sorriso"
+    }
+   },
+   "en": 0.55
+  },
+  {
+   "linea": 1,
+   "comp": "f_forum",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the oath: 25 years",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_figura",
+   "p": {
+    "figurino": "legionario",
+    "arma": "espada",
+    "pose": "luta"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_acampamento_romano",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the training post",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_estrada_romana",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "20 miles · 5 hours",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_ficha",
+   "p": {
+    "pessoa": {
+     "figurino": "legionario"
+    },
+    "titulo": "Your load",
+    "linhas": [
+     {
+      "icone": "espada",
+      "texto": "Armor"
+     },
+     {
+      "icone": "fome",
+      "texto": "Food"
+     },
+     {
+      "icone": "perigo",
+      "texto": "Tools and stakes"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "nobody waits",
+     "y": 0.13
+    },
+    "pessoa": {
+     "pele": "#d0a07a",
+     "cabelo": "#2a1a10",
+     "cabeloTipo": "curto",
+     "roupa": "#a8322a",
+     "detalhe": "#d8b04a",
+     "expressao": "bravo"
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "What work?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "seventeen",
+  "twenty-five",
+  "twice",
+  "post",
+  "twenty",
+  "stakes",
+  "behind",
+  "real work"
+ ]
+}

@@ -1,0 +1,168 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "piano": 0,
+ "visual": "flat",
+ "paleta": "china",
+ "serie": "ten-suns",
+ "serie_titulo": "The Archer and the Moon | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "gringa: China (lenda de Chang'e e Houyi, em alta todo Festival do Meio do Outono). Fontes: Huainanzi (séc. II a.C.), cap. 8 e 6 https://en.wikipedia.org/wiki/Chang%27e ; https://en.wikipedia.org/wiki/Hou_Yi",
+ "tags": [
+  "chang'e",
+  "hou yi",
+  "chinese mythology",
+  "mythology",
+  "myths and legends",
+  "moon goddess",
+  "mid-autumn festival",
+  "old tales"
+ ],
+ "codigo": "CL030",
+ "parte": 3,
+ "anterior": "CL029",
+ "titulo": "Why China eats mooncakes under the moon 🌕 Part 3 #mythology #shorts",
+ "capa": "SHE FLOATED TO THE MOON",
+ "descripcion": "Chang'e drank the elixir and floated to the moon, where she lives with a jade rabbit. In many tellings, a thief made her choose.\n\nSources: Huainanzi, chapter 6, and later folk versions.\n\nWhat would you have done?\n\n#mythology #chinesemythology #change #houyi #shorts",
+ "lineas": [
+  {
+   "texto": "In the oldest version, Chang'e drinks the elixir herself.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "In a later one, a thief breaks in, and she drinks it so he can't.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Either way, she becomes light, and floats up into the sky.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "She stops at the moon, the closest place to home.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "There, a jade rabbit pounds medicine under a cassia tree.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Hou Yi sets out her favorite fruit and cakes, under the full moon.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "People still do it, at the Mid-Autumn Festival.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Would you have drunk it, or stayed?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "retrato",
+   "p": {
+    "hud": {
+     "dia": "Night",
+     "hora": "Full moon",
+     "lugar": "their home",
+     "ceu": "noite"
+    },
+    "pessoa": {
+     "pele": "#f0d4bc",
+     "cabelo": "#14100c",
+     "cabeloTipo": "longo",
+     "roupa": "#c8d8ec",
+     "detalhe": "#e0b040",
+     "expressao": "surpresa"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_casa_china",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "a thief breaks in",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_ceu",
+   "p": {
+    "tipo": "noite",
+    "lua": true
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_palacio_lua",
+   "p": {
+    "pers": "change"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_palacio_lua",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the jade rabbit",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "pessego",
+    "rotulo": "under the full moon"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_lago_china",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Mid-Autumn Festival",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#f0d4bc",
+     "cabelo": "#14100c",
+     "cabeloTipo": "longo",
+     "roupa": "#c8d8ec",
+     "detalhe": "#e0b040"
+    }
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "herself",
+  "thief",
+  "light",
+  "moon",
+  "jade rabbit",
+  "favorite",
+  "Mid-Autumn",
+  "stayed"
+ ]
+}

@@ -1,0 +1,173 @@
+{
+ "formato": "Day",
+ "tema": "calmo",
+ "piano": 0,
+ "visual": "flat",
+ "paleta": "japao",
+ "serie": "rice-village",
+ "serie_titulo": "You Wake Up in Japan, 1700 | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "gringa: Japão (vídeos de 'vida no período Edo' em alta no YouTube japonês). Fatos: koku https://en.wikipedia.org/wiki/Koku ; goningumi https://en.wikipedia.org/wiki/Goningumi ; imposto 'shikō rokumin' (4 para o senhor, 6 para o povo) https://en.wikipedia.org/wiki/Edo_period",
+ "tags": [
+  "edo period",
+  "edo japan",
+  "japanese history",
+  "feudal japan",
+  "rice farmer",
+  "history",
+  "history facts",
+  "you wake up in",
+  "old tales"
+ ],
+ "codigo": "CL024",
+ "parte": 3,
+ "anterior": "CL023",
+ "titulo": "Harvest tax in a Japanese village, 1700 🍶 Part 3 #history #shorts",
+ "capa": "FOUR FOR THE LORD",
+ "descripcion": "At harvest, the lord's officials measured the rice. A common rule: four parts for the lord, six for the people.\n\nSources: Edo-period nengu (annual rice tax), 'shikō rokumin'.\n\nCould you live on six?\n\n#history #edojapan #japanesehistory #historyfacts #shorts",
+ "lineas": [
+  {
+   "texto": "October. The rice turns gold, and the whole village cuts it.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "It dries on wooden racks, in long rows.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then the lord's officials arrive, to measure the harvest.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A common rule: four parts for the lord, six for the people.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The village pays together, in straw bags of rice.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "When the tax is paid, you finally celebrate.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Drums, a shrine festival, and a cup of sake.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Four for the lord, six for you. Could you live on six?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_arrozal",
+   "p": {
+    "hud": {
+     "dia": "October",
+     "hora": "Morning",
+     "lugar": "the paddies",
+     "ceu": "tarde"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "harvest",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_vila_japao",
+   "p": {}
+  },
+  {
+   "linea": 2,
+   "comp": "f_castelo_japao",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the lord's officials",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_comparar",
+   "p": {
+    "esq": {
+     "titulo": "LORD",
+     "itens": [
+      "4 parts"
+     ]
+    },
+    "dir": {
+     "titulo": "PEOPLE",
+     "itens": [
+      "6 parts"
+     ]
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "saco_grao",
+    "rotulo": "paid in rice"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_torii",
+   "p": {
+    "hud": {
+     "dia": "Autumn",
+     "hora": "Evening",
+     "lugar": "the shrine",
+     "ceu": "por"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "tambor",
+    "rotulo": "festival"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#1a1410",
+     "cabeloTipo": "coque",
+     "roupa": "#4a5a7a",
+     "detalhe": "#e6d6b0",
+     "expressao": "sorriso"
+    }
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "gold",
+  "racks",
+  "measure",
+  "four parts",
+  "together",
+  "celebrate",
+  "sake",
+  "six"
+ ]
+}

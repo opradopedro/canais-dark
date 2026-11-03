@@ -1,0 +1,186 @@
+{
+ "formato": "Day",
+ "tema": "calmo",
+ "piano": 0,
+ "visual": "flat",
+ "paleta": "japao",
+ "serie": "rice-village",
+ "serie_titulo": "You Wake Up in Japan, 1700 | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "gringa: Japão (vídeos de 'vida no período Edo' em alta no YouTube japonês). Fatos: koku https://en.wikipedia.org/wiki/Koku ; goningumi https://en.wikipedia.org/wiki/Goningumi ; imposto 'shikō rokumin' (4 para o senhor, 6 para o povo) https://en.wikipedia.org/wiki/Edo_period",
+ "tags": [
+  "edo period",
+  "edo japan",
+  "japanese history",
+  "feudal japan",
+  "rice farmer",
+  "history",
+  "history facts",
+  "you wake up in",
+  "old tales"
+ ],
+ "codigo": "CL022",
+ "parte": 1,
+ "titulo": "You wake up in a Japanese village, 1700 🌾 Part 1 #history #shorts",
+ "capa": "RICE IS MONEY",
+ "descripcion": "In a Japanese farming village in 1700, rice was money, and five families shared the blame for every crime.\n\nSources: Edo-period koku and goningumi system.\n\nCould you live by those rules?\n\n#history #edojapan #japanesehistory #historyfacts #shorts",
+ "lineas": [
+  {
+   "texto": "You wake up in Japan, in the year 1700. You grow rice.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Your village has about three hundred people.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Here, rice is money. Your lord counts his wealth in koku.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "One koku is enough rice to feed one person for a year.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Your house belongs to a group of five families.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "If one family breaks the law, all five are punished.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "So everyone watches everyone. Politely.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And this spring, your neighbor is acting strange. Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_vila_japao",
+   "p": {
+    "hud": {
+     "dia": "Year 1700",
+     "hora": "Dawn",
+     "lugar": "Japan",
+     "ceu": "aurora"
+    }
+   }
+  },
+  {
+   "linea": 0,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "You, 30",
+     "sub": "rice farmer",
+     "y": 0.13
+    },
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#1a1410",
+     "cabeloTipo": "coque",
+     "roupa": "#4a5a7a",
+     "detalhe": "#e6d6b0",
+     "expressao": "sorriso"
+    }
+   },
+   "en": 0.55
+  },
+  {
+   "linea": 1,
+   "comp": "f_vila_japao",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "about 300 people",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "saco_grao",
+    "rotulo": "wealth in koku"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "tigela_arroz",
+    "rotulo": "1 koku ≈ 1 person, 1 year"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_vila_japao",
+   "p": {
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "YOUR GROUP OF FIVE",
+     "itens": [
+      "5 families",
+      "1 shared duty",
+      "1 shared blame"
+     ],
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "all five punished",
+     "y": 0.13
+    },
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#1a1410",
+     "cabeloTipo": "coque",
+     "roupa": "#4a5a7a",
+     "detalhe": "#e6d6b0",
+     "expressao": "surpresa"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_arrozal",
+   "p": {}
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "What is he hiding?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "1700",
+  "three hundred",
+  "money",
+  "one person",
+  "five families",
+  "all five",
+  "watches",
+  "strange"
+ ]
+}

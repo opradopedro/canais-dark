@@ -1,0 +1,182 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "piano": 0,
+ "visual": "flat",
+ "paleta": "china",
+ "serie": "ten-suns",
+ "serie_titulo": "The Archer and the Moon | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "gringa: China (lenda de Chang'e e Houyi, em alta todo Festival do Meio do Outono). Fontes: Huainanzi (séc. II a.C.), cap. 8 e 6 https://en.wikipedia.org/wiki/Chang%27e ; https://en.wikipedia.org/wiki/Hou_Yi",
+ "tags": [
+  "chang'e",
+  "hou yi",
+  "chinese mythology",
+  "mythology",
+  "myths and legends",
+  "moon goddess",
+  "mid-autumn festival",
+  "old tales"
+ ],
+ "codigo": "CL029",
+ "parte": 2,
+ "anterior": "CL028",
+ "titulo": "The archer who shot down nine suns 🏹 Part 2 #mythology #shorts",
+ "capa": "NINE SUNS FELL",
+ "descripcion": "Hou Yi shot down nine suns and left one. As a reward, he was given the elixir of immortality, but only enough for one.\n\nSources: Huainanzi, chapters 6 and 8.\n\nWould you drink it?\n\n#mythology #chinesemythology #change #houyi #shorts",
+ "lineas": [
+  {
+   "texto": "Hou Yi shot nine suns. Each one fell as a golden crow.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He left one, so the world would still have light.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He became a hero, and he married Chang'e.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The Queen Mother of the West gave him a gift.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The elixir of immortality. Live forever.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "But only enough for one person.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He didn't want forever without her, so he hid it.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And one day, someone found it. Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_dez_sois",
+   "p": {
+    "flechas": [
+     0.2,
+     1
+    ],
+    "hud": {
+     "dia": "The first age",
+     "hora": "Noon",
+     "lugar": "the mountain",
+     "ceu": "dia"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_ceu",
+   "p": {
+    "tipo": "dia",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "one sun left",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Chang'e",
+     "sub": "Hou Yi's wife",
+     "y": 0.13
+    },
+    "pessoa": {
+     "pele": "#f0d4bc",
+     "cabelo": "#14100c",
+     "cabeloTipo": "longo",
+     "roupa": "#c8d8ec",
+     "detalhe": "#e0b040",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_templo_china",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the Queen Mother of the West",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "cabaca",
+    "brilho": 1,
+    "rotulo": "the elixir"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_contagem",
+   "p": {
+    "de": 2,
+    "ate": 1,
+    "rotulo": "only enough for"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "he hid it",
+     "y": 0.13
+    },
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#14100c",
+     "cabeloTipo": "coque",
+     "barba": true,
+     "roupa": "#8a3a2a",
+     "detalhe": "#e0b040"
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Who found it?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "nine suns",
+  "one",
+  "Chang'e",
+  "Queen Mother",
+  "forever",
+  "only",
+  "hid",
+  "found"
+ ]
+}

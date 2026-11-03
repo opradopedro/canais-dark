@@ -1,0 +1,192 @@
+{
+ "formato": "Day",
+ "tema": "calmo",
+ "piano": 0,
+ "visual": "flat",
+ "paleta": "japao",
+ "serie": "rice-village",
+ "serie_titulo": "You Wake Up in Japan, 1700 | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "gringa: Japão (vídeos de 'vida no período Edo' em alta no YouTube japonês). Fatos: koku https://en.wikipedia.org/wiki/Koku ; goningumi https://en.wikipedia.org/wiki/Goningumi ; imposto 'shikō rokumin' (4 para o senhor, 6 para o povo) https://en.wikipedia.org/wiki/Edo_period",
+ "tags": [
+  "edo period",
+  "edo japan",
+  "japanese history",
+  "feudal japan",
+  "rice farmer",
+  "history",
+  "history facts",
+  "you wake up in",
+  "old tales"
+ ],
+ "codigo": "CL023",
+ "parte": 2,
+ "anterior": "CL022",
+ "titulo": "Planting day in a Japanese village, 1700 🌱 Part 2 #history #shorts",
+ "capa": "THE WHOLE VILLAGE PLANTS",
+ "descripcion": "In June, the whole village planted rice together, field by field, and shared the same water.\n\nSources: Edo-period village life (goningumi, shared irrigation).\n\nWhat would you have done?\n\n#history #edojapan #japanesehistory #historyfacts #shorts",
+ "lineas": [
+  {
+   "texto": "Your neighbor was hiding rice, to sell it in secret.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "If the lord finds out, your five families pay.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You talk to him before anyone else does. He stops.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "In June, the whole village plants together, one field at a time.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Ankle-deep in mud, bent over, singing to keep the rhythm.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The water is shared. You never open your channel first.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And you don't eat your rice. You eat millet and barley.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The rice is for the tax. How much? Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "retrato",
+   "p": {
+    "hud": {
+     "dia": "Spring",
+     "hora": "Night",
+     "lugar": "your village",
+     "ceu": "noite"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Your neighbor",
+     "sub": "hiding rice",
+     "y": 0.13
+    },
+    "pessoa": {
+     "pele": "#c9946a",
+     "cabelo": "#1a1410",
+     "cabeloTipo": "curto",
+     "roupa": "#6a4a3a",
+     "detalhe": "#e6d6b0",
+     "expressao": "triste"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "five families pay",
+     "y": 0.13
+    },
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#1a1410",
+     "cabeloTipo": "coque",
+     "roupa": "#4a5a7a",
+     "detalhe": "#e6d6b0",
+     "expressao": "bravo"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_vila_japao",
+   "p": {
+    "hud": {
+     "dia": "Spring",
+     "hora": "Morning",
+     "lugar": "your village",
+     "ceu": "dia"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_arrozal",
+   "p": {
+    "hud": {
+     "dia": "June",
+     "hora": "Morning",
+     "lugar": "the paddies",
+     "ceu": "dia"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "planting day",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_arrozal",
+   "p": {
+    "chuva": true
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_arrozal",
+   "p": {
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "WATER RULES",
+     "itens": [
+      "Shared by all",
+      "Upper fields first",
+      "Never cut the line"
+     ],
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "tigela_arroz",
+    "rotulo": "millet and barley"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "How much tax?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "hiding",
+  "five families",
+  "stops",
+  "whole village",
+  "singing",
+  "shared",
+  "millet",
+  "tax"
+ ]
+}

@@ -1,0 +1,168 @@
+{
+ "formato": "Soldier",
+ "tema": "epico",
+ "piano": 0,
+ "visual": "flat",
+ "paleta": "roma",
+ "serie": "roman-legionary",
+ "serie_titulo": "You Join the Roman Legion | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (frente soldado, 03/11). Fatos: Vegetius, De Re Militari I.9-10 (20 milhas em 5 horas, armas de treino com o dobro do peso); contubernium de 8; soldo de 225 denários e prêmio de 3.000 denários (Augusto, Res Gestae/Cassius Dio 55.23) https://en.wikipedia.org/wiki/Roman_legion",
+ "tags": [
+  "roman legion",
+  "roman soldier",
+  "legionary",
+  "ancient rome",
+  "history",
+  "history facts",
+  "roman army",
+  "you wake up in",
+  "old tales"
+ ],
+ "codigo": "CL027",
+ "parte": 3,
+ "anterior": "CL026",
+ "titulo": "Your first battle as a Roman legionary 🛡️ Part 3 #history #shorts",
+ "capa": "SHIELDS UP",
+ "descripcion": "Throw the pilum, close the shield wall, stab with the short sword. Survive twenty-five years, and Augustus pays you about thirteen years of salary.\n\nSources: Cassius Dio 55.23; Res Gestae of Augustus.\n\nWould you have lasted 25 years?\n\n#history #ancientrome #romanlegion #historyfacts #shorts",
+ "lineas": [
+  {
+   "texto": "The enemy is coming, and you stand in a line, shield to shield.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At thirty paces, you throw your pilum, a heavy javelin.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "It bends on impact, so nobody can throw it back.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then, shields up. Under arrows, you lock into the tortoise.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You fight with a short sword, stabbing, not swinging.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Every few minutes, the front line rotates, so fresh men fight.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Survive twenty-five years, and Rome pays you a bonus.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "About thirteen years of salary, in one go. Would you have lasted?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_acampamento_romano",
+   "p": {
+    "hud": {
+     "dia": "Battle day",
+     "hora": "Morning",
+     "lugar": "the frontier",
+     "ceu": "dia"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_figura",
+   "p": {
+    "figurino": "legionario",
+    "arma": "lanca",
+    "pose": "aponta"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "lanca",
+    "rotulo": "the pilum bends"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_falange",
+   "p": {
+    "avanca": [
+     0,
+     0.4
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the tortoise",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_figura",
+   "p": {
+    "figurino": "legionario",
+    "arma": "espada",
+    "escudo": "romano",
+    "pose": "luta"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_falange",
+   "p": {
+    "avanca": [
+     0.4,
+     0.8
+    ],
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "YOUR BATTLE",
+     "itens": [
+      "Throw the pilum",
+      "Shields up",
+      "Stab, don't swing"
+     ],
+     "y": 0.13,
+     "marcados": 3
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_contagem",
+   "p": {
+    "de": 1,
+    "ate": 25,
+    "rotulo": "years of service"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "moedas",
+    "rotulo": "3,000 denarii"
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "shield",
+  "pilum",
+  "bends",
+  "tortoise",
+  "stabbing",
+  "rotates",
+  "twenty-five",
+  "thirteen"
+ ]
+}

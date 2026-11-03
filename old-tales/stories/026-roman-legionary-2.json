@@ -1,0 +1,169 @@
+{
+ "formato": "Soldier",
+ "tema": "epico",
+ "piano": 0,
+ "visual": "flat",
+ "paleta": "roma",
+ "serie": "roman-legionary",
+ "serie_titulo": "You Join the Roman Legion | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral (frente soldado, 03/11). Fatos: Vegetius, De Re Militari I.9-10 (20 milhas em 5 horas, armas de treino com o dobro do peso); contubernium de 8; soldo de 225 denários e prêmio de 3.000 denários (Augusto, Res Gestae/Cassius Dio 55.23) https://en.wikipedia.org/wiki/Roman_legion",
+ "tags": [
+  "roman legion",
+  "roman soldier",
+  "legionary",
+  "ancient rome",
+  "history",
+  "history facts",
+  "roman army",
+  "you wake up in",
+  "old tales"
+ ],
+ "codigo": "CL026",
+ "parte": 2,
+ "anterior": "CL025",
+ "titulo": "Every night, Roman soldiers built a fort ⛺ Part 2 #history #shorts",
+ "capa": "A NEW FORT EVERY NIGHT",
+ "descripcion": "After every march, the legion built a fortified camp: ditch, wall, stakes, and tents in perfect rows.\n\nSources: Polybius, Histories 6.27-42; Vegetius.\n\nCould you dig after a 20-mile march?\n\n#history #ancientrome #romanlegion #historyfacts #shorts",
+ "lineas": [
+  {
+   "texto": "After the march, you don't rest. You build a fort.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Every night, a new camp. A ditch, a wall of earth, and your stakes on top.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Inside, the tents always go in the same grid.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "So every soldier knows his place, even in the dark.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You share a tent with seven men. Your contubernium.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You grind your own grain and bake your own bread.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And you drink posca, water mixed with sour wine.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then one morning, the scouts see the enemy. Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_acampamento_romano",
+   "p": {
+    "hud": {
+     "dia": "March day 1",
+     "hora": "Evening",
+     "lugar": "the frontier",
+     "ceu": "tarde"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_acampamento_romano",
+   "p": {
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "EVERY NIGHT",
+     "itens": [
+      "Dig the ditch",
+      "Build the wall",
+      "Plant the stakes"
+     ],
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_acampamento_romano",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the same grid",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "your place, in the dark",
+     "y": 0.13
+    },
+    "pessoa": {
+     "pele": "#d0a07a",
+     "cabelo": "#2a1a10",
+     "cabeloTipo": "curto",
+     "roupa": "#a8322a",
+     "detalhe": "#d8b04a"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_contagem",
+   "p": {
+    "de": 1,
+    "ate": 8,
+    "rotulo": "men per tent"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "pao",
+    "rotulo": "bake your own bread"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "jarra",
+    "rotulo": "posca"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "The enemy",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "fort",
+  "ditch",
+  "grid",
+  "dark",
+  "seven men",
+  "bread",
+  "posca",
+  "enemy"
+ ]
+}

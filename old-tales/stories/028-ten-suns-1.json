@@ -1,0 +1,179 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "piano": 0,
+ "visual": "flat",
+ "paleta": "china",
+ "serie": "ten-suns",
+ "serie_titulo": "The Archer and the Moon | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "gringa: China (lenda de Chang'e e Houyi, em alta todo Festival do Meio do Outono). Fontes: Huainanzi (séc. II a.C.), cap. 8 e 6 https://en.wikipedia.org/wiki/Chang%27e ; https://en.wikipedia.org/wiki/Hou_Yi",
+ "tags": [
+  "chang'e",
+  "hou yi",
+  "chinese mythology",
+  "mythology",
+  "myths and legends",
+  "moon goddess",
+  "mid-autumn festival",
+  "old tales"
+ ],
+ "codigo": "CL028",
+ "parte": 1,
+ "titulo": "The day ten suns rose at once ☀️ Part 1 #mythology #shorts",
+ "capa": "TEN SUNS AT ONCE",
+ "descripcion": "In Chinese myth, ten suns took turns crossing the sky. One day, they all rose together, and the earth began to burn.\n\nSource: Huainanzi (2nd century BC), chapter 8.\n\nWhat would you have done?\n\n#mythology #chinesemythology #change #houyi #shorts",
+ "lineas": [
+  {
+   "texto": "In the oldest Chinese myths, there were ten suns.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "They lived in a giant tree in the east, and took turns.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "One sun a day crossed the sky. Then, one morning, all ten rose.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Rivers dried. Crops burned. The earth cracked open.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The emperor called the greatest archer alive. His name was Hou Yi.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He climbed a mountain, and drew his bow.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "One arrow. One sun fell from the sky.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "But how many would he leave? Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_dez_sois",
+   "p": {
+    "flechas": 0,
+    "hud": {
+     "dia": "The first age",
+     "hora": "Noon",
+     "lugar": "the earth",
+     "ceu": "dia"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_ceu",
+   "p": {
+    "tipo": "dez_sois",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "they took turns",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_dez_sois",
+   "p": {
+    "flechas": 0
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_dez_sois",
+   "p": {
+    "flechas": 0,
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "THE TEN SUNS",
+     "itens": [
+      "Rivers dried",
+      "Crops burned",
+      "Earth cracked"
+     ],
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Hou Yi",
+     "sub": "the archer",
+     "y": 0.13
+    },
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#14100c",
+     "cabeloTipo": "coque",
+     "barba": true,
+     "roupa": "#8a3a2a",
+     "detalhe": "#e0b040"
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_dez_sois",
+   "p": {
+    "flechas": [
+     0,
+     0.1
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_dez_sois",
+   "p": {
+    "flechas": [
+     0.1,
+     0.2
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "one sun falls",
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "How many?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "ten suns",
+  "took turns",
+  "all ten",
+  "cracked",
+  "Hou Yi",
+  "bow",
+  "fell",
+  "how many"
+ ]
+}

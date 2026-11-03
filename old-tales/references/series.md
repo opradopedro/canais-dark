@@ -60,3 +60,26 @@ Cenas: vila, casa, salao, mercado, texto.
 - CL020 parte 2/3: chora porque vai morrer; cruza o mar; Subodhi o chama Sun Wukong; 72 transformações e salto de nuvem (108 mil li); pilar de ferro do Rei Dragão do Mar do Leste. FEITO
 - CL021 parte 3/3 (última): cavalariço do Céu (cargo mais baixo), vai embora; come os pêssegos da imortalidade; exércitos não o param; aposta da palma do Buda; 5 pilares eram dedos; 500 anos sob a montanha. Pergunta final. FEITO
 - Próximas da frente mito: continuar a Jornada (Tang Sanzang solta o Wukong, cap. 14) ou outro mito chinês do backlog.
+
+## Semana de 10/11 a 18/11/2026 — por: claude (rotina de terça, 03/11). Estoque antes: CL015-CL021 (7 dias). Rodízio das frentes: calmo → epico → mito. 2 gringas, 1 autoral.
+
+## CL022-CL024 You Wake Up in Japan, 1700 (calmo, paleta japao) — origem: gringa: Japão (vida no período Edo, em alta no YouTube japonês)
+Fontes: koku https://en.wikipedia.org/wiki/Koku ; goningumi https://en.wikipedia.org/wiki/Goningumi ; imposto "shikō rokumin" https://en.wikipedia.org/wiki/Edo_period
+Peças: `f_vila_japao`, `f_arrozal`, `f_castelo_japao`, `f_torii`, `f_objeto`, `f_comparar`, `retrato`, `texto`. "Você" = plantador de arroz, 30.
+- CL022 parte 1/3: vila de ~300; arroz é dinheiro (koku = arroz de 1 pessoa por 1 ano); grupo de 5 famílias, se uma quebra a lei as 5 pagam; o vizinho está estranho. FEITO
+- CL023 parte 2/3: o vizinho escondia arroz para vender; você conversa antes; plantio em junho com a vila toda, cantando; água dividida; você come painço e cevada, o arroz é do imposto. FEITO
+- CL024 parte 3/3: colheita em outubro, secagem em varais; fiscais do senhor medem; regra comum 4 para o senhor, 6 para o povo; pago em sacos de palha; festival do santuário, tambores, saquê. FEITO
+
+## CL025-CL027 You Join the Roman Legion (epico, paleta roma) — origem: autoral
+Fontes: Vegetius, De Re Militari I.9-10; Políbio 6.27-42 (acampamento); Cassius Dio 55.23 e Res Gestae (225 denários/ano, prêmio de 3.000) https://en.wikipedia.org/wiki/Roman_legion
+Peças: `f_estrada_romana`, `f_acampamento_romano`, `f_forum`, `f_figura` (legionario), `f_ficha`, `f_falange`, `f_contagem`, `f_objeto`, `retrato`, `texto`.
+- CL025 parte 1/3: 17 anos, juramento de 25 anos; espada de madeira com o dobro do peso no poste; marcha de 20 milhas romanas em 5 horas com carga; ninguém espera. FEITO
+- CL026 parte 2/3: forte novo toda noite (vala, muro de terra, estacas); tendas sempre na mesma grade; tenda de 8 (contubernium); mói o próprio grão; posca; batedores veem o inimigo. FEITO
+- CL027 parte 3/3: linha de escudos; pilum a 30 passos que entorta; tartaruga; gládio de estocada; revezamento da linha; 25 anos = prêmio de ~13 anos de soldo. FEITO
+
+## CL028-CL030 The Archer and the Moon (mito, paleta china) — origem: gringa: China (Chang'e e Houyi, em alta no Festival do Meio do Outono)
+Fontes: Huainanzi (séc. II a.C.), caps. 6 e 8 https://en.wikipedia.org/wiki/Chang%27e ; https://en.wikipedia.org/wiki/Hou_Yi
+Peças: `f_dez_sois`, `f_ceu`, `f_templo_china`, `f_palacio_lua`, `f_casa_china`, `f_lago_china`, `f_objeto`, `f_contagem`, `retrato`, `texto`.
+- CL028 parte 1/3: dez sóis na árvore do leste, um por dia; um dia os dez nascem juntos; rios secam; o imperador chama Hou Yi; uma flecha, um sol cai. FEITO
+- CL029 parte 2/3: ele derruba nove (corvos dourados), deixa um; casa com Chang'e; a Rainha-Mãe do Oeste dá o elixir, só para um; ele esconde. FEITO
+- CL030 parte 3/3: versão antiga ela bebe; versão posterior um ladrão a obriga; ela flutua até a lua, coelho de jade sob a cássia; Hou Yi põe frutas e bolos sob a lua cheia; Festival do Meio do Outono. FEITO
