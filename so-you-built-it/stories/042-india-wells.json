@@ -1,0 +1,168 @@
+{
+ "codigo": "YB042",
+ "mundo": "poco",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "gringa: Índia (hindi): esgotamento da água subterrânea no Punjab; a Índia bombeia mais água subterrânea que EUA e China juntos (Banco Mundial) https://en.wikipedia.org/wiki/Water_scarcity_in_India",
+ "titulo": "Why India's wells keep getting deeper 💧 #howitworks #shorts",
+ "capa": "THE WATER IS SINKING",
+ "descripcion": "India pumps more groundwater than the US and China combined. Here is why the wells keep going deeper.\n\nWhat should we explain next?\n\n#howitworks #india #water #groundwater #shorts",
+ "tags": [
+  "how it works",
+  "groundwater",
+  "india",
+  "punjab",
+  "water well",
+  "water crisis",
+  "engineering",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "India pumps more groundwater than the US and China combined.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "In Punjab, farmers grow rice, and rice drinks a lot of water.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Not long ago, a simple hand pump reached water a few meters down.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But pump faster than the rain refills it, and the water table drops.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A pump on top can only pull water up about eight meters. Then it sucks air.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So farmers lower electric pumps deeper, and deeper, every few years.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "In some districts, the water drops close to a meter a year.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The fix: less thirsty crops, and ways to let the rain soak back in.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know. What should we explain next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "poco",
+   "p": {
+    "etapa": "eletrica",
+    "passo": 4
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "poco",
+   "p": {
+    "etapa": "manual",
+    "passo": 3
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "poco",
+   "p": {
+    "etapa": "manual",
+    "passo": 3
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "poco",
+   "p": {
+    "etapa": "seca",
+    "passo": 3,
+    "ruim": "WATER DROPS"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "poco",
+   "p": {
+    "etapa": "seca",
+    "passo": 3,
+    "ruim": "PUMP RUNS DRY"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "poco",
+   "p": {
+    "etapa": "eletrica",
+    "passo": 4,
+    "bom": "DEEPER PUMP"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "poco",
+   "p": {
+    "etapa": "seca",
+    "passo": 4
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "poco",
+   "p": {
+    "etapa": "filtro",
+    "passo": 5,
+    "bom": "RECHARGE"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "poco",
+   "p": {
+    "etapa": "final",
+    "passo": 5
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 4,
+   "en": 0.7
+  },
+  {
+   "tipo": "certo",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 8,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "India",
+  "rice",
+  "hand pump",
+  "drops",
+  "eight meters",
+  "deeper",
+  "a meter",
+  "rain"
+ ]
+}

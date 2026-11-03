@@ -1,0 +1,159 @@
+{
+ "codigo": "YB041",
+ "mundo": "tunel",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "autoral. Fatos: doença da descompressão nos caixões de ar comprimido; Washington Roebling (Ponte do Brooklyn) https://en.wikipedia.org/wiki/Decompression_sickness ; https://en.wikipedia.org/wiki/Washington_Roebling",
+ "titulo": "The workers who came up and couldn't walk 🚇 #howitworks #shorts",
+ "capa": "THEY CALLED IT THE BENDS",
+ "descripcion": "To dig under rivers, workers breathed compressed air. Coming back up too fast gave them the bends.\n\nWhat should we explain next?\n\n#howitworks #engineering #tunnel #history #shorts",
+ "tags": [
+  "how it works",
+  "the bends",
+  "decompression sickness",
+  "tunnel",
+  "brooklyn bridge",
+  "engineering history",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "In the eighteen hundreds, men dug under rivers, and some came back up unable to walk.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "To dig there, they needed the river kept out.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So the tunnel was filled with compressed air, pushing the water back.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But breathing air under pressure pushes extra nitrogen into your blood.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Come back up too fast, and that gas forms bubbles, like opening a soda.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Bubbles in the joints. Terrible pain. Workers called it the bends.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Even the Brooklyn Bridge's chief engineer got it, and ran the job from his window.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The fix was to come up slowly, so the gas can leave gently. Today, machines do most of the digging.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know. What should we explain next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "tunel",
+   "p": {
+    "etapa": "rio"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "tunel",
+   "p": {
+    "etapa": "inunda"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "tunel",
+   "p": {
+    "etapa": "ar"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "tunel",
+   "p": {
+    "etapa": "ar"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "tunel",
+   "p": {
+    "etapa": "bends"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "tunel",
+   "p": {
+    "etapa": "bends"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "tunel",
+   "p": {
+    "etapa": "escudo"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "tunel",
+   "p": {
+    "etapa": "tbm"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "tunel",
+   "p": {
+    "etapa": "final"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 0,
+   "en": 0.7
+  },
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 8,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "walk",
+  "river",
+  "compressed",
+  "nitrogen",
+  "bubbles",
+  "bends",
+  "Brooklyn",
+  "slowly"
+ ]
+}

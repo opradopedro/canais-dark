@@ -1,0 +1,149 @@
+{
+ "codigo": "YB043",
+ "mundo": "sabao",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "autoral. Fato: o sabão rompe o envelope de gordura de vírus envelopados https://en.wikipedia.org/wiki/Soap#Mechanism_of_cleansing_soaps ; https://en.wikipedia.org/wiki/Viral_envelope",
+ "titulo": "How plain soap tears viruses apart 🧼 #howitworks #shorts",
+ "capa": "SOAP TEARS THEM APART",
+ "descripcion": "Many viruses wear a thin coat of fat. Soap molecules pry it apart, and the rinse washes the pieces away.\n\nWhat should we explain next?\n\n#howitworks #soap #science #handwashing #shorts",
+ "tags": [
+  "how it works",
+  "soap",
+  "virus",
+  "hand washing",
+  "science",
+  "chemistry",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "How does plain soap beat so many viruses?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Many viruses wear a thin coat of fat around them.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And one end of a soap molecule is a tail that loves fat.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Those tails dig into the fatty coat.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "They pry it apart, and the virus falls to pieces.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The pieces get trapped inside tiny balls of soap.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then the rinse carries them down the drain.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's why you scrub for twenty seconds. The soap needs time to work.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know. What should we explain next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "sabao",
+   "p": {
+    "etapa": "prato"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "sabao",
+   "p": {
+    "etapa": "molecula"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "sabao",
+   "p": {
+    "etapa": "cabeca"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "sabao",
+   "p": {
+    "etapa": "mergulha"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "sabao",
+   "p": {
+    "etapa": "micela"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "sabao",
+   "p": {
+    "etapa": "micela"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "sabao",
+   "p": {
+    "etapa": "enxague"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "sabao",
+   "p": {
+    "etapa": "enxague"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "sabao",
+   "p": {
+    "etapa": "final"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 8,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "viruses",
+  "fat",
+  "tail",
+  "dig",
+  "pieces",
+  "trapped",
+  "drain",
+  "twenty seconds"
+ ]
+}

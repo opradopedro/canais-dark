@@ -1,0 +1,221 @@
+{
+ "codigo": "YB047",
+ "mundo": "terreno",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "gringa: Brasil (português): deslizamentos em encostas de Petrópolis (2022) https://en.wikipedia.org/wiki/2022_Petr%C3%B3polis_floods_and_mudslides",
+ "titulo": "You built a house on a steep hill ⛰️ #engineering #shorts",
+ "capa": "YOU BUILT ON A HILL",
+ "descripcion": "In cities like Petrópolis, Brazil, houses climb steep hills. Here is how engineers keep the hill from sliding, one problem at a time.\n\nWhat should we build next?\n\n#engineering #landslide #brazil #howitworks #shorts",
+ "tags": [
+  "engineering",
+  "landslide",
+  "hillside",
+  "brazil",
+  "petropolis",
+  "retaining wall",
+  "drainage",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Your city is out of flat land, so you build on a steep hill. Problem solved!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "To make room, you cut the hill straight down behind the house.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But a summer storm soaks the hill, and the wet slope slides.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you build a heavy wall at the foot of the cut.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But rain still soaks in behind it, and the water pushes the wall over.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you add gravel and drain holes, so the water can get out.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Or you use wire baskets full of rocks. Heavy, and water flows right through.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And you plant the slope, so roots hold the dirt together.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just made a hillside safer. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "etapa": "natural",
+    "encosta": "natural",
+    "foco": "muro"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "etapa": "corte",
+    "encosta": "corte",
+    "foco": "muro"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "etapa": "desaba",
+    "encosta": "desaba",
+    "chuva": 1,
+    "rotulo": "LANDSLIDE",
+    "cor": "red",
+    "foco": "muro"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "etapa": "muro",
+    "encosta": "muro",
+    "rotulo": "WALL",
+    "cor": "green",
+    "foco": "muro"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "etapa": "tomba",
+    "encosta": "muro",
+    "chuva": 1,
+    "agua_muro": [
+     0,
+     0.8
+    ],
+    "carga": 1,
+    "muro_inclina": [
+     0,
+     7
+    ],
+    "rotulo": "IT LEANS",
+    "cor": "red",
+    "foco": "muro"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "etapa": "dreno",
+    "encosta": "muro",
+    "dreno": 1,
+    "agua_muro": [
+     0.6,
+     0.05
+    ],
+    "rotulo": "DRAINAGE",
+    "cor": "green",
+    "foco": "muro"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "etapa": "gabiao",
+    "encosta": "gabiao",
+    "chuva": 1,
+    "rotulo": "GABIONS",
+    "cor": "green",
+    "foco": "muro"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "etapa": "plantas",
+    "encosta": "muro",
+    "dreno": 1,
+    "rotulo": "ROOTS",
+    "cor": "green",
+    "foco": "muro"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "etapa": "final",
+    "encosta": "muro",
+    "dreno": 1,
+    "foco": "muro"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 0,
+   "en": 0.8
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 8,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "steep hill",
+  "cut",
+  "slides",
+  "wall",
+  "pushes",
+  "drain",
+  "rocks",
+  "roots",
+  "hillside"
+ ]
+}

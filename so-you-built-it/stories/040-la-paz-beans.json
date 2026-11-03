@@ -1,0 +1,155 @@
+{
+ "codigo": "YB040",
+ "mundo": "panela",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "gringa: Bolívia (espanhol): por que o feijão não cozinha em La Paz (3.640 m, água ferve a ~88 °C) https://en.wikipedia.org/wiki/La_Paz ; https://en.wikipedia.org/wiki/Boiling_point",
+ "titulo": "Why beans won't cook in La Paz 🫘 #howitworks #shorts",
+ "capa": "BOILING, BUT NOT HOT",
+ "descripcion": "In La Paz, Bolivia, water boils at about 88 °C. That's why so many kitchens up there use a pressure cooker.\n\nWhat should we explain next?\n\n#howitworks #science #bolivia #pressurecooker #shorts",
+ "tags": [
+  "how it works",
+  "boiling point",
+  "altitude",
+  "la paz",
+  "bolivia",
+  "pressure cooker",
+  "cooking science",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "In La Paz, Bolivia, beans can boil for hours and stay hard.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The city is over three and a half kilometers up, so less air presses down on the water.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "With less pressure, water boils at about eighty eight degrees, not one hundred.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It bubbles like crazy, but it never gets hotter than that.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's why so many kitchens up there have a pressure cooker.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The lid seals in the steam, and the pressure climbs.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now the water can't boil until it's well past one hundred degrees.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Hotter water, and hours of cooking turn into minutes.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know. What should we explain next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "panela",
+   "p": {
+    "etapa": "aberta"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "panela",
+   "p": {
+    "etapa": "escapa"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "panela",
+   "p": {
+    "etapa": "aberta"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "panela",
+   "p": {
+    "etapa": "escapa"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "panela",
+   "p": {
+    "etapa": "tampa"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "panela",
+   "p": {
+    "etapa": "pressao"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "panela",
+   "p": {
+    "etapa": "termo"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "panela",
+   "p": {
+    "etapa": "comida"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "panela",
+   "p": {
+    "etapa": "final"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 0,
+   "en": 0.7
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.7
+  },
+  {
+   "tipo": "tada",
+   "linea": 8,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "La Paz",
+  "less air",
+  "eighty eight",
+  "hotter",
+  "pressure cooker",
+  "seals",
+  "one hundred",
+  "minutes"
+ ]
+}

@@ -27,3 +27,19 @@ Mundo novo `terreno` (ver MUNDOS.md). Estoque anterior: YB021 (Curiosidade).
 |---|---|---|---|---|
 | YB037 | Evolucao | igloo (mundo iglu) | ideia do Pedro, issue #6 | FEITO |
 | YB038 | Curiosidade | ballpoint pen (mundo caneta) | ideia do Pedro, issue #8 | FEITO |
+
+## Semana de 4/11 a 17/11/2026 (YB039-YB047) — por: claude (rotina de terça, 03/11)
+Estoque antes: ~12 prontos (YB023, YB025-YB035 no log de 02/11). Só mundos que já existem; 4 gringas, 4 autorais (+1 gringa Evolução).
+Faltou: chegar a 28 (ficou ~21, uns 10 dias). Os mundos com etapas fixas já foram usados nos temas deles; para mais Evolução
+precisa de mundo novo (sugestão para o Kiro: canal/barragem holandesa, estrada no deserto, prédio de Xangai, elevador).
+| Código | Formato | Tema | Origem | Estado |
+|---|---|---|---|---|
+| YB039 | Evolucao | fundação do Burj Khalifa (terreno) | gringa: Emirados https://en.wikipedia.org/wiki/Burj_Khalifa | FEITO |
+| YB040 | Curiosidade | feijão que não cozinha em La Paz (panela) | gringa: Bolívia https://en.wikipedia.org/wiki/La_Paz | FEITO |
+| YB041 | Curiosidade | the bends nos túneis/caixões (tunel) | autoral https://en.wikipedia.org/wiki/Decompression_sickness | FEITO |
+| YB042 | Curiosidade | poços da Índia cada vez mais fundos (poco) | gringa: Índia https://en.wikipedia.org/wiki/Water_scarcity_in_India | FEITO |
+| YB043 | Curiosidade | como o sabão desmonta vírus (sabao) | autoral | FEITO |
+| YB044 | Curiosidade | caneta que não escreve de cabeça para baixo / space pen (caneta) | autoral | FEITO |
+| YB045 | Curiosidade | aeroporto de Kansai que afundou 8 m (terreno) | gringa: Japão https://en.wikipedia.org/wiki/Kansai_International_Airport | FEITO |
+| YB046 | Curiosidade | escavação do vizinho racha sua casa (terreno) | autoral | FEITO |
+| YB047 | Evolucao | casa no morro, deslizamento (terreno) | gringa: Brasil https://en.wikipedia.org/wiki/2022_Petr%C3%B3polis_floods_and_mudslides | FEITO |

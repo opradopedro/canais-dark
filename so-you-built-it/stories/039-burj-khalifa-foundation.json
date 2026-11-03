@@ -1,0 +1,247 @@
+{
+ "codigo": "YB039",
+ "mundo": "terreno",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "gringa: Emirados Árabes (árabe) https://en.wikipedia.org/wiki/Burj_Khalifa (192 estacas de 43 m a mais de 50 m de profundidade, rocha fraca, água subterrânea salgada, proteção catódica)",
+ "titulo": "You built the tallest tower on Earth 🏙️ #engineering #shorts",
+ "capa": "YOU BUILT THE BURJ",
+ "descripcion": "The tallest building in the world stands on weak, crumbly rock and salty groundwater. Here is how its foundation solves each problem.\n\nWhat should we build next?\n\n#engineering #burjkhalifa #dubai #howitworks #shorts",
+ "tags": [
+  "engineering",
+  "burj khalifa",
+  "dubai",
+  "foundation",
+  "skyscraper",
+  "piles",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "You're building the tallest tower on Earth, in Dubai. So you set it on footings. Problem solved!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But it weighs about four hundred fifty thousand tons, and the ground is weak, crumbly rock. It sinks.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you pour one giant concrete raft under the whole tower, to spread the weight.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But even spread out, that much weight keeps squeezing the weak rock below.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you drill one hundred ninety two piles, more than fifty meters down.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "There's no hard bottom to stand on, so the rubbing of the rock along each pile holds the tower up.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the groundwater here is salty, and salt slowly eats concrete and steel.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you use extra dense concrete, plus a weak electric current that protects the steel.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built the foundation of the Burj Khalifa. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "etapa": "sapata",
+    "sapata": 1,
+    "foco": "predio",
+    "casa": "predio"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "etapa": "afunda",
+    "sapata": 1,
+    "afunda": [
+     0,
+     1.0
+    ],
+    "peso": 1,
+    "rotulo": "SINKING",
+    "cor": "red",
+    "foco": "predio",
+    "casa": "predio"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "etapa": "radier",
+    "radier": 1,
+    "rotulo": "CONCRETE RAFT",
+    "cor": "green",
+    "foco": "fundo",
+    "casa": "predio"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "etapa": "aperta",
+    "radier": 1,
+    "afunda": [
+     0,
+     0.5
+    ],
+    "peso": 1,
+    "rotulo": "STILL SINKING",
+    "cor": "red",
+    "foco": "predio",
+    "casa": "predio"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "etapa": "estacas",
+    "radier": 1,
+    "estacas": [
+     0,
+     6.5
+    ],
+    "rotulo": "192 PILES",
+    "cor": "green",
+    "foco": "fundo",
+    "casa": "predio"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "etapa": "atrito",
+    "radier": 1,
+    "estacas": 6.5,
+    "marcas": [
+     {
+      "t": "Friction",
+      "x": 0,
+      "y": -4,
+      "cor": "green"
+     }
+    ],
+    "foco": "fundo",
+    "casa": "predio"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "etapa": "sal",
+    "radier": 1,
+    "estacas": 6.5,
+    "lencol": [
+     -3,
+     -1
+    ],
+    "rotulo": "SALTY WATER",
+    "cor": "red",
+    "foco": "fundo",
+    "casa": "predio"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "etapa": "protege",
+    "radier": 1,
+    "estacas": 6.5,
+    "lencol": -1,
+    "manta": 1,
+    "rotulo": "PROTECTED",
+    "cor": "green",
+    "foco": "fundo",
+    "casa": "predio"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "etapa": "final",
+    "radier": 1,
+    "estacas": 6.5,
+    "foco": "predio",
+    "casa": "predio"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 0,
+   "en": 0.8
+  },
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 8,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "Dubai",
+  "sinks",
+  "raft",
+  "squeezing",
+  "piles",
+  "rubbing",
+  "salty",
+  "electric",
+  "Burj"
+ ]
+}

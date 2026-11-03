@@ -1,0 +1,148 @@
+{
+ "codigo": "YB044",
+ "mundo": "caneta",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "autoral. Fatos: a esferográfica depende da gravidade; Fisher Space Pen com cartucho pressurizado com nitrogênio https://en.wikipedia.org/wiki/Space_pen",
+ "titulo": "Why your pen won't write upside down 🖊️ #howitworks #shorts",
+ "capa": "IT NEEDS GRAVITY",
+ "descripcion": "A ballpoint pen has no pump. Gravity feeds the ink to the ball. Space pens use pressurized gas instead.\n\nWhat should we explain next?\n\n#howitworks #pen #science #spacepen #shorts",
+ "tags": [
+  "how it works",
+  "ballpoint pen",
+  "space pen",
+  "gravity",
+  "science",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Why does a pen stop writing when you hold it upside down?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A ballpoint pen has no pump inside.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Gravity pulls the ink down, right against the little ball.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Turn it upside down, and the ink slides away from the tip.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Air sneaks in behind the ball, and the line goes dry.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Space pens fix it with gas packed in behind the ink.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The gas pushes the ink onto the ball, in any direction.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "They write upside down, underwater, even in zero gravity.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know. What should we explain next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "caneta",
+   "p": {
+    "etapa": "escreve"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "caneta",
+   "p": {
+    "etapa": "tinta"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "caneta",
+   "p": {
+    "etapa": "tinta"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "caneta",
+   "p": {
+    "etapa": "grossa"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "caneta",
+   "p": {
+    "etapa": "furo"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "caneta",
+   "p": {
+    "etapa": "tinta"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "caneta",
+   "p": {
+    "etapa": "rola"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "caneta",
+   "p": {
+    "etapa": "escreve"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "caneta",
+   "p": {
+    "etapa": "final"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 8,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "upside down",
+  "no pump",
+  "Gravity",
+  "slides",
+  "dry",
+  "gas",
+  "any direction",
+  "zero gravity"
+ ]
+}
