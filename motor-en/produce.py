@@ -170,6 +170,10 @@ def run(*cmd):
         if "LIMITE DE NARRACOES" in (r.stderr or ""):
             print("LIMITE DE NARRACOES do dia atingido: nao adianta repetir agora (a repescagem tenta de novo)", flush=True)
             break
+        if "CORTE DA VOZ FALHOU" in (r.stderr or ""):
+            # o Gemini esta no ar e ja tentou tomada nova: esperar 50 min nao muda nada (CL015, 03-04/11)
+            print("CORTE DA VOZ FALHOU: nao espero; a proxima execucao pede outra leitura ao Gemini", flush=True)
+            break
         if t <= len(esperas):
             print(f"ETAPA CAIU: {etapa} (codigo {r.returncode}: {_cauda_erro(r.stderr, 1)}), tentativa {t} de "
                   f"{len(esperas) + 1}. Espero {esperas[t - 1] // 60 or 1} min e repito.", flush=True)
