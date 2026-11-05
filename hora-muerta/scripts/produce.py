@@ -190,7 +190,7 @@ def main():
         if not leg and a.subir:
             agora = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
             fila = sorted(c for c, v in ja.items() if (v.get("publishAt") or "") > agora)
-            msg = f"NAO SUBIU {cod}: LEGENDA FORA DA VOZ depois de {volta} conserto(s)"
+            msg = f"NAO SUBIU {cod}: LEGENDA FORA DA VOZ ou CHIADO NO FIM depois de {volta} conserto(s)"
             if fila:  # ainda ha video agendado: nada sai do ar; workflow verde, aviso na issue (rodar_canal.py)
                 print(f"{msg}. Fila ainda tem {len(fila)} agendado(s) ({', '.join(fila)}): nada sai do ar; "
                       f"a proxima execucao tenta de novo", flush=True)
@@ -223,6 +223,15 @@ def revisar(base, idioma):
             prob = mix.conferir_audio(base + ".mp4")
             print("AUDIO OK" if not prob else "AUDIO COM PROBLEMA: " + "; ".join(prob), flush=True)
             ok &= not prob
+    # TRAVA DO FIM (05/11): chiado/estrondo no ultimo segundo do MP4 final NAO SOBE (motor-en/checar_fim.py)
+    import checar_fim
+    try:
+        fim = checar_fim.conferir(base + ".mp4")
+    except Exception as e:
+        fim = {"ok": False, "motivo": f"nao consegui medir: {str(e)[:150]}"}
+    print(("FIM DO VIDEO OK " if fim["ok"] else "CHIADO NO FIM DO VIDEO ") + json.dumps(fim, ensure_ascii=False), flush=True)
+    if not fim["ok"]:
+        leg = ok = False
     return leg, ok
 
 

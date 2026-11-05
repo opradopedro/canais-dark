@@ -18,6 +18,7 @@ MOTOR = os.path.join(os.path.dirname(AQUI), "hora-muerta", "scripts")
 sys.path.insert(0, MOTOR); sys.path.insert(0, AQUI)
 from comum import carregar, resolver  # noqa: E402
 import sons  # noqa: E402
+import mix as mix_motor  # noqa: E402  (fim limpo e piano do motor)
 
 SR = 44100
 
@@ -121,14 +122,18 @@ def main(historia, voz, tempos, saida):
         f = min(int(0.3 * SR), len(s) // 3)
         if f > 0:
             s[-f:] *= np.linspace(1, 0, f)
+        s = s * (0.9 if nome in ("golpe", "golpe_metal") else 0.6)
+        if mix_motor.efeito_no_fim(e["t"], dur):  # susto no fim pode; chiado nao (05/11): so grave, volume da voz
+            s = mix_motor.efeito_final(s, v, SR)
+            print(f"fim sem chiado: efeito '{nome}' em {e['t']:.2f}s so no grave e no volume da voz")
         i0 = int(e["t"] * SR); j = min(n, i0 + len(s))
         if i0 < n:
-            mix[i0:j] += s[:j - i0] * (0.9 if nome in ("golpe", "golpe_metal") else 0.6)
+            mix[i0:j] += s[:j - i0]
 
-    mix = mix[:int(dur * SR)]
+    mix = mix_motor.fim_limpo(mix[:int(dur * SR)], dur, SR)
     wt = os.path.join(tmp, "m.wav"); sf.write(wt, mix, SR)
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", wt, "-af",
-                    f"loudnorm=I=-15:TP=-1.5,afade=t=out:st={max(0, dur - 1):.2f}:d=1", "-ar", str(SR),
+                    f"loudnorm=I=-15:TP=-1.5,afade=t=out:st={max(0, dur - 0.6):.2f}:d=0.45", "-ar", str(SR),
                     "-c:a", "aac", "-b:a", "160k", saida], check=True)
     print("ok", saida)
 

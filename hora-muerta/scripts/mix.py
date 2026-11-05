@@ -152,6 +152,47 @@ SONS = {"golpe": lambda e: golpe(), "vibra": lambda e: vibra(e.get("dur") or 1.6
         "toc": lambda e: toc()}
 
 
+# FIM SEM CHIADO (Pedro, 05/11: "chiado alto e estridente no ultimo segundo", pedido ~15 vezes). A causa era o efeito
+# "susto" (ruido + boom + apito de 1,8-2,2 kHz, 1,1 s) marcado no FIM da ultima frase: so sobram 1,2 s depois dela,
+# entao ele tocava no ultimo segundo, mais alto que a voz. O SUSTO NO FIM PODE FICAR (Pedro: susto no fim de terror e
+# bom, o que nunca pode e o chiado): efeito nos ultimos ZONA_FIM segundos vira so o estrondo grave, sem ruido nem
+# apito (passa-baixa), nunca mais alto que a voz, e some antes do fim. O motor-en/checar_fim.py confere no MP4 final.
+ZONA_FIM = 2.6
+CORTE_AGUDO = 700.0  # Hz: acima disso e chiado/apito
+
+
+def efeito_no_fim(t, dur):
+    return t > dur - ZONA_FIM
+
+
+def efeito_final(s, voz, sr=SR):
+    """Susto do fim sem chiado: so o grave (passa-baixa suave em CORTE_AGUDO) e pico de 100 ms no maximo igual ao da
+    fala (voz = audio da narracao ja tratado)."""
+    s = np.asarray(s, np.float64)
+    if not len(s):
+        return s.astype(np.float32)
+    L = 1 << int(np.ceil(np.log2(len(s))))
+    f = np.fft.rfftfreq(L, 1 / sr)
+    ganho = 1 / (1 + (f / CORTE_AGUDO) ** 8)  # passa-baixa de 4a ordem (Butterworth em modulo)
+    s = np.fft.irfft(np.fft.rfft(s, L) * ganho, L)[:len(s)]
+    q = int(0.1 * sr)
+    def pico(x):
+        n = len(x) // q
+        return float(np.sqrt((x[:n * q].reshape(n, q) ** 2).mean(axis=1)).max()) if n else float(np.sqrt((x ** 2).mean()))
+    alvo = pico(np.asarray(voz, np.float64)) * 0.9
+    atual = pico(s)
+    if atual > alvo > 0:
+        s *= alvo / atual
+    return s.astype(np.float32)
+
+
+def fim_limpo(mix, dur, sr=SR):
+    """Ultimos 0,6 s descem ate zero; o ultimo 0,15 s e silencio (o estrondo do susto final ainda soa antes)."""
+    t = np.arange(len(mix)) / sr
+    a, b = dur - 0.6, dur - 0.15
+    return (mix * np.clip((b - t) / max(0.1, b - a), 0, 1)).astype(np.float32)
+
+
 def main(historia, voz, tempos, saida):
     h = carregar(historia); tm = json.load(open(tempos)); r = resolver(h, tm)
     dur = tm["dur"]; n = int(dur * SR)
@@ -178,11 +219,15 @@ def main(historia, voz, tempos, saida):
     for e in eventos:
         if e["tipo"] in SONS:
             s = SONS[e["tipo"]](e).astype(np.float32); i = int(e["t"] * SR)
+            if efeito_no_fim(e["t"], dur):
+                s = efeito_final(s, v)
+                print(f"fim sem chiado: efeito '{e['tipo']}' em {e['t']:.2f}s so no grave e no volume da voz")
             j = min(len(mix), i + len(s)); mix[i:j] += s[:j - i]
-    mix = mix[:n]
+    mix = fim_limpo(mix[:n], dur)
     wt = os.path.join(tmp, "m.wav"); sf.write(wt, mix, SR)
+    # o loudnorm dinamico sobe o ganho no silencio do fim; o fade depois dele zera o final de novo
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", wt, "-af",
-                    f"loudnorm=I=-15:TP=-1.5,afade=t=out:st={max(0, dur - 1):.2f}:d=1", "-ar", str(SR),
+                    f"loudnorm=I=-15:TP=-1.5,afade=t=out:st={max(0, dur - 0.6):.2f}:d=0.45", "-ar", str(SR),
                     "-c:a", "aac", "-b:a", "160k", saida], check=True)
     print("ok", saida)
 

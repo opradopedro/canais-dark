@@ -316,6 +316,15 @@ def revisar(base, idioma):
         prob = mix.conferir_audio(base + ".mp4")
         print("AUDIO OK" if not prob else "AUDIO COM PROBLEMA: " + "; ".join(prob), flush=True)
         ok &= not prob
+    # TRAVA DO FIM (05/11): chiado/estrondo no ultimo segundo do MP4 final NAO SOBE (motor-en/checar_fim.py)
+    import checar_fim
+    try:
+        fim = checar_fim.conferir(base + ".mp4")
+    except Exception as e:
+        fim = {"ok": False, "motivo": f"nao consegui medir: {str(e)[:150]}"}
+    print(("FIM DO VIDEO OK " if fim["ok"] else "CHIADO NO FIM DO VIDEO ") + json.dumps(fim, ensure_ascii=False), flush=True)
+    if not fim["ok"]:
+        leg = ok = False
     return leg, ok
 
 
@@ -346,7 +355,7 @@ def sair_barrado(cod, voltas, ja, motivo=None):
     sai com erro (workflow vermelho = um horario ficou mesmo vazio)."""
     agora = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     fila = sorted(k for k, v in ja.items() if (v.get("publishAt") or "") > agora)
-    msg = f"NAO SUBIU {cod}: " + (motivo or f"LEGENDA FORA DA VOZ depois de {voltas} conserto(s)")
+    msg = f"NAO SUBIU {cod}: " + (motivo or f"LEGENDA FORA DA VOZ ou CHIADO NO FIM depois de {voltas} conserto(s)")
     if fila:
         print(f"{msg}. Fila ainda tem {len(fila)} agendado(s) ({', '.join(fila)}): nada sai do ar; "
               f"a proxima execucao tenta de novo", flush=True)
