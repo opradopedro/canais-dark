@@ -12,6 +12,9 @@ GEMINI_TTS_VOICE (padrao Algenib, voz grave e rouca).
 Kokoro (reserva, gratis e local): sherpa-onnx + kokoro-multi-lang-v1_0, voz em_alex (sid 29) em espanhol.
 O modelo e baixado do GitHub releases para ~/.cache/hora-muerta na primeira vez (KOKORO_DIR muda o lugar).
 """
+import os as _os, sys as _sys
+_sys.path.append(_os.path.join(_os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))), "motor-en"))
+import estatica as _estatica  # noqa: E402
 import argparse, base64, difflib, json, os, re, subprocess, sys, tarfile, time, unicodedata, urllib.error, urllib.request
 import numpy as np
 import soundfile as sf
@@ -412,6 +415,7 @@ def main():
                 else:
                     audio = gemini(linhas, os.environ["GEMINI_API_KEY"])
                     sf.write(bruto, audio, SR)
+                audio = _estatica.limpar_bordas(audio, SR)  # chiado de TV que o Gemini cola no comeco/fim (05/11)
                 corte = tags_faladas(audio, linhas)  # narracao com "Whispering, slow, deep voice..." no comeco: corta fora
                 if corte:
                     audio = audio[int(corte * SR):]

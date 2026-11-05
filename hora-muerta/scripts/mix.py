@@ -44,10 +44,10 @@ def vibra(dur):
 
 def susto():
     n = int(1.1 * SR); t = np.arange(n) / SR
-    ruido = np.cumsum(rng.normal(0, 1, n)); ruido = ruido - np.convolve(ruido, np.ones(200) / 200, "same"); ruido /= np.abs(ruido).max()
+    # SEM ruido nem apito (Pedro, 05/11: "estatica de TV" em nenhum video): so o estrondo grave e um baque
     boom = np.sin(2 * np.pi * (45 - 15 * t) * t) * env(n, 0.003, 0.4)
-    agudo = sum(np.sin(2 * np.pi * f * t) for f in (1830, 1940, 2210)) / 3 * env(n, 0.01, 0.25) * 0.25
-    return (ruido * env(n, 0.002, 0.3) * 0.6 + boom * 0.9 + agudo)
+    baque = np.sin(2 * np.pi * (90 - 40 * t) * t) * env(n, 0.002, 0.06)
+    return boom * 0.9 + baque * 0.4
 
 
 def silbido(dur):
@@ -75,8 +75,8 @@ def apagon(dur):
 
 def apaga():
     n = int(0.5 * SR)
-    r = np.cumsum(rng.normal(0, 1, n)); r /= np.abs(r).max()
-    return (r - r.mean()) * env(n, 0.05, 0.15) * 0.3
+    t = np.arange(n) / SR  # sem ruido (estatica): um "tum" grave que some
+    return np.sin(2 * np.pi * (70 - 30 * t) * t) * env(n, 0.01, 0.15) * 0.3
 
 
 def cadenas(dur):
@@ -152,45 +152,34 @@ SONS = {"golpe": lambda e: golpe(), "vibra": lambda e: vibra(e.get("dur") or 1.6
         "toc": lambda e: toc()}
 
 
-# FIM SEM CHIADO (Pedro, 05/11: "chiado alto e estridente no ultimo segundo", pedido ~15 vezes). A causa era o efeito
-# "susto" (ruido + boom + apito de 1,8-2,2 kHz, 1,1 s) marcado no FIM da ultima frase: so sobram 1,2 s depois dela,
-# entao ele tocava no ultimo segundo, mais alto que a voz. O SUSTO NO FIM PODE FICAR (Pedro: susto no fim de terror e
-# bom, o que nunca pode e o chiado): efeito nos ultimos ZONA_FIM segundos vira so o estrondo grave, sem ruido nem
-# apito (passa-baixa), nunca mais alto que a voz, e some antes do fim. O motor-en/checar_fim.py confere no MP4 final.
+# FIM EM SILENCIO (Pedro, 05/11, depois de ~15 pedidos): "nada de som, nenhum estrondo, nenhum barulho depois que acaba".
+# Causas achadas: (1) o efeito "susto" (com ruido de estatica e apito) marcado no fim da ultima frase tocava no ultimo
+# segundo; (2) o Gemini cola um estalo de estatica de TV no fim da gravacao, e o tts.py do Hora Muerta nunca cortava
+# (agora motor-en/estatica.py corta). Aqui: nenhum efeito toca depois que a narracao acaba (a imagem do susto fica) e
+# TUDO (musica, ambiente) some em 0,15 s logo depois da ultima palavra. O motor-en/checar_fim.py confere no MP4 final.
 ZONA_FIM = 2.6
-CORTE_AGUDO = 700.0  # Hz: acima disso e chiado/apito
 
 
 def efeito_no_fim(t, dur):
     return t > dur - ZONA_FIM
 
 
-def efeito_final(s, voz, sr=SR):
-    """Susto do fim sem chiado: so o grave (passa-baixa suave em CORTE_AGUDO) e pico de 100 ms no maximo igual ao da
-    fala (voz = audio da narracao ja tratado)."""
-    s = np.asarray(s, np.float64)
-    if not len(s):
-        return s.astype(np.float32)
-    L = 1 << int(np.ceil(np.log2(len(s))))
-    f = np.fft.rfftfreq(L, 1 / sr)
-    ganho = 1 / (1 + (f / CORTE_AGUDO) ** 8)  # passa-baixa de 4a ordem (Butterworth em modulo)
-    s = np.fft.irfft(np.fft.rfft(s, L) * ganho, L)[:len(s)]
-    q = int(0.1 * sr)
-    def pico(x):
-        n = len(x) // q
-        return float(np.sqrt((x[:n * q].reshape(n, q) ** 2).mean(axis=1)).max()) if n else float(np.sqrt((x ** 2).mean()))
-    alvo = pico(np.asarray(voz, np.float64)) * 0.9
-    atual = pico(s)
-    if atual > alvo > 0:
-        s *= alvo / atual
-    return s.astype(np.float32)
+def fim_da_voz(v, sr=SR, limiar=0.01):
+    """Segundo em que a narracao acaba (ultimo trecho de 20 ms acima de -40 dB)."""
+    q = int(0.02 * sr); n = len(v) // q
+    if not n:
+        return len(v) / sr
+    rms = np.sqrt((np.asarray(v[:n * q], np.float64).reshape(n, q) ** 2).mean(axis=1))
+    on = np.where(rms > limiar)[0]
+    return (on[-1] + 1) * q / sr if len(on) else len(v) / sr
 
 
-def fim_limpo(mix, dur, sr=SR):
-    """Ultimos 0,6 s descem ate zero; o ultimo 0,15 s e silencio (o estrondo do susto final ainda soa antes)."""
+def fim_limpo(mix, dur, sr=SR, fim_voz=None):
+    """Depois da ultima palavra (fim_voz) tudo desce a zero em 0,15 s; sem fim_voz, usa dur - 1,2 s. Silencio ate o fim."""
     t = np.arange(len(mix)) / sr
-    a, b = dur - 0.6, dur - 0.15
-    return (mix * np.clip((b - t) / max(0.1, b - a), 0, 1)).astype(np.float32)
+    a = (fim_voz if fim_voz is not None else dur - 1.2) + 0.05
+    b = a + 0.15
+    return (mix * np.clip((b - t) / (b - a), 0, 1)).astype(np.float32)
 
 
 def main(historia, voz, tempos, saida):
@@ -220,14 +209,15 @@ def main(historia, voz, tempos, saida):
         if e["tipo"] in SONS:
             s = SONS[e["tipo"]](e).astype(np.float32); i = int(e["t"] * SR)
             if efeito_no_fim(e["t"], dur):
-                s = efeito_final(s, v)
-                print(f"fim sem chiado: efeito '{e['tipo']}' em {e['t']:.2f}s so no grave e no volume da voz")
+                print(f"fim em silencio: efeito '{e['tipo']}' em {e['t']:.2f}s sem som (a imagem fica)")
+                continue
             j = min(len(mix), i + len(s)); mix[i:j] += s[:j - i]
-    mix = fim_limpo(mix[:n], dur)
+    fv = fim_da_voz(v)
+    mix = fim_limpo(mix[:n], dur, fim_voz=fv)
     wt = os.path.join(tmp, "m.wav"); sf.write(wt, mix, SR)
     # o loudnorm dinamico sobe o ganho no silencio do fim; o fade depois dele zera o final de novo
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", wt, "-af",
-                    f"loudnorm=I=-15:TP=-1.5,afade=t=out:st={max(0, dur - 0.6):.2f}:d=0.45", "-ar", str(SR),
+                    f"loudnorm=I=-15:TP=-1.5,afade=t=out:st={fv + 0.05:.2f}:d=0.15", "-ar", str(SR),
                     "-c:a", "aac", "-b:a", "160k", saida], check=True)
     print("ok", saida)
 
