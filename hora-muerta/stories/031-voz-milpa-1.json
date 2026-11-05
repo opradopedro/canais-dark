@@ -34,11 +34,27 @@
    "pausa": 0.6
   },
   {
+   "texto": "Vive con su hijo Tomás, de ocho años, junto a la milpa de su papá.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Su papá le dejó tres reglas para la cosecha.",
    "pausa": 0.6
   },
   {
+   "texto": "Su papá decía: en cosecha, el maíz escucha.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Cierra la ventana, no salgas a la milpa, y no contestes.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Rosa nunca entendió por qué, hasta esta noche.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Hubo viento, y el maíz sonaba como gente hablando bajito.",
    "pausa": 0.6
   },
   {
@@ -50,7 +66,19 @@
    "pausa": 0.8
   },
   {
+   "texto": "Rosa se levanta descalza, ya tiene la mano en la puerta.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Pero algo la detiene, la tercera regla.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Rosa corre al cuarto. Tomás está dormido en su cama.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Respira tranquilo, abrazado a su almohada.",
    "pausa": 0.6
   },
   {
@@ -97,6 +125,11 @@
   },
   {
    "linea": 2,
+   "comp": "f_cuarto",
+   "p": {}
+  },
+  {
+   "linea": 3,
    "comp": "f_cocina",
    "p": {
     "porta": 0,
@@ -108,7 +141,26 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 4,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "el maíz escucha",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#b97a52",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "coque",
+     "roupa": "#7a4a8a",
+     "detalhe": "#f0a43a",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 5,
    "comp": "retrato",
    "p": {
     "cartao": {
@@ -132,7 +184,38 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#b97a52",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "coque",
+     "roupa": "#7a4a8a",
+     "detalhe": "#f0a43a",
+     "olhar": 1
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_milpa",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "1:58",
+     "ampm": "AM",
+     "lugar": "Rancho El Mezquite"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "viento",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 8,
    "comp": "f_milpa",
    "p": {
     "mueve": 0.3,
@@ -145,7 +228,7 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 9,
    "comp": "f_milpa",
    "p": {
     "mueve": 0.6,
@@ -158,7 +241,39 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 10,
+   "comp": "f_milpa",
+   "p": {
+    "mueve": 0.3,
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "2:10",
+     "ampm": "AM",
+     "lugar": "La milpa"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "la mano en la puerta",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#b97a52",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "coque",
+     "roupa": "#7a4a8a",
+     "detalhe": "#f0a43a",
+     "olhar": 1
+    }
+   }
+  },
+  {
+   "linea": 12,
    "comp": "f_cuarto",
    "p": {
     "cartao": {
@@ -169,14 +284,19 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 13,
+   "comp": "f_cuarto",
+   "p": {}
+  },
+  {
+   "linea": 14,
    "comp": "f_milpa",
    "p": {
     "mueve": 1
    }
   },
   {
-   "linea": 8,
+   "linea": 15,
    "comp": "texto",
    "p": {
     "hud": false,
@@ -190,12 +310,12 @@
  "eventos": [
   {
    "tipo": "golpe",
-   "linea": 4,
+   "linea": 8,
    "en": 0.3
   },
   {
    "tipo": "susto",
-   "linea": 7,
+   "linea": 14,
    "en": "fin",
    "mas": 0.05
   }
@@ -211,7 +331,7 @@
   "se ríe"
  ],
  "gancho": {
-  "cena": 7,
+  "cena": 14,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8

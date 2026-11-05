@@ -33,6 +33,10 @@
    "pausa": 0.7
   },
   {
+   "texto": "Lupita colgó y apagó el celular, le temblaban las manos.",
+   "pausa": 0.6
+  },
+  {
    "texto": "La voz volvió a hablar, pero ya no en el teléfono.",
    "pausa": 0.6
   },
@@ -41,20 +45,48 @@
    "pausa": 0.6
   },
   {
+   "texto": "Lupita fue a la cocina, sin prender la luz.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Por debajo de la puerta se veía una sombra, de pie, quieta.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Lupe, ya sé que no soy ella, ábreme.",
    "pausa": 0.8
+  },
+  {
+   "texto": "La voz ya no era de abuela, era grave y lenta.",
+   "pausa": 0.6
   },
   {
    "texto": "La perilla empezó a girar sola, y Lupita rezó en voz alta.",
    "pausa": 0.7
   },
   {
+   "texto": "Rezó lo que la abuela le enseñó, una y otra vez.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Cada vez que rezaba, la perilla se detenía un poco.",
+   "pausa": 0.6
+  },
+  {
    "texto": "A las seis salió el sol, y la puerta seguía cerrada.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "En el patio había huellas, pero ninguna venía de la calle.",
    "pausa": 0.6
   },
   {
    "texto": "Pero en el celular había un mensaje nuevo: mañana sí me abres.",
    "pausa": 1.0
+  },
+  {
+   "texto": "Y tú, ¿le habrías abierto?",
+   "pausa": 0.6
   }
  ],
  "cenas": [
@@ -108,6 +140,15 @@
   },
   {
    "linea": 3,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "celular",
+    "quien": "Abuelita",
+    "texto": "llamada terminada"
+   }
+  },
+  {
+   "linea": 4,
    "comp": "f_cocina",
    "p": {
     "porta": 0,
@@ -122,7 +163,42 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 5,
+   "comp": "f_cocina",
+   "p": {
+    "porta": 0,
+    "foco": [
+     0.85,
+     0.65
+    ],
+    "escala": [
+     1.4,
+     1.8
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_cocina",
+   "p": {
+    "porta": 0,
+    "foco": [
+     0.85,
+     0.65
+    ],
+    "escala": [
+     1.4,
+     1.8
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "una sombra",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 7,
    "comp": "f_cocina",
    "p": {
     "porta": 0,
@@ -135,7 +211,32 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 8,
+   "comp": "retrato",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:06",
+     "ampm": "AM",
+     "lugar": "Casa de la abuela"
+    },
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "longo",
+     "roupa": "#5a7fa8",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "otra voz",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 9,
    "comp": "f_cocina",
    "p": {
     "porta": [
@@ -156,7 +257,32 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 10,
+   "comp": "f_cocina",
+   "p": {
+    "porta": [
+     0,
+     0.08
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_cocina",
+   "p": {
+    "porta": [
+     0,
+     0.08
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "la perilla se detiene",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 12,
    "comp": "f_pueblo",
    "p": {
     "hud": {
@@ -171,7 +297,27 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 13,
+   "comp": "f_pueblo",
+   "p": {
+    "hud": {
+     "dia": "Día 2",
+     "hora": "6:00",
+     "ampm": "AM",
+     "lugar": "Casa de la abuela"
+    },
+    "amanecer": 1,
+    "casa": "apagada",
+    "porta": 0,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "huellas",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 14,
    "comp": "f_telefono",
    "p": {
     "tipo": "celular",
@@ -183,12 +329,12 @@
  "eventos": [
   {
    "tipo": "golpe",
-   "linea": 5,
+   "linea": 9,
    "en": 0.4
   },
   {
    "tipo": "susto",
-   "linea": 7,
+   "linea": 14,
    "en": "fin",
    "mas": 0.05
   }
@@ -204,7 +350,7 @@
   "mañana"
  ],
  "gancho": {
-  "cena": 7,
+  "cena": 14,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8

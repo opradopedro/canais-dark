@@ -35,7 +35,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "La leyenda dice que si volteas, no sales del puente.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Daniel no volteó. Siguió caminando, contando sus pasos.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Sentía una respiración en la nuca, que olía a tierra.",
    "pausa": 0.6
   },
   {
@@ -43,11 +51,27 @@
    "pausa": 0.8
   },
   {
+   "texto": "Paso ochenta, paso ochenta y cinco, ya veía a sus primos.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Al salir del puente, la mano se soltó.",
    "pausa": 0.6
   },
   {
+   "texto": "Daniel cayó de rodillas en la tierra, llorando.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Sus primos lo abrazaron, blancos como el papel.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Le dieron el dinero, y nadie habló en el camino a casa.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Esa noche, uno de ellos revisó el video que grabó con el celular.",
    "pausa": 0.6
   },
   {
@@ -56,6 +80,10 @@
   },
   {
    "texto": "Una máscara de conejo, pegada a su espalda, sonreía.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Y en el último segundo, la máscara volteaba a la cámara.",
    "pausa": 0.6
   }
  ],
@@ -86,6 +114,17 @@
   },
   {
    "linea": 2,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "BUNNY MAN",
+     "Virginia, EE. UU."
+    ]
+   }
+  },
+  {
+   "linea": 3,
    "comp": "retrato",
    "p": {
     "cartao": {
@@ -110,7 +149,24 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 4,
+   "comp": "f_puente",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "12:03",
+     "ampm": "AM",
+     "lugar": "El puente viejo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "una respiración",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 5,
    "comp": "f_contagem",
    "p": {
     "de": 1,
@@ -119,7 +175,16 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 6,
+   "comp": "f_contagem",
+   "p": {
+    "de": 1,
+    "ate": 88,
+    "rotulo": "pasos"
+   }
+  },
+  {
+   "linea": 7,
    "comp": "f_puente",
    "p": {
     "hud": {
@@ -131,14 +196,47 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 8,
+   "comp": "f_puente",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "12:03",
+     "ampm": "AM",
+     "lugar": "El puente viejo"
+    }
+   }
+  },
+  {
+   "linea": 9,
    "comp": "f_carretera",
    "p": {
     "veiculo": "camioneta"
    }
   },
   {
-   "linea": 6,
+   "linea": 10,
+   "comp": "f_carretera",
+   "p": {
+    "veiculo": "camioneta"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "celular",
+    "texto": "REC 0:41",
+    "rotulo": "el video",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "el video",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 12,
    "comp": "f_objeto",
    "p": {
     "obj": "celular",
@@ -147,7 +245,7 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 13,
    "comp": "retrato",
    "p": {
     "zoomRosto": [
@@ -168,6 +266,24 @@
      "expressao": "medo"
     }
    }
+  },
+  {
+   "linea": 14,
+   "comp": "retrato",
+   "p": {
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#241810",
+     "cabeloTipo": "curto",
+     "roupa": "#3a6a3a",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    }
+   }
   }
  ],
  "eventos": [
@@ -178,7 +294,7 @@
   },
   {
    "tipo": "susto",
-   "linea": 7,
+   "linea": 13,
    "en": "fin",
    "mas": 0.05
   }
@@ -194,7 +310,7 @@
   "sonreía"
  ],
  "gancho": {
-  "cena": 7,
+  "cena": 13,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8

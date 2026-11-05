@@ -34,7 +34,19 @@
    "pausa": 0.6
   },
   {
+   "texto": "Lleva treinta años en la misma panadería, la de su abuelo.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Amasa a las tres, hornea a las cuatro, abre a las seis.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Siempre solo, siempre en silencio, con la radio apagada, así le gusta.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Esa madrugada hacía frío, y el horno tardó en calentar.",
    "pausa": 0.6
   },
   {
@@ -42,12 +54,28 @@
    "pausa": 0.6
   },
   {
+   "texto": "Las cuenta, como cada mañana desde hace treinta años, una por una.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Cuarenta y una. Él contó cuarenta, dos veces.",
    "pausa": 0.8
   },
   {
+   "texto": "Las vuelve a contar, despacio, con el dedo, y otra vez cuarenta y una.",
+   "pausa": 0.6
+  },
+  {
    "texto": "La de más está fría, y tiene una mordida.",
    "pausa": 0.8
+  },
+  {
+   "texto": "Las demás queman, esa parece de ayer.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "La puerta está cerrada con llave, y él tiene la única.",
+   "pausa": 0.6
   },
   {
    "texto": "Atrás, entre los costales, alguien mastica despacio.",
@@ -96,6 +124,23 @@
    "linea": 2,
    "comp": "f_panaderia",
    "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "4:20",
+     "ampm": "AM",
+     "lugar": "Panadería La Espiga"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "30 años",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_panaderia",
+   "p": {
     "cartao": {
      "tipo": "lista",
      "titulo": "SU RUTINA",
@@ -110,7 +155,29 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 4,
+   "comp": "f_panaderia",
+   "p": {}
+  },
+  {
+   "linea": 5,
+   "comp": "f_panaderia",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "4:20",
+     "ampm": "AM",
+     "lugar": "Panadería La Espiga"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "hace frío",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 6,
    "comp": "f_panaderia",
    "p": {
     "cartao": {
@@ -121,7 +188,12 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 7,
+   "comp": "f_panaderia",
+   "p": {}
+  },
+  {
+   "linea": 8,
    "comp": "f_contagem",
    "p": {
     "de": 40,
@@ -130,7 +202,16 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 9,
+   "comp": "f_contagem",
+   "p": {
+    "de": 40,
+    "ate": 41,
+    "rotulo": "conchas"
+   }
+  },
+  {
+   "linea": 10,
    "comp": "f_objeto",
    "p": {
     "obj": "pao",
@@ -138,7 +219,32 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 11,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "pao",
+    "rotulo": "fría y mordida"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "f_panaderia",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "4:20",
+     "ampm": "AM",
+     "lugar": "Panadería La Espiga"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "cerrado con llave",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 13,
    "comp": "retrato",
    "p": {
     "zoomRosto": [
@@ -157,7 +263,7 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 14,
    "comp": "texto",
    "p": {
     "hud": false,
@@ -171,12 +277,12 @@
  "eventos": [
   {
    "tipo": "golpe",
-   "linea": 4,
+   "linea": 8,
    "en": 0.4
   },
   {
    "tipo": "susto",
-   "linea": 6,
+   "linea": 13,
    "en": "fin",
    "mas": 0.05
   }
@@ -191,7 +297,7 @@
   "mastica"
  ],
  "gancho": {
-  "cena": 6,
+  "cena": 13,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8

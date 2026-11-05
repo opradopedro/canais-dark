@@ -82,3 +82,5 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 - Personagem: Daniel, 17 (roupa verde); os primos. Peças: `f_puente`, `f_carretera`, `f_contagem`, `f_objeto`, `retrato`, `texto`.
 - HM035 parte 1/2: aposta (cruzar sozinho, sem lanterna, sem olhar para trás); 12:00 entra na ponte; passos curtinhos atrás; os primos param de rir e gritam "não vire!"; uma mão peluda toca o ombro dele. FEITO
 - HM036 parte 2/2: atrás havia um homem com máscara de coelho (Bunny Man, Virgínia); Daniel não vira e conta 88 passos com a mão no ombro; a mão solta na saída; no vídeo dos primos ele não cruzava sozinho: a máscara grudada nas costas sorria. FEITO
+
+> 05/11/2026: HM025-HM036 (ainda nao publicados) alongados para 1min30-2min por parte (REGRA do Pedro, ROTEIROS.md "Duracao"); susto das partes 2 agora fica na penultima frase.

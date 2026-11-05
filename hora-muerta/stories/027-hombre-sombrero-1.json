@@ -29,7 +29,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "Lo encontró colgado el día que se mudó, y lo dejó ahí.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Andrés, treinta y un años, vigilante nocturno, vive solo.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Duerme de día, trabaja de noche, y casi nunca sueña.",
    "pausa": 0.6
   },
   {
@@ -37,8 +45,20 @@
    "pausa": 0.6
   },
   {
+   "texto": "Antes de dormir, vio el sombrero en el perchero. Negro, viejo, de ala ancha.",
+   "pausa": 0.6
+  },
+  {
    "texto": "A las tres y treinta y tres despertó, y no pudo moverse.",
    "pausa": 0.7
+  },
+  {
+   "texto": "Sus ojos se abrían, pero el cuerpo no le hacía caso.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Quiso gritar, pero solo le salió aire.",
+   "pausa": 0.6
   },
   {
    "texto": "En la puerta había un hombre alto, con sombrero de ala ancha.",
@@ -47,6 +67,14 @@
   {
    "texto": "No tenía cara, solo sombra.",
    "pausa": 0.7
+  },
+  {
+   "texto": "No se movía, solo lo miraba desde la puerta.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "El cuarto estaba helado, como un refrigerador abierto.",
+   "pausa": 0.6
   },
   {
    "texto": "Y en el perchero, el sombrero ya no estaba.",
@@ -77,6 +105,18 @@
   },
   {
    "linea": 1,
+   "comp": "f_sala",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "11:40",
+     "ampm": "PM",
+     "lugar": "Casa de Andrés"
+    }
+   }
+  },
+  {
+   "linea": 2,
    "comp": "retrato",
    "p": {
     "pessoa": {
@@ -98,12 +138,50 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#b97a50",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "corBarba": "#1e130c",
+     "roupa": "#3a4a5a",
+     "detalhe": "#efe4cc",
+     "expressao": "neutro"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "vigilante nocturno",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 4,
    "comp": "f_cuarto",
    "p": {}
   },
   {
-   "linea": 3,
+   "linea": 5,
+   "comp": "f_sala",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "11:40",
+     "ampm": "PM",
+     "lugar": "Casa de Andrés"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "el sombrero",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 6,
    "comp": "retrato",
    "p": {
     "hud": {
@@ -130,7 +208,56 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:33",
+     "ampm": "AM",
+     "lugar": "Su cuarto"
+    },
+    "pessoa": {
+     "pele": "#b97a50",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "corBarba": "#1e130c",
+     "roupa": "#3a4a5a",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "retrato",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:33",
+     "ampm": "AM",
+     "lugar": "Su cuarto"
+    },
+    "pessoa": {
+     "pele": "#b97a50",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "corBarba": "#1e130c",
+     "roupa": "#3a4a5a",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "no puede gritar",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 9,
    "comp": "f_cuarto",
    "p": {
     "sombra": true,
@@ -145,7 +272,7 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 10,
    "comp": "f_cuarto",
    "p": {
     "sombra": true,
@@ -153,7 +280,47 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 11,
+   "comp": "f_cuarto",
+   "p": {
+    "sombra": true,
+    "foco": [
+     0.88,
+     0.6
+    ],
+    "escala": [
+     1.3,
+     1.6
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "solo mira",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "f_cuarto",
+   "p": {
+    "sombra": true,
+    "foco": [
+     0.88,
+     0.6
+    ],
+    "escala": [
+     1.3,
+     1.6
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "helado",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 13,
    "comp": "f_sala",
    "p": {
     "cartao": {
@@ -165,7 +332,7 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 14,
    "comp": "texto",
    "p": {
     "hud": false,
@@ -179,12 +346,12 @@
  "eventos": [
   {
    "tipo": "golpe",
-   "linea": 4,
+   "linea": 9,
    "en": 0.3
   },
   {
    "tipo": "susto",
-   "linea": 6,
+   "linea": 13,
    "en": "fin",
    "mas": 0.05
   }
@@ -200,7 +367,7 @@
   "hombre"
  ],
  "gancho": {
-  "cena": 6,
+  "cena": 13,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8

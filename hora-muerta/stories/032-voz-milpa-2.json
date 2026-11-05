@@ -35,7 +35,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "Aprende la voz que más quieres, y la usa para que salgas.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Rosa cierra la ventana y abraza a Tomás.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Tomás no despierta, respira tranquilo contra su pecho, como si nada.",
    "pausa": 0.6
   },
   {
@@ -47,7 +55,19 @@
    "pausa": 0.8
   },
   {
+   "texto": "Le canta, bajito, la canción con la que la dormía de niña.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Su papá murió hace dos años, en esa misma milpa.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Nunca encontraron su cuerpo, solo su sombrero entre el maíz.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Rosa reza con los ojos cerrados hasta el amanecer, tapándole los oídos a Tomás.",
    "pausa": 0.6
   },
   {
@@ -55,7 +75,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "Y entre el maíz, un camino nuevo, hasta la ventana de Tomás.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Y Tomás, dormido, murmura: ya voy, abuelo.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Esa misma tarde, Rosa quemó la milpa entera, y no lloró.",
    "pausa": 0.6
   }
  ],
@@ -94,6 +122,25 @@
   },
   {
    "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "la voz que más quieres",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#b97a52",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "coque",
+     "roupa": "#7a4a8a",
+     "detalhe": "#f0a43a",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 3,
    "comp": "f_cuarto",
    "p": {
     "cartao": {
@@ -110,7 +157,12 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 4,
+   "comp": "f_cuarto",
+   "p": {}
+  },
+  {
+   "linea": 5,
    "comp": "retrato",
    "p": {
     "zoomRosto": [
@@ -128,7 +180,7 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 6,
    "comp": "f_cocina",
    "p": {
     "porta": 0,
@@ -141,7 +193,19 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 7,
+   "comp": "f_cocina",
+   "p": {
+    "porta": 0,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "la canción de cuna",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 8,
    "comp": "f_altar",
    "p": {
     "foto": true,
@@ -158,7 +222,28 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 9,
+   "comp": "f_altar",
+   "p": {
+    "foto": true,
+    "vela_apaga": [
+     0,
+     1
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "solo su sombrero",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_cuarto",
+   "p": {}
+  },
+  {
+   "linea": 11,
    "comp": "f_milpa",
    "p": {
     "hud": {
@@ -175,7 +260,24 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 12,
+   "comp": "f_milpa",
+   "p": {
+    "hud": {
+     "dia": "Día 2",
+     "hora": "6:00",
+     "ampm": "AM",
+     "lugar": "La milpa"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "un camino nuevo",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 13,
    "comp": "f_cuarto",
    "p": {
     "sombra": 1,
@@ -186,17 +288,29 @@
      "y": 0.2
     }
    }
+  },
+  {
+   "linea": 14,
+   "comp": "f_milpa",
+   "p": {
+    "hud": {
+     "dia": "Día 2",
+     "hora": "6:00",
+     "ampm": "AM",
+     "lugar": "La milpa"
+    }
+   }
   }
  ],
  "eventos": [
   {
    "tipo": "golpe",
-   "linea": 3,
+   "linea": 5,
    "en": 0.5
   },
   {
    "tipo": "susto",
-   "linea": 7,
+   "linea": 13,
    "en": "fin",
    "mas": 0.05
   }
@@ -212,7 +326,7 @@
   "abuelo"
  ],
  "gancho": {
-  "cena": 7,
+  "cena": 13,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8

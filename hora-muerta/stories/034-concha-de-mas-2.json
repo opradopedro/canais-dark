@@ -31,11 +31,23 @@
    "pausa": 0.6
   },
   {
+   "texto": "Tenía el pelo largo, y los pies llenos de tierra.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Pidió pan con voz de vieja.",
    "pausa": 0.8
   },
   {
+   "texto": "Don Efraín se quedó quieto, con el rodillo en la mano.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Su abuelo decía: a quien llega con hambre de madrugada, se le da.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Nunca le contó a nadie esa regla, le daba vergüenza.",
    "pausa": 0.6
   },
   {
@@ -43,16 +55,36 @@
    "pausa": 0.6
   },
   {
+   "texto": "La niña no masticaba, tragaba.",
+   "pausa": 0.6
+  },
+  {
    "texto": "La niña comió cuarenta conchas en un minuto.",
    "pausa": 0.8
+  },
+  {
+   "texto": "Al terminar, se limpió la boca y le dio las gracias, con voz de hombre.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Luego salió por la puerta cerrada, sin abrirla.",
+   "pausa": 0.6
   },
   {
    "texto": "A las seis, el pueblo encontró la panadería sin pan.",
    "pausa": 0.6
   },
   {
+   "texto": "Don Efraín no supo qué decir, y solo abrió la caja.",
+   "pausa": 0.6
+  },
+  {
    "texto": "En el mostrador, cuarenta monedas de plata, de mil novecientos diez.",
    "pausa": 0.8
+  },
+  {
+   "texto": "El año en que empezó la Revolución, y hubo hambre.",
+   "pausa": 0.6
   },
   {
    "texto": "Desde entonces hornea una de más, y alguien siempre se la come.",
@@ -76,6 +108,20 @@
    "linea": 1,
    "comp": "retrato",
    "p": {
+    "pessoa": {
+     "pele": "#d9c2a8",
+     "cabelo": "#2a2a2a",
+     "cabeloTipo": "longo",
+     "roupa": "#8a8a7a",
+     "detalhe": "#5a5a50",
+     "expressao": "triste"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
     "cartao": {
      "tipo": "msg",
      "titulo": "LA NIÑA",
@@ -93,7 +139,18 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "f_panaderia",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "el rodillo",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 4,
    "comp": "retrato",
    "p": {
     "cartao": {
@@ -113,12 +170,32 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 5,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#a8714a",
+     "cabelo": "#bdbdbd",
+     "cabeloTipo": "curto",
+     "bigode": true,
+     "roupa": "#f2efe6",
+     "detalhe": "#c0392b",
+     "olhar": 1
+    }
+   }
+  },
+  {
+   "linea": 6,
    "comp": "f_panaderia",
    "p": {}
   },
   {
-   "linea": 4,
+   "linea": 7,
+   "comp": "f_panaderia",
+   "p": {}
+  },
+  {
+   "linea": 8,
    "comp": "f_contagem",
    "p": {
     "de": 40,
@@ -127,7 +204,37 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 9,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "voz de hombre",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#d9c2a8",
+     "cabelo": "#2a2a2a",
+     "cabeloTipo": "longo",
+     "roupa": "#8a8a7a",
+     "detalhe": "#5a5a50",
+     "expressao": "triste"
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_panaderia",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "la puerta cerrada",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 11,
    "comp": "f_pueblo",
    "p": {
     "amanecer": 1,
@@ -140,7 +247,20 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 12,
+   "comp": "f_pueblo",
+   "p": {
+    "amanecer": 1,
+    "hud": {
+     "dia": "Día 2",
+     "hora": "6:00",
+     "ampm": "AM",
+     "lugar": "Panadería La Espiga"
+    }
+   }
+  },
+  {
+   "linea": 13,
    "comp": "f_objeto",
    "p": {
     "obj": "moedas",
@@ -148,7 +268,20 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 14,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "moedas",
+    "rotulo": "40 monedas · 1910",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "1910",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 15,
    "comp": "retrato",
    "p": {
     "zoomRosto": [
@@ -169,12 +302,12 @@
  "eventos": [
   {
    "tipo": "golpe",
-   "linea": 1,
+   "linea": 2,
    "en": 0.4
   },
   {
    "tipo": "susto",
-   "linea": 4,
+   "linea": 8,
    "en": "fin",
    "mas": 0.05
   }
@@ -190,7 +323,7 @@
   "una de más"
  ],
  "gancho": {
-  "cena": 4,
+  "cena": 8,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8

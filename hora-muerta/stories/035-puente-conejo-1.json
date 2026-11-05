@@ -34,7 +34,23 @@
    "pausa": 0.6
   },
   {
+   "texto": "Era la fiesta del pueblo, y los primos ya habían tomado.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Cruzar solo, sin linterna, y no mirar atrás.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Si cruzaba, le daban quinientos pesos, si no, sería el miedoso de la familia.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Todos conocen ese puente, y nadie lo cruza de noche.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Dicen que algo vive debajo, desde hace muchos años.",
    "pausa": 0.6
   },
   {
@@ -42,8 +58,20 @@
    "pausa": 0.6
   },
   {
+   "texto": "El río suena abajo, la madera cruje con cada paso.",
+   "pausa": 0.6
+  },
+  {
    "texto": "A la mitad, escucha pasos detrás. Pasos cortos, como saltitos.",
    "pausa": 0.8
+  },
+  {
+   "texto": "Daniel se detiene en seco, y los pasos detrás también.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Da un paso más, y detrás de él, un saltito.",
+   "pausa": 0.6
   },
   {
    "texto": "Del otro lado, sus primos dejan de reír.",
@@ -97,6 +125,13 @@
   },
   {
    "linea": 2,
+   "comp": "f_carretera",
+   "p": {
+    "veiculo": "camioneta"
+   }
+  },
+  {
+   "linea": 3,
    "comp": "retrato",
    "p": {
     "cartao": {
@@ -120,7 +155,55 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 4,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "500 pesos",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#241810",
+     "cabeloTipo": "curto",
+     "roupa": "#3a6a3a",
+     "detalhe": "#efe4cc",
+     "olhar": 1
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_puente",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "11:58",
+     "ampm": "PM",
+     "lugar": "El puente viejo"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_puente",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "11:58",
+     "ampm": "PM",
+     "lugar": "El puente viejo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "algo vive debajo",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 7,
    "comp": "f_puente",
    "p": {
     "figura": true,
@@ -133,7 +216,20 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 8,
+   "comp": "f_puente",
+   "p": {
+    "figura": true,
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "12:00",
+     "ampm": "AM",
+     "lugar": "El puente viejo"
+    }
+   }
+  },
+  {
+   "linea": 9,
    "comp": "f_puente",
    "p": {
     "figura": true,
@@ -145,7 +241,26 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 10,
+   "comp": "f_puente",
+   "p": {
+    "figura": true
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_puente",
+   "p": {
+    "figura": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "un saltito",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 12,
    "comp": "f_carretera",
    "p": {
     "veiculo": "camioneta",
@@ -157,7 +272,7 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 13,
    "comp": "f_carretera",
    "p": {
     "veiculo": "camioneta",
@@ -170,7 +285,7 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 14,
    "comp": "retrato",
    "p": {
     "zoomRosto": [
@@ -188,7 +303,7 @@
    }
   },
   {
-   "linea": 8,
+   "linea": 15,
    "comp": "texto",
    "p": {
     "hud": false,
@@ -202,12 +317,12 @@
  "eventos": [
   {
    "tipo": "golpe",
-   "linea": 4,
+   "linea": 9,
    "en": 0.5
   },
   {
    "tipo": "susto",
-   "linea": 7,
+   "linea": 14,
    "en": "fin",
    "mas": 0.05
   }
@@ -223,7 +338,7 @@
   "mano peluda"
  ],
  "gancho": {
-  "cena": 7,
+  "cena": 14,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8

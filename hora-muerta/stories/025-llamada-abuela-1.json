@@ -32,15 +32,39 @@
    "pausa": 0.6
   },
   {
+   "texto": "Se mudó ahí después del funeral, para no venderla.",
+   "pausa": 0.6
+  },
+  {
    "texto": "La abuela le dejó tres consejos: reza, cierra el patio, y no contestes de madrugada.",
    "pausa": 0.7
+  },
+  {
+   "texto": "Lupita nunca supo por qué, la abuela solo decía: tú hazme caso.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Esa noche, Lupita llegó tarde del hospital, muy cansada.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Dejó el celular en el buró, y se durmió con la tele prendida.",
+   "pausa": 0.6
   },
   {
    "texto": "A las tres y cuatro, el celular vibra.",
    "pausa": 0.6
   },
   {
+   "texto": "Una vez, dos veces, tres veces.",
+   "pausa": 0.6
+  },
+  {
    "texto": "En la pantalla dice: Abuelita.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Lupita nunca borró ese contacto, no pudo.",
    "pausa": 0.6
   },
   {
@@ -49,6 +73,14 @@
   },
   {
    "texto": "Lupita contesta, y escucha su voz, igualita.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Le habla de su perro de niña, y de los tamales de diciembre.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Lupita llora, quiere creer que es ella.",
    "pausa": 0.6
   },
   {
@@ -98,6 +130,25 @@
   },
   {
    "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "longo",
+     "roupa": "#5a7fa8",
+     "detalhe": "#efe4cc",
+     "expressao": "sorriso"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "la casa de la abuela",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 3,
    "comp": "f_cocina",
    "p": {
     "porta": 0,
@@ -115,7 +166,15 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 4,
+   "comp": "f_cocina",
+   "p": {
+    "porta": 0,
+    "abuela": false
+   }
+  },
+  {
+   "linea": 5,
    "comp": "f_cuarto",
    "p": {
     "hud": {
@@ -127,7 +186,36 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 6,
+   "comp": "f_cuarto",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:04",
+     "ampm": "AM",
+     "lugar": "Su cuarto"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "3:00 · dormida",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_cuarto",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:04",
+     "ampm": "AM",
+     "lugar": "Su cuarto"
+    }
+   }
+  },
+  {
+   "linea": 9,
    "comp": "f_telefono",
    "p": {
     "tipo": "celular",
@@ -136,7 +224,26 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 10,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "longo",
+     "roupa": "#5a7fa8",
+     "detalhe": "#efe4cc",
+     "expressao": "surpresa"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Abuelita",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 11,
    "comp": "retrato",
    "p": {
     "pessoa": {
@@ -155,7 +262,7 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 12,
    "comp": "retrato",
    "p": {
     "pessoa": {
@@ -173,7 +280,48 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 13,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "longo",
+     "roupa": "#5a7fa8",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    },
+    "zoomRosto": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#1e130c",
+     "cabeloTipo": "longo",
+     "roupa": "#5a7fa8",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    },
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "quiere creer",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 15,
    "comp": "f_cocina",
    "p": {
     "porta": [
@@ -189,7 +337,7 @@
    }
   },
   {
-   "linea": 8,
+   "linea": 16,
    "comp": "texto",
    "p": {
     "hud": false,
@@ -203,12 +351,12 @@
  "eventos": [
   {
    "tipo": "golpe",
-   "linea": 4,
+   "linea": 9,
    "en": 0.2
   },
   {
    "tipo": "susto",
-   "linea": 7,
+   "linea": 15,
    "en": "fin",
    "mas": 0.05
   }
@@ -225,7 +373,7 @@
   "afuera"
  ],
  "gancho": {
-  "cena": 7,
+  "cena": 14,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8
