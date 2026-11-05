@@ -147,6 +147,7 @@ def subir(path):
     if v.get("miniatura"):
         try:
             miniatura(token, resp["id"], v["miniatura"])
+            resp["capa_ok"] = True
         except urllib.error.HTTPError as e:
             print("miniatura falhou (o video subiu):", e.code, e.read().decode()[:300], file=sys.stderr)
     st = resp.get("status", {})
