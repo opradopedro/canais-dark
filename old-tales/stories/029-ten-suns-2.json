@@ -31,7 +31,19 @@
    "pausa": 0.6
   },
   {
+   "texto": "Arrow after arrow, the sky got cooler, and the rivers came back.",
+   "pausa": 0.6
+  },
+  {
    "texto": "He left one, so the world would still have light.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Some say the emperor took his last arrow, just in case.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then Hou Yi went after the monsters, one by one.",
    "pausa": 0.6
   },
   {
@@ -39,7 +51,19 @@
    "pausa": 0.6
   },
   {
+   "texto": "She was kind, and clever, and people loved them both.",
+   "pausa": 0.6
+  },
+  {
    "texto": "The Queen Mother of the West gave him a gift.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "She lived on Mount Kunlun, at the edge of the world.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Her peaches took three thousand years to ripen.",
    "pausa": 0.6
   },
   {
@@ -47,11 +71,27 @@
    "pausa": 0.6
   },
   {
+   "texto": "Drink it, and you rise to Heaven, never to grow old.",
+   "pausa": 0.6
+  },
+  {
    "texto": "But only enough for one person.",
    "pausa": 0.6
   },
   {
+   "texto": "One drink. One immortal. The other stays behind, and dies one day.",
+   "pausa": 0.6
+  },
+  {
    "texto": "He didn't want forever without her, so he hid it.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "In a box, at the back of their house.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He told only one person where it was: his wife.",
    "pausa": 0.6
   },
   {
@@ -78,6 +118,27 @@
   },
   {
    "linea": 1,
+   "comp": "f_dez_sois",
+   "p": {
+    "flechas": [
+     0.2,
+     1
+    ],
+    "hud": {
+     "dia": "The first age",
+     "hora": "Noon",
+     "lugar": "the mountain",
+     "ceu": "dia"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the rivers return",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 2,
    "comp": "f_ceu",
    "p": {
     "tipo": "dia",
@@ -89,7 +150,40 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "f_ceu",
+   "p": {
+    "tipo": "dia",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the last arrow",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_dez_sois",
+   "p": {
+    "flechas": [
+     0.2,
+     1
+    ],
+    "hud": {
+     "dia": "The first age",
+     "hora": "Noon",
+     "lugar": "the mountain",
+     "ceu": "dia"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the monsters",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 5,
    "comp": "retrato",
    "p": {
     "cartao": {
@@ -109,7 +203,21 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#f0d4bc",
+     "cabelo": "#14100c",
+     "cabeloTipo": "longo",
+     "roupa": "#c8d8ec",
+     "detalhe": "#e0b040",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 7,
    "comp": "f_templo_china",
    "p": {
     "cartao": {
@@ -120,7 +228,29 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 8,
+   "comp": "f_templo_china",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Mount Kunlun",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_templo_china",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "3,000 years",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 10,
    "comp": "f_objeto",
    "p": {
     "obj": "cabaca",
@@ -129,7 +259,16 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 11,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "cabaca",
+    "brilho": 1,
+    "rotulo": "the elixir"
+   }
+  },
+  {
+   "linea": 12,
    "comp": "f_contagem",
    "p": {
     "de": 2,
@@ -138,7 +277,16 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 13,
+   "comp": "f_contagem",
+   "p": {
+    "de": 2,
+    "ate": 1,
+    "rotulo": "only enough for"
+   }
+  },
+  {
+   "linea": 14,
    "comp": "retrato",
    "p": {
     "cartao": {
@@ -157,7 +305,45 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 15,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "in a box",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#14100c",
+     "cabeloTipo": "coque",
+     "barba": true,
+     "roupa": "#8a3a2a",
+     "detalhe": "#e0b040"
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "only his wife",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#14100c",
+     "cabeloTipo": "coque",
+     "barba": true,
+     "roupa": "#8a3a2a",
+     "detalhe": "#e0b040"
+    }
+   }
+  },
+  {
+   "linea": 17,
    "comp": "texto",
    "p": {
     "hud": false,

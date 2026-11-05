@@ -32,7 +32,23 @@
    "pausa": 0.6
   },
   {
+   "texto": "Not even the Monkey King could escape Death.",
+   "pausa": 0.6
+  },
+  {
    "texto": "So he crossed the sea, looking for a master.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "On a raft he built himself, alone, for years.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He wore human clothes, and learned human speech.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At last, deep in a mountain, he found a master's cave.",
    "pausa": 0.6
   },
   {
@@ -40,7 +56,19 @@
    "pausa": 0.6
   },
   {
+   "texto": "Sun, for monkey. Wukong, awakened to emptiness.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At night, the master taught him secrets no one else heard.",
+   "pausa": 0.6
+  },
+  {
    "texto": "He learned seventy-two transformations, and the cloud somersault.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He could become a tree, a bird, a stone, anyone.",
    "pausa": 0.6
   },
   {
@@ -48,12 +76,28 @@
    "pausa": 0.7
   },
   {
+   "texto": "That's more than fifty thousand kilometers, in one jump.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "But he showed off his tricks, and the master sent him away.",
+   "pausa": 0.6
+  },
+  {
    "texto": "For a weapon, he visited the Dragon King of the Eastern Sea.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Every weapon in the palace was too light for him.",
    "pausa": 0.6
   },
   {
    "texto": "He took an iron pillar that could shrink into a needle.",
    "pausa": 0.7
+  },
+  {
+   "texto": "It weighed thirteen thousand five hundred jin. About eight tons.",
+   "pausa": 0.6
   },
   {
    "texto": "Soon, Heaven itself would know his name. Part three, {when_next}.",
@@ -75,7 +119,7 @@
    }
   },
   {
-   "linea": 1,
+   "linea": 2,
    "comp": "f_rio_china",
    "p": {
     "cartao": {
@@ -86,7 +130,38 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "f_rio_china",
+   "p": {}
+  },
+  {
+   "linea": 4,
+   "comp": "f_rio_china",
+   "p": {}
+  },
+  {
+   "linea": 5,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#e9e4d6",
+     "barba": true,
+     "corBarba": "#e9e4d6",
+     "cabeloTipo": "coque",
+     "roupa": "#3fa88b",
+     "detalhe": "#f4c542",
+     "expressao": "sorriso"
+    },
+    "cartao2": {
+     "tipo": "rotulo",
+     "titulo": "Sun Wukong",
+     "y": 0.3
+    }
+   }
+  },
+  {
+   "linea": 6,
    "comp": "retrato",
    "p": {
     "pessoa": {
@@ -113,7 +188,59 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#e9e4d6",
+     "barba": true,
+     "corBarba": "#e9e4d6",
+     "cabeloTipo": "coque",
+     "roupa": "#3fa88b",
+     "detalhe": "#f4c542",
+     "expressao": "sorriso"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Sun Wukong",
+     "y": 0.14
+    },
+    "cartao2": {
+     "tipo": "rotulo",
+     "titulo": "Sun Wukong",
+     "y": 0.3
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#e9e4d6",
+     "barba": true,
+     "corBarba": "#e9e4d6",
+     "cabeloTipo": "coque",
+     "roupa": "#3fa88b",
+     "detalhe": "#f4c542",
+     "expressao": "sorriso"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "secret lessons",
+     "y": 0.14
+    },
+    "cartao2": {
+     "tipo": "rotulo",
+     "titulo": "Sun Wukong",
+     "y": 0.3
+    }
+   }
+  },
+  {
+   "linea": 9,
    "comp": "f_contagem",
    "p": {
     "de": 0,
@@ -122,7 +249,16 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 10,
+   "comp": "f_contagem",
+   "p": {
+    "de": 0,
+    "ate": 72,
+    "rotulo": "transformations"
+   }
+  },
+  {
+   "linea": 11,
    "comp": "f_contagem",
    "p": {
     "de": 0,
@@ -131,7 +267,47 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 12,
+   "comp": "f_contagem",
+   "p": {
+    "de": 0,
+    "ate": 108000,
+    "rotulo": "li in one jump",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "50,000 km",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0ad86",
+     "cabelo": "#e9e4d6",
+     "barba": true,
+     "corBarba": "#e9e4d6",
+     "cabeloTipo": "coque",
+     "roupa": "#3fa88b",
+     "detalhe": "#f4c542",
+     "expressao": "sorriso"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "sent away",
+     "y": 0.14
+    },
+    "cartao2": {
+     "tipo": "rotulo",
+     "titulo": "Sun Wukong",
+     "y": 0.3
+    }
+   }
+  },
+  {
+   "linea": 14,
    "comp": "f_palacio_dragao",
    "p": {
     "hud": {
@@ -145,7 +321,21 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 15,
+   "comp": "f_palacio_dragao",
+   "p": {
+    "hud": {
+     "dia": "Chapter 3",
+     "hora": "Deep sea",
+     "lugar": "Dragon Palace",
+     "ceu": "noite"
+    },
+    "pilar": 0.3,
+    "dragao": true
+   }
+  },
+  {
+   "linea": 16,
    "comp": "f_palacio_dragao",
    "p": {
     "pilar": [
@@ -161,7 +351,23 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 17,
+   "comp": "f_palacio_dragao",
+   "p": {
+    "pilar": [
+     0.2,
+     1
+    ],
+    "dragao": false,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "about 8 tons",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 18,
    "comp": "texto",
    "p": {
     "hud": false,

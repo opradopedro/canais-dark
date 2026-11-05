@@ -32,7 +32,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "Heaven wanted the rebel monkey close.",
+   "pausa": 0.6
+  },
+  {
    "texto": "He found out it was the lowest post, and stormed off.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He named himself Great Sage, Equal of Heaven.",
    "pausa": 0.6
   },
   {
@@ -40,7 +48,23 @@
    "pausa": 0.6
   },
   {
+   "texto": "Each peach could make a god live for thousands of years.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then he ate Lord Lao Tzu's magic pills too.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Heaven's armies could not stop him.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "They threw him into a furnace for forty-nine days.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He came out stronger, with eyes of fire.",
    "pausa": 0.6
   },
   {
@@ -48,7 +72,23 @@
    "pausa": 0.6
   },
   {
+   "texto": "If you win, you get Heaven. If not, you go back down.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He laughed. One somersault would do it.",
+   "pausa": 0.6
+  },
+  {
    "texto": "He flew to five pillars at the end of the world, and wrote his name.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then, to mark the spot, he peed on one of them.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He flew back. The Buddha showed him his palm. It smelled of monkey.",
    "pausa": 0.6
   },
   {
@@ -81,7 +121,7 @@
    }
   },
   {
-   "linea": 1,
+   "linea": 2,
    "comp": "f_ceu_jade",
    "p": {
     "caos": [
@@ -92,7 +132,26 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "f_ceu_jade",
+   "p": {
+    "hud": {
+     "dia": "Chapter 4",
+     "hora": "Day",
+     "lugar": "Heaven",
+     "ceu": "dia"
+    },
+    "caos": 0,
+    "portao": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Great Sage, Equal of Heaven",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 4,
    "comp": "f_pomar_pessegos",
    "p": {
     "come": true,
@@ -100,7 +159,36 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 5,
+   "comp": "f_pomar_pessegos",
+   "p": {
+    "come": true,
+    "guardas": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "thousands of years",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_ceu_jade",
+   "p": {
+    "caos": [
+     0,
+     0.5
+    ],
+    "portao": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the pills",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 7,
    "comp": "f_ceu_jade",
    "p": {
     "caos": 1,
@@ -108,7 +196,33 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 8,
+   "comp": "f_ceu_jade",
+   "p": {
+    "caos": 1,
+    "portao": false,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "49 days in the furnace",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_ceu_jade",
+   "p": {
+    "caos": 1,
+    "portao": false,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "eyes of fire",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 10,
    "comp": "f_palma_buda",
    "p": {
     "hud": {
@@ -122,7 +236,40 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 11,
+   "comp": "f_palma_buda",
+   "p": {
+    "hud": {
+     "dia": "Chapter 7",
+     "hora": "Day",
+     "lugar": "The West",
+     "ceu": "dia"
+    },
+    "voa": true,
+    "fecha": 0,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the bet",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "f_palma_buda",
+   "p": {
+    "hud": {
+     "dia": "Chapter 7",
+     "hora": "Day",
+     "lugar": "The West",
+     "ceu": "dia"
+    },
+    "voa": true,
+    "fecha": 0
+   }
+  },
+  {
+   "linea": 13,
    "comp": "f_palma_buda",
    "p": {
     "voa": true,
@@ -138,7 +285,39 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 14,
+   "comp": "f_palma_buda",
+   "p": {
+    "voa": true,
+    "fecha": 0.2,
+    "foco": [
+     0.5,
+     0.3
+    ],
+    "escala": [
+     1.2,
+     1.4
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "f_palma_buda",
+   "p": {
+    "voa": false,
+    "fecha": [
+     0.2,
+     1
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "it smelled of monkey",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 16,
    "comp": "f_palma_buda",
    "p": {
     "voa": false,
@@ -149,7 +328,7 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 17,
    "comp": "f_montanha_preso",
    "p": {
     "estacao": "inverno",

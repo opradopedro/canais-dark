@@ -31,7 +31,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "For ages, it soaked up the light of the sun and the moon.",
+   "pausa": 0.6
+  },
+  {
    "texto": "One day it cracked, and a monkey made of stone stepped out.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He learned to walk and climb in a single day.",
    "pausa": 0.6
   },
   {
@@ -39,11 +47,27 @@
    "pausa": 0.7
   },
   {
+   "texto": "The Jade Emperor saw it, and said: nothing strange.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "So the stone monkey ate grass, drank from streams, and played.",
+   "pausa": 0.6
+  },
+  {
    "texto": "The monkeys found a waterfall, and made a deal.",
    "pausa": 0.5
   },
   {
+   "texto": "Where does this water come from? Who will go and look?",
+   "pausa": 0.6
+  },
+  {
    "texto": "Whoever jumps through and comes back, becomes our king.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Nobody moved. The water roared down the rocks.",
    "pausa": 0.6
   },
   {
@@ -51,8 +75,20 @@
    "pausa": 0.6
   },
   {
+   "texto": "Behind the water, he found an iron bridge, and a dry cave.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Stone beds, stone bowls, room for every monkey.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Behind the water was a cave, and he became the Monkey King.",
    "pausa": 0.7
+  },
+  {
+   "texto": "For hundreds of years, he ruled, and feasted, and played.",
+   "pausa": 0.6
   },
   {
    "texto": "Years later, at a feast, he began to cry. Why? Part two, {when_next}.",
@@ -80,6 +116,22 @@
    "linea": 1,
    "comp": "f_montanha_flores",
    "p": {
+    "hud": {
+     "dia": "Chapter 1",
+     "hora": "Dawn",
+     "lugar": "Flower-Fruit Mountain",
+     "ceu": "aurora"
+    },
+    "pedra": true,
+    "racha": 0,
+    "macacos": 0,
+    "petalas": true
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_montanha_flores",
+   "p": {
     "pedra": true,
     "racha": [
      0,
@@ -97,7 +149,27 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "f_montanha_flores",
+   "p": {
+    "pedra": true,
+    "racha": [
+     0,
+     1
+    ],
+    "macacos": 0,
+    "foco": [
+     0.5,
+     0.5
+    ],
+    "escala": [
+     1.2,
+     1.5
+    ]
+   }
+  },
+  {
+   "linea": 4,
    "comp": "f_ceu_jade",
    "p": {
     "caos": 0,
@@ -110,7 +182,20 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 5,
+   "comp": "f_ceu_jade",
+   "p": {
+    "caos": 0,
+    "portao": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the Jade Emperor",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 7,
    "comp": "f_montanha_flores",
    "p": {
     "pedra": false,
@@ -118,7 +203,15 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 8,
+   "comp": "f_montanha_flores",
+   "p": {
+    "pedra": false,
+    "macacos": 5
+   }
+  },
+  {
+   "linea": 9,
    "comp": "f_regras",
    "p": {
     "titulo": "THE DEAL",
@@ -130,7 +223,7 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 10,
    "comp": "f_cachoeira",
    "p": {
     "atravessa": true,
@@ -138,7 +231,36 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 11,
+   "comp": "f_cachoeira",
+   "p": {
+    "atravessa": true,
+    "trono": false
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "f_cachoeira",
+   "p": {
+    "atravessa": false,
+    "trono": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Water Curtain Cave",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "f_cachoeira",
+   "p": {
+    "atravessa": false,
+    "trono": true
+   }
+  },
+  {
+   "linea": 14,
    "comp": "f_cachoeira",
    "p": {
     "atravessa": false,
@@ -152,7 +274,20 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 15,
+   "comp": "f_cachoeira",
+   "p": {
+    "atravessa": false,
+    "trono": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "hundreds of years",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 16,
    "comp": "texto",
    "p": {
     "hud": false,

@@ -32,7 +32,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "The men of the table vote on you, in secret.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Each man drops soft bread into a bowl.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A round ball means yes.",
    "pausa": 0.6
   },
   {
@@ -40,7 +48,15 @@
    "pausa": 0.7
   },
   {
+   "texto": "Because men who eat together must trust each other in battle.",
+   "pausa": 0.6
+  },
+  {
    "texto": "You're in. Every month, you bring barley, wine, cheese and figs.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "If you can't pay your share, you lose your place, and your rank.",
    "pausa": 0.6
   },
   {
@@ -48,12 +64,36 @@
    "pausa": 0.7
   },
   {
+   "texto": "A foreign king once tasted it, and hated it.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A Spartan would answer: you need the exercise to enjoy it.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "After dinner, you walk home in the dark, with no torch.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "That way, you learn to move at night without fear.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Then comes war. Your mother hands you your shield.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "She does not say goodbye. She says something else.",
    "pausa": 0.6
   },
   {
    "texto": "Come back with it, or on it.",
    "pausa": 0.9
+  },
+  {
+   "texto": "You serve until sixty. Your whole life belongs to the city.",
+   "pausa": 0.6
   },
   {
    "texto": "Could you have lasted in Sparta?",
@@ -79,10 +119,21 @@
   {
    "linea": 1,
    "comp": "f_syssitia",
-   "p": {}
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "a secret vote",
+     "y": 0.14
+    }
+   }
   },
   {
    "linea": 2,
+   "comp": "f_syssitia",
+   "p": {}
+  },
+  {
+   "linea": 3,
    "comp": "f_regras",
    "p": {
     "titulo": "THE VOTE",
@@ -94,7 +145,30 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 4,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "THE VOTE",
+    "itens": [
+     "Round ball: yes",
+     "Flat ball: no",
+     "One no: you're out"
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_syssitia",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "trust in battle",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 6,
    "comp": "f_syssitia",
    "p": {
     "cartao": {
@@ -110,7 +184,7 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 8,
    "comp": "f_syssitia",
    "p": {
     "caldo": true,
@@ -122,7 +196,37 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 8,
+   "comp": "f_syssitia",
+   "p": {
+    "caldo": true
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_syssitia",
+   "p": {
+    "caldo": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "you need the exercise",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_syssitia",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "no torch",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 13,
    "comp": "retrato",
    "p": {
     "pessoa": {
@@ -142,7 +246,21 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 14,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#2a1a10",
+     "cabeloTipo": "coque",
+     "roupa": "#e9e4d6",
+     "detalhe": "#9a2d22",
+     "expressao": "neutro"
+    }
+   }
+  },
+  {
+   "linea": 15,
    "comp": "f_falange",
    "p": {
     "avanca": [
@@ -157,7 +275,22 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 16,
+   "comp": "f_falange",
+   "p": {
+    "avanca": [
+     0,
+     0.6
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "until 60",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 17,
    "comp": "texto",
    "p": {
     "hud": false,

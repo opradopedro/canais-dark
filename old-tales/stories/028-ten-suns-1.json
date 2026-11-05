@@ -30,7 +30,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "They were the sons of the sun goddess, Xihe.",
+   "pausa": 0.6
+  },
+  {
    "texto": "They lived in a giant tree in the east, and took turns.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Each morning, their mother bathed one, and sent him across the sky.",
    "pausa": 0.6
   },
   {
@@ -38,7 +46,19 @@
    "pausa": 0.6
   },
   {
+   "texto": "Maybe they were bored. Maybe they wanted to play together.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Rivers dried. Crops burned. The earth cracked open.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Monsters came out of the hills, hungry and wild.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "People hid in caves, and prayed for night.",
    "pausa": 0.6
   },
   {
@@ -46,11 +66,31 @@
    "pausa": 0.6
   },
   {
+   "texto": "His arrows never missed. He had a red bow, and white arrows.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "First, he only tried to scare them. They burned brighter.",
+   "pausa": 0.6
+  },
+  {
    "texto": "He climbed a mountain, and drew his bow.",
    "pausa": 0.6
   },
   {
+   "texto": "The air shimmered. His hands were hot on the string.",
+   "pausa": 0.6
+  },
+  {
    "texto": "One arrow. One sun fell from the sky.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Where it fell, there was only a golden crow, with three legs.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The other suns went quiet.",
    "pausa": 0.6
   },
   {
@@ -74,6 +114,24 @@
   },
   {
    "linea": 1,
+   "comp": "f_dez_sois",
+   "p": {
+    "flechas": 0,
+    "hud": {
+     "dia": "The first age",
+     "hora": "Noon",
+     "lugar": "the earth",
+     "ceu": "dia"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Xihe, their mother",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 2,
    "comp": "f_ceu",
    "p": {
     "tipo": "dez_sois",
@@ -85,14 +143,28 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "f_ceu",
+   "p": {
+    "tipo": "dez_sois"
+   }
+  },
+  {
+   "linea": 4,
    "comp": "f_dez_sois",
    "p": {
     "flechas": 0
    }
   },
   {
-   "linea": 3,
+   "linea": 5,
+   "comp": "f_dez_sois",
+   "p": {
+    "flechas": 0
+   }
+  },
+  {
+   "linea": 6,
    "comp": "f_dez_sois",
    "p": {
     "flechas": 0,
@@ -109,7 +181,26 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 7,
+   "comp": "f_dez_sois",
+   "p": {
+    "flechas": 0
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_dez_sois",
+   "p": {
+    "flechas": 0,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "hiding in caves",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 9,
    "comp": "retrato",
    "p": {
     "cartao": {
@@ -129,7 +220,45 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 10,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "a red bow",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#14100c",
+     "cabeloTipo": "coque",
+     "barba": true,
+     "roupa": "#8a3a2a",
+     "detalhe": "#e0b040"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "they ignored him",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#14100c",
+     "cabeloTipo": "coque",
+     "barba": true,
+     "roupa": "#8a3a2a",
+     "detalhe": "#e0b040"
+    }
+   }
+  },
+  {
+   "linea": 12,
    "comp": "f_dez_sois",
    "p": {
     "flechas": [
@@ -139,7 +268,17 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 13,
+   "comp": "f_dez_sois",
+   "p": {
+    "flechas": [
+     0,
+     0.1
+    ]
+   }
+  },
+  {
+   "linea": 14,
    "comp": "f_dez_sois",
    "p": {
     "flechas": [
@@ -154,7 +293,32 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 15,
+   "comp": "f_dez_sois",
+   "p": {
+    "flechas": [
+     0.1,
+     0.2
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "a three-legged crow",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "f_dez_sois",
+   "p": {
+    "flechas": [
+     0,
+     0.1
+    ]
+   }
+  },
+  {
+   "linea": 17,
    "comp": "texto",
    "p": {
     "hud": false,

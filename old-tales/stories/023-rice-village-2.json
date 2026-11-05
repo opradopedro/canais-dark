@@ -32,7 +32,19 @@
    "pausa": 0.6
   },
   {
+   "texto": "At night, you saw him carry sacks to a man from the town.",
+   "pausa": 0.6
+  },
+  {
    "texto": "If the lord finds out, your five families pay.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Whipping, fines, maybe land taken. For all of you.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Telling the headman would save you. But he's your neighbor.",
    "pausa": 0.6
   },
   {
@@ -40,7 +52,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "Next spring, he helps you fix your roof. He never says why.",
+   "pausa": 0.6
+  },
+  {
    "texto": "In June, the whole village plants together, one field at a time.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Rice planting can't wait. The seedlings must go in on time.",
    "pausa": 0.6
   },
   {
@@ -48,11 +68,27 @@
    "pausa": 0.6
   },
   {
+   "texto": "Women plant, men carry seedlings, children chase off the birds.",
+   "pausa": 0.6
+  },
+  {
    "texto": "The water is shared. You never open your channel first.",
    "pausa": 0.6
   },
   {
+   "texto": "Water flows from field to field, in a fixed order.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A fight over water can split a village for generations.",
+   "pausa": 0.6
+  },
+  {
    "texto": "And you don't eat your rice. You eat millet and barley.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "White rice is for festivals, and for the sick.",
    "pausa": 0.6
   },
   {
@@ -91,6 +127,31 @@
    "linea": 1,
    "comp": "retrato",
    "p": {
+    "hud": {
+     "dia": "Spring",
+     "hora": "Night",
+     "lugar": "your village",
+     "ceu": "noite"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "a man from the town",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#c9946a",
+     "cabelo": "#1a1410",
+     "cabeloTipo": "curto",
+     "roupa": "#6a4a3a",
+     "detalhe": "#e6d6b0",
+     "expressao": "triste"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
     "cartao": {
      "tipo": "rotulo",
      "titulo": "five families pay",
@@ -107,7 +168,40 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#1a1410",
+     "cabeloTipo": "coque",
+     "roupa": "#4a5a7a",
+     "detalhe": "#e6d6b0",
+     "expressao": "bravo"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "tell the headman?",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#1a1410",
+     "cabeloTipo": "coque",
+     "roupa": "#4a5a7a",
+     "detalhe": "#e6d6b0",
+     "expressao": "bravo"
+    }
+   }
+  },
+  {
+   "linea": 5,
    "comp": "f_vila_japao",
    "p": {
     "hud": {
@@ -119,7 +213,19 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 6,
+   "comp": "f_vila_japao",
+   "p": {
+    "hud": {
+     "dia": "Spring",
+     "hora": "Morning",
+     "lugar": "your village",
+     "ceu": "dia"
+    }
+   }
+  },
+  {
+   "linea": 7,
    "comp": "f_arrozal",
    "p": {
     "hud": {
@@ -136,14 +242,38 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 8,
+   "comp": "f_arrozal",
+   "p": {
+    "hud": {
+     "dia": "June",
+     "hora": "Morning",
+     "lugar": "the paddies",
+     "ceu": "dia"
+    }
+   }
+  },
+  {
+   "linea": 9,
    "comp": "f_arrozal",
    "p": {
     "chuva": true
    }
   },
   {
-   "linea": 5,
+   "linea": 10,
+   "comp": "f_arrozal",
+   "p": {
+    "chuva": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "everyone works",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 11,
    "comp": "f_arrozal",
    "p": {
     "cartao": {
@@ -159,7 +289,24 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 12,
+   "comp": "f_arrozal",
+   "p": {}
+  },
+  {
+   "linea": 13,
+   "comp": "f_arrozal",
+   "p": {
+    "chuva": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "a fight over water",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 14,
    "comp": "f_objeto",
    "p": {
     "obj": "tigela_arroz",
@@ -167,7 +314,15 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 15,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "tigela_arroz",
+    "rotulo": "millet and barley"
+   }
+  },
+  {
+   "linea": 16,
    "comp": "texto",
    "p": {
     "hud": false,

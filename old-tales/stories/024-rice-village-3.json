@@ -32,7 +32,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "You cut with a small sickle, one handful at a time.",
+   "pausa": 0.6
+  },
+  {
    "texto": "It dries on wooden racks, in long rows.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then you beat the stalks, to knock the grains loose.",
    "pausa": 0.6
   },
   {
@@ -40,7 +48,23 @@
    "pausa": 0.6
   },
   {
+   "texto": "They walk the fields, and cut a sample square.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "From that one square, they decide the tax of the whole field.",
+   "pausa": 0.6
+  },
+  {
    "texto": "A common rule: four parts for the lord, six for the people.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "In a bad year, they may still ask for the same.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Villages that couldn't pay sometimes rose up together.",
    "pausa": 0.6
   },
   {
@@ -48,11 +72,23 @@
    "pausa": 0.6
   },
   {
+   "texto": "The headman signs, and the bags go to the lord's storehouse.",
+   "pausa": 0.6
+  },
+  {
    "texto": "When the tax is paid, you finally celebrate.",
    "pausa": 0.6
   },
   {
+   "texto": "Everyone goes to the shrine, to thank the gods for the harvest.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Drums, a shrine festival, and a cup of sake.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "For one night, nobody talks about tax.",
    "pausa": 0.6
   },
   {
@@ -80,11 +116,33 @@
   },
   {
    "linea": 1,
+   "comp": "f_arrozal",
+   "p": {
+    "hud": {
+     "dia": "October",
+     "hora": "Morning",
+     "lugar": "the paddies",
+     "ceu": "tarde"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "a small sickle",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 2,
    "comp": "f_vila_japao",
    "p": {}
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "f_vila_japao",
+   "p": {}
+  },
+  {
+   "linea": 4,
    "comp": "f_castelo_japao",
    "p": {
     "cartao": {
@@ -95,7 +153,18 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 5,
+   "comp": "f_castelo_japao",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "a sample square",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 7,
    "comp": "f_comparar",
    "p": {
     "esq": {
@@ -113,7 +182,29 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 7,
+   "comp": "f_castelo_japao",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "same tax, bad year",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_vila_japao",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "uprisings",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 10,
    "comp": "f_objeto",
    "p": {
     "obj": "saco_grao",
@@ -121,7 +212,18 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 10,
+   "comp": "f_vila_japao",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the storehouse",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 12,
    "comp": "f_torii",
    "p": {
     "hud": {
@@ -133,7 +235,19 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 12,
+   "comp": "f_torii",
+   "p": {
+    "hud": {
+     "dia": "Autumn",
+     "hora": "Evening",
+     "lugar": "the shrine",
+     "ceu": "por"
+    }
+   }
+  },
+  {
+   "linea": 14,
    "comp": "f_objeto",
    "p": {
     "obj": "tambor",
@@ -141,7 +255,24 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 14,
+   "comp": "f_torii",
+   "p": {
+    "hud": {
+     "dia": "Autumn",
+     "hora": "Evening",
+     "lugar": "the shrine",
+     "ceu": "por"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "one night off",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 16,
    "comp": "retrato",
    "p": {
     "zoomRosto": [

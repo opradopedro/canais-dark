@@ -83,3 +83,5 @@ Peças: `f_dez_sois`, `f_ceu`, `f_templo_china`, `f_palacio_lua`, `f_casa_china`
 - CL028 parte 1/3: dez sóis na árvore do leste, um por dia; um dia os dez nascem juntos; rios secam; o imperador chama Hou Yi; uma flecha, um sol cai. FEITO
 - CL029 parte 2/3: ele derruba nove (corvos dourados), deixa um; casa com Chang'e; a Rainha-Mãe do Oeste dá o elixir, só para um; ele esconde. FEITO
 - CL030 parte 3/3: versão antiga ela bebe; versão posterior um ladrão a obriga; ela flutua até a lua, coelho de jade sob a cássia; Hou Yi põe frutas e bolos sob a lua cheia; Festival do Meio do Outono. FEITO
+
+> 05/11/2026: CL016-CL030 (ainda nao publicados) alongados para 1min30-2min por parte (REGRA do Pedro, ROTEIROS.md "Duracao"). Mesmas cenas, falas novas no meio.

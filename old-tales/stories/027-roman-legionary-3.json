@@ -32,7 +32,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "The trumpet sounds. Your centurion shouts. Nobody breaks the line.",
+   "pausa": 0.6
+  },
+  {
    "texto": "At thirty paces, you throw your pilum, a heavy javelin.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Everyone throws at once. Thousands of javelins, in one cloud.",
    "pausa": 0.6
   },
   {
@@ -40,7 +48,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "It sticks in the enemy's shields, and drags them down.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Then, shields up. Under arrows, you lock into the tortoise.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Shields over your head, shields on every side.",
    "pausa": 0.6
   },
   {
@@ -48,11 +64,31 @@
    "pausa": 0.6
   },
   {
+   "texto": "You push with the shield, and stab under the ribs.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A short sword needs no space to swing. So the line stays tight.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Every few minutes, the front line rotates, so fresh men fight.",
    "pausa": 0.6
   },
   {
+   "texto": "A wound in the back is a disgrace. Nobody runs.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "If a whole unit runs, one man in ten may be executed.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Survive twenty-five years, and Rome pays you a bonus.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "In money, or a plot of land to farm.",
    "pausa": 0.6
   },
   {
@@ -75,6 +111,23 @@
   },
   {
    "linea": 1,
+   "comp": "f_acampamento_romano",
+   "p": {
+    "hud": {
+     "dia": "Battle day",
+     "hora": "Morning",
+     "lugar": "the frontier",
+     "ceu": "dia"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the trumpet",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 2,
    "comp": "f_figura",
    "p": {
     "figurino": "legionario",
@@ -83,7 +136,21 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "f_figura",
+   "p": {
+    "figurino": "legionario",
+    "arma": "lanca",
+    "pose": "aponta",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "thousands of javelins",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 4,
    "comp": "f_objeto",
    "p": {
     "obj": "lanca",
@@ -91,7 +158,15 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 5,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "lanca",
+    "rotulo": "the pilum bends"
+   }
+  },
+  {
+   "linea": 6,
    "comp": "f_falange",
    "p": {
     "avanca": [
@@ -106,7 +181,17 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 7,
+   "comp": "f_falange",
+   "p": {
+    "avanca": [
+     0,
+     0.4
+    ]
+   }
+  },
+  {
+   "linea": 8,
    "comp": "f_figura",
    "p": {
     "figurino": "legionario",
@@ -116,7 +201,32 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 9,
+   "comp": "f_figura",
+   "p": {
+    "figurino": "legionario",
+    "arma": "espada",
+    "escudo": "romano",
+    "pose": "luta"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_figura",
+   "p": {
+    "figurino": "legionario",
+    "arma": "espada",
+    "escudo": "romano",
+    "pose": "luta",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "stab, don't swing",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 11,
    "comp": "f_falange",
    "p": {
     "avanca": [
@@ -137,7 +247,32 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 12,
+   "comp": "f_falange",
+   "p": {
+    "avanca": [
+     0.4,
+     0.8
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "f_falange",
+   "p": {
+    "avanca": [
+     0.4,
+     0.8
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "decimation",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 14,
    "comp": "f_contagem",
    "p": {
     "de": 1,
@@ -146,7 +281,21 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 15,
+   "comp": "f_contagem",
+   "p": {
+    "de": 1,
+    "ate": 25,
+    "rotulo": "years of service",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "money or land",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 16,
    "comp": "f_objeto",
    "p": {
     "obj": "moedas",

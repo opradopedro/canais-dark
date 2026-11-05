@@ -31,7 +31,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "You have to be a Roman citizen, healthy, and tall enough.",
+   "pausa": 0.6
+  },
+  {
    "texto": "You swear an oath. Twenty-five years of service.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You can't marry while you serve. Not officially.",
    "pausa": 0.6
   },
   {
@@ -39,7 +47,23 @@
    "pausa": 0.6
   },
   {
+   "texto": "Your shield is wicker, and twice as heavy too.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "If the fake ones feel heavy, the real ones will feel light.",
+   "pausa": 0.6
+  },
+  {
    "texto": "You strike a wooden post, for hours, every day.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Stab, step, block. Stab, step, block.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Your trainer watches your feet, not your sword.",
    "pausa": 0.6
   },
   {
@@ -47,11 +71,27 @@
    "pausa": 0.6
   },
   {
+   "texto": "Three times a month, with sixty Roman pounds on your back.",
+   "pausa": 0.6
+  },
+  {
    "texto": "With your armor, your food, your tools, and your stakes.",
    "pausa": 0.6
   },
   {
+   "texto": "You carry it all on a pole over your shoulder.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "That's why they call you one of Marius's mules.",
+   "pausa": 0.6
+  },
+  {
    "texto": "If you fall behind, nobody waits.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Stragglers get punished, and the column keeps moving.",
    "pausa": 0.6
   },
   {
@@ -95,6 +135,25 @@
   },
   {
    "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "citizen, healthy, tall",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#d0a07a",
+     "cabelo": "#2a1a10",
+     "cabeloTipo": "curto",
+     "roupa": "#a8322a",
+     "detalhe": "#d8b04a",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 2,
    "comp": "f_forum",
    "p": {
     "cartao": {
@@ -105,7 +164,18 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "f_forum",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "no wife",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 4,
    "comp": "f_figura",
    "p": {
     "figurino": "legionario",
@@ -114,7 +184,30 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 5,
+   "comp": "f_figura",
+   "p": {
+    "figurino": "legionario",
+    "arma": "espada",
+    "pose": "luta"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_figura",
+   "p": {
+    "figurino": "legionario",
+    "arma": "espada",
+    "pose": "luta",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "heavy now, light later",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 7,
    "comp": "f_acampamento_romano",
    "p": {
     "cartao": {
@@ -125,7 +218,23 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 8,
+   "comp": "f_acampamento_romano",
+   "p": {}
+  },
+  {
+   "linea": 9,
+   "comp": "f_acampamento_romano",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "watch your feet",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 10,
    "comp": "f_estrada_romana",
    "p": {
     "cartao": {
@@ -136,7 +245,18 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 11,
+   "comp": "f_estrada_romana",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "60 Roman pounds",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 12,
    "comp": "f_ficha",
    "p": {
     "pessoa": {
@@ -160,7 +280,60 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 13,
+   "comp": "f_ficha",
+   "p": {
+    "pessoa": {
+     "figurino": "legionario"
+    },
+    "titulo": "Your load",
+    "linhas": [
+     {
+      "icone": "espada",
+      "texto": "Armor"
+     },
+     {
+      "icone": "fome",
+      "texto": "Food"
+     },
+     {
+      "icone": "perigo",
+      "texto": "Tools and stakes"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "f_ficha",
+   "p": {
+    "pessoa": {
+     "figurino": "legionario"
+    },
+    "titulo": "Your load",
+    "linhas": [
+     {
+      "icone": "espada",
+      "texto": "Armor"
+     },
+     {
+      "icone": "fome",
+      "texto": "Food"
+     },
+     {
+      "icone": "perigo",
+      "texto": "Tools and stakes"
+     }
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Marius's mules",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 15,
    "comp": "retrato",
    "p": {
     "cartao": {
@@ -179,7 +352,21 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 16,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#d0a07a",
+     "cabelo": "#2a1a10",
+     "cabeloTipo": "curto",
+     "roupa": "#a8322a",
+     "detalhe": "#d8b04a",
+     "expressao": "bravo"
+    }
+   }
+  },
+  {
+   "linea": 17,
    "comp": "texto",
    "p": {
     "hud": false,

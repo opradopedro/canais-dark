@@ -31,7 +31,19 @@
    "pausa": 0.6
   },
   {
+   "texto": "Maybe she was afraid of growing old. The old texts don't say.",
+   "pausa": 0.6
+  },
+  {
    "texto": "In a later one, a thief breaks in, and she drinks it so he can't.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "His name is Peng Meng, one of Hou Yi's own students.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He waits until his master goes hunting, then breaks in with a sword.",
    "pausa": 0.6
   },
   {
@@ -39,7 +51,23 @@
    "pausa": 0.6
   },
   {
+   "texto": "She rises past the roof, past the clouds.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Hou Yi comes home, and calls her name into the sky.",
+   "pausa": 0.6
+  },
+  {
    "texto": "She stops at the moon, the closest place to home.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Her only company is a lonely palace, and a man cutting a tree.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Every time he cuts it, the tree heals again.",
    "pausa": 0.6
   },
   {
@@ -51,7 +79,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "Some say she can see him, on the brightest night of the year.",
+   "pausa": 0.6
+  },
+  {
    "texto": "People still do it, at the Mid-Autumn Festival.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Families eat mooncakes, and look up at the full moon together.",
    "pausa": 0.6
   },
   {
@@ -82,6 +118,26 @@
   },
   {
    "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "hud": {
+     "dia": "Night",
+     "hora": "Full moon",
+     "lugar": "their home",
+     "ceu": "noite"
+    },
+    "pessoa": {
+     "pele": "#f0d4bc",
+     "cabelo": "#14100c",
+     "cabeloTipo": "longo",
+     "roupa": "#c8d8ec",
+     "detalhe": "#e0b040",
+     "expressao": "surpresa"
+    }
+   }
+  },
+  {
+   "linea": 2,
    "comp": "f_casa_china",
    "p": {
     "cartao": {
@@ -92,7 +148,23 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "f_casa_china",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Peng Meng",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_casa_china",
+   "p": {}
+  },
+  {
+   "linea": 5,
    "comp": "f_ceu",
    "p": {
     "tipo": "noite",
@@ -100,14 +172,70 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 6,
+   "comp": "f_ceu",
+   "p": {
+    "tipo": "noite",
+    "lua": true
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "hud": {
+     "dia": "Night",
+     "hora": "Full moon",
+     "lugar": "their home",
+     "ceu": "noite"
+    },
+    "pessoa": {
+     "pele": "#f0d4bc",
+     "cabelo": "#14100c",
+     "cabeloTipo": "longo",
+     "roupa": "#c8d8ec",
+     "detalhe": "#e0b040",
+     "expressao": "surpresa"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "he calls her name",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 8,
    "comp": "f_palacio_lua",
    "p": {
     "pers": "change"
    }
   },
   {
-   "linea": 4,
+   "linea": 9,
+   "comp": "f_palacio_lua",
+   "p": {
+    "pers": "change",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "a lonely palace",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_palacio_lua",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the endless tree",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 11,
    "comp": "f_palacio_lua",
    "p": {
     "cartao": {
@@ -118,7 +246,7 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 12,
    "comp": "f_objeto",
    "p": {
     "obj": "pessego",
@@ -126,7 +254,15 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 13,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "pessego",
+    "rotulo": "under the full moon"
+   }
+  },
+  {
+   "linea": 14,
    "comp": "f_lago_china",
    "p": {
     "cartao": {
@@ -137,7 +273,18 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 15,
+   "comp": "f_lago_china",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "mooncakes",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 16,
    "comp": "retrato",
    "p": {
     "zoomRosto": [

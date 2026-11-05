@@ -31,7 +31,19 @@
    "pausa": 0.6
   },
   {
+   "texto": "When you were born, the elders of your tribe looked you over.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A weak baby was left on Mount Taygetus. You passed.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Every Spartan boy goes to the agoge, the state's training school.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "From now on, Sparta raises you. Not your father.",
    "pausa": 0.6
   },
   {
@@ -39,7 +51,23 @@
    "pausa": 0.6
   },
   {
+   "texto": "He is about twenty. He gives the orders, and the punishments.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You learn to read and write, but only what you need.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Everything else is about obeying, enduring, and winning.",
+   "pausa": 0.6
+  },
+  {
    "texto": "At twelve, the rules get harder.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Your hair is cut short, and you walk barefoot, even on stones.",
    "pausa": 0.6
   },
   {
@@ -47,12 +75,24 @@
    "pausa": 0.6
   },
   {
+   "texto": "Summer or winter, it makes no difference.",
+   "pausa": 0.6
+  },
+  {
    "texto": "You sleep on reeds you pulled from the river, by hand.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "In winter, you mix in thistle down, for a little warmth.",
    "pausa": 0.6
   },
   {
    "texto": "And the food? Never quite enough, on purpose.",
    "pausa": 0.8
+  },
+  {
+   "texto": "A hungry boy learns to be bold. That is the plan.",
+   "pausa": 0.6
   },
   {
    "texto": "So how do you eat? Part two, {when_next}.",
@@ -96,6 +136,38 @@
   },
   {
    "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#3a2416",
+     "cabeloTipo": "curto",
+     "roupa": "#b23b2e",
+     "detalhe": "#f0a43a",
+     "expressao": "triste"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "inspected at birth",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_esparta",
+   "p": {
+    "ceu": "dia",
+    "treino": true,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Mount Taygetus",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 3,
    "comp": "f_esparta",
    "p": {
     "ceu": "dia",
@@ -108,14 +180,38 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 5,
    "comp": "f_agoge",
    "p": {
     "atividade": "corrida"
    }
   },
   {
-   "linea": 3,
+   "linea": 6,
+   "comp": "f_agoge",
+   "p": {
+    "atividade": "corrida",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "orders and punishments",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_agoge",
+   "p": {
+    "atividade": "corrida",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "read and write: just enough",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 9,
    "comp": "f_ficha",
    "p": {
     "hud": {
@@ -145,7 +241,37 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 10,
+   "comp": "f_ficha",
+   "p": {
+    "hud": {
+     "dia": "Age 12",
+     "hora": "Winter",
+     "lugar": "Sparta",
+     "ceu": "tarde"
+    },
+    "pessoa": {
+     "figurino": "menino_esparta"
+    },
+    "titulo": "You, 12",
+    "linhas": [
+     {
+      "icone": "idade",
+      "texto": "Age 12"
+     },
+     {
+      "icone": "frio",
+      "texto": "Cold"
+     },
+     {
+      "icone": "fome",
+      "texto": "Hungry"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
    "comp": "f_agoge",
    "p": {
     "atividade": "frio",
@@ -163,7 +289,7 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 13,
    "comp": "f_esparta",
    "p": {
     "ceu": "tarde",
@@ -183,7 +309,27 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 14,
+   "comp": "f_esparta",
+   "p": {
+    "ceu": "tarde",
+    "foco": [
+     0.5,
+     0.8
+    ],
+    "escala": [
+     1.2,
+     1.6
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "thistle down",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 15,
    "comp": "f_agoge",
    "p": {
     "atividade": "fome",
@@ -195,7 +341,19 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 16,
+   "comp": "f_agoge",
+   "p": {
+    "atividade": "fome",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "bold",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 17,
    "comp": "texto",
    "p": {
     "hud": false,

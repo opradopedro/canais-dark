@@ -32,7 +32,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "The surveyors ride ahead and mark the ground with flags.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Every night, a new camp. A ditch, a wall of earth, and your stakes on top.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Four gates, one on each side, always in the same places.",
    "pausa": 0.6
   },
   {
@@ -40,7 +48,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "The commander's tent sits in the middle. Streets run between the rows.",
+   "pausa": 0.6
+  },
+  {
    "texto": "So every soldier knows his place, even in the dark.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "If the enemy attacks at night, nobody gets lost.",
    "pausa": 0.6
   },
   {
@@ -48,11 +64,31 @@
    "pausa": 0.6
   },
   {
+   "texto": "Eight men, one mule, one leather tent.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You eat together, march together, and fight side by side.",
+   "pausa": 0.6
+  },
+  {
    "texto": "You grind your own grain and bake your own bread.",
    "pausa": 0.6
   },
   {
+   "texto": "Your centurion carries a vine stick, and he uses it.",
+   "pausa": 0.6
+  },
+  {
    "texto": "And you drink posca, water mixed with sour wine.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At night, the guard changes every three hours.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Fall asleep on watch, and your own tent mates may beat you to death.",
    "pausa": 0.6
   },
   {
@@ -77,6 +113,23 @@
    "linea": 1,
    "comp": "f_acampamento_romano",
    "p": {
+    "hud": {
+     "dia": "March day 1",
+     "hora": "Evening",
+     "lugar": "the frontier",
+     "ceu": "tarde"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "flags",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_acampamento_romano",
+   "p": {
     "cartao": {
      "tipo": "lista",
      "titulo": "EVERY NIGHT",
@@ -90,7 +143,24 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "f_acampamento_romano",
+   "p": {
+    "hud": {
+     "dia": "March day 1",
+     "hora": "Evening",
+     "lugar": "the frontier",
+     "ceu": "tarde"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "four gates",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 4,
    "comp": "f_acampamento_romano",
    "p": {
     "cartao": {
@@ -101,7 +171,12 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 5,
+   "comp": "f_acampamento_romano",
+   "p": {}
+  },
+  {
+   "linea": 6,
    "comp": "retrato",
    "p": {
     "cartao": {
@@ -119,7 +194,20 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#d0a07a",
+     "cabelo": "#2a1a10",
+     "cabeloTipo": "curto",
+     "roupa": "#a8322a",
+     "detalhe": "#d8b04a"
+    }
+   }
+  },
+  {
+   "linea": 8,
    "comp": "f_contagem",
    "p": {
     "de": 1,
@@ -128,7 +216,39 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 9,
+   "comp": "f_contagem",
+   "p": {
+    "de": 1,
+    "ate": 8,
+    "rotulo": "men per tent",
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "8 men · 1 mule",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "side by side",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#d0a07a",
+     "cabelo": "#2a1a10",
+     "cabeloTipo": "curto",
+     "roupa": "#a8322a",
+     "detalhe": "#d8b04a"
+    }
+   }
+  },
+  {
+   "linea": 11,
    "comp": "f_objeto",
    "p": {
     "obj": "pao",
@@ -136,7 +256,25 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 12,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the vine stick",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#d0a07a",
+     "cabelo": "#2a1a10",
+     "cabeloTipo": "curto",
+     "roupa": "#a8322a",
+     "detalhe": "#d8b04a"
+    }
+   }
+  },
+  {
+   "linea": 13,
    "comp": "f_objeto",
    "p": {
     "obj": "jarra",
@@ -144,7 +282,42 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 14,
+   "comp": "f_acampamento_romano",
+   "p": {
+    "hud": {
+     "dia": "March day 1",
+     "hora": "Evening",
+     "lugar": "the frontier",
+     "ceu": "tarde"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the night watch",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "asleep on watch",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#d0a07a",
+     "cabelo": "#2a1a10",
+     "cabeloTipo": "curto",
+     "roupa": "#a8322a",
+     "detalhe": "#d8b04a"
+    }
+   }
+  },
+  {
+   "linea": 16,
    "comp": "texto",
    "p": {
     "hud": false,

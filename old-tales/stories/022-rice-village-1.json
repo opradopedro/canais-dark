@@ -31,7 +31,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "You wake before dawn, to the roosters and the temple bell.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Your village has about three hundred people.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A headman runs it, and answers to the lord's officials.",
    "pausa": 0.6
   },
   {
@@ -39,7 +47,19 @@
    "pausa": 0.6
   },
   {
+   "texto": "Samurai are paid in rice too. So everyone needs yours.",
+   "pausa": 0.6
+  },
+  {
    "texto": "One koku is enough rice to feed one person for a year.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The richest lord in Japan counts more than a million koku.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Your family? Barely enough to get through the winter.",
    "pausa": 0.6
   },
   {
@@ -47,11 +67,27 @@
    "pausa": 0.6
   },
   {
+   "texto": "You share the work, the debts, and the blame.",
+   "pausa": 0.6
+  },
+  {
    "texto": "If one family breaks the law, all five are punished.",
    "pausa": 0.8
   },
   {
+   "texto": "Hiding a thief. Cheating on the tax. Running away at night.",
+   "pausa": 0.6
+  },
+  {
    "texto": "So everyone watches everyone. Politely.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You know whose rice is late, and whose roof leaks.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Nobody wants to be the family that ruins the other four.",
    "pausa": 0.6
   },
   {
@@ -97,6 +133,23 @@
    "linea": 1,
    "comp": "f_vila_japao",
    "p": {
+    "hud": {
+     "dia": "Year 1700",
+     "hora": "Dawn",
+     "lugar": "Japan",
+     "ceu": "aurora"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "before dawn",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_vila_japao",
+   "p": {
     "cartao": {
      "tipo": "rotulo",
      "titulo": "about 300 people",
@@ -105,7 +158,26 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the headman",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#1a1410",
+     "cabeloTipo": "coque",
+     "roupa": "#4a5a7a",
+     "detalhe": "#e6d6b0",
+     "expressao": "surpresa"
+    }
+   }
+  },
+  {
+   "linea": 4,
    "comp": "f_objeto",
    "p": {
     "obj": "saco_grao",
@@ -113,7 +185,18 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 5,
+   "comp": "f_vila_japao",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "paid in rice",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 6,
    "comp": "f_objeto",
    "p": {
     "obj": "tigela_arroz",
@@ -121,7 +204,37 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 7,
+   "comp": "f_arrozal",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "1,000,000 koku",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "barely enough",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#1a1410",
+     "cabeloTipo": "coque",
+     "roupa": "#4a5a7a",
+     "detalhe": "#e6d6b0",
+     "expressao": "surpresa"
+    }
+   }
+  },
+  {
+   "linea": 9,
    "comp": "f_vila_japao",
    "p": {
     "cartao": {
@@ -137,7 +250,18 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 10,
+   "comp": "f_arrozal",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "work, debts, blame",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 11,
    "comp": "retrato",
    "p": {
     "cartao": {
@@ -156,12 +280,56 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 12,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#1a1410",
+     "cabeloTipo": "coque",
+     "roupa": "#4a5a7a",
+     "detalhe": "#e6d6b0",
+     "expressao": "surpresa"
+    }
+   }
+  },
+  {
+   "linea": 13,
    "comp": "f_arrozal",
    "p": {}
   },
   {
-   "linea": 7,
+   "linea": 14,
+   "comp": "f_arrozal",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "everyone watches",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the other four",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#d9a77c",
+     "cabelo": "#1a1410",
+     "cabeloTipo": "coque",
+     "roupa": "#4a5a7a",
+     "detalhe": "#e6d6b0",
+     "expressao": "surpresa"
+    }
+   }
+  },
+  {
+   "linea": 16,
    "comp": "texto",
    "p": {
     "hud": false,

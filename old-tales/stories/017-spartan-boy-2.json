@@ -32,7 +32,19 @@
    "pausa": 0.6
   },
   {
+   "texto": "The food is kept small on purpose, so you learn to take it.",
+   "pausa": 0.6
+  },
+  {
    "texto": "You creep into gardens and dining halls, and take what you can.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You go at night, when the men are asleep or on guard.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Firewood, vegetables, a piece of meat from the common tables.",
    "pausa": 0.6
   },
   {
@@ -44,7 +56,19 @@
    "pausa": 0.7
   },
   {
+   "texto": "A Spartan has to be quick, quiet and clever.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A clumsy thief would make a clumsy soldier.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Plutarch tells of a boy who hid a stolen fox under his cloak.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He was afraid someone would see it moving.",
    "pausa": 0.6
   },
   {
@@ -52,7 +76,23 @@
    "pausa": 0.8
   },
   {
+   "texto": "Plutarch says it tore at his stomach, and he kept still.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Some say he died rather than be caught. That is Sparta.",
+   "pausa": 0.6
+  },
+  {
    "texto": "At twenty, you ask to join a men's dining group.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "It is called a syssitia, about fifteen men who eat together, every night.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Without a place at that table, you are not a full Spartan.",
    "pausa": 0.6
   },
   {
@@ -89,6 +129,32 @@
   },
   {
    "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "hud": {
+     "dia": "Age 12",
+     "hora": "Night",
+     "lugar": "Sparta",
+     "ceu": "noite"
+    },
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#3a2416",
+     "cabeloTipo": "curto",
+     "roupa": "#b23b2e",
+     "detalhe": "#f0a43a",
+     "expressao": "sorriso",
+     "olhar": 1
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "small on purpose",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 2,
    "comp": "f_esparta",
    "p": {
     "ceu": "noite",
@@ -103,14 +169,29 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "f_esparta",
+   "p": {
+    "ceu": "noite",
+    "foco": [
+     0.4,
+     0.6
+    ],
+    "escala": [
+     1.2,
+     1.5
+    ]
+   }
+  },
+  {
+   "linea": 5,
    "comp": "f_agoge",
    "p": {
     "atividade": "luta"
    }
   },
   {
-   "linea": 3,
+   "linea": 6,
    "comp": "f_comparar",
    "p": {
     "esq": {
@@ -132,7 +213,34 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 7,
+   "comp": "f_comparar",
+   "p": {
+    "esq": {
+     "titulo": "STEAL",
+     "itens": [
+      "Allowed",
+      "Expected",
+      "Smart"
+     ]
+    },
+    "dir": {
+     "titulo": "CAUGHT",
+     "itens": [
+      "Whipped",
+      "Shamed",
+      "Clumsy"
+     ]
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "quick, quiet, clever",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 9,
    "comp": "f_figura",
    "p": {
     "figurino": "menino_esparta",
@@ -145,7 +253,7 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 11,
    "comp": "retrato",
    "p": {
     "pessoa": {
@@ -168,7 +276,25 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 11,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#3a2416",
+     "cabeloTipo": "curto",
+     "roupa": "#b23b2e",
+     "detalhe": "#f0a43a",
+     "expressao": "neutro"
+    },
+    "zoomRosto": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "linea": 14,
    "comp": "f_syssitia",
    "p": {
     "hud": {
@@ -180,7 +306,24 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 14,
+   "comp": "f_syssitia",
+   "p": {
+    "hud": {
+     "dia": "Age 20",
+     "hora": "Evening",
+     "lugar": "Sparta",
+     "ceu": "tarde"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "about 15 men",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 17,
    "comp": "texto",
    "p": {
     "hud": false,
