@@ -6,6 +6,8 @@ Shorts nao era a voz do Gemini. Era o efeito "susto" (ruido + boom + apito agudo
 manda tocar no FIM da ultima frase; como so sobra 1,2 s de silencio depois dela, o susto inteiro caia no
 ultimo segundo do video, mais alto que a voz (o loudnorm ainda sobe tudo). Os consertos anteriores (fade no fim,
 cortar estatica do Gemini) atacavam outra coisa, por isso "voltava": nada media o MP4 que sobe.
+O SUSTO NO FIM PODE (Pedro, 05/11: e bom para o engajamento); o que esta trava barra e o chiado e o estouro: o
+mix.py deixa o efeito do fim so no grave e no volume da voz.
 
 Regra (no MP4 que vai para o YouTube, depois de tudo pronto):
   - referencia = volume da fala no corpo do video (percentil 90 das janelas de 50 ms, do 1 s ate 3 s antes do fim);

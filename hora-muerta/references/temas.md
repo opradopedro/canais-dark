@@ -48,6 +48,6 @@ HM015-016 El oso de noviembre (Testigo, gringa EUA, peça oso) · HM017-018 La v
 - Séries de 2 partes (ou 3 em história muito boa), 40 a 58 s cada. Primeira frase já é a regra ou o fato mais assustador.
 - Parte 1 termina no pior momento + "Parte dos, mañana, {dia_siguiente}" (sem horário: fusos diferentes); a última parte explica a reviravolta.
 - Susto visível na tela, com `susto` + evento do componente no mesmo instante, e `gancho` apontando para ele.
-- 1 a 2 sustos por parte; o último da parte final na PENÚLTIMA frase (nunca no fim da última: o som cairia no último segundo do vídeo e vira "chiado alto no fim"; o mix.py tira o som de qualquer efeito nos últimos 2,6 s e o checar_fim.py barra o vídeo).
+- 1 a 2 sustos por parte; o último da parte final pode ficar na frase final, com loop para a primeira (Pedro, 05/11: susto no fim é bom; chiado alto nunca: o mix.py deixa o efeito do fim só no grave e no volume da voz, e o checar_fim.py barra chiado).
 - Espanhol neutro (sem gírias de um país só), frases curtas, reticências para criar pausa.
 - Sem sangue, sem morte explícita de criança, sem nome de pessoa real.
