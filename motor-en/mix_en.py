@@ -123,17 +123,18 @@ def main(historia, voz, tempos, saida):
         if f > 0:
             s[-f:] *= np.linspace(1, 0, f)
         s = s * (0.9 if nome in ("golpe", "golpe_metal") else 0.6)
-        if mix_motor.efeito_no_fim(e["t"], dur):  # susto no fim pode; chiado nao (05/11): so grave, volume da voz
-            s = mix_motor.efeito_final(s, v, SR)
-            print(f"fim sem chiado: efeito '{nome}' em {e['t']:.2f}s so no grave e no volume da voz")
+        if mix_motor.efeito_no_fim(e["t"], dur):  # nada de som depois que a narracao acaba (Pedro, 05/11)
+            print(f"fim em silencio: efeito '{nome}' em {e['t']:.2f}s sem som (a imagem fica)")
+            continue
         i0 = int(e["t"] * SR); j = min(n, i0 + len(s))
         if i0 < n:
             mix[i0:j] += s[:j - i0]
 
-    mix = mix_motor.fim_limpo(mix[:int(dur * SR)], dur, SR)
+    fv = mix_motor.fim_da_voz(v, SR)
+    mix = mix_motor.fim_limpo(mix[:int(dur * SR)], dur, SR, fim_voz=fv)
     wt = os.path.join(tmp, "m.wav"); sf.write(wt, mix, SR)
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", wt, "-af",
-                    f"loudnorm=I=-15:TP=-1.5,afade=t=out:st={max(0, dur - 0.6):.2f}:d=0.45", "-ar", str(SR),
+                    f"loudnorm=I=-15:TP=-1.5,afade=t=out:st={fv + 0.05:.2f}:d=0.15", "-ar", str(SR),
                     "-c:a", "aac", "-b:a", "160k", saida], check=True)
     print("ok", saida)
 

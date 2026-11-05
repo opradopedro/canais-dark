@@ -13,6 +13,7 @@ Regra (no MP4 que vai para o YouTube, depois de tudo pronto):
   - referencia = volume da fala no corpo do video (percentil 90 das janelas de 50 ms, do 1 s ate 3 s antes do fim);
   - nos ultimos 2 s nenhuma janela pode passar da referencia + 1 dB (fim nao pode ser mais alto que a fala);
   - no ultimo 0,7 s o som tem que estar baixo (referencia - 10 dB): o video termina calmo, sem estouro;
+  - som solto: depois que a fala acaba nada volta a soar (estalo do Gemini, efeito);
   - chiado: energia acima de 3 kHz nos ultimos 2 s acima do maximo normal do corpo (percentil 99 + 3 dB) por
     0,15 s ou mais (um "s" da fala dura 1 janela; chiado dura varias).
 
@@ -63,8 +64,30 @@ def conferir(mp4, cauda=2.0, final=0.7):
         erros.append(f"estouro no fim: {pico_fim:.1f} dB em {t_pico:.2f}s (fala {ref:.1f} dB)")
     if nivel_ult > ref - 10.0:
         erros.append(f"ultimo {final}s alto: {nivel_ult:.1f} dB (limite {ref - 10:.1f})")
+    # som solto depois que a fala acabou (estalo de estatica do Gemini, efeito, estrondo): nos ultimos 2 s, depois de
+    # um respiro de 0,1 s ou mais abaixo de fala-25 dB, nada pode voltar acima de fala-20 dB e terminar no fim
+    q = rms[fim]; tf = t[fim]
+    alto = q > ref - 20.0
+    if alto.any():
+        k = np.where(alto)[0][-1]  # ultima janela alta
+        i = k
+        while i - 1 >= 0 and alto[i - 1]:
+            i -= 1
+        ilha = (k - i + 1) * JAN
+        antes = 0
+        j = i - 1
+        while j >= 0 and q[j] < ref - 25.0:
+            antes += 1; j -= 1
+        if antes * JAN >= 0.1 and ilha <= 0.6 and j >= 0:
+            erros.append(f"som solto depois da fala: {ilha:.2f}s em {tf[i]:.2f}s ({q[i:k + 1].max():.1f} dB)")
     if n_agudo >= 3:
         erros.append(f"chiado agudo no fim: {n_agudo * JAN:.2f}s acima de 3 kHz (pico {agudo_fim:.1f}, limite {ref_agudo:.1f})")
+    # ESTATICA DE TV (estalo do Gemini) em QUALQUER ponto do video (HM003/HM021/HM022: 0,13-0,16 s de ruido branco
+    # a -14 dB colado na ultima frase). Detector em motor-en/estatica.py (espectro chato = ruido; um "s" nao e chato).
+    import estatica
+    for i0, i1 in estatica.achar_estatica(a, SR, ref=ref):
+        if (i1 - i0) / SR >= 0.08:
+            erros.append(f"estatica de TV (chiado) em {i0 / SR:.2f}s ({(i1 - i0) / SR:.2f}s)")
     return {"ok": not erros, "motivo": "; ".join(erros) or "fim limpo", "dur": round(dur, 2),
             "fala_db": round(ref, 1), "pico_fim_db": round(pico_fim, 1), "ultimo_db": round(nivel_ult, 1),
             "agudo_fim_db": round(agudo_fim, 1), "agudo_corpo_db": round(ref_agudo, 1)}

@@ -76,6 +76,12 @@ def arquivo_do_banco(linhas):
 
 
 def limpar_fim(audio, sr):
+    import estatica
+    audio = estatica.limpar_bordas(audio, sr)
+    return _limpar_fim_antigo(audio, sr)
+
+
+def _limpar_fim_antigo(audio, sr):
     """Corta o estalo de estatica que o Gemini as vezes deixa NO FIM da narracao.
 
     Visto no SV001 (28/10): depois da ultima palavra vem um silencio curto e, colado no fim do arquivo,
