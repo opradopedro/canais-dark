@@ -140,6 +140,18 @@ jobs:
           export CANAIS_REPESCAGEM="${{ steps.qual.outputs.repescagem }}"
           python crew/rodar_canal.py "${{ steps.qual.outputs.tarefa }}" 2>&1 | tee /tmp/rodar-log.txt
 
+      # thumbnails do So You Built It ja aplicadas (capa.py): guarda a lista para nao reenviar
+      - name: Salvar capas feitas (SYBI)
+        if: always() && (steps.qual.outputs.tarefa == 'so-you-built-it' || steps.qual.outputs.tarefa == 'capas-yb')
+        run: |
+          F=so-you-built-it/references/capas_feitas.txt
+          [ -f "$F" ] || exit 0
+          git config user.name "canais-bot"; git config user.email "canais-bot@users.noreply.github.com"
+          git add "$F"
+          git diff --cached --quiet && exit 0
+          git commit -m "capas feitas SYBI $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -q origin producao && git push -q origin HEAD:producao && break; sleep 5; done
+
       # se der erro, o log vai para a Release publica "logs" (Kiro e Claude leem sem entrar no GitHub)
       - name: Enviar o erro para a Release "logs"
         if: failure() && steps.ligado.outputs.sim == '1'

@@ -132,7 +132,7 @@ def main():
                 print(f"ESTOQUE BAIXO {fmt}: {resta} roteiro(s) pendente(s) depois de hoje; escreva mais (ver SKILL.md)", flush=True)
         if not vagas and not sem_roteiro:
             if a.subir and fila:
-                print("FILA CHEIA: nada a fazer hoje"); return
+                print("FILA CHEIA: nada a fazer hoje"); capas_antigas(a); return
             sys.exit("SEM ROTEIRO: nenhum roteiro pendente em stories/")
     ocupados = {v["publishAt"][:13] for v in ja.values() if v.get("publishAt")}
     tentados = set()
@@ -156,10 +156,21 @@ def main():
             if a.subir and tentativas:
                 print(f"HORARIO VAZIO {formato_vaga or ''}: nenhum roteiro passou na conferencia nesta execucao", flush=True)
                 vazios += 1
+    if a.subir:
+        capas_antigas(a)
     if barrados:
         print("LEGENDA FORA DA VOZ, nao subiu: " + ", ".join(barrados), flush=True)
     if vazios:  # so falha (e o GitHub manda e-mail) se um horario ficou mesmo sem video; a repescagem tenta de novo
         sys.exit(f"HORARIO VAZIO: {vazios} horario(s) sem video nesta execucao (barrados: {', '.join(barrados) or 'nenhum'})")
+
+
+def capas_antigas(a):
+    """Shorts antigos sem thumbnail: alguns por execucao (o YouTube da 429 se forem muitas de uma vez, 05/11)."""
+    try:
+        import capa
+        capa.antigas(os.path.join(a.saida, "capas"), int(os.environ.get("YB_CAPAS_POR_VEZ", "5")))
+    except BaseException as e:
+        print(f"capas antigas: pulei ({str(e)[:200]})", flush=True)
 
 
 def fazer(historia, formato_vaga, a, ja, ocupados):
@@ -208,7 +219,11 @@ def fazer(historia, formato_vaga, a, ja, ocupados):
         except Exception as e:
             print(f"capa {cod} falhou (o video sobe sem ela): {str(e)[:200]}", flush=True)
         import yt_upload
-        vid = yt_upload.subir(base + "_upload.json")["id"]
+        resp = yt_upload.subir(base + "_upload.json")
+        vid = resp["id"]
+        if resp.get("capa_ok"):
+            import capa
+            capa.marcar_feita(cod)
         ocupados.add(up["publicar_em"][:13])
         print(f"AGENDADO {cod} https://youtu.be/{vid} publica em {up['publicar_em']} (UTC)", flush=True)
     guardar(cod, base, up, vid)

@@ -3,7 +3,8 @@
 
 Uso:
   python3 capa.py historia.json capa.jpg [tempos.json]   # sem tempos: estima pelo numero de palavras
-  python3 capa.py --antigas [--saida DIR]                # poe capa em TODOS os Shorts ja no canal (YT_TOKEN_VAR)
+  python3 capa.py --antigas [--limite N] [--saida DIR]   # poe capa nos Shorts do canal que ainda nao tem (YT_TOKEN_VAR)
+A producao diaria (produce.py --subir) ja aplica ate 5 antigas por execucao (YB_CAPAS_POR_VEZ); o YouTube da 429 com muitas.
 O canal foi verificado por telefone em 05/11/2026: agora o YouTube aceita thumbnail personalizada
 (thumbnails.set, 50 unidades da cota cada). 1080x1920 JPG < 2 MB.
 Quadro: Evolucao = penultima cena (a obra pronta, antes do "Congratulations"); Curiosidade = cena a 60% do video.
@@ -107,15 +108,36 @@ def gerar(trabalhos):
     return feitos
 
 
-def antigas(saida):
-    """Gera e aplica a capa em todos os Shorts do canal que tem roteiro em stories/ (pode rodar de novo: so troca)."""
+FEITAS = os.path.join(os.path.dirname(AQUI), "references", "capas_feitas.txt")
+
+
+def feitas():
+    try:
+        return {l.strip() for l in open(FEITAS, encoding="utf-8") if l.strip() and not l.startswith("#")}
+    except FileNotFoundError:
+        return set()
+
+
+def marcar_feita(cod):
+    """Lista dos Shorts que ja tem thumbnail (o GitHub Actions faz o commit do arquivo)."""
+    if cod not in feitas():
+        with open(FEITAS, "a", encoding="utf-8") as f:
+            f.write(cod + "\n")
+
+
+def antigas(saida, limite=None):
+    """Gera e aplica a capa nos Shorts do canal que ainda nao tem (references/capas_feitas.txt).
+    O YouTube aceita poucas thumbnails seguidas (429 depois de ~10 em 05/11): limite por execucao e para no 429."""
     import yt_upload
     tk = yt_upload.access_token()
     no_canal = yt_upload.publicados(tk)
     roteiros = {carregar(f)["codigo"]: f for f in glob.glob(os.path.join(os.path.dirname(AQUI), "stories", "*.json"))}
     os.makedirs(saida, exist_ok=True)
-    fila = [(roteiros[c], os.path.join(saida, c + "_capa.jpg"), None) for c in sorted(no_canal) if c in roteiros]
-    print(f"{len(fila)} Shorts para receber capa", flush=True)
+    ja = feitas()
+    fila = [(roteiros[c], os.path.join(saida, c + "_capa.jpg"), None) for c in sorted(no_canal)
+            if c in roteiros and c not in ja]
+    print(f"CAPAS PENDENTES: {len(fila)} Shorts sem thumbnail" + (f"; nesta execucao ate {limite}" if limite else ""), flush=True)
+    fila = fila[:limite] if limite else fila
     ok = falhas = 0
     for historia, jpg, _ in fila:
         if not os.path.exists(jpg) and not gerar([(historia, jpg, None)]):
@@ -124,12 +146,13 @@ def antigas(saida):
         try:
             yt_upload.miniatura(tk, no_canal[cod]["id"], jpg)
             ok += 1
+            marcar_feita(cod)
             print(f"CAPA APLICADA {cod} https://youtu.be/{no_canal[cod]['id']}", flush=True)
         except Exception as e:
             falhas += 1
             corpo = e.read().decode()[:300] if hasattr(e, "read") else str(e)[:300]
             print(f"CAPA FALHOU {cod}: {corpo}", flush=True)
-            if "forbidden" in corpo.lower() or "quota" in corpo.lower():
+            if any(m in corpo.lower() for m in ("forbidden", "quota", "too many", "429")):
                 break  # canal sem permissao ou cota do dia acabou: nao adianta insistir
     print(f"CAPAS: {ok} aplicadas, {falhas} falharam", flush=True)
     return ok, falhas
@@ -138,7 +161,7 @@ def antigas(saida):
 if __name__ == "__main__":
     if sys.argv[1:2] == ["--antigas"]:
         saida = sys.argv[sys.argv.index("--saida") + 1] if "--saida" in sys.argv else "/tmp/yb-capas"
-        ok, falhas = antigas(saida)
+        ok, falhas = antigas(saida, int(sys.argv[sys.argv.index("--limite") + 1]) if "--limite" in sys.argv else None)
         sys.exit(1 if falhas and not ok else 0)
     elif len(sys.argv) >= 3:
         if not gerar([(sys.argv[1], sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else None)]):
