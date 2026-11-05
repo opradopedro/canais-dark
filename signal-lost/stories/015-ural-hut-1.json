@@ -31,7 +31,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "Nobody knows who carved them. They have been there for decades.",
+   "pausa": 0.6
+  },
+  {
    "texto": "I'm Mira, twenty-six, a ski guide.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I know that pass. I have crossed it eleven times.",
    "pausa": 0.6
   },
   {
@@ -39,7 +47,23 @@
    "pausa": 0.6
   },
   {
+   "texto": "Then the wind turned, and we couldn't see our own skis.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "We found the hut just before dark, half buried in snow.",
+   "pausa": 0.6
+  },
+  {
    "texto": "The door said: stay inside, count every hour, never answer a knock.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Pavel laughed at them. I didn't.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "We lit the stove, and I set an alarm for every hour.",
    "pausa": 0.6
   },
   {
@@ -49,6 +73,14 @@
   {
    "texto": "Then five voices answered. One of them was mine.",
    "pausa": 0.8
+  },
+  {
+   "texto": "Pavel stopped laughing. Nobody moved.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I opened the shutter a crack, with my flashlight.",
+   "pausa": 0.6
   },
   {
    "texto": "Outside, fresh footprints led straight to the door.",
@@ -79,6 +111,24 @@
   },
   {
    "linea": 1,
+   "comp": "f_cabana",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "11:48",
+     "ampm": "PM",
+     "lugar": "Ural Pass",
+     "sinal": 0
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "carved decades ago",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 2,
    "comp": "retrato",
    "p": {
     "cartao": {
@@ -100,7 +150,28 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "11 crossings",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 4,
    "comp": "f_floresta",
    "p": {
     "cartao": {
@@ -111,7 +182,31 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 5,
+   "comp": "f_floresta",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "whiteout",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_cabana",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "11:48",
+     "ampm": "PM",
+     "lugar": "Ural Pass",
+     "sinal": 0
+    }
+   }
+  },
+  {
+   "linea": 7,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -138,7 +233,56 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 8,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Pavel laughed",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "1:12",
+     "ampm": "AM",
+     "lugar": "Ural Pass",
+     "sinal": 0
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "alarm every hour",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166"
+    }
+   }
+  },
+  {
+   "linea": 10,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -166,7 +310,7 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 11,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -189,14 +333,21 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 13,
    "comp": "f_cabana",
    "p": {
     "pegadas": 1
    }
   },
   {
-   "linea": 7,
+   "linea": 14,
+   "comp": "f_cabana",
+   "p": {
+    "pegadas": 1
+   }
+  },
+  {
+   "linea": 15,
    "comp": "f_cabana",
    "p": {
     "pegadas": 1,
@@ -208,7 +359,7 @@
    }
   },
   {
-   "linea": 8,
+   "linea": 16,
    "comp": "texto",
    "p": {
     "hud": false,
@@ -222,12 +373,12 @@
  "eventos": [
   {
    "tipo": "golpe",
-   "linea": 5,
+   "linea": 11,
    "en": 0.3
   },
   {
    "tipo": "susto",
-   "linea": 7,
+   "linea": 15,
    "en": "fin",
    "mas": 0.05
   }
@@ -243,7 +394,7 @@
   "Bare feet"
  ],
  "gancho": {
-  "cena": 7,
+  "cena": 14,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8

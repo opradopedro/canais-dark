@@ -31,7 +31,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "I have taken that line home every night for six years.",
+   "pausa": 0.6
+  },
+  {
    "texto": "I'm Nora, twenty-eight, a nurse.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I work nights at the hospital. I know every stop by heart.",
    "pausa": 0.6
   },
   {
@@ -39,16 +47,32 @@
    "pausa": 0.6
   },
   {
+   "texto": "I always sit in the second car, by the door, with a coffee.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Tonight, after forty minutes, we still hadn't stopped.",
    "pausa": 0.7
+  },
+  {
+   "texto": "Outside the window, no houses, no roads. Just black trees, for miles.",
+   "pausa": 0.6
   },
   {
    "texto": "Everyone else in the car was asleep. Everyone.",
    "pausa": 0.6
   },
   {
+   "texto": "I shook the man next to me, hard. He was warm and breathing, but he didn't wake.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Then the doors opened at a platform called Harlow.",
    "pausa": 0.8
+  },
+  {
+   "texto": "The speaker said: Harlow. This is your stop, Nora.",
+   "pausa": 0.6
   },
   {
    "texto": "No town. No lights. Just a man, waving me out.",
@@ -87,6 +111,25 @@
    "comp": "retrato",
    "p": {
     "cartao": {
+     "tipo": "rotulo",
+     "titulo": "6 years",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#2a1a12",
+     "cabeloTipo": "coque",
+     "roupa": "#4a7a8a",
+     "detalhe": "#e6f1f2",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
      "tipo": "nome",
      "titulo": "Nora, 28",
      "sub": "night nurse",
@@ -103,7 +146,21 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#2a1a12",
+     "cabeloTipo": "coque",
+     "roupa": "#4a7a8a",
+     "detalhe": "#e6f1f2",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 4,
    "comp": "f_onibus",
    "p": {
     "passageiros": 4,
@@ -120,7 +177,7 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 5,
    "comp": "f_onibus",
    "p": {
     "passageiros": 4,
@@ -134,7 +191,40 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 6,
+   "comp": "f_onibus",
+   "p": {
+    "passageiros": 4,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "12:20",
+     "ampm": "AM",
+     "lugar": "40 min, no stop",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_onibus",
+   "p": {
+    "passageiros": 4,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "12:20",
+     "ampm": "AM",
+     "lugar": "40 min, no stop",
+     "sinal": 1
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "black trees",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 8,
    "comp": "f_onibus",
    "p": {
     "passageiros": 4,
@@ -147,7 +237,15 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 9,
+   "comp": "f_onibus",
+   "p": {
+    "passageiros": 4,
+    "luzes": "piscam"
+   }
+  },
+  {
+   "linea": 10,
    "comp": "f_estacion",
    "p": {
     "cartao": {
@@ -158,7 +256,12 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 11,
+   "comp": "f_estacion",
+   "p": {}
+  },
+  {
+   "linea": 12,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -179,7 +282,7 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 13,
    "comp": "f_telefono",
    "p": {
     "tipo": "celular",
@@ -188,7 +291,7 @@
    }
   },
   {
-   "linea": 8,
+   "linea": 14,
    "comp": "texto",
    "p": {
     "hud": false,
@@ -202,12 +305,12 @@
  "eventos": [
   {
    "tipo": "golpe",
-   "linea": 5,
+   "linea": 10,
    "en": 0.4
   },
   {
    "tipo": "susto",
-   "linea": 6,
+   "linea": 12,
    "en": "fin",
    "mas": 0.05
   }
@@ -223,7 +326,7 @@
   "where are you"
  ],
  "gancho": {
-  "cena": 6,
+  "cena": 12,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8

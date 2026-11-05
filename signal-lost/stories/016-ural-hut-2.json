@@ -32,7 +32,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "Just the wind, and something breathing against the wall.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Pavel, the biggest of us, wanted to go look.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He said: it's an animal, Mira. Let me check.",
    "pausa": 0.6
   },
   {
@@ -40,7 +48,19 @@
    "pausa": 0.6
   },
   {
+   "texto": "He sat back down, slowly, and looked at me for a long time.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Nobody slept. Every hour, I counted. Four. Always four.",
+   "pausa": 0.6
+  },
+  {
    "texto": "At 2:30, my phone found one bar of signal.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I stood on the bench and held the phone to the window.",
    "pausa": 0.6
   },
   {
@@ -52,7 +72,15 @@
    "pausa": 0.8
   },
   {
+   "texto": "I read it twice. My hands were shaking.",
+   "pausa": 0.6
+  },
+  {
    "texto": "They came down to the village at sunset. Safe.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I looked at the three faces around the stove.",
    "pausa": 0.6
   },
   {
@@ -85,6 +113,25 @@
   },
   {
    "linea": 1,
+   "comp": "f_cabana",
+   "p": {
+    "pegadas": 1,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "1:14",
+     "ampm": "AM",
+     "lugar": "Ural Pass",
+     "sinal": 0
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "breathing",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 2,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -105,7 +152,22 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "pessoa": {
+     "pele": "#e8c4a6",
+     "cabelo": "#3a2a1e",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#8a3a2e",
+     "detalhe": "#e6f1f2"
+    }
+   }
+  },
+  {
+   "linea": 4,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -133,7 +195,56 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 5,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "2:30",
+     "ampm": "AM",
+     "lugar": "Ural Pass",
+     "sinal": 1
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "COUNT: 4",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166"
+    }
+   }
+  },
+  {
+   "linea": 7,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -161,7 +272,30 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 8,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "2:30",
+     "ampm": "AM",
+     "lugar": "Ural Pass",
+     "sinal": 1
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166"
+    }
+   }
+  },
+  {
+   "linea": 9,
    "comp": "f_estacao_polar",
    "p": {
     "cartao": {
@@ -172,7 +306,7 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 10,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -195,7 +329,24 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 11,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "expressao": "surpresa"
+    }
+   }
+  },
+  {
+   "linea": 12,
    "comp": "f_estrada_nevoa",
    "p": {
     "cartao": {
@@ -206,7 +357,7 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 14,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -227,7 +378,33 @@
    }
   },
   {
-   "linea": 8,
+   "linea": 14,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "three faces",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 15,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -249,7 +426,7 @@
    }
   },
   {
-   "linea": 9,
+   "linea": 16,
    "comp": "texto",
    "p": {
     "hud": false,
@@ -263,12 +440,12 @@
  "eventos": [
   {
    "tipo": "golpe",
-   "linea": 5,
+   "linea": 10,
    "en": 0.4
   },
   {
    "tipo": "susto",
-   "linea": 8,
+   "linea": 15,
    "en": "fin",
    "mas": 0.05
   }
@@ -285,7 +462,7 @@
   "count again"
  ],
  "gancho": {
-  "cena": 8,
+  "cena": 15,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8

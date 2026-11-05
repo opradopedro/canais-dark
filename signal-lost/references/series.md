@@ -52,3 +52,5 @@ Cenas: peça nova `mina` (p.agua, p.lampada, p.parpadeo, p.fundo, p.pisca, p.cim
 - SV021 parte 1/3: trem das 11:40 (20 min, 6 paradas) anda 40 min sem parar, todos dormem; porta abre em "Harlow", sem cidade; homem acena; SMS da irmã "where are you?". FEITO
 - SV022 parte 2/3: ela desce, trem some sem som; homem: "espere comigo o trem do amanhecer"; irmã: "ande na direção do barulho" (tambor e sino); mapa mostra campo vazio. FEITO
 - SV023 parte 3/3: segue o tambor pelos trilhos, homem chama cada vez mais baixo; recusa carona de estranho; 5:12 posto de verdade; celular volta: passaram 11 dias; a irmã registrou o sumiço na 1ª noite e nunca mandou aquelas mensagens. FEITO
+
+> 05/11/2026: SV015-SV023 (ainda nao publicados) alongados para 1min30-2min por parte (REGRA do Pedro, ROTEIROS.md "Duracao").

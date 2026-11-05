@@ -32,7 +32,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "But the three of them were still there. I could see them.",
+   "pausa": 0.6
+  },
+  {
    "texto": "But I could still hear three people breathing.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I looked back at the door, at the rules carved in the wood.",
    "pausa": 0.6
   },
   {
@@ -44,11 +52,27 @@
    "pausa": 0.8
   },
   {
+   "texto": "Something joined us in the very first hour. Then two more, one by one.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "My friends were never in the hut. I came in alone.",
+   "pausa": 0.6
+  },
+  {
    "texto": "I climbed out the back window, into the snow.",
    "pausa": 0.6
   },
   {
+   "texto": "Nobody followed. But behind me, a voice counted: one, two, three.",
+   "pausa": 0.6
+  },
+  {
    "texto": "I skied down in the dark for three hours.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I didn't look back. Not once, not even when it called my name.",
    "pausa": 0.6
   },
   {
@@ -100,13 +124,41 @@
    "p": {
     "cartao": {
      "tipo": "rotulo",
+     "titulo": "still there",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_cabana",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
      "titulo": "3 people breathing",
      "y": 0.24
     }
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "olhar": 1
+    }
+   }
+  },
+  {
+   "linea": 4,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -134,7 +186,7 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 5,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -157,14 +209,68 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "joined",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166",
+     "expressao": "surpresa"
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#f1d2b8",
+     "cabelo": "#c9a36a",
+     "cabeloTipo": "longo",
+     "chapeu": "touca",
+     "corChapeu": "#d64545",
+     "roupa": "#2c6a8a",
+     "detalhe": "#ffd166"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "alone",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 8,
    "comp": "f_cabana",
    "p": {
     "pegadas": 1
    }
   },
   {
-   "linea": 5,
+   "linea": 9,
+   "comp": "f_cabana",
+   "p": {
+    "pegadas": 1
+   }
+  },
+  {
+   "linea": 10,
    "comp": "f_floresta",
    "p": {
     "hud": {
@@ -177,7 +283,25 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 10,
+   "comp": "f_floresta",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "5:40",
+     "ampm": "AM",
+     "lugar": "the slope",
+     "sinal": 2
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "one, two, three",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 12,
    "comp": "f_cabana",
    "p": {
     "hud": {
@@ -195,7 +319,20 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 12,
+   "comp": "f_floresta",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "5:40",
+     "ampm": "AM",
+     "lugar": "the slope",
+     "sinal": 2
+    }
+   }
+  },
+  {
+   "linea": 13,
    "comp": "texto",
    "p": {
     "hud": false,
@@ -206,7 +343,7 @@
    }
   },
   {
-   "linea": 8,
+   "linea": 14,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -234,7 +371,7 @@
   },
   {
    "tipo": "susto",
-   "linea": 7,
+   "linea": 13,
    "en": "fin",
    "mas": 0.05
   }
@@ -251,7 +388,7 @@
   "counts"
  ],
  "gancho": {
-  "cena": 7,
+  "cena": 14,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8

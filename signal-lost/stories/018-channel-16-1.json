@@ -36,7 +36,15 @@
    "pausa": 0.8
   },
   {
+   "texto": "Three people on board. They were never found.",
+   "pausa": 0.6
+  },
+  {
    "texto": "I'm Eli, thirty-one. I run the lighthouse radio in Maine.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Nights here are long. Fog, static, coffee, and me.",
    "pausa": 0.6
   },
   {
@@ -44,7 +52,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "He made me repeat them before he gave me the keys.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Answer every mayday. Keep the light turning. Never answer the Marguerite.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I asked about the Marguerite. He just walked to his truck.",
    "pausa": 0.6
   },
   {
@@ -52,8 +68,20 @@
    "pausa": 0.6
   },
   {
+   "texto": "The lamp up top kept turning. The radio buzzed back to life.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Channel sixteen crackled: Mayday, Marguerite, three souls aboard.",
    "pausa": 0.8
+  },
+  {
+   "texto": "I knew that name. It's on the memorial by the harbor.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Before I could think, my hand was on the microphone.",
+   "pausa": 0.6
   },
   {
    "texto": "Out on the water, a light blinked back at me.",
@@ -92,6 +120,17 @@
   },
   {
    "linea": 2,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "MARGUERITE",
+     "sank · 1987"
+    ]
+   }
+  },
+  {
+   "linea": 3,
    "comp": "retrato",
    "p": {
     "cartao": {
@@ -112,7 +151,12 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 4,
+   "comp": "f_farol",
+   "p": {}
+  },
+  {
+   "linea": 5,
    "comp": "f_farol",
    "p": {
     "cartao": {
@@ -123,7 +167,27 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "repeat the rules",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#8d5a3b",
+     "cabelo": "#1c1410",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#2b4a5e",
+     "detalhe": "#ffd166",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 7,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -149,7 +213,27 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 8,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "no answer",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#8d5a3b",
+     "cabelo": "#1c1410",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#2b4a5e",
+     "detalhe": "#ffd166",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 9,
    "comp": "f_farol",
    "p": {
     "cartao": {
@@ -160,7 +244,12 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 10,
+   "comp": "f_farol",
+   "p": {}
+  },
+  {
+   "linea": 11,
    "comp": "f_radio",
    "p": {
     "voz": 1,
@@ -173,14 +262,48 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 12,
+   "comp": "f_radio",
+   "p": {
+    "voz": 1,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "3:07",
+     "ampm": "AM",
+     "lugar": "Pike Head Light",
+     "sinal": 0
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the harbor memorial",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#8d5a3b",
+     "cabelo": "#1c1410",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#2b4a5e",
+     "detalhe": "#ffd166",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 14,
    "comp": "f_farol",
    "p": {
     "barco": 1
    }
   },
   {
-   "linea": 8,
+   "linea": 15,
    "comp": "texto",
    "p": {
     "hud": false,
@@ -199,7 +322,7 @@
   },
   {
    "tipo": "susto",
-   "linea": 7,
+   "linea": 14,
    "en": "fin",
    "mas": 0.05
   }
@@ -216,7 +339,7 @@
   "three short"
  ],
  "gancho": {
-  "cena": 7,
+  "cena": 14,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8

@@ -32,7 +32,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "The rails were rusty, like no train had passed in years.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Behind me, the man kept calling my name. Softer each time.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I didn't turn around. I don't think he could leave that platform.",
    "pausa": 0.6
   },
   {
@@ -40,11 +48,23 @@
    "pausa": 0.6
   },
   {
+   "texto": "The drum stopped the moment I reached it.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Then a car stopped. A stranger offered me a ride.",
    "pausa": 0.7
   },
   {
+   "texto": "He knew my name too. He said: your sister sent me.",
+   "pausa": 0.6
+  },
+  {
    "texto": "I said no, and kept walking.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The car followed me, lights off, for a mile. Then it was gone.",
    "pausa": 0.6
   },
   {
@@ -52,8 +72,16 @@
    "pausa": 0.7
   },
   {
+   "texto": "The clerk dropped his coffee when I walked in.",
+   "pausa": 0.6
+  },
+  {
    "texto": "My phone came back on. It had been eleven days.",
    "pausa": 0.9
+  },
+  {
+   "texto": "My face was on a poster by the door.",
+   "pausa": 0.6
   },
   {
    "texto": "My sister reported me missing the first night.",
@@ -80,6 +108,24 @@
   },
   {
    "linea": 1,
+   "comp": "f_estrada_nevoa",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "12:40",
+     "ampm": "AM",
+     "lugar": "the tracks",
+     "sinal": 0
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "rusty rails",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 2,
    "comp": "f_estacion",
    "p": {
     "cartao": {
@@ -91,7 +137,27 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "don't turn around",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#2a1a12",
+     "cabeloTipo": "coque",
+     "roupa": "#4a7a8a",
+     "detalhe": "#e6f1f2",
+     "expressao": "bravo"
+    }
+   }
+  },
+  {
+   "linea": 4,
    "comp": "f_estrada_nevoa",
    "p": {
     "cartao": {
@@ -102,7 +168,12 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 5,
+   "comp": "f_estrada_nevoa",
+   "p": {}
+  },
+  {
+   "linea": 6,
    "comp": "f_carretera",
    "p": {
     "veiculo": "camioneta",
@@ -115,7 +186,14 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 7,
+   "comp": "f_carretera",
+   "p": {
+    "veiculo": "camioneta"
+   }
+  },
+  {
+   "linea": 8,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -135,7 +213,14 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 9,
+   "comp": "f_carretera",
+   "p": {
+    "veiculo": "camioneta"
+   }
+  },
+  {
+   "linea": 10,
    "comp": "f_posto",
    "p": {
     "hud": {
@@ -149,7 +234,21 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 11,
+   "comp": "f_posto",
+   "p": {
+    "hud": {
+     "dia": "Day ?",
+     "hora": "5:12",
+     "ampm": "AM",
+     "lugar": "Route 2",
+     "sinal": 2
+    },
+    "placa": "OPEN 24H"
+   }
+  },
+  {
+   "linea": 12,
    "comp": "f_telefono",
    "p": {
     "tipo": "celular",
@@ -158,7 +257,27 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 13,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "MISSING",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#c98d5f",
+     "cabelo": "#2a1a12",
+     "cabeloTipo": "coque",
+     "roupa": "#4a7a8a",
+     "detalhe": "#e6f1f2",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 14,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -178,7 +297,7 @@
    }
   },
   {
-   "linea": 8,
+   "linea": 15,
    "comp": "f_telefono",
    "p": {
     "tipo": "celular",
@@ -190,12 +309,12 @@
  "eventos": [
   {
    "tipo": "golpe",
-   "linea": 6,
+   "linea": 12,
    "en": 0.5
   },
   {
    "tipo": "susto",
-   "linea": 8,
+   "linea": 15,
    "en": "fin",
    "mas": 0.05
   }
@@ -212,7 +331,7 @@
   "never sent"
  ],
  "gancho": {
-  "cena": 8,
+  "cena": 15,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8

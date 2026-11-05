@@ -32,12 +32,24 @@
    "pausa": 0.6
   },
   {
+   "texto": "I don't know why. My legs just moved.",
+   "pausa": 0.6
+  },
+  {
    "texto": "The train left without a sound.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "No wheels. No horn. It just slid into the dark.",
    "pausa": 0.6
   },
   {
    "texto": "The man said: next train is at dawn. Wait with me.",
    "pausa": 0.7
+  },
+  {
+   "texto": "His coat was old, and his shoes were dry. It had been raining all night.",
+   "pausa": 0.6
   },
   {
    "texto": "I asked where we were. He only smiled.",
@@ -48,12 +60,28 @@
    "pausa": 0.8
   },
   {
+   "texto": "How did she know where I was? I never told her.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Far away, I heard a drum, and a bell.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "It was far away, and it was the only sound in the world.",
    "pausa": 0.6
   },
   {
    "texto": "The man said: don't walk toward that. Stay here.",
    "pausa": 0.8
+  },
+  {
+   "texto": "He wasn't smiling anymore. He stepped between me and the noise.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I opened my phone to call a cab.",
+   "pausa": 0.6
   },
   {
    "texto": "My map loaded. The blue dot was in an empty field.",
@@ -82,6 +110,19 @@
    "linea": 1,
    "comp": "f_estacion",
    "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "12:22",
+     "ampm": "AM",
+     "lugar": "Harlow",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_estacion",
+   "p": {
     "cartao": {
      "tipo": "rotulo",
      "titulo": "no sound",
@@ -90,7 +131,12 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "f_estacion",
+   "p": {}
+  },
+  {
+   "linea": 4,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -112,7 +158,32 @@
    }
   },
   {
-   "linea": 3,
+   "linea": 5,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#d8b89a",
+     "cabelo": "#202020",
+     "cabeloTipo": "curto",
+     "chapeu": "chapeu",
+     "roupa": "#1c2530",
+     "detalhe": "#c0c0c0",
+     "expressao": "sorriso"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "dry shoes",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 6,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -132,7 +203,7 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 7,
    "comp": "f_telefono",
    "p": {
     "tipo": "celular",
@@ -141,7 +212,16 @@
    }
   },
   {
-   "linea": 5,
+   "linea": 8,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "celular",
+    "quien": "Sis",
+    "texto": "walk toward the noise"
+   }
+  },
+  {
+   "linea": 9,
    "comp": "f_estrada_nevoa",
    "p": {
     "cartao": {
@@ -152,7 +232,12 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 10,
+   "comp": "f_estrada_nevoa",
+   "p": {}
+  },
+  {
+   "linea": 11,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -174,7 +259,36 @@
    }
   },
   {
-   "linea": 7,
+   "linea": 12,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#d8b89a",
+     "cabelo": "#202020",
+     "cabeloTipo": "curto",
+     "chapeu": "chapeu",
+     "roupa": "#1c2530",
+     "detalhe": "#c0c0c0",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "celular",
+    "quien": "Sis",
+    "texto": "walk toward the noise"
+   }
+  },
+  {
+   "linea": 14,
    "comp": "f_objeto",
    "p": {
     "obj": "celular",
@@ -183,7 +297,7 @@
    }
   },
   {
-   "linea": 8,
+   "linea": 15,
    "comp": "texto",
    "p": {
     "hud": false,
@@ -197,12 +311,12 @@
  "eventos": [
   {
    "tipo": "golpe",
-   "linea": 6,
+   "linea": 11,
    "en": 0.4
   },
   {
    "tipo": "susto",
-   "linea": 7,
+   "linea": 14,
    "en": "fin",
    "mas": 0.05
   }
@@ -218,7 +332,7 @@
   "empty field"
  ],
  "gancho": {
-  "cena": 7,
+  "cena": 14,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8

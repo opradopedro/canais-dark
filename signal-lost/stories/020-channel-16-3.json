@@ -33,7 +33,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "The beam froze, pointing straight out at the open sea.",
+   "pausa": 0.6
+  },
+  {
    "texto": "The motor was fine. Something was holding the lens.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The lamp room was freezing, and it smelled like salt water.",
    "pausa": 0.6
   },
   {
@@ -41,11 +49,23 @@
    "pausa": 0.6
   },
   {
+   "texto": "The glass was wet. Small handprints, all over it.",
+   "pausa": 0.6
+  },
+  {
    "texto": "Downstairs, a woman's voice kept saying: almost there.",
    "pausa": 0.8
   },
   {
+   "texto": "I pushed and pushed, until my shoulders burned.",
+   "pausa": 0.6
+  },
+  {
    "texto": "The lens moved. The beam swept the water.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I swept it toward the rocks, toward the voice.",
    "pausa": 0.6
   },
   {
@@ -57,7 +77,15 @@
    "pausa": 0.6
   },
   {
+   "texto": "The radio went silent. The storm was gone by five.",
+   "pausa": 0.6
+  },
+  {
    "texto": "At dawn, I found the old logbook. 1987.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Last entry, in the old keeper's hand: lamp off at four. They asked nicely.",
    "pausa": 0.6
   },
   {
@@ -86,6 +114,19 @@
   },
   {
    "linea": 1,
+   "comp": "f_farol",
+   "p": {
+    "hud": {
+     "dia": "Night 1",
+     "hora": "4:00",
+     "ampm": "AM",
+     "lugar": "Pike Head Light",
+     "sinal": 0
+    }
+   }
+  },
+  {
+   "linea": 2,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -106,12 +147,44 @@
    }
   },
   {
-   "linea": 2,
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "janela": false,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "salt water",
+     "y": 0.14
+    },
+    "pessoa": {
+     "pele": "#8d5a3b",
+     "cabelo": "#1c1410",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#2b4a5e",
+     "detalhe": "#ffd166",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 4,
    "comp": "f_farol",
    "p": {}
   },
   {
-   "linea": 3,
+   "linea": 5,
+   "comp": "f_farol",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "small handprints",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 6,
    "comp": "f_radio",
    "p": {
     "voz": 1,
@@ -124,14 +197,28 @@
    }
   },
   {
-   "linea": 4,
+   "linea": 7,
    "comp": "f_farol",
    "p": {
     "barco": 1
    }
   },
   {
-   "linea": 5,
+   "linea": 8,
+   "comp": "f_farol",
+   "p": {
+    "barco": 1
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_farol",
+   "p": {
+    "barco": 1
+   }
+  },
+  {
+   "linea": 10,
    "comp": "f_farol",
    "p": {
     "barco": 1,
@@ -143,12 +230,19 @@
    }
   },
   {
-   "linea": 6,
+   "linea": 11,
    "comp": "f_farol",
    "p": {}
   },
   {
-   "linea": 7,
+   "linea": 12,
+   "comp": "f_radio",
+   "p": {
+    "voz": 1
+   }
+  },
+  {
+   "linea": 13,
    "comp": "f_objeto",
    "p": {
     "obj": "livro",
@@ -163,7 +257,22 @@
    }
   },
   {
-   "linea": 8,
+   "linea": 14,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "livro",
+    "rotulo": "LOGBOOK · 1987",
+    "hud": {
+     "dia": "Day 2",
+     "hora": "6:15",
+     "ampm": "AM",
+     "lugar": "Pike Head Light",
+     "sinal": 2
+    }
+   }
+  },
+  {
+   "linea": 15,
    "comp": "retrato",
    "p": {
     "janela": false,
@@ -197,7 +306,7 @@
   },
   {
    "tipo": "susto",
-   "linea": 5,
+   "linea": 10,
    "en": "fin",
    "mas": 0.05
   }
@@ -214,7 +323,7 @@
   "rule two"
  ],
  "gancho": {
-  "cena": 5,
+  "cena": 10,
   "evento": "susto",
   "mas": 0.3,
   "dur": 0.8
