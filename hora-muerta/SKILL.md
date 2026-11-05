@@ -85,6 +85,9 @@ Siga o passo a passo de [../painel/README.md](../painel/README.md) com `C = hm`:
 
 ## Escrever uma série nova
 
+> **Duração (Pedro, 05/11):** cada parte tem 1min30 a 2 min (150–185 palavras, 16–22 frases). Vale por cima dos
+> números antigos abaixo (40–58 s, 7–9 frases). Ver seção "Duração" do `ROTEIROS.md`.
+
 > **Estilo novo (Pedro, 01/11):** séries novas usam `"visual": "flat"` e o jeito de contar do `ESTILO-VISUAL.md`
 > (raiz do repo) e da seção "Estilo novo" do `ROTEIROS.md`. Isso vale por cima do que estiver diferente abaixo.
 
@@ -92,7 +95,7 @@ Siga o passo a passo de [../painel/README.md](../painel/README.md) com `C = hm`:
 Um arquivo por parte: `stories/NNN-slug-P.json` (NNN = número do código, P = parte), códigos seguidos.
 Use o backlog de [references/temas.md](references/temas.md) e as regras de lá.
 
-- Parte 1 (40 a 55 s): gancho forte, a história cresce e **para no pior momento**. Penúltima frase é o
+- Parte 1 (1min30 a 2 min): gancho forte, a história cresce e **para no pior momento**. Penúltima frase é o
   cliffhanger; a última é sempre `"Parte dos, mañana, {dia_siguiente}."` com a cena
   `{"comp": "texto", "p": {"lineas": ["PARTE 2", "Mañana · {fecha_siguiente}"]}}`. Na descrição: `▶ Parte 2: mañana, {fecha_siguiente}.`
   O `produce.py` troca `{dia_siguiente}` ("jueves") e `{fecha_siguiente}` ("jueves 22") pelo dia em que a próxima parte
@@ -124,7 +127,7 @@ Formato de cada parte:
 }
 ```
 
-- `lineas`: 7 a 9 frases curtas, no máximo 58 s (a voz do Gemini é lenta: ~5 s por frase). `pausa` é o silêncio depois da linha (o `tts.py` multiplica por 1,4 e deixa a voz 10% mais lenta: fala calma e pausada, pedido do Pedro); `vel` só vale no Kokoro. `"piano": 0` no roteiro desliga o piano.
+- `lineas`: 16 a 22 frases curtas, 1min30 a 2 min (150–185 palavras; a voz do Gemini é lenta, ~1,55 palavra/s). `pausa` é o silêncio depois da linha (o `tts.py` multiplica por 1,4 e deixa a voz 10% mais lenta: fala calma e pausada, pedido do Pedro); `vel` só vale no Kokoro. `"piano": 0` no roteiro desliga o piano.
 - `cenas`: cada cena começa 0,25 s antes da linha indicada e vai até a próxima cena.
   `p.zoom` (aproximação lenta, padrão 0.06), `p.fy` (centro do zoom, 0 a 1), `p.niebla`, `p.temblor`.
 - `eventos`: momento = linha + `en` (`inicio`, `fin` ou fração 0 a 1) + `mas` segundos. `dur` opcional.

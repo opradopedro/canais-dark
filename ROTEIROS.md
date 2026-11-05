@@ -32,7 +32,7 @@ saem a 3 e a 4 e logo depois entra a minha."
 ## Os canais
 | Pasta | Canal | Formato | Código |
 |---|---|---|---|
-| `signal-lost/` | Signal Lost (EN) | terror de sobrevivência, séries de 3 a 4 partes, 1/dia às 19h NY | `SVnnn` |
+| `signal-lost/` | Signal Lost (EN) | terror de sobrevivência, séries de 2 a 3 partes (1min30–2min cada), 1/dia às 19h NY | `SVnnn` |
 | `old-tales/` | Old Tales (EN) | histórias e contos antigos: um dia na época (medieval etc.), soldado (Esparta, Roma...) e mitos (China/Wukong em destaque), 1/dia ao meio-dia NY | `CLnnn` |
 | `hora-muerta/` | Hora Muerta (ES) | terror, séries de 2 partes | `HMnnn` |
 | `so-you-built-it/` | So You Built It (EN) | engenharia 3D, formatos Evolucao e Curiosidade | `YBnnn` |
@@ -64,6 +64,23 @@ cada canal: "só se inspire, não faça exatamente igual". Guia completo: **`EST
   fórmula, nem trem/maquinista/zumbi.
 - Modelos prontos para copiar: `hora-muerta/stories/021-*` a `024-*`, `signal-lost/stories/012-*` a `014-*`,
   `old-tales/stories/013-*` a `015-*`.
+
+## Duração (REGRA do Pedro, 05/11: "a pessoa entende a história e o vídeo acaba")
+Vale por cima de qualquer número antigo (prompt, SKILL.md, temas.md) que fale em "8 frases", "40 a 58 s" ou "35 a 50 s".
+
+| Canal | Duração | Palavras faladas | Frases |
+|---|---|---|---|
+| So You Built It | ~1 min (55–75 s); pode ir até ~90 s se o tema pedir | 170–210 (fiscal aceita 165–280) | 14–18 |
+| Hora Muerta, Signal Lost, Old Tales | 1min30 a 2 min, CADA parte | 150–185 (fiscal aceita 135–195) | 16–22 |
+
+- Medido nos vídeos prontos: a voz do SYBI fala ~3,1 palavras/s; a das histórias ~1,55 palavras/s (lenta, com pausas).
+- O fiscal conta as palavras a partir de YB048, HM037, SV024 e CL031 (os roteiros anteriores já estavam escritos).
+- O tempo a mais é para a história **respirar**, não para encher: mais detalhe concreto, mais um obstáculo, mais
+  uma regra quebrada, o personagem tentando algo antes da virada. Continue com frases curtas e um plano por linha.
+- Séries continuam com **no mínimo 2 partes** e gancho de "quero mais" no fim de cada parte não final. Com partes
+  maiores, prefira séries de 2 a 3 partes (4 só em história muito longa).
+- O último susto continua na **penúltima** frase (trava de chiado no fim) e a legenda continua presa na voz.
+- Shorts aceita até 3 min: nunca passe de ~2min10 numa parte.
 
 ## Estoque mínimo (REGRA do Pedro, 03/11: "nunca mais" aviso de ESTOQUE BAIXO)
 - Cada canal precisa ter SEMPRE pelo menos **10 dias** de roteiros prontos em `stories/` que ainda não subiram
@@ -106,7 +123,8 @@ O resumo de cada parte tem que bastar para outra pessoa escrever aquela parte se
 ## Passo 3: o fiscal (obrigatório antes de cada push)
 `python motor-en/validar_roteiros.py` precisa terminar em `ROTEIROS OK`. Ele pega código repetido, peça de
 cena que não existe, série quebrada, falta de `{when_next}`, Old Tales sem tema calmo/epico/mito. O GitHub roda o mesmo
-fiscal em todo push e a produção diária não usa canal com roteiro quebrado.
+fiscal em todo push e a produção diária não usa canal com roteiro quebrado. Ele também barra roteiro novo fora da
+duração (seção "Duração").
 
 ## Enviar
 ```

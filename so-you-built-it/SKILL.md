@@ -50,7 +50,7 @@ Voz: Gemini `Puck` com as tags `[excited] [energetic]` e 6% mais rápida: animad
 com `--subir` o script para com `VOZ FALHOU`. Sessão ligada ao computador do Pedro não alcança as APIs do Google:
 produza e suba numa sessão sem dispositivo (a rotina).
 
-Tempo: o render em CPU leva uns 15 a 25 min por vídeo de 40 s. Cota do YouTube: 1.600 unidades por upload.
+Tempo: o render em CPU leva uns 15 a 25 min por vídeo de 40 s (uns 25 a 40 min no de 1 min). Cota do YouTube: 1.600 unidades por upload.
 
 ## Conferência obrigatória antes de subir (pedidos do Pedro, 23/10)
 
@@ -115,7 +115,8 @@ código `YBNNN` seguido. Exemplos completos: `stories/001-septic.json` e `storie
 }
 ```
 
-- 9 a 11 frases curtas, 35 a 50 s. Curiosidade: abre com a pergunta, derruba um mito, mostra o mecanismo por
+- 14 a 18 frases curtas, ~1 min (170–210 palavras; pode ir até ~90 s se o tema pedir; REGRA do Pedro, 05/11). O tempo a mais
+  mostra mais uma etapa ou mais um "por dentro", não enrolação. Curiosidade: abre com a pergunta, derruba um mito, mostra o mecanismo por
   dentro e fecha com "Now you know".
 - **Evolucao: sempre o problema ANTES da solução** (regra do Pedro, 23/10). A primeira frase diz a necessidade
   ("Your house needs somewhere to send its sewage."), só então vem a solução simples e "Problem solved!".

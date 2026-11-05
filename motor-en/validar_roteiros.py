@@ -10,6 +10,7 @@ Sai com erro (e o GitHub fica vermelho) se achar:
   - serie quebrada (parte faltando, "anterior" errado)
   - parte que promete a seguinte sem o marcador {when_next}
   - Old Tales sem "tema" calmo/epico/mito ou com paleta de epoca que nao existe
+  - roteiro novo curto ou longo demais (REGRA do Pedro, 05/11: SYBI ~1 min, historias 1min30 a 2 min)
 """
 import glob, json, os, re, sys
 
@@ -27,6 +28,26 @@ TEMAS_CL = {"calmo", "epico", "mito"}
 PALETAS_CL = {None, "grecia", "china", "roma", "nordico", "egito", "japao"}  # roma/nordico/egito/japao: PALS.cl_<nome> vem dos pacotes 14-17 (KIRO-PROMPT.md)
 FLAT_DESDE = {"hora-muerta": 21, "signal-lost": 12, "old-tales": 13}
 PECAS_FLAT_FIXAS = {"retrato", "texto"}
+
+# REGRA do Pedro (05/11): videos mais longos. "a pessoa entende a historia e o video acaba".
+# So You Built It ~1 min (pode passar se o tema pedir); historias (HM, SV, CL) 1min30 a 2 min. Shorts aceita ate 3 min.
+# Medido nos videos prontos: a voz do SYBI fala ~3,1 palavras/s; a das historias ~1,55 palavras/s (lenta, com pausas).
+# canal -> (codigo a partir do qual vale, min palavras, max palavras). Roteiros anteriores (estoque de 05/11) ficam como estao.
+DURACAO_DESDE = {
+    "so-you-built-it": (48, 165, 280),  # ~55 s a ~90 s; o ideal e 170-210 palavras (~1 min)
+    "hora-muerta": (37, 135, 195),      # ~1min30 a ~2min05
+    "signal-lost": (24, 135, 195),
+    "old-tales": (31, 135, 195),
+}
+MARCADOR_PALAVRAS = 3  # {when_next}/{dia_siguiente} viram ~3 palavras faladas ("tomorrow, Thursday")
+
+
+def palavras(lineas):
+    total = 0
+    for l in lineas:
+        t = l if isinstance(l, str) else (l.get("texto") or "")
+        total += len(re.sub(r"\{\w+\}", "", t).split()) + MARCADOR_PALAVRAS * len(re.findall(r"\{\w+\}", t))
+    return total
 
 
 def _motor_txt(engine):
@@ -107,6 +128,12 @@ def conferir(canal, engine):
             velhas = sorted({c.get("comp") for c in h.get("cenas") or []} - PECAS_FLAT)
             if velhas:
                 erros.append(f"{n}: pecas do estilo antigo {velhas}; use so pecas flat (f_*, retrato, texto)")
+        if canal in DURACAO_DESDE and num >= DURACAO_DESDE[canal][0]:
+            _, pmin, pmax = DURACAO_DESDE[canal]
+            pw = palavras(lineas)
+            if not pmin <= pw <= pmax:
+                alvo = "~1 min" if canal == "so-you-built-it" else "1min30 a 2 min"
+                erros.append(f"{n}: {pw} palavras faladas; o video tem que dar {alvo} ({pmin} a {pmax} palavras, ROTEIROS.md 'Duracao')")
         if canal == "signal-lost" and h.get("visual") == "flat" and h.get("paleta") != "sv":
             erros.append(f"{n}: Signal Lost no estilo flat precisa de \"paleta\": \"sv\"")
         partes, parte = int(h.get("partes", 1) or 1), int(h.get("parte", 1) or 1)

@@ -53,7 +53,7 @@ legenda branca com amarelo; azul-marinho com faixa laranja no uniforme; trem/maq
 
 ## 3. Jeito de contar (nosso, inspirado)
 
-Estrutura de uma parte (40–58 s no Hora Muerta; tempo do canal no Old Tales):
+Estrutura de uma parte (1min30 a 2 min em HM, SV e CL; regra de 05/11, ROTEIROS.md "Duração"):
 
 | Momento | O que faz | Hora Muerta (exemplo) | Old Tales (exemplo) |
 |---|---|---|---|

@@ -86,6 +86,9 @@ subir se nao bater.
 
 ## Escrever uma serie nova
 
+> **Duração (Pedro, 05/11):** cada parte tem 1min30 a 2 min (150–185 palavras, 16–22 frases). Vale por cima dos
+> números antigos abaixo (40–58 s, 7–9 frases). Ver seção "Duração" do `ROTEIROS.md`.
+
 > **Estilo novo (Pedro, 01/11):** toda série nova usa `"visual": "flat"` + `"paleta": "sv"` e o jeito de contar do
 > `ESTILO-VISUAL.md` e da seção "Estilo novo" do `ROTEIROS.md` (o fiscal barra o resto a partir de SV012). Vale por cima do que estiver diferente abaixo.
 
@@ -93,7 +96,7 @@ subir se nao bater.
 Um arquivo por parte: `stories/NNN-slug-P.json` (NNN = numero seguido, P = parte). Codigo `SVNNN`.
 Modelo completo e testado: a serie `elevator` (`001` a `004`).
 
-- **Parte 1** (40 a 55 s): gancho forte na primeira frase, a situacao cresce e **para no pior momento**.
+- **Parte 1** (1min30 a 2 min): gancho forte na primeira frase, a situacao cresce e **para no pior momento**.
   A ultima frase e sempre `"Part two, {when_next}."` com a cena
   `{"comp": "texto", "p": {"lineas": ["PART 2", "{next_card}"]}}`.
   Na descricao: `> Part 2: {when_next}.`
@@ -116,7 +119,7 @@ Modelo completo e testado: a serie `elevator` (`001` a `004`).
 - Campos de serie em todas as partes: `"serie"`, `"serie_titulo"` (vira playlist), `"parte"`,
   `"partes"`; da parte 2 em diante, `"anterior": "SV001"` (codigo da parte anterior).
 - `"capa"`: 2 a 5 palavras em maiusculas, **diferentes em cada parte**, sobre o conteudo daquela parte.
-- `lineas`: 7 a 9 frases curtas, no maximo 58 s (a voz do Gemini e lenta, ~5 s por frase).
+- `lineas`: 16 a 22 frases curtas, 1min30 a 2 min (150-185 palavras; a voz do Gemini e lenta, ~1,55 palavra/s).
   `pausa` e o silencio depois da frase; `vel` so vale na voz de reserva.
 - `destaque`: palavras que aparecem em vermelho na legenda. Use as de maior impacto.
 - `gancho`: os primeiros 0,8 s mostram o quadro do susto antes da historia comecar. **Use sempre.**

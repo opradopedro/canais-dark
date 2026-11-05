@@ -71,6 +71,9 @@ Nao comece pela Odisseia: ela e a que exige mais codigo novo. Comece por Macbeth
 
 ## Escrever um roteiro novo
 
+> **Duração (Pedro, 05/11):** cada parte tem 1min30 a 2 min (150–185 palavras, 16–22 frases). Vale por cima dos
+> números antigos abaixo (40–58 s, 7–9 frases). Ver seção "Duração" do `ROTEIROS.md`.
+
 > **Estilo novo (Pedro, 01/11):** séries novas usam `"visual": "flat"` e o jeito de contar do `ESTILO-VISUAL.md`
 > (raiz do repo) e da seção "Estilo novo" do `ROTEIROS.md`. Isso vale por cima do que estiver diferente abaixo.
 
@@ -79,7 +82,7 @@ Mesmo formato do `canal-survival` (ver o SKILL.md dele para os campos, as pecas 
 o marcador `{when_next}` — use sempre ele, nunca escreva "tomorrow" na mao, porque com duas
 publicacoes por dia a parte seguinte pode sair no mesmo dia). Diferencas deste canal:
 
-- **Serie de 2 a 4 partes** por obra. Uma tragedia inteira nao cabe em 50 s: corte em atos.
+- **Serie de 2 a 4 partes** por obra. Cada parte tem 1min30 a 2 min (150-185 palavras); uma tragedia inteira nao cabe: corte em atos.
   Ex.: Macbeth em 3 partes (a profecia / o assassinato / a queda).
 - **Primeira frase = o gancho da historia, nao o nome da obra.** Errado: "Today, Macbeth."
   Certo: "Three witches told him he would be king. So he killed to make it true."
