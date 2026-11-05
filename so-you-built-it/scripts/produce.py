@@ -199,6 +199,14 @@ def fazer(historia, formato_vaga, a, ja, ocupados):
               flush=True)
     vid = None
     if a.subir:
+        # thumbnail personalizada: o canal foi verificado por telefone (05/11). Se a capa falhar, o video sobe igual.
+        try:
+            import capa
+            if capa.gerar([(historia, base + "_capa.jpg", base + "_tempos.json")]):
+                up["miniatura"] = os.path.abspath(base + "_capa.jpg")
+                json.dump(up, open(base + "_upload.json", "w"), ensure_ascii=False, indent=1)
+        except Exception as e:
+            print(f"capa {cod} falhou (o video sobe sem ela): {str(e)[:200]}", flush=True)
         import yt_upload
         vid = yt_upload.subir(base + "_upload.json")["id"]
         ocupados.add(up["publicar_em"][:13])

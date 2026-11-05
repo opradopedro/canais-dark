@@ -93,6 +93,7 @@ O Pedro acompanha, vota, pede mudanças e manda ideias em **https://claude.ai/ar
 | `scripts/legenda_whisper.py` | Whisper: só ajuda o `tts.py` a cortar a voz por linha (não marca mais a legenda) |
 | `scripts/yt_upload.py` | `subir`, `publicados` (códigos YBxxx pela tag) e `canal` (de quem é o token) |
 | `scripts/comum.py` | Converte cenas e eventos do roteiro em segundos |
+| `scripts/capa.py` | Thumbnail 1080x1920: quadro limpo do mundo 3D + texto do campo `capa` (enviada no upload; `--antigas` aplica em todos os Shorts do canal). Canal verificado por telefone em 05/11/2026. Opcional no roteiro: `capa_cena`, `capa_t` |
 
 Marca (logo B, calculadora com capacete, escolhida pelo Pedro): `/mnt/project-files/canal-engenharia/marca/`.
 

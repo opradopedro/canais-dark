@@ -318,6 +318,22 @@ def run_metricas(ctx=None, *_a, **_k):
     raise Skip()
 
 
+def run_capas_yb(ctx=None, *_a, **_k):
+    """Uma vez (05/11, canal verificado por telefone): poe thumbnail personalizada em todos os Shorts do So You Built It."""
+    repo = _repo(); _carregar_env(repo)
+    env = dict(os.environ, YT_TOKEN_VAR=CANAIS["so-you-built-it"]["token"])
+    r = subprocess.run([sys.executable, os.path.join("scripts", "capa.py"), "--antigas", "--saida",
+                        os.path.join(tempfile.gettempdir(), "yb-capas")], cwd=os.path.join(repo, "so-you-built-it"),
+                       env=env, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=3000)
+    texto = "[capas-yb] " + ("OK" if r.returncode == 0 else "FALHOU") + "\n" + (r.stdout or "")[-3000:] + (r.stderr or "")[-1500:]
+    if ctx is None:
+        print(texto)
+        if r.returncode != 0:
+            sys.exit(1)
+        return texto
+    return _entregar(ctx, texto)
+
+
 def run(ctx=None, *_a, **_k):
     """Roda os dois canais, um depois do outro. Use se preferir uma tarefa so."""
     return _entregar(ctx, _rodar("signal-lost") + "\n\n" + _rodar("old-tales"))
@@ -381,7 +397,7 @@ if __name__ == "__main__":
     qual = sys.argv[1] if len(sys.argv) > 1 else "ambos"
     funcoes = {"survival": run_survival, "signal-lost": run_survival, "classics": run_classics,
                "old-tales": run_classics, "hora-muerta": run_hora_muerta, "so-you-built-it": run_so_you_built_it,
-               "metricas": run_metricas, "teste": run_teste}
+               "metricas": run_metricas, "teste": run_teste, "capas-yb": run_capas_yb}
     texto = funcoes.get(qual, run)() or ""
     # no GitHub Actions, falha vira X vermelho e o GitHub manda e-mail ao Pedro. So falha quando o programa do canal
     # falhou de verdade: video barrado mas trocado pelo substituto nao e falha (vira aviso na issue, ver alertar).
