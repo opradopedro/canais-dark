@@ -18,6 +18,7 @@ MOTOR = os.path.join(os.path.dirname(AQUI), "hora-muerta", "scripts")
 sys.path.insert(0, MOTOR); sys.path.insert(0, AQUI)
 from comum import carregar, resolver  # noqa: E402
 import sons  # noqa: E402
+import mix as mix_motor  # noqa: E402  (fim limpo e piano do motor)
 
 SR = 44100
 
@@ -110,6 +111,9 @@ def main(historia, voz, tempos, saida):
                 nome = "golpe_metal"
         if not nome:
             continue
+        if mix_motor.efeito_no_fim(e["t"], dur):  # nada de susto/estrondo no ultimo segundo (05/11)
+            print(f"fim limpo: efeito '{nome}' em {e['t']:.2f}s cairia no fim do video; som tirado (a imagem fica)")
+            continue
         if nome not in cache:
             arq = sons.obter(nome)
             cache[nome] = rms_norm(sons.ler(arq, SR), 0.12) if arq else None
@@ -125,10 +129,10 @@ def main(historia, voz, tempos, saida):
         if i0 < n:
             mix[i0:j] += s[:j - i0] * (0.9 if nome in ("golpe", "golpe_metal") else 0.6)
 
-    mix = mix[:int(dur * SR)]
+    mix = mix_motor.fim_limpo(mix[:int(dur * SR)], dur, SR)
     wt = os.path.join(tmp, "m.wav"); sf.write(wt, mix, SR)
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", wt, "-af",
-                    f"loudnorm=I=-15:TP=-1.5,afade=t=out:st={max(0, dur - 1):.2f}:d=1", "-ar", str(SR),
+                    f"loudnorm=I=-15:TP=-1.5,afade=t=out:st={max(0, dur - 1.3):.2f}:d=1", "-ar", str(SR),
                     "-c:a", "aac", "-b:a", "160k", saida], check=True)
     print("ok", saida)
 

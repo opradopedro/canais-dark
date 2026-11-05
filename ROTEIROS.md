@@ -97,6 +97,9 @@ O resumo de cada parte tem que bastar para outra pessoa escrever aquela parte se
 - Cenas: só peças que existem em `hora-muerta/scripts/engine.html` (`COMP.<nome>`), ou mundos 3D em
   `so-you-built-it/scripts/mundos/`. A lista completa, e como criar um novo, está em **`MUNDOS.md`**: procure lá
   antes de criar. Cenário novo é só ADICIONADO, nunca mude um que outro canal usa.
+- Nada de `susto`/`golpe`/efeito no **fim da última fala** (REGRA do Pedro, 05/11: "chiado alto no último segundo").
+  O último susto vai na penúltima frase. O mix tira o som de efeito nos últimos 2,6 s e `motor-en/checar_fim.py`
+  barra o vídeo com som alto no fim.
 - Prévia grátis (não gasta narração nem pesa o PC): escreva o caminho do roteiro em `.github/previa.txt` e envie
   para a producao; os JPGs saem na Release `previas`. No PC: `python motor-en/previa.py <roteiro> <pasta>`.
   OLHE os JPGs: a cena tem que combinar com o texto.

@@ -192,7 +192,7 @@ def fazer(historia, formato_vaga, a, ja, ocupados):
             continue
         leg, ok = revisar(base, "en")
     if not leg and a.subir:
-        print(f"NAO SUBIU {cod}: LEGENDA FORA DA VOZ depois de {volta} conserto(s)", flush=True)
+        print(f"NAO SUBIU {cod}: LEGENDA FORA DA VOZ ou CHIADO NO FIM depois de {volta} conserto(s)", flush=True)
         return "barrado"
     if not ok and a.subir:
         print(f"AVISO {cod}: o audio nao passou na conferencia depois de {volta} conserto(s); subo mesmo assim",
@@ -225,6 +225,15 @@ def revisar(base, idioma):
             prob = mix.conferir_audio(base + ".mp4")
             print("AUDIO OK" if not prob else "AUDIO COM PROBLEMA: " + "; ".join(prob), flush=True)
             ok &= not prob
+    # TRAVA DO FIM (05/11): chiado/estrondo no ultimo segundo do MP4 final NAO SOBE (motor-en/checar_fim.py)
+    import checar_fim
+    try:
+        fim = checar_fim.conferir(base + ".mp4")
+    except Exception as e:
+        fim = {"ok": False, "motivo": f"nao consegui medir: {str(e)[:150]}"}
+    print(("FIM DO VIDEO OK " if fim["ok"] else "CHIADO NO FIM DO VIDEO ") + json.dumps(fim, ensure_ascii=False), flush=True)
+    if not fim["ok"]:
+        leg = ok = False
     return leg, ok
 
 

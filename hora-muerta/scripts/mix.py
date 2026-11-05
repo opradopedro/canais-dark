@@ -152,6 +152,24 @@ SONS = {"golpe": lambda e: golpe(), "vibra": lambda e: vibra(e.get("dur") or 1.6
         "toc": lambda e: toc()}
 
 
+# FIM LIMPO (Pedro, 05/11: "chiado alto e estridente no ultimo segundo", pedido ~15 vezes). A causa era o efeito
+# "susto" (ruido + boom + apito de 1,8-2,2 kHz, 1,1 s) marcado no FIM da ultima frase: so sobram 1,2 s de silencio
+# depois dela, entao o susto inteiro tocava no ultimo segundo, mais alto que a voz. Agora nenhum efeito comeca nos
+# ultimos ZONA_FIM segundos, e o som some ate o silencio total antes do fim (o motor-en/checar_fim.py confere no MP4).
+ZONA_FIM = 2.6
+
+
+def efeito_no_fim(t, dur):
+    return t > dur - ZONA_FIM
+
+
+def fim_limpo(mix, dur, sr=SR):
+    """Do fim da fala (dur - 1,2 s) ate 0,3 s antes do fim o som desce a zero; o ultimo 0,3 s e silencio."""
+    t = np.arange(len(mix)) / sr
+    a, b = dur - 1.2, dur - 0.3
+    return (mix * np.clip((b - t) / max(0.1, b - a), 0, 1)).astype(np.float32)
+
+
 def main(historia, voz, tempos, saida):
     h = carregar(historia); tm = json.load(open(tempos)); r = resolver(h, tm)
     dur = tm["dur"]; n = int(dur * SR)
@@ -176,13 +194,17 @@ def main(historia, voz, tempos, saida):
     if r["gancho"]:
         eventos.append({"tipo": "susto", "t": 0.02})
     for e in eventos:
+        if e["tipo"] in SONS and efeito_no_fim(e["t"], dur):
+            print(f"fim limpo: efeito '{e['tipo']}' em {e['t']:.2f}s cairia no fim do video; som tirado (a imagem fica)")
+            continue
         if e["tipo"] in SONS:
             s = SONS[e["tipo"]](e).astype(np.float32); i = int(e["t"] * SR)
             j = min(len(mix), i + len(s)); mix[i:j] += s[:j - i]
-    mix = mix[:n]
+    mix = fim_limpo(mix[:n], dur)
     wt = os.path.join(tmp, "m.wav"); sf.write(wt, mix, SR)
+    # o loudnorm dinamico sobe o ganho no silencio do fim; o fade depois dele zera os ultimos 0,3 s de novo
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", wt, "-af",
-                    f"loudnorm=I=-15:TP=-1.5,afade=t=out:st={max(0, dur - 1):.2f}:d=1", "-ar", str(SR),
+                    f"loudnorm=I=-15:TP=-1.5,afade=t=out:st={max(0, dur - 1.3):.2f}:d=1", "-ar", str(SR),
                     "-c:a", "aac", "-b:a", "160k", saida], check=True)
     print("ok", saida)
 

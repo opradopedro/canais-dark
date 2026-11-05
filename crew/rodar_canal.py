@@ -208,7 +208,7 @@ def _rodar(canal):
     # resumo: so o que interessa no relatorio do Crew
     importantes = [x for x in linhas if any(
         m in x for m in ("AGENDADO", "PUBLICADO", "FILA CHEIA", "SEM ROTEIRO", "CANAL ERRADO", "CODIGO ERRADO",
-                         "NAO SUBIU", "LEGENDA FORA DA VOZ", "AUDIO COM PROBLEMA", "VOZ FALHOU", "LIMITE DE NARRACOES", "GEMINI FORA DO AR",
+                         "NAO SUBIU", "LEGENDA FORA DA VOZ", "AUDIO COM PROBLEMA", "CHIADO NO FIM", "VOZ FALHOU", "LIMITE DE NARRACOES", "GEMINI FORA DO AR",
                          "canal confirmado", "FUSO NAO ENCONTRADO", "FALTA A VARIAVEL", "POUCA MEMORIA",
                          "FALTA ROTEIRO", "ESTOQUE BAIXO", "SUBSTITUTO", "HORARIO VAZIO"))]
     importantes += estoque(repo, canal, linhas)
