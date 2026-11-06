@@ -1,0 +1,362 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "tower-six",
+ "serie_titulo": "Tower Six | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "fire lookout",
+  "forest horror",
+  "radio horror",
+  "lookout tower",
+  "rules horror"
+ ],
+ "codigo": "SV024",
+ "parte": 1,
+ "titulo": "Tower Six burned down in 1998. It called me tonight 📻 Part 1 #horror #shorts",
+ "capa": "IT BURNED IN 1998",
+ "descripcion": "Cal watches the forest for smoke from Tower Nine. The list by the window has three rules. The third one says never answer Tower Six.\n\n> Part 2: {when_next}.\nWould you answer?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "My job is to sit alone in a tower and watch for smoke.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Forty days at a time, sixty feet above the forest.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I'm Cal, thirty-four, fire lookout at Tower Nine.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "My only company is the radio, and a list taped by the window.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The man before me wrote it. Three rules.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Log every light. Answer every radio check. Never answer Tower Six.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I laughed at the last one. Tower Six burned down in 1998.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Its channel was taken off the radio years ago.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "On my twelfth night, at 2:47 in the morning, the radio clicked.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Tower Nine, this is Tower Six. Radio check.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A calm voice. Old. Very polite.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I didn't answer. I wrote it in the log, like the rules said.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then I looked east, where Tower Six used to stand.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "On top of the ridge, there was a lantern. In a window that doesn't exist anymore.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "It blinked three times, like it knew I was watching.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I kept my hand far away from the radio.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then Tower Six spoke again. Cal, you can see me, can't you?",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_floresta",
+   "p": {
+    "torre": 1,
+    "hud": {
+     "dia": "Night 12",
+     "hora": "2:40",
+     "ampm": "AM",
+     "lugar": "Tower Nine",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_floresta",
+   "p": {
+    "torre": 1,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "60 ft · 40 days",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#d9a77f",
+     "cabelo": "#5a3a22",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#3f5a3a",
+     "detalhe": "#c9b27a",
+     "expressao": "neutro"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Cal, 34",
+     "sub": "fire lookout",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_radio",
+   "p": {
+    "voz": 0
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "bilhete",
+    "rotulo": "THE LIST"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#d9a77f",
+     "cabelo": "#5a3a22",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#3f5a3a",
+     "detalhe": "#c9b27a",
+     "expressao": "neutro"
+    },
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "THE RULES",
+     "itens": [
+      "Log every light",
+      "Answer every radio check",
+      "Never answer Tower Six"
+     ],
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#d9a77f",
+     "cabelo": "#5a3a22",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#3f5a3a",
+     "detalhe": "#c9b27a",
+     "expressao": "sorriso"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Tower Six · burned 1998",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "radio_com",
+    "rotulo": "CHANNEL 6 · OFF"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_radio",
+   "p": {
+    "voz": 0.3,
+    "hud": {
+     "dia": "Night 12",
+     "hora": "2:47",
+     "ampm": "AM",
+     "lugar": "Tower Nine",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_radio",
+   "p": {
+    "voz": 1,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "CH 6",
+     "texto": "Tower Nine, this is Tower Six. Radio check.",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_radio",
+   "p": {
+    "voz": 0.6
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "livro",
+    "rotulo": "2:47 · Tower Six called"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "f_floresta",
+   "p": {
+    "torre": 0,
+    "hud": {
+     "dia": "Night 12",
+     "hora": "2:49",
+     "ampm": "AM",
+     "lugar": "Tower Nine",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "lampiao",
+    "rotulo": "on the ridge",
+    "brilho": 1
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "lampiao",
+    "brilho": 1
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#d9a77f",
+     "cabelo": "#5a3a22",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#3f5a3a",
+     "detalhe": "#c9b27a",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "f_radio",
+   "p": {
+    "voz": 1,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "CH 6",
+     "texto": "Cal, you can see me, can't you?",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Who's Tower Six?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 13,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "smoke",
+  "Cal",
+  "three rules",
+  "Tower Six",
+  "1998",
+  "2:47",
+  "Radio check",
+  "lantern",
+  "blinked",
+  "can't you"
+ ],
+ "gancho": {
+  "cena": 16,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
