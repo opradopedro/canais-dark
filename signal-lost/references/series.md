@@ -54,3 +54,13 @@ Cenas: peça nova `mina` (p.agua, p.lampada, p.parpadeo, p.fundo, p.pisca, p.cim
 - SV023 parte 3/3: segue o tambor pelos trilhos, homem chama cada vez mais baixo; recusa carona de estranho; 5:12 posto de verdade; celular volta: passaram 11 dias; a irmã registrou o sumiço na 1ª noite e nunca mandou aquelas mensagens. FEITO
 
 > 05/11/2026: SV015-SV023 (ainda nao publicados) alongados para 1min30-2min por parte (REGRA do Pedro, ROTEIROS.md "Duracao").
+
+## Semana de 7/11 a 20/11/2026 — por: claude (rotina de sexta, 06/11). Estoque antes: SV013/SV014 agendados + SV015-SV023 = 11 dias. Esta série fecha 14 dias.
+
+## SV024-SV026 Tower Six — origem: autoral
+- Gancho: ofício curioso ("my job is to sit alone in a tower and watch for smoke"). Peças: `f_floresta` (torre, ojos), `f_radio` (voz), `f_objeto` (lampiao, radio_com, bilhete, livro), `f_telefono`, `retrato`, `texto`. Cal, 34, vigia de incêndio da Tower Nine (barba curta, camisa verde).
+- Regras do vigia anterior, coladas na janela: log every light / answer every radio check / never answer Tower Six (torre que queimou em 1998; frequência desativada).
+- SV024 parte 1/3: 12ª noite, 2:47 AM, rádio: "Tower Nine, this is Tower Six. Radio check." Ele não responde, anota; lampião aceso no topo do morro onde a torre não existe mais; pisca 3 vezes; "Cal, you can see me, can't you?". FALTA
+- SV025 parte 2/3: Tower Six sabe o nome dele; ele chama a central no canal real: não há torre lá, e a operadora ouve alguém respirando no microfone dele; 3:20 a luz desce a trilha e sobe a escada da torre (92 degraus); "I'm coming up for the shift change" (não existe troca por 28 dias); no degrau 80 os passos param e batem no alçapão do piso. FALTA
+- SV026 parte 3/3: ele senta no alçapão até o sol; batidas a cada 10 min, com a voz do vigia antigo e depois a dele; 5:58 param; o piloto do helicóptero conta que o vigia anterior anotou o mesmo lampião em 2019, respondeu na 12ª noite e sumiu (diário: "Shift change. Going down to let him in."); relatório de 1998: o vigia da Tower Six esperou uma troca que nunca veio; Cal agora trabalha em outra torre e desliga o rádio às 2:47; acha colada na janela nova uma lista com a letra dele: "Rule four: never open the floor." FALTA
+Tom: tensão de sobrevivência, sem gore; susto na penúltima frase de cada parte.
