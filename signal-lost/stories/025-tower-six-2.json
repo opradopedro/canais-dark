@@ -1,0 +1,351 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "tower-six",
+ "serie_titulo": "Tower Six | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "fire lookout",
+  "forest horror",
+  "radio horror",
+  "lookout tower",
+  "rules horror"
+ ],
+ "codigo": "SV025",
+ "parte": 2,
+ "anterior": "SV024",
+ "titulo": "Someone climbed my tower for the shift change 😰 Part 2 #horror #shorts",
+ "capa": "THERE IS NO SHIFT CHANGE",
+ "descripcion": "Tower Six knew Cal's name. Dispatch says there is no tower on that ridge. And someone is climbing his stairs.\n\n> Part 3: {when_next}.\nWould you open the floor?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "Tower Six knew my name. I never say my name on the radio.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "So I called dispatch, on the real channel.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The night operator said there's no tower on that ridge. Just a burned floor.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then she paused. Cal, who else is up there with you?",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I said nobody. She said she could hear someone breathing on my microphone.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I turned around. The room was empty. Of course it was.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At 3:20, the light on the ridge was gone.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "There was a lantern on the trail below my tower instead. Moving. Climbing.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Rule one. Log every light. My hand shook so hard I could barely write.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The radio clicked again. Radio check, Tower Nine. I'm coming up for the shift change.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "There is no shift change. Nobody relieves me for twenty-eight more days.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "My tower has ninety-two steps. I started counting the footsteps.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Fifty. Sixty. Seventy. Slow and heavy, like an old man.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At step eighty, the footsteps stopped.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Then someone knocked on the trapdoor in my floor.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#d9a77f",
+     "cabelo": "#5a3a22",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#3f5a3a",
+     "detalhe": "#c9b27a",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "it knew my name",
+     "y": 0.24
+    },
+    "zoomRosto": true
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "celular",
+    "quien": "Dispatch",
+    "texto": "Tower Nine to dispatch. Anyone on the east ridge?"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_radio",
+   "p": {
+    "voz": 0.7,
+    "hud": {
+     "dia": "Night 12",
+     "hora": "3:02",
+     "ampm": "AM",
+     "lugar": "Tower Nine",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_radio",
+   "p": {
+    "voz": 1,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "DISPATCH",
+     "texto": "Cal, who else is up there with you?",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#d9a77f",
+     "cabelo": "#5a3a22",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#3f5a3a",
+     "detalhe": "#c9b27a",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_floresta",
+   "p": {
+    "torre": 1,
+    "hud": {
+     "dia": "Night 12",
+     "hora": "3:10",
+     "ampm": "AM",
+     "lugar": "Tower Nine",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_floresta",
+   "p": {
+    "torre": 0,
+    "hud": {
+     "dia": "Night 12",
+     "hora": "3:20",
+     "ampm": "AM",
+     "lugar": "Tower Nine",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "lampiao",
+    "rotulo": "on MY trail",
+    "brilho": 1
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "livro",
+    "rotulo": "3:20 · light on my trail"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_radio",
+   "p": {
+    "voz": 1,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "CH 6",
+     "texto": "I'm coming up for the shift change.",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#d9a77f",
+     "cabelo": "#5a3a22",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#3f5a3a",
+     "detalhe": "#c9b27a",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "lista",
+     "titulo": "MY SHIFT",
+     "itens": [
+      "40 days alone",
+      "day 12 tonight",
+      "no relief until day 40"
+     ],
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_floresta",
+   "p": {
+    "torre": 1,
+    "ojos": 1,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "92 steps",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "f_floresta",
+   "p": {
+    "torre": 1,
+    "ojos": 1,
+    "hud": {
+     "dia": "Night 12",
+     "hora": "3:31",
+     "ampm": "AM",
+     "lugar": "Tower Nine",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#d9a77f",
+     "cabelo": "#5a3a22",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#3f5a3a",
+     "detalhe": "#c9b27a",
+     "expressao": "medo"
+    },
+    "zoomRosto": true
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "KNOCK.",
+     "KNOCK.",
+     "KNOCK."
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Open the floor?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 9,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 14,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "my name",
+  "dispatch",
+  "breathing",
+  "3:20",
+  "lantern",
+  "Climbing",
+  "shift change",
+  "twenty-eight",
+  "ninety-two",
+  "stopped",
+  "trapdoor"
+ ],
+ "gancho": {
+  "cena": 14,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
