@@ -1,0 +1,363 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "tower-six",
+ "serie_titulo": "Tower Six | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "fire lookout",
+  "forest horror",
+  "radio horror",
+  "lookout tower",
+  "rules horror"
+ ],
+ "codigo": "SV026",
+ "parte": 3,
+ "anterior": "SV025",
+ "titulo": "Rule four was in my own handwriting 😱 Part 3 #horror #shorts",
+ "capa": "RULE FOUR",
+ "descripcion": "Cal sat on the trapdoor until sunrise. Then the helicopter pilot told him what happened to the lookout before him. The end of Tower Six.\n\nWould you have opened the floor?\n\nNarrated fiction. New story every week.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "I sat on the trapdoor with all my weight until sunrise.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The knocking came every ten minutes. Polite. Patient.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Sometimes it used the old lookout's voice. Then it used mine.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At 5:58, the sun touched the ridge, and the knocking stopped.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "When the helicopter came, I told the pilot everything. He didn't laugh.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He said the man before me logged the same lantern, in 2019.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He answered Tower Six on his twelfth night.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "They found his tower empty, and the trapdoor open.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "His last log line said: Shift change. Going down to let him in.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Later I found the 1998 fire report.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The lookout at Tower Six waited all night for a relief that never came.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The fire reached his tower before anyone climbed up.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He isn't cruel. He just wants someone to take his shift.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I still work as a lookout. Different forest, different tower.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Every night at 2:47, I turn my radio off.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Last week, I found a new list taped by my window. In my own handwriting.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Rule four. Never open the floor.",
+   "pausa": 0.6
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#d9a77f",
+     "cabelo": "#5a3a22",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#3f5a3a",
+     "detalhe": "#c9b27a",
+     "expressao": "medo"
+    },
+    "hud": {
+     "dia": "Night 12",
+     "hora": "3:35",
+     "ampm": "AM",
+     "lugar": "Tower Nine",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "KNOCK. KNOCK.",
+     "every 10 minutes"
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#cfa58a",
+     "cabelo": "#b8b8b8",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "chapeu": "chapeu",
+     "roupa": "#4a3a2a",
+     "detalhe": "#c0c0c0",
+     "expressao": "sorriso"
+    },
+    "janela": false,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "my voice",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_floresta",
+   "p": {
+    "torre": 1,
+    "hud": {
+     "dia": "Night 13",
+     "hora": "5:58",
+     "ampm": "AM",
+     "lugar": "Tower Nine",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#d9a77f",
+     "cabelo": "#5a3a22",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#3f5a3a",
+     "detalhe": "#c9b27a",
+     "expressao": "neutro"
+    },
+    "hud": {
+     "dia": "Night 13",
+     "hora": "9:10",
+     "ampm": "AM",
+     "lugar": "Tower Nine",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "livro",
+    "rotulo": "LOG · 2019"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_radio",
+   "p": {
+    "voz": 0.8
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_floresta",
+   "p": {
+    "torre": 1,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "trapdoor open",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "bilhete",
+    "texto": "Shift change. Going down to let him in.",
+    "rotulo": "LAST LINE"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "jornal",
+    "rotulo": "FIRE REPORT · 1998"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#cfa58a",
+     "cabelo": "#b8b8b8",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "chapeu": "chapeu",
+     "roupa": "#4a3a2a",
+     "detalhe": "#c0c0c0",
+     "expressao": "sorriso"
+    },
+    "janela": false
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_floresta",
+   "p": {
+    "torre": 0,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "Tower Six · 1998",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#cfa58a",
+     "cabelo": "#b8b8b8",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "chapeu": "chapeu",
+     "roupa": "#4a3a2a",
+     "detalhe": "#c0c0c0",
+     "expressao": "sorriso"
+    },
+    "janela": false,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "take my shift",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "f_floresta",
+   "p": {
+    "torre": 1,
+    "hud": {
+     "dia": "Night 3",
+     "hora": "2:46",
+     "ampm": "AM",
+     "lugar": "Tower Two",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "radio_com",
+    "rotulo": "OFF · 2:47"
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "bilhete",
+    "rotulo": "MY handwriting"
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Rule four:",
+     "Never open",
+     "the floor."
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 8,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 15,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "sunrise",
+  "Patient",
+  "mine",
+  "5:58",
+  "2019",
+  "trapdoor open",
+  "let him in",
+  "1998",
+  "never came",
+  "his shift",
+  "2:47",
+  "handwriting",
+  "Never open"
+ ],
+ "gancho": {
+  "cena": 15,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
