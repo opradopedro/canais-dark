@@ -1,1 +1,7 @@
 # Shorts do So You Built It que ja tem thumbnail personalizada (capa.py marca; o GitHub Actions faz o commit)
+YB029
+YB032
+YB001
+YB002
+YB003
+YB004
