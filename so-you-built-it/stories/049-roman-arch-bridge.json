@@ -1,0 +1,310 @@
+{
+ "codigo": "YB049",
+ "mundo": "riacho",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "gringa: Espanha (espanhol): Puente de Alcántara, granito sem argamassa, 104-106 d.C., ainda com trânsito https://en.wikipedia.org/wiki/Alc%C3%A1ntara_Bridge",
+ "titulo": "This Roman bridge has no cement and still works 🏛️ #engineering #shorts",
+ "capa": "NO CEMENT. 1,900 YEARS.",
+ "descripcion": "The Alcántara Bridge in Spain was finished by the Romans around 106 AD, from granite blocks with no mortar, and it still carries traffic. The secret is the arch.\n\nSource: Wikipedia, Alcántara Bridge.\n\nWhat should we explain next?\n\n#engineering #roman #bridge #history #shorts",
+ "tags": [
+  "engineering",
+  "roman bridge",
+  "arch",
+  "keystone",
+  "spain",
+  "alcantara",
+  "history",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "In Spain, trucks still drive over a bridge that the Romans finished around the year 106.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It's made of granite blocks, and there is no cement holding them together.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So how does a pile of loose stones stand for nineteen centuries?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "First, the builders made a wooden frame across the river, shaped exactly like the arch.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then they set the stones on it, one by one, from both sides toward the middle.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Each stone is cut like a wedge, a little wider on top than on the bottom.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The last stone at the very top is the keystone. It locks everything in place.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now they pull the wooden frame out, and the arch holds itself up.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Here's the trick. Push down on the top, and the wedges squeeze even tighter together.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The weight never tries to bend the stone. It only squeezes it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Granite is terrible at bending, but it can take a crushing load all day long.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The arch carries that squeeze sideways and down, into solid rock on each bank.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "There's no steel inside to rust, and no glue to crack.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Many modern concrete bridges still copy the very same shape.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So a bridge with no cement at all can outlive the empire that built it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "What other old structure should we explain next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "riacho",
+   "p": {
+    "foco": "arco",
+    "ponte": "arco",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "riacho",
+   "p": {
+    "foco": "chave",
+    "ponte": "arco",
+    "marcas": [
+     {
+      "t": "No mortar",
+      "x": 0,
+      "y": 1.4
+     }
+    ],
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "riacho",
+   "p": {
+    "foco": "arco",
+    "ponte": "arco",
+    "rotulo": "1,900 YEARS",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "riacho",
+   "p": {
+    "foco": "arco",
+    "ponte": "arco",
+    "cimbre": 1,
+    "pedras": 0,
+    "rotulo": "WOODEN FRAME",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "riacho",
+   "p": {
+    "foco": "arco",
+    "ponte": "arco",
+    "cimbre": 1,
+    "pedras": [
+     0,
+     0.93
+    ],
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "riacho",
+   "p": {
+    "foco": "chave",
+    "ponte": "arco",
+    "cimbre": 1,
+    "pedras": 0.93,
+    "rotulo": "WEDGES",
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "riacho",
+   "p": {
+    "foco": "chave",
+    "ponte": "arco",
+    "cimbre": 1,
+    "pedras": [
+     0.93,
+     1
+    ],
+    "chave": 1,
+    "rotulo": "KEYSTONE",
+    "cor": "green",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "riacho",
+   "p": {
+    "foco": "arco",
+    "ponte": "arco",
+    "chave": 1,
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "riacho",
+   "p": {
+    "foco": "arco",
+    "ponte": "arco",
+    "chave": 1,
+    "forca": 1,
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "riacho",
+   "p": {
+    "foco": "arco",
+    "ponte": "arco",
+    "forca": 1,
+    "rotulo": "SQUEEZE ONLY",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "riacho",
+   "p": {
+    "foco": "arco",
+    "ponte": "arco",
+    "forca": 1,
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "riacho",
+   "p": {
+    "foco": "arco",
+    "ponte": "arco",
+    "forca": 1,
+    "marcas": [
+     {
+      "t": "Rock",
+      "x": -8,
+      "y": -1
+     },
+     {
+      "t": "Rock",
+      "x": 8,
+      "y": -1
+     }
+    ],
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "riacho",
+   "p": {
+    "foco": "arco",
+    "ponte": "arco",
+    "rotulo": "NOTHING TO ROT",
+    "cor": "green",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "arco",
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "arco",
+    "etapa": "c14"
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "arco",
+    "etapa": "c15"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 14,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "Spain",
+  "no cement",
+  "wooden frame",
+  "wedge",
+  "keystone",
+  "holds itself",
+  "squeeze",
+  "crushing",
+  "rock",
+  "outlive"
+ ]
+}

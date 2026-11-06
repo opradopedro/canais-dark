@@ -43,3 +43,19 @@ precisa de mundo novo (sugestão para o Kiro: canal/barragem holandesa, estrada 
 | YB045 | Curiosidade | aeroporto de Kansai que afundou 8 m (terreno) | gringa: Japão https://en.wikipedia.org/wiki/Kansai_International_Airport | FEITO |
 | YB046 | Curiosidade | escavação do vizinho racha sua casa (terreno) | autoral | FEITO |
 | YB047 | Evolucao | casa no morro, deslizamento (terreno) | gringa: Brasil https://en.wikipedia.org/wiki/2022_Petr%C3%B3polis_floods_and_mudslides | FEITO |
+
+## Semana de 7/11 a 20/11/2026 (YB048-YB056) — por: claude (rotina de sexta, 06/11)
+Estoque antes: 19 (YB025, YB027-YB035, YB039-YB047; 13 Curiosidade e só 6 Evolução). Mundo novo `riacho` (MUNDOS.md) para destravar Evolução.
+Com estes, 28 roteiros = 14 dias. 5 gringas, 4 autorais. Duração nova (170-210 palavras; YB048 tem 234, ~75 s).
+| Código | Formato | Tema | Origem | Estado |
+|---|---|---|---|---|
+| YB048 | Evolucao | ponte sobre o riacho (tronco, tábuas, pilar, arco, treliça) (riacho) | autoral | FEITO |
+| YB049 | Curiosidade | ponte romana sem cimento: Alcántara (riacho, arco) | gringa: Espanha https://en.wikipedia.org/wiki/Alc%C3%A1ntara_Bridge | FEITO |
+| YB050 | Evolucao | barragem de terra (núcleo, filtro, vertedouro, enrocamento) (riacho) | gringa: Líbia (Derna, 2023) https://eos.org/thelandslideblog/further-information-about-the-wadi-derna-dams | FEITO |
+| YB051 | Evolucao | rua sobre cano velho que vira cratera (terreno) | gringa: Tailândia (Bangkok, set/2025) https://www.pattayamail.com/thailandnews/authorities-rush-to-stabilize-massive-sinkhole-in-front-of-vajira-hospital-caused-by-burst-water-pipe-520390 | FEITO |
+| YB052 | Evolucao | estrada atravessando riacho: aterro, bueiro, entupimento (riacho) | autoral | FEITO |
+| YB053 | Curiosidade | por que 30 cm de água levam o carro (riacho) | autoral https://www.weather.gov/safety/flood-turn-around-dont-drown | FEITO |
+| YB054 | Evolucao | lago de carpas koi (riacho, lago) | gringa: Japão https://en.wikipedia.org/wiki/Koi | FEITO |
+| YB055 | Evolucao | dique holandês (riacho, dique) | gringa: Holanda https://en.wikipedia.org/wiki/Flood_control_in_the_Netherlands | FEITO |
+| YB056 | Curiosidade | junta de dilatação da ponte (riacho) | autoral https://en.wikipedia.org/wiki/Expansion_joint | FEITO |
+Próximas ideias que o `riacho` aceita sem peça nova: castor/represa natural, travessia de vau, muro de contenção de rio, cisterna de chuva (lago), represa em arco (curiosidade).

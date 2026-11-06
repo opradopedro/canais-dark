@@ -1,0 +1,374 @@
+{
+ "codigo": "YB050",
+ "mundo": "riacho",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "gringa: Líbia (árabe): barragens de terra de Derna romperam por transbordo na tempestade Daniel, 2023 https://en.wikipedia.org/wiki/2023_Derna_dams_collapse ; https://eos.org/thelandslideblog/further-information-about-the-wadi-derna-dams",
+ "titulo": "You built a dam out of dirt 🌊 #engineering #shorts",
+ "capa": "YOU BUILT A DAM",
+ "descripcion": "Clay core, gravel filter, spillway and rock armor: how an earth dam survives the storm. In 2023 two old earth dams above Derna, Libya, failed when floodwater poured over the top.\n\nWhat should we build next?\n\n#engineering #dam #flood #howitworks #shorts",
+ "tags": [
+  "engineering",
+  "dam",
+  "earth dam",
+  "spillway",
+  "flood",
+  "libya",
+  "derna",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Your valley floods every spring, so you decide to build a dam and hold the water back.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "You pile up dirt across the valley, and the lake fills up behind it. Problem solved!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But water slowly soaks into the dirt and leaks out the other side.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Worse, it carries a little soil with it, and the leak grows into a tunnel.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you build a core of packed clay in the middle. Water can barely pass through it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "On the dry side, a gravel filter lets the last drops out but keeps the soil in.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then a giant storm hits. The lake rises, and rises, until it spills over the top.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Water running over a dirt dam is the worst thing that can happen.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It eats the slope away, and in minutes the whole dam can wash out.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's what happened above Derna, in Libya, in 2023. Experts think the spillways were too small for the storm.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you add a big concrete spillway, a safe path for extra water to leave.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now the lake can never climb to the top of the dirt.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Big rocks on the water side stop the waves from chewing the slope.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And someone has to inspect it every year, because old dams fail quietly.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a dam that survives the storm. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 0.3,
+    "chuva": 1,
+    "etapa": "c0",
+    "barreira": 0
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": [
+     0.3,
+     2.8
+    ],
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 2.8,
+    "vaza": 1,
+    "rotulo": "LEAK",
+    "cor": "red",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 2.8,
+    "vaza": 1,
+    "rotulo": "PIPING",
+    "cor": "red",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 2.8,
+    "nucleo": 1,
+    "vaza": 1,
+    "marcas": [
+     {
+      "t": "Clay core",
+      "x": 0,
+      "y": 0.5,
+      "cor": "green"
+     }
+    ],
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "foco": "crista",
+    "agua": 2.8,
+    "nucleo": 1,
+    "dreno": 1,
+    "vaza": 0.6,
+    "rotulo": "FILTER",
+    "cor": "green",
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "chuva": 1,
+    "agua": [
+     2.8,
+     4.6
+    ],
+    "transborda": [
+     0,
+     1
+    ],
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "foco": "crista",
+    "nucleo": 1,
+    "dreno": 1,
+    "chuva": 1,
+    "lama": 1,
+    "agua": 4.6,
+    "transborda": 1,
+    "rotulo": "OVERTOPPING",
+    "cor": "red",
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "foco": "jusante",
+    "nucleo": 1,
+    "chuva": 1,
+    "lama": 1,
+    "agua": [
+     4.6,
+     1.6
+    ],
+    "transborda": 1,
+    "rompe": [
+     0,
+     0.75
+    ],
+    "enchente": [
+     0,
+     1.3
+    ],
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "foco": "jusante",
+    "lama": 1,
+    "agua": 1.6,
+    "rompe": 0.75,
+    "enchente": 1.3,
+    "rotulo": "DERNA, 2023",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "foco": "crista",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "agua": 4.0,
+    "chuva": 1,
+    "rotulo": "SPILLWAY",
+    "cor": "green",
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "agua": 4.0,
+    "empurra": 1,
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.6,
+    "rotulo": "ROCK ARMOR",
+    "cor": "green",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.6,
+    "rotulo": "INSPECT",
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.6,
+    "etapa": "c14"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 12,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 14,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "dam",
+  "lake",
+  "leaks",
+  "tunnel",
+  "clay",
+  "gravel filter",
+  "storm",
+  "over the top",
+  "wash out",
+  "Derna",
+  "spillway",
+  "rocks",
+  "inspect"
+ ]
+}

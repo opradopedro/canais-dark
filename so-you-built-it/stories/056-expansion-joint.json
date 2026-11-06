@@ -1,0 +1,323 @@
+{
+ "codigo": "YB056",
+ "mundo": "riacho",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "autoral. Fatos: aço e concreto dilatam ~12 milionésimos por °C; 100 m com 50 °C de variação = ~6 cm; juntas de dedos e aparelhos de apoio https://en.wikipedia.org/wiki/Expansion_joint",
+ "titulo": "Why bridges have a metal gap 🌉 #engineering #shorts",
+ "capa": "THE GAP IS ON PURPOSE",
+ "descripcion": "That thump-thump when you drive over a bridge is an expansion joint. Without it, summer heat would make the deck buckle or crack its supports.\n\nWhat should we explain next?\n\n#engineering #bridge #physics #howitworks #shorts",
+ "tags": [
+  "engineering",
+  "bridge",
+  "expansion joint",
+  "thermal expansion",
+  "physics",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Drive over a bridge and you'll feel it: thump, thump. That's a metal gap in the road.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It looks like a mistake. It's actually what keeps the bridge from breaking itself.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Here's the problem. Almost everything grows a little when it gets hot.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A steel or concrete bridge gets longer every summer afternoon.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And shorter again every winter night.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "For a deck one hundred meters long, that's about six centimeters of movement.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now imagine you build it with no gap at all.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "On a hot day, the deck pushes against the ends with enormous force.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It has nowhere to go, so it buckles upward, or cracks its own supports.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Railroads see the same thing: rails can bend sideways in a heat wave.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So engineers leave a gap, and cover it with steel fingers that slide between each other.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "In summer the fingers slide together. In winter they pull apart.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Big bridges also rest on bearings, so the whole deck can slide on its supports.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Your car rolls right over, and the bridge gets to breathe.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So that thump is the sound of a bridge that won't crack. What should we explain next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "junta": 1,
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "riacho",
+   "p": {
+    "foco": "deck",
+    "ponte": "pilar",
+    "junta": 1,
+    "rotulo": "ON PURPOSE",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "riacho",
+   "p": {
+    "foco": "deck",
+    "ponte": "pilar",
+    "junta": 1,
+    "calor": [
+     0,
+     1
+    ],
+    "rotulo": "HOT",
+    "cor": "red",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "junta": 1,
+    "calor": 1,
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "riacho",
+   "p": {
+    "foco": "deck",
+    "ponte": "pilar",
+    "junta": 1,
+    "calor": [
+     1,
+     -1
+    ],
+    "rotulo": "COLD",
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "riacho",
+   "p": {
+    "foco": "deck",
+    "ponte": "pilar",
+    "junta": 1,
+    "calor": [
+     -1,
+     1
+    ],
+    "marcas": [
+     {
+      "t": "~6 cm",
+      "x": 0,
+      "y": 1.2
+     }
+    ],
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "junta": 0,
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "junta": 0,
+    "empena": [
+     0,
+     0.3
+    ],
+    "rotulo": "PUSH",
+    "cor": "red",
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "junta": 0,
+    "empena": [
+     0.3,
+     1
+    ],
+    "rotulo": "BUCKLE",
+    "cor": "red",
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "junta": 0,
+    "empena": 1,
+    "rotulo": "SUN KINK",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "riacho",
+   "p": {
+    "foco": "deck",
+    "ponte": "pilar",
+    "junta": 1,
+    "rotulo": "FINGER JOINT",
+    "cor": "green",
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "riacho",
+   "p": {
+    "foco": "deck",
+    "ponte": "pilar",
+    "junta": 1,
+    "calor": [
+     1,
+     -1
+    ],
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "junta": 1,
+    "rotulo": "BEARINGS",
+    "cor": "green",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "junta": 1,
+    "calor": [
+     -0.5,
+     0.5
+    ],
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "junta": 1,
+    "etapa": "c14"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 12,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 14,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "thump",
+  "gap",
+  "hot",
+  "longer",
+  "shorter",
+  "six centimeters",
+  "no gap",
+  "buckles",
+  "fingers",
+  "breathes",
+  "bearings"
+ ]
+}

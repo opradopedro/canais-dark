@@ -1,0 +1,345 @@
+{
+ "codigo": "YB054",
+ "mundo": "riacho",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "gringa: Japão (japonês): nishikigoi criadas em Niigata desde o início do séc. XIX; filtro biológico (amônia -> nitrito -> nitrato) https://en.wikipedia.org/wiki/Koi",
+ "titulo": "You built a koi pond 🐟 #engineering #shorts",
+ "capa": "YOU BUILT A KOI POND",
+ "descripcion": "Leaks, green water, ammonia and filters: how a hole in the yard becomes a clear koi pond like the ones in Japan, one problem at a time.\n\nWhat should we build next?\n\n#engineering #koi #pond #japan #shorts",
+ "tags": [
+  "engineering",
+  "koi",
+  "pond",
+  "japan",
+  "niigata",
+  "filter",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "You want a koi pond like the ones in Japan, so you dig a hole and fill it with a hose.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Next morning, half the water is gone.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Your soil is sandy, and the water just soaks down into the ground.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you line the hole with a thick rubber liner. Now it holds every drop.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then you buy koi from Niigata, where farmers have bred them for about two hundred years.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But two weeks later, the water is green and smells like a swamp.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Fish poop turns into ammonia, which is toxic, and the sun feeds the algae.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you add a pump that pulls water from the bottom of the pond.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It runs through a filter full of bacteria that turn ammonia into much safer nitrate.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then it falls back in as a little waterfall, adding oxygen for the fish.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "You plant reeds around the edge to shade the water and soak up the nitrate.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Koi keepers also go deep, so the water stays cool in summer and never freezes solid.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now the water is clear enough to count every fish.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a real koi pond. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "riacho",
+   "p": {
+    "perfil": "lago",
+    "agua": [
+     -2,
+     -0.3
+    ],
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "riacho",
+   "p": {
+    "perfil": "lago",
+    "agua": [
+     -0.3,
+     -1.2
+    ],
+    "vaza": 1,
+    "rotulo": "LEAK",
+    "cor": "red",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "riacho",
+   "p": {
+    "perfil": "lago",
+    "agua": -1.2,
+    "vaza": 1,
+    "marcas": [
+     {
+      "t": "Sandy soil",
+      "x": 0,
+      "y": -2.9
+     }
+    ],
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "riacho",
+   "p": {
+    "perfil": "lago",
+    "manta": 1,
+    "agua": [
+     -1.2,
+     -0.3
+    ],
+    "rotulo": "LINER",
+    "cor": "green",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "riacho",
+   "p": {
+    "perfil": "lago",
+    "manta": 1,
+    "agua": -0.3,
+    "peixes": [
+     0,
+     5
+    ],
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "riacho",
+   "p": {
+    "perfil": "lago",
+    "manta": 1,
+    "agua": -0.3,
+    "peixes": 5,
+    "algas": [
+     0,
+     1
+    ],
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "riacho",
+   "p": {
+    "perfil": "lago",
+    "manta": 1,
+    "agua": -0.3,
+    "peixes": 5,
+    "algas": 1,
+    "rotulo": "AMMONIA",
+    "cor": "red",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "riacho",
+   "p": {
+    "perfil": "lago",
+    "manta": 1,
+    "agua": -0.3,
+    "peixes": 5,
+    "algas": 1,
+    "bomba": 1,
+    "rotulo": "PUMP",
+    "cor": "green",
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "riacho",
+   "p": {
+    "perfil": "lago",
+    "manta": 1,
+    "agua": -0.3,
+    "peixes": 5,
+    "algas": [
+     1,
+     0.3
+    ],
+    "bomba": 1,
+    "rotulo": "BIO FILTER",
+    "cor": "green",
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "riacho",
+   "p": {
+    "perfil": "lago",
+    "manta": 1,
+    "agua": -0.3,
+    "peixes": 5,
+    "algas": [
+     0.3,
+     0.1
+    ],
+    "bomba": 1,
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "riacho",
+   "p": {
+    "perfil": "lago",
+    "manta": 1,
+    "agua": -0.3,
+    "peixes": 5,
+    "algas": 0.05,
+    "bomba": 1,
+    "plantas": 1,
+    "rotulo": "PLANTS",
+    "cor": "green",
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "riacho",
+   "p": {
+    "perfil": "lago",
+    "manta": 1,
+    "agua": -0.3,
+    "peixes": 6,
+    "bomba": 1,
+    "plantas": 1,
+    "marcas": [
+     {
+      "t": "Deep",
+      "x": 0,
+      "y": -1.6,
+      "cor": "green"
+     }
+    ],
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "riacho",
+   "p": {
+    "perfil": "lago",
+    "manta": 1,
+    "agua": -0.3,
+    "peixes": 7,
+    "bomba": 1,
+    "plantas": 1,
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "riacho",
+   "p": {
+    "perfil": "lago",
+    "manta": 1,
+    "agua": -0.3,
+    "peixes": 7,
+    "bomba": 1,
+    "plantas": 1,
+    "etapa": "c13"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 13,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "koi pond",
+  "gone",
+  "sandy",
+  "liner",
+  "Niigata",
+  "green",
+  "ammonia",
+  "pump",
+  "bacteria",
+  "oxygen",
+  "reeds",
+  "deep"
+ ]
+}

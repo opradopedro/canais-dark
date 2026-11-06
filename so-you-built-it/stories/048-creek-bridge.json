@@ -1,0 +1,329 @@
+{
+ "codigo": "YB048",
+ "mundo": "riacho",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "autoral (backlog temas.md: Bridge over a creek)",
+ "titulo": "You built a bridge over a creek 🌉 #engineering #shorts",
+ "capa": "YOU BUILT A BRIDGE",
+ "descripcion": "A log, planks, a pier, a stone arch and a steel truss: how a simple creek crossing becomes a real bridge, one problem at a time.\n\nWhat should we build next?\n\n#engineering #bridge #construction #howitworks #shorts",
+ "tags": [
+  "engineering",
+  "bridge",
+  "creek",
+  "truss",
+  "arch bridge",
+  "construction",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "There's a creek between your house and the road, so you decide to build a bridge. Easy, right?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "You drop a big tree trunk across it. It works, but it's slippery and only one person wide.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you nail wooden planks on top and add a handrail. Now a cart can cross.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But wood that stays wet starts to rot. After a few years, the planks turn soft and green.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "One day a loaded cart rolls over the middle, and the whole bridge sags.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The problem is the span: thirteen meters of wood with nothing holding up the middle.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you pour a concrete pier in the middle of the creek. Two short spans are much stronger.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then the spring storm comes. The creek rises almost three meters in one night.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Branches pile up against the pier, the water pushes, and your bridge is carried away.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So this time you build a stone arch, high above the water, with nothing standing in the creek.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Every stone pushes on the next one, and the weight flows down into the banks.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But stone arches are slow and expensive to build. Today, you'd use a steel truss.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Triangles can't bend out of shape, so a light frame can carry heavy trucks.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And its bottom sits well above the highest flood anyone has ever recorded.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just bridged the creek for good. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "riacho",
+   "p": {
+    "foco": "vale",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "tronco",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "tabuas",
+    "rotulo": "PLANKS",
+    "cor": "green",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "tabuas",
+    "podre": [
+     0,
+     1
+    ],
+    "rotulo": "ROT",
+    "cor": "red",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "tabuas",
+    "podre": 1,
+    "quebra": [
+     0,
+     0.25
+    ],
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "tabuas",
+    "podre": 1,
+    "quebra": 0.25,
+    "marcas": [
+     {
+      "t": "13 m",
+      "x": 0,
+      "y": 1.6
+     }
+    ],
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "rotulo": "PIER",
+    "cor": "green",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "chuva": 1,
+    "lama": 1,
+    "agua": [
+     -1.7,
+     0.6
+    ],
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "chuva": 1,
+    "lama": 1,
+    "agua": 0.6,
+    "leva": [
+     0,
+     1
+    ],
+    "rotulo": "WASHED AWAY",
+    "cor": "red",
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "riacho",
+   "p": {
+    "foco": "arco",
+    "ponte": "arco",
+    "cimbre": 1,
+    "pedras": [
+     0,
+     1
+    ],
+    "rotulo": "STONE ARCH",
+    "cor": "green",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "riacho",
+   "p": {
+    "foco": "arco",
+    "ponte": "arco",
+    "forca": 1,
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "trelica",
+    "rotulo": "STEEL TRUSS",
+    "cor": "green",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "trelica",
+    "rotulo": "TRIANGLES",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "trelica",
+    "chuva": 1,
+    "lama": 1,
+    "agua": [
+     -1.7,
+     0.2
+    ],
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "trelica",
+    "etapa": "c14"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 14,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "bridge",
+  "trunk",
+  "planks",
+  "rots",
+  "sags",
+  "pier",
+  "carried away",
+  "arch",
+  "truss",
+  "Triangles",
+  "flood"
+ ]
+}

@@ -1,0 +1,370 @@
+{
+ "codigo": "YB055",
+ "mundo": "riacho",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "gringa: Holanda (holandês): ~26% do país abaixo do nível do mar, diques, pôlderes com bombas, falha por 'piping' (sand boils) https://en.wikipedia.org/wiki/Flood_control_in_the_Netherlands",
+ "titulo": "You built a dike like the Dutch 🌷 #engineering #shorts",
+ "capa": "YOU BUILT A DIKE",
+ "descripcion": "How the Netherlands keeps a quarter of the country dry below sea level: dikes, pumps, sand boils and steel walls, one problem at a time.\n\nWhat should we build next?\n\n#engineering #netherlands #flood #dike #shorts",
+ "tags": [
+  "engineering",
+  "dike",
+  "levee",
+  "netherlands",
+  "flood",
+  "polder",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Your town sits on flat land, right next to a big river.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Every spring the river rises, and floods your streets.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you pile up a long wall of earth along the bank. That's a dike.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The Dutch have built dikes for about a thousand years.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Today, about a quarter of their country sits below sea level.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But behind the dike, the rain has nowhere to go, and your fields turn into a swamp.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So, like the Dutch, you pump it up and over into the river. First with windmills, now with electric pumps.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then a big flood pushes the river higher than ever.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Water seeps under the dike, through a hidden layer of sand.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "On the town side, little fountains of sand start bubbling out of the ground.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Each one is the dike's foundation washing away. It can collapse from below.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you drive a steel wall deep into the ground, right through the sand.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now the water has no path under the dike.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And you give it a core of tight clay and a skin of grass, so it can't wash out.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just kept a whole country dry. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "riacho",
+   "p": {
+    "perfil": "dique",
+    "barreira": 0,
+    "agua": 0.3,
+    "etapa": "c0",
+    "baixo": 1.5
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "riacho",
+   "p": {
+    "perfil": "dique",
+    "foco": "jusante",
+    "barreira": 0,
+    "agua": [
+     0.3,
+     0.9
+    ],
+    "enchente": [
+     0,
+     0.9
+    ],
+    "chuva": 1,
+    "rotulo": "FLOOD",
+    "cor": "red",
+    "etapa": "c1",
+    "baixo": 1.5
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "riacho",
+   "p": {
+    "perfil": "dique",
+    "agua": 1.2,
+    "rotulo": "DIKE",
+    "cor": "green",
+    "etapa": "c2",
+    "baixo": 1.5
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "riacho",
+   "p": {
+    "perfil": "dique",
+    "agua": 1.2,
+    "baixo": 1.5,
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "riacho",
+   "p": {
+    "perfil": "dique",
+    "agua": 1.2,
+    "baixo": 1.5,
+    "marcas": [
+     {
+      "t": "Below sea level",
+      "x": 12,
+      "y": -1.0,
+      "cor": "red"
+     }
+    ],
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "riacho",
+   "p": {
+    "perfil": "dique",
+    "foco": "jusante",
+    "agua": 1.2,
+    "baixo": 1.5,
+    "chuva": 1,
+    "enchente": [
+     0,
+     0.5
+    ],
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "riacho",
+   "p": {
+    "perfil": "dique",
+    "agua": 1.2,
+    "baixo": 1.5,
+    "bomba": 1,
+    "enchente": [
+     0.5,
+     0
+    ],
+    "rotulo": "PUMPS",
+    "cor": "green",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "riacho",
+   "p": {
+    "perfil": "dique",
+    "agua": [
+     1.2,
+     2.6
+    ],
+    "baixo": 1.5,
+    "chuva": 1,
+    "empurra": 1,
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "riacho",
+   "p": {
+    "perfil": "dique",
+    "foco": "sob",
+    "agua": 2.6,
+    "baixo": 1.5,
+    "vaza": 1,
+    "marcas": [
+     {
+      "t": "Sand",
+      "x": -8,
+      "y": -4.5
+     }
+    ],
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "riacho",
+   "p": {
+    "perfil": "dique",
+    "agua": 2.6,
+    "baixo": 1.5,
+    "vaza": 1,
+    "fervura": [
+     0,
+     1
+    ],
+    "rotulo": "SAND BOILS",
+    "cor": "red",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "riacho",
+   "p": {
+    "perfil": "dique",
+    "foco": "sob",
+    "agua": 2.6,
+    "baixo": 1.5,
+    "vaza": 1,
+    "fervura": 1,
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "riacho",
+   "p": {
+    "perfil": "dique",
+    "foco": "sob",
+    "agua": 2.6,
+    "baixo": 1.5,
+    "vaza": 1,
+    "cortina": 1,
+    "rotulo": "STEEL WALL",
+    "cor": "green",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "riacho",
+   "p": {
+    "perfil": "dique",
+    "agua": 2.6,
+    "baixo": 1.5,
+    "vaza": 1,
+    "cortina": 1,
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "riacho",
+   "p": {
+    "perfil": "dique",
+    "agua": 2.6,
+    "baixo": 1.5,
+    "cortina": 1,
+    "nucleo": 1,
+    "bomba": 1,
+    "marcas": [
+     {
+      "t": "Clay",
+      "x": 0,
+      "y": 1.2,
+      "cor": "green"
+     }
+    ],
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "riacho",
+   "p": {
+    "perfil": "dique",
+    "agua": 2.0,
+    "baixo": 1.5,
+    "cortina": 1,
+    "nucleo": 1,
+    "bomba": 1,
+    "etapa": "c14"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 13,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 14,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "river",
+  "floods",
+  "dike",
+  "below sea level",
+  "swamp",
+  "pump",
+  "sand",
+  "fountains",
+  "steel wall",
+  "clay",
+  "dry"
+ ]
+}

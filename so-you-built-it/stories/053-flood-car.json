@@ -1,0 +1,358 @@
+{
+ "codigo": "YB053",
+ "mundo": "riacho",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "autoral. Fatos: NWS 'Turn Around Don't Drown': 12 polegadas de água corrente levam a maioria dos carros, 2 pés levam SUVs e picapes; mais da metade das mortes em enchente é em veículo https://www.weather.gov/safety/flood-turn-around-dont-drown",
+ "titulo": "Why one foot of water can float your car 🚗 #engineering #shorts",
+ "capa": "1 FOOT OF WATER",
+ "descripcion": "A car weighs more than a ton, so why can a foot of moving water carry it away? Buoyancy, lost grip and a road you can't see.\n\nSource: US National Weather Service, Turn Around Don't Drown.\n\nWhat should we explain next?\n\n#engineering #flood #safety #physics #shorts",
+ "tags": [
+  "engineering",
+  "flood",
+  "car",
+  "buoyancy",
+  "physics",
+  "safety",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "This water is only one foot deep. Your car weighs well over a ton. So you drive through, right?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Wrong. One foot of moving water can float most cars.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Here's why. A car is basically a big sealed box full of air.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "When water rises around it, the car has to push that water out of the way.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And the water pushes back up, with a force equal to the weight of the water it moved.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A foot of water around a car can push up almost as hard as the car weighs.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now the tires barely press on the road, so they can't grip.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And the current shoves the car sideways, toward the deep part of the creek.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Two feet of moving water can carry away even big pickup trucks.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And you can't see if the road under the water is even still there.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Floods eat the dirt under the asphalt, like this road washing out from below.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's why more than half of flood drownings in the US happen in vehicles.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Weather services even have a slogan for it: turn around, don't drown.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So if water covers the road, the safest move is going back.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "What other everyday danger should we explain next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "riacho",
+   "p": {
+    "foco": "carro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "carro": 1,
+    "agua_baixo": -0.6,
+    "agua": 0.82,
+    "lamina": 0.3,
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "riacho",
+   "p": {
+    "foco": "carro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "carro": 1,
+    "agua_baixo": -0.6,
+    "agua": 0.82,
+    "lamina": 0.3,
+    "rotulo": "1 FOOT",
+    "cor": "red",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "riacho",
+   "p": {
+    "foco": "carro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "carro": 1,
+    "agua_baixo": -0.6,
+    "agua": 0.82,
+    "lamina": 0.3,
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "riacho",
+   "p": {
+    "foco": "carro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "carro": 1,
+    "agua_baixo": -0.6,
+    "agua": 0.82,
+    "lamina": 0.3,
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "riacho",
+   "p": {
+    "foco": "carro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "carro": 1,
+    "agua_baixo": -0.6,
+    "agua": 0.82,
+    "lamina": 0.3,
+    "rotulo": "BUOYANCY",
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "riacho",
+   "p": {
+    "foco": "carro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "carro": 1,
+    "agua_baixo": -0.6,
+    "agua": 0.82,
+    "lamina": 0.3,
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "riacho",
+   "p": {
+    "foco": "carro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "carro": 1,
+    "agua_baixo": -0.6,
+    "agua": 0.82,
+    "lamina": 0.3,
+    "boia": [
+     0,
+     0.25
+    ],
+    "rotulo": "NO GRIP",
+    "cor": "red",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "riacho",
+   "p": {
+    "foco": "carro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "carro": 1,
+    "agua_baixo": -0.6,
+    "agua": 0.82,
+    "lamina": 0.3,
+    "boia": [
+     0.25,
+     1
+    ],
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "riacho",
+   "p": {
+    "foco": "aterro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "carro": 1,
+    "agua_baixo": -0.6,
+    "agua": 1.1,
+    "lamina": 0.6,
+    "boia": 1,
+    "rotulo": "2 FEET",
+    "cor": "red",
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "riacho",
+   "p": {
+    "foco": "aterro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "carro": 0,
+    "agua_baixo": -0.6,
+    "agua": 0.82,
+    "lamina": 0.3,
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "riacho",
+   "p": {
+    "foco": "aterro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "carro": 0,
+    "agua_baixo": -0.6,
+    "agua": 0.82,
+    "lamina": 0.3,
+    "rompe": [
+     0,
+     0.6
+    ],
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "riacho",
+   "p": {
+    "foco": "aterro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "carro": 0,
+    "agua_baixo": -0.6,
+    "agua": 0.82,
+    "lamina": 0.3,
+    "rompe": 0.6,
+    "rotulo": "OVER HALF IN CARS",
+    "cor": "red",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "riacho",
+   "p": {
+    "foco": "vale",
+    "aterro": 1,
+    "bueiro": "cano",
+    "carro": 0,
+    "agua_baixo": -0.6,
+    "agua": 0.82,
+    "lamina": 0.3,
+    "rotulo": "TURN AROUND, DON'T DROWN",
+    "cor": "green",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "riacho",
+   "p": {
+    "foco": "carro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "carro": 1,
+    "agua_baixo": -0.6,
+    "agua": 0.82,
+    "lamina": 0.3,
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "riacho",
+   "p": {
+    "foco": "vale",
+    "aterro": 1,
+    "bueiro": "cano",
+    "carro": 0,
+    "agua_baixo": -0.6,
+    "agua": 0.82,
+    "lamina": 0.3,
+    "etapa": "c14"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 12,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 14,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "one foot",
+  "float",
+  "air",
+  "pushes back",
+  "weighs",
+  "grip",
+  "sideways",
+  "Two feet",
+  "under the water",
+  "turn around"
+ ]
+}

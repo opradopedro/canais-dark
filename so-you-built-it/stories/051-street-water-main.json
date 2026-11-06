@@ -1,0 +1,314 @@
+{
+ "codigo": "YB051",
+ "mundo": "terreno",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "gringa: Tailândia (tailandês): cratera de ~50 m na Samsen Road, Bangkok, em frente ao Hospital Vajira, set/2025, cano de água rompido perto da obra do metrô https://www.pattayamail.com/thailandnews/authorities-rush-to-stabilize-massive-sinkhole-in-front-of-vajira-hospital-caused-by-burst-water-pipe-520390",
+ "titulo": "You built a street over a water pipe 🕳️ #engineering #shorts",
+ "capa": "THE ROAD FELL IN",
+ "descripcion": "A leaking pipe can empty the ground under a perfect-looking street. In September 2025 a burst pipe helped open a pit about 50 meters deep on a Bangkok street. Here is how cities stop it.\n\nWhat should we build next?\n\n#engineering #sinkhole #bangkok #howitworks #shorts",
+ "tags": [
+  "engineering",
+  "sinkhole",
+  "bangkok",
+  "water main",
+  "road",
+  "leak",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "You build a city street, with a big water pipe buried underneath. Simple.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Cars drive over it all day, and the pipe carries water to every house.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the pipe gets old. A tiny crack opens, and water starts leaking into the soil.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The water washes the sand away, grain by grain, into the cracks of the pipes.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "From above, the asphalt looks perfect. Underneath, a hole keeps growing.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then one morning, the road just drops into the ground.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "In 2025, a burst pipe in Bangkok helped open a pit about fifty meters deep, right in front of a hospital.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So first, you fill the hole with crushed rock, packed down layer by layer.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then you swap the old pipe for a flexible one that bends instead of cracking.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "You add sensors that listen to the pipe, so the hiss of a leak sends an alert.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And trucks with ground radar scan under the road, looking for empty pockets.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "If they find one, crews fill it before anyone notices a thing.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then you put fresh asphalt back on top, and the cars roll again.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a street that warns you before it falls. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "cano": 1,
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "cano": 1,
+    "rotulo": "WATER MAIN",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "cano": 1,
+    "cavidade": [
+     0,
+     0.15
+    ],
+    "rotulo": "LEAK",
+    "cor": "red",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "cano": 1,
+    "cavidade": [
+     0.15,
+     0.5
+    ],
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "cano": 1,
+    "cavidade": [
+     0.5,
+     0.9
+    ],
+    "rotulo": "HIDDEN HOLE",
+    "cor": "red",
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "cano": 1,
+    "cavidade": 0.9,
+    "colapso": [
+     0,
+     1
+    ],
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "cano": 1,
+    "cavidade": 0.9,
+    "colapso": 1,
+    "rotulo": "BANGKOK, 2025",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "foco": "estrada",
+    "estrada": "cascalho",
+    "cano": 1,
+    "rotulo": "CRUSHED ROCK",
+    "cor": "green",
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "foco": "estrada",
+    "estrada": "base",
+    "cano": 1,
+    "rotulo": "NEW PIPE",
+    "cor": "green",
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "terreno",
+   "p": {
+    "foco": "estrada",
+    "estrada": "base",
+    "cano": 1,
+    "rotulo": "LEAK SENSOR",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "terreno",
+   "p": {
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "cano": 1,
+    "cavidade": 0.12,
+    "rotulo": "GROUND RADAR",
+    "marcas": [
+     {
+      "t": "Empty pocket",
+      "x": -9.5,
+      "y": -1.6,
+      "cor": "red"
+     }
+    ],
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "terreno",
+   "p": {
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "cano": 1,
+    "cavidade": [
+     0.12,
+     0
+    ],
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "terreno",
+   "p": {
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "cano": 1,
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "terreno",
+   "p": {
+    "foco": "estrada",
+    "estrada": "asfalto",
+    "cano": 1,
+    "etapa": "c13"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 13,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "street",
+  "pipe",
+  "crack",
+  "washes",
+  "hole",
+  "drops",
+  "Bangkok",
+  "crushed rock",
+  "flexible",
+  "sensors",
+  "radar"
+ ]
+}

@@ -1,0 +1,337 @@
+{
+ "codigo": "YB052",
+ "mundo": "riacho",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "autoral",
+ "titulo": "You built a road across a creek 🚧 #engineering #shorts",
+ "capa": "YOU FILLED THE CREEK",
+ "descripcion": "Fill, pipe, clog, washout: why every road over a creek needs a culvert sized for the biggest storm.\n\nWhat should we build next?\n\n#engineering #culvert #road #flood #shorts",
+ "tags": [
+  "engineering",
+  "culvert",
+  "road",
+  "creek",
+  "flood",
+  "construction",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Your new road has to cross a creek. A bridge is expensive, so you just fill it with dirt.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Truckload after truckload, until the road runs straight across. Problem solved!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the creek still has to go somewhere. It piles up behind your road.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "When it rains, the water climbs to the top and pours over the asphalt.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Water running over loose dirt is a disaster. In one night, your road washes away.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you rebuild it with a big pipe at the bottom. That's called a culvert.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The creek flows through the pipe, and the road stays dry on top.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Until autumn. Leaves and branches wash downstream and plug the pipe.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The water rises again, and you're right back where you started.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So this time, you size it for the biggest storm in a hundred years, not a normal day.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A wide concrete box lets branches slide right through.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the water shoots out fast, so you line the exit with heavy rocks.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Otherwise it would dig a hole right under the end of your road.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a culvert. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "riacho",
+   "p": {
+    "foco": "vale",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "riacho",
+   "p": {
+    "foco": "aterro",
+    "aterro": 1,
+    "agua": -1.7,
+    "agua_baixo": -1.7,
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "riacho",
+   "p": {
+    "foco": "atras",
+    "aterro": 1,
+    "agua": [
+     -1.7,
+     -0.2
+    ],
+    "agua_baixo": -2.3,
+    "rotulo": "BLOCKED",
+    "cor": "red",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "riacho",
+   "p": {
+    "foco": "aterro",
+    "aterro": 1,
+    "agua": 0.6,
+    "lamina": [
+     0,
+     0.15
+    ],
+    "agua_baixo": -1.5,
+    "chuva": 1,
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "riacho",
+   "p": {
+    "foco": "aterro",
+    "aterro": 1,
+    "lama": 1,
+    "agua": 0.6,
+    "lamina": 0.15,
+    "rompe": [
+     0,
+     0.8
+    ],
+    "agua_baixo": -1.2,
+    "chuva": 1,
+    "rotulo": "WASHOUT",
+    "cor": "red",
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "riacho",
+   "p": {
+    "foco": "aterro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "agua": -1.95,
+    "agua_baixo": -1.95,
+    "rotulo": "CULVERT",
+    "cor": "green",
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "riacho",
+   "p": {
+    "foco": "aterro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "agua": -1.95,
+    "agua_baixo": -1.95,
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "riacho",
+   "p": {
+    "foco": "atras",
+    "aterro": 1,
+    "bueiro": "cano",
+    "entupido": [
+     0,
+     1
+    ],
+    "agua": [
+     -1.95,
+     -0.4
+    ],
+    "agua_baixo": -2.3,
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "riacho",
+   "p": {
+    "foco": "aterro",
+    "aterro": 1,
+    "bueiro": "cano",
+    "entupido": 1,
+    "agua": 0.6,
+    "lamina": [
+     0,
+     0.1
+    ],
+    "agua_baixo": -1.8,
+    "chuva": 1,
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "riacho",
+   "p": {
+    "foco": "aterro",
+    "aterro": 1,
+    "bueiro": "caixa",
+    "agua": -1.5,
+    "agua_baixo": -1.5,
+    "chuva": 1,
+    "rotulo": "100-YEAR STORM",
+    "cor": "green",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "riacho",
+   "p": {
+    "foco": "atras",
+    "aterro": 1,
+    "bueiro": "caixa",
+    "agua": -1.5,
+    "agua_baixo": -1.5,
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "riacho",
+   "p": {
+    "foco": "aterro",
+    "aterro": 1,
+    "bueiro": "caixa",
+    "enrocamento": 1,
+    "agua": -1.6,
+    "agua_baixo": -1.6,
+    "rotulo": "ROCKS",
+    "cor": "green",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "riacho",
+   "p": {
+    "foco": "aterro",
+    "aterro": 1,
+    "bueiro": "caixa",
+    "enrocamento": 1,
+    "agua": -1.6,
+    "agua_baixo": -1.6,
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "riacho",
+   "p": {
+    "foco": "aterro",
+    "aterro": 1,
+    "bueiro": "caixa",
+    "enrocamento": 1,
+    "agua": -1.8,
+    "agua_baixo": -1.8,
+    "etapa": "c13"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 13,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "creek",
+  "dirt",
+  "piles up",
+  "pours over",
+  "washes away",
+  "pipe",
+  "culvert",
+  "plug",
+  "biggest storm",
+  "concrete box",
+  "rocks"
+ ]
+}
