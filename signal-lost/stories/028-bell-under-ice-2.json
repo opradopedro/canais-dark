@@ -1,0 +1,367 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "bell-under-ice",
+ "serie_titulo": "The Bell Under the Ice | Signal Lost",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "gringa: Itália, lenda do campanário de Curon/Graun no Lago di Resia https://en.wikipedia.org/wiki/Lake_Reschen (história, lugar e personagens nossos)",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "ice fishing",
+  "frozen lake",
+  "drowned town",
+  "rules horror",
+  "winter horror"
+ ],
+ "codigo": "SV028",
+ "parte": 2,
+ "anterior": "SV027",
+ "titulo": "It followed me to shore under the ice 😰 Part 2 #horror #shorts",
+ "capa": "THREE FAMILIES STAYED",
+ "descripcion": "Something knocked under Wes's boots. He started walking to shore, and the knocking walked with him. The end of The Bell Under the Ice.\n\nWould you have looked down the hole?\n\nNarrated fiction. New story every week.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "Someone knocked, right under my boots.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I grabbed the radio and called my brother, Dale.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He said, don't run. Walk, and count your steps.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Shore was four hundred steps away. I started walking.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "One, two, three. And under me, the knocking walked too.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Every step, something tapped the ice from below.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At step one hundred, a crack ran from the steeple toward me.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Then the singing started. Three voices, under the ice. An old Sunday hymn.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I didn't stop. I didn't look down. I just counted.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At 5:40, my boots hit snow and gravel. Shore.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "In daylight, Dale drove me back for my gear.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "My hole was frozen a foot thick. Like it had been closed for weeks.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The old man at the bait shop didn't ask questions.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He showed me a list from 1950. Three families refused to leave before the flood.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "They locked themselves in the church, and sang until the water came.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "That night, I found a wet hymnbook page in my bucket.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At the bottom, someone had written in pencil. Wes, Sunday service.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "I sold my auger. I don't go near the water anymore.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_lago_gelado",
+   "p": {
+    "racha": 0.5,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "2:17",
+     "ampm": "AM",
+     "lugar": "Lake Ardell",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "radio_com",
+    "rotulo": "channel 9"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_radio",
+   "p": {
+    "voz": 1,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "DALE",
+     "texto": "Don't run. Walk. Count your steps.",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_lago_gelado",
+   "p": {
+    "racha": 0.5,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "400 steps",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_lago_gelado",
+   "p": {
+    "racha": 0.6,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "2:20",
+     "ampm": "AM",
+     "lugar": "Lake Ardell",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0b08a",
+     "cabelo": "#6a4a2a",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#d0642a",
+     "detalhe": "#3a3a3a",
+     "chapeu": "touca",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_lago_gelado",
+   "p": {
+    "racha": [
+     0.6,
+     0.9
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "step 100",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_lago_gelado",
+   "p": {
+    "racha": 0.9,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "3:05",
+     "ampm": "AM",
+     "lugar": "Lake Ardell",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0b08a",
+     "cabelo": "#6a4a2a",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#d0642a",
+     "detalhe": "#3a3a3a",
+     "chapeu": "touca",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "don't look down",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_cabana",
+   "p": {
+    "pegadas": 1,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "5:40",
+     "ampm": "AM",
+     "lugar": "The shore",
+     "sinal": 3
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_lago_gelado",
+   "p": {
+    "racha": 0.2,
+    "hud": {
+     "dia": "Day 2",
+     "hora": "9:10",
+     "ampm": "AM",
+     "lugar": "Lake Ardell",
+     "sinal": 3
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_lago_gelado",
+   "p": {
+    "racha": 0,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "a foot thick",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "livro",
+    "rotulo": "Ardell, 1950"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "ARDELL, 1950",
+    "itens": [
+     "The Lindqvists",
+     "The Harmons",
+     "The Pikes"
+    ],
+    "marcados": 0
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "They sang",
+     "until the water",
+     "came."
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "bilhete",
+    "rotulo": "in my bucket"
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Wes,",
+     "Sunday service."
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "No more ice.",
+     "No more lakes."
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 6,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "knocked",
+  "don't run",
+  "four hundred",
+  "walked too",
+  "crack",
+  "singing",
+  "5:40",
+  "a foot thick",
+  "three families",
+  "hymnbook",
+  "Sunday service"
+ ],
+ "gancho": {
+  "cena": 16,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
