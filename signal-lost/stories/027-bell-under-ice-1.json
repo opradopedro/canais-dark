@@ -1,0 +1,381 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "bell-under-ice",
+ "serie_titulo": "The Bell Under the Ice | Signal Lost",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "gringa: Itália, lenda do campanário de Curon/Graun no Lago di Resia (vila afogada em 1950; dizem que o sino ainda toca no inverno) https://en.wikipedia.org/wiki/Lake_Reschen (história, lugar e personagens nossos)",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "ice fishing",
+  "frozen lake",
+  "drowned town",
+  "rules horror",
+  "winter horror"
+ ],
+ "codigo": "SV027",
+ "parte": 1,
+ "titulo": "A bell rang under the frozen lake 🔔 Part 1 #horror #shorts",
+ "capa": "THE BELL WAS REMOVED IN 1950",
+ "descripcion": "Wes went ice fishing on a lake that drowned a whole town. At 2:14 AM, a church bell rang under his feet.\n\n> Part 2: {when_next}.\nWould you look down the hole?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "There's a whole town at the bottom of Lake Ardell.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "They flooded it in 1950. Only the church steeple still sticks out of the ice.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I'm Wes. I've fished that lake for twenty winters.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The old man at the bait shop gives everyone three rules.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Stay a hundred steps from the steeple.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "If you hear the bell, pull your line and walk to shore.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And never look down your hole after midnight.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "That night, I set up sixty steps from the steeple.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Minus twenty outside. A heater, a radio, a thermos of coffee.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At 2:14 AM, I heard a bell. Deep and slow. Coming from under the ice.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "That steeple has no bell. They took it out before the flood.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Rule two. Pull your line. I grabbed it, and it was heavy.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Not a fish. Something pulled back, slow and steady.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I cut the line. It was already past midnight.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And I broke rule three. I looked down the hole.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Far below, there were yellow lights. Little squares, in rows. Like windows.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then someone knocked on the ice. Right under my boots.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_lago_gelado",
+   "p": {
+    "racha": 0,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "9:30",
+     "ampm": "AM",
+     "lugar": "Lake Ardell",
+     "sinal": 2
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_linha_tempo",
+   "p": {
+    "de": 1900,
+    "ate": 2026,
+    "rotulo": "Ardell, Minnesota",
+    "marcos": [
+     {
+      "ano": 1905,
+      "texto": "town built"
+     },
+     {
+      "ano": 1950,
+      "texto": "flooded"
+     },
+     {
+      "ano": 2026,
+      "texto": "tonight"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Wes, 38",
+     "sub": "ice fisherman",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#e0b08a",
+     "cabelo": "#6a4a2a",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#d0642a",
+     "detalhe": "#3a3a3a",
+     "chapeu": "touca"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "BAIT SHOP RULES",
+    "itens": [
+     "Stay 100 steps from the steeple",
+     "Hear the bell? Walk to shore",
+     "Never look down the hole after midnight"
+    ],
+    "marcados": 0
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "BAIT SHOP RULES",
+    "itens": [
+     "Stay 100 steps from the steeple",
+     "Hear the bell? Walk to shore",
+     "Never look down the hole after midnight"
+    ],
+    "marcados": 1
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "BAIT SHOP RULES",
+    "itens": [
+     "Stay 100 steps from the steeple",
+     "Hear the bell? Walk to shore",
+     "Never look down the hole after midnight"
+    ],
+    "marcados": 2
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "BAIT SHOP RULES",
+    "itens": [
+     "Stay 100 steps from the steeple",
+     "Hear the bell? Walk to shore",
+     "Never look down the hole after midnight"
+    ],
+    "marcados": 3
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_cabana",
+   "p": {
+    "pegadas": 0,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "10:15",
+     "ampm": "PM",
+     "lugar": "Lake Ardell",
+     "sinal": 2
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "radio_com",
+    "rotulo": "channel 9"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_lago_gelado",
+   "p": {
+    "racha": 0.1,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "2:14",
+     "ampm": "AM",
+     "lugar": "Lake Ardell",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "sino",
+    "rotulo": "removed, 1950"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0b08a",
+     "cabelo": "#6a4a2a",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#d0642a",
+     "detalhe": "#3a3a3a",
+     "chapeu": "touca",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "something heavy",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "f_lago_gelado",
+   "p": {
+    "racha": 0.3
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e0b08a",
+     "cabelo": "#6a4a2a",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#d0642a",
+     "detalhe": "#3a3a3a",
+     "chapeu": "touca",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "f_lago_gelado",
+   "p": {
+    "racha": 0.4,
+    "hud": {
+     "dia": "Night 1",
+     "hora": "2:16",
+     "ampm": "AM",
+     "lugar": "Lake Ardell",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "f_lago_gelado",
+   "p": {
+    "racha": 0.5,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "windows?",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "KNOCK.",
+     "KNOCK."
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Who knocked?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 9,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "whole town",
+  "steeple",
+  "three rules",
+  "bell",
+  "2:14",
+  "no bell",
+  "heavy",
+  "looked down",
+  "yellow lights",
+  "knocked"
+ ],
+ "gancho": {
+  "cena": 16,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
