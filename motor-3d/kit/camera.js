@@ -71,36 +71,38 @@ function montar(plano, alvo, a, fov, orbitDeg = 0) {
 
   const centroCorpo = new THREE.Vector3(base.x, base.y + alturaCorpo * 0.5, base.z);
   let pos = new THREE.Vector3(), olha = new THREE.Vector3();
-  const dolly = 0.12 * a; // travelling lento (aproxima/afasta de leve ao longo do trecho)
+  const dolly = 0.22 * a; // travelling VISIVEL (aproxima/afasta ao longo do trecho; 2 quadros a 2,5s diferem)
+  const desliza = (a - 0.5) * 2; // -1..+1 ao longo do trecho, para o deslize lateral ser perceptivel
 
   switch (plano) {
     case 'close': { // rosto: olhos no centro do quadro. cab ja e a posicao do rosto (olhos).
       const alvoAltura = 0.95; // altura visivel em metros (cabeca do manequim com folga)
       const d = distParaEnquadrar(alvoAltura, 0.85, fov) * (1 - dolly * 0.5);
-      pos.copy(cab).addScaledVector(fr, d).addScaledVector(lado, 0.12 * Math.sin(a * 1.2));
-      pos.y = cab.y;
+      pos.copy(cab).addScaledVector(fr, d).addScaledVector(lado, 0.22 * desliza);
+      pos.y = cab.y + 0.04 * desliza;
       olha.copy(cab);
       break;
     }
     case 'medio': { // corpo inteiro ~65% da tela; de frente, leve lateral. Olha p/ o peito (rosto no terco de cima).
       const d = distParaEnquadrar(alturaCorpo * 1.05, 0.72, fov) * (1 - dolly * 0.4);
-      pos.copy(centroCorpo).addScaledVector(fr, d).addScaledVector(lado, 0.45);
+      pos.copy(centroCorpo).addScaledVector(fr, d).addScaledVector(lado, 0.45 + 0.6 * desliza);
       pos.y = base.y + alturaCorpo * 0.66;
       olha.set(base.x, base.y + alturaCorpo * 0.62, base.z);
       break;
     }
-    case 'aberto': { // ator ~25% + cenario; de frente, mais alto e afastado
+    case 'aberto': { // ator ~25% + cenario; de frente, mais alto e afastado, orbit lateral visivel
       const d = distParaEnquadrar(alturaCorpo, 0.25, fov) * (1 - dolly * 0.3);
-      pos.copy(centroCorpo).addScaledVector(fr, d).addScaledVector(lado, 1.6);
+      pos.copy(centroCorpo).addScaledVector(fr, d).addScaledVector(lado, 1.6 + 1.2 * desliza);
       pos.y = base.y + alturaCorpo * 0.9 + 0.8;
       olha.copy(centroCorpo); olha.y = base.y + alturaCorpo * 0.5;
       break;
     }
-    case 'baixo': { // camera baixa olhando para cima (criatura imponente), ator/criatura INTEIRO recortado no ceu
-      const d = distParaEnquadrar(alturaCorpo, 0.72, fov) * (1 - dolly * 0.3);
-      pos.copy(base).addScaledVector(fr, d).addScaledVector(lado, 0.4);
-      pos.y = base.y + 0.5 + a * 0.3;
-      olha.set(base.x, base.y + alturaCorpo * 0.8, base.z);
+    case 'baixo': { // de baixo p/ cima: a criatura/ator INTEIRO (pes ao topo) recortado no ceu.
+      // enquadra a altura inteira + folga (0.82) e afasta o bastante; o olhar mira o meio do corpo.
+      const d = distParaEnquadrar(alturaCorpo * 1.12, 0.82, fov) * (1 - dolly * 0.25);
+      pos.copy(base).addScaledVector(fr, d).addScaledVector(lado, 0.4 + 0.5 * desliza);
+      pos.y = base.y + 0.35 + a * 0.4;
+      olha.set(base.x, base.y + alturaCorpo * 0.55, base.z);
       break;
     }
     case 'ombro': { // por cima do ombro: ATRAS e ao lado, olhando para a frente do ator
@@ -134,29 +136,24 @@ function montar(plano, alvo, a, fov, orbitDeg = 0) {
 }
 
 // ---- deteccao de obstaculo entre a camera e a cabeca do alvo ----
-// devolve o OBJETO de topo (filho de obstaculos) que bloqueia, ou null se livre.
-function objetoBloqueador(posCam, cab, obstaculos, alvoObj) {
-  if (!obstaculos || !obstaculos.length) return null;
-  _dir.copy(cab).sub(posCam);
-  const dist = _dir.length();
-  if (dist < 0.05) return null;
-  _dir.normalize();
-  _ray.set(posCam, _dir);
-  _ray.far = dist - 0.3; // nao conta a propria cabeca
-  const hits = _ray.intersectObjects(obstaculos, true);
-  for (const h of hits) {
-    let o = h.object, doAlvo = false;
-    while (o) { if (o === alvoObj) { doAlvo = true; break; } o = o.parent; }
-    if (doAlvo) continue;
-    // sobe ate o filho de topo da lista de obstaculos
-    let top = h.object;
-    while (top.parent && !obstaculos.includes(top)) top = top.parent;
-    return top;
+// devolve TODOS os objetos de topo (filhos de obstaculos) no caminho camera->cabeca (varios raios: cabeca,
+// peito e pes do alvo, para pegar tronco que tapa o corpo todo).
+function bloqueadores(posCam, cab, base, obstaculos, alvoObj) {
+  const achados = new Set();
+  if (!obstaculos || !obstaculos.length) return achados;
+  const alvos = [cab, new THREE.Vector3((cab.x + base.x) / 2, (cab.y + base.y) / 2, (cab.z + base.z) / 2), base];
+  for (const pt of alvos) {
+    _dir.copy(pt).sub(posCam); const dist = _dir.length();
+    if (dist < 0.05) continue;
+    _dir.normalize(); _ray.set(posCam, _dir); _ray.far = dist - 0.3;
+    for (const h of _ray.intersectObjects(obstaculos, true)) {
+      let o = h.object, doAlvo = false; while (o) { if (o === alvoObj) { doAlvo = true; break; } o = o.parent; }
+      if (doAlvo) continue;
+      let top = h.object; while (top.parent && !obstaculos.includes(top)) top = top.parent;
+      achados.add(top);
+    }
   }
-  return null;
-}
-function bloqueado(posCam, cab, obstaculos, alvoObj) {
-  return !!objetoBloqueador(posCam, cab, obstaculos, alvoObj);
+  return achados;
 }
 
 // camera DENTRO de um objeto? So conta se a camera esta dentro do NUCLEO do objeto (caixa encolhida ~40%),
@@ -182,16 +179,15 @@ export function aplicarPlano(cam, plano, alvo, t, opts = {}) {
   const a = lt * lt * (3 - 2 * lt); // smoothstep (travelling lento)
   const fov = opts.fov || cam.fov || 42;
 
-  // tenta sem orbit; se bloqueado ou dentro de objeto, gira a camera em volta do ator (+-30, +-60, +-90)
-  const tentativas = [0, 30, -30, 60, -60, 90, -90, 150, 180];
-  let escolhido = null, aindaRuim = true;
+  // escolhe o orbit que NAO deixa a camera dentro de um objeto (preferindo 0); os troncos que ainda taparem
+  // o alvo serao ESCONDIDOS pelo engine (nao basta orbitar, regra da rodada 3).
+  const tentativas = [0, 25, -25, 55, -55, 90, -90];
+  let m = null;
   for (const orb of tentativas) {
-    const m = montar(plano, alvo, a, fov, orb);
-    const ruim = dentroDeObjeto(m.pos, opts.obstaculos) || bloqueado(m.pos, m.cab, opts.obstaculos, alvo.obj);
-    if (!ruim) { escolhido = m; aindaRuim = false; break; }
-    if (!escolhido) escolhido = m; // guarda o primeiro como ultimo recurso
+    const cand = montar(plano, alvo, a, fov, orb);
+    if (!dentroDeObjeto(cand.pos, opts.obstaculos)) { m = cand; break; }
+    if (!m) m = cand;
   }
-  const m = escolhido;
 
   let px = m.pos.x, py = m.pos.y, pz = m.pos.z;
   const tr = opts.tremor || 0;
@@ -203,10 +199,10 @@ export function aplicarPlano(cam, plano, alvo, t, opts = {}) {
   cam.position.set(px, py, pz);
   cam.lookAt(m.olha.x, m.olha.y, m.olha.z);
   if (opts.fov) { cam.fov = opts.fov; cam.updateProjectionMatrix(); }
-  // se ainda ficou bloqueado, diz QUAL objeto bloqueia, para o engine escondê-lo neste quadro
-  let bloqueador = null;
-  if (aindaRuim) bloqueador = objetoBloqueador(cam.position, m.cab, opts.obstaculos, alvo.obj);
-  return { bloqueado: aindaRuim, bloqueador };
+  // TODOS os objetos entre a camera e o alvo (cabeca/peito/pes): o engine esconde neste quadro
+  const base = alvo.obj.getWorldPosition(new THREE.Vector3()); base.y = 0.1;
+  const lista = [...bloqueadores(cam.position, m.cab, base, opts.obstaculos, alvo.obj)];
+  return { bloqueado: lista.length > 0, bloqueadores: lista };
 }
 
 export const PLANOS = ['aereo', 'aberto', 'medio', 'close', 'baixo', 'ombro', 'pov', 'nuca'];

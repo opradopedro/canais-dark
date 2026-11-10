@@ -249,15 +249,26 @@ async function cemiterio(scene, opts) {
   return { grupo, marcas, piso: p };
 }
 
-// figura de fundo simples (capsula + cabeca), cor de roupa; so para a vila/campo nao ficarem vazios.
-function figuraFundo(grupo, x, z, ry = 0, cor = 0x7a5a3a) {
+// figurante de fundo: versão LEVE do personagem liso (sem esqueleto/animação, barato), com cores variadas,
+// cabeça-bola, tronco, braços e pernas em cápsulas e um rostinho simples. Para a vila/campo terem gente de verdade.
+const _PELES_F = ['#f2d6be', '#d9a77f', '#c98d5f', '#a8703f', '#8a5a34'];
+const _ROUPAS_F = ['#6a2b22', '#2e3a6a', '#3f5a3a', '#7a5a34', '#8a6a9a', '#d8b43a', '#b0c4de', '#4a4a4a'];
+function figuraFundo(grupo, x, z, ry = 0, sem = 1) {
+  const r = (() => { let a = (sem | 0) >>> 0 || 1; return () => { a = (a * 1664525 + 1013904223) >>> 0; return a / 4294967296; }; })();
   const g = new THREE.Group();
-  const roupa = new THREE.MeshStandardMaterial({ color: cor, roughness: 0.9 });
-  const pele = new THREE.MeshStandardMaterial({ color: 0xe0c0a0, roughness: 0.8 });
-  const corpo = new THREE.Mesh(new THREE.CapsuleGeometry(0.22, 0.7, 6, 12), roupa);
-  corpo.position.y = 0.78; corpo.castShadow = true; g.add(corpo);
-  const cab = new THREE.Mesh(new THREE.SphereGeometry(0.2, 16, 14), pele);
-  cab.position.y = 1.4; cab.castShadow = true; g.add(cab);
+  const pele = new THREE.MeshStandardMaterial({ color: _PELES_F[Math.floor(r() * _PELES_F.length)], roughness: 0.78 });
+  const roupa = new THREE.MeshStandardMaterial({ color: _ROUPAS_F[Math.floor(r() * _ROUPAS_F.length)], roughness: 0.82 });
+  const calca = new THREE.MeshStandardMaterial({ color: '#2a3550', roughness: 0.85 });
+  const alt = 1.5 + r() * 0.2, rc = 0.15;
+  const tronco = new THREE.Mesh(new THREE.CapsuleGeometry(0.16, alt * 0.38, 6, 10), roupa); tronco.position.y = alt * 0.52; tronco.castShadow = true; g.add(tronco);
+  const cab = new THREE.Mesh(new THREE.SphereGeometry(rc, 16, 14), pele); cab.position.y = alt * 0.9; cab.castShadow = true; g.add(cab);
+  // rostinho: dois olhos pretos num plano
+  const fc = document.createElement('canvas'); fc.width = fc.height = 64; const fx = fc.getContext('2d'); fx.fillStyle = '#000'; fx.beginPath(); fx.ellipse(22, 30, 6, 8, 0, 0, 7); fx.ellipse(42, 30, 6, 8, 0, 0, 7); fx.fill();
+  const rosto = new THREE.Mesh(new THREE.PlaneGeometry(rc * 1.8, rc * 1.8), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(fc), transparent: true, depthTest: false })); rosto.position.set(0, alt * 0.9, rc * 0.95); rosto.renderOrder = 6; g.add(rosto);
+  // pernas
+  for (const sx of [-0.08, 0.08]) { const p = new THREE.Mesh(new THREE.CapsuleGeometry(0.07, alt * 0.3, 6, 8), calca); p.position.set(sx, alt * 0.18, 0); p.castShadow = true; g.add(p); }
+  // braços
+  for (const sx of [-0.2, 0.2]) { const b = new THREE.Mesh(new THREE.CapsuleGeometry(0.06, alt * 0.3, 6, 8), roupa); b.position.set(sx, alt * 0.52, 0); b.castShadow = true; g.add(b); }
   g.position.set(x, 0, z); g.rotation.y = ry; grupo.add(g); return g;
 }
 
@@ -289,8 +300,8 @@ async function vila(scene, opts) {
   await por(grupo, 'vila/Hay', 6, 4, 1.2);
   cerca(grupo, -9, 7, -5, 7); cerca(grupo, 5, 6, 9, 6);
   // aldeões de fundo (vila viva)
-  figuraFundo(grupo, -2.5, 4, 2.4, 0x6a4a8a); figuraFundo(grupo, 2.2, 3.4, -1.0, 0x8a3a30);
-  figuraFundo(grupo, -1.2, -1.5, 0.8, 0x3a5a6a); figuraFundo(grupo, 4.2, -0.5, 2.2, 0x5a6a3a);
+  figuraFundo(grupo, -2.5, 4, 2.4, 11); figuraFundo(grupo, 2.2, 3.4, -1.0, 23);
+  figuraFundo(grupo, -1.2, -1.5, 0.8, 37); figuraFundo(grupo, 4.2, -0.5, 2.2, 51);
   await florestaEmVolta(grupo, { r0: 20, r1: 34, n: 20, sem: 21 });
   const marcas = {
     praca: { x: 0, z: 3, cam: 'medio' },
@@ -319,7 +330,7 @@ async function campo(scene, opts) {
   await por(grupo, 'vila/Cart', -6, -4, 1.8, { ry: 0.8 });
   await por(grupo, 'animais/Cow', -5, 5, ALTURAS.animal_grande, { ry: 1 });
   await por(grupo, 'animais/Donkey', 3, -3, 1.4, { ry: -0.6 });
-  figuraFundo(grupo, 1, 2, 2.6, 0x8a6a3a); figuraFundo(grupo, -3, -1, 1.2, 0x5a7a4a);
+  figuraFundo(grupo, 1, 2, 2.6, 67); figuraFundo(grupo, -3, -1, 1.2, 83);
   await florestaEmVolta(grupo, { r0: 20, r1: 34, n: 14, sem: 29 });
   const marcas = {
     trigo: { x: 0, z: 0, cam: 'medio' },

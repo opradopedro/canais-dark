@@ -300,16 +300,17 @@ window.render = function (t) {
   // rim light azulada atras do alvo, na direcao da camera, para recortar do fundo
   if (rim && alvo) posicionarRim(alvo);
 
-  // se um objeto ainda bloqueia a cabeca do alvo, esconde-o SO neste quadro (e o fiscal nao reprova)
-  let escondido = null;
-  if (diag && diag.bloqueador) { escondido = diag.bloqueador; escondido.visible = false; }
+  // TODOS os troncos/casas entre a camera e o alvo SOMEM neste quadro (regra r3: nao basta orbitar)
+  const escondidos = (diag && diag.bloqueadores) || [];
+  for (const o of escondidos) o.visible = false;
 
   // dados para o fiscal (conferir_quadros.py): plano, se o alvo e ator, e se segue bloqueado DEPOIS de esconder
-  window.__ultimoQuadro = { plano: pa.plano, alvoEhAtor: !!(alvo && alvo.ehAtor), bloqueado: false };
+  window.__ultimoQuadro = { plano: pa.plano, alvoEhAtor: !!(alvo && alvo.ehAtor), bloqueado: false, cena: ST._iAtual,
+                            temCriatura: !!(cena && cena.criatura) };
   _alvoAtual = alvo;
 
   if (_silhueta) desenharSilhueta(alvo); else comp.render();
-  if (escondido) escondido.visible = true; // restaura para os proximos quadros
+  for (const o of escondidos) o.visible = true; // restaura para os proximos quadros
   desenharLegenda(t);
 };
 
