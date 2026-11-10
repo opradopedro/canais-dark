@@ -1,0 +1,39 @@
+FISCAL OK  (SV-3d-exemplo.json)
+quadros: 36 | falhas: 0
+
+t=  0.0s plano=aereo   brilho= 61.3 ator= 0.0% OK
+t=  2.5s plano=aereo   brilho= 63.1 ator= 0.0% OK
+t=  5.0s plano=aereo   brilho= 63.1 ator= 0.0% OK
+t=  7.5s plano=close   brilho= 88.9 ator=93.8% OK
+t= 10.0s plano=close   brilho= 89.3 ator=95.3% OK
+t= 12.5s plano=aberto  brilho= 65.8 ator= 0.0% OK
+t= 15.0s plano=aberto  brilho= 65.0 ator= 0.0% OK
+t= 17.5s plano=baixo   brilho= 64.7 ator= 0.0% OK
+t= 20.0s plano=baixo   brilho= 64.5 ator= 0.0% OK
+t= 22.5s plano=baixo   brilho= 64.5 ator= 0.0% OK
+t= 25.0s plano=medio   brilho= 79.9 ator=50.3% OK
+t= 27.5s plano=medio   brilho= 79.8 ator=52.6% OK
+t= 30.0s plano=medio   brilho= 82.3 ator=42.2% OK
+t= 32.5s plano=medio   brilho= 82.1 ator=45.1% OK
+t= 35.0s plano=medio   brilho= 80.5 ator=47.6% OK
+t= 37.5s plano=nuca    brilho=109.8 ator=74.1% OK
+t= 40.0s plano=nuca    brilho=112.8 ator=76.8% OK
+t= 42.5s plano=close   brilho=104.4 ator=94.0% OK
+t= 45.0s plano=close   brilho=105.6 ator=95.3% OK
+t= 47.5s plano=baixo   brilho= 59.4 ator=12.1% OK
+t= 50.0s plano=baixo   brilho= 61.3 ator=13.1% OK
+t= 52.5s plano=baixo   brilho= 66.7 ator=13.0% OK
+t= 55.0s plano=baixo   brilho= 66.3 ator=12.4% OK
+t= 57.5s plano=medio   brilho=111.0 ator=49.9% OK
+t= 60.0s plano=medio   brilho=115.3 ator=57.7% OK
+t= 62.5s plano=medio   brilho=118.8 ator=49.0% OK
+t= 65.0s plano=aereo   brilho= 69.0 ator= 0.0% OK
+t= 67.5s plano=aereo   brilho= 69.3 ator= 0.0% OK
+t= 70.0s plano=close   brilho= 87.6 ator=93.5% OK
+t= 72.5s plano=close   brilho= 88.0 ator=95.1% OK
+t= 75.0s plano=aberto  brilho= 56.6 ator= 0.0% OK
+t= 77.5s plano=aberto  brilho= 57.5 ator= 0.0% OK
+t= 80.0s plano=aberto  brilho= 58.6 ator= 0.0% OK
+t= 82.5s plano=baixo   brilho= 76.4 ator=37.4% OK
+t= 85.0s plano=baixo   brilho= 75.3 ator=38.8% OK
+t= 87.5s plano=baixo   brilho= 71.7 ator=39.8% OK
