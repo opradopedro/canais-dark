@@ -9,6 +9,8 @@ so-you-built-it/scripts/vendor/
 
 # Saida de producao dos canais novos
 saida/
+# excecao: os 6 JPGs de conferencia dos testes 3D ENTRAM no git (o MP4 fica fora, ver motor-3d/testes/saida/.gitignore)
+!motor-3d/testes/saida/
 /tmp/
 
 # Banco de narracoes do Gemini (audio pesado, so neste PC)
