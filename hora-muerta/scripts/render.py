@@ -5,14 +5,33 @@ Uso: python3 render.py historia.json tempos.json video.mp4 [--teste 1.5,10,22]
 --teste salva JPGs nesses segundos (ao lado do video) em vez de renderizar tudo: use para conferir cenas.
 1080x1920, 30 fps. Um Short de 45 s leva poucos minutos numa maquina comum.
 """
-import argparse, base64, json, os, subprocess, sys
+import argparse, base64, functools, http.server, json, os, socket, subprocess, sys, threading
 from playwright.sync_api import sync_playwright
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from comum import carregar, resolver
 
 ENGINE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "engine.html")
+# raiz do motor 3D (motor-3d/, irma de hora-muerta/): engine.html + kit/ + vendor/ + assets/ + fontes/
+MOTOR3D = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "motor-3d")
 GRAB = "t => { render(t); return document.getElementById('c').toDataURL('image/jpeg', 0.9).split(',')[1]; }"
+
+
+def _servidor_motor3d():
+    """Sobe um http.server LOCAL (so 127.0.0.1) numa porta livre, em thread, servindo motor-3d/.
+    Modulos ES e GLTFLoader com fetch nao funcionam por file://; por isso o 3D precisa de http."""
+    porta = _porta_livre()
+    Handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=MOTOR3D)
+    srv = http.server.ThreadingHTTPServer(("127.0.0.1", porta), Handler)
+    t = threading.Thread(target=srv.serve_forever, daemon=True)
+    t.start()
+    return srv, porta
+
+
+def _porta_livre():
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind(("127.0.0.1", 0)); porta = s.getsockname()[1]; s.close()
+    return porta
 
 
 def main():
@@ -21,27 +40,45 @@ def main():
     ap.add_argument("--teste"); ap.add_argument("--fps", type=int, default=30)
     a = ap.parse_args()
     estado = resolver(carregar(a.historia), json.load(open(a.tempos)))
+    tresd = estado.get("visual") == "3d"
+    srv = None
     with sync_playwright() as p:
         try:
             b = p.chromium.launch()
         except Exception:  # playwright do pip mais novo que o Chromium da maquina: usa o instalado
             b = p.chromium.launch(executable_path=os.environ.get("HM_CHROMIUM", "/opt/pw-browsers/chromium"))
         pg = b.new_page(viewport={"width": 1080, "height": 1920})
-        pg.goto("file://" + ENGINE)
-        pg.evaluate("h => setup(h)", estado)
+        if tresd:
+            # 3D: engine.html de motor-3d/ servido por http local; espera TODOS os .glb carregarem (window.pronto)
+            srv, porta = _servidor_motor3d()
+            pg.goto(f"http://127.0.0.1:{porta}/engine.html")
+            pg.evaluate("h => setup(h)", estado)
+            pg.wait_for_function("() => window.pronto === true", timeout=120000)
+        else:
+            # 2D (flat): engine.html do canal, via file:// (como sempre)
+            pg.goto("file://" + ENGINE)
+            pg.evaluate("h => setup(h)", estado)
+        def quadro(t):
+            # em 3D, espera a cena do instante t ficar montada (troca de cenario/luz e async) antes de desenhar
+            if tresd:
+                pg.evaluate("t => window.prepararQuadro(t)", t)
+            return base64.b64decode(pg.evaluate(GRAB, t))
+
         if a.teste:
             base = os.path.splitext(a.video)[0]
             for t in [float(v) for v in a.teste.split(",")]:
-                open(f"{base}_{t:05.1f}.jpg", "wb").write(base64.b64decode(pg.evaluate(GRAB, t)))
+                open(f"{base}_{t:05.1f}.jpg", "wb").write(quadro(t))
         else:
             n = int(estado["dur"] * a.fps)
             ff = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(a.fps),
                                    "-c:v", "mjpeg", "-i", "-", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20",
                                    "-preset", "medium", a.video], stdin=subprocess.PIPE)
             for i in range(n):
-                ff.stdin.write(base64.b64decode(pg.evaluate(GRAB, i / a.fps)))
+                ff.stdin.write(quadro(i / a.fps))
             ff.stdin.close(); ff.wait()
         b.close()
+    if srv:
+        srv.shutdown()
     print("ok", a.video)
 
 

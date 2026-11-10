@@ -17,12 +17,21 @@ def _tempo(segs, ref):
 
 
 def resolver(h, timing):
-    """Devolve o dicionario que o engine.html recebe em setup()."""
+    """Devolve o dicionario que o engine.html recebe em setup().
+
+    2D (visual != "3d"): cada cena tem "comp" + "p" (engine flat).
+    3D (visual == "3d"): cada cena tem "cena" (cenario/marca/plano/luz/efeito/atores/criatura); o elenco (atores
+    declarados uma vez) vai em "elenco". Mesma linha do tempo (t0 por cena) e mesma legenda (segs com w por palavra).
+    """
     segs = timing["segs"]
+    tresd = h.get("visual") == "3d"
     cenas = []
     for i, c in enumerate(h["cenas"]):
         t0 = 0 if i == 0 else _tempo(segs, {"en": "inicio", "mas": -0.25, **c})
-        cenas.append({"t0": t0, "comp": c["comp"], "p": c.get("p", {})})
+        if tresd:
+            cenas.append({"t0": t0, "cena": c.get("cena", {})})
+        else:
+            cenas.append({"t0": t0, "comp": c["comp"], "p": c.get("p", {})})
     eventos = [{"tipo": e["tipo"], "t": _tempo(segs, e), "dur": e.get("dur")} for e in h.get("eventos", [])]
     eventos.sort(key=lambda e: e["t"])
     gancho = None
@@ -34,4 +43,5 @@ def resolver(h, timing):
             gancho = {"cena": g["cena"], "t": ev["t"] + g.get("mas", 0.4), "dur": g.get("dur", 0.8)}
     return {"segs": segs, "cenas": cenas, "eventos": eventos, "destaque": h.get("destaque", []),
             "gancho": gancho, "dur": timing["dur"], "tema": h.get("tema"),
-            "visual": h.get("visual"), "paleta": h.get("paleta")}
+            "visual": h.get("visual"), "paleta": h.get("paleta"),
+            "elenco": h.get("elenco", {})}

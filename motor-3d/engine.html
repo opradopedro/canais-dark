@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; background: #000; overflow: hidden; }
+  #c { display: block; }
+  /* a legenda e desenhada num canvas 2D POR CIMA do 3D (mesma resolucao) */
+  #leg { position: absolute; left: 0; top: 0; pointer-events: none; }
+  @font-face { font-family: 'Fredoka'; src: url('fontes/Fredoka.ttf'); font-weight: 300 700; }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "./vendor/three/build/three.module.js",
+  "three/addons/": "./vendor/three/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<canvas id="leg" width="1080" height="1920"></canvas>
+<script type="module">
+import * as THREE from 'three';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { pessoa } from './kit/personagem.js';
+import { criatura } from './kit/criatura.js';
+import { aplicar as aplicarLuz } from './kit/luz.js';
+import { montar as montarCenario } from './kit/cenarios/index.js';
+import { aplicarPlano, planoAutomatico } from './kit/camera.js';
+import { preCarregar } from './kit/modelos.js';
+
+const W = 1080, H = 1920;
+const cv = document.getElementById('c');
+const legCv = document.getElementById('leg');
+const lx = legCv.getContext('2d');
+
+const R = new THREE.WebGLRenderer({ canvas: cv, antialias: true, preserveDrawingBuffer: true });
+R.setSize(W, H, false);
+R.shadowMap.enabled = true;
+R.shadowMap.type = THREE.PCFSoftShadowMap;
+R.toneMapping = THREE.ACESFilmicToneMapping;
+R.toneMappingExposure = 1.1;
+
+let ST = null;          // estado vindo de setup(h)
+let scene, cam, comp;   // cena, camera, composer
+let luzCtrl = null;     // controlador de luz/efeitos por cena (troca quando o preset muda)
+let atores = {};        // id -> ator (pessoa)
+let criaturaAtiva = null;
+let cenarioAtual = null, cenarioNome = null, luzNome = null, efeitoNome = null;
+let montado = false;
+
+window.pronto = false;  // o render.py espera isto virar true (todos os .glb carregados)
+
+// ------- helpers -------
+function limparGrupo(g) { if (g && g.parent) g.parent.remove(g); }
+
+// resolve a posicao de uma marca do cenario para {x,y,z}
+function posMarca(marcas, nome) {
+  const m = (marcas && marcas[nome]) || { x: 0, z: 0 };
+  return { x: m.x || 0, y: 0, z: m.z || 0, cam: m.cam };
+}
+
+// ------- setup: monta a cena inteira uma vez, deixa tudo pronto para render(t) -------
+window.setup = async function (h) {
+  ST = h;
+  ST._cenas = h.cenas || [];       // [{t0, cena:{...}}] ja com tempos
+  ST._elenco = h.elenco || {};     // id -> spec de pessoa
+  ST.destaqueRX = montarDestaque(h.destaque);
+
+  scene = new THREE.Scene();
+  cam = new THREE.PerspectiveCamera(42, W / H, 0.1, 300);
+  cam.position.set(0, 2, 8); cam.lookAt(0, 1.4, 0);
+
+  comp = new EffectComposer(R);
+  comp.setSize(W, H);
+  comp.addPass(new RenderPass(scene, cam));
+  const bloom = new UnrealBloomPass(new THREE.Vector2(W, H), 0.8, 0.5, 0.82);
+  comp.addPass(bloom);
+  comp.addPass(new OutputPass());
+
+  // pre-carrega os .glb que o roteiro vai usar (cenarios, atores, objetos, criatura)
+  await precarregarTudo();
+
+  // cria os atores do elenco (uma vez; reaparecem iguais em todas as cenas)
+  for (const [id, spec] of Object.entries(ST._elenco)) {
+    atores[id] = await pessoa(spec);
+    atores[id].obj.visible = false;
+    scene.add(atores[id].obj);
+  }
+
+  // monta a PRIMEIRA cena agora (as trocas de cenario/luz acontecem em render quando a cena muda)
+  await trocarPara(0);
+  montado = true;
+  window.pronto = true;
+};
+
+function montarDestaque(lista) {
+  const ws = (lista || []).flatMap(d => String(d).split(/\s+/)).filter(w => w.length > 1)
+    .map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  return ws.length ? new RegExp('^(' + ws.join('|') + ')$', 'iu') : null;
+}
+
+// lista de arquivos a pre-carregar: cenarios usados + manequim + animais + objetos. Simplificado:
+// o cenario carrega seus proprios .glb sob demanda, mas o engine espera o window.pronto so depois de montar
+// a cena 0 inteira. Para os cenarios/atores seguintes, pre-carregamos o manequim e animais aqui.
+async function precarregarTudo() {
+  const base = ['personagens/Mannequin_Medium',
+    'animacoes/Rig_Medium_General', 'animacoes/Rig_Medium_MovementBasic',
+    'animacoes/Rig_Medium_MovementAdvanced', 'animacoes/Rig_Medium_Special', 'animacoes/Rig_Medium_Simulation'];
+  // animais citados no elenco/cenas
+  const animais = new Set();
+  for (const c of ST._cenas) {
+    const cena = c.cena || {};
+    if (cena.criatura && cena.criatura.tipo === 'animal') animais.add('animais/' + (cena.criatura.modelo || 'Wolf'));
+  }
+  try { await preCarregar([...base, ...animais]); } catch (e) { /* o cenario carrega o resto */ }
+}
+
+// troca para a cena i: monta cenario/luz se mudaram, posiciona atores, ativa criatura.
+async function trocarPara(i) {
+  const cena = (ST._cenas[i] && ST._cenas[i].cena) || {};
+  // --- cenario ---
+  if (cena.cenario && cena.cenario !== cenarioNome) {
+    limparGrupo(cenarioAtual && cenarioAtual.grupo);
+    cenarioAtual = await montarCenario(cena.cenario, scene, {});
+    cenarioNome = cena.cenario;
+  }
+  // --- luz / efeito ---
+  const preset = cena.luz || 'noite';
+  const efeito = cena.efeito || null;
+  if (preset !== luzNome || efeito !== efeitoNome) {
+    // remove luzes antigas
+    if (luzCtrl) for (const l of luzCtrl.luzes) limparGrupo(l);
+    // remove estrelas/chuva antigas
+    for (const nm of ['estrelas', 'chuva']) { const o = scene.getObjectByName(nm); if (o) scene.remove(o); }
+    const fx = efeito === 'chuva' ? 'chuva' : preset;
+    const opts = {};
+    if (cenarioAtual && cenarioAtual.fogoX !== undefined) { opts.fogoX = cenarioAtual.fogoX; opts.fogoZ = cenarioAtual.fogoZ; }
+    luzCtrl = aplicarLuz(scene, fx, opts);
+    luzNome = preset; efeitoNome = efeito;
+  }
+  // --- atores desta cena ---
+  for (const id of Object.keys(atores)) atores[id].obj.visible = false;
+  for (const a of (cena.atores || [])) {
+    const ator = atores[a.id];
+    if (!ator) continue;
+    ator.obj.visible = true;
+    const pos = posMarca(cenarioAtual.marcas, a.para || a.marca || a.de);
+    ator.obj.position.x = pos.x; ator.obj.position.z = pos.z;
+    // vira o ator para a camera/frente por padrao
+    ator.obj.rotation.y = a.girar ?? Math.PI;
+    if (a.acao) ator.acao(a.acao);
+    if (a.rosto) ator.rosto(a.rosto);
+    if (a.segura) ator.segurar(a.segura);
+  }
+  // --- criatura ---
+  limparGrupo(criaturaAtiva && criaturaAtiva.obj);
+  criaturaAtiva = null;
+  if (cena.criatura) {
+    criaturaAtiva = await criatura(cena.criatura.tipo || 'alta', cena.criatura);
+    const pos = posMarca(cenarioAtual.marcas, cena.criatura.marca || 'arvores');
+    criaturaAtiva.obj.position.set(pos.x, 0, pos.z);
+    criaturaAtiva.obj.rotation.y = cena.criatura.girar ?? Math.PI;
+    scene.add(criaturaAtiva.obj);
+  }
+  ST._iAtual = i;
+}
+
+// qual cena no instante t
+function cenaEm(t) {
+  let i = 0;
+  for (let k = 0; k < ST._cenas.length; k++) if (t >= ST._cenas[k].t0) i = k;
+  return i;
+}
+
+// ------- render(t): desenha o quadro do segundo t, DETERMINISTICO -------
+// Importante: render.py chama render(t) em ordem crescente de t. A troca de cena (montarCenario/luz) e async;
+// como render e sincrono, as trocas ja aconteceram em setup/trocarPara. Para cenas seguintes, a troca e feita
+// ANTES do primeiro quadro delas por meio de prepararAte(t) chamado pelo render.py? Nao: mantemos tudo montado
+// sob demanda de forma sincrona guardando promessas. Para simplicidade e determinismo, pre-montamos cada cena
+// na primeira vez que t a alcanca, via fila resolvida fora do caminho do quadro (ver garantirCena).
+window.render = function (t) {
+  if (!montado) return;
+  const i = cenaEm(t);
+  if (i !== ST._iAtual) garantirCena(i); // dispara troca (async); o quadro atual pode usar a cena anterior por 1 frame
+
+  const cena = (ST._cenas[i] && ST._cenas[i].cena) || {};
+  const t0 = ST._cenas[i] ? ST._cenas[i].t0 : 0;
+  const t1 = (i + 1 < ST._cenas.length) ? ST._cenas[i + 1].t0 : ST.dur;
+  const tLocal = Math.max(0, t - t0);
+  const durLinha = Math.max(0.6, t1 - t0);
+
+  // animacoes deterministas: cada mixer no segundo t (loop cuida da repeticao)
+  for (const id of Object.keys(atores)) if (atores[id].obj.visible) atores[id].setTime(t);
+  if (criaturaAtiva && criaturaAtiva.setTime) criaturaAtiva.setTime(t);
+  if (luzCtrl) luzCtrl.atualizar(t);
+
+  // camera: plano do roteiro ou sequencia automatica (troca a cada ~2,5 s), com travelling lento
+  const alvoMarca = posMarca(cenarioAtual.marcas, cena.marca || 'rua');
+  const base = cena.plano || 'auto';
+  const pa = planoAutomatico(tLocal, durLinha, base);
+  const tremor = (cena.tremor || 0) + sustoEm(t);
+  const alvo = { x: alvoMarca.x, y: (cena.plano === 'close' || pa.plano === 'close') ? 1.0 : 0.9, z: alvoMarca.z };
+  aplicarPlano(cam, pa.plano, alvo, pa.tLocal, { dur: pa.dur, tremor });
+
+  comp.render();
+  desenharLegenda(t);
+};
+
+// pulso de susto deterministico a partir dos eventos (tremor curto)
+function sustoEm(t) {
+  let s = 0;
+  for (const e of (ST.eventos || [])) {
+    if ((e.tipo === 'susto' || e.tipo === 'golpe')) {
+      const d = t - e.t;
+      if (d >= 0 && d < 0.4) s = Math.max(s, (1 - d / 0.4));
+    }
+  }
+  return s;
+}
+
+// fila de montagem de cena (async) sem travar o quadro
+let _montando = false, _fila = null;
+function garantirCena(i) {
+  _fila = i;
+  if (_montando) return;
+  _montando = true;
+  (async () => {
+    while (_fila !== null && _fila !== ST._iAtual) {
+      const alvo = _fila; _fila = null;
+      await trocarPara(alvo);
+    }
+    _montando = false;
+  })();
+}
+
+// ------- legenda: UMA palavra no centro, Fredoka branca com contorno preto, amarelo p/ destaque -------
+function desenharLegenda(t) {
+  lx.clearRect(0, 0, W, H);
+  if (window.__semLegenda || !ST.segs) return;
+  const s = ST.segs.find(s => t >= s.t0 - 0.05 && t <= s.t1 + 0.25);
+  if (!s) return;
+  const words = s.text.split(' ').filter(Boolean);
+  // tempo de cada palavra = alinhamento forcado (sincronia.py). A palavra so aparece quando a voz a fala.
+  let k = -1;
+  if (s.w && s.w.length === words.length) {
+    for (let i = 0; i < words.length; i++) if (s.w[i] <= t) k = i;
+  } else {
+    // sem alinhamento: distribui pelo tempo do seg
+    const prog = (t - s.t0) / Math.max(0.1, s.t1 - s.t0);
+    k = Math.min(words.length - 1, Math.floor(prog * words.length));
+  }
+  if (k < 0) return;
+  const bruta = words[k];
+  const palavra = bruta.replace(/\*/g, ''); // asteriscos nao aparecem; so marcam amarelo
+  const limpa = palavra.replace(/[^\p{L}\p{N}']/gu, '');
+  const amarela = /\*/.test(bruta) || (ST.destaqueRX && ST.destaqueRX.test(limpa));
+
+  // "pop" curto quando a palavra entra (deterministico): escala 1.12 -> 1.0 em 0.12 s
+  const entrou = (s.w && s.w.length === words.length) ? (t - s.w[k]) : 0;
+  const pop = entrou >= 0 && entrou < 0.12 ? 1 + (0.12 - entrou) * 1.0 : 1;
+
+  lx.save();
+  lx.textAlign = 'center'; lx.textBaseline = 'middle';
+  const yc = H * 0.5; // zona segura central do Shorts
+  lx.translate(W / 2, yc); lx.scale(pop, pop);
+  lx.font = '700 128px Fredoka, "Baloo 2", system-ui, sans-serif';
+  lx.lineJoin = 'round'; lx.miterLimit = 2;
+  // contorno preto grosso
+  lx.lineWidth = 24; lx.strokeStyle = '#000'; lx.strokeText(palavra, 0, 0);
+  // preenchimento branco (ou amarelo p/ destaque)
+  lx.fillStyle = amarela ? '#ffd23e' : '#ffffff';
+  lx.fillText(palavra, 0, 0);
+  lx.restore();
+}
+
+// O render.py captura o quadro com document.getElementById('c').toDataURL(...). O 3D esta no canvas WebGL 'c'
+// e a legenda num canvas 2D separado 'leg'. Para o JPG sair com a legenda JUNTO, trocamos cv.toDataURL por uma
+// versao que compoe os dois num terceiro canvas e devolve o DataURL dele (mesma assinatura, mesmo contrato).
+const outCv = document.createElement('canvas'); outCv.width = W; outCv.height = H;
+const outCtx = outCv.getContext('2d');
+cv.toDataURL = function (type = 'image/jpeg', q = 0.9) {
+  outCtx.drawImage(cv, 0, 0);       // o 3D ja renderizado (preserveDrawingBuffer=true garante que persiste)
+  outCtx.drawImage(legCv, 0, 0);    // a legenda por cima
+  return outCv.toDataURL(type, q);
+};
+
+// garante que a cena do instante t esteja montada ANTES de desenhar o quadro (o render.py aguarda esta promessa
+// em 3D, para nenhum quadro sair com a cena anterior). Resolve na hora se ja estiver montada.
+window.prepararQuadro = async function (t) {
+  if (!montado) return false;
+  const i = cenaEm(t);
+  if (i !== ST._iAtual || _montando) {
+    await trocarPara(i);
+  }
+  return true;
+};
+
+// pequeno log para a prova manual
+window.estado = () => ({ pronto: window.pronto, cenas: ST && ST._cenas.length, atores: Object.keys(atores), iAtual: ST && ST._iAtual });
+</script>
+</body>
+</html>
