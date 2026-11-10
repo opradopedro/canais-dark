@@ -1,0 +1,324 @@
+{
+ "formato": "Day",
+ "tema": "calmo",
+ "piano": 0,
+ "visual": "flat",
+ "serie": "monastery-1200",
+ "serie_titulo": "You Wake Up in a Monastery, 1200 | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral. Fontes: Regra de São Bento, caps. 16, 38, 39, 40, 42, 48, 53 https://en.wikipedia.org/wiki/Rule_of_Saint_Benedict ; sinais de Cluny https://en.wikipedia.org/wiki/Monastic_sign_languages ; Codex Amiatinus https://en.wikipedia.org/wiki/Codex_Amiatinus ; tinta ferrogálica https://en.wikipedia.org/wiki/Iron_gall_ink ; Matinas https://en.wikipedia.org/wiki/Matins",
+ "tags": [
+  "medieval monastery",
+  "medieval life",
+  "monk life",
+  "middle ages",
+  "rule of saint benedict",
+  "history",
+  "history facts",
+  "you wake up in",
+  "old tales"
+ ],
+ "codigo": "CL033",
+ "parte": 3,
+ "anterior": "CL032",
+ "titulo": "How medieval monks treated strangers 🍞 Part 3 #history #shorts",
+ "capa": "EVERY GUEST IS CHRIST",
+ "descripcion": "A soaked pilgrim knocks at midnight. The monks wash his feet, feed him, and eat in silence. The end of You Wake Up in a Monastery, 1200.\n\nSources: Rule of Saint Benedict, chapters 38, 39, 40, 42 and 53.\n\nWould you trade your life for this one?\n\n#history #medieval #middleages #historyfacts #shorts",
+ "lineas": [
+  {
+   "texto": "Someone is pounding on the gate, in the snow.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "It's a pilgrim. Soaked, shaking, on his way to Rome.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Your rule says every guest is welcomed like Christ himself.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "So the abbot wakes up, and the monks wash the stranger's feet.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He gets a bed, a blanket, and a seat at your table.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The next day, he sees how you eat. In silence.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "One monk reads aloud while everyone else eats. Nobody talks.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Each of you gets about a pound of bread a day.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Two cooked dishes, beans or eggs or fish, and a small cup of wine.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "No meat from four legged animals. Only the sick get that.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The pilgrim leaves warm, fed, with bread for the road.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And you go back to your desk by the window.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Day after day. Season after season. Page after page.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "One evening, a year later, you write the last word.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Hundreds of pages, in your own hand.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then the bell rings for the last prayer of the day.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "After that comes the great silence. Not a word, until morning.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Would you trade your life for this one?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_estrada_antiga",
+   "p": {
+    "chuva": 1,
+    "hud": {
+     "dia": "Year 1200",
+     "hora": "Night",
+     "lugar": "the abbey",
+     "ceu": "noite"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_figura",
+   "p": {
+    "figurino": "peregrino",
+    "pose": "parado"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "CHAPTER 53",
+    "itens": [
+     "Welcome every guest",
+     "Pray with him",
+     "Wash his feet"
+    ],
+    "marcados": 1
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_igreja",
+   "p": {
+    "missa": 0,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "his feet, washed",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_casa",
+   "p": {
+    "fogo": 1,
+    "noite": 1
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_salao",
+   "p": {
+    "senhor": 0,
+    "hud": {
+     "dia": "Year 1200",
+     "hora": "Midday",
+     "lugar": "the abbey",
+     "ceu": "dia"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_figura",
+   "p": {
+    "figurino": "monge",
+    "pose": "reza"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "pao",
+    "rotulo": "a pound a day"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "tigela_arroz",
+    "rotulo": "two cooked dishes"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_comparar",
+   "p": {
+    "esq": {
+     "titulo": "MONKS",
+     "itens": [
+      "bread",
+      "beans",
+      "fish"
+     ]
+    },
+    "dir": {
+     "titulo": "THE SICK",
+     "itens": [
+      "meat",
+      "soft bread",
+      "rest"
+     ]
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_estrada_antiga",
+   "p": {
+    "chuva": 0,
+    "hud": {
+     "dia": "Year 1200",
+     "hora": "Morning",
+     "lugar": "the abbey",
+     "ceu": "aurora"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_mosteiro",
+   "p": {
+    "livro": 1
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "f_linha_tempo",
+   "p": {
+    "de": 1200,
+    "ate": 1201,
+    "rotulo": "your book",
+    "marcos": [
+     {
+      "ano": 1200,
+      "texto": "first page"
+     },
+     {
+      "ano": 1201,
+      "texto": "last page"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "livro",
+    "rotulo": "the last word",
+    "brilho": 1
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e3b896",
+     "cabelo": "#6a4a2a",
+     "cabeloTipo": "careca",
+     "roupa": "#4a3a2e",
+     "detalhe": "#c9b27a",
+     "chapeu": "capuz",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "f_igreja",
+   "p": {
+    "missa": 1,
+    "hud": {
+     "dia": "Year 1200",
+     "hora": "Dusk",
+     "lugar": "the abbey",
+     "ceu": "tarde"
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "f_aldeia",
+   "p": {
+    "ceu": "noite",
+    "luzes": 0.2
+   }
+  },
+  {
+   "linea": 17,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Would you?"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "pilgrim",
+  "Christ",
+  "feet",
+  "silence",
+  "reads aloud",
+  "pound of bread",
+  "two cooked dishes",
+  "four legged",
+  "last word",
+  "great silence"
+ ]
+}
