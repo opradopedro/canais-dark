@@ -84,3 +84,15 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 - HM036 parte 2/2: atrás havia um homem com máscara de coelho (Bunny Man, Virgínia); Daniel não vira e conta 88 passos com a mão no ombro; a mão solta na saída; no vídeo dos primos ele não cruzava sozinho: a máscara grudada nas costas sorria. FEITO
 
 > 05/11/2026: HM025-HM036 (ainda nao publicados) alongados para 1min30-2min por parte (REGRA do Pedro, ROTEIROS.md "Duracao"); susto das partes 2 agora fica na penultima frase.
+
+## Semana de 18/11 a 21/11/2026 — por: claude (rotina de terça, 10/11). Estoque antes: HM027-HM036 (10 dias). 1 gringa (EUA), 1 autoral. Rodízio de ganchos: regla rota → oficio curioso.
+
+## HM037-HM038 El piso trece (Regla rota) — origem: gringa: EUA, trend "Floor 74" / elevator game (TikTok, Halloween 2026) https://amp.knowyourmeme.com/editorials/guides/is-the-f74-trend-real-and-where-did-it-come-from (história nossa, prédio na Cidade do México)
+- Personagens: Lupita, 23, enfermeira do turno da noite (coque, uniforme azul); Don Ramiro, 70, porteiro. Peças: `f_elevador`, `f_vecindad`, `f_telefono`, `f_objeto`, `f_regras`, `retrato`, `texto`.
+- HM037 parte 1/2: regras do porteiro (não usar o elevador depois das 3, se parar sozinho não sair, se alguém entrar e não apertar botão não olhar); 3:07 volta do plantão, aperta 7, o elevador passa do 12; o visor marca 13 (o prédio tem 12); a porta abre num corredor escuro igual ao dela; alguém a chama com a voz da mãe. FALTA
+- HM038 parte 2/2: ela não sai; a porta fecha; entra um homem que não aperta botão; ela não olha, mas vê no aço da porta um rosto sem olhos; o elevador desce; 3:33 térreo; Don Ramiro: o prédio tinha 13 andares antes do terremoto, o 13 foi tirado e nunca reconstruído; no espelho do elevador, escrito com o dedo: "piso 13, te esperamos"; desde então ela sobe de escada. FALTA
+
+## HM039-HM040 La lechuza del tejado (Oficio curioso) — origem: autoral
+- Personagens: Ana, 19, estudante de enfermagem (trança, blusa vermelha); a avó Chela, 74, rezadeira do povoado (no hospital). Peças: `f_azotea`, `f_aparicion` (lechuza_bruja), `f_cocina`, `f_cuarto`, `f_objeto` (veladora), `f_pueblo`, `f_regras`, `retrato`, `texto`.
+- HM039 parte 1/2: a avó reza pelos doentes há 50 anos; regras dela (se a lechuza rir no telhado não sai, não responde, acende a veladora); a avó vai para o hospital; 1:40 risada de mulher no telhado; Ana sobe com o celular; uma coruja enorme com rosto de mulher; ela diz com a voz da avó: "Ana, ¿ya cenaste?". FALTA
+- HM040 parte 2/2: a lechuza pede para abrir a janela "para entrar a cuidar de ti"; Ana desce, acende a veladora e reza o que a avó ensinou; batidas na janela até as 5; manhã: o hospital liga, a avó passou a noite dizendo que uma lechuza queria entrar pela janela dela, até que a vela de Ana apagou a dela... ; na laje, penas e pegadas de pés descalços de mulher; agora Ana deixa duas veladoras. FALTA

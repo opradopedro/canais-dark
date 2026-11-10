@@ -59,3 +59,16 @@ Com estes, 28 roteiros = 14 dias. 5 gringas, 4 autorais. Duração nova (170-210
 | YB055 | Evolucao | dique holandês (riacho, dique) | gringa: Holanda https://en.wikipedia.org/wiki/Flood_control_in_the_Netherlands | FEITO |
 | YB056 | Curiosidade | junta de dilatação da ponte (riacho) | autoral https://en.wikipedia.org/wiki/Expansion_joint | FEITO |
 Próximas ideias que o `riacho` aceita sem peça nova: castor/represa natural, travessia de vau, muro de contenção de rio, cisterna de chuva (lago), represa em arco (curiosidade).
+
+## Semana de 21/11 a 24/11/2026 (YB057-YB064) — por: claude (rotina de terça, 10/11)
+Estoque antes: 20 (YB033, YB035, YB039-YB056 sem os publicados; 8 Evolução e 12 Curiosidade). A blindagem do produce.py põe Curiosidade no horário de Evolução se faltar. Os mundos fixos já foram todos usados num tema; para mais Evolução falta MUNDO NOVO (pedir ao Kiro). 5 gringas, 3 autorais.
+| Código | Formato | Tema | Origem | Estado |
+|---|---|---|---|---|
+| YB057 | Evolucao | johad: represinha de terra que traz o rio de volta (riacho, represa) | gringa: Índia (Rajastão, Arvari) https://en.wikipedia.org/wiki/Johad | FALTA |
+| YB058 | Curiosidade | os prédios tortos de Santos (terreno, predio, argila) | gringa: Brasil https://en.wikipedia.org/wiki/Santos,_S%C3%A3o_Paulo | FALTA |
+| YB059 | Curiosidade | Jacarta afundando e a capital que muda (terreno, poço, solo_cede) | gringa: Indonésia https://en.wikipedia.org/wiki/Jakarta | FALTA |
+| YB060 | Curiosidade | torre de Suurhusen, mais torta que Pisa (terreno, torre, madeira) | gringa: Alemanha https://en.wikipedia.org/wiki/Suurhusen | FALTA |
+| YB061 | Curiosidade | 1985: o terremoto longe que derrubou prédios médios (terreno, treme) | gringa: México https://en.wikipedia.org/wiki/1985_Mexico_City_earthquake | FALTA |
+| YB062 | Curiosidade | por que barragem é mais grossa embaixo (riacho, represa, empurra) | autoral | FALTA |
+| YB063 | Curiosidade | areia fervendo atrás do dique (riacho, dique, fervura) | autoral https://en.wikipedia.org/wiki/Sand_boil | FALTA |
+| YB064 | Curiosidade | enchente empurra a ponte para fora (riacho, pilar, leva) | autoral | FALTA |

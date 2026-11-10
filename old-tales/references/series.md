@@ -85,3 +85,12 @@ Peças: `f_dez_sois`, `f_ceu`, `f_templo_china`, `f_palacio_lua`, `f_casa_china`
 - CL030 parte 3/3: versão antiga ela bebe; versão posterior um ladrão a obriga; ela flutua até a lua, coelho de jade sob a cássia; Hou Yi põe frutas e bolos sob a lua cheia; Festival do Meio do Outono. FEITO
 
 > 05/11/2026: CL016-CL030 (ainda nao publicados) alongados para 1min30-2min por parte (REGRA do Pedro, ROTEIROS.md "Duracao"). Mesmas cenas, falas novas no meio.
+
+## Semana de 23/11 a 25/11/2026 — por: claude (rotina de terça, 10/11). Estoque antes: CL018-CL030 (13 dias). Rodízio: depois do mito (CL028-030) vem calmo. Autoral (a anterior foi gringa).
+
+## CL031-CL033 You Wake Up in a Monastery, 1200 (calmo, medieval) — origem: autoral
+Fontes: Regra de São Bento, caps. 16, 38, 39, 40, 42, 48, 53 https://en.wikipedia.org/wiki/Rule_of_Saint_Benedict ; linguagem de sinais de Cluny https://en.wikipedia.org/wiki/Monastic_sign_languages ; Codex Amiatinus (~515 bezerros) https://en.wikipedia.org/wiki/Codex_Amiatinus ; tinta ferrogálica https://en.wikipedia.org/wiki/Iron_gall_ink ; Matinas https://en.wikipedia.org/wiki/Matins
+Peças: `f_mosteiro`, `f_igreja`, `f_aldeia`, `f_campo`, `f_estrada_antiga`, `f_figura` (monge), `f_objeto` (sino, livro, pergaminho, pao, jarra, vela), `f_regras`, `f_contagem`, `f_comparar`, `retrato`, `texto`. "Você" = noviço de 15 anos.
+- CL031 parte 1/3: sino às 2 da manhã, Matinas no escuro e frio; volta a dormir pouco; o dia dividido em 8 horas de oração; silêncio quase o dia todo; sinais com as mãos (pão = círculo com polegares e indicadores); trabalho na horta; o abade lhe dá um trabalho que vai levar um ano. FALTA
+- CL032 parte 2/3: o scriptorium; pergaminho de pele de bezerro raspada; uma Bíblia grande (Codex Amiatinus) usou ~515 bezerros; pena de ganso; tinta de galhas de carvalho; erro raspado com faca; escribas reclamavam nas margens; à noite alguém bate no portão. FALTA
+- CL033 parte 3/3: o hóspede é recebido "como o próprio Cristo" (cap. 53), pés lavados; refeitório em silêncio com leitura (cap. 38); uma libra de pão, dois pratos cozidos, um pouco de vinho; carne só para doentes; Completas e o Grande Silêncio; um ano depois você termina a última página. FALTA
