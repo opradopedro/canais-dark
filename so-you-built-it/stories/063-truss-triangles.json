@@ -1,0 +1,304 @@
+{
+ "codigo": "YB063",
+ "mundo": "riacho",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "autoral. Fato: o triângulo é a única forma de barras com juntas articuladas que não muda de forma sem mudar o comprimento das barras; treliças trabalham só em tração e compressão https://en.wikipedia.org/wiki/Truss",
+ "titulo": "Why old bridges are full of triangles 🔺 #engineering #shorts",
+ "capa": "WHY TRIANGLES?",
+ "descripcion": "Steel bridges, cranes, roof frames and power towers are all made of triangles. A square can fold flat. A triangle can't, unless a bar breaks.\n\nWhat should we explain next?\n\n#engineering #bridge #truss #physics #shorts",
+ "tags": [
+  "engineering",
+  "truss",
+  "bridge",
+  "triangle",
+  "structures",
+  "physics",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Look at an old steel bridge. It's made of triangles. Dozens of them.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Cranes, roof frames, power line towers. Triangles everywhere. Why not squares?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Take four bars and bolt them into a square. Now push on one corner.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It folds over, like a box being flattened. The bars didn't bend at all. The corners just turned.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now take three bars and make a triangle. Push the corner again.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It won't move. A triangle can only change shape if one of its bars gets longer or shorter.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And steel is very, very hard to stretch or squash.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So each bar in a triangle is only pulled or pushed straight along its length.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's the job steel is best at. No bending, no twisting.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Chain lots of triangles together, and you get a truss.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It's light and full of holes, but incredibly stiff.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A heavy truck crosses, and the bridge sags just a few centimeters.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The same weight on a flat beam the same size would need much more steel.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's why bridge builders in the 1800s fell in love with the truss.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Even your bike frame is basically two triangles.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know. What should we explain next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "agua": -1.8,
+    "ponte": "trelica",
+    "rotulo": "TRUSS",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "agua": -1.8,
+    "ponte": "trelica",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "agua": -1.8,
+    "ponte": "tabuas",
+    "rotulo": "SQUARE?",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "agua": -1.8,
+    "ponte": "tabuas",
+    "quebra": [
+     0,
+     0.4
+    ],
+    "rotulo": "IT FOLDS",
+    "cor": "red",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "agua": -1.8,
+    "ponte": "trelica",
+    "rotulo": "TRIANGLE",
+    "cor": "green",
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "agua": -1.8,
+    "ponte": "trelica",
+    "forca": 1,
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "agua": -1.8,
+    "ponte": "trelica",
+    "forca": 1,
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "agua": -1.8,
+    "ponte": "trelica",
+    "forca": 1,
+    "rotulo": "PULL OR PUSH",
+    "cor": "green",
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "agua": -1.8,
+    "ponte": "trelica",
+    "forca": 1,
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "riacho",
+   "p": {
+    "foco": "vale",
+    "agua": -1.8,
+    "ponte": "trelica",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "riacho",
+   "p": {
+    "foco": "vale",
+    "agua": -1.8,
+    "ponte": "trelica",
+    "carro": 1,
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "agua": -1.8,
+    "ponte": "trelica",
+    "carro": 1,
+    "forca": 1,
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "agua": -1.8,
+    "ponte": "pilar",
+    "carro": 1,
+    "rotulo": "SOLID BEAM",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "riacho",
+   "p": {
+    "foco": "vale",
+    "agua": -1.8,
+    "ponte": "trelica",
+    "rotulo": "1800s",
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "agua": -1.8,
+    "ponte": "trelica",
+    "etapa": "c14"
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "riacho",
+   "p": {
+    "foco": "vale",
+    "agua": -1.8,
+    "ponte": "trelica",
+    "etapa": "c15"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 15,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "triangles",
+  "squares",
+  "square",
+  "folds",
+  "won't move",
+  "pulled or pushed",
+  "truss",
+  "stiff",
+  "few centimeters",
+  "bike frame"
+ ]
+}
