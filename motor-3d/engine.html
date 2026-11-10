@@ -162,7 +162,7 @@ async function trocarPara(i) {
     // remove luzes antigas
     if (luzCtrl) for (const l of luzCtrl.luzes) limparGrupo(l);
     // remove estrelas/chuva/ceu antigos (por nome, caso tenham ficado)
-    for (const nm of ['estrelas', 'chuva', 'ceu_domo']) { let o; while ((o = scene.getObjectByName(nm))) scene.remove(o); }
+    for (const nm of ['estrelas', 'chuva', 'ceu_domo', 'lua', 'neve']) { let o; while ((o = scene.getObjectByName(nm))) scene.remove(o); }
     const fx = efeito === 'chuva' ? 'chuva' : preset;
     const opts = {};
     if (cenarioAtual && cenarioAtual.fogoX !== undefined) { opts.fogoX = cenarioAtual.fogoX; opts.fogoZ = cenarioAtual.fogoZ; }
