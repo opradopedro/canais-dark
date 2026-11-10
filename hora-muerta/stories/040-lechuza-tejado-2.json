@@ -1,0 +1,351 @@
+{
+ "formato": "Oficio",
+ "visual": "flat",
+ "serie": "lechuza-tejado",
+ "serie_titulo": "La lechuza del tejado | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral. Gancho: oficio curioso",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "la lechuza",
+  "bruja",
+  "leyenda mexicana",
+  "reglas"
+ ],
+ "codigo": "HM040",
+ "parte": 2,
+ "anterior": "HM039",
+ "titulo": "La lechuza quería entrar a cuidarme 🦉 Parte 2 #terror #shorts",
+ "capa": "ÁBREME LA VENTANA",
+ "descripcion": "La lechuza habló con la voz de la abuela de Ana. Ana no le contestó. Final de La lechuza del tejado.\n\n¿Tú habrías abierto la ventana?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "La lechuza me hablaba con la voz de mi abuela.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Pero mi abuela estaba en el hospital, a cuarenta kilómetros.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "No le contesté, segunda regla, y bajé sin darle la espalda.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Cerré la puerta, y la oí caminar por el techo, despacio.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Luego tocó la ventana, con el pico, tres veces.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Ábreme, mija, vengo a cuidarte, decía, con la voz de mi abuela.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Tercera regla, prendí la veladora blanca junto al altar.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Recé lo único que me sé, lo que mi abuela reza a los enfermos.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Cada vez que la flama temblaba, la lechuza se reía.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Así estuvimos toda la noche, ella tocando, yo rezando.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A las cinco, cantó un gallo, y el techo se quedó en silencio.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A las siete, me llamaron del hospital.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Mi abuela pasó la noche gritando, que una lechuza quería entrar por su ventana.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Que no podía, mientras alguien rezara por ella.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Subí a la azotea, ya con el sol.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "En el tinaco había plumas grises, y huellas de pies descalzos de mujer.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Mi abuela salió del hospital, y ahora en su casa ardemos dos veladoras.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_aparicion",
+   "p": {
+    "quien": "lechuza_bruja",
+    "lugar": "f_azotea",
+    "dist": [
+     0.8,
+     0.95
+    ],
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "EN EL TINACO",
+     "texto": "Ana, ¿ya cenaste?",
+     "y": 0.2
+    },
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "1:44",
+     "ampm": "AM",
+     "lugar": "La azotea"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "celular",
+    "quien": "Hospital",
+    "texto": "Paciente: Graciela R. · Cama 12"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_azotea",
+   "p": {
+    "vulto": 1,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "no le contestes",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_cuarto",
+   "p": {
+    "sombra": 1,
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "1:50",
+     "ampm": "AM",
+     "lugar": "Casa de la abuela"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_cuarto",
+   "p": {
+    "sombra": 1
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_cuarto",
+   "p": {
+    "sombra": 1,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "EN LA VENTANA",
+     "texto": "Ábreme, mija, vengo a cuidarte.",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "veladora",
+    "brilho": 1,
+    "rotulo": "tercera regla"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c48a5c",
+     "cabelo": "#20140e",
+     "cabeloTipo": "longo",
+     "roupa": "#a8323a",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "recé",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_altar",
+   "p": {
+    "vela_apaga": [
+     0,
+     0.4
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_cuarto",
+   "p": {
+    "sombra": 1,
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "4:30",
+     "ampm": "AM",
+     "lugar": "Casa de la abuela"
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_pueblo",
+   "p": {
+    "amanecer": [
+     0,
+     1
+    ],
+    "hud": {
+     "dia": "Día 2",
+     "hora": "5:00",
+     "ampm": "AM",
+     "lugar": "San Bartolo"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "celular",
+    "quien": "Hospital",
+    "texto": "Llamada entrante"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#9c6844",
+     "cabelo": "#cfcfcf",
+     "cabeloTipo": "coque",
+     "roupa": "#3a2a4a",
+     "detalhe": "#e0b040",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "toda la noche",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#9c6844",
+     "cabelo": "#cfcfcf",
+     "cabeloTipo": "coque",
+     "roupa": "#3a2a4a",
+     "detalhe": "#e0b040"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "f_azotea",
+   "p": {
+    "vulto": 0,
+    "hud": {
+     "dia": "Día 2",
+     "hora": "7:20",
+     "ampm": "AM",
+     "lugar": "La azotea"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "bilhete",
+    "rotulo": "pies descalzos"
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Dos veladoras.",
+     "Una por ella.",
+     "Una por mí."
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 15,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "voz de mi abuela",
+  "No le contesté",
+  "tres veces",
+  "Ábreme",
+  "veladora blanca",
+  "Recé",
+  "se reía",
+  "cinco",
+  "hospital",
+  "pies descalzos",
+  "dos veladoras"
+ ],
+ "gancho": {
+  "cena": 15,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
