@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>html,body{margin:0;background:#202028;overflow:hidden}#c{display:block}</style>
+<script type="importmap">
+{ "imports": { "three": "../vendor/three/build/three.module.js", "three/addons/": "../vendor/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<canvas id="c" width="540" height="960"></canvas>
+<script type="module">
+import * as THREE from 'three';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { pessoa } from '../kit/personagem.js';
+import { criatura } from '../kit/criatura.js';
+import { aplicar as aplicarLuz } from '../kit/luz.js';
+import { montar as montarCenario } from '../kit/cenarios/index.js';
+
+const W = 540, H = 960;
+const cv = document.getElementById('c');
+const R = new THREE.WebGLRenderer({ canvas: cv, antialias: true, preserveDrawingBuffer: true });
+R.setSize(W, H, false); R.shadowMap.enabled = true; R.shadowMap.type = THREE.PCFSoftShadowMap;
+R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = 1.1;
+
+let scene, cam, comp;
+function novaCena(preset = 'dia') {
+  scene = new THREE.Scene();
+  cam = new THREE.PerspectiveCamera(42, W / H, 0.1, 300);
+  comp = new EffectComposer(R); comp.setSize(W, H);
+  comp.addPass(new RenderPass(scene, cam));
+  comp.addPass(new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.8, 0.5, 0.82));
+  comp.addPass(new OutputPass());
+  const piso = new THREE.Mesh(new THREE.PlaneGeometry(40, 40), new THREE.MeshStandardMaterial({ color: 0x3a4a3a, roughness: 1 }));
+  piso.rotation.x = -Math.PI / 2; piso.receiveShadow = true; scene.add(piso);
+  aplicarLuz(scene, preset, {});
+}
+
+// retrato de corpo inteiro de um personagem por semente (ou spec)
+window.pessoaFoto = async (spec, preset) => {
+  novaCena(preset || 'dia');
+  const a = await pessoa(spec); a.obj.rotation.y = 0; scene.add(a.obj); a.setTime(1.2);
+  const h = a.altura || 1.7;
+  cam.position.set(0, h * 0.55, h * 1.7); cam.lookAt(0, h * 0.5, 0);
+  comp.render(); return cv.toDataURL('image/jpeg', 0.9).split(',')[1];
+};
+// retrato de uma criatura
+window.criaturaFoto = async (tipo, opts, preset) => {
+  novaCena(preset || 'noite');
+  const c = await criatura(tipo, opts || {}); if (c.obj) { c.obj.rotation.y = 0; scene.add(c.obj); } if (c.setTime) c.setTime(1.0);
+  const h = c.altura || 2.2;
+  cam.position.set(0, h * 0.5, h * 1.5 + 1); cam.lookAt(0, h * 0.45, 0);
+  comp.render(); return cv.toDataURL('image/jpeg', 0.9).split(',')[1];
+};
+// 1 quadro de um cenario
+window.cenarioFoto = async (nome, preset) => {
+  novaCena(preset || 'dia');
+  await montarCenario(nome, scene, {});
+  cam.position.set(6, 5, 11); cam.lookAt(0, 1.2, -2);
+  comp.render(); return cv.toDataURL('image/jpeg', 0.9).split(',')[1];
+};
+window.pronto = true;
+</script>
+</body>
+</html>
