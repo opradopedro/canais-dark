@@ -1,0 +1,292 @@
+{
+ "formato": "Day",
+ "tema": "calmo",
+ "piano": 0,
+ "visual": "flat",
+ "serie": "monastery-1200",
+ "serie_titulo": "You Wake Up in a Monastery, 1200 | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral. Fontes: Regra de São Bento, caps. 16, 38, 39, 40, 42, 48, 53 https://en.wikipedia.org/wiki/Rule_of_Saint_Benedict ; sinais de Cluny https://en.wikipedia.org/wiki/Monastic_sign_languages ; Codex Amiatinus https://en.wikipedia.org/wiki/Codex_Amiatinus ; tinta ferrogálica https://en.wikipedia.org/wiki/Iron_gall_ink ; Matinas https://en.wikipedia.org/wiki/Matins",
+ "tags": [
+  "medieval monastery",
+  "medieval life",
+  "monk life",
+  "middle ages",
+  "rule of saint benedict",
+  "history",
+  "history facts",
+  "you wake up in",
+  "old tales"
+ ],
+ "codigo": "CL032",
+ "parte": 2,
+ "anterior": "CL031",
+ "titulo": "How a medieval book was made 📜 Part 2 #history #shorts",
+ "capa": "500 CALVES, ONE BOOK",
+ "descripcion": "Medieval books were written on calfskin, with ink made from oak galls. One giant Bible, the Codex Amiatinus, used the skins of about 500 calves.\n\nSources: Codex Amiatinus; iron gall ink; medieval scribal colophons.\n\nCould you copy a whole book by hand?\n\n#history #medieval #middleages #historyfacts #shorts",
+ "lineas": [
+  {
+   "texto": "The abbot gave you a book to copy.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "First, the pages. There is no paper here. Pages are skin.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Calfskin, soaked in lime, scraped clean, and stretched tight to dry.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A big Bible needs a whole herd.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "One giant Bible, made in England around 700, used about five hundred calves.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then the ink. You crush oak galls, little balls that wasps leave on oaks.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Mix in water, iron salts, and tree gum. It goes on pale, and turns black.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Your pen is a goose feather, cut sharp with your knife.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You sit by the tall window, for the daylight.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You copy letter by letter. Six hours a day, sometimes more.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A mistake? You scrape it off with the knife, and write again.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Your back hurts. Your fingers freeze in winter.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Scribes before you wrote their complaints in the margins.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "One wrote, writing is hard work. It crooks your back, and dims your sight.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "But slowly, the pages pile up. Your letters get cleaner every week.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then one winter night, someone pounds on the gate.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Who's out there in the snow? Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_mosteiro",
+   "p": {
+    "livro": 1,
+    "hud": {
+     "dia": "Year 1200",
+     "hora": "Morning",
+     "lugar": "the abbey",
+     "ceu": "dia"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "pergaminho",
+    "rotulo": "calfskin"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "pergaminho",
+    "rotulo": "soaked, scraped, stretched"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_figura",
+   "p": {
+    "animal": "boi"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_contagem",
+   "p": {
+    "de": 0,
+    "ate": 515,
+    "rotulo": "calves for one Bible"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "cesto",
+    "rotulo": "oak galls"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "jarra",
+    "rotulo": "iron gall ink"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "pergaminho",
+    "rotulo": "a goose quill"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_mosteiro",
+   "p": {
+    "livro": 1,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "daylight only",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_mosteiro",
+   "p": {
+    "livro": 1,
+    "hud": {
+     "dia": "Year 1200",
+     "hora": "Midday",
+     "lugar": "the abbey",
+     "ceu": "dia"
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "livro",
+    "rotulo": "scrape, and write again"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e3b896",
+     "cabelo": "#6a4a2a",
+     "cabeloTipo": "careca",
+     "roupa": "#4a3a2e",
+     "detalhe": "#c9b27a",
+     "chapeu": "capuz",
+     "expressao": "triste"
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "livro",
+    "rotulo": "notes in the margin"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "f_comparar",
+   "p": {
+    "esq": {
+     "titulo": "THE BOOK",
+     "itens": [
+      "holy",
+      "beautiful",
+      "forever"
+     ]
+    },
+    "dir": {
+     "titulo": "THE SCRIBE",
+     "itens": [
+      "bent back",
+      "dim eyes",
+      "cold hands"
+     ]
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "f_mosteiro",
+   "p": {
+    "livro": 1
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "f_estrada_antiga",
+   "p": {
+    "chuva": 1,
+    "hud": {
+     "dia": "Year 1200",
+     "hora": "Night",
+     "lugar": "the abbey",
+     "ceu": "noite"
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "A knock at the gate.",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "skin",
+  "Calfskin",
+  "five hundred calves",
+  "oak galls",
+  "black",
+  "goose feather",
+  "letter by letter",
+  "scrape",
+  "margins",
+  "crooks your back",
+  "pounds on the gate"
+ ]
+}
