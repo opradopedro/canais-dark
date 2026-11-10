@@ -1,0 +1,428 @@
+{
+ "formato": "Regla",
+ "visual": "flat",
+ "serie": "piso-trece",
+ "serie_titulo": "El piso trece | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "gringa: EUA, trend \"Floor 74\" / elevator game (TikTok, Halloween 2026) https://amp.knowyourmeme.com/editorials/guides/is-the-f74-trend-real-and-where-did-it-come-from (história nossa). Gancho: regla rota",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "elevador",
+  "piso 13",
+  "reglas",
+  "leyenda urbana"
+ ],
+ "codigo": "HM038",
+ "parte": 2,
+ "anterior": "HM037",
+ "titulo": "Alguien subió conmigo y no apretó ningún botón 😰 Parte 2 #terror #shorts",
+ "capa": "NO LO MIRES",
+ "descripcion": "Lupita no salió al piso trece. Pero alguien entró al elevador con ella. Final de El piso trece.\n\n¿Tú habrías mirado?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "La voz de mi mamá me llamaba desde el pasillo.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Pero mi mamá vive en Puebla, y a esa hora duerme.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "No salí, apreté el uno, una y otra vez.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "La voz se volvió ronca.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Alguien entró al elevador, y se paró a mi lado.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "No apretó ningún botón, tercera regla, no lo mires.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Clavé los ojos en el piso, y el elevador empezó a bajar.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Olía a tierra mojada, y a algo quemado.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "En el acero de la puerta vi su reflejo, sin ojos.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Diez, siete, cuatro, y respiraba junto a mi oreja.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A las tres y treinta y tres, las puertas se abrieron en la planta baja.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Salí corriendo, y el elevador se cerró vacío.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Don Ramiro estaba despierto, como si me esperara.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Me contó que el edificio tenía trece pisos antes del temblor.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "El trece se vino abajo, y lo quitaron en vez de reconstruirlo.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Pero el elevador se acuerda, dijo, y los de arriba también.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Al día siguiente, en el espejo del elevador, alguien escribió con el dedo.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Decía, piso trece, Lupita, te esperamos.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Desde esa noche, subo los siete pisos por la escalera.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_vecindad",
+   "p": {
+    "puerta": 1,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "DESDE EL PASILLO",
+     "texto": "Lupita, mija, sal tantito.",
+     "y": 0.2
+    },
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:09",
+     "ampm": "AM",
+     "lugar": "Piso 13"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "celular",
+    "quien": "Mamá",
+    "texto": "Última conexión: 22:40"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_elevador",
+   "p": {
+    "andar": 1,
+    "abre": 1,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "no salgas",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_vecindad",
+   "p": {
+    "puerta": 1,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "DESDE EL PASILLO",
+     "texto": "Sal.",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_elevador",
+   "p": {
+    "andar": 1,
+    "abre": [
+     1,
+     0
+    ],
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:10",
+     "ampm": "AM",
+     "lugar": "Piso 13"
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "REGLAS DE DON RAMIRO",
+    "itens": [
+     "Nada de elevador después de las 3",
+     "Si se para solo, no salgas",
+     "Si alguien entra sin apretar botón, no lo mires"
+    ],
+    "marcados": 3
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_elevador",
+   "p": {
+    "andar": [
+     1,
+     0.6
+    ],
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:11",
+     "ampm": "AM",
+     "lugar": "Bajando"
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#b97a52",
+     "cabelo": "#1a1210",
+     "cabeloTipo": "coque",
+     "roupa": "#3a6a9a",
+     "detalhe": "#e8e8e8",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "retrato",
+   "p": {
+    "zoomRosto": [
+     0,
+     1
+    ],
+    "pessoa": {
+     "pele": "#b97a52",
+     "cabelo": "#1a1210",
+     "cabeloTipo": "coque",
+     "roupa": "#3a6a9a",
+     "detalhe": "#e8e8e8",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "sin ojos",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_elevador",
+   "p": {
+    "andar": [
+     0.6,
+     0.2
+    ],
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:20",
+     "ampm": "AM",
+     "lugar": "Bajando"
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_elevador",
+   "p": {
+    "andar": 0,
+    "abre": [
+     0,
+     1
+    ],
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:33",
+     "ampm": "AM",
+     "lugar": "Planta baja"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_vecindad",
+   "p": {
+    "puerta": 0
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#a8714a",
+     "cabelo": "#d8d8d8",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#5a4a3a",
+     "detalhe": "#c9b27a"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Don Ramiro",
+     "sub": "sabía",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "f_linha_tempo",
+   "p": {
+    "de": 1960,
+    "ate": 2026,
+    "rotulo": "Edificio Ámbar",
+    "marcos": [
+     {
+      "ano": 1962,
+      "texto": "13 pisos"
+     },
+     {
+      "ano": 1985,
+      "texto": "el temblor"
+     },
+     {
+      "ano": 1986,
+      "texto": "12 pisos"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#a8714a",
+     "cabelo": "#d8d8d8",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#5a4a3a",
+     "detalhe": "#c9b27a"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "lo quitaron",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#a8714a",
+     "cabelo": "#d8d8d8",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#5a4a3a",
+     "detalhe": "#c9b27a"
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "f_elevador",
+   "p": {
+    "andar": 0,
+    "abre": 1,
+    "hud": {
+     "dia": "Día 2",
+     "hora": "7:10",
+     "ampm": "AM",
+     "lugar": "Planta baja"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "PISO 13",
+     "Lupita,",
+     "te esperamos."
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Siete pisos.",
+     "Por la escalera."
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.5
+  },
+  {
+   "tipo": "susto",
+   "linea": 17,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "mi mamá",
+  "No salí",
+  "ningún botón",
+  "no lo mires",
+  "sin ojos",
+  "tres y treinta y tres",
+  "trece pisos",
+  "te esperamos",
+  "escalera"
+ ],
+ "gancho": {
+  "cena": 17,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
