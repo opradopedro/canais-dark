@@ -64,7 +64,7 @@ Próximas ideias que o `riacho` aceita sem peça nova: castor/represa natural, t
 Estoque antes: 20 (YB033, YB035, YB039-YB056 sem os publicados; 8 Evolução e 12 Curiosidade). A blindagem do produce.py põe Curiosidade no horário de Evolução se faltar. Os mundos fixos já foram todos usados num tema; para mais Evolução falta MUNDO NOVO (pedir ao Kiro). 5 gringas, 3 autorais.
 | Código | Formato | Tema | Origem | Estado |
 |---|---|---|---|---|
-| YB057 | Evolucao | johad: represinha de terra que traz o rio de volta (riacho, represa) | gringa: Índia (Rajastão, Arvari) https://en.wikipedia.org/wiki/Johad | FALTA |
+| YB057 | Evolucao | johad: represinha de terra que traz o rio de volta (riacho, represa) | gringa: Índia (Rajastão, Arvari) https://en.wikipedia.org/wiki/Johad | FEITO |
 | YB058 | Curiosidade | os prédios tortos de Santos (terreno, predio, argila) | gringa: Brasil https://en.wikipedia.org/wiki/Santos,_S%C3%A3o_Paulo | FALTA |
 | YB059 | Curiosidade | Jacarta afundando e a capital que muda (terreno, poço, solo_cede) | gringa: Indonésia https://en.wikipedia.org/wiki/Jakarta | FALTA |
 | YB060 | Curiosidade | torre de Suurhusen, mais torta que Pisa (terreno, torre, madeira) | gringa: Alemanha https://en.wikipedia.org/wiki/Suurhusen | FALTA |

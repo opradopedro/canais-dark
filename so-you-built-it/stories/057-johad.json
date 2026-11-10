@@ -1,0 +1,378 @@
+{
+ "codigo": "YB057",
+ "mundo": "riacho",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "gringa: Índia (hindi): johads, represinhas de terra do Rajastão; a ONG Tarun Bharat Sangh ajudou a construir milhares desde 1985 e o rio Arvari voltou a correr o ano todo nos anos 1990 https://en.wikipedia.org/wiki/Johad ; https://en.wikipedia.org/wiki/Arvari_River",
+ "titulo": "You built a dirt dam that brought a river back 🇮🇳 #engineering #shorts",
+ "capa": "THE RIVER CAME BACK",
+ "descripcion": "In Rajasthan, India, villages built thousands of small curved dirt dams called johads. The rain soaked in, the wells filled, and a dead river started flowing again.\n\nWhat should we build next?\n\n#engineering #india #water #rajasthan #shorts",
+ "tags": [
+  "engineering",
+  "johad",
+  "india",
+  "rajasthan",
+  "water harvesting",
+  "groundwater",
+  "dam",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "You live in a dry village in Rajasthan, India. It rains hard for two months, then almost nothing.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "When the storms come, the water races off the bare hills and is gone in a day.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "By spring, every well in the village is dry.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you pile up a low wall of dirt across the dry stream. A curved one, like a smile.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Next storm, the water stops behind it and makes a pond. Problem solved!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But by winter, the pond is empty again.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Here's the trick. It didn't just dry up. Most of it soaked into the ground.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Down there, it fills the cracks in the rock, and the wells downhill come back to life.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then a monster storm hits. The pond rises, and spills over the top.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Water running over dirt eats it fast, and your wall washes out.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you rebuild it, and give it a stone spillway at one end, so extra water leaves safely.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And rocks on the slope, so the waves can't chew it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now one village builds one. The next village builds ten.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Since 1985, people in Rajasthan have built thousands of them, mostly by hand.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And in the 1990s, the Arvari River, dry for years, started flowing all year again.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a dam that refills the ground. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 0.2,
+    "barreira": 0,
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": [
+     0.2,
+     1.2
+    ],
+    "barreira": 0,
+    "chuva": 1,
+    "lama": 1,
+    "rotulo": "RUNOFF",
+    "cor": "red",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 0.1,
+    "barreira": 0,
+    "rotulo": "DRY WELLS",
+    "cor": "red",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 0.1,
+    "rotulo": "JOHAD",
+    "cor": "green",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": [
+     0.2,
+     2.4
+    ],
+    "chuva": 1,
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": [
+     2.4,
+     0.4
+    ],
+    "rotulo": "EMPTY?",
+    "cor": "red",
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 0.4,
+    "vaza": 1,
+    "marcas": [
+     {
+      "t": "Soaks in",
+      "x": -6,
+      "y": -1.5,
+      "cor": "green"
+     }
+    ],
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 0.4,
+    "vaza": 1,
+    "marcas": [
+     {
+      "t": "Groundwater",
+      "x": 6,
+      "y": -2.5,
+      "cor": "green"
+     }
+    ],
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": [
+     2.4,
+     3.8
+    ],
+    "chuva": 1,
+    "transborda": [
+     0,
+     1
+    ],
+    "rotulo": "OVERTOPPING",
+    "cor": "red",
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": [
+     3.8,
+     1.0
+    ],
+    "chuva": 1,
+    "lama": 1,
+    "transborda": 1,
+    "rompe": [
+     0,
+     0.6
+    ],
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 3.0,
+    "vertedouro": 1,
+    "chuva": 1,
+    "rotulo": "SPILLWAY",
+    "cor": "green",
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 3.0,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "rotulo": "ROCKS",
+    "cor": "green",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 2.6,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "vaza": 0.5,
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 2.6,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "rotulo": "THOUSANDS",
+    "cor": "green",
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 2.6,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "rotulo": "ARVARI RIVER",
+    "cor": "green",
+    "etapa": "c14"
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 2.6,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "etapa": "c15"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 15,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "Rajasthan",
+  "gone in a day",
+  "dry",
+  "curved",
+  "pond",
+  "empty",
+  "soaked",
+  "wells",
+  "over the top",
+  "washes out",
+  "spillway",
+  "rocks",
+  "thousands",
+  "Arvari"
+ ]
+}
