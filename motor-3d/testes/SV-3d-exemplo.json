@@ -1,0 +1,59 @@
+{
+ "visual": "3d",
+ "paleta": "sv",
+ "canal": "Signal Lost",
+ "codigo": "SV3D",
+ "titulo": "The white line (3D test)",
+ "elenco": {
+  "cal": { "altura": 1.78, "pele": "#d9a77f", "camisa": "#3f5a3a", "calca": "#2a2f26", "cabelo": "curto", "cabelo_cor": "#4a3320" }
+ },
+ "lineas": [
+  { "texto": "Imagine a forest where one rule keeps you alive.", "pausa": 0.5 },
+  { "texto": "Never leave the tower after the sun goes down.", "pausa": 0.5 },
+  { "texto": "By day, it looks like an ordinary lookout.", "pausa": 0.5 },
+  { "texto": "But when the night comes, the trees start to move.", "pausa": 0.6 },
+  { "texto": "Cal was new, and he thought the rule was silly.", "pausa": 0.5 },
+  { "texto": "So one night, he took his lantern and climbed down.", "pausa": 0.5 },
+  { "texto": "The rain was cold, and the radio only hissed.", "pausa": 0.5 },
+  { "texto": "Stay with me, because now it gets scary.", "pausa": 0.6 },
+  { "texto": "Between the pines, something tall was watching him.", "pausa": 0.6 },
+  { "texto": "It had no face, only two slow yellow eyes.", "pausa": 0.6 },
+  { "texto": "Cal ran back up the stairs and shut the door.", "pausa": 0.5 },
+  { "texto": "At dawn, the forest was quiet and empty again.", "pausa": 0.5 },
+  { "texto": "The rule had kept him alive one more night.", "pausa": 0.5 },
+  { "texto": "But the rain is washing the warning off the wall.", "pausa": 0.6 },
+  { "texto": "What happens on the night nobody remembers the rule?", "pausa": 0.7 }
+ ],
+ "cenas": [
+  { "linea": 0, "cena": { "cenario": "torre", "marca": "base", "plano": "aereo", "luz": "entardecer" } },
+  { "linea": 1, "cena": { "cenario": "torre", "marca": "janela", "plano": "close", "luz": "entardecer",
+    "atores": [ { "id": "cal", "marca": "cabine", "acao": "Idle_A", "rosto": "neutro" } ] } },
+  { "linea": 2, "cena": { "cenario": "torre", "marca": "base", "plano": "aberto", "luz": "dia" } },
+  { "linea": 3, "cena": { "cenario": "floresta", "marca": "entre_arvores", "plano": "baixo", "luz": "noite" } },
+  { "linea": 4, "cena": { "cenario": "torre", "marca": "cabine", "plano": "medio", "luz": "noite",
+    "atores": [ { "id": "cal", "marca": "cabine", "acao": "Idle_B", "rosto": "desconfiado" } ] } },
+  { "linea": 5, "cena": { "cenario": "torre", "marca": "pe_torre", "plano": "medio", "luz": "noite",
+    "atores": [ { "id": "cal", "marca": "pe_torre", "acao": "Walking_A", "rosto": "neutro", "segura": "lanterna" } ] } },
+  { "linea": 6, "cena": { "cenario": "floresta", "marca": "trilha", "plano": "nuca", "luz": "noite", "efeito": "chuva",
+    "atores": [ { "id": "cal", "marca": "clareira", "acao": "Walking_A", "rosto": "medo", "segura": "lanterna" } ] } },
+  { "linea": 7, "cena": { "cenario": "floresta", "marca": "clareira", "plano": "close", "luz": "noite", "efeito": "chuva",
+    "atores": [ { "id": "cal", "marca": "clareira", "acao": "Idle_A", "rosto": "medo", "segura": "lanterna" } ] } },
+  { "linea": 8, "cena": { "cenario": "floresta", "marca": "entre_arvores", "plano": "baixo", "luz": "noite", "efeito": "chuva",
+    "criatura": { "tipo": "alta", "marca": "entre_arvores" } } },
+  { "linea": 9, "cena": { "cenario": "floresta", "marca": "entre_arvores", "plano": "baixo", "luz": "noite_neblina",
+    "criatura": { "tipo": "alta", "marca": "entre_arvores" } } },
+  { "linea": 10, "cena": { "cenario": "torre", "marca": "pe_torre", "plano": "medio", "luz": "noite", "efeito": "chuva",
+    "atores": [ { "id": "cal", "marca": "pe_torre", "acao": "Running_A", "rosto": "susto", "segura": "lanterna" } ] } },
+  { "linea": 11, "cena": { "cenario": "torre", "marca": "base", "plano": "aereo", "luz": "madrugada" } },
+  { "linea": 12, "cena": { "cenario": "torre", "marca": "janela", "plano": "close", "luz": "madrugada",
+    "atores": [ { "id": "cal", "marca": "cabine", "acao": "Idle_A", "rosto": "triste" } ] } },
+  { "linea": 13, "cena": { "cenario": "floresta", "marca": "fundo", "plano": "aberto", "luz": "noite", "efeito": "chuva" } },
+  { "linea": 14, "cena": { "cenario": "floresta", "marca": "entre_arvores", "plano": "baixo", "luz": "noite_neblina",
+    "criatura": { "tipo": "vulto", "marca": "entre_arvores" } } }
+ ],
+ "eventos": [
+  { "tipo": "golpe", "linea": 8, "en": 0.3 },
+  { "tipo": "susto", "linea": 14, "en": "fin", "mas": 0.05 }
+ ],
+ "destaque": [ "rule", "alive", "night", "move", "silly", "lantern", "hissed", "scary", "tall", "eyes", "door", "empty", "washing", "remembers" ]
+}

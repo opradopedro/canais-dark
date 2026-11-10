@@ -14,9 +14,9 @@ function semente(s) {
 const COR = {
   dia: { ceu: 0x9fc6e8, hemi: [0xbfe0ff, 0x5a6a3a, 1.0], sol: [0xfff2d8, 1.5, [-8, 18, 10]], nevoa: [0x9fc6e8, 40, 120] },
   entardecer: { ceu: 0xe8a35a, hemi: [0xffcf9a, 0x6a4a30, 0.8], sol: [0xff9d4a, 1.3, [-12, 8, 6]], nevoa: [0xe8a35a, 30, 90] },
-  noite: { ceu: 0x0b1430, hemi: [0x5570b0, 0x1a2a18, 0.55], sol: [0x9db4ff, 0.6, [-10, 20, 8]], nevoa: [0x0b1430, 22, 70], estrelas: true },
-  noite_neblina: { ceu: 0x14202c, hemi: [0x6a7a8a, 0x1a2420, 0.5], sol: [0x8fa4c4, 0.4, [-8, 16, 6]], nevoa: [0x14202c, 8, 36], estrelas: true },
-  madrugada: { ceu: 0x1a2440, hemi: [0x7088c0, 0x24301e, 0.7], sol: [0xbcccff, 0.8, [-6, 14, 10]], nevoa: [0x1a2440, 28, 84], estrelas: true },
+  noite: { ceu: 0x11204a, hemi: [0x7a96d8, 0x2a3a24, 0.95], sol: [0xaec2ff, 1.0, [-10, 20, 8]], nevoa: [0x11204a, 26, 80], estrelas: true },
+  noite_neblina: { ceu: 0x1c2c3a, hemi: [0x90a0b4, 0x2a342c, 0.9], sol: [0xaab8d4, 0.7, [-8, 16, 6]], nevoa: [0x1c2c3a, 10, 42], estrelas: true },
+  madrugada: { ceu: 0x24305a, hemi: [0x8aa0d8, 0x2e3a26, 1.05], sol: [0xcdd8ff, 1.1, [-6, 14, 10]], nevoa: [0x24305a, 30, 88], estrelas: true },
   interior_noite: { ceu: 0x0a0906, hemi: [0x3a3020, 0x100c08, 0.4], nevoa: [0x0a0906, 10, 40], lampada: true },
   chuva: { ceu: 0x33383f, hemi: [0x8a94a0, 0x2a2e26, 0.7], sol: [0xaab0bc, 0.5, [-6, 16, 8]], nevoa: [0x33383f, 16, 54], chuva: true },
   fogueira: { ceu: 0x0b1020, hemi: [0x30364a, 0x16120c, 0.4], nevoa: [0x0b1020, 14, 50], estrelas: true, fogo: true },
@@ -83,7 +83,7 @@ export function aplicar(scene, preset = 'noite', opts = {}) {
     sol = new THREE.DirectionalLight(c.sol[0], c.sol[1]);
     sol.position.set(...c.sol[2]);
     sol.castShadow = true;
-    const ms = opts.sombraMapa || 2048;
+    const ms = opts.sombraMapa || 1024;  // 1024 e o padrao (render no Actions < 25 min); suba p/ 2048 so em close
     sol.shadow.mapSize.set(ms, ms);
     const d = 26;
     Object.assign(sol.shadow.camera, { left: -d, right: d, top: d, bottom: -d, near: 0.5, far: 80 });

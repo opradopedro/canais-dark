@@ -114,7 +114,10 @@ function cruz(grupo, x, z, ry = 0) {
 }
 
 // floresta de pinheiros/arvores em volta (deterministica). raioInt..raioExt, evitando o centro.
+// n e cortado pela metade por padrao para o render caber em < 25 min no Actions (pedido do Pedro).
+const _FATOR_ARVORES = 0.55; // reduz a quantidade de arvores visiveis (performance)
 async function florestaEmVolta(grupo, { r0 = 14, r1 = 34, n = 36, mortas = false, sem = 11 } = {}) {
+  n = Math.max(6, Math.round(n * _FATOR_ARVORES));
   const r = semente(sem);
   const tipos = mortas
     ? ['CommonTree_Dead_1', 'CommonTree_Dead_3', 'BirchTree_Dead_1', 'Willow_Dead_1', 'PineTree_4']

@@ -1,0 +1,51 @@
+{
+ "visual": "3d",
+ "tema": "calmo",
+ "canal": "Old Tales",
+ "codigo": "CL3D",
+ "titulo": "The miller's quiet morning (3D test)",
+ "elenco": {
+  "tomas": { "altura": 1.72, "pele": "#e6c6a4", "camisa": "#7a5a34", "calca": "#4a3a22", "cabelo": "curto", "cabelo_cor": "#6a4a2a", "chapeu": "gorro" },
+  "aldea": { "altura": 1.2, "pele": "#e6c6a4", "camisa": "#8a6a3a", "calca": "#5a4428", "cabelo": "curto" }
+ },
+ "lineas": [
+  { "texto": "In an old village, the day begins before the sun.", "pausa": 0.6 },
+  { "texto": "Tomas the miller wakes when the roosters call.", "pausa": 0.5 },
+  { "texto": "He walks past the quiet well to the mill.", "pausa": 0.5 },
+  { "texto": "The great wheel turns slowly in the cold stream.", "pausa": 0.6 },
+  { "texto": "Inside, he grinds the golden wheat into flour.", "pausa": 0.5 },
+  { "texto": "A small boy brings a sack from the far farm.", "pausa": 0.5 },
+  { "texto": "They share warm bread by the market stall.", "pausa": 0.6 },
+  { "texto": "The baker waves from across the muddy square.", "pausa": 0.5 },
+  { "texto": "By noon, the whole village smells of fresh loaves.", "pausa": 0.5 },
+  { "texto": "At dusk, Tomas rests on a bench by the inn.", "pausa": 0.6 },
+  { "texto": "The hills turn gold, then soft and blue.", "pausa": 0.5 },
+  { "texto": "Nothing happened today, and that was enough.", "pausa": 0.6 },
+  { "texto": "Would you trade your busy day for his?", "pausa": 0.7 }
+ ],
+ "cenas": [
+  { "linea": 0, "cena": { "cenario": "vila", "marca": "alto", "plano": "aereo", "luz": "madrugada" } },
+  { "linea": 1, "cena": { "cenario": "vila", "marca": "casa", "plano": "medio", "luz": "madrugada",
+    "atores": [ { "id": "tomas", "marca": "casa", "acao": "Idle_A", "rosto": "sorriso" } ] } },
+  { "linea": 2, "cena": { "cenario": "vila", "marca": "poco", "plano": "medio", "luz": "entardecer",
+    "atores": [ { "id": "tomas", "marca": "poco", "acao": "Walking_A", "rosto": "neutro" } ] } },
+  { "linea": 3, "cena": { "cenario": "vila", "marca": "moinho", "plano": "aberto", "luz": "dia" } },
+  { "linea": 4, "cena": { "cenario": "vila", "marca": "moinho", "plano": "medio", "luz": "dia",
+    "atores": [ { "id": "tomas", "marca": "moinho", "acao": "Working_A", "rosto": "neutro" } ] } },
+  { "linea": 5, "cena": { "cenario": "vila", "marca": "praca", "plano": "medio", "luz": "dia",
+    "atores": [ { "id": "aldea", "marca": "praca", "acao": "Walking_A", "rosto": "sorriso" } ] } },
+  { "linea": 6, "cena": { "cenario": "vila", "marca": "mercado", "plano": "medio", "luz": "dia",
+    "atores": [ { "id": "tomas", "marca": "mercado", "acao": "Idle_A", "rosto": "sorriso" },
+                { "id": "aldea", "marca": "praca", "acao": "Idle_B", "rosto": "sorriso" } ] } },
+  { "linea": 7, "cena": { "cenario": "vila", "marca": "taverna", "plano": "aberto", "luz": "dia" } },
+  { "linea": 8, "cena": { "cenario": "vila", "marca": "alto", "plano": "aereo", "luz": "dia" } },
+  { "linea": 9, "cena": { "cenario": "vila", "marca": "taverna", "plano": "medio", "luz": "entardecer",
+    "atores": [ { "id": "tomas", "marca": "taverna", "acao": "Sit_Floor_Idle", "rosto": "sorriso" } ] } },
+  { "linea": 10, "cena": { "cenario": "vila", "marca": "alto", "plano": "aberto", "luz": "entardecer" } },
+  { "linea": 11, "cena": { "cenario": "vila", "marca": "praca", "plano": "close", "luz": "entardecer",
+    "atores": [ { "id": "tomas", "marca": "praca", "acao": "Idle_A", "rosto": "sorriso" } ] } },
+  { "linea": 12, "cena": { "cenario": "vila", "marca": "alto", "plano": "aereo", "luz": "entardecer" } }
+ ],
+ "eventos": [],
+ "destaque": [ "village", "roosters", "well", "wheel", "flour", "boy", "bread", "baker", "loaves", "bench", "gold", "enough", "trade" ]
+}

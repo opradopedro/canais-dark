@@ -23,8 +23,8 @@ function montar(plano, A, a) {
       return { pos: [A.x + 1.4 + a * 0.5, ay + 1.6, A.z + 3.8 - a * 0.6], olha: [A.x, ay + 1.3, A.z] };
     case 'close': // rosto, com um leve orbit
       return { pos: [A.x + Math.sin(a * 0.6) * 0.6, ay + 1.62, A.z + 1.5 - a * 0.2], olha: [A.x, ay + 1.6, A.z] };
-    case 'baixo': // camera baixa olhando para cima (criatura imponente)
-      return { pos: [A.x - 0.8, 0.5 + a * 0.2, A.z + 2.6], olha: [A.x, ay + 2.6, A.z - 0.5] };
+    case 'baixo': // camera baixa olhando para cima (criatura imponente), afastada o bastante p/ ver o corpo inteiro
+      return { pos: [A.x - 1.2, 0.8 + a * 0.3, A.z + 5.5 - a * 0.5], olha: [A.x, ay + 2.4, A.z] };
     case 'ombro': // por cima do ombro, atras e ao lado
       return { pos: [A.x - 0.7, ay + 1.75, A.z + 1.6], olha: [A.x + 0.6, ay + 1.4, A.z - 3] };
     case 'pov': // ponto de vista do personagem, olhando a frente

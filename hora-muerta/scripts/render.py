@@ -17,11 +17,30 @@ MOTOR3D = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.a
 GRAB = "t => { render(t); return document.getElementById('c').toDataURL('image/jpeg', 0.9).split(',')[1]; }"
 
 
+class _Motor3DHandler(http.server.SimpleHTTPRequestHandler):
+    """Serve motor-3d/ com o Content-Type CERTO: Chromium recusa modulo ES servido como text/plain.
+    O SimpleHTTPRequestHandler no Windows marca .js como text/plain; aqui forcamos application/javascript."""
+    def log_message(self, *a):
+        pass  # silencio (nao polui o stdout do render)
+
+    def guess_type(self, path):
+        p = str(path).lower()
+        if p.endswith(".js") or p.endswith(".mjs"):
+            return "application/javascript"
+        if p.endswith(".glb"):
+            return "model/gltf-binary"
+        if p.endswith(".json"):
+            return "application/json"
+        if p.endswith(".ttf"):
+            return "font/ttf"
+        return super().guess_type(path)
+
+
 def _servidor_motor3d():
     """Sobe um http.server LOCAL (so 127.0.0.1) numa porta livre, em thread, servindo motor-3d/.
     Modulos ES e GLTFLoader com fetch nao funcionam por file://; por isso o 3D precisa de http."""
     porta = _porta_livre()
-    Handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=MOTOR3D)
+    Handler = functools.partial(_Motor3DHandler, directory=MOTOR3D)
     srv = http.server.ThreadingHTTPServer(("127.0.0.1", porta), Handler)
     t = threading.Thread(target=srv.serve_forever, daemon=True)
     t.start()
@@ -52,6 +71,7 @@ def main():
             # 3D: engine.html de motor-3d/ servido por http local; espera TODOS os .glb carregarem (window.pronto)
             srv, porta = _servidor_motor3d()
             pg.goto(f"http://127.0.0.1:{porta}/engine.html")
+            pg.wait_for_function("() => typeof window.setup === 'function'", timeout=30000)
             pg.evaluate("h => setup(h)", estado)
             pg.wait_for_function("() => window.pronto === true", timeout=120000)
         else:

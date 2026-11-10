@@ -1,0 +1,58 @@
+{
+ "visual": "3d",
+ "canal": "Hora Muerta",
+ "codigo": "HM3D",
+ "titulo": "La calle de la raya blanca (prueba 3D)",
+ "elenco": {
+  "mateo": { "altura": 1.7, "pele": "#c98d5f", "camisa": "#6a2b22", "calca": "#241810", "cabelo": "curto", "cabelo_cor": "#1a120a" }
+ },
+ "lineas": [
+  { "texto": "Imagina un barrio rodeado por una raya blanca en el suelo.", "pausa": 0.6 },
+  { "texto": "Nadie cruza la raya cuando cae la noche.", "pausa": 0.5 },
+  { "texto": "De dia, los ninos juegan en la calle sin miedo.", "pausa": 0.5 },
+  { "texto": "Pero cuando oscurece, algo camina entre los arboles.", "pausa": 0.6 },
+  { "texto": "Mateo no creia en esas cosas de viejos.", "pausa": 0.5 },
+  { "texto": "Una noche salio con su linterna a cruzar la raya.", "pausa": 0.5 },
+  { "texto": "Empezo a llover, y los postes parpadeaban.", "pausa": 0.5 },
+  { "texto": "Quedate, porque ahora viene lo que da miedo.", "pausa": 0.6 },
+  { "texto": "Entre los pinos, una sombra muy alta lo miraba.", "pausa": 0.6 },
+  { "texto": "No tenia cara, solo dos ojos amarillos.", "pausa": 0.6 },
+  { "texto": "Mateo corrio de vuelta y no cruzo la raya.", "pausa": 0.5 },
+  { "texto": "Al amanecer, el barrio estaba tranquilo otra vez.", "pausa": 0.5 },
+  { "texto": "La raya lo habia salvado una noche mas.", "pausa": 0.5 },
+  { "texto": "Pero la lluvia esta borrando la raya del suelo.", "pausa": 0.6 },
+  { "texto": "Que pasara la noche en que la raya desaparezca?", "pausa": 0.7 }
+ ],
+ "cenas": [
+  { "linea": 0, "cena": { "cenario": "bairro", "marca": "faixa", "plano": "aereo", "luz": "noite" } },
+  { "linea": 1, "cena": { "cenario": "bairro", "marca": "rua", "plano": "aberto", "luz": "noite" } },
+  { "linea": 2, "cena": { "cenario": "bairro", "marca": "rua", "plano": "medio", "luz": "dia",
+    "atores": [ { "id": "mateo", "marca": "rua", "acao": "Idle_A", "rosto": "sorriso" } ] } },
+  { "linea": 3, "cena": { "cenario": "bairro", "marca": "arvores", "plano": "baixo", "luz": "noite" } },
+  { "linea": 4, "cena": { "cenario": "bairro", "marca": "calcada", "plano": "medio", "luz": "noite",
+    "atores": [ { "id": "mateo", "marca": "calcada", "acao": "Idle_B", "rosto": "desconfiado" } ] } },
+  { "linea": 5, "cena": { "cenario": "bairro", "marca": "rua", "plano": "medio", "luz": "noite",
+    "atores": [ { "id": "mateo", "marca": "rua", "acao": "Walking_A", "rosto": "neutro", "segura": "lanterna" } ] } },
+  { "linea": 6, "cena": { "cenario": "bairro", "marca": "faixa", "plano": "nuca", "luz": "noite", "efeito": "chuva",
+    "atores": [ { "id": "mateo", "marca": "rua", "acao": "Walking_A", "rosto": "medo", "segura": "lanterna" } ] } },
+  { "linea": 7, "cena": { "cenario": "bairro", "marca": "rua", "plano": "close", "luz": "noite", "efeito": "chuva",
+    "atores": [ { "id": "mateo", "marca": "rua", "acao": "Idle_A", "rosto": "medo", "segura": "lanterna" } ] } },
+  { "linea": 8, "cena": { "cenario": "bairro", "marca": "arvores", "plano": "baixo", "luz": "noite", "efeito": "chuva",
+    "criatura": { "tipo": "alta", "marca": "arvores" } } },
+  { "linea": 9, "cena": { "cenario": "bairro", "marca": "arvores", "plano": "baixo", "luz": "noite_neblina",
+    "criatura": { "tipo": "alta", "marca": "arvores" } } },
+  { "linea": 10, "cena": { "cenario": "bairro", "marca": "rua", "plano": "medio", "luz": "noite", "efeito": "chuva",
+    "atores": [ { "id": "mateo", "marca": "rua", "acao": "Running_A", "rosto": "susto", "segura": "lanterna" } ] } },
+  { "linea": 11, "cena": { "cenario": "bairro", "marca": "rua", "plano": "aereo", "luz": "madrugada" } },
+  { "linea": 12, "cena": { "cenario": "bairro", "marca": "calcada", "plano": "medio", "luz": "madrugada",
+    "atores": [ { "id": "mateo", "marca": "calcada", "acao": "Idle_A", "rosto": "triste" } ] } },
+  { "linea": 13, "cena": { "cenario": "bairro", "marca": "faixa", "plano": "aereo", "luz": "noite", "efeito": "chuva" } },
+  { "linea": 14, "cena": { "cenario": "bairro", "marca": "arvores", "plano": "baixo", "luz": "noite_neblina",
+    "criatura": { "tipo": "vulto", "marca": "arvores" } } }
+ ],
+ "eventos": [
+  { "tipo": "golpe", "linea": 8, "en": 0.3 },
+  { "tipo": "susto", "linea": 14, "en": "fin", "mas": 0.05 }
+ ],
+ "destaque": [ "raya", "noche", "miedo", "arboles", "viejos", "linterna", "postes", "alta", "ojos", "amarillos", "corrio", "tranquilo", "salvado", "borrando" ]
+}
