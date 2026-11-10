@@ -1,0 +1,400 @@
+{
+ "formato": "Oficio",
+ "visual": "flat",
+ "serie": "lechuza-tejado",
+ "serie_titulo": "La lechuza del tejado | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral. Gancho: oficio curioso",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "la lechuza",
+  "bruja",
+  "leyenda mexicana",
+  "reglas"
+ ],
+ "codigo": "HM039",
+ "parte": 1,
+ "titulo": "Mi abuela reza por los enfermos, y algo la odia 🦉 Parte 1 #terror #shorts",
+ "capa": "LA LECHUZA SE RIÓ",
+ "descripcion": "La abuela de Ana reza por los enfermos del pueblo hace cincuenta años. La noche que se la llevaron al hospital, algo se rió en el tejado.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú habrías subido?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "Mi abuela reza por los enfermos del pueblo.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Se llama Chela, y lo hace hace cincuenta años.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Le traen niños con fiebre, y señores con tos.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Y dice que a algo allá afuera no le gusta su trabajo.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Por eso en su casa hay tres reglas.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Si una lechuza se ríe en el tejado, no salgas.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "No le contestes, aunque te llame por tu nombre.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Y prende la veladora blanca, hasta que amanezca.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Soy Ana, su nieta, y estudio enfermería.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "El martes, a mi abuela la internaron en el hospital.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Me quedé sola en su casa, cuidando a sus gallinas.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A la una y cuarenta, algo cayó sobre el techo de lámina.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Después, una risa de mujer, larga, justo encima de mi cama.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Pensé en un borracho, o un vecino bromista.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Así que rompí la primera regla, y subí a la azotea con el celular.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "En el tinaco había una lechuza enorme, del tamaño de un niño.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Me miraba con ojos amarillos, y tenía cara de mujer.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Y me habló con la voz de mi abuela, Ana, ¿ya cenaste?",
+   "pausa": 0.9
+  },
+  {
+   "texto": "¿Le contestó? Parte dos, mañana, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_pueblo",
+   "p": {
+    "casa": "acesa",
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "11:40",
+     "ampm": "PM",
+     "lugar": "San Bartolo"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Doña Chela, 74",
+     "sub": "reza por los enfermos",
+     "y": 0.2
+    },
+    "pessoa": {
+     "pele": "#9c6844",
+     "cabelo": "#cfcfcf",
+     "cabeloTipo": "coque",
+     "roupa": "#3a2a4a",
+     "detalhe": "#e0b040"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_cocina",
+   "p": {
+    "abuela": 1,
+    "olla": 1
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#9c6844",
+     "cabelo": "#cfcfcf",
+     "cabeloTipo": "coque",
+     "roupa": "#3a2a4a",
+     "detalhe": "#e0b040",
+     "olhar": 1
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "algo allá afuera",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "REGLAS DE LA ABUELA",
+    "itens": [
+     "Si la lechuza ríe, no salgas",
+     "No le contestes",
+     "Prende la veladora"
+    ],
+    "marcados": 0
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "REGLAS DE LA ABUELA",
+    "itens": [
+     "Si la lechuza ríe, no salgas",
+     "No le contestes",
+     "Prende la veladora"
+    ],
+    "marcados": 1
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "REGLAS DE LA ABUELA",
+    "itens": [
+     "Si la lechuza ríe, no salgas",
+     "No le contestes",
+     "Prende la veladora"
+    ],
+    "marcados": 2
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "REGLAS DE LA ABUELA",
+    "itens": [
+     "Si la lechuza ríe, no salgas",
+     "No le contestes",
+     "Prende la veladora"
+    ],
+    "marcados": 3
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Ana, 19",
+     "sub": "la nieta",
+     "y": 0.2
+    },
+    "pessoa": {
+     "pele": "#c48a5c",
+     "cabelo": "#20140e",
+     "cabeloTipo": "longo",
+     "roupa": "#a8323a",
+     "detalhe": "#efe4cc",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "veladora",
+    "rotulo": "sin la abuela"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_cocina",
+   "p": {
+    "porta": 0,
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "11:50",
+     "ampm": "AM",
+     "lugar": "Casa de la abuela"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_cuarto",
+   "p": {
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "1:40",
+     "ampm": "AM",
+     "lugar": "Casa de la abuela"
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "f_cuarto",
+   "p": {
+    "sombra": 1,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "una risa",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#c48a5c",
+     "cabelo": "#20140e",
+     "cabeloTipo": "longo",
+     "roupa": "#a8323a",
+     "detalhe": "#efe4cc",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "f_azotea",
+   "p": {
+    "vulto": 0,
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "1:43",
+     "ampm": "AM",
+     "lugar": "La azotea"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "f_aparicion",
+   "p": {
+    "quien": "lechuza_bruja",
+    "lugar": "f_azotea",
+    "dist": [
+     0.2,
+     0.4
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "f_aparicion",
+   "p": {
+    "quien": "lechuza_bruja",
+    "lugar": "f_azotea",
+    "dist": [
+     0.4,
+     0.7
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "cara de mujer",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "comp": "f_aparicion",
+   "p": {
+    "quien": "lechuza_bruja",
+    "lugar": "f_azotea",
+    "dist": [
+     0.7,
+     0.95
+    ],
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "EN EL TINACO",
+     "texto": "Ana, ¿ya cenaste?",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 18,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "¿Le contestó?",
+     "Parte 2 · mañana, {fecha_siguiente}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 11,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 17,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "reza por los enfermos",
+  "Chela",
+  "tres reglas",
+  "lechuza",
+  "no salgas",
+  "veladora",
+  "Ana",
+  "una y cuarenta",
+  "risa de mujer",
+  "cara de mujer",
+  "voz de mi abuela"
+ ],
+ "gancho": {
+  "cena": 17,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
