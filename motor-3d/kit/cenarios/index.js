@@ -400,7 +400,177 @@ async function torre(scene, opts) {
   return { grupo, marcas, piso: p };
 }
 
-const CENARIOS = { bairro, floresta, estrada, casa_interior, cemiterio, vila, campo, acampamento, torre };
+// ======================= CENARIOS NOVOS (rodada 3) =======================
+// helpers de primitiva comuns
+function caixa(grupo, x, y, z, w, h, d, cor, ry = 0) {
+  const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), new THREE.MeshStandardMaterial({ color: cor, roughness: 0.85 }));
+  m.position.set(x, y, z); m.rotation.y = ry; m.castShadow = true; m.receiveShadow = true; grupo.add(m); return m;
+}
+function luzQuente(grupo, x, y, z, cor = 0xffd79a, inten = 10, dist = 8) {
+  const l = new THREE.PointLight(cor, inten, dist, 1.8); l.position.set(x, y, z); grupo.add(l); return l;
+}
+function paredeCorredor(grupo, cor, len = 24, larg = 4, alt = 3) {
+  const mat = new THREE.MeshStandardMaterial({ color: cor, roughness: 0.9, side: THREE.DoubleSide });
+  const ch = new THREE.Mesh(new THREE.BoxGeometry(larg, 0.1, len), mat); ch.position.set(0, alt, 0); grupo.add(ch);
+  for (const sx of [-larg / 2, larg / 2]) { const p = new THREE.Mesh(new THREE.BoxGeometry(0.1, alt, len), mat); p.position.set(sx, alt / 2, 0); p.receiveShadow = true; grupo.add(p); }
+}
+
+async function hospital(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0x8a9096, 40);
+  paredeCorredor(g, 0xcfd6dc, 30, 4.2, 3); for (let z = -12; z <= 12; z += 4) luzQuente(g, 0, 2.9, z, 0xeaf2ff, 6, 6);
+  caixa(g, 1.4, 0.5, -6, 2, 1, 0.8, 0xdfe6ec); // maca
+  await por(g, 'interior/Door_5', 0, -14.8, 2.2);
+  const marcas = { corredor: { x: 0, z: 2, cam: 'nuca' }, maca: { x: 1.2, z: -6, cam: 'medio' }, fundo: { x: 0, z: -12, cam: 'aberto' }, porta: { x: 0, z: -13, cam: 'medio' }, entrada: { x: 0, z: 10, cam: 'aberto' }, meio: { x: 0, z: 0, cam: 'medio' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function escola(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0x9a8a6a, 40);
+  paredeCorredor(g, 0xe8d8b0, 26, 4.5, 3); for (let z = -10; z <= 10; z += 5) luzQuente(g, 0, 2.9, z, 0xfff0c0, 6, 7);
+  for (let i = 0; i < 4; i++) await por(g, 'interior/Door_3', (i % 2 ? 1 : -1) * 2.1, -8 + i * 4, 2.2, { ry: i % 2 ? -Math.PI / 2 : Math.PI / 2 });
+  const marcas = { corredor: { x: 0, z: 2, cam: 'nuca' }, sala: { x: -1.5, z: -4, cam: 'medio' }, fundo: { x: 0, z: -10, cam: 'aberto' }, porta: { x: -1.5, z: -4, cam: 'medio' }, entrada: { x: 0, z: 9, cam: 'aberto' }, meio: { x: 0, z: 0, cam: 'medio' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function metro(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0x4a4a52, 40);
+  // plataforma + trilhos + túnel escuro
+  caixa(g, 0, 0.1, 0, 8, 0.2, 30, 0x6a6a72); // plataforma
+  caixa(g, 0, -0.3, 5, 3, 0.4, 30, 0x2a2a30); // valeta dos trilhos
+  for (let i = 0; i < 2; i++) caixa(g, i ? 1 : -1, -0.1, 5, 0.12, 0.1, 30, 0xb0b0b8); // trilhos
+  for (let z = -12; z <= 12; z += 6) luzQuente(g, 0, 3, z, 0xeaf2ff, 7, 8);
+  const tunel = caixa(g, 0, 2, -15, 6, 4.5, 2, 0x0a0a0e); // boca do túnel
+  const marcas = { plataforma: { x: -1.5, z: 0, cam: 'medio' }, beira: { x: 0, z: 2.5, cam: 'medio' }, tunel: { x: 0, z: -12, cam: 'aberto' }, fundo: { x: 0, z: -13, cam: 'baixo' }, banco: { x: -2.5, z: -3, cam: 'medio' }, alto: { x: 0, z: 0, cam: 'aereo' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function elevador_predio(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0x3a3a40, 20);
+  const mat = 0x6a6a72; caixa(g, 0, 1.4, -1.4, 2.6, 2.8, 0.1, mat); // fundo
+  caixa(g, -1.4, 1.4, 0, 0.1, 2.8, 2.8, mat); caixa(g, 1.4, 1.4, 0, 0.1, 2.8, 2.8, mat); // laterais
+  caixa(g, 0, 2.85, 0, 2.8, 0.1, 2.8, 0x2a2a30); luzQuente(g, 0, 2.7, 0, 0xfff0c0, 5, 4);
+  caixa(g, 0.9, 1.4, -1.33, 0.3, 0.5, 0.05, 0xffcf6b); // painel aceso
+  const marcas = { cabine: { x: 0, z: 0.4, cam: 'medio' }, canto: { x: -0.8, z: 0.4, cam: 'close' }, painel: { x: 0.9, z: 0.2, cam: 'close' }, porta: { x: 0, z: 1.2, cam: 'medio' }, fundo: { x: 0, z: -1, cam: 'medio' }, alto: { x: 0, z: 0, cam: 'medio' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function posto_gasolina(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0x3a3d42, 60);
+  caixa(g, 0, 3.0, -8, 10, 0.3, 6, 0xdfe6ec); // teto da cobertura
+  for (const sx of [-4, 4]) caixa(g, sx, 1.5, -8, 0.25, 3, 0.25, 0xb0b0b8); // pilares
+  for (const sx of [-1.5, 1.5]) caixa(g, sx, 0.7, -7, 0.6, 1.4, 0.5, 0xd84a3a); // bombas
+  luzQuente(g, 0, 2.8, -8, 0xeaf2ff, 14, 14);
+  await por(g, 'casas/1Story_Sign_Mat', 8, 0, -6, { ry: -Math.PI / 2 });
+  const marcas = { bomba: { x: 1, z: -6, cam: 'medio' }, loja: { x: 7, z: -5, cam: 'medio' }, cobertura: { x: 0, z: -8, cam: 'aberto' }, estrada: { x: 0, z: 8, cam: 'aberto' }, fundo: { x: 0, z: -12, cam: 'baixo' }, alto: { x: 0, z: -4, cam: 'aereo' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function farol(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0x2a3a3a, 80);
+  // mar
+  const mar = new THREE.Mesh(new THREE.PlaneGeometry(120, 60), new THREE.MeshStandardMaterial({ color: 0x1a3a4a, roughness: 0.4 })); mar.rotation.x = -Math.PI / 2; mar.position.set(0, 0.05, -30); g.add(mar);
+  // torre do farol
+  const torre = caixa(g, 0, 5, -6, 2.4, 10, 2.4, 0xeeeee6); const faixa = caixa(g, 0, 6, -6, 2.5, 1.5, 2.5, 0xd84a3a);
+  const lanterna = new THREE.Mesh(new THREE.CylinderGeometry(1.0, 1.0, 1.4, 12), new THREE.MeshStandardMaterial({ color: 0xffe08a, emissive: 0xffcf6b, emissiveIntensity: 2 })); lanterna.position.set(0, 10.5, -6); g.add(lanterna);
+  luzQuente(g, 0, 10.5, -6, 0xffe8a0, 22, 30);
+  const marcas = { base: { x: 0, z: 0, cam: 'baixo' }, pedra: { x: -3, z: 2, cam: 'medio' }, mar: { x: 2, z: 4, cam: 'aberto' }, topo: { x: 0, z: 2, cam: 'aereo' }, costa: { x: 4, z: 3, cam: 'medio' }, farol: { x: 0, z: 0, cam: 'baixo' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function lago_congelado(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0xcfe0ee, 90);
+  const gelo = new THREE.Mesh(new THREE.CircleGeometry(16, 32), new THREE.MeshStandardMaterial({ color: 0xbfe0f0, roughness: 0.25, metalness: 0.1 })); gelo.rotation.x = -Math.PI / 2; gelo.position.y = 0.02; g.add(gelo);
+  // rachaduras
+  for (let i = 0; i < 6; i++) { const a = i / 6 * 6.28; const c = caixa(g, Math.cos(a) * 5, 0.03, Math.sin(a) * 5, 0.08, 0.02, 6, 0x6a90a8, a); }
+  await florestaEmVolta(g, { r0: 18, r1: 34, n: 20, mortas: true, sem: 61 });
+  const marcas = { centro: { x: 0, z: 0, cam: 'medio' }, borda: { x: 10, z: 2, cam: 'aberto' }, rachadura: { x: 3, z: 3, cam: 'baixo' }, mata: { x: -14, z: -6, cam: 'aberto' }, alto: { x: 0, z: 0, cam: 'aereo' }, meio: { x: 0, z: 4, cam: 'medio' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function mina(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0x3a2e22, 40);
+  paredeCorredor(g, 0x4a3a2a, 28, 4, 3.2);
+  for (let z = -10; z <= 10; z += 4) { const viga = caixa(g, 0, 1.6, z, 0.2, 3.2, 0.2, 0x3a2a18); caixa(g, 0, 3.1, z, 4, 0.2, 0.3, 0x3a2a18); luzQuente(g, 0, 2.6, z, 0xffb060, 4, 5); }
+  caixa(g, 1, 0.3, -5, 1.2, 0.6, 2, 0x2a2a30); // vagonete
+  const marcas = { tunel: { x: 0, z: 2, cam: 'nuca' }, vagonete: { x: 1, z: -5, cam: 'medio' }, fundo: { x: 0, z: -11, cam: 'baixo' }, viga: { x: 0, z: -2, cam: 'medio' }, entrada: { x: 0, z: 10, cam: 'aberto' }, meio: { x: 0, z: 0, cam: 'medio' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function igreja_antiga(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0x4a4238, 50);
+  paredeCorredor(g, 0x6a6258, 30, 8, 6);
+  for (let z = -10; z <= 10; z += 5) for (const sx of [-3.6, 3.6]) caixa(g, sx, 3, z, 0.4, 6, 0.4, 0x5a5248); // colunas
+  const altar = caixa(g, 0, 0.6, -12, 3, 1.2, 1.5, 0x8a7a5a); const cruz = caixa(g, 0, 2.5, -13, 0.2, 1.4, 0.2, 0xcfc0a0); caixa(g, 0, 2.9, -13, 0.8, 0.2, 0.2, 0xcfc0a0);
+  for (let z = -10; z <= 8; z += 3) for (const sx of [-2, 2]) caixa(g, sx, 0.4, z, 1.4, 0.8, 0.6, 0x4a3a2a); // bancos
+  luzQuente(g, 0, 5, -11, 0xffe0a0, 10, 14);
+  const marcas = { nave: { x: 0, z: 2, cam: 'nuca' }, altar: { x: 0, z: -10, cam: 'medio' }, coluna: { x: -3, z: -2, cam: 'baixo' }, banco: { x: -2, z: 0, cam: 'medio' }, entrada: { x: 0, z: 10, cam: 'aberto' }, alto: { x: 0, z: -2, cam: 'aereo' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function deserto(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0xd8b474, 120);
+  const r = semente((o && o.variante) || 71);
+  for (let i = 0; i < 6; i++) { const d = caixa(g, (r() - 0.5) * 40, 0.6, (r() - 0.5) * 40, 2 + r() * 3, 1.2, 2 + r() * 3, 0xc8a464); } // dunas
+  for (let i = 0; i < 5; i++) await por(g, 'natureza/Rock_' + (1 + Math.floor(r() * 5)), (r() - 0.5) * 30, (r() - 0.5) * 30, 0.6 + r() * 0.6);
+  const marcas = { areia: { x: 0, z: 0, cam: 'medio' }, duna: { x: 4, z: -6, cam: 'aberto' }, horizonte: { x: 0, z: -14, cam: 'aberto' }, pedra: { x: -4, z: 3, cam: 'medio' }, alto: { x: 0, z: 0, cam: 'aereo' }, meio: { x: 0, z: 4, cam: 'medio' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function praia_noite(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0xcfc088, 120);
+  const mar = new THREE.Mesh(new THREE.PlaneGeometry(140, 70), new THREE.MeshStandardMaterial({ color: 0x14283a, roughness: 0.4 })); mar.rotation.x = -Math.PI / 2; mar.position.set(0, 0.04, -35); g.add(mar);
+  for (let i = 0; i < 5; i++) { const a = -14 + i * 7; caixa(g, a, 0.1, -6, 5, 0.1, 1, 0x1a3a4a); } // ondas rasas
+  await por(g, 'natureza/WoodLog', -6, 3, 0.5, { ry: 0.5 });
+  const marcas = { areia: { x: 0, z: 4, cam: 'medio' }, mar: { x: 0, z: -4, cam: 'aberto' }, tronco: { x: -6, z: 3, cam: 'medio' }, horizonte: { x: 0, z: -12, cam: 'aberto' }, alto: { x: 0, z: 0, cam: 'aereo' }, meio: { x: 2, z: 0, cam: 'medio' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function fazenda(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0x6a7a2e, 90);
+  await por(g, 'vila/Stable', -8, -6, 5.5, { ry: Math.PI / 4 });
+  await por(g, 'casas/2Story_GableRoof_Mat', 9, -6, ALTURAS.casa, { ry: -Math.PI / 4 });
+  await por(g, 'vila/Well', 2, 0, 1.2); await por(g, 'vila/Cart', -3, 3, 1.8, { ry: 0.5 }); await por(g, 'vila/Hay', 5, 2, 1.2);
+  cerca(g, -12, 8, 12, 8); for (let i = 0; i < 40; i++) await por(g, 'natureza/Wheat', (semente(7)() - 0.5) * 20 + 0, -2 + i * 0.3, 1.0);
+  await por(g, 'animais/Cow', -4, 4, ALTURAS.animal_grande, { ry: 1 }); await por(g, 'animais/Donkey', 4, -2, 1.4, { ry: -0.6 });
+  figuraFundo(g, 1, 3, 2.2, 95);
+  const marcas = { curral: { x: -6, z: -4, cam: 'medio' }, casa: { x: 7, z: -4, cam: 'aberto' }, poco: { x: 2, z: 0.8, cam: 'medio' }, campo: { x: 0, z: 4, cam: 'aberto' }, alto: { x: 0, z: 0, cam: 'aereo' }, cerca: { x: 0, z: 7, cam: 'medio' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function castelo(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0x4a5a3a, 120);
+  // muralha + torres + portão
+  caixa(g, 0, 3, -10, 20, 6, 1.2, 0x8a8278); for (const sx of [-10, 10]) { caixa(g, sx, 4, -10, 3, 8, 3, 0x7a7268); caixa(g, sx, 8.3, -10, 3.4, 1, 3.4, 0x6a1e1e); }
+  caixa(g, 0, 2.2, -9.3, 3, 4.4, 0.4, 0x3a2a1a); // portão
+  // torre central
+  caixa(g, 0, 6, -16, 5, 12, 5, 0x8a8278); const bandeira = caixa(g, 0, 12.5, -16, 0.1, 1.5, 1.2, 0x6a1e1e);
+  const marcas = { portao: { x: 0, z: -6, cam: 'medio' }, muralha: { x: 0, z: -4, cam: 'aberto' }, torre: { x: 0, z: -10, cam: 'baixo' }, patio: { x: 0, z: 2, cam: 'aberto' }, alto: { x: 0, z: -6, cam: 'aereo' }, meio: { x: 0, z: 0, cam: 'medio' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function mercado_medieval(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0x8a7050, 60);
+  await por(g, 'vila/MarketStand_1', -3, 2, 2.4, { ry: Math.PI }); await por(g, 'vila/MarketStand_2', 3, 2, 2.2, { ry: Math.PI });
+  await por(g, 'vila/MarketStand_1', -3, -4, 2.4, { ry: 0 }); await por(g, 'vila/MarketStand_2', 3, -4, 2.2, { ry: 0 });
+  await por(g, 'vila/House_1', -9, -6, ALTURAS.casa_vila, { ry: Math.PI / 4 }); await por(g, 'vila/House_3', 9, -6, 5, { ry: -Math.PI / 4 });
+  await por(g, 'vila/Barrel', -1, 0, 0.9); await por(g, 'vila/Crate', 1, -1, 0.8);
+  figuraFundo(g, -1.5, 1, 2.5, 101); figuraFundo(g, 1.8, -2, -0.5, 113); figuraFundo(g, 0, -1, 1.2, 127);
+  await florestaEmVolta(g, { r0: 16, r1: 30, n: 12, sem: 73 });
+  const marcas = { praca: { x: 0, z: -1, cam: 'medio' }, barraca: { x: -3, z: 2, cam: 'medio' }, casa: { x: -7, z: -5, cam: 'aberto' }, multidao: { x: 0, z: 0, cam: 'aberto' }, alto: { x: 0, z: -1, cam: 'aereo' }, meio: { x: 1, z: 0, cam: 'medio' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function templo_oriental(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0x5a6a4a, 90);
+  // pagode: base + telhados curvos vermelhos
+  caixa(g, 0, 1, -8, 6, 2, 6, 0xb03a2a); for (let i = 0; i < 3; i++) { const y = 2.5 + i * 1.8, w = 7 - i * 1.4; const tel = caixa(g, 0, y, -8, w, 0.3, w, 0x8a2a1a); caixa(g, 0, y + 0.9, -8, w - 1.2, 1.4, w - 1.2, 0xc8372d); }
+  for (const sx of [-2, 2]) caixa(g, sx, 1, -5, 0.3, 2, 0.3, 0xf4c542); // colunas douradas
+  // torii vermelho
+  for (const sx of [-2.5, 2.5]) caixa(g, sx, 1.5, 2, 0.3, 3, 0.3, 0xc8372d); caixa(g, 0, 3.1, 2, 6, 0.3, 0.4, 0xc8372d);
+  await florestaEmVolta(g, { r0: 16, r1: 30, n: 14, sem: 77 });
+  const marcas = { templo: { x: 0, z: -3, cam: 'medio' }, torii: { x: 0, z: 2, cam: 'aberto' }, escada: { x: 0, z: -4, cam: 'baixo' }, jardim: { x: 4, z: 0, cam: 'medio' }, alto: { x: 0, z: -3, cam: 'aereo' }, meio: { x: 0, z: -1, cam: 'medio' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function cidade_grega(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0x9a8a6a, 100);
+  // templo com colunas + frontão
+  for (let i = 0; i < 6; i++) caixa(g, -5 + i * 2, 2.5, -8, 0.5, 5, 0.5, 0xe8e0d0); caixa(g, 0, 5.3, -8, 12, 0.6, 2.5, 0xdfd6c0); caixa(g, 0, 0.3, -8, 12, 0.6, 3, 0xdfd6c0);
+  const front = new THREE.Mesh(new THREE.ConeGeometry(6.5, 2, 3), new THREE.MeshStandardMaterial({ color: 0xe8e0d0, roughness: 0.9 })); front.rotation.y = Math.PI / 2; front.scale.z = 0.4; front.position.set(0, 6.5, -8); g.add(front);
+  for (let i = 0; i < 4; i++) caixa(g, -6 + i * 4, 0.5, 2, 1, 1, 1, 0xcfc0a0); // pedestais
+  const marcas = { templo: { x: 0, z: -3, cam: 'medio' }, colunas: { x: 0, z: -6, cam: 'baixo' }, agora: { x: 0, z: 3, cam: 'aberto' }, escada: { x: 0, z: -5, cam: 'medio' }, alto: { x: 0, z: -3, cam: 'aereo' }, meio: { x: 2, z: 0, cam: 'medio' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function navio(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0x14283a, 140);
+  const mar = new THREE.Mesh(new THREE.PlaneGeometry(160, 90), new THREE.MeshStandardMaterial({ color: 0x14283a, roughness: 0.4 })); mar.rotation.x = -Math.PI / 2; mar.position.y = 0.02; g.add(mar);
+  // convés
+  caixa(g, 0, 0.6, 0, 5, 0.4, 14, 0x6a4a2a); for (const sx of [-2.5, 2.5]) caixa(g, sx, 1.2, 0, 0.3, 1.2, 14, 0x5a3a1e); // amurada
+  const mastro = caixa(g, 0, 4, -2, 0.4, 8, 0.4, 0x4a3420); const vela = caixa(g, 0, 5, -2, 4, 4, 0.2, 0xe8e0d0); // vela
+  const marcas = { conves: { x: 0, z: 2, cam: 'medio' }, proa: { x: 0, z: -5, cam: 'aberto' }, mastro: { x: 0, z: -2, cam: 'baixo' }, popa: { x: 0, z: 5, cam: 'medio' }, mar: { x: 3, z: 0, cam: 'aberto' }, alto: { x: 0, z: 0, cam: 'aereo' } };
+  return { grupo: g, marcas, piso: p }; }
+
+async function cabana_neve(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0xe6eef4, 90);
+  const cab = await por(g, 'casas/1Story_GableRoof_Mat', 2, -4, ALTURAS.casa, { ry: -Math.PI / 5 });
+  // neve no telhado + janela acesa
+  caixa(g, 2, 2.6, -4, 4, 0.3, 4, 0xf4f8fc, -Math.PI / 5);
+  const jan = new THREE.Mesh(new THREE.PlaneGeometry(1, 0.8), new THREE.MeshStandardMaterial({ color: 0xffe08a, emissive: 0xffcf6b, emissiveIntensity: 1.8 })); jan.position.set(0.6, 1.4, -2.2); g.add(jan); luzQuente(g, 0.6, 1.4, -1.8, 0xffcf6b, 6, 6);
+  await florestaEmVolta(g, { r0: 12, r1: 30, n: 22, sem: 81 });
+  for (let i = 0; i < 20; i++) { const s = semente(i + 5); await por(g, 'natureza/PineTree_' + (1 + i % 5), (s() - 0.5) * 24, (s() - 0.5) * 24, 6 + s() * 2, { ry: s() * 6.28 }); }
+  const marcas = { cabana: { x: 0, z: 0, cam: 'medio' }, janela: { x: 0.6, z: -1, cam: 'close' }, mata: { x: -8, z: -6, cam: 'aberto' }, frente: { x: 0, z: 3, cam: 'aberto' }, alto: { x: 0, z: -2, cam: 'aereo' }, meio: { x: -1, z: 1, cam: 'medio' } };
+  return { grupo: g, marcas, piso: p }; }
+
+const CENARIOS = { bairro, floresta, estrada, casa_interior, cemiterio, vila, campo, acampamento, torre,
+  hospital, escola, metro, elevador_predio, posto_gasolina, farol, lago_congelado, mina, igreja_antiga,
+  deserto, praia_noite, fazenda, castelo, mercado_medieval, templo_oriental, cidade_grega, navio, cabana_neve };
 
 export async function montar(nome, scene, opts = {}) {
   const fn = CENARIOS[nome] || bairro;
