@@ -1,0 +1,368 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "room-twelve",
+ "serie_titulo": "Room Twelve | Signal Lost",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "motel horror",
+  "night shift",
+  "rules horror",
+  "night clerk",
+  "room 12"
+ ],
+ "codigo": "SV029",
+ "parte": 1,
+ "titulo": "Room 12 called the front desk. We have 11 rooms 📞 Part 1 #horror #shorts",
+ "capa": "THERE IS NO ROOM 12",
+ "descripcion": "Jonah works the night desk at an 11-room motel. At 3:14 AM, the phone line for room 12 lit up.\n\n> Part 2: {when_next}.\nWould you answer?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "The Pine Rest Motel has eleven rooms. The phone at the desk has twelve lines.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I'm Jonah. I work the night desk, eleven to seven, alone.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "On my first night, the owner taped three rules under the counter.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "There is no room twelve.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "If line twelve rings, answer it, and say we're full.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And never hand out the key with the red tag.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The red tag key hangs on the board, at the end. Number twelve.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "For two nights, nothing happened. Truckers, a couple, a guy with a dog.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "On night three, at 3:14 AM, line twelve lit up.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "I let it ring four times. Then I picked up.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A woman's voice. Very calm. My husband went out for ice an hour ago.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He never came back. Can you check the machine?",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I said what the rule said. I'm sorry, ma'am. We're full.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "She laughed, very softly. I'm not asking for a room.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I'm standing at your window.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "I looked up. A woman stood outside the glass, in the rain.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "She was holding the key with the red tag.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_motel",
+   "p": {
+    "hud": {
+     "dia": "Night 3",
+     "hora": "11:02",
+     "ampm": "AM",
+     "lugar": "Pine Rest Motel",
+     "sinal": 2
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Jonah, 26",
+     "sub": "night clerk",
+     "y": 0.24
+    },
+    "pessoa": {
+     "pele": "#8a5a3a",
+     "cabelo": "#1a1a1a",
+     "cabeloTipo": "curto",
+     "roupa": "#7a2a2a",
+     "detalhe": "#d0d0d0"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "NIGHT DESK RULES",
+    "itens": [
+     "There is no room 12",
+     "Line 12 rings? Say we're full",
+     "Never give out the red-tag key"
+    ],
+    "marcados": 0
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "NIGHT DESK RULES",
+    "itens": [
+     "There is no room 12",
+     "Line 12 rings? Say we're full",
+     "Never give out the red-tag key"
+    ],
+    "marcados": 1
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "NIGHT DESK RULES",
+    "itens": [
+     "There is no room 12",
+     "Line 12 rings? Say we're full",
+     "Never give out the red-tag key"
+    ],
+    "marcados": 2
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "NIGHT DESK RULES",
+    "itens": [
+     "There is no room 12",
+     "Line 12 rings? Say we're full",
+     "Never give out the red-tag key"
+    ],
+    "marcados": 3
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "chave",
+    "rotulo": "12",
+    "cor": "#c0392b"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_estrada_nevoa",
+   "p": {
+    "hud": {
+     "dia": "Night 3",
+     "hora": "1:30",
+     "ampm": "AM",
+     "lugar": "Pine Rest Motel",
+     "sinal": 2
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "disco",
+    "quien": "Line 12",
+    "texto": "3:14 AM"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#8a5a3a",
+     "cabelo": "#1a1a1a",
+     "cabeloTipo": "curto",
+     "roupa": "#7a2a2a",
+     "detalhe": "#d0d0d0",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "line 12",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "disco",
+    "quien": "Line 12",
+    "texto": "My husband went out for ice."
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_motel",
+   "p": {
+    "hud": {
+     "dia": "Night 3",
+     "hora": "3:15",
+     "ampm": "AM",
+     "lugar": "Pine Rest Motel",
+     "sinal": 1
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the ice machine",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#8a5a3a",
+     "cabelo": "#1a1a1a",
+     "cabeloTipo": "curto",
+     "roupa": "#7a2a2a",
+     "detalhe": "#d0d0d0",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "ME",
+     "texto": "I'm sorry, ma'am. We're full.",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "disco",
+    "quien": "Line 12",
+    "texto": "I'm not asking for a room."
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "disco",
+    "quien": "Line 12",
+    "texto": "I'm standing at your window."
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "f_motel",
+   "p": {
+    "hud": {
+     "dia": "Night 3",
+     "hora": "3:16",
+     "ampm": "AM",
+     "lugar": "Pine Rest Motel",
+     "sinal": 0
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "chave",
+    "rotulo": "12",
+    "cor": "#c0392b",
+    "brilho": 1
+   }
+  },
+  {
+   "linea": 17,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Let her in?",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 8,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "eleven rooms",
+  "Jonah",
+  "three rules",
+  "room twelve",
+  "red tag",
+  "3:14",
+  "for ice",
+  "We're full",
+  "your window",
+  "red tag"
+ ],
+ "gancho": {
+  "cena": 16,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
