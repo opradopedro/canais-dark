@@ -68,7 +68,7 @@
    "pausa": 0.3
   },
   {
-   "texto": "Engineers have since added concrete to the base, and now it barely moves.",
+   "texto": "Engineers have reinforced the base, and today it is watched closely.",
    "pausa": 0.3
   },
   {
@@ -265,8 +265,7 @@
     "estacas": 6,
     "inclina": 5,
     "afunda": 0.4,
-    "degraus": 0,
-    "rotulo": "STABILIZED",
+    "rotulo": "WATCHED",
     "cor": "green",
     "etapa": "c12"
    }

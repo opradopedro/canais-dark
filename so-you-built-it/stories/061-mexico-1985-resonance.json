@@ -1,0 +1,326 @@
+{
+ "codigo": "YB061",
+ "mundo": "terreno",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "gringa: México (espanhol): terremoto de 19/09/1985, epicentro na costa de Michoacán a ~350 km; a argila do antigo lago amplificou e alongou o tremor, que entrou em ressonância com prédios de ~6 a 15 andares https://en.wikipedia.org/wiki/1985_Mexico_City_earthquake",
+ "titulo": "The earthquake that skipped the houses and hit the towers 🇲🇽 #engineering #shorts",
+ "capa": "350 KM AWAY",
+ "descripcion": "In 1985 an earthquake struck 350 km from Mexico City, yet the city was hit hardest, and mostly mid-size buildings fell. The old lake under the city turned the shaking into a trap.\n\nWhat should we explain next?\n\n#engineering #earthquake #mexicocity #physics #shorts",
+ "tags": [
+  "engineering",
+  "earthquake",
+  "mexico city",
+  "1985",
+  "resonance",
+  "soft clay",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "In 1985, a huge earthquake hit the Pacific coast of Mexico.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Mexico City was about three hundred fifty kilometers away. It should have been safe.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Instead, the capital was hit hardest. Hundreds of buildings fell.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And here's the strange part. Most of the small houses survived.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Most of the tallest towers survived too.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The ones that fell were mostly in the middle. Around six to fifteen floors.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The reason is under the city. Mexico City is built on an old lake.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Its soft wet clay acts like a bowl of jelly.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The waves from the coast arrived, and the jelly started swinging back and forth.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Slow and strong, about once every two seconds.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now, every building has its own natural swing. Push a swing at the right time, and it goes higher.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Buildings around ten floors swing at about that same speed.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So the ground kept pushing them at exactly the wrong rhythm, again and again.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Today, Mexico City's codes are much stricter, and buildings are designed around that slow swing of the clay.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know. What should we explain next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "casa",
+    "sapata": 1,
+    "treme": 0.3,
+    "rotulo": "1985",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "casa",
+    "sapata": 1,
+    "treme": 0.1,
+    "rotulo": "350 KM AWAY",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 1,
+    "treme": 1,
+    "racha": [
+     0,
+     0.8
+    ],
+    "rotulo": "COLLAPSE",
+    "cor": "red",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "casa",
+    "sapata": 1,
+    "treme": 0.6,
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 0,
+    "treme": 0.6,
+    "estacas": 8.5,
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 1,
+    "treme": 1,
+    "racha": 0.8,
+    "rotulo": "6 TO 15 FLOORS",
+    "cor": "red",
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "predio",
+    "sapata": 1,
+    "treme": 0.3,
+    "marcas": [
+     {
+      "t": "Old lake clay",
+      "x": 4,
+      "y": -4,
+      "cor": "red"
+     }
+    ],
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "predio",
+    "sapata": 1,
+    "treme": 1,
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "predio",
+    "sapata": 1,
+    "treme": 1,
+    "rotulo": "AMPLIFIED",
+    "cor": "red",
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "predio",
+    "sapata": 1,
+    "treme": 1,
+    "rotulo": "2 SECONDS",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 1,
+    "treme": 0.6,
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 1,
+    "treme": 1,
+    "racha": [
+     0.3,
+     0.9
+    ],
+    "rotulo": "RESONANCE",
+    "cor": "red",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 1,
+    "treme": 1,
+    "racha": 0.9,
+    "inclina": [
+     0,
+     4
+    ],
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 0,
+    "treme": 0.4,
+    "estacas": 8.5,
+    "rotulo": "NEW CODES",
+    "cor": "green",
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 0,
+    "estacas": 8.5,
+    "etapa": "c14"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 13,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 14,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "1985",
+  "three hundred fifty",
+  "hit hardest",
+  "small houses",
+  "six to fifteen",
+  "old lake",
+  "jelly",
+  "two seconds",
+  "swing",
+  "wrong rhythm",
+  "stricter"
+ ]
+}
