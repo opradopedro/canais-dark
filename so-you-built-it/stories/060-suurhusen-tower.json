@@ -1,0 +1,360 @@
+{
+ "codigo": "YB060",
+ "mundo": "terreno",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "gringa: Alemanha (alemão): torre da igreja de Suurhusen, Frísia Oriental, inclinada 5,19° (recorde Guinness 2007, mais que Pisa); fundação de troncos de carvalho que apodreceram depois que a região foi drenada https://en.wikipedia.org/wiki/Suurhusen",
+ "titulo": "This tower leans more than Pisa 🇩🇪 #engineering #shorts",
+ "capa": "MORE TILTED THAN PISA",
+ "descripcion": "A small church tower in Suurhusen, Germany, leans more than the Leaning Tower of Pisa. It stood fine for centuries, until someone drained the swamp.\n\nWhat should we explain next?\n\n#engineering #germany #pisa #foundations #shorts",
+ "tags": [
+  "engineering",
+  "suurhusen",
+  "germany",
+  "leaning tower",
+  "pisa",
+  "wooden piles",
+  "foundations",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Everyone knows the Leaning Tower of Pisa. But a little church in Germany beats it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The tower in Suurhusen leans over five degrees. Pisa leans about four.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "In 2007, Guinness even called it the most tilted tower in the world.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And the reason is hiding in the mud under it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The tower was built in the 1400s, on soggy marsh ground near the sea.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Soft ground can't hold a heavy stone tower, so the builders used tree trunks.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Oak trunks, pushed down into the mud, side by side.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Under water, wood can last for centuries, because rot needs air.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And for about four hundred years, it worked.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then, in the 1800s, farmers drained the marsh to grow crops.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The water dropped, and air reached the tops of the oak trunks.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The wood rotted, and one side of the tower sank into the gap.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Engineers have since added concrete to the base, and now it barely moves.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Venice still stands on oak trunks too, because the lagoon keeps them wet.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Keep them wet, and they last. Dry them out, and the tower leans.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know. What should we explain next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "foco": "casa",
+    "casa": "torre",
+    "inclina": 5,
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "foco": "casa",
+    "casa": "torre",
+    "inclina": 5,
+    "rotulo": "5.19 DEGREES",
+    "cor": "red",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "foco": "casa",
+    "casa": "torre",
+    "inclina": 5,
+    "rotulo": "WORLD RECORD",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "torre",
+    "inclina": 5,
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "torre",
+    "inclina": 0,
+    "lencol": -0.5,
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "torre",
+    "inclina": 0,
+    "lencol": -0.5,
+    "madeira": 1,
+    "estacas": 6,
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "torre",
+    "inclina": 0,
+    "lencol": -0.5,
+    "madeira": 1,
+    "estacas": 6,
+    "rotulo": "OAK TRUNKS",
+    "cor": "green",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "torre",
+    "inclina": 0,
+    "lencol": -0.5,
+    "madeira": 1,
+    "estacas": 6,
+    "marcas": [
+     {
+      "t": "No air, no rot",
+      "x": 4,
+      "y": -3,
+      "cor": "green"
+     }
+    ],
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "foco": "casa",
+    "casa": "torre",
+    "inclina": 0,
+    "lencol": -0.5,
+    "madeira": 1,
+    "estacas": 6,
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "torre",
+    "inclina": 0,
+    "lencol": [
+     -0.5,
+     -4
+    ],
+    "madeira": 1,
+    "estacas": 6,
+    "rotulo": "DRAINED",
+    "cor": "red",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "torre",
+    "inclina": 0,
+    "lencol": -4,
+    "madeira": 1,
+    "estacas": 6,
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "torre",
+    "lencol": -4,
+    "madeira": 1,
+    "estacas": 6,
+    "inclina": [
+     0,
+     5
+    ],
+    "afunda": [
+     0,
+     0.4
+    ],
+    "rotulo": "ROTTING",
+    "cor": "red",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "terreno",
+   "p": {
+    "foco": "casa",
+    "casa": "torre",
+    "lencol": -4,
+    "madeira": 1,
+    "estacas": 6,
+    "inclina": 5,
+    "afunda": 0.4,
+    "degraus": 0,
+    "rotulo": "STABILIZED",
+    "cor": "green",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "torre",
+    "lencol": -0.5,
+    "madeira": 1,
+    "estacas": 6,
+    "inclina": 0,
+    "rotulo": "VENICE",
+    "cor": "green",
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "terreno",
+   "p": {
+    "foco": "casa",
+    "casa": "torre",
+    "lencol": -4,
+    "madeira": 1,
+    "estacas": 6,
+    "inclina": 5,
+    "etapa": "c14"
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "terreno",
+   "p": {
+    "foco": "casa",
+    "casa": "torre",
+    "lencol": -4,
+    "madeira": 1,
+    "estacas": 6,
+    "inclina": 5,
+    "etapa": "c15"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 12,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 15,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "Pisa",
+  "Suurhusen",
+  "five degrees",
+  "Guinness",
+  "tree trunks",
+  "rot needs air",
+  "four hundred years",
+  "drained",
+  "rotted",
+  "Venice"
+ ]
+}
