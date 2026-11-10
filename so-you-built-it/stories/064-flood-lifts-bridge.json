@@ -1,0 +1,318 @@
+{
+ "codigo": "YB064",
+ "mundo": "riacho",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "autoral. Fatos: em enchente o tabuleiro vira barreira, galhos acumulam e o ar preso embaixo faz o tabuleiro boiar; solução: ancoragem do tabuleiro, tabuleiro mais alto, guarda-corpo vazado https://en.wikipedia.org/wiki/Bridge_scour ; https://www.fhwa.dot.gov/engineering/hydraulics/",
+ "titulo": "How a flood lifts a bridge right off its pillars 🌉 #engineering #shorts",
+ "capa": "THE BRIDGE FLOATED",
+ "descripcion": "A concrete bridge weighs hundreds of tons, yet floods regularly shove whole decks off their pillars. The water pushes, the debris piles up, and trapped air lifts it.\n\nWhat should we explain next?\n\n#engineering #flood #bridge #physics #shorts",
+ "tags": [
+  "engineering",
+  "bridge",
+  "flood",
+  "buoyancy",
+  "debris",
+  "bridge failure",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "A concrete bridge weighs hundreds of tons. So how does a flood just push it off its pillars?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Normally the river flows far below the deck. No problem.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But in a big flood, the water rises, and rises, until it hits the deck itself.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now the deck is a wall standing in a fast river. Every cubic meter of water weighs a ton.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then the floating trash arrives. Branches, logs, even cars.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "They jam against the railings and the pillars, and the wall gets bigger and bigger.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And here's the sneaky part. Air gets trapped under the deck, between the beams.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That air works like a life jacket. It lifts the deck up.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Lighter on top, pushed hard from the side. The deck slides right off.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So engineers fight back. First, they bolt the deck down to the pillars with steel ties.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "They punch vent holes in the deck, so trapped air can escape.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "They use open railings, so branches slide through instead of piling up.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And when they can, they simply build the deck higher than the worst flood on record.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Next time you cross a river, look at the gap under the bridge. That gap is the plan.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know. What should we explain next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "agua": -1.8,
+    "rotulo": "HUNDREDS OF TONS",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "riacho",
+   "p": {
+    "foco": "vale",
+    "ponte": "pilar",
+    "agua": -1.8,
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "agua": [
+     -1.8,
+     0.4
+    ],
+    "chuva": 1,
+    "lama": 1,
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "agua": 0.4,
+    "chuva": 1,
+    "lama": 1,
+    "rotulo": "A WALL",
+    "cor": "red",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "agua": 0.4,
+    "chuva": 1,
+    "lama": 1,
+    "entupido": 1,
+    "rotulo": "DEBRIS",
+    "cor": "red",
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "agua": 0.6,
+    "chuva": 1,
+    "lama": 1,
+    "entupido": 1,
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "riacho",
+   "p": {
+    "foco": "deck",
+    "ponte": "pilar",
+    "agua": 0.6,
+    "chuva": 1,
+    "lama": 1,
+    "rotulo": "TRAPPED AIR",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "riacho",
+   "p": {
+    "foco": "deck",
+    "ponte": "pilar",
+    "agua": 0.6,
+    "chuva": 1,
+    "lama": 1,
+    "boia": 0.2,
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "agua": 0.6,
+    "chuva": 1,
+    "lama": 1,
+    "leva": [
+     0,
+     1
+    ],
+    "rotulo": "WASHED OFF",
+    "cor": "red",
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "agua": -1.8,
+    "rotulo": "STEEL TIES",
+    "cor": "green",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "riacho",
+   "p": {
+    "foco": "deck",
+    "ponte": "pilar",
+    "agua": -1.8,
+    "rotulo": "VENT HOLES",
+    "cor": "green",
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "agua": -1.8,
+    "rotulo": "OPEN RAILINGS",
+    "cor": "green",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "pilar",
+    "agua": [
+     -1.8,
+     0.0
+    ],
+    "chuva": 1,
+    "rotulo": "BUILD HIGHER",
+    "cor": "green",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "riacho",
+   "p": {
+    "foco": "vale",
+    "ponte": "pilar",
+    "agua": -1.8,
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "riacho",
+   "p": {
+    "foco": "vale",
+    "ponte": "pilar",
+    "agua": -1.8,
+    "etapa": "c14"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 12,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 14,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "hundreds of tons",
+  "rises",
+  "a ton",
+  "Branches",
+  "trapped",
+  "life jacket",
+  "slides right off",
+  "bolt",
+  "vent holes",
+  "open railings",
+  "higher"
+ ]
+}
