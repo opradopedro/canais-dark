@@ -51,6 +51,10 @@ let atores = {};        // id -> ator (pessoa)
 let criaturaAtiva = null;
 let cenarioAtual = null, cenarioNome = null, luzNome = null, efeitoNome = null;
 let montado = false;
+let rim = null;         // rim light azulada que segue o alvo
+let obstaculos = [];    // meshes/grupos grandes (arvores, casas) p/ o raycast da camera
+let _silhueta = false;  // modo fiscal: pinta o alvo de magenta e o resto de preto (mede % na tela)
+let _alvoAtual = null;
 
 window.pronto = false;  // o render.py espera isto virar true (todos os .glb carregados)
 
@@ -81,6 +85,11 @@ window.setup = async function (h) {
   const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.8, 0.5, 0.82);
   comp.addPass(bloom);
   comp.addPass(new OutputPass());
+
+  // rim light azulada: destaca o ator/criatura do fundo (sempre, principalmente a noite). Reposicionada por quadro.
+  rim = new THREE.DirectionalLight(0xbcd2ff, 0.0);
+  rim.castShadow = false;
+  scene.add(rim, rim.target);
 
   // pre-carrega os .glb que o roteiro vai usar (cenarios, atores, objetos, criatura)
   await precarregarTudo();
@@ -128,6 +137,16 @@ async function trocarPara(i) {
     limparGrupo(cenarioAtual && cenarioAtual.grupo);
     cenarioAtual = await montarCenario(cena.cenario, scene, {});
     cenarioNome = cena.cenario;
+    // obstaculos p/ o raycast da camera: filhos de topo do grupo do cenario (arvores, casas, torre...),
+    // menos o piso (plano grande no chao, que nunca bloqueia a cabeca).
+    obstaculos = [];
+    if (cenarioAtual.grupo) {
+      for (const ch of cenarioAtual.grupo.children) {
+        if (ch === cenarioAtual.piso) continue;
+        if (ch.geometry && ch.geometry.type === 'PlaneGeometry') continue;
+        obstaculos.push(ch);
+      }
+    }
   }
   // --- luz / efeito ---
   const preset = cena.luz || 'noite';
@@ -135,8 +154,8 @@ async function trocarPara(i) {
   if (preset !== luzNome || efeito !== efeitoNome) {
     // remove luzes antigas
     if (luzCtrl) for (const l of luzCtrl.luzes) limparGrupo(l);
-    // remove estrelas/chuva antigas
-    for (const nm of ['estrelas', 'chuva']) { const o = scene.getObjectByName(nm); if (o) scene.remove(o); }
+    // remove estrelas/chuva/ceu antigos (por nome, caso tenham ficado)
+    for (const nm of ['estrelas', 'chuva', 'ceu_domo']) { let o; while ((o = scene.getObjectByName(nm))) scene.remove(o); }
     const fx = efeito === 'chuva' ? 'chuva' : preset;
     const opts = {};
     if (cenarioAtual && cenarioAtual.fogoX !== undefined) { opts.fogoX = cenarioAtual.fogoX; opts.fogoZ = cenarioAtual.fogoZ; }
@@ -151,12 +170,17 @@ async function trocarPara(i) {
     ator.obj.visible = true;
     const pos = posMarca(cenarioAtual.marcas, a.para || a.marca || a.de);
     ator.obj.position.x = pos.x; ator.obj.position.z = pos.z;
-    // vira o ator para a camera/frente por padrao
+    // rotacao base do ator nesta cena (a frente dele). O virarParaCamera parte daqui.
     ator.obj.rotation.y = a.girar ?? Math.PI;
+    ator._ryBase = ator.obj.rotation.y;
+    ator._marca = a.para || a.marca || a.de;
+    ator._principal = true; // marcado como candidato a alvo
     if (a.acao) ator.acao(a.acao);
     if (a.rosto) ator.rosto(a.rosto);
     if (a.segura) ator.segurar(a.segura);
   }
+  // guarda a ordem dos atores desta cena (o 1o e o alvo preferido da camera)
+  ST._atoresCena = (cena.atores || []).map(a => a.id).filter(id => atores[id]);
   // --- criatura ---
   limparGrupo(criaturaAtiva && criaturaAtiva.obj);
   criaturaAtiva = null;
@@ -175,6 +199,63 @@ function cenaEm(t) {
   let i = 0;
   for (let k = 0; k < ST._cenas.length; k++) if (t >= ST._cenas[k].t0) i = k;
   return i;
+}
+
+// --- alvo da camera: ator principal da cena, ou criatura, ou (ultimo caso) a marca ---
+const _tmpVec = new THREE.Vector3();
+let _fantasma = null;
+function alvoDaCena(cena, plano) {
+  const ids = ST._atoresCena || [];
+  // nos planos de revelacao (baixo/aberto) com criatura, o alvo e a criatura
+  const criaturaReveladora = criaturaAtiva && (plano === 'baixo' || plano === 'aberto' || !ids.length);
+  if (criaturaReveladora && cena.criatura) {
+    return { obj: criaturaAtiva.obj, head: criaturaAtiva.head, altura: criaturaAtiva.altura || 2.4,
+             raio: criaturaAtiva.raio || 0.4, ehAtor: false };
+  }
+  if (ids.length) {
+    const a = atores[ids[0]];
+    return { obj: a.obj, head: a.head, rosto: a._rosto, altura: a.altura || 1.7, raio: a.raio || 0.34,
+             ehAtor: true, _ator: a, _ryBase: a._ryBase };
+  }
+  if (criaturaAtiva) {
+    return { obj: criaturaAtiva.obj, head: criaturaAtiva.head, altura: criaturaAtiva.altura || 2.4,
+             raio: criaturaAtiva.raio || 0.4, ehAtor: false };
+  }
+  // sem ator nem criatura: um alvo "fantasma" reutilizado na marca (cenas so de cenario)
+  const m = posMarca(cenarioAtual.marcas, cena.marca || 'rua');
+  if (!_fantasma) { _fantasma = new THREE.Object3D(); scene.add(_fantasma); }
+  _fantasma.position.set(m.x, 0, m.z);
+  return { obj: _fantasma, head: null, altura: 1.7, raio: 0.3, ehAtor: false };
+}
+
+// vira o ator (no maximo maxGraus) para ficar de frente para a camera, mantendo a frente base como referencia.
+function virarParaCamera(alvo, maxGraus) {
+  const a = alvo._ator; if (!a) return;
+  a.obj.getWorldPosition(_tmpVec);
+  const dx = cam.position.x - _tmpVec.x, dz = cam.position.z - _tmpVec.z;
+  const paraCamera = Math.atan2(dx, dz);         // angulo que aponta a frente (+Z) para a camera
+  const baseY = alvo._ryBase ?? a.obj.rotation.y;
+  // limita o desvio a maxGraus em relacao a frente base
+  let d = paraCamera - baseY;
+  while (d > Math.PI) d -= 2 * Math.PI; while (d < -Math.PI) d += 2 * Math.PI;
+  const lim = THREE.MathUtils.degToRad(maxGraus);
+  d = Math.max(-lim, Math.min(lim, d));
+  a.obj.rotation.y = baseY + d;
+}
+
+// posiciona a rim light atras do alvo em relacao a camera (contraluz): recorta a silhueta do fundo.
+function posicionarRim(alvo) {
+  alvo.obj.getWorldPosition(_tmpVec);
+  const cabY = _tmpVec.y + (alvo.altura || 1.7) * 0.7;
+  // atras do alvo = do lado oposto a camera
+  const dx = _tmpVec.x - cam.position.x, dz = _tmpVec.z - cam.position.z;
+  const n = Math.hypot(dx, dz) || 1;
+  rim.position.set(_tmpVec.x + (dx / n) * 4, cabY + 3, _tmpVec.z + (dz / n) * 4);
+  rim.target.position.set(_tmpVec.x, cabY, _tmpVec.z);
+  rim.target.updateMatrixWorld();
+  // forte a noite, suave de dia
+  const noturno = /noite|madrugada|fogueira|neblina/.test(luzNome || '');
+  rim.intensity = noturno ? 1.5 : 0.5;
 }
 
 // ------- render(t): desenha o quadro do segundo t, DETERMINISTICO -------
@@ -200,14 +281,35 @@ window.render = function (t) {
   if (luzCtrl) luzCtrl.atualizar(t);
 
   // camera: plano do roteiro ou sequencia automatica (troca a cada ~2,5 s), com travelling lento
-  const alvoMarca = posMarca(cenarioAtual.marcas, cena.marca || 'rua');
   const base = cena.plano || 'auto';
   const pa = planoAutomatico(tLocal, durLinha, base);
   const tremor = (cena.tremor || 0) + sustoEm(t);
-  const alvo = { x: alvoMarca.x, y: (cena.plano === 'close' || pa.plano === 'close') ? 1.0 : 0.9, z: alvoMarca.z };
-  aplicarPlano(cam, pa.plano, alvo, pa.tLocal, { dur: pa.dur, tremor });
 
-  comp.render();
+  // qual e o ALVO da camera: o ator principal da cena; se nao houver ator, a criatura; senao, a marca.
+  const alvo = alvoDaCena(cena, pa.plano);
+
+  // rosto de frente: nos planos close/medio o ator vira levemente para a camera (ate 35 graus)
+  if (alvo && alvo.ehAtor && (pa.plano === 'close' || pa.plano === 'medio')) {
+    virarParaCamera(alvo, 35);
+  } else if (alvo && alvo.ehAtor) {
+    alvo.obj.rotation.y = alvo._ryBase ?? alvo.obj.rotation.y;
+  }
+
+  const diag = aplicarPlano(cam, pa.plano, alvo, pa.tLocal, { dur: pa.dur, tremor, obstaculos, fov: 42 });
+
+  // rim light azulada atras do alvo, na direcao da camera, para recortar do fundo
+  if (rim && alvo) posicionarRim(alvo);
+
+  // se um objeto ainda bloqueia a cabeca do alvo, esconde-o SO neste quadro (e o fiscal nao reprova)
+  let escondido = null;
+  if (diag && diag.bloqueador) { escondido = diag.bloqueador; escondido.visible = false; }
+
+  // dados para o fiscal (conferir_quadros.py): plano, se o alvo e ator, e se segue bloqueado DEPOIS de esconder
+  window.__ultimoQuadro = { plano: pa.plano, alvoEhAtor: !!(alvo && alvo.ehAtor), bloqueado: false };
+  _alvoAtual = alvo;
+
+  if (_silhueta) desenharSilhueta(alvo); else comp.render();
+  if (escondido) escondido.visible = true; // restaura para os proximos quadros
   desenharLegenda(t);
 };
 
@@ -300,6 +402,23 @@ window.prepararQuadro = async function (t) {
   }
   return true;
 };
+
+// --- modo fiscal: silhueta do alvo em magenta sobre fundo preto (mede quanto o ator ocupa na tela) ---
+const _matMagenta = new THREE.MeshBasicMaterial({ color: 0xff00ff });
+const _matPreto = new THREE.MeshBasicMaterial({ color: 0x000000 });
+function desenharSilhueta(alvo) {
+  // guarda materiais, pinta tudo de preto, o alvo de magenta, renderiza SEM bloom, restaura
+  const trocados = [];
+  scene.traverse(o => {
+    if (o.isMesh && o.material) { trocados.push([o, o.material]); o.material = _matPreto; }
+  });
+  if (alvo && alvo.obj) alvo.obj.traverse(o => { if (o.isMesh) o.material = _matMagenta; });
+  const bg = scene.background; scene.background = new THREE.Color(0x000000);
+  R.render(scene, cam); // render direto (sem composer/bloom)
+  scene.background = bg;
+  for (const [o, m] of trocados) o.material = m;
+}
+window.__silhueta = (on) => { _silhueta = !!on; };
 
 // diagnostico: posicao/alvo da camera e se a cena tem objetos visiveis
 window.__caminfo = () => ({
