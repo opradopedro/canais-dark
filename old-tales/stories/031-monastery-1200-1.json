@@ -1,0 +1,310 @@
+{
+ "formato": "Day",
+ "tema": "calmo",
+ "piano": 0,
+ "visual": "flat",
+ "serie": "monastery-1200",
+ "serie_titulo": "You Wake Up in a Monastery, 1200 | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "origem": "autoral. Fontes: Regra de São Bento, caps. 16, 38, 39, 40, 42, 48, 53 https://en.wikipedia.org/wiki/Rule_of_Saint_Benedict ; sinais de Cluny https://en.wikipedia.org/wiki/Monastic_sign_languages ; Codex Amiatinus https://en.wikipedia.org/wiki/Codex_Amiatinus ; tinta ferrogálica https://en.wikipedia.org/wiki/Iron_gall_ink ; Matinas https://en.wikipedia.org/wiki/Matins",
+ "tags": [
+  "medieval monastery",
+  "medieval life",
+  "monk life",
+  "middle ages",
+  "rule of saint benedict",
+  "history",
+  "history facts",
+  "you wake up in",
+  "old tales"
+ ],
+ "codigo": "CL031",
+ "parte": 1,
+ "titulo": "You wake up in a medieval monastery 🔔 Part 1 #history #shorts",
+ "capa": "2 AM, EVERY NIGHT",
+ "descripcion": "In a medieval monastery, the day started at 2 in the morning, and almost nobody spoke. Monks talked with their hands.\n\nSources: Rule of Saint Benedict (chapters 16, 42, 48); Cluniac sign lists.\n\nCould you live in silence?\n\n#history #medieval #middleages #historyfacts #shorts",
+ "lineas": [
+  {
+   "texto": "You wake up in a monastery, in the year 1200. It's two in the morning.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A bell is ringing. You're fifteen, a novice, sleeping in your robe.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You walk to the church with forty monks, in the dark.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The night prayer. Psalms, sung slowly, in Latin. The stone is freezing.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then back to bed for a while, until the dawn prayer.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Your day is cut into eight prayer times, from the dark to the dark again.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And almost all of it happens in silence.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "So the monks talk with their hands. Some houses used more than a hundred signs.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Want bread? Make a circle with your thumbs and fingers.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Want fish? Wiggle your hand, like a tail in the water.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Your rule says idleness is the enemy of the soul.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "In the garden, you pull weeds and carry water to the beans.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Your hands blister. Nobody complains. Nobody can.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "After the evening prayer, the abbot calls you to his room.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He hands you a goose feather, and a knife.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "You have a steady hand, he signs. You'll copy a book.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "It will take you a year. Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_igreja",
+   "p": {
+    "missa": 0,
+    "hud": {
+     "dia": "Year 1200",
+     "hora": "2:00 AM",
+     "lugar": "the abbey",
+     "ceu": "noite"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "You, 15",
+     "sub": "a novice",
+     "y": 0.13
+    },
+    "pessoa": {
+     "pele": "#e3b896",
+     "cabelo": "#6a4a2a",
+     "cabeloTipo": "careca",
+     "roupa": "#4a3a2e",
+     "detalhe": "#c9b27a",
+     "chapeu": "capuz",
+     "expressao": "triste"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_igreja",
+   "p": {
+    "missa": 1,
+    "hud": {
+     "dia": "Year 1200",
+     "hora": "2:05 AM",
+     "lugar": "the abbey",
+     "ceu": "noite"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_igreja",
+   "p": {
+    "missa": 1,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the night office",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "vela",
+    "rotulo": "back to bed"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "YOUR DAY",
+    "itens": [
+     "Night office",
+     "Dawn",
+     "Prime, Terce, Sext, None",
+     "Vespers",
+     "Compline"
+    ],
+    "marcados": 0
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_mosteiro",
+   "p": {
+    "livro": 0,
+    "hud": {
+     "dia": "Year 1200",
+     "hora": "Morning",
+     "lugar": "the abbey",
+     "ceu": "aurora"
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_figura",
+   "p": {
+    "figurino": "monge",
+    "pose": "aponta"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "pao",
+    "rotulo": "the sign for bread"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "cesto",
+    "rotulo": "the sign for fish"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_campo",
+   "p": {
+    "hud": {
+     "dia": "Year 1200",
+     "hora": "Midday",
+     "lugar": "the abbey",
+     "ceu": "dia"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_campo",
+   "p": {
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "the garden",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#e3b896",
+     "cabelo": "#6a4a2a",
+     "cabeloTipo": "careca",
+     "roupa": "#4a3a2e",
+     "detalhe": "#c9b27a",
+     "chapeu": "capuz",
+     "expressao": "triste"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "f_mosteiro",
+   "p": {
+    "livro": 1,
+    "hud": {
+     "dia": "Year 1200",
+     "hora": "Dusk",
+     "lugar": "the abbey",
+     "ceu": "tarde"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "pergaminho",
+    "rotulo": "a feather and a knife"
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "f_mosteiro",
+   "p": {
+    "livro": 1
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "One book.",
+     "One year.",
+     "{next_card}"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "destaque": [
+  "1200",
+  "two in the morning",
+  "novice",
+  "silence",
+  "eight",
+  "hundred signs",
+  "bread",
+  "fish",
+  "idleness",
+  "goose feather",
+  "a year"
+ ]
+}
