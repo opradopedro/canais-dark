@@ -65,7 +65,7 @@ Estoque antes: 20 (YB033, YB035, YB039-YB056 sem os publicados; 8 Evolução e 1
 | Código | Formato | Tema | Origem | Estado |
 |---|---|---|---|---|
 | YB057 | Evolucao | johad: represinha de terra que traz o rio de volta (riacho, represa) | gringa: Índia (Rajastão, Arvari) https://en.wikipedia.org/wiki/Johad | FEITO |
-| YB058 | Curiosidade | os prédios tortos de Santos (terreno, predio, argila) | gringa: Brasil https://en.wikipedia.org/wiki/Santos,_S%C3%A3o_Paulo | FALTA |
+| YB058 | Curiosidade | os prédios tortos de Santos (terreno, predio, argila) | gringa: Brasil https://en.wikipedia.org/wiki/Santos,_S%C3%A3o_Paulo | FEITO |
 | YB059 | Curiosidade | Jacarta afundando e a capital que muda (terreno, poço, solo_cede) | gringa: Indonésia https://en.wikipedia.org/wiki/Jakarta | FALTA |
 | YB060 | Curiosidade | torre de Suurhusen, mais torta que Pisa (terreno, torre, madeira) | gringa: Alemanha https://en.wikipedia.org/wiki/Suurhusen | FALTA |
 | YB061 | Curiosidade | 1985: o terremoto longe que derrubou prédios médios (terreno, treme) | gringa: México https://en.wikipedia.org/wiki/1985_Mexico_City_earthquake | FALTA |

@@ -1,0 +1,358 @@
+{
+ "codigo": "YB058",
+ "mundo": "terreno",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "gringa: Brasil (português): os ~65 prédios inclinados da orla de Santos, sapatas rasas sobre argila marinha mole; o Núncio Malzoni foi reaprumado com macacos hidráulicos em 2001 https://en.wikipedia.org/wiki/Santos,_S%C3%A3o_Paulo",
+ "titulo": "Why the beach towers of Santos are leaning 🇧🇷 #engineering #shorts",
+ "capa": "65 LEANING TOWERS",
+ "descripcion": "Walk the beach in Santos, Brazil, and dozens of apartment towers lean like dominoes. The reason is a hidden layer of soft clay, and foundations that stop too soon.\n\nWhat should we explain next?\n\n#engineering #brazil #santos #foundations #shorts",
+ "tags": [
+  "engineering",
+  "santos",
+  "brazil",
+  "leaning buildings",
+  "foundations",
+  "soft clay",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "In Santos, Brazil, the beachfront looks like a row of dominoes about to fall.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Around sixty five apartment towers there are visibly leaning.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And no, it's not the sea wind. It's what's under them.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Most were built in the fifties and sixties, on short concrete footings.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The top few meters are firm sand. Great, the builders thought.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But under the sand is a thick layer of soft sea clay, like wet toothpaste.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The weight of a tower spreads down into that clay, and slowly squeezes the water out.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So the building sinks, a few millimeters a year, for decades.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now put two towers side by side. Under the gap, their weights overlap.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The clay between them gets squeezed twice, so each tower sinks more on that side.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's why so many lean toward each other, like tired friends.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "They're watched closely, and most aren't about to fall.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "One of them, the Nuncio Malzoni, was pushed back upright with giant hydraulic jacks in 2001.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Today, new towers there sit on piles that go all the way through the clay.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Down to the hard ground below, where nothing squeezes.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know. What should we explain next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 1,
+    "inclina": 3,
+    "rotulo": "SANTOS, BRAZIL",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 1,
+    "inclina": 3,
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "predio",
+    "sapata": 1,
+    "inclina": 3,
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "predio",
+    "sapata": 1,
+    "inclina": 0,
+    "rotulo": "SHORT FOOTINGS",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "predio",
+    "sapata": 1,
+    "marcas": [
+     {
+      "t": "Firm sand",
+      "x": 4,
+      "y": -0.7,
+      "cor": "green"
+     }
+    ],
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "predio",
+    "sapata": 1,
+    "marcas": [
+     {
+      "t": "Soft sea clay",
+      "x": 4,
+      "y": -4,
+      "cor": "red"
+     }
+    ],
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "predio",
+    "sapata": 1,
+    "peso": 1,
+    "afunda": [
+     0,
+     0.4
+    ],
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "predio",
+    "sapata": 1,
+    "peso": 1,
+    "afunda": [
+     0.4,
+     0.9
+    ],
+    "rotulo": "SINKING",
+    "cor": "red",
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 1,
+    "peso": 1,
+    "afunda": 0.9,
+    "inclina": [
+     0,
+     1.5
+    ],
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 1,
+    "peso": 1,
+    "afunda": 0.9,
+    "inclina": [
+     1.5,
+     3
+    ],
+    "rotulo": "LEANING",
+    "cor": "red",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 1,
+    "afunda": 0.9,
+    "inclina": 3,
+    "racha": 0.3,
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 1,
+    "afunda": 0.9,
+    "inclina": 3,
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 1,
+    "afunda": 0.9,
+    "inclina": [
+     3,
+     0
+    ],
+    "rotulo": "STRAIGHTENED",
+    "cor": "green",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 0,
+    "estacas": 8.5,
+    "rotulo": "PILES",
+    "cor": "green",
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "terreno",
+   "p": {
+    "foco": "fundo",
+    "casa": "predio",
+    "sapata": 0,
+    "estacas": 8.5,
+    "etapa": "c14"
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "terreno",
+   "p": {
+    "foco": "predio",
+    "casa": "predio",
+    "sapata": 0,
+    "estacas": 8.5,
+    "etapa": "c15"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 12,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 13,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 15,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "Santos",
+  "dominoes",
+  "sixty five",
+  "short",
+  "soft sea clay",
+  "squeezes",
+  "sinks",
+  "overlap",
+  "toward each other",
+  "hydraulic jacks",
+  "piles"
+ ]
+}
