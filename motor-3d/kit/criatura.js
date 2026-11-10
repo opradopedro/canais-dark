@@ -41,15 +41,25 @@ function escurecer(obj, cor = 0x14100c, rough = 1) {
   });
 }
 
+// alonga os bracos do manequim. Os ossos (sem ponto, GLTFLoader tira o ponto): upperarml/r, lowerarml/r.
+// O osso de braco do rig KayKit cresce ao longo do seu eixo X local (o filho fica deslocado em X), entao
+// escalamos .x. Escalar o pai propaga para o filho, por isso aplicamos so no upperarm e no lowerarm (nao na mao).
+function alongarBracos(obj, fator) {
+  for (const nm of ['upperarml', 'upperarmr', 'lowerarml', 'lowerarmr']) {
+    const b = acharOsso(obj, nm);
+    if (b) b.scale.x *= fator;
+  }
+}
+
 export async function criatura(tipo = 'alta', opts = {}) {
   if (tipo === 'vulto') {
     // silhueta humana preta parada, bem escura, olhos brilhando. Manequim em T-pose leve, sem mixer.
-    const altura = opts.altura || 2.2;
+    const altura = opts.altura || 2.4;
     const { obj } = await instanciar('personagens/Mannequin_Medium', { altura });
-    escurecer(obj, 0x070707, 1);
+    escurecer(obj, 0x1a2234, 1);  // azul-chumbo bem escuro (nao preto puro): a rim light o recorta do fundo
     const head = acharOsso(obj, 'head');
-    if (head) porOlhos(head, { cor: opts.olhos || [3.2, 0.4, 0.4], frente: 0.19, alturaY: 0.02, raio: 0.05, sep: 0.07 });
-    return { obj, mixer: null, setTime() {}, acao() {} };
+    if (head) { head.scale.multiplyScalar(0.8); porOlhos(head, { cor: opts.olhos || [4.5, 0.6, 0.6], frente: 0.17, alturaY: 0.02, raio: 0.05, sep: 0.07 }); }
+    return { obj, mixer: null, setTime() {}, acao() {}, head, altura, raio: altura * 0.18 };
   }
 
   if (tipo === 'animal') {
@@ -69,17 +79,17 @@ export async function criatura(tipo = 'alta', opts = {}) {
       atual = mixer.clipAction(clip); atual.reset().play();
     };
     acao(opts.acao || 'Walk');
-    return { obj, mixer, setTime: t => mixer.setTime(Math.max(0, t)), acao };
+    return { obj, mixer, setTime: t => mixer.setTime(Math.max(0, t)), acao, head: null, altura, raio: altura };
   }
 
   // 'alta' ou 'rastejante': manequim com animacao do catalogo
   const esticar = tipo === 'alta' ? (opts.esticar || 3.4) : 1;
   const base = opts.altura || 1.7;
   const { obj } = await instanciar('personagens/Mannequin_Medium', { altura: base, aoChao: true });
-  escurecer(obj, opts.cor || 0x16110c, 1);
+  escurecer(obj, opts.cor || 0x241e18, 1);  // marrom-escuro (nao preto): capta a rim light e nao vira buraco preto
 
   const head = acharOsso(obj, 'head');
-  if (head) porOlhos(head, { cor: opts.olhos || [4, 3.4, 1], frente: 0.19, alturaY: 0.03, raio: 0.055, sep: 0.08 });
+  if (head) { head.scale.multiplyScalar(0.8); porOlhos(head, { cor: opts.olhos || [4.5, 3.6, 1], frente: 0.17, alturaY: 0.03, raio: 0.06, sep: 0.08 }); }
 
   const mixer = new THREE.AnimationMixer(obj);
   const dic = await animacoesManequim();
@@ -92,18 +102,15 @@ export async function criatura(tipo = 'alta', opts = {}) {
   };
   acao(opts.acao || (tipo === 'rastejante' ? 'Crawling' : 'Skeletons_Walking'));
 
+  let altura = base;
   if (tipo === 'alta') {
-    // estica so no eixo Y, depois recoloca os pes no chao (escala muda a box)
-    obj.scale.y *= esticar;
-    // bracos um pouco mais compridos: alonga os ossos de braco se existirem
-    for (const nm of ['upperarm.l', 'upperarm.r', 'lowerarm.l', 'lowerarm.r', 'forearm.l', 'forearm.r']) {
-      const b = acharOsso(obj, nm);
-      if (b) b.scale.y *= 1.25;
-    }
+    obj.scale.y *= esticar;               // estica so na vertical: fica alta e fina
+    alongarBracos(obj, 1.7);              // bracos bem compridos (nomes sem ponto)
     obj.updateMatrixWorld(true);
     const box = new THREE.Box3().setFromObject(obj);
-    obj.position.y -= box.min.y;
+    obj.position.y -= box.min.y;          // pes de volta no chao
+    altura = box.max.y - box.min.y;
   }
 
-  return { obj, mixer, setTime: t => mixer.setTime(Math.max(0, t)), acao };
+  return { obj, mixer, setTime: t => mixer.setTime(Math.max(0, t)), acao, head, altura, raio: altura * 0.18 };
 }

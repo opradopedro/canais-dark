@@ -33,64 +33,66 @@ function desenharRosto(exp) {
   const c = document.createElement('canvas'); c.width = c.height = 256;
   const x = c.getContext('2d');
   x.clearRect(0, 0, 256, 256);
-  const olhoY = 118, ex = 70, dx = 186; // centros dos olhos
-  x.fillStyle = '#141414'; x.strokeStyle = '#141414'; x.lineCap = 'round'; x.lineJoin = 'round';
+  // olhos grandes e BEM pretos, como no Reel. Centros mais juntos, olhos maiores, boca marcada.
+  const olhoY = 122, ex = 84, dx = 172;
+  x.fillStyle = '#000'; x.strokeStyle = '#000'; x.lineCap = 'round'; x.lineJoin = 'round';
 
   const olho = (cx, rx, ry) => { x.beginPath(); x.ellipse(cx, olhoY, rx, ry, 0, 0, 7); x.fill(); };
+  const brilho = (cx) => { x.save(); x.fillStyle = '#fff'; x.beginPath(); x.ellipse(cx + 6, olhoY - 8, 5, 6, 0, 0, 7); x.fill(); x.restore(); };
   const sobr = (cx, dir, alta) => {
-    x.lineWidth = 11; x.beginPath();
-    const y = olhoY - 44 - (alta ? 12 : 0);
-    x.moveTo(cx - 26 * dir, y + (alta ? 6 : 10)); x.lineTo(cx + 26 * dir, y);
+    x.lineWidth = 14; x.beginPath();
+    const y = olhoY - 48 - (alta ? 14 : 0);
+    x.moveTo(cx - 30 * dir, y + (alta ? 6 : 12)); x.lineTo(cx + 30 * dir, y);
     x.stroke();
   };
-  const boca = (fn) => { x.lineWidth = 10; x.beginPath(); fn(); x.stroke(); };
+  const boca = (fn, w = 12) => { x.lineWidth = w; x.beginPath(); fn(); x.stroke(); };
 
   switch (exp) {
     case 'sorriso':
-      olho(ex, 15, 17); olho(dx, 15, 17);
+      olho(ex, 19, 22); olho(dx, 19, 22); brilho(ex); brilho(dx);
       sobr(ex, 1, false); sobr(dx, -1, false);
-      boca(() => x.arc(128, 182, 34, 0.15 * Math.PI, 0.85 * Math.PI));
+      boca(() => x.arc(128, 184, 40, 0.12 * Math.PI, 0.88 * Math.PI));
       break;
     case 'medo':
-      olho(ex, 17, 25); olho(dx, 17, 25);
+      olho(ex, 21, 30); olho(dx, 21, 30); brilho(ex); brilho(dx);
       sobr(ex, 1, true); sobr(dx, -1, true);
-      boca(() => x.ellipse(128, 198, 16, 22, 0, 0, 7)); x.fillStyle = '#141414'; x.fill();
+      x.beginPath(); x.ellipse(128, 202, 18, 26, 0, 0, 7); x.fill();
       break;
     case 'susto':
-      olho(ex, 20, 28); olho(dx, 20, 28);
-      // sobrancelhas bem altas
-      x.lineWidth = 12; x.beginPath(); x.moveTo(ex - 28, olhoY - 60); x.lineTo(ex + 24, olhoY - 66);
-      x.moveTo(dx - 24, olhoY - 66); x.lineTo(dx + 28, olhoY - 60); x.stroke();
-      x.beginPath(); x.ellipse(128, 200, 24, 30, 0, 0, 7); x.fill();
+      olho(ex, 24, 33); olho(dx, 24, 33); brilho(ex); brilho(dx);
+      x.lineWidth = 15; x.beginPath(); x.moveTo(ex - 32, olhoY - 64); x.lineTo(ex + 28, olhoY - 70);
+      x.moveTo(dx - 28, olhoY - 70); x.lineTo(dx + 32, olhoY - 64); x.stroke();
+      x.beginPath(); x.ellipse(128, 206, 28, 36, 0, 0, 7); x.fill();
       break;
     case 'desconfiado':
-      olho(ex, 15, 12); olho(dx, 15, 16);
-      x.lineWidth = 11; x.beginPath(); x.moveTo(ex - 26, olhoY - 40); x.lineTo(ex + 26, olhoY - 30);
-      x.moveTo(dx - 26, olhoY - 46); x.lineTo(dx + 26, olhoY - 46); x.stroke();
-      boca(() => { x.moveTo(104, 190); x.lineTo(150, 186); });
+      olho(ex, 18, 15); olho(dx, 18, 20); brilho(dx);
+      x.lineWidth = 14; x.beginPath(); x.moveTo(ex - 30, olhoY - 44); x.lineTo(ex + 30, olhoY - 32);
+      x.moveTo(dx - 30, olhoY - 50); x.lineTo(dx + 30, olhoY - 50); x.stroke();
+      boca(() => { x.moveTo(100, 192); x.lineTo(152, 186); });
       break;
     case 'triste':
-      olho(ex, 15, 18); olho(dx, 15, 18);
-      x.lineWidth = 11; x.beginPath(); x.moveTo(ex - 24, olhoY - 34); x.lineTo(ex + 26, olhoY - 46);
-      x.moveTo(dx - 26, olhoY - 46); x.lineTo(dx + 24, olhoY - 34); x.stroke();
-      boca(() => x.arc(128, 206, 30, 1.15 * Math.PI, 1.85 * Math.PI));
+      olho(ex, 18, 22); olho(dx, 18, 22); brilho(ex); brilho(dx);
+      x.lineWidth = 14; x.beginPath(); x.moveTo(ex - 28, olhoY - 38); x.lineTo(ex + 30, olhoY - 52);
+      x.moveTo(dx - 30, olhoY - 52); x.lineTo(dx + 28, olhoY - 38); x.stroke();
+      boca(() => x.arc(128, 210, 34, 1.15 * Math.PI, 1.85 * Math.PI));
       break;
     case 'bravo':
-      olho(ex, 15, 14); olho(dx, 15, 14);
-      x.lineWidth = 12; x.beginPath(); x.moveTo(ex - 26, olhoY - 48); x.lineTo(ex + 26, olhoY - 30);
-      x.moveTo(dx - 26, olhoY - 30); x.lineTo(dx + 26, olhoY - 48); x.stroke();
-      boca(() => { x.moveTo(100, 196); x.lineTo(156, 196); });
+      olho(ex, 18, 17); olho(dx, 18, 17);
+      x.lineWidth = 15; x.beginPath(); x.moveTo(ex - 30, olhoY - 52); x.lineTo(ex + 30, olhoY - 32);
+      x.moveTo(dx - 30, olhoY - 32); x.lineTo(dx + 30, olhoY - 52); x.stroke();
+      boca(() => { x.moveTo(96, 200); x.lineTo(160, 200); });
       break;
     case 'olhos_fechados':
-      x.lineWidth = 10; x.beginPath();
-      x.moveTo(ex - 16, olhoY); x.lineTo(ex + 16, olhoY); x.moveTo(dx - 16, olhoY); x.lineTo(dx + 16, olhoY); x.stroke();
-      sobr(ex, 1, false); sobr(dx, -1, false);
-      boca(() => { x.moveTo(110, 188); x.lineTo(146, 188); });
-      break;
-    default: // neutro
-      olho(ex, 15, 18); olho(dx, 15, 18);
+      x.lineWidth = 13; x.beginPath();
+      x.moveTo(ex - 20, olhoY); x.quadraticCurveTo(ex, olhoY + 12, ex + 20, olhoY);
+      x.moveTo(dx - 20, olhoY); x.quadraticCurveTo(dx, olhoY + 12, dx + 20, olhoY); x.stroke();
       sobr(ex, 1, false); sobr(dx, -1, false);
       boca(() => { x.moveTo(108, 190); x.lineTo(148, 190); });
+      break;
+    default: // neutro
+      olho(ex, 18, 22); olho(dx, 18, 22); brilho(ex); brilho(dx);
+      sobr(ex, 1, false); sobr(dx, -1, false);
+      boca(() => { x.moveTo(104, 192); x.lineTo(152, 192); });
   }
   const tex = new THREE.CanvasTexture(c);
   tex.colorSpace = THREE.SRGBColorSpace;
@@ -208,17 +210,21 @@ export async function pessoa(spec = {}) {
   });
 
   const head = acharOsso(obj, 'head');
-  const maoDir = acharOsso(obj, 'hand.r', 'handr', 'hand_r', 'righthand', 'fkhandr');
+  const maoDir = acharOsso(obj, 'handr', 'hand_r', 'righthand');
 
-  // rosto 2D preso na frente da cabeca (a prova mostrou que fica na lateral; aqui testamos +Z e empurramos a frente)
+  // cabeca do manequim ~80% (a cabeca KayKit e grande demais; o Reel tem cabeca grande mas nao tanto)
+  if (head) head.scale.multiplyScalar(0.8);
+
+  // rosto 2D preso na frente da cabeca. Fica de frente (+Z local do osso head no rig KayKit).
   let rostoMesh = null, expAtual = spec.rosto || 'neutro';
   if (head) {
     rostoMesh = new THREE.Mesh(
-      new THREE.PlaneGeometry(0.34, 0.34),
-      new THREE.MeshBasicMaterial({ map: texturaRosto(expAtual), transparent: true, depthWrite: false })
+      new THREE.PlaneGeometry(0.42, 0.42),
+      // depthTest desligado + renderOrder alto: o rosto desenha SEMPRE por cima da esfera da cabeca (nao some dentro)
+      new THREE.MeshBasicMaterial({ map: texturaRosto(expAtual), transparent: true, depthWrite: false, depthTest: false, side: THREE.FrontSide })
     );
-    rostoMesh.position.set(0, 0.02, 0.19); // frente da cabeca (+Z local do osso head no rig KayKit)
-    rostoMesh.renderOrder = 2;
+    rostoMesh.position.set(0, 0.2, 0.28); // frente da cabeca, na altura dos olhos, FORA da esfera
+    rostoMesh.renderOrder = 10;
     head.add(rostoMesh);
     // cabelo e chapeu presos no osso head
     const cab = fazerCabelo(spec.cabelo || 'curto', spec.cabelo_cor);
@@ -232,6 +238,7 @@ export async function pessoa(spec = {}) {
 
   const ator = {
     obj, mixer, spec,
+    head, altura, raio: altura * 0.2,   // metadados p/ a camera (enquadramento) e o raycast
     _head: head, _mao: maoDir, _rosto: rostoMesh,
     acao(nome, { loop = true } = {}) {
       const clip = dic[nome] || dic['Idle_A'];
