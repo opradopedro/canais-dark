@@ -1,0 +1,363 @@
+{
+ "codigo": "YB062",
+ "mundo": "riacho",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "autoral. Fatos: pressão da água cresce ~1 atm a cada 10 m (≈10 t por m² a cada 10 m); Hoover Dam ~200 m de espessura na base e ~14 m no topo https://en.wikipedia.org/wiki/Hoover_Dam ; https://en.wikipedia.org/wiki/Hydrostatic_pressure",
+ "titulo": "Why every dam is fat at the bottom 🌊 #engineering #shorts",
+ "capa": "200 M THICK AT THE BOTTOM",
+ "descripcion": "The Hoover Dam is about 14 meters thick at the top and 200 at the bottom. Water pushes harder the deeper you go, and dams are shaped for exactly that.\n\nWhat should we explain next?\n\n#engineering #dam #physics #water #shorts",
+ "tags": [
+  "engineering",
+  "dam",
+  "water pressure",
+  "hoover dam",
+  "physics",
+  "hydrostatic",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Look at any dam from the side, and it's shaped like a triangle. Thin on top, fat at the bottom.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The Hoover Dam is about fourteen meters thick at the top, and two hundred at the bottom.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's not to save concrete. It's because water pushes harder the deeper you go.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Imagine stacking buckets of water. The bottom one carries the weight of all the water above it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Every ten meters down, the push grows by about ten tons on each square meter.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "At the surface, the water barely leans on the dam.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "At the bottom of a deep lake, it's crushing, every second of every day.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So the base has to be thick, heavy, and wide, to keep the dam from sliding or tipping over.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And that deep water also tries to sneak underneath.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's why dams have a waterproof core, and drains at the toe to let leaks out safely.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Here's the surprise. The size of the lake doesn't matter. Only the depth does.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A narrow pond fifty meters deep pushes on its dam as hard as an ocean fifty meters deep would.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So engineers measure one number before anything else. How deep will the water get?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That one number decides how fat the bottom has to be.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know. What should we explain next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.0,
+    "foco": "crista",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.0,
+    "rotulo": "14 M TOP, 200 M BOTTOM",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.0,
+    "empurra": 1,
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.0,
+    "empurra": 1,
+    "rotulo": "WEIGHT ABOVE",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.0,
+    "empurra": 1,
+    "marcas": [
+     {
+      "t": "10 m: 10 t",
+      "x": -8,
+      "y": 2.2
+     },
+     {
+      "t": "20 m: 20 t",
+      "x": -8,
+      "y": 1.0
+     }
+    ],
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.0,
+    "empurra": 1,
+    "foco": "crista",
+    "rotulo": "TOP: GENTLE",
+    "cor": "green",
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.0,
+    "empurra": 1,
+    "rotulo": "BOTTOM: CRUSHING",
+    "cor": "red",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.0,
+    "empurra": 1,
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.0,
+    "vaza": 1,
+    "rotulo": "SEEPAGE",
+    "cor": "red",
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.0,
+    "vaza": 0.5,
+    "foco": "jusante",
+    "rotulo": "CORE + DRAIN",
+    "cor": "green",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.0,
+    "empurra": 1,
+    "rotulo": "ONLY DEPTH",
+    "cor": "white",
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.0,
+    "empurra": 1,
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": [
+     3.0,
+     4.0
+    ],
+    "empurra": 1,
+    "rotulo": "HOW DEEP?",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 4.0,
+    "empurra": 1,
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "nucleo": 1,
+    "dreno": 1,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "agua": 3.6,
+    "etapa": "c14"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 14,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "triangle",
+  "Hoover",
+  "two hundred",
+  "deeper",
+  "buckets",
+  "ten tons",
+  "crushing",
+  "thick",
+  "sneak",
+  "core",
+  "depth",
+  "How deep"
+ ]
+}

@@ -69,6 +69,6 @@ Estoque antes: 20 (YB033, YB035, YB039-YB056 sem os publicados; 8 Evolução e 1
 | YB059 | Curiosidade | Jacarta afundando e a capital que muda (terreno, poço, solo_cede) | gringa: Indonésia https://en.wikipedia.org/wiki/Jakarta | FEITO |
 | YB060 | Curiosidade | torre de Suurhusen, mais torta que Pisa (terreno, torre, madeira) | gringa: Alemanha https://en.wikipedia.org/wiki/Suurhusen | FEITO |
 | YB061 | Curiosidade | 1985: o terremoto longe que derrubou prédios médios (terreno, treme) | gringa: México https://en.wikipedia.org/wiki/1985_Mexico_City_earthquake | FEITO |
-| YB062 | Curiosidade | por que barragem é mais grossa embaixo (riacho, represa, empurra) | autoral | FALTA |
+| YB062 | Curiosidade | por que barragem é mais grossa embaixo (riacho, represa, empurra) | autoral | FEITO |
 | YB063 | Curiosidade | areia fervendo atrás do dique (riacho, dique, fervura) | autoral https://en.wikipedia.org/wiki/Sand_boil | FALTA |
 | YB064 | Curiosidade | enchente empurra a ponte para fora (riacho, pilar, leva) | autoral | FALTA |
