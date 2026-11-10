@@ -19,3 +19,12 @@ Fontes de onde foram copiados (10/11/2026): github.com/trebeljahr/quaternius-sho
 Sites oficiais: https://quaternius.com e https://kaylousberg.itch.io/character-animations
 
 `catalogo.json` lista cada arquivo com tamanho e nomes das animações.
+
+## Biblioteca e fonte (motor 3D)
+
+| Pasta | O que é | Origem | Licença |
+|---|---|---|---|
+| `../vendor/three/` | Three.js 0.170 (build + addons: GLTFLoader, SkeletonUtils, BufferGeometryUtils, EffectComposer, RenderPass, ShaderPass, MaskPass, UnrealBloomPass, OutputPass, shaders) | three.js (unpkg.com/three@0.170.0) | MIT |
+| `../fontes/Fredoka.ttf` | fonte da legenda (arredondada grossa), variável wght/wdth | Google Fonts (ofl/fredoka) | OFL 1.1 (ver `../fontes/OFL.txt`) |
+
+MIT e OFL permitem uso comercial sem royalty. A cópia local evita qualquer download na hora do render (custo zero).
