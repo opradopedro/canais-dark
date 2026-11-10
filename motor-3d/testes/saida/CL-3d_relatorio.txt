@@ -1,35 +1,35 @@
 FISCAL OK  (CL-3d-exemplo.json)
 quadros: 32 | falhas: 0
 
-t=  0.0s plano=aereo   brilho=112.6 ator= 0.0% OK
-t=  2.5s plano=aereo   brilho=107.7 ator= 0.0% OK
-t=  5.0s plano=aereo   brilho=102.1 ator= 0.0% OK
-t=  7.5s plano=medio   brilho= 80.2 ator=42.2% OK
-t= 10.0s plano=medio   brilho= 84.0 ator=39.2% OK
-t= 12.5s plano=medio   brilho= 77.0 ator=46.5% OK
-t= 15.0s plano=medio   brilho= 83.7 ator=39.4% OK
-t= 17.5s plano=medio   brilho= 84.5 ator=41.8% OK
-t= 20.0s plano=aberto  brilho= 53.2 ator= 0.0% OK
-t= 22.5s plano=aberto  brilho= 52.3 ator= 0.0% OK
-t= 25.0s plano=aberto  brilho= 54.0 ator= 0.0% OK
-t= 27.5s plano=medio   brilho= 77.0 ator=44.5% OK
-t= 30.0s plano=medio   brilho= 80.1 ator=50.1% OK
-t= 32.5s plano=medio   brilho= 96.8 ator=42.2% OK
-t= 35.0s plano=medio   brilho= 96.6 ator=44.7% OK
-t= 37.5s plano=medio   brilho= 96.2 ator=46.0% OK
-t= 40.0s plano=medio   brilho= 91.5 ator=41.4% OK
-t= 42.5s plano=medio   brilho= 91.3 ator=44.2% OK
-t= 45.0s plano=aberto  brilho= 53.4 ator= 0.0% OK
-t= 47.5s plano=aberto  brilho= 53.6 ator= 0.0% OK
-t= 50.0s plano=aereo   brilho=112.2 ator= 0.0% OK
-t= 52.5s plano=aereo   brilho=105.4 ator= 0.0% OK
-t= 55.0s plano=medio   brilho= 72.4 ator=22.7% OK
-t= 57.5s plano=medio   brilho= 78.6 ator=23.3% OK
-t= 60.0s plano=medio   brilho= 73.0 ator=23.8% OK
-t= 62.5s plano=aberto  brilho=124.1 ator= 0.0% OK
-t= 65.0s plano=aberto  brilho=123.6 ator= 0.0% OK
-t= 67.5s plano=close   brilho=110.8 ator=91.3% OK
-t= 70.0s plano=close   brilho=111.1 ator=93.1% OK
-t= 72.5s plano=aereo   brilho=108.7 ator= 0.0% OK
-t= 75.0s plano=aereo   brilho=105.1 ator= 0.0% OK
-t= 77.5s plano=aereo   brilho= 99.4 ator= 0.0% OK
+t=  0.0s plano=aereo   brilho=116.5 alvo= 0.0% obst=   1% OK
+t=  2.5s plano=aereo   brilho=113.9 alvo= 0.0% obst=   1% OK
+t=  5.0s plano=aereo   brilho=112.0 alvo= 0.0% obst=   7% OK
+t=  7.5s plano=medio   brilho=109.7 alvo=16.6% obst=   0% OK
+t= 10.0s plano=medio   brilho=106.7 alvo=17.7% obst=   2% OK
+t= 12.5s plano=medio   brilho=101.7 alvo=16.9% obst=   6% OK
+t= 15.0s plano=medio   brilho=132.7 alvo=15.9% obst=   3% OK
+t= 17.5s plano=medio   brilho=131.4 alvo=16.2% obst=   4% OK
+t= 20.0s plano=aberto  brilho=119.6 alvo= 0.0% obst=   2% OK
+t= 22.5s plano=aberto  brilho=114.9 alvo= 0.0% obst=   3% OK
+t= 25.0s plano=aberto  brilho= 99.2 alvo= 0.0% obst=   3% OK
+t= 27.5s plano=medio   brilho=132.0 alvo=18.1% obst=   0% OK
+t= 30.0s plano=medio   brilho=131.7 alvo=17.8% obst=   0% OK
+t= 32.5s plano=medio   brilho=142.1 alvo=17.5% obst=   0% OK
+t= 35.0s plano=medio   brilho=135.3 alvo=17.5% obst=   0% OK
+t= 37.5s plano=medio   brilho=141.8 alvo=15.4% obst=   0% OK
+t= 40.0s plano=medio   brilho=139.4 alvo=17.1% obst=   0% OK
+t= 42.5s plano=medio   brilho=136.0 alvo=17.3% obst=   2% OK
+t= 45.0s plano=aberto  brilho=123.1 alvo= 0.0% obst=   0% OK
+t= 47.5s plano=aberto  brilho=106.7 alvo= 0.0% obst=   0% OK
+t= 50.0s plano=aereo   brilho=128.0 alvo= 0.0% obst=   1% OK
+t= 52.5s plano=aereo   brilho=122.1 alvo= 0.0% obst=   7% OK
+t= 55.0s plano=medio   brilho=127.7 alvo=23.1% obst=   0% OK
+t= 57.5s plano=medio   brilho=127.6 alvo=25.2% obst=   0% OK
+t= 60.0s plano=medio   brilho=128.0 alvo=23.4% obst=   0% OK
+t= 62.5s plano=aberto  brilho=134.5 alvo= 0.0% obst=   1% OK
+t= 65.0s plano=aberto  brilho=120.6 alvo= 0.0% obst=   6% OK
+t= 67.5s plano=close   brilho=129.2 alvo=31.5% obst=   1% OK
+t= 70.0s plano=close   brilho=127.4 alvo=32.7% obst=   0% OK
+t= 72.5s plano=aereo   brilho=118.3 alvo= 0.0% obst=   1% OK
+t= 75.0s plano=aereo   brilho=118.6 alvo= 0.0% obst=   2% OK
+t= 77.5s plano=aereo   brilho=118.7 alvo= 0.0% obst=   7% OK

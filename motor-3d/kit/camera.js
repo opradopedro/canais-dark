@@ -90,10 +90,10 @@ function montar(plano, alvo, a, fov, orbitDeg = 0) {
       olha.set(base.x, base.y + alturaCorpo * 0.62, base.z);
       break;
     }
-    case 'aberto': { // ator ~25% + cenario; de frente, mais alto e afastado, orbit lateral visivel
-      const d = distParaEnquadrar(alturaCorpo, 0.25, fov) * (1 - dolly * 0.3);
-      pos.copy(centroCorpo).addScaledVector(fr, d).addScaledVector(lado, 1.6 + 1.2 * desliza);
-      pos.y = base.y + alturaCorpo * 0.9 + 0.8;
+    case 'aberto': { // ator ~25% + cenario; dolly e orbit lateral BEM visiveis ao longo do trecho
+      const d = distParaEnquadrar(alturaCorpo, 0.25, fov) * (1 - dolly * 0.6);
+      pos.copy(centroCorpo).addScaledVector(fr, d).addScaledVector(lado, 1.2 + 2.4 * desliza);
+      pos.y = base.y + alturaCorpo * 0.9 + 0.8 + 0.5 * desliza;
       olha.copy(centroCorpo); olha.y = base.y + alturaCorpo * 0.5;
       break;
     }
@@ -120,10 +120,11 @@ function montar(plano, alvo, a, fov, orbitDeg = 0) {
       olha.copy(cab).addScaledVector(fr, 4.0);
       break;
     }
-    case 'aereo': { // de cima mas inclinado p/ o HORIZONTE (ceu claro no fundo), vila/rua preenchendo o quadro
+    case 'aereo': { // de cima mas inclinado p/ o HORIZONTE; orbita visivelmente ao longo do trecho (nunca parada)
       const h = 5.0 + alturaCorpo * 0.7;
-      pos.set(base.x + 3 + a * 1.0, base.y + h, base.z + h * 1.2);
-      olha.set(base.x, base.y + 2.0, base.z - 6); // mira adiante e um pouco pra cima: pega o horizonte iluminado
+      const ang = desliza * 0.5; // gira a posicao em torno do alvo ao longo do trecho
+      pos.set(base.x + Math.sin(ang) * (5 + h * 0.4) + 3, base.y + h, base.z + Math.cos(ang) * (5 + h * 0.4) + h * 0.6);
+      olha.set(base.x, base.y + 2.0, base.z - 6);
       break;
     }
     default: {

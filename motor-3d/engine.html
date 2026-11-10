@@ -138,12 +138,19 @@ async function trocarPara(i) {
     cenarioAtual = await montarCenario(cena.cenario, scene, {});
     cenarioNome = cena.cenario;
     // obstaculos p/ o raycast da camera: filhos de topo do grupo do cenario (arvores, casas, torre...),
-    // menos o piso (plano grande no chao, que nunca bloqueia a cabeca).
+    // obstaculos = so o que pode TAPAR a cabeca (arvores, casas, torre). Exclui o chao e pecas baixas e planas
+    // (calcada, asfalto, caminho, praca, trilho): elas ficam no piso e nunca bloqueiam nem contam como "tronco".
     obstaculos = [];
     if (cenarioAtual.grupo) {
+      const cx = new THREE.Box3();
       for (const ch of cenarioAtual.grupo.children) {
         if (ch === cenarioAtual.piso) continue;
         if (ch.geometry && ch.geometry.type === 'PlaneGeometry') continue;
+        cx.setFromObject(ch);
+        if (cx.isEmpty()) continue;
+        const altY = cx.max.y - cx.min.y, base = cx.min.y;
+        // peça baixa (altura < 0.6 m) e colada no chao (base < 0.4 m): é piso/rua, nao obstaculo
+        if (altY < 0.6 && base < 0.4) continue;
         obstaculos.push(ch);
       }
     }
@@ -243,6 +250,39 @@ function virarParaCamera(alvo, maxGraus) {
   a.obj.rotation.y = baseY + d;
 }
 
+// fracao da tela (0..1) coberta pela caixa de um objeto, projetando os 8 cantos na camera.
+const _cantoV = new THREE.Vector3(); const _boxTmp = new THREE.Box3();
+function coberturaTela(obj) {
+  _boxTmp.setFromObject(obj);
+  if (_boxTmp.isEmpty()) return 0;
+  const mn = _boxTmp.min, mx = _boxTmp.max;
+  let minx = 2, miny = 2, maxx = -2, maxy = -2, algumFrente = false;
+  for (let i = 0; i < 8; i++) {
+    _cantoV.set(i & 1 ? mx.x : mn.x, i & 2 ? mx.y : mn.y, i & 4 ? mx.z : mn.z);
+    _cantoV.project(cam);
+    if (_cantoV.z < 1) algumFrente = true;
+    minx = Math.min(minx, _cantoV.x); maxx = Math.max(maxx, _cantoV.x);
+    miny = Math.min(miny, _cantoV.y); maxy = Math.max(maxy, _cantoV.y);
+  }
+  if (!algumFrente) return 0;
+  const w = Math.min(1, maxx) - Math.max(-1, minx); // NDC -1..1
+  const h = Math.min(1, maxy) - Math.max(-1, miny);
+  if (w <= 0 || h <= 0) return 0;
+  return (w / 2) * (h / 2); // fracao da tela
+}
+// obstaculo cuja caixa esta a menos de `dist` da camera na horizontal (perto demais => domina o quadro)
+function pertoDaCamera(obj, dist) {
+  _boxTmp.setFromObject(obj);
+  if (_boxTmp.isEmpty()) return false;
+  const cx = (_boxTmp.min.x + _boxTmp.max.x) / 2, cz = (_boxTmp.min.z + _boxTmp.max.z) / 2;
+  const dx = cx - cam.position.x, dz = cz - cam.position.z;
+  const d = Math.hypot(dx, dz) - Math.max(_boxTmp.max.x - cx, _boxTmp.max.z - cz) * 0.5;
+  // so conta se estiver na FRENTE da camera (produto escalar com a direcao da camera)
+  const fwd = new THREE.Vector3(); cam.getWorldDirection(fwd);
+  const naFrente = (dx * fwd.x + dz * fwd.z) > 0;
+  return naFrente && d < dist;
+}
+
 // posiciona a rim light atras do alvo em relacao a camera (contraluz): recorta a silhueta do fundo.
 function posicionarRim(alvo) {
   alvo.obj.getWorldPosition(_tmpVec);
@@ -302,7 +342,14 @@ window.render = function (t) {
 
   // TODOS os troncos/casas entre a camera e o alvo SOMEM neste quadro (regra r3: nao basta orbitar)
   const escondidos = (diag && diag.bloqueadores) || [];
+  // alem disso, esconde QUALQUER obstaculo que ocupe > 22% da tela OU esteja muito perto da camera (tronco/copa
+  // gigante de lado), proibido na r3. A proximidade pega os casos em que a caixa cruza o plano da camera.
+  for (const o of obstaculos) {
+    if (!o.visible || escondidos.includes(o)) continue;
+    if (coberturaTela(o) > 0.19 || pertoDaCamera(o, 4.5)) escondidos.push(o);
+  }
   for (const o of escondidos) o.visible = false;
+  window.__escondidosQuadro = escondidos; // o fiscal (obstaculo) respeita estes esconderijos
 
   // dados para o fiscal (conferir_quadros.py): plano, se o alvo e ator, e se segue bloqueado DEPOIS de esconder
   window.__ultimoQuadro = { plano: pa.plano, alvoEhAtor: !!(alvo && alvo.ehAtor), bloqueado: false, cena: ST._iAtual,
@@ -420,6 +467,29 @@ function desenharSilhueta(alvo) {
   for (const [o, m] of trocados) o.material = m;
 }
 window.__silhueta = (on) => { _silhueta = !!on; };
+
+// fiscal (b): maior fracao da tela ocupada por UM objeto de cenario (tronco/casa) que NAO e ator/criatura.
+// Pinta cada obstaculo de uma cor unica, renderiza sem bloom, e mede a maior contagem de uma cor.
+window.__obstaculoCobertura = () => {
+  const trocados = [];
+  scene.traverse(o => { if (o.isMesh && o.material) { trocados.push([o, o.material]); o.material = _matPreto; } });
+  // cada obstaculo de topo ganha uma cor unica; os que o quadro ESCONDEU continuam pretos (nao contam)
+  const escond = window.__escondidosQuadro || [];
+  const cores = [];
+  obstaculos.forEach((ob, i) => {
+    if (escond.includes(ob)) { cores.push(null); return; }
+    const cor = new THREE.Color().setHSL((i * 0.137) % 1, 1, 0.5);
+    cores.push(cor);
+    ob.traverse(o => { if (o.isMesh) o.material = new THREE.MeshBasicMaterial({ color: cor }); });
+  });
+  // esconde ator/criatura para nao contar
+  const alvo = _alvoAtual;
+  const bg = scene.background; scene.background = new THREE.Color(0x000000);
+  R.render(scene, cam);
+  scene.background = bg;
+  for (const [o, m] of trocados) o.material = m;
+  return cores.length; // o calculo da fracao e feito no Python lendo os pixels (cores distintas)
+};
 
 // diagnostico: posicao/alvo da camera e se a cena tem objetos visiveis
 window.__caminfo = () => ({

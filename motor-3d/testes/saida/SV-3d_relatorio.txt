@@ -1,39 +1,39 @@
 FISCAL OK  (SV-3d-exemplo.json)
 quadros: 36 | falhas: 0
 
-t=  0.0s plano=aereo   brilho= 61.3 ator= 0.0% OK
-t=  2.5s plano=aereo   brilho= 63.1 ator= 0.0% OK
-t=  5.0s plano=aereo   brilho= 63.1 ator= 0.0% OK
-t=  7.5s plano=close   brilho= 88.9 ator=93.8% OK
-t= 10.0s plano=close   brilho= 89.3 ator=95.3% OK
-t= 12.5s plano=aberto  brilho= 65.8 ator= 0.0% OK
-t= 15.0s plano=aberto  brilho= 65.0 ator= 0.0% OK
-t= 17.5s plano=baixo   brilho= 64.7 ator= 0.0% OK
-t= 20.0s plano=baixo   brilho= 64.5 ator= 0.0% OK
-t= 22.5s plano=baixo   brilho= 64.5 ator= 0.0% OK
-t= 25.0s plano=medio   brilho= 79.9 ator=50.3% OK
-t= 27.5s plano=medio   brilho= 79.8 ator=52.6% OK
-t= 30.0s plano=medio   brilho= 82.3 ator=42.2% OK
-t= 32.5s plano=medio   brilho= 82.1 ator=45.1% OK
-t= 35.0s plano=medio   brilho= 80.5 ator=47.6% OK
-t= 37.5s plano=nuca    brilho=109.8 ator=74.1% OK
-t= 40.0s plano=nuca    brilho=112.8 ator=76.8% OK
-t= 42.5s plano=close   brilho=104.4 ator=94.0% OK
-t= 45.0s plano=close   brilho=105.6 ator=95.3% OK
-t= 47.5s plano=baixo   brilho= 59.4 ator=12.1% OK
-t= 50.0s plano=baixo   brilho= 61.3 ator=13.1% OK
-t= 52.5s plano=baixo   brilho= 66.7 ator=13.0% OK
-t= 55.0s plano=baixo   brilho= 66.3 ator=12.4% OK
-t= 57.5s plano=medio   brilho=111.0 ator=49.9% OK
-t= 60.0s plano=medio   brilho=115.3 ator=57.7% OK
-t= 62.5s plano=medio   brilho=118.8 ator=49.0% OK
-t= 65.0s plano=aereo   brilho= 69.0 ator= 0.0% OK
-t= 67.5s plano=aereo   brilho= 69.3 ator= 0.0% OK
-t= 70.0s plano=close   brilho= 87.6 ator=93.5% OK
-t= 72.5s plano=close   brilho= 88.0 ator=95.1% OK
-t= 75.0s plano=aberto  brilho= 56.6 ator= 0.0% OK
-t= 77.5s plano=aberto  brilho= 57.5 ator= 0.0% OK
-t= 80.0s plano=aberto  brilho= 58.6 ator= 0.0% OK
-t= 82.5s plano=baixo   brilho= 76.4 ator=37.4% OK
-t= 85.0s plano=baixo   brilho= 75.3 ator=38.8% OK
-t= 87.5s plano=baixo   brilho= 71.7 ator=39.8% OK
+t=  0.0s plano=aereo   brilho= 69.6 alvo= 0.0% obst=   3% OK
+t=  2.5s plano=aereo   brilho= 72.1 alvo= 0.0% obst=   4% OK
+t=  5.0s plano=aereo   brilho= 71.9 alvo= 0.0% obst=   3% OK
+t=  7.5s plano=close   brilho=105.4 alvo=32.8% obst=   4% OK
+t= 10.0s plano=close   brilho=105.4 alvo=34.7% obst=   0% OK
+t= 12.5s plano=aberto  brilho= 90.4 alvo= 0.0% obst=   0% OK
+t= 15.0s plano=aberto  brilho= 66.6 alvo= 0.0% obst=   3% OK
+t= 17.5s plano=baixo   brilho= 83.2 alvo= 0.0% obst=   0% OK
+t= 20.0s plano=baixo   brilho= 79.1 alvo= 0.0% obst=   2% OK
+t= 22.5s plano=baixo   brilho= 79.4 alvo= 0.0% obst=   0% OK
+t= 25.0s plano=medio   brilho= 74.3 alvo=18.4% obst=   0% OK
+t= 27.5s plano=medio   brilho= 72.7 alvo=18.6% obst=   1% OK
+t= 30.0s plano=medio   brilho= 95.8 alvo=15.7% obst=   1% OK
+t= 32.5s plano=medio   brilho= 95.8 alvo=16.9% obst=   0% OK
+t= 35.0s plano=medio   brilho= 82.1 alvo=16.6% obst=   0% OK
+t= 37.5s plano=nuca    brilho= 94.0 alvo=22.6% obst=   0% OK
+t= 40.0s plano=nuca    brilho= 93.7 alvo=23.7% obst=   0% OK
+t= 42.5s plano=close   brilho= 99.5 alvo=32.9% obst=   0% OK
+t= 45.0s plano=close   brilho= 99.0 alvo=35.0% obst=   2% OK
+t= 47.5s plano=baixo   brilho= 95.4 alvo=12.2% obst=   1% OK
+t= 50.0s plano=baixo   brilho= 98.2 alvo=13.1% obst=   1% OK
+t= 52.5s plano=baixo   brilho=104.6 alvo=12.5% obst=   0% OK
+t= 55.0s plano=baixo   brilho=103.2 alvo=12.7% obst=   2% OK
+t= 57.5s plano=medio   brilho=133.5 alvo=17.9% obst=   0% OK
+t= 60.0s plano=medio   brilho=130.2 alvo=19.7% obst=   0% OK
+t= 62.5s plano=medio   brilho=139.3 alvo=16.7% obst=   0% OK
+t= 65.0s plano=aereo   brilho= 74.9 alvo= 0.0% obst=   4% OK
+t= 67.5s plano=aereo   brilho= 65.4 alvo= 0.0% obst=   4% OK
+t= 70.0s plano=close   brilho= 89.8 alvo=32.5% obst=   0% OK
+t= 72.5s plano=close   brilho= 88.6 alvo=34.3% obst=   0% OK
+t= 75.0s plano=aberto  brilho= 84.0 alvo= 0.0% obst=   1% OK
+t= 77.5s plano=aberto  brilho= 79.0 alvo= 0.0% obst=   1% OK
+t= 80.0s plano=aberto  brilho= 72.6 alvo= 0.0% obst=   2% OK
+t= 82.5s plano=baixo   brilho= 96.6 alvo=11.3% obst=   1% OK
+t= 85.0s plano=baixo   brilho= 97.3 alvo=11.9% obst=   2% OK
+t= 87.5s plano=baixo   brilho= 96.0 alvo=12.0% obst=   4% OK

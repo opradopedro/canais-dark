@@ -2,7 +2,10 @@
 """Fiscal automatico dos quadros 3D: renderiza 1 quadro a cada 2,5 s de um roteiro e REPROVA se:
   (a) brilho medio do quadro < 45 (numa escala 0-255) -> cena escura demais;
   (b) o ator-alvo ocupa menos de 3% da tela nos planos close/medio/baixo (mede numa passada de silhueta magenta);
-  (c) algum objeto bloqueia o raycast camera->cabeca do alvo.
+  (c) algum objeto bloqueia o raycast camera->cabeca do alvo;
+  (d) dois quadros seguidos com diferenca media < 2% (camera parada entre cortes);
+  (e) um objeto de cenario (tronco/casa) ocupando > 25% da tela;
+  (f) em plano de criatura (baixo/aberto), a silhueta da criatura ocupa < 8% da tela.
 Escreve um relatorio (stdout + <base>_relatorio.txt) e uma folha de contato <base>_folha.jpg (6x3 quadros).
 
 Uso: python conferir_quadros.py SV-3d-exemplo.json SV-3d-tempos.json [saida/SV-3d]
@@ -22,6 +25,10 @@ PASSO = 2.5          # 1 quadro a cada 2,5 s
 BRILHO_MIN = 45      # media de brilho minima
 AREA_MIN = 0.03      # 3% da tela nos planos close/medio/baixo
 PLANOS_ATOR = {"close", "medio", "baixo"}
+DIF_MIN = 0.02       # (a) 2 quadros seguidos com diferenca media < 2% reprovam (camera parada entre cortes)
+OBST_MAX = 0.25      # (b) 1 objeto de cenario (tronco/casa) ocupando > 25% da tela reprova
+CRIAT_MIN = 0.08     # (c) em plano de criatura, a silhueta da criatura tem que ocupar > 8%
+PLANOS_CRIATURA = {"baixo", "aberto"}
 
 
 class _H(http.server.SimpleHTTPRequestHandler):
@@ -53,6 +60,7 @@ def conferir(historia, tempos, base_saida):
 
     GRAB = "t => { render(t); return document.getElementById('c').toDataURL('image/jpeg',0.9).split(',')[1]; }"
     quadros, linhas, falhas = [], [], []
+    arr_ant = None
     with sync_playwright() as pw:
         b = pw.chromium.launch()
         pg = b.new_page(viewport={"width": 1080, "height": 1920})
@@ -75,10 +83,23 @@ def conferir(historia, tempos, base_saida):
             sil = np.asarray(Image.open(io.BytesIO(base64.b64decode(sil_b64))).convert("RGB"), dtype=np.int16)
             magenta = (sil[:, :, 0] > 150) & (sil[:, :, 1] < 90) & (sil[:, :, 2] > 150)
             area = float(magenta.mean())
+            # 3) passada de obstaculos: cada tronco/casa com cor unica; mede a maior fracao de uma so cor
+            pg.evaluate("() => window.__obstaculoCobertura()")
+            obs_b64 = pg.evaluate("() => window.__cru(0.92)")
+            obs = np.asarray(Image.open(io.BytesIO(base64.b64decode(obs_b64))).convert("RGB"), dtype=np.uint8)
+            nao_preto = obs.max(axis=2) > 40
+            maior_obst = 0.0
+            if nao_preto.any():
+                # quantiza as cores e conta a mais frequente (= maior objeto na tela)
+                q = (obs[nao_preto] // 32).astype(np.int32)
+                chaves = q[:, 0] * 64 + q[:, 1] * 8 + q[:, 2]
+                _, cont = np.unique(chaves, return_counts=True)
+                maior_obst = float(cont.max()) / (obs.shape[0] * obs.shape[1])
 
             plano = (info or {}).get("plano", "?")
             ehator = (info or {}).get("alvoEhAtor", False)
             bloq = (info or {}).get("bloqueado", False)
+            tem_criatura = (info or {}).get("temCriatura", False)
             prob = []
             if brilho < BRILHO_MIN:
                 prob.append(f"escuro({brilho:.0f})")
@@ -86,10 +107,22 @@ def conferir(historia, tempos, base_saida):
                 prob.append(f"ator {area*100:.1f}%<3% [{plano}]")
             if bloq:
                 prob.append("bloqueado")
+            # (b) objeto de cenario grande demais
+            if maior_obst > OBST_MAX:
+                prob.append(f"obstaculo {maior_obst*100:.0f}%>25%")
+            # (c) plano de criatura: a criatura (alvo, nao-ator) tem que ocupar > 8%
+            if tem_criatura and not ehator and plano in PLANOS_CRIATURA and area < CRIAT_MIN:
+                prob.append(f"criatura {area*100:.1f}%<8% [{plano}]")
+            # (a) quadro quase igual ao anterior
+            if arr_ant is not None:
+                dif = float(np.abs(arr - arr_ant).mean()) / 255.0
+                if dif < DIF_MIN:
+                    prob.append(f"parado(dif {dif*100:.1f}%<2%)")
+            arr_ant = arr
             if prob:
                 falhas.append(f"t={t:5.1f}s {plano}: " + ", ".join(prob))
-            linhas.append(f"t={t:5.1f}s plano={plano:7s} brilho={brilho:5.1f} ator={area*100:4.1f}% "
-                          f"{'OK' if not prob else 'FALHA: ' + ', '.join(prob)}")
+            linhas.append(f"t={t:5.1f}s plano={plano:7s} brilho={brilho:5.1f} alvo={area*100:4.1f}% "
+                          f"obst={maior_obst*100:4.0f}% {'OK' if not prob else 'FALHA: ' + ', '.join(prob)}")
             quadros.append(im)
         b.close()
     srv.shutdown()
