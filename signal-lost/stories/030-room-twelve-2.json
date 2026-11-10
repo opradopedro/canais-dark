@@ -1,0 +1,351 @@
+{
+ "formato": "Survivor",
+ "visual": "flat",
+ "paleta": "sv",
+ "serie": "room-twelve",
+ "serie_titulo": "Room Twelve | Signal Lost",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "motel horror",
+  "night shift",
+  "rules horror",
+  "night clerk",
+  "room 12"
+ ],
+ "codigo": "SV030",
+ "parte": 2,
+ "anterior": "SV029",
+ "titulo": "The guest in room 11 found a new door 🚪 Part 2 #horror #shorts",
+ "capa": "A DOOR IN MY WALL",
+ "descripcion": "A woman stood at the motel window holding the key to a room that doesn't exist. Jonah didn't open the door. The end of Room Twelve.\n\nWould you have let her in?\n\nNarrated fiction. New story every week.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "lineas": [
+  {
+   "texto": "The woman at the window was holding the key to room twelve.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "On the key board, hook twelve was empty.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "She tapped the glass with the key. Slow. Patient.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "I didn't open the door. I called room eleven.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A man whispered, there's a door in my wall. It wasn't there before.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "I said, don't open it. I'm calling the police.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then I heard the ice machine outside. Ice falling, over and over.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The woman stayed at my window until 5 AM. Then she was just gone.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The police found room eleven empty, the bed still made.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "His truck was still in the lot, with the keys inside.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The owner came in at seven, and he wasn't surprised.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "In 1979, he said, room twelve burned. A couple was inside.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The husband had gone out for ice. They never found him.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "So they bricked the room up, and painted over the door.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At noon, in bright sunlight, line twelve lit up again.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "It was the man from room eleven. Could you bring some ice?",
+   "pausa": 0.9
+  },
+  {
+   "texto": "I quit that day. The ad for my job is still up.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "chave",
+    "rotulo": "12",
+    "cor": "#c0392b",
+    "brilho": 1
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "chave",
+    "rotulo": "hook 12 · empty"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_motel",
+   "p": {
+    "hud": {
+     "dia": "Night 3",
+     "hora": "3:17",
+     "ampm": "AM",
+     "lugar": "Pine Rest Motel",
+     "sinal": 0
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "tap, tap",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "disco",
+    "quien": "Room 11",
+    "texto": "Calling..."
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "disco",
+    "quien": "Room 11",
+    "texto": "There's a door in my wall."
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#8a5a3a",
+     "cabelo": "#1a1a1a",
+     "cabeloTipo": "curto",
+     "roupa": "#7a2a2a",
+     "detalhe": "#d0d0d0",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "ME",
+     "texto": "Don't open it.",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_motel",
+   "p": {
+    "hud": {
+     "dia": "Night 3",
+     "hora": "3:40",
+     "ampm": "AM",
+     "lugar": "Pine Rest Motel",
+     "sinal": 0
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "f_motel",
+   "p": {
+    "hud": {
+     "dia": "Night 3",
+     "hora": "5:00",
+     "ampm": "AM",
+     "lugar": "Pine Rest Motel",
+     "sinal": 1
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_estrada_nevoa",
+   "p": {
+    "hud": {
+     "dia": "Day 4",
+     "hora": "6:20",
+     "ampm": "AM",
+     "lugar": "Pine Rest Motel",
+     "sinal": 3
+    }
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "chave_carro",
+    "rotulo": "still in the truck"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#d9b08a",
+     "cabelo": "#bdbdbd",
+     "cabeloTipo": "careca",
+     "roupa": "#3a4a5a",
+     "detalhe": "#c9b27a"
+    },
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Mr. Hale",
+     "sub": "the owner",
+     "y": 0.24
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_linha_tempo",
+   "p": {
+    "de": 1970,
+    "ate": 2026,
+    "rotulo": "Pine Rest Motel",
+    "marcos": [
+     {
+      "ano": 1979,
+      "texto": "room 12 burns"
+     },
+     {
+      "ano": 1980,
+      "texto": "bricked up"
+     },
+     {
+      "ano": 2026,
+      "texto": "night 3"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#8a5a3a",
+     "cabelo": "#1a1a1a",
+     "cabeloTipo": "curto",
+     "roupa": "#7a2a2a",
+     "detalhe": "#d0d0d0",
+     "expressao": "medo"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "Bricked up.",
+     "Painted over."
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "disco",
+    "quien": "Line 12",
+    "texto": "12:00 PM"
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "f_telefono",
+   "p": {
+    "tipo": "disco",
+    "quien": "Line 12",
+    "texto": "Could you bring some ice?"
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "NIGHT CLERK WANTED",
+     "Ask for Mr. Hale"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 15,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "room twelve",
+  "empty",
+  "didn't open",
+  "door in my wall",
+  "ice machine",
+  "5 AM",
+  "still in the lot",
+  "1979",
+  "bricked",
+  "line twelve",
+  "some ice",
+  "quit"
+ ],
+ "gancho": {
+  "cena": 15,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
