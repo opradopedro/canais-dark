@@ -1,0 +1,422 @@
+{
+ "formato": "Regla",
+ "visual": "flat",
+ "serie": "piso-trece",
+ "serie_titulo": "El piso trece | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "gringa: EUA, trend \"Floor 74\" / elevator game (TikTok, Halloween 2026) https://amp.knowyourmeme.com/editorials/guides/is-the-f74-trend-real-and-where-did-it-come-from (história nossa, prédio na Cidade do México). Gancho: regla rota",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "elevador",
+  "piso 13",
+  "reglas",
+  "leyenda urbana"
+ ],
+ "codigo": "HM037",
+ "parte": 1,
+ "titulo": "El elevador se detuvo en el piso 13 😨 Parte 1 #terror #shorts",
+ "capa": "MI EDIFICIO NO TIENE PISO 13",
+ "descripcion": "Lupita volvió de su turno a las 3:07. Apretó el siete, y el elevador siguió subiendo hasta un piso que no existe.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú habrías salido?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "lineas": [
+  {
+   "texto": "Mi edificio tiene doce pisos, y anoche el elevador paró en el trece.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Soy Lupita, enfermera del turno de noche.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Vivo en el siete, en un edificio viejo de la colonia Doctores.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "El portero, don Ramiro, me dio tres reglas.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "No uses el elevador después de las tres de la mañana.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Si se detiene solo, no salgas.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Y si alguien entra y no aprieta ningún botón, no lo mires.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Pensé que eran cuentos de viejo.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "En internet, los gringos hacen un reto igual, con un piso que no existe.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Anoche salí tarde del hospital, muerta de cansancio.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Eran las tres y siete, y no quise subir a pie.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Apreté el siete, y las puertas se cerraron.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Cinco, seis, siete, y el elevador no se detuvo.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Diez, once, doce, y siguió subiendo.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "El tablero marcó un número que nunca había visto, trece.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Las puertas se abrieron a un pasillo oscuro igual al mío.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Mismas puertas, pero ni una sola luz.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Recordé la segunda regla, y me pegué al fondo.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Entonces, desde el pasillo, alguien me llamó con la voz de mi mamá.",
+   "pausa": 0.9
+  },
+  {
+   "texto": "¿Salió del elevador? Parte dos, mañana, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "f_elevador",
+   "p": {
+    "andar": [
+     0,
+     1
+    ],
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:09",
+     "ampm": "AM",
+     "lugar": "Edificio Ámbar"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Lupita, 23",
+     "sub": "enfermera de noche",
+     "y": 0.2
+    },
+    "pessoa": {
+     "pele": "#b97a52",
+     "cabelo": "#1a1210",
+     "cabeloTipo": "coque",
+     "roupa": "#3a6a9a",
+     "detalhe": "#e8e8e8",
+     "expressao": "cansada"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "f_vecindad",
+   "p": {
+    "puerta": 1
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "retrato",
+   "p": {
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Don Ramiro, 70",
+     "sub": "el portero",
+     "y": 0.2
+    },
+    "pessoa": {
+     "pele": "#a8714a",
+     "cabelo": "#d8d8d8",
+     "cabeloTipo": "curto",
+     "barba": true,
+     "roupa": "#5a4a3a",
+     "detalhe": "#c9b27a"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "REGLAS DE DON RAMIRO",
+    "itens": [
+     "Nada de elevador después de las 3",
+     "Si se para solo, no salgas",
+     "Si alguien entra sin apretar botón, no lo mires"
+    ],
+    "marcados": 0
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "REGLAS DE DON RAMIRO",
+    "itens": [
+     "Nada de elevador después de las 3",
+     "Si se para solo, no salgas",
+     "Si alguien entra sin apretar botón, no lo mires"
+    ],
+    "marcados": 1
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "f_regras",
+   "p": {
+    "titulo": "REGLAS DE DON RAMIRO",
+    "itens": [
+     "Nada de elevador después de las 3",
+     "Si se para solo, no salgas",
+     "Si alguien entra sin apretar botón, no lo mires"
+    ],
+    "marcados": 2
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#b97a52",
+     "cabelo": "#1a1210",
+     "cabeloTipo": "coque",
+     "roupa": "#3a6a9a",
+     "detalhe": "#e8e8e8",
+     "expressao": "sorriso"
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "f_objeto",
+   "p": {
+    "obj": "celular",
+    "texto": "#elevatorgame",
+    "rotulo": "un reto de internet"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "f_vecindad",
+   "p": {
+    "puerta": 0
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "f_elevador",
+   "p": {
+    "andar": 0,
+    "abre": [
+     0,
+     1
+    ],
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:07",
+     "ampm": "AM",
+     "lugar": "Edificio Ámbar"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "f_elevador",
+   "p": {
+    "andar": [
+     0,
+     0.5
+    ],
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:07",
+     "ampm": "AM",
+     "lugar": "Edificio Ámbar"
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "f_elevador",
+   "p": {
+    "andar": [
+     0.5,
+     0.85
+    ],
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "no se detuvo",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "f_elevador",
+   "p": {
+    "andar": [
+     0.85,
+     1
+    ],
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:08",
+     "ampm": "AM",
+     "lugar": "Edificio Ámbar"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "f_elevador",
+   "p": {
+    "andar": 1,
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "PISO 13",
+     "y": 0.14
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "f_elevador",
+   "p": {
+    "andar": 1,
+    "abre": [
+     0,
+     1
+    ],
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:09",
+     "ampm": "AM",
+     "lugar": "Edificio Ámbar"
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "f_vecindad",
+   "p": {
+    "puerta": 1,
+    "hud": {
+     "dia": "Noche 1",
+     "hora": "3:09",
+     "ampm": "AM",
+     "lugar": "Piso 13"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "comp": "retrato",
+   "p": {
+    "pessoa": {
+     "pele": "#b97a52",
+     "cabelo": "#1a1210",
+     "cabeloTipo": "coque",
+     "roupa": "#3a6a9a",
+     "detalhe": "#e8e8e8",
+     "expressao": "medo"
+    },
+    "cartao": {
+     "tipo": "rotulo",
+     "titulo": "no salgas",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 18,
+   "comp": "f_vecindad",
+   "p": {
+    "puerta": 1,
+    "cartao": {
+     "tipo": "msg",
+     "titulo": "DESDE EL PASILLO",
+     "texto": "Lupita, mija, sal tantito.",
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "linea": 19,
+   "comp": "texto",
+   "p": {
+    "hud": false,
+    "lineas": [
+     "¿Salió?",
+     "Parte 2 · mañana, {fecha_siguiente}"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 14,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 18,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "destaque": [
+  "trece",
+  "Lupita",
+  "tres reglas",
+  "no salgas",
+  "no lo mires",
+  "tres y siete",
+  "siguió subiendo",
+  "pasillo oscuro",
+  "voz de mi mamá"
+ ],
+ "gancho": {
+  "cena": 18,
+  "evento": "susto",
+  "mas": 0.3,
+  "dur": 0.8
+ }
+}
