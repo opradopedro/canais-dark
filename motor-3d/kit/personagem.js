@@ -1,18 +1,134 @@
-// kit/personagem.js — pessoas e o que elas seguram, a partir do Mannequin_Medium.glb + animacoes KayKit.
+// kit/personagem.js — personagem LISO (estilo do Reel) montado em peças presas aos ossos do Mannequin_Medium.
 //
-// pessoa({id, altura, pele, camisa, calca, cabelo, chapeu}) devolve um ator com:
-//   .obj        Object3D para por na cena (pes no y=0)
-//   .mixer      AnimationMixer (determinista: use ator.pose(nome, t) ou mixer.setTime)
-//   .acao(nome) toca uma animacao do catalogo (Idle_A, Walking_A, Crawling, Waving...)
-//   .rosto(exp) troca a expressao 2D (neutro, sorriso, medo, susto, desconfiado, triste, bravo, olhos_fechados)
-//   .segurar(objeto)  poe lanterna/tocha/radio/celular na mao direita (hand.r)
-//   .setTime(t) avanca a animacao para o segundo t (DETERMINISTICO)
+// As malhas do manequim KayKit ficam ESCONDIDAS; só o esqueleto (ossos + mixer) é usado. O corpo é feito de
+// peças lisas (esferas, cápsulas, caixas arredondadas) presas a cada osso, então a animação KayKit anima o corpo.
 //
-// Tudo deterministico: nenhum requestAnimationFrame, nenhum Date.now, nenhum Math.random sem semente.
+// pessoa(spec) -> ator { obj, mixer, head, _rosto, altura, raio, acao, rosto, segurar, setTime }
+//   spec: { altura, semente, corpo, pele, cabelo, cabelo_cor, camisa, calca, roupa, chapeu, acessorio, rosto, rostoEstilo, acao }
+//   Qualquer campo omitido é sorteado por `semente` (variedade). "semente" só => tudo sai dela.
+//
+// Tudo determinístico: nenhum relógio, nenhum Math.random sem semente.
 import * as THREE from 'three';
 import { instanciar, animacoesManequim } from './modelos.js';
 
-// acha um osso tolerando as variacoes de nome do rig (head, hand.r, hand_r, handr, mixamorig:Head...)
+// ---------------- RNG com semente ----------------
+function rng(sem) {
+  let a = (sem | 0) >>> 0 || 1;
+  return () => { a = (a * 1664525 + 1013904223) >>> 0; return a / 4294967296; };
+}
+const escolher = (r, lista) => lista[Math.floor(r() * lista.length)];
+
+// ---------------- bibliotecas de variedade ----------------
+export const PELES = ['#f2d6be', '#e8c0a0', '#d9a77f', '#c98d5f', '#a8703f', '#8a5a34', '#6b4426', '#f6e0c8'];
+export const CABELO_CORES = ['#1a120a', '#3a2a18', '#5a3a1e', '#7a5230', '#2a2a2a', '#b8b8b8', '#d9c48a', '#8a2a1a', '#e8e8e8', '#4a2e5a'];
+export const CABELOS = ['curto', 'longo', 'careca', 'coque', 'cacheado', 'rabo', 'trança', 'moicano'];
+export const CORPOS = ['magro', 'medio', 'forte', 'gordo', 'idoso', 'crianca'];
+export const CAMISA_CORES = ['#cfd2d6', '#3f5a3a', '#6a2b22', '#2e3a6a', '#7a5a34', '#4a4a4a', '#b0c4de', '#8a6a9a', '#d8b43a', '#2a6a5a'];
+export const CALCA_CORES = ['#2a3550', '#3a2f24', '#1a1a20', '#4a4030', '#30302a', '#5a3a2a'];
+export const ROUPAS = ['camiseta', 'camisa', 'moletom', 'jaqueta', 'vestido', 'saia', 'enfermeira', 'policial',
+  'guarda', 'medieval', 'tunica', 'chines', 'soldado'];
+export const ACESSORIOS = ['', '', '', 'oculos', 'bone', 'chapeu_palha', 'gorro', 'mochila', 'avental'];
+export const ROSTO_ESTILOS = ['oval', 'redondo', 'traco'];
+
+// resolve o spec final a partir da semente (preenche o que faltar)
+function resolverSpec(spec = {}) {
+  const r = rng(spec.semente ?? 12345);
+  const corpo = spec.corpo || escolher(r, CORPOS);
+  const crianca = corpo === 'crianca';
+  return {
+    semente: spec.semente ?? 12345,
+    corpo,
+    altura: spec.altura || (crianca ? 1.2 : 1.62 + r() * 0.2),
+    pele: spec.pele || escolher(r, PELES),
+    cabelo: spec.cabelo || escolher(r, CABELOS),
+    cabelo_cor: spec.cabelo_cor || escolher(r, CABELO_CORES),
+    camisa: spec.camisa || escolher(r, CAMISA_CORES),
+    calca: spec.calca || escolher(r, CALCA_CORES),
+    roupa: spec.roupa || escolher(r, ROUPAS),
+    chapeu: spec.chapeu || null,
+    acessorio: spec.acessorio ?? escolher(r, ACESSORIOS),
+    rostoEstilo: spec.rostoEstilo || escolher(r, ROSTO_ESTILOS),
+    rosto: spec.rosto || 'neutro',
+    sardas: spec.sardas ?? (r() < 0.25),
+    rugas: spec.rugas ?? (corpo === 'idoso'),
+    barba: spec.barba ?? (!crianca && r() < 0.3),
+    acao: spec.acao,
+    mangaCurta: spec.mangaCurta ?? (r() < 0.5),
+  };
+}
+
+// ---------------- rosto 2D (CanvasTexture), 3 estilos + 8 expressões ----------------
+const EXPRESSOES = ['neutro', 'sorriso', 'medo', 'susto', 'desconfiado', 'triste', 'bravo', 'olhos_fechados'];
+
+function desenharRosto(estilo, exp, extra = {}) {
+  const c = document.createElement('canvas'); c.width = c.height = 256;
+  const x = c.getContext('2d'); x.clearRect(0, 0, 256, 256);
+  const olhoY = 118, ex = 86, dx = 170; // olhos no MEIO da bola, bem separados
+  x.lineCap = 'round'; x.lineJoin = 'round'; x.fillStyle = '#000'; x.strokeStyle = '#000';
+
+  // --- olhos conforme o estilo ---
+  const brilho = (cx, cy) => { x.save(); x.fillStyle = '#e8e8e8'; x.beginPath(); x.ellipse(cx + 5, cy - 6, 3.5, 4, 0, 0, 7); x.fill(); x.restore(); };
+  function olhos(rx, ry, fechado) {
+    if (fechado) {
+      x.lineWidth = 12; x.beginPath();
+      x.moveTo(ex - 20, olhoY); x.quadraticCurveTo(ex, olhoY + 11, ex + 20, olhoY);
+      x.moveTo(dx - 20, olhoY); x.quadraticCurveTo(dx, olhoY + 11, dx + 20, olhoY); x.stroke();
+      return;
+    }
+    if (estilo === 'traco') { // olho em traço (minimalista)
+      x.lineWidth = 14; x.beginPath();
+      x.moveTo(ex - 18, olhoY); x.lineTo(ex + 18, olhoY);
+      x.moveTo(dx - 18, olhoY); x.lineTo(dx + 18, olhoY); x.stroke();
+    } else if (estilo === 'redondo') { // olho redondo com pupila (branco quebrado p/ nao estourar no bloom)
+      for (const cx of [ex, dx]) {
+        x.fillStyle = '#dcdcdc'; x.beginPath(); x.arc(cx, olhoY, rx, 0, 7); x.fill();
+        x.lineWidth = 4; x.strokeStyle = '#000'; x.stroke();
+        x.fillStyle = '#000'; x.beginPath(); x.arc(cx + 3, olhoY, rx * 0.55, 0, 7); x.fill();
+      }
+    } else { // oval do Reel (grande, preto)
+      x.fillStyle = '#000';
+      x.beginPath(); x.ellipse(ex, olhoY, rx, ry, 0, 0, 7); x.fill();
+      x.beginPath(); x.ellipse(dx, olhoY, rx, ry, 0, 0, 7); x.fill();
+      brilho(ex, olhoY - ry * 0.3); brilho(dx, olhoY - ry * 0.3);
+    }
+  }
+  const sobr = (alta, brava) => {
+    x.lineWidth = 14; x.strokeStyle = '#000';
+    const y = olhoY - 46 - (alta ? 14 : 0);
+    x.beginPath();
+    if (brava) { x.moveTo(ex - 30, y - 8); x.lineTo(ex + 30, y + 10); x.moveTo(dx - 30, y + 10); x.lineTo(dx + 30, y - 8); }
+    else { x.moveTo(ex - 30, y + (alta ? 4 : 10)); x.lineTo(ex + 30, y); x.moveTo(dx - 30, y); x.lineTo(dx + 30, y + (alta ? 4 : 10)); }
+    x.stroke();
+  };
+  const boca = (fn, w = 12) => { x.lineWidth = w; x.strokeStyle = '#000'; x.beginPath(); fn(); x.stroke(); };
+  const bocaO = (ry) => { x.fillStyle = '#000'; x.beginPath(); x.ellipse(128, 198, 16, ry, 0, 0, 7); x.fill(); };
+
+  // rugas/sardas opcionais
+  if (extra.rugas) { x.strokeStyle = 'rgba(0,0,0,0.25)'; x.lineWidth = 3; for (const yy of [olhoY + 28, olhoY + 40]) { x.beginPath(); x.moveTo(60, yy); x.quadraticCurveTo(128, yy + 8, 196, yy); x.stroke(); } }
+  if (extra.sardas) { x.fillStyle = 'rgba(120,70,40,0.45)'; for (const [sx, sy] of [[96, 150], [110, 158], [146, 158], [160, 150]]) { x.beginPath(); x.arc(sx, sy, 3.2, 0, 7); x.fill(); } }
+
+  const rx = estilo === 'redondo' ? 20 : 22, ry = 26;
+  switch (exp) {
+    case 'sorriso': olhos(rx, ry * 0.85); sobr(false, false); boca(() => x.arc(128, 182, 38, 0.12 * Math.PI, 0.88 * Math.PI)); break;
+    case 'medo': olhos(rx + 2, ry + 4); sobr(true, false); bocaO(24); break;
+    case 'susto': olhos(rx + 5, ry + 8); sobr(true, false); bocaO(32); break;
+    case 'desconfiado': olhos(rx - 4, ry * 0.6); sobr(false, false); boca(() => { x.moveTo(104, 192); x.lineTo(152, 186); }); break;
+    case 'triste': olhos(rx, ry); sobr(true, false); boca(() => x.arc(128, 210, 32, 1.15 * Math.PI, 1.85 * Math.PI)); break;
+    case 'bravo': olhos(rx - 2, ry * 0.8); sobr(false, true); boca(() => { x.moveTo(98, 200); x.lineTo(158, 200); }); break;
+    case 'olhos_fechados': olhos(rx, ry, true); sobr(false, false); boca(() => { x.moveTo(108, 190); x.lineTo(148, 190); }); break;
+    default: olhos(rx, ry); sobr(false, false); boca(() => { x.moveTo(104, 192); x.lineTo(152, 192); });
+  }
+  const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace; return tex;
+}
+
+const _rostoCache = {};
+function texturaRosto(estilo, exp, extra) {
+  const chave = `${estilo}|${exp}|${extra.rugas ? 1 : 0}${extra.sardas ? 1 : 0}`;
+  if (!_rostoCache[chave]) _rostoCache[chave] = desenharRosto(estilo, EXPRESSOES.includes(exp) ? exp : 'neutro', extra);
+  return _rostoCache[chave];
+}
+
+// ---------------- helpers de osso ----------------
 function acharOsso(raiz, ...nomes) {
   let achado = null;
   const alvo = nomes.map(n => n.toLowerCase().replace(/[._:]/g, ''));
@@ -24,251 +140,236 @@ function acharOsso(raiz, ...nomes) {
   return achado;
 }
 
-// ---------------- rosto 2D (CanvasTexture) ----------------
-// desenha olhos/sobrancelha/boca num canvas e devolve a textura. Estilo do reel: olhos ovais pretos grandes,
-// sobrancelhas grossas, boca que muda com a emocao. Fundo transparente (so o rosto).
-const EXPRESSOES = ['neutro', 'sorriso', 'medo', 'susto', 'desconfiado', 'triste', 'bravo', 'olhos_fechados'];
-
-function desenharRosto(exp) {
-  const c = document.createElement('canvas'); c.width = c.height = 256;
-  const x = c.getContext('2d');
-  x.clearRect(0, 0, 256, 256);
-  // olhos grandes e BEM pretos, como no Reel. Centros mais juntos, olhos maiores, boca marcada.
-  const olhoY = 122, ex = 84, dx = 172;
-  x.fillStyle = '#000'; x.strokeStyle = '#000'; x.lineCap = 'round'; x.lineJoin = 'round';
-
-  const olho = (cx, rx, ry) => { x.beginPath(); x.ellipse(cx, olhoY, rx, ry, 0, 0, 7); x.fill(); };
-  const brilho = (cx) => { x.save(); x.fillStyle = '#fff'; x.beginPath(); x.ellipse(cx + 6, olhoY - 8, 5, 6, 0, 0, 7); x.fill(); x.restore(); };
-  const sobr = (cx, dir, alta) => {
-    x.lineWidth = 14; x.beginPath();
-    const y = olhoY - 48 - (alta ? 14 : 0);
-    x.moveTo(cx - 30 * dir, y + (alta ? 6 : 12)); x.lineTo(cx + 30 * dir, y);
-    x.stroke();
-  };
-  const boca = (fn, w = 12) => { x.lineWidth = w; x.beginPath(); fn(); x.stroke(); };
-
-  switch (exp) {
-    case 'sorriso':
-      olho(ex, 19, 22); olho(dx, 19, 22); brilho(ex); brilho(dx);
-      sobr(ex, 1, false); sobr(dx, -1, false);
-      boca(() => x.arc(128, 184, 40, 0.12 * Math.PI, 0.88 * Math.PI));
-      break;
-    case 'medo':
-      olho(ex, 21, 30); olho(dx, 21, 30); brilho(ex); brilho(dx);
-      sobr(ex, 1, true); sobr(dx, -1, true);
-      x.beginPath(); x.ellipse(128, 202, 18, 26, 0, 0, 7); x.fill();
-      break;
-    case 'susto':
-      olho(ex, 24, 33); olho(dx, 24, 33); brilho(ex); brilho(dx);
-      x.lineWidth = 15; x.beginPath(); x.moveTo(ex - 32, olhoY - 64); x.lineTo(ex + 28, olhoY - 70);
-      x.moveTo(dx - 28, olhoY - 70); x.lineTo(dx + 32, olhoY - 64); x.stroke();
-      x.beginPath(); x.ellipse(128, 206, 28, 36, 0, 0, 7); x.fill();
-      break;
-    case 'desconfiado':
-      olho(ex, 18, 15); olho(dx, 18, 20); brilho(dx);
-      x.lineWidth = 14; x.beginPath(); x.moveTo(ex - 30, olhoY - 44); x.lineTo(ex + 30, olhoY - 32);
-      x.moveTo(dx - 30, olhoY - 50); x.lineTo(dx + 30, olhoY - 50); x.stroke();
-      boca(() => { x.moveTo(100, 192); x.lineTo(152, 186); });
-      break;
-    case 'triste':
-      olho(ex, 18, 22); olho(dx, 18, 22); brilho(ex); brilho(dx);
-      x.lineWidth = 14; x.beginPath(); x.moveTo(ex - 28, olhoY - 38); x.lineTo(ex + 30, olhoY - 52);
-      x.moveTo(dx - 30, olhoY - 52); x.lineTo(dx + 28, olhoY - 38); x.stroke();
-      boca(() => x.arc(128, 210, 34, 1.15 * Math.PI, 1.85 * Math.PI));
-      break;
-    case 'bravo':
-      olho(ex, 18, 17); olho(dx, 18, 17);
-      x.lineWidth = 15; x.beginPath(); x.moveTo(ex - 30, olhoY - 52); x.lineTo(ex + 30, olhoY - 32);
-      x.moveTo(dx - 30, olhoY - 32); x.lineTo(dx + 30, olhoY - 52); x.stroke();
-      boca(() => { x.moveTo(96, 200); x.lineTo(160, 200); });
-      break;
-    case 'olhos_fechados':
-      x.lineWidth = 13; x.beginPath();
-      x.moveTo(ex - 20, olhoY); x.quadraticCurveTo(ex, olhoY + 12, ex + 20, olhoY);
-      x.moveTo(dx - 20, olhoY); x.quadraticCurveTo(dx, olhoY + 12, dx + 20, olhoY); x.stroke();
-      sobr(ex, 1, false); sobr(dx, -1, false);
-      boca(() => { x.moveTo(108, 190); x.lineTo(148, 190); });
-      break;
-    default: // neutro
-      olho(ex, 18, 22); olho(dx, 18, 22); brilho(ex); brilho(dx);
-      sobr(ex, 1, false); sobr(dx, -1, false);
-      boca(() => { x.moveTo(104, 192); x.lineTo(152, 192); });
-  }
-  const tex = new THREE.CanvasTexture(c);
-  tex.colorSpace = THREE.SRGBColorSpace;
-  return tex;
+// cápsula presa a um osso, orientada na DIREÇÃO REAL do osso filho (robusto a qualquer eixo do rig),
+// cobrindo do início do osso até o filho. A cápsula padrão tem eixo Y; alinhamos Y com a direção ao filho.
+const _eixoY = new THREE.Vector3(0, 1, 0);
+function capsulaOsso(osso, filho, mat, { r = 0.07, folga = 0.0 } = {}) {
+  if (!osso) return null;
+  const dir = filho ? filho.position.clone() : new THREE.Vector3(0, -0.3, 0);
+  let L = dir.length() || 0.3; L += folga;
+  dir.normalize();
+  const g = new THREE.CapsuleGeometry(r, Math.max(0.02, L - r * 2), 6, 12);
+  const m = new THREE.Mesh(g, mat);
+  m.quaternion.setFromUnitVectors(_eixoY, dir); // deita a cápsula na direção do filho
+  m.position.copy(dir).multiplyScalar(L / 2);    // centro da cápsula no meio do osso
+  m.castShadow = true;
+  osso.add(m);
+  return m;
 }
 
-// cache das texturas de rosto (uma por expressao): deterministico e barato
-const _rostos = {};
-function texturaRosto(exp) {
-  if (!_rostos[exp]) _rostos[exp] = desenharRosto(EXPRESSOES.includes(exp) ? exp : 'neutro');
-  return _rostos[exp];
-}
-
-// ---------------- cabelo e chapeu em primitivas ----------------
-function fazerCabelo(tipo, cor) {
+// ---------------- cabelo e chapéu (primitivas) ----------------
+function fazerCabelo(tipo, cor, raioCabeca = 0.16) {
   const g = new THREE.Group();
   const mat = new THREE.MeshStandardMaterial({ color: cor || 0x3a2a1a, roughness: 0.9 });
+  const R = raioCabeca;
   if (tipo === 'careca') return g;
-  if (tipo === 'curto') {
-    const calota = new THREE.Mesh(new THREE.SphereGeometry(0.19, 20, 14, 0, Math.PI * 2, 0, Math.PI * 0.55), mat);
-    calota.position.y = 0.02; g.add(calota);
-  } else if (tipo === 'longo') {
-    const calota = new THREE.Mesh(new THREE.SphereGeometry(0.2, 20, 16, 0, Math.PI * 2, 0, Math.PI * 0.75), mat);
+  if (tipo === 'curto' || tipo === 'moicano') {
+    const calota = new THREE.Mesh(new THREE.SphereGeometry(R * 1.04, 20, 14, 0, 6.3, 0, Math.PI * 0.55), mat);
+    calota.position.y = R * 0.1; g.add(calota);
+    if (tipo === 'moicano') { const crista = new THREE.Mesh(new THREE.BoxGeometry(R * 0.3, R * 0.5, R * 1.6), mat); crista.position.y = R * 0.6; g.add(crista); }
+  } else if (tipo === 'longo' || tipo === 'trança' || tipo === 'rabo') {
+    const calota = new THREE.Mesh(new THREE.SphereGeometry(R * 1.05, 20, 16, 0, 6.3, 0, Math.PI * 0.8), mat);
     g.add(calota);
-    const costas = new THREE.Mesh(new THREE.BoxGeometry(0.3, 0.34, 0.14), mat);
-    costas.position.set(0, -0.16, -0.12); g.add(costas);
+    const costas = new THREE.Mesh(new THREE.CapsuleGeometry(R * 0.5, R * (tipo === 'longo' ? 1.6 : 1.1), 6, 10), mat);
+    costas.position.set(0, -R * 1.0, -R * 0.7); g.add(costas);
   } else if (tipo === 'coque') {
-    const calota = new THREE.Mesh(new THREE.SphereGeometry(0.19, 20, 14, 0, Math.PI * 2, 0, Math.PI * 0.6), mat);
-    g.add(calota);
-    const coque = new THREE.Mesh(new THREE.SphereGeometry(0.1, 16, 12), mat);
-    coque.position.set(0, 0.18, -0.08); g.add(coque);
+    const calota = new THREE.Mesh(new THREE.SphereGeometry(R * 1.04, 20, 14, 0, 6.3, 0, Math.PI * 0.6), mat); g.add(calota);
+    const coque = new THREE.Mesh(new THREE.SphereGeometry(R * 0.55, 14, 12), mat); coque.position.set(0, R * 1.0, -R * 0.4); g.add(coque);
+  } else if (tipo === 'cacheado') {
+    for (let i = 0; i < 10; i++) { const a = i / 10 * 6.28; const b = new THREE.Mesh(new THREE.SphereGeometry(R * 0.5, 10, 8), mat); b.position.set(Math.cos(a) * R * 0.8, R * 0.5 + (i % 3) * R * 0.1, Math.sin(a) * R * 0.8); g.add(b); }
   }
   return g;
 }
 
-function fazerChapeu(tipo) {
-  const g = new THREE.Group();
+function fazerChapeu(tipo, raioCabeca = 0.16) {
+  const g = new THREE.Group(); const R = raioCabeca;
   const marrom = new THREE.MeshStandardMaterial({ color: 0x5a4330, roughness: 0.9 });
-  if (tipo === 'chapeu' || tipo === 'chapeu_aba') {
-    const aba = new THREE.Mesh(new THREE.CylinderGeometry(0.32, 0.32, 0.03, 24), marrom);
-    aba.position.y = 0.12; g.add(aba);
-    const copa = new THREE.Mesh(new THREE.CylinderGeometry(0.18, 0.2, 0.2, 20), marrom);
-    copa.position.y = 0.22; g.add(copa);
+  if (tipo === 'chapeu' || tipo === 'chapeu_aba' || tipo === 'chapeu_palha') {
+    const cor = tipo === 'chapeu_palha' ? 0xd8b25a : 0x5a4330;
+    const m = new THREE.MeshStandardMaterial({ color: cor, roughness: 0.95 });
+    const aba = new THREE.Mesh(new THREE.CylinderGeometry(R * 2.0, R * 2.0, R * 0.18, 24), m); aba.position.y = R * 0.7; g.add(aba);
+    const copa = new THREE.Mesh(new THREE.CylinderGeometry(R * 1.1, R * 1.25, R * 1.2, 20), m); copa.position.y = R * 1.4; g.add(copa);
+  } else if (tipo === 'bone') {
+    const copa = new THREE.Mesh(new THREE.SphereGeometry(R * 1.1, 18, 12, 0, 6.3, 0, Math.PI * 0.5), new THREE.MeshStandardMaterial({ color: 0x2e4a6a, roughness: 0.9 })); copa.position.y = R * 0.5; g.add(copa);
+    const aba = new THREE.Mesh(new THREE.BoxGeometry(R * 1.6, R * 0.1, R * 1.1), copa.material); aba.position.set(0, R * 0.45, R * 1.1); g.add(aba);
   } else if (tipo === 'gorro') {
-    const gorro = new THREE.Mesh(new THREE.SphereGeometry(0.21, 20, 14, 0, Math.PI * 2, 0, Math.PI * 0.6),
-      new THREE.MeshStandardMaterial({ color: 0x7a2b22, roughness: 1 }));
-    gorro.position.y = 0.04; g.add(gorro);
+    const gorro = new THREE.Mesh(new THREE.SphereGeometry(R * 1.12, 20, 14, 0, 6.3, 0, Math.PI * 0.62), new THREE.MeshStandardMaterial({ color: 0x7a2b22, roughness: 1 })); gorro.position.y = R * 0.2; g.add(gorro);
   } else if (tipo === 'capuz') {
-    const capuz = new THREE.Mesh(new THREE.SphereGeometry(0.26, 18, 14, 0, Math.PI * 2, 0, Math.PI * 0.7),
-      new THREE.MeshStandardMaterial({ color: 0x2c2620, roughness: 1 }));
-    capuz.position.set(0, 0, -0.03); g.add(capuz);
+    const capuz = new THREE.Mesh(new THREE.SphereGeometry(R * 1.5, 18, 14, 0, 6.3, 0, Math.PI * 0.72), new THREE.MeshStandardMaterial({ color: 0x2c2620, roughness: 1 })); capuz.position.set(0, 0, -R * 0.2); g.add(capuz);
   }
   return g;
 }
 
-// ---------------- objeto na mao (hand.r) ----------------
-// devolve { obj, luz } ; a luz (SpotLight da lanterna) e adicionada pelo chamador a cena se existir.
+// óculos/mochila/avental presos onde fizer sentido
+function porAcessorio(tipo, head, chest, raioCabeca = 0.16) {
+  const R = raioCabeca;
+  if (tipo === 'oculos' && head) {
+    const m = new THREE.MeshStandardMaterial({ color: 0x1a1a1a, roughness: 0.4 });
+    for (const dx of [-R * 0.5, R * 0.5]) { const o = new THREE.Mesh(new THREE.TorusGeometry(R * 0.33, R * 0.06, 8, 16), m); o.position.set(dx, 0.0, R * 1.02); head.add(o); }
+  } else if (tipo === 'mochila' && chest) {
+    const m = new THREE.Mesh(new THREE.BoxGeometry(0.26, 0.34, 0.16), new THREE.MeshStandardMaterial({ color: 0x3a5a3a, roughness: 0.9 }));
+    m.position.set(0, 0.0, -0.18); chest.add(m);
+  } else if (tipo === 'avental' && chest) {
+    const m = new THREE.Mesh(new THREE.BoxGeometry(0.3, 0.42, 0.06), new THREE.MeshStandardMaterial({ color: 0x8a6a4a, roughness: 1 }));
+    m.position.set(0, -0.05, 0.16); chest.add(m);
+  } else if ((tipo === 'bone' || tipo === 'chapeu_palha' || tipo === 'gorro') && head) {
+    head.add(fazerChapeu(tipo, R));
+  }
+}
+
+// ---------------- objeto na mão (hand.r) ----------------
 function fazerObjeto(nome) {
-  const g = new THREE.Group();
-  let luz = null;
+  const g = new THREE.Group(); let luz = null;
   const metal = new THREE.MeshStandardMaterial({ color: 0x2a2a2e, roughness: 0.5, metalness: 0.2 });
   if (nome === 'lanterna') {
-    const corpo = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.035, 0.16, 12), metal);
-    corpo.rotation.z = Math.PI / 2; g.add(corpo);
-    const lente = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.035, 0.04, 16),
-      new THREE.MeshStandardMaterial({ color: 0xfff3c0, emissive: 0xffe08a, emissiveIntensity: 2 }));
-    lente.rotation.z = Math.PI / 2; lente.position.x = 0.1; g.add(lente);
-    luz = new THREE.SpotLight(0xffd79a, 40, 22, 0.55, 0.5, 1.4);
-    luz.position.set(0.12, 0, 0);
-    luz.target.position.set(3, -0.2, 0);
-    g.add(luz, luz.target);
-    luz.castShadow = true; luz.shadow.mapSize.set(1024, 1024);
+    const corpo = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.035, 0.16, 12), metal); corpo.rotation.z = Math.PI / 2; g.add(corpo);
+    const lente = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.035, 0.04, 16), new THREE.MeshStandardMaterial({ color: 0xfff3c0, emissive: 0xffe8a0, emissiveIntensity: 2.4 })); lente.rotation.z = Math.PI / 2; lente.position.x = 0.1; g.add(lente);
+    luz = new THREE.SpotLight(0xffe2b0, 55, 24, 0.6, 0.5, 1.4); luz.position.set(0.12, 0, 0); luz.target.position.set(3, -0.2, 0); g.add(luz, luz.target); luz.castShadow = true; luz.shadow.mapSize.set(1024, 1024);
   } else if (nome === 'tocha') {
-    const cabo = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.025, 0.4, 10),
-      new THREE.MeshStandardMaterial({ color: 0x4a3420, roughness: 1 }));
-    g.add(cabo);
-    const chama = new THREE.Mesh(new THREE.SphereGeometry(0.07, 12, 10),
-      new THREE.MeshStandardMaterial({ color: 0xffb347, emissive: 0xff7a1a, emissiveIntensity: 3 }));
-    chama.position.y = 0.24; chama.scale.y = 1.6; g.add(chama);
-    luz = new THREE.PointLight(0xff8a3a, 12, 10, 1.6); luz.position.y = 0.26; g.add(luz);
+    const cabo = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.025, 0.4, 10), new THREE.MeshStandardMaterial({ color: 0x4a3420, roughness: 1 })); g.add(cabo);
+    const chama = new THREE.Mesh(new THREE.SphereGeometry(0.07, 12, 10), new THREE.MeshStandardMaterial({ color: 0xffb347, emissive: 0xff7a1a, emissiveIntensity: 3 })); chama.position.y = 0.24; chama.scale.y = 1.6; g.add(chama);
+    luz = new THREE.PointLight(0xff8a3a, 14, 10, 1.6); luz.position.y = 0.26; g.add(luz);
   } else if (nome === 'radio') {
-    const caixa = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.16, 0.05),
-      new THREE.MeshStandardMaterial({ color: 0x2e3a2a, roughness: 0.8 }));
-    g.add(caixa);
-    const antena = new THREE.Mesh(new THREE.CylinderGeometry(0.004, 0.004, 0.18, 6), metal);
-    antena.position.set(0.03, 0.16, 0); g.add(antena);
+    const caixa = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.16, 0.05), new THREE.MeshStandardMaterial({ color: 0x2e3a2a, roughness: 0.8 })); g.add(caixa);
+    const antena = new THREE.Mesh(new THREE.CylinderGeometry(0.004, 0.004, 0.18, 6), metal); antena.position.set(0.03, 0.16, 0); g.add(antena);
   } else if (nome === 'celular') {
-    const corpo = new THREE.Mesh(new THREE.BoxGeometry(0.07, 0.14, 0.012),
-      new THREE.MeshStandardMaterial({ color: 0x111216, roughness: 0.4 }));
-    g.add(corpo);
-    const tela = new THREE.Mesh(new THREE.PlaneGeometry(0.058, 0.12),
-      new THREE.MeshStandardMaterial({ color: 0xbfe6ff, emissive: 0x7fc8ff, emissiveIntensity: 2.2 }));
-    tela.position.z = 0.0075; g.add(tela);
+    const corpo = new THREE.Mesh(new THREE.BoxGeometry(0.07, 0.14, 0.012), new THREE.MeshStandardMaterial({ color: 0x111216, roughness: 0.4 })); g.add(corpo);
+    const tela = new THREE.Mesh(new THREE.PlaneGeometry(0.058, 0.12), new THREE.MeshStandardMaterial({ color: 0xbfe6ff, emissive: 0x7fc8ff, emissiveIntensity: 2.2 })); tela.position.z = 0.0075; g.add(tela);
     luz = new THREE.PointLight(0x9fd8ff, 3, 3, 2); luz.position.z = 0.1; g.add(luz);
   }
   return { obj: g, luz };
 }
 
-// ---------------- pessoa ----------------
-export async function pessoa(spec = {}) {
-  const altura = spec.altura || 1.7;
-  const { obj, animacoes } = await instanciar('personagens/Mannequin_Medium', { altura });
+// ---------------- corpo liso preso aos ossos ----------------
+function montarCorpo(obj, spec) {
+  // esconde as malhas skinned do manequim; mantém os ossos
+  obj.traverse(m => { if (m.isMesh || m.isSkinnedMesh) m.visible = false; });
 
-  const pele = new THREE.Color(spec.pele || '#e8d8c8');
-  const camisa = new THREE.Color(spec.camisa || '#cfd2d6');
-  const calca = new THREE.Color(spec.calca || '#3a3f4a');
-  // pinta o manequim: corpo pela parte (nome do mesh), cabeca/maos cor de pele
-  obj.traverse(m => {
-    if (!m.isMesh) return;
-    const n = (m.name || '').toLowerCase();
-    let cor = camisa;
-    if (n.includes('head') || n.includes('hand') || n.includes('face')) cor = pele;
-    else if (n.includes('leg') || n.includes('foot') || n.includes('pant') || n.includes('shoe')) cor = calca;
-    m.material = new THREE.MeshStandardMaterial({ color: cor, roughness: 0.75 });
-  });
+  const B = n => acharOsso(obj, n);
+  const hips = B('hips'), spine = B('spine'), chest = B('chest'), head = B('head');
+  const uar = B('upperarmr'), lar = B('lowerarmr'), wrr = B('wristr'), hnr = B('handr');
+  const ual = B('upperarml'), lal = B('lowerarml'), wrl = B('wristl'), hnl = B('handl');
+  const ulr = B('upperlegr'), llr = B('lowerlegr'), ftr = B('footr');
+  const ull = B('upperlegl'), lll = B('lowerlegl'), ftl = B('footl');
 
-  const head = acharOsso(obj, 'head');
-  const maoDir = acharOsso(obj, 'handr', 'hand_r', 'righthand');
+  const fatorCorpo = { magro: 0.82, medio: 1.0, forte: 1.2, gordo: 1.45, idoso: 0.9, crianca: 0.9 }[spec.corpo] || 1;
+  const pele = new THREE.MeshStandardMaterial({ color: new THREE.Color(spec.pele), roughness: 0.78 });
+  const camisa = new THREE.MeshStandardMaterial({ color: new THREE.Color(spec.camisa), roughness: 0.8 });
+  const calca = new THREE.MeshStandardMaterial({ color: new THREE.Color(spec.calca), roughness: 0.85 });
+  const tenisMat = new THREE.MeshStandardMaterial({ color: spec.roupa === 'medieval' || spec.roupa === 'tunica' ? 0x4a3524 : 0xf2f2f2, roughness: 0.7 });
+  const mangaCurta = spec.mangaCurta && !['jaqueta', 'moletom', 'medieval', 'tunica', 'soldado', 'chines'].includes(spec.roupa);
 
-  // cabeca do manequim ~80% (a cabeca KayKit e grande demais; o Reel tem cabeca grande mas nao tanto)
-  if (head) head.scale.multiplyScalar(0.8);
-
-  // rosto 2D preso na frente da cabeca. Fica de frente (+Z local do osso head no rig KayKit).
-  let rostoMesh = null, expAtual = spec.rosto || 'neutro';
-  if (head) {
-    rostoMesh = new THREE.Mesh(
-      new THREE.PlaneGeometry(0.42, 0.42),
-      // depthTest desligado + renderOrder alto: o rosto desenha SEMPRE por cima da esfera da cabeca (nao some dentro)
-      new THREE.MeshBasicMaterial({ map: texturaRosto(expAtual), transparent: true, depthWrite: false, depthTest: false, side: THREE.FrontSide })
-    );
-    rostoMesh.position.set(0, 0.2, 0.28); // frente da cabeca, na altura dos olhos, FORA da esfera
-    rostoMesh.renderOrder = 10;
-    head.add(rostoMesh);
-    // cabelo e chapeu presos no osso head
-    const cab = fazerCabelo(spec.cabelo || 'curto', spec.cabelo_cor);
-    head.add(cab);
-    if (spec.chapeu) head.add(fazerChapeu(spec.chapeu));
+  // tronco: UMA peça presa ao hips que vai do quadril até o pescoço (cobre o vão do spine/chest).
+  // Medimos a distância real hips->head no mundo (pose de repouso) e fazemos o tronco com esse comprimento.
+  obj.updateMatrixWorld(true);
+  const pHips = hips ? hips.getWorldPosition(new THREE.Vector3()) : new THREE.Vector3();
+  const pHead = head ? head.getWorldPosition(new THREE.Vector3()) : pHips.clone().add(new THREE.Vector3(0, 0.6, 0));
+  const escalaRaiz = obj.scale.y || 1;
+  const altTronco = Math.max(0.2, (pHead.y - pHips.y) / escalaRaiz * 0.92); // em unidades locais do hips
+  if (hips) {
+    const larg = 0.34 * fatorCorpo, prof = 0.2 * fatorCorpo;
+    // caixa arredondada: usamos uma cápsula achatada (box com cantos) para o tronco
+    const t = new THREE.Mesh(new THREE.BoxGeometry(larg, altTronco, prof), camisa);
+    t.position.set(0, altTronco * 0.5, 0); t.castShadow = true; hips.add(t);
+    // barriga/peito arredondados nas pontas
+    const topo = new THREE.Mesh(new THREE.SphereGeometry(larg * 0.5, 14, 10), camisa); topo.scale.set(1, 0.6, prof / larg); topo.position.y = altTronco; hips.add(topo);
+    const base = new THREE.Mesh(new THREE.BoxGeometry(0.3 * fatorCorpo, 0.14, 0.18 * fatorCorpo), calca); base.position.y = 0.04; base.castShadow = true; hips.add(base);
   }
+  // ombros: esferas que fecham a junta onde o braço sai
+  for (const b of [uar, ual]) if (b) { const s = new THREE.Mesh(new THREE.SphereGeometry(0.08 * Math.sqrt(fatorCorpo), 12, 10), camisa); s.castShadow = true; b.add(s); }
+  // coxas: esferas no quadril onde a perna sai
+  for (const b of [ulr, ull]) if (b) { const s = new THREE.Mesh(new THREE.SphereGeometry(0.085 * Math.sqrt(fatorCorpo), 12, 10), calca); s.castShadow = true; b.add(s); }
+  if (spec.corpo === 'idoso' && spine) spine.rotation.x += 0.25;
+
+  // cabeça: esfera levemente achatada (1,3x a real ~ raio 0.16). pescoço curto.
+  let rostoMesh = null, raioCabeca = 0.16 * (spec.corpo === 'crianca' ? 0.92 : 1);
+  if (head) {
+    const bola = new THREE.Mesh(new THREE.SphereGeometry(raioCabeca, 24, 20), pele);
+    bola.scale.y = 0.94; bola.position.y = raioCabeca * 0.95; bola.castShadow = true; head.add(bola);
+    const pescoco = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.07, 0.08, 10), pele); pescoco.position.y = 0.0; head.add(pescoco);
+    // rosto: plano na FRENTE da bola, no MEIO da altura; depthTest off -> sempre por cima da esfera
+    rostoMesh = new THREE.Mesh(
+      new THREE.PlaneGeometry(raioCabeca * 2.0, raioCabeca * 2.0),
+      new THREE.MeshBasicMaterial({ map: texturaRosto(spec.rostoEstilo, spec.rosto, spec), transparent: true, depthWrite: false, depthTest: false, side: THREE.FrontSide })
+    );
+    rostoMesh.position.set(0, raioCabeca * 0.95, raioCabeca * 0.92); rostoMesh.renderOrder = 10; head.add(rostoMesh);
+    // cabelo/chapéu/barba
+    const cabWrap = new THREE.Group(); cabWrap.position.y = raioCabeca * 0.9; head.add(cabWrap);
+    cabWrap.add(fazerCabelo(spec.cabelo, spec.cabelo_cor, raioCabeca));
+    if (spec.chapeu) cabWrap.add(fazerChapeu(spec.chapeu, raioCabeca));
+    if (spec.barba) { const barba = new THREE.Mesh(new THREE.SphereGeometry(raioCabeca * 0.8, 16, 10, 0, 6.3, Math.PI * 0.55, Math.PI * 0.5), new THREE.MeshStandardMaterial({ color: spec.cabelo_cor, roughness: 1 })); barba.position.set(0, -raioCabeca * 0.25, raioCabeca * 0.2); cabWrap.add(barba); }
+    if (spec.acessorio) porAcessorio(spec.acessorio, cabWrap, chest, raioCabeca);
+  }
+
+  // braços: cápsulas (manga curta => metade de cima camisa, resto pele)
+  const rA = 0.07 * Math.sqrt(fatorCorpo);
+  if (uar) capsulaOsso(uar, lar, mangaCurta ? pele : camisa, { r: rA });
+  if (lar) capsulaOsso(lar, wrr || hnr, pele, { r: rA * 0.9 });
+  if (ual) capsulaOsso(ual, lal, mangaCurta ? pele : camisa, { r: rA });
+  if (lal) capsulaOsso(lal, wrl || hnl, pele, { r: rA * 0.9 });
+  // mãos
+  for (const h of [hnr, hnl]) if (h) { const mo = new THREE.Mesh(new THREE.SphereGeometry(rA * 1.3, 12, 10), pele); mo.castShadow = true; h.add(mo); }
+  // pernas
+  const rP = 0.075 * Math.sqrt(fatorCorpo);
+  if (ulr) capsulaOsso(ulr, llr, calca, { r: rP });
+  if (llr) capsulaOsso(llr, ftr, calca, { r: rP * 0.85 });
+  if (ull) capsulaOsso(ull, lll, calca, { r: rP });
+  if (lll) capsulaOsso(lll, ftl, calca, { r: rP * 0.85 });
+  // tênis (caixa arredondada)
+  for (const f of [ftr, ftl]) if (f) { const s = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.07, 0.2), tenisMat); s.position.set(0.02, 0, 0.04); s.castShadow = true; f.add(s); }
+
+  // roupas especiais por cima (vestido/saia/túnica/jaqueta/capuz)
+  if (spine || hips) {
+    const base = chest || spine;
+    if (spec.roupa === 'vestido' || spec.roupa === 'tunica' || spec.roupa === 'medieval' || spec.roupa === 'chines') {
+      const corV = spec.roupa === 'medieval' ? 0x5a4a6a : spec.roupa === 'chines' ? 0xb03a2a : spec.camisa;
+      const saia = new THREE.Mesh(new THREE.ConeGeometry(0.26 * fatorCorpo, 0.6, 16, 1, true), new THREE.MeshStandardMaterial({ color: corV, roughness: 0.85, side: THREE.DoubleSide }));
+      if (hips) { saia.position.y = -0.2; hips.add(saia); }
+    } else if (spec.roupa === 'saia') {
+      const saia = new THREE.Mesh(new THREE.ConeGeometry(0.22 * fatorCorpo, 0.3, 16, 1, true), new THREE.MeshStandardMaterial({ color: spec.calca, roughness: 0.85, side: THREE.DoubleSide }));
+      if (hips) { saia.position.y = -0.05; hips.add(saia); }
+    } else if (spec.roupa === 'moletom' && head) {
+      // capuz nas costas
+      if (chest) { const capuz = new THREE.Mesh(new THREE.SphereGeometry(0.16, 14, 10, 0, 6.3, 0, Math.PI * 0.6), camisa); capuz.position.set(0, 0.26, -0.08); chest.add(capuz); }
+    }
+    // uniforme: cor fixa + detalhe
+    if (spec.roupa === 'enfermeira') camisa.color.set('#eef2f6');
+    if (spec.roupa === 'policial') camisa.color.set('#1e2a44');
+    if (spec.roupa === 'guarda') camisa.color.set('#3f5a3a');
+    if (spec.roupa === 'soldado') camisa.color.set('#6a6350');
+  }
+
+  return { head, chest, maoDir: hnr, rostoMesh, raioCabeca };
+}
+
+// ---------------- pessoa ----------------
+export async function pessoa(specBruto = {}) {
+  const spec = resolverSpec(specBruto);
+  const { obj } = await instanciar('personagens/Mannequin_Medium', { altura: spec.altura });
+  const { head, chest, maoDir, rostoMesh, raioCabeca } = montarCorpo(obj, spec);
 
   const mixer = new THREE.AnimationMixer(obj);
   let acaoAtual = null;
   const dic = await animacoesManequim();
+  let expAtual = spec.rosto;
 
   const ator = {
-    obj, mixer, spec,
-    head, altura, raio: altura * 0.2,   // metadados p/ a camera (enquadramento) e o raycast
+    obj, mixer, spec, head, raioCabeca,
+    altura: spec.altura, raio: spec.altura * 0.2,
     _head: head, _mao: maoDir, _rosto: rostoMesh,
     acao(nome, { loop = true } = {}) {
-      const clip = dic[nome] || dic['Idle_A'];
-      if (!clip) return ator;
-      const nova = mixer.clipAction(clip);
-      nova.reset();
-      nova.setLoop(loop ? THREE.LoopRepeat : THREE.LoopOnce, Infinity);
-      nova.clampWhenFinished = !loop;
-      if (acaoAtual && acaoAtual !== nova) { acaoAtual.stop(); }
-      nova.play();
-      acaoAtual = nova;
-      return ator;
+      const clip = dic[nome] || dic['Idle_A']; if (!clip) return ator;
+      const nova = mixer.clipAction(clip); nova.reset();
+      nova.setLoop(loop ? THREE.LoopRepeat : THREE.LoopOnce, Infinity); nova.clampWhenFinished = !loop;
+      if (acaoAtual && acaoAtual !== nova) acaoAtual.stop();
+      nova.play(); acaoAtual = nova; return ator;
     },
-    rosto(exp) {
-      expAtual = exp;
-      if (rostoMesh) rostoMesh.material.map = texturaRosto(exp);
-      return ator;
-    },
-    segurar(nome) {
-      if (!maoDir || !nome) return ator;
-      const { obj: o, luz } = fazerObjeto(nome);
-      maoDir.add(o);
-      return ator;
-    },
-    // DETERMINISTICO: poe a animacao no segundo t (sincronizado com render(t) do engine)
+    rosto(exp) { expAtual = exp; if (rostoMesh) rostoMesh.material.map = texturaRosto(spec.rostoEstilo, exp, spec); return ator; },
+    segurar(nome) { if (!maoDir || !nome) return ator; const { obj: o } = fazerObjeto(nome); maoDir.add(o); return ator; },
     setTime(t) { mixer.setTime(Math.max(0, t)); return ator; },
   };
-  if (spec.acao) ator.acao(spec.acao);
-  else ator.acao('Idle_A');
+  ator.acao(spec.acao || 'Idle_A');
   return ator;
 }
 
-export { EXPRESSOES };
+export { EXPRESSOES, resolverSpec };
