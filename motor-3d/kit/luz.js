@@ -11,16 +11,31 @@ function semente(s) {
   return () => { a = (a * 1664525 + 1013904223) >>> 0; return a / 4294967296; };
 }
 
+// cada preset: ceu (base), ceuTopo/ceuBaixo (degrade do domo), hemi [ceu, chao, forca], sol [cor, forca, pos],
+// nevoa [cor, perto, longe], ambiente (AmbientLight extra p/ garantir leitura), e flags.
+// Regra: o SOL fica quase branco (nao tinge os objetos de laranja); a COR do ceu/nevoa e que da o clima.
 const COR = {
-  dia: { ceu: 0x9fc6e8, hemi: [0xbfe0ff, 0x5a6a3a, 1.0], sol: [0xfff2d8, 1.5, [-8, 18, 10]], nevoa: [0x9fc6e8, 40, 120] },
-  entardecer: { ceu: 0xe8a35a, hemi: [0xffcf9a, 0x6a4a30, 0.8], sol: [0xff9d4a, 1.3, [-12, 8, 6]], nevoa: [0xe8a35a, 30, 90] },
-  noite: { ceu: 0x11204a, hemi: [0x7a96d8, 0x2a3a24, 0.95], sol: [0xaec2ff, 1.0, [-10, 20, 8]], nevoa: [0x11204a, 26, 80], estrelas: true },
-  noite_neblina: { ceu: 0x1c2c3a, hemi: [0x90a0b4, 0x2a342c, 0.9], sol: [0xaab8d4, 0.7, [-8, 16, 6]], nevoa: [0x1c2c3a, 10, 42], estrelas: true },
-  madrugada: { ceu: 0x24305a, hemi: [0x8aa0d8, 0x2e3a26, 1.05], sol: [0xcdd8ff, 1.1, [-6, 14, 10]], nevoa: [0x24305a, 30, 88], estrelas: true },
-  interior_noite: { ceu: 0x0a0906, hemi: [0x3a3020, 0x100c08, 0.4], nevoa: [0x0a0906, 10, 40], lampada: true },
-  chuva: { ceu: 0x33383f, hemi: [0x8a94a0, 0x2a2e26, 0.7], sol: [0xaab0bc, 0.5, [-6, 16, 8]], nevoa: [0x33383f, 16, 54], chuva: true },
-  fogueira: { ceu: 0x0b1020, hemi: [0x30364a, 0x16120c, 0.4], nevoa: [0x0b1020, 14, 50], estrelas: true, fogo: true },
+  dia: { ceuTopo: 0x6fa8df, ceuBaixo: 0xcfe6f5, hemi: [0xcfe8ff, 0x6a7a4a, 1.1], sol: [0xfff4e0, 1.6, [-8, 18, 10]], nevoa: [0xcfe6f5, 55, 150], ambiente: [0xbfd6e8, 0.35] },
+  entardecer: { ceuTopo: 0x7a6a9a, ceuBaixo: 0xf6b074, hemi: [0xffe0c0, 0x8a7a60, 1.5], sol: [0xfff2e0, 1.5, [-12, 10, 6]], nevoa: [0xecc098, 55, 150], ambiente: [0xe8d0bc, 0.7] },
+  noite: { ceuTopo: 0x1e3068, ceuBaixo: 0x465ea0, hemi: [0xbccdf6, 0x66748a, 2.7], sol: [0xdce6ff, 1.6, [-10, 20, 8]], nevoa: [0x30447e, 48, 140], ambiente: [0x7a8ab8, 1.3], estrelas: true },
+  noite_neblina: { ceuTopo: 0x3e4c6a, ceuBaixo: 0x6e86a2, hemi: [0xd6e0ec, 0x7a8470, 3.0], sol: [0xe2ecf6, 1.4, [-8, 16, 6]], nevoa: [0x5a6e86, 24, 78], ambiente: [0x95a4b8, 1.6], estrelas: true },
+  madrugada: { ceuTopo: 0x1a2c5a, ceuBaixo: 0x5e70a0, hemi: [0xc0d0f0, 0x5e6a52, 2.3], sol: [0xe6eeff, 1.5, [-6, 14, 10]], nevoa: [0x32447a, 46, 140], ambiente: [0x7888ae, 1.0], estrelas: true },
+  interior_noite: { ceuTopo: 0x0a0906, ceuBaixo: 0x14100a, hemi: [0x4a4030, 0x14100a, 0.7], nevoa: [0x0f0c08, 12, 44], ambiente: [0x3a3222, 0.5], lampada: true },
+  chuva: { ceuTopo: 0x4a5464, ceuBaixo: 0x74808e, hemi: [0xc8d2de, 0x6a7062, 2.6], sol: [0xe0e6ee, 1.1, [-6, 16, 8]], nevoa: [0x5e6a76, 30, 92], ambiente: [0x95a0ac, 1.5], chuva: true },
+  fogueira: { ceuTopo: 0x14203e, ceuBaixo: 0x32406a, hemi: [0x6a78a0, 0x2a2418, 1.5], sol: [0xbccaf0, 0.6, [-8, 18, 8]], nevoa: [0x1e2a4a, 22, 74], ambiente: [0x56608a, 0.9], estrelas: true, fogo: true },
 };
+
+// domo de ceu com degrade vertical (topo escuro -> horizonte claro). Fica atras de tudo, sem sombra nem nevoa.
+function fazerCeu(scene, topo, baixo) {
+  const geo = new THREE.SphereGeometry(180, 24, 16);
+  const mat = new THREE.ShaderMaterial({
+    side: THREE.BackSide, depthWrite: false, fog: false,
+    uniforms: { topo: { value: new THREE.Color(topo) }, baixo: { value: new THREE.Color(baixo) } },
+    vertexShader: 'varying float h; void main(){ h = normalize(position).y; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }',
+    fragmentShader: 'varying float h; uniform vec3 topo; uniform vec3 baixo; void main(){ float f = clamp(h*0.9+0.25,0.0,1.0); gl_FragColor = vec4(mix(baixo, topo, f), 1.0); }',
+  });
+  const dome = new THREE.Mesh(geo, mat); dome.name = 'ceu_domo'; scene.add(dome); return dome;
+}
 
 function fazerEstrelas(scene) {
   const g = new THREE.BufferGeometry(); const p = []; const r = semente(7);
@@ -71,12 +86,16 @@ function fazerChuva(scene, n = 500) {
 
 export function aplicar(scene, preset = 'noite', opts = {}) {
   const c = COR[preset] || COR.noite;
-  scene.background = new THREE.Color(c.ceu);
+  // ceu em degrade (domo) em vez de cor chapada; o fundo fica da cor do horizonte (caso o domo nao cubra tudo)
+  scene.background = new THREE.Color(c.ceuBaixo);
+  const domo = fazerCeu(scene, c.ceuTopo, c.ceuBaixo);
   if (c.nevoa) scene.fog = new THREE.Fog(c.nevoa[0], c.nevoa[1], c.nevoa[2]);
 
-  const luzes = [];
+  const luzes = [domo];
   const hemi = new THREE.HemisphereLight(c.hemi[0], c.hemi[1], c.hemi[2]);
   scene.add(hemi); luzes.push(hemi);
+  // luz ambiente extra: garante que nada fique abaixo do piso de brilho (noite legivel)
+  if (c.ambiente) { const amb = new THREE.AmbientLight(c.ambiente[0], c.ambiente[1]); scene.add(amb); luzes.push(amb); }
 
   let sol = null;
   if (c.sol) {

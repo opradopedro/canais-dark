@@ -249,30 +249,57 @@ async function cemiterio(scene, opts) {
   return { grupo, marcas, piso: p };
 }
 
+// figura de fundo simples (capsula + cabeca), cor de roupa; so para a vila/campo nao ficarem vazios.
+function figuraFundo(grupo, x, z, ry = 0, cor = 0x7a5a3a) {
+  const g = new THREE.Group();
+  const roupa = new THREE.MeshStandardMaterial({ color: cor, roughness: 0.9 });
+  const pele = new THREE.MeshStandardMaterial({ color: 0xe0c0a0, roughness: 0.8 });
+  const corpo = new THREE.Mesh(new THREE.CapsuleGeometry(0.22, 0.7, 6, 12), roupa);
+  corpo.position.y = 0.78; corpo.castShadow = true; g.add(corpo);
+  const cab = new THREE.Mesh(new THREE.SphereGeometry(0.2, 16, 14), pele);
+  cab.position.y = 1.4; cab.castShadow = true; g.add(cab);
+  g.position.set(x, 0, z); g.rotation.y = ry; grupo.add(g); return g;
+}
+
 async function vila(scene, opts) {
   const grupo = new THREE.Group(); scene.add(grupo);
   const p = piso(scene, 0x4a6a2e);
   // praça de terra no centro
-  const praca = new THREE.Mesh(new THREE.CircleGeometry(9, 32),
+  const praca = new THREE.Mesh(new THREE.CircleGeometry(8, 32),
     new THREE.MeshStandardMaterial({ color: 0x8a7050, roughness: 1 }));
   praca.rotation.x = -Math.PI / 2; praca.position.y = 0.02; praca.receiveShadow = true; grupo.add(praca);
-  await por(grupo, 'vila/Well', 0, 0, 2.4);
-  await por(grupo, 'vila/House_1', -9, -5, ALTURAS.casa_vila, { ry: Math.PI / 4 });
-  await por(grupo, 'vila/House_3', 9, -5, ALTURAS.casa_vila, { ry: -Math.PI / 4 });
-  await por(grupo, 'vila/Mill', -11, 8, ALTURAS.moinho, { ry: -Math.PI / 3 });
-  await por(grupo, 'vila/Inn', 10, 7, 6, { ry: -Math.PI / 2 }); // taverna
+  // caminho de pedra ligando as casas
+  const caminho = new THREE.Mesh(new THREE.PlaneGeometry(3, 26),
+    new THREE.MeshStandardMaterial({ color: 0x9a8a6a, roughness: 1 }));
+  caminho.rotation.x = -Math.PI / 2; caminho.position.set(0, 0.015, -2); grupo.add(caminho);
+  // poço ~1,2 m de altura (escala igual à pessoa); casas com porta ~2 m (casa_vila ~5,5 m)
+  await por(grupo, 'vila/Well', 0, 0, 1.2);
+  // casas mais perto e espalhadas (vila cheia, não chão vazio)
+  await por(grupo, 'vila/House_1', -7, -4, ALTURAS.casa_vila, { ry: Math.PI / 5 });
+  await por(grupo, 'vila/House_2', 7, -4, ALTURAS.casa_vila, { ry: -Math.PI / 5 });
+  await por(grupo, 'vila/House_3', -8, 4, 5.2, { ry: Math.PI / 2 });
+  await por(grupo, 'vila/House_4', 8, 3, 5.0, { ry: -Math.PI / 2 });
+  await por(grupo, 'vila/Mill', -11, 9, ALTURAS.moinho, { ry: -Math.PI / 3 });
+  await por(grupo, 'vila/Inn', 10, 8, 6, { ry: -Math.PI / 2 }); // taverna
   await por(grupo, 'vila/MarketStand_1', -3, 5, 2.4, { ry: Math.PI });
-  await por(grupo, 'vila/MarketStand_2', 4, 5, 2.2, { ry: Math.PI });
-  await por(grupo, 'vila/Cart', 5, -2, 1.8, { ry: 0.5 });
-  await florestaEmVolta(grupo, { r0: 18, r1: 34, n: 26, sem: 21 });
+  await por(grupo, 'vila/MarketStand_2', 3, 5, 2.2, { ry: Math.PI });
+  await por(grupo, 'vila/Cart', 5, -1, 1.8, { ry: 0.5 });
+  await por(grupo, 'vila/Barrel', -4, 1, 0.9); await por(grupo, 'vila/Barrel', -4.6, 1.4, 0.9);
+  await por(grupo, 'vila/Crate', 4, 1.5, 0.8, { ry: 0.3 });
+  await por(grupo, 'vila/Hay', 6, 4, 1.2);
+  cerca(grupo, -9, 7, -5, 7); cerca(grupo, 5, 6, 9, 6);
+  // aldeões de fundo (vila viva)
+  figuraFundo(grupo, -2.5, 4, 2.4, 0x6a4a8a); figuraFundo(grupo, 2.2, 3.4, -1.0, 0x8a3a30);
+  figuraFundo(grupo, -1.2, -1.5, 0.8, 0x3a5a6a); figuraFundo(grupo, 4.2, -0.5, 2.2, 0x5a6a3a);
+  await florestaEmVolta(grupo, { r0: 20, r1: 34, n: 20, sem: 21 });
   const marcas = {
     praca: { x: 0, z: 3, cam: 'medio' },
-    poco: { x: 0, z: 0, cam: 'medio' },
-    moinho: { x: -9, z: 6, cam: 'aberto' },
-    taverna: { x: 8, z: 6, cam: 'medio' },
-    mercado: { x: 0, z: 5, cam: 'medio' },
-    casa: { x: -7, z: -4, cam: 'medio' },
-    alto: { x: 0, z: 0, cam: 'aereo' },
+    poco: { x: 1.2, z: 0.6, cam: 'medio' },
+    moinho: { x: -8, z: 7, cam: 'aberto' },
+    taverna: { x: 8, z: 6.5, cam: 'medio' },
+    mercado: { x: 0, z: 3.6, cam: 'medio' },
+    casa: { x: -5, z: -3, cam: 'medio' },
+    alto: { x: 0, z: 1, cam: 'aereo' },
   };
   return { grupo, marcas, piso: p };
 }
@@ -281,21 +308,26 @@ async function campo(scene, opts) {
   const grupo = new THREE.Group(); scene.add(grupo);
   const p = piso(scene, 0x6a7a2e);
   const r = semente(23);
-  // trigo em fileiras
-  for (let i = 0; i < 90; i++) await por(grupo, 'natureza/Wheat', (r() - 0.5) * 30, (r() - 0.5) * 24, 1.0 + r() * 0.4, { ry: r() * 6.283 });
+  // trigo em fileiras (mais denso, campo cheio)
+  for (let i = 0; i < 120; i++) await por(grupo, 'natureza/Wheat', (r() - 0.5) * 30, (r() - 0.5) * 22, 1.0 + r() * 0.4, { ry: r() * 6.283 });
   cerca(grupo, -14, 10, 14, 10);
   cerca(grupo, -14, -10, -14, 10);
+  cerca(grupo, 14, -10, 14, 10);
   await por(grupo, 'vila/Stable', 11, -8, 5, { ry: -Math.PI / 2 }); // celeiro
-  await por(grupo, 'vila/Hay', 7, 3, 1.2);
+  await por(grupo, 'vila/Mill', -12, -7, ALTURAS.moinho, { ry: Math.PI / 3 });
+  await por(grupo, 'vila/Hay', 7, 3, 1.2); await por(grupo, 'vila/Hay', 8.2, 2, 1.1);
+  await por(grupo, 'vila/Cart', -6, -4, 1.8, { ry: 0.8 });
   await por(grupo, 'animais/Cow', -5, 5, ALTURAS.animal_grande, { ry: 1 });
-  await florestaEmVolta(grupo, { r0: 20, r1: 34, n: 16, sem: 29 });
+  await por(grupo, 'animais/Donkey', 3, -3, 1.4, { ry: -0.6 });
+  figuraFundo(grupo, 1, 2, 2.6, 0x8a6a3a); figuraFundo(grupo, -3, -1, 1.2, 0x5a7a4a);
+  await florestaEmVolta(grupo, { r0: 20, r1: 34, n: 14, sem: 29 });
   const marcas = {
     trigo: { x: 0, z: 0, cam: 'medio' },
     fileiras: { x: 0, z: 4, cam: 'aberto' },
     cerca: { x: 0, z: 9, cam: 'medio' },
     celeiro: { x: 9, z: -6, cam: 'medio' },
     vaca: { x: -5, z: 5, cam: 'medio' },
-    alto: { x: 0, z: 0, cam: 'aereo' },
+    alto: { x: 0, z: 1, cam: 'aereo' },
   };
   return { grupo, marcas, piso: p };
 }
