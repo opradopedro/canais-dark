@@ -1,0 +1,1563 @@
+{
+"animacoes/Rig_Medium_CombatMelee.glb": {
+"kb": 537,
+"anim": [
+"Melee_1H_Attack_Chop",
+"Melee_1H_Attack_Jump_Chop",
+"Melee_1H_Attack_Slice_Diagonal",
+"Melee_1H_Attack_Slice_Horizontal",
+"Melee_1H_Attack_Stab",
+"Melee_2H_Attack_Chop",
+"Melee_2H_Attack_Slice",
+"Melee_2H_Attack_Spin",
+"Melee_2H_Attack_Spinning",
+"Melee_2H_Attack_Stab",
+"Melee_2H_Idle",
+"Melee_Block",
+"Melee_Block_Attack",
+"Melee_Block_Hit",
+"Melee_Blocking",
+"Melee_Dualwield_Attack_Chop",
+"Melee_Dualwield_Attack_Slice",
+"Melee_Dualwield_Attack_Stab",
+"Melee_Unarmed_Attack_Kick",
+"Melee_Unarmed_Attack_Punch_A",
+"Melee_Unarmed_Idle",
+"T-Pose"
+]
+},
+"animacoes/Rig_Medium_CombatRanged.glb": {
+"kb": 541,
+"anim": [
+"Ranged_1H_Aiming",
+"Ranged_1H_Reload",
+"Ranged_1H_Shoot",
+"Ranged_1H_Shooting",
+"Ranged_2H_Aiming",
+"Ranged_2H_Reload",
+"Ranged_2H_Shoot",
+"Ranged_2H_Shooting",
+"Ranged_Bow_Aiming_Idle",
+"Ranged_Bow_Draw",
+"Ranged_Bow_Draw_Up",
+"Ranged_Bow_Idle",
+"Ranged_Bow_Release",
+"Ranged_Bow_Release_Up",
+"Ranged_Magic_Raise",
+"Ranged_Magic_Shoot",
+"Ranged_Magic_Spellcasting",
+"Ranged_Magic_Spellcasting_Long",
+"Ranged_Magic_Summon",
+"T-Pose"
+]
+},
+"animacoes/Rig_Medium_General.glb": {
+"kb": 391,
+"anim": [
+"Death_A",
+"Death_A_Pose",
+"Death_B",
+"Death_B_Pose",
+"Hit_A",
+"Hit_B",
+"Idle_A",
+"Idle_B",
+"Interact",
+"PickUp",
+"Spawn_Air",
+"Spawn_Ground",
+"T-Pose",
+"Throw",
+"Use_Item"
+]
+},
+"animacoes/Rig_Medium_MovementAdvanced.glb": {
+"kb": 280,
+"anim": [
+"Crawling",
+"Crouching",
+"Dodge_Backward",
+"Dodge_Forward",
+"Dodge_Left",
+"Dodge_Right",
+"Running_HoldingBow",
+"Running_HoldingRifle",
+"Running_Strafe_Left",
+"Running_Strafe_Right",
+"Sneaking",
+"T-Pose",
+"Walking_Backwards"
+]
+},
+"animacoes/Rig_Medium_MovementBasic.glb": {
+"kb": 247,
+"anim": [
+"Jump_Full_Long",
+"Jump_Full_Short",
+"Jump_Idle",
+"Jump_Land",
+"Jump_Start",
+"Running_A",
+"Running_B",
+"T-Pose",
+"Walking_A",
+"Walking_B",
+"Walking_C"
+]
+},
+"animacoes/Rig_Medium_Simulation.glb": {
+"kb": 405,
+"anim": [
+"Cheering",
+"Lie_Down",
+"Lie_Idle",
+"Lie_StandUp",
+"Push_Ups",
+"Sit_Chair_Down",
+"Sit_Chair_Idle",
+"Sit_Chair_StandUp",
+"Sit_Floor_Down",
+"Sit_Floor_Idle",
+"Sit_Floor_StandUp",
+"Sit_Ups",
+"T-Pose",
+"Waving"
+]
+},
+"animacoes/Rig_Medium_Special.glb": {
+"kb": 475,
+"anim": [
+"EXPERIMENTAL_Medium_Transform",
+"Skeletons_Awaken_Floor",
+"Skeletons_Awaken_Floor_Long",
+"Skeletons_Awaken_Standing",
+"Skeletons_Death",
+"Skeletons_Death_Pose",
+"Skeletons_Death_Resurrect",
+"Skeletons_Idle",
+"Skeletons_Inactive_Floor_Pose",
+"Skeletons_Inactive_Standing_Pose",
+"Skeletons_Spawn_Ground",
+"Skeletons_Taunt",
+"Skeletons_Taunt_Longer",
+"Skeletons_Walking",
+"T-Pose"
+]
+},
+"animacoes/Rig_Medium_Tools.glb": {
+"kb": 880,
+"anim": [
+"Chop",
+"Chopping",
+"Dig",
+"Digging",
+"Fishing_Bite",
+"Fishing_Cast",
+"Fishing_Catch",
+"Fishing_Idle",
+"Fishing_Reeling",
+"Fishing_Struggling",
+"Fishing_Tug",
+"Hammer",
+"Hammering",
+"Holding_A",
+"Holding_B",
+"Holding_C",
+"Lockpick",
+"Lockpicking",
+"Pickaxe",
+"Pickaxing",
+"Saw",
+"Sawing",
+"T-Pose",
+"Work_A",
+"Work_B",
+"Work_C",
+"Working_A",
+"Working_B",
+"Working_C"
+]
+},
+"animais/Cow.glb": {
+"kb": 628,
+"anim": [
+"Attack_Headbutt",
+"Attack_Kick",
+"Death",
+"Eating",
+"Gallop",
+"Gallop_Jump",
+"Idle",
+"Idle_2",
+"Idle_Headlow",
+"Idle_HitReact_Left",
+"Jump_toIdle",
+"Walk"
+]
+},
+"animais/Deer.glb": {
+"kb": 646,
+"anim": [
+"Attack_Headbutt",
+"Attack_Kick",
+"Death",
+"Eating",
+"Gallop",
+"Gallop_Jump",
+"Idle",
+"Idle_2",
+"Idle_Headlow",
+"Idle_HitReact_Left",
+"Idle_HitReact_Right",
+"Jump_toIdle",
+"Walk"
+]
+},
+"animais/Donkey.glb": {
+"kb": 651,
+"anim": [
+"Attack_Headbutt",
+"Attack_Kick",
+"Death",
+"Eating",
+"Gallop",
+"Gallop_Jump",
+"Idle",
+"Idle_2",
+"Idle_Headlow",
+"Idle_HitReact_Left",
+"Idle_HitReact_Right",
+"Jump_toIdle",
+"Walk"
+]
+},
+"animais/Fox.glb": {
+"kb": 576,
+"anim": [
+"Attack",
+"Death",
+"Eating",
+"Gallop",
+"Gallop_Jump",
+"Idle",
+"Idle_2",
+"Idle_2_HeadLow",
+"Idle_HitReact_Left",
+"Idle_HitReact_Right",
+"Jump_ToIdle",
+"Walk"
+]
+},
+"animais/Horse.glb": {
+"kb": 666,
+"anim": [
+"Attack_Headbutt",
+"Attack_Kick",
+"Death",
+"Eating",
+"Gallop",
+"Gallop_Jump",
+"Idle",
+"Idle_2",
+"Idle_Headlow",
+"Idle_HitReact_Left",
+"Idle_HitReact_Right",
+"Jump_toIdle",
+"Walk"
+]
+},
+"animais/Husky.glb": {
+"kb": 563,
+"anim": [
+"Attack",
+"Death",
+"Eating",
+"Gallop",
+"Gallop_Jump",
+"Idle",
+"Idle_2",
+"Idle_2_HeadLow",
+"Idle_HitReact_Left",
+"Idle_HitReact_Right",
+"Jump_ToIdle",
+"Walk"
+]
+},
+"animais/Stag.glb": {
+"kb": 669,
+"anim": [
+"Attack_Headbutt",
+"Attack_Kick",
+"Death",
+"Eating",
+"Gallop",
+"Gallop_Jump",
+"Idle",
+"Idle_2",
+"Idle_Headlow",
+"Idle_HitReact_Left",
+"Idle_HitReact_Right",
+"Jump_toIdle",
+"Walk"
+]
+},
+"animais/Wolf.glb": {
+"kb": 594,
+"anim": [
+"Attack",
+"Death",
+"Eating",
+"Gallop",
+"Gallop_Jump",
+"Idle",
+"Idle_2",
+"Idle_2_HeadLow",
+"Idle_HitReact_Left",
+"Idle_HitReact_Right",
+"Jump_ToIdle",
+"Walk"
+]
+},
+"casas/1Story_GableRoof_Mat.glb": {
+"kb": 119,
+"anim": []
+},
+"casas/1Story_Mat.glb": {
+"kb": 186,
+"anim": []
+},
+"casas/1Story_RoundRoof_Mat.glb": {
+"kb": 166,
+"anim": []
+},
+"casas/1Story_Sign_Mat.glb": {
+"kb": 171,
+"anim": []
+},
+"casas/2Story_GableRoof_Mat.glb": {
+"kb": 211,
+"anim": []
+},
+"casas/2Story_Mat.glb": {
+"kb": 236,
+"anim": []
+},
+"casas/2Story_Sidehouse_Mat.glb": {
+"kb": 364,
+"anim": []
+},
+"casas/2Story_Slim_Mat.glb": {
+"kb": 195,
+"anim": []
+},
+"casas/3Story_Small_Mat.glb": {
+"kb": 216,
+"anim": []
+},
+"casas/House1.glb": {
+"kb": 1492,
+"anim": []
+},
+"casas/House2.glb": {
+"kb": 1043,
+"anim": []
+},
+"criaturas/Rat.glb": {
+"kb": 537,
+"anim": [
+"Rat_Attack",
+"Rat_Death",
+"Rat_Idle",
+"Rat_Jump",
+"Rat_Run",
+"Rat_Walk"
+]
+},
+"criaturas/Snake.glb": {
+"kb": 211,
+"anim": [
+"Snake_Attack",
+"Snake_Idle",
+"Snake_Jump",
+"Snake_Walk"
+]
+},
+"criaturas/Spider.glb": {
+"kb": 438,
+"anim": [
+"Spider_Attack",
+"Spider_Death",
+"Spider_Idle",
+"Spider_Jump",
+"Spider_Walk"
+]
+},
+"interior/Bathroom_Bathtub.glb": {
+"kb": 10,
+"anim": []
+},
+"interior/Bathroom_Mirror1.glb": {
+"kb": 6,
+"anim": []
+},
+"interior/Bathroom_Mirror2.glb": {
+"kb": 5,
+"anim": []
+},
+"interior/Bathroom_Shower1.glb": {
+"kb": 38,
+"anim": []
+},
+"interior/Bathroom_Sink.glb": {
+"kb": 12,
+"anim": []
+},
+"interior/Bathroom_Toilet.glb": {
+"kb": 14,
+"anim": []
+},
+"interior/Bathroom_Toilet2.glb": {
+"kb": 11,
+"anim": []
+},
+"interior/Bathroom_ToiletPaper.glb": {
+"kb": 13,
+"anim": []
+},
+"interior/Bathroom_ToiletPaperPile.glb": {
+"kb": 13,
+"anim": []
+},
+"interior/Bathroom_Towel.glb": {
+"kb": 11,
+"anim": []
+},
+"interior/Bathroom_WashingMachine.glb": {
+"kb": 16,
+"anim": []
+},
+"interior/Bed_Bunk.glb": {
+"kb": 30,
+"anim": []
+},
+"interior/Bed_King.glb": {
+"kb": 25,
+"anim": []
+},
+"interior/Bed_Single.glb": {
+"kb": 22,
+"anim": []
+},
+"interior/Bookshelf.glb": {
+"kb": 7,
+"anim": []
+},
+"interior/Carpet_1.glb": {
+"kb": 5,
+"anim": []
+},
+"interior/Carpet_2.glb": {
+"kb": 5,
+"anim": []
+},
+"interior/Carpet_Round.glb": {
+"kb": 6,
+"anim": []
+},
+"interior/Chair_1.glb": {
+"kb": 13,
+"anim": []
+},
+"interior/Chair_2.glb": {
+"kb": 17,
+"anim": []
+},
+"interior/Chair_3.glb": {
+"kb": 21,
+"anim": []
+},
+"interior/Chair_4.glb": {
+"kb": 13,
+"anim": []
+},
+"interior/Column_Round1.glb": {
+"kb": 10,
+"anim": []
+},
+"interior/Column_Round2.glb": {
+"kb": 15,
+"anim": []
+},
+"interior/Column_Round3.glb": {
+"kb": 15,
+"anim": []
+},
+"interior/Column_SquareBig.glb": {
+"kb": 9,
+"anim": []
+},
+"interior/Column_SquareSmall.glb": {
+"kb": 8,
+"anim": []
+},
+"interior/Couch_L.glb": {
+"kb": 29,
+"anim": []
+},
+"interior/Couch_Large1.glb": {
+"kb": 30,
+"anim": []
+},
+"interior/Couch_Large2.glb": {
+"kb": 36,
+"anim": []
+},
+"interior/Couch_Large3.glb": {
+"kb": 34,
+"anim": []
+},
+"interior/Couch_Medium1.glb": {
+"kb": 22,
+"anim": []
+},
+"interior/Couch_Medium2.glb": {
+"kb": 23,
+"anim": []
+},
+"interior/Couch_Small1.glb": {
+"kb": 18,
+"anim": []
+},
+"interior/Couch_Small2.glb": {
+"kb": 14,
+"anim": []
+},
+"interior/Curtains_Double.glb": {
+"kb": 13,
+"anim": []
+},
+"interior/Curtains_Single.glb": {
+"kb": 9,
+"anim": []
+},
+"interior/Door_1.glb": {
+"kb": 23,
+"anim": []
+},
+"interior/Door_2.glb": {
+"kb": 23,
+"anim": []
+},
+"interior/Door_3.glb": {
+"kb": 30,
+"anim": []
+},
+"interior/Door_4.glb": {
+"kb": 41,
+"anim": []
+},
+"interior/Door_5.glb": {
+"kb": 60,
+"anim": []
+},
+"interior/Door_6.glb": {
+"kb": 40,
+"anim": []
+},
+"interior/Door_7.glb": {
+"kb": 10,
+"anim": []
+},
+"interior/Door_8.glb": {
+"kb": 65,
+"anim": []
+},
+"interior/Door_9.glb": {
+"kb": 42,
+"anim": []
+},
+"interior/Door_Double.glb": {
+"kb": 62,
+"anim": []
+},
+"interior/Drawer_1.glb": {
+"kb": 14,
+"anim": []
+},
+"interior/Drawer_2.glb": {
+"kb": 15,
+"anim": []
+},
+"interior/Drawer_3.glb": {
+"kb": 33,
+"anim": []
+},
+"interior/Drawer_4.glb": {
+"kb": 17,
+"anim": []
+},
+"interior/Drawer_5.glb": {
+"kb": 20,
+"anim": []
+},
+"interior/Fireplace.glb": {
+"kb": 17,
+"anim": []
+},
+"interior/Fork.glb": {
+"kb": 8,
+"anim": []
+},
+"interior/Houseplant_1.glb": {
+"kb": 10,
+"anim": []
+},
+"interior/Houseplant_2.glb": {
+"kb": 17,
+"anim": []
+},
+"interior/Houseplant_3.glb": {
+"kb": 22,
+"anim": []
+},
+"interior/Houseplant_4.glb": {
+"kb": 14,
+"anim": []
+},
+"interior/Houseplant_5.glb": {
+"kb": 20,
+"anim": []
+},
+"interior/Houseplant_6.glb": {
+"kb": 25,
+"anim": []
+},
+"interior/Houseplant_7.glb": {
+"kb": 16,
+"anim": []
+},
+"interior/Houseplant_8.glb": {
+"kb": 19,
+"anim": []
+},
+"interior/Kitchen_1Drawers.glb": {
+"kb": 7,
+"anim": []
+},
+"interior/Kitchen_2Drawers.glb": {
+"kb": 10,
+"anim": []
+},
+"interior/Kitchen_3Drawers.glb": {
+"kb": 12,
+"anim": []
+},
+"interior/Kitchen_Cabinet1.glb": {
+"kb": 6,
+"anim": []
+},
+"interior/Kitchen_Cabinet2.glb": {
+"kb": 6,
+"anim": []
+},
+"interior/Kitchen_CabinetSmall.glb": {
+"kb": 5,
+"anim": []
+},
+"interior/Kitchen_Fridge.glb": {
+"kb": 16,
+"anim": []
+},
+"interior/Kitchen_Oven.glb": {
+"kb": 29,
+"anim": []
+},
+"interior/Kitchen_Oven_Large.glb": {
+"kb": 22,
+"anim": []
+},
+"interior/Kitchen_Sink.glb": {
+"kb": 26,
+"anim": []
+},
+"interior/Knife.glb": {
+"kb": 4,
+"anim": []
+},
+"interior/Light_Ceiling1.glb": {
+"kb": 10,
+"anim": []
+},
+"interior/Light_Ceiling2.glb": {
+"kb": 8,
+"anim": []
+},
+"interior/Light_Ceiling3.glb": {
+"kb": 25,
+"anim": []
+},
+"interior/Light_Ceiling4.glb": {
+"kb": 25,
+"anim": []
+},
+"interior/Light_Ceiling5.glb": {
+"kb": 5,
+"anim": []
+},
+"interior/Light_Ceiling6.glb": {
+"kb": 6,
+"anim": []
+},
+"interior/Light_CeilingSingle.glb": {
+"kb": 10,
+"anim": []
+},
+"interior/Light_Chandelier.glb": {
+"kb": 24,
+"anim": []
+},
+"interior/Light_Cube.glb": {
+"kb": 22,
+"anim": []
+},
+"interior/Light_Cube2.glb": {
+"kb": 23,
+"anim": []
+},
+"interior/Light_Desk.glb": {
+"kb": 12,
+"anim": []
+},
+"interior/Light_Floor1.glb": {
+"kb": 9,
+"anim": []
+},
+"interior/Light_Floor2.glb": {
+"kb": 9,
+"anim": []
+},
+"interior/Light_Floor3.glb": {
+"kb": 9,
+"anim": []
+},
+"interior/Light_Floor4.glb": {
+"kb": 9,
+"anim": []
+},
+"interior/Light_Icosahedron.glb": {
+"kb": 60,
+"anim": []
+},
+"interior/Light_Icosahedron2.glb": {
+"kb": 169,
+"anim": []
+},
+"interior/Light_Small.glb": {
+"kb": 5,
+"anim": []
+},
+"interior/Light_Stand1.glb": {
+"kb": 10,
+"anim": []
+},
+"interior/Light_Stand2.glb": {
+"kb": 9,
+"anim": []
+},
+"interior/NightStand_1.glb": {
+"kb": 10,
+"anim": []
+},
+"interior/NightStand_2.glb": {
+"kb": 10,
+"anim": []
+},
+"interior/NightStand_3.glb": {
+"kb": 14,
+"anim": []
+},
+"interior/Plate_1.glb": {
+"kb": 4,
+"anim": []
+},
+"interior/Plate_2.glb": {
+"kb": 6,
+"anim": []
+},
+"interior/Plate_3.glb": {
+"kb": 5,
+"anim": []
+},
+"interior/Shelf_1.glb": {
+"kb": 6,
+"anim": []
+},
+"interior/Shelf_2.glb": {
+"kb": 7,
+"anim": []
+},
+"interior/Shelf_Large.glb": {
+"kb": 13,
+"anim": []
+},
+"interior/Shelf_Small1.glb": {
+"kb": 8,
+"anim": []
+},
+"interior/Shelf_Small2.glb": {
+"kb": 6,
+"anim": []
+},
+"interior/Shelf_Small3.glb": {
+"kb": 4,
+"anim": []
+},
+"interior/Spoon.glb": {
+"kb": 4,
+"anim": []
+},
+"interior/Stool.glb": {
+"kb": 17,
+"anim": []
+},
+"interior/Table_RoundLarge.glb": {
+"kb": 22,
+"anim": []
+},
+"interior/Table_RoundSmall.glb": {
+"kb": 18,
+"anim": []
+},
+"interior/Table_RoundSmall2.glb": {
+"kb": 24,
+"anim": []
+},
+"interior/Trashcan_Cylindric.glb": {
+"kb": 12,
+"anim": []
+},
+"interior/Trashcan_Green.glb": {
+"kb": 23,
+"anim": []
+},
+"interior/Trashcan_Large.glb": {
+"kb": 20,
+"anim": []
+},
+"interior/Trashcan_Small1.glb": {
+"kb": 11,
+"anim": []
+},
+"interior/Trashcan_Small2.glb": {
+"kb": 13,
+"anim": []
+},
+"interior/Window_Large1.glb": {
+"kb": 13,
+"anim": []
+},
+"interior/Window_Large2.glb": {
+"kb": 19,
+"anim": []
+},
+"interior/Window_Round1.glb": {
+"kb": 6,
+"anim": []
+},
+"interior/Window_Round2.glb": {
+"kb": 7,
+"anim": []
+},
+"interior/Window_Round3.glb": {
+"kb": 8,
+"anim": []
+},
+"interior/Window_Small1.glb": {
+"kb": 7,
+"anim": []
+},
+"interior/Window_Small2.glb": {
+"kb": 8,
+"anim": []
+},
+"interior/Window_Small3.glb": {
+"kb": 6,
+"anim": []
+},
+"natureza/BirchTree_1.glb": {
+"kb": 95,
+"anim": []
+},
+"natureza/BirchTree_2.glb": {
+"kb": 88,
+"anim": []
+},
+"natureza/BirchTree_3.glb": {
+"kb": 97,
+"anim": []
+},
+"natureza/BirchTree_4.glb": {
+"kb": 128,
+"anim": []
+},
+"natureza/BirchTree_5.glb": {
+"kb": 97,
+"anim": []
+},
+"natureza/BirchTree_Dead_1.glb": {
+"kb": 46,
+"anim": []
+},
+"natureza/BirchTree_Dead_2.glb": {
+"kb": 72,
+"anim": []
+},
+"natureza/BirchTree_Dead_3.glb": {
+"kb": 74,
+"anim": []
+},
+"natureza/BushBerries_1.glb": {
+"kb": 49,
+"anim": []
+},
+"natureza/Bush_1.glb": {
+"kb": 20,
+"anim": []
+},
+"natureza/Bush_2.glb": {
+"kb": 15,
+"anim": []
+},
+"natureza/CommonTree_1.glb": {
+"kb": 154,
+"anim": []
+},
+"natureza/CommonTree_2.glb": {
+"kb": 158,
+"anim": []
+},
+"natureza/CommonTree_3.glb": {
+"kb": 87,
+"anim": []
+},
+"natureza/CommonTree_4.glb": {
+"kb": 74,
+"anim": []
+},
+"natureza/CommonTree_5.glb": {
+"kb": 99,
+"anim": []
+},
+"natureza/CommonTree_Autumn_1.glb": {
+"kb": 155,
+"anim": []
+},
+"natureza/CommonTree_Autumn_2.glb": {
+"kb": 159,
+"anim": []
+},
+"natureza/CommonTree_Autumn_3.glb": {
+"kb": 87,
+"anim": []
+},
+"natureza/CommonTree_Dead_1.glb": {
+"kb": 126,
+"anim": []
+},
+"natureza/CommonTree_Dead_2.glb": {
+"kb": 126,
+"anim": []
+},
+"natureza/CommonTree_Dead_3.glb": {
+"kb": 51,
+"anim": []
+},
+"natureza/CommonTree_Dead_4.glb": {
+"kb": 54,
+"anim": []
+},
+"natureza/CommonTree_Dead_5.glb": {
+"kb": 76,
+"anim": []
+},
+"natureza/Corn_1.glb": {
+"kb": 32,
+"anim": []
+},
+"natureza/Flowers.glb": {
+"kb": 25,
+"anim": []
+},
+"natureza/Grass.glb": {
+"kb": 12,
+"anim": []
+},
+"natureza/Grass_2.glb": {
+"kb": 12,
+"anim": []
+},
+"natureza/Grass_Short.glb": {
+"kb": 12,
+"anim": []
+},
+"natureza/Lilypad.glb": {
+"kb": 23,
+"anim": []
+},
+"natureza/PineTree_1.glb": {
+"kb": 103,
+"anim": []
+},
+"natureza/PineTree_2.glb": {
+"kb": 91,
+"anim": []
+},
+"natureza/PineTree_3.glb": {
+"kb": 128,
+"anim": []
+},
+"natureza/PineTree_4.glb": {
+"kb": 92,
+"anim": []
+},
+"natureza/PineTree_5.glb": {
+"kb": 85,
+"anim": []
+},
+"natureza/PineTree_Autumn_1.glb": {
+"kb": 104,
+"anim": []
+},
+"natureza/PineTree_Autumn_2.glb": {
+"kb": 92,
+"anim": []
+},
+"natureza/PineTree_Autumn_3.glb": {
+"kb": 129,
+"anim": []
+},
+"natureza/Plant_1.glb": {
+"kb": 17,
+"anim": []
+},
+"natureza/Plant_2.glb": {
+"kb": 15,
+"anim": []
+},
+"natureza/Plant_3.glb": {
+"kb": 34,
+"anim": []
+},
+"natureza/Plant_4.glb": {
+"kb": 28,
+"anim": []
+},
+"natureza/Plant_5.glb": {
+"kb": 36,
+"anim": []
+},
+"natureza/Rock_1.glb": {
+"kb": 5,
+"anim": []
+},
+"natureza/Rock_2.glb": {
+"kb": 5,
+"anim": []
+},
+"natureza/Rock_3.glb": {
+"kb": 5,
+"anim": []
+},
+"natureza/Rock_4.glb": {
+"kb": 8,
+"anim": []
+},
+"natureza/Rock_5.glb": {
+"kb": 6,
+"anim": []
+},
+"natureza/Rock_6.glb": {
+"kb": 7,
+"anim": []
+},
+"natureza/Rock_7.glb": {
+"kb": 6,
+"anim": []
+},
+"natureza/Rock_Moss_1.glb": {
+"kb": 6,
+"anim": []
+},
+"natureza/Rock_Moss_2.glb": {
+"kb": 6,
+"anim": []
+},
+"natureza/Rock_Moss_3.glb": {
+"kb": 6,
+"anim": []
+},
+"natureza/Rock_Moss_4.glb": {
+"kb": 9,
+"anim": []
+},
+"natureza/Simple_Bush1.glb": {
+"kb": 7,
+"anim": []
+},
+"natureza/Simple_Bush2.glb": {
+"kb": 13,
+"anim": []
+},
+"natureza/Simple_Bush3.glb": {
+"kb": 8,
+"anim": []
+},
+"natureza/Simple_Grass1.glb": {
+"kb": 6,
+"anim": []
+},
+"natureza/Simple_Grass2.glb": {
+"kb": 11,
+"anim": []
+},
+"natureza/Simple_Grass3.glb": {
+"kb": 11,
+"anim": []
+},
+"natureza/Simple_Rock1.glb": {
+"kb": 4,
+"anim": []
+},
+"natureza/Simple_Rock2.glb": {
+"kb": 4,
+"anim": []
+},
+"natureza/Simple_Rock3.glb": {
+"kb": 3,
+"anim": []
+},
+"natureza/Simple_Tree1.glb": {
+"kb": 26,
+"anim": []
+},
+"natureza/Simple_Tree2.glb": {
+"kb": 32,
+"anim": []
+},
+"natureza/Simple_Tree3.glb": {
+"kb": 16,
+"anim": []
+},
+"natureza/Simple_Tree4.glb": {
+"kb": 48,
+"anim": []
+},
+"natureza/TreeStump.glb": {
+"kb": 16,
+"anim": []
+},
+"natureza/TreeStump_Moss.glb": {
+"kb": 15,
+"anim": []
+},
+"natureza/Wheat.glb": {
+"kb": 23,
+"anim": []
+},
+"natureza/Willow_1.glb": {
+"kb": 106,
+"anim": []
+},
+"natureza/Willow_2.glb": {
+"kb": 147,
+"anim": []
+},
+"natureza/Willow_3.glb": {
+"kb": 57,
+"anim": []
+},
+"natureza/Willow_Dead_1.glb": {
+"kb": 62,
+"anim": []
+},
+"natureza/Willow_Dead_2.glb": {
+"kb": 99,
+"anim": []
+},
+"natureza/Willow_Dead_3.glb": {
+"kb": 22,
+"anim": []
+},
+"natureza/WoodLog.glb": {
+"kb": 28,
+"anim": []
+},
+"natureza/WoodLog_Moss.glb": {
+"kb": 39,
+"anim": []
+},
+"objetos/Axe.glb": {
+"kb": 15,
+"anim": []
+},
+"objetos/Backpack.glb": {
+"kb": 97,
+"anim": []
+},
+"objetos/Battery_Big.glb": {
+"kb": 8,
+"anim": []
+},
+"objetos/BearTrap_Open.glb": {
+"kb": 34,
+"anim": []
+},
+"objetos/Bonfire.glb": {
+"kb": 34,
+"anim": []
+},
+"objetos/Bonfire_Fire.glb": {
+"kb": 42,
+"anim": []
+},
+"objetos/Compass_Open.glb": {
+"kb": 39,
+"anim": []
+},
+"objetos/FirstAidKit.glb": {
+"kb": 43,
+"anim": []
+},
+"objetos/FlareGun.glb": {
+"kb": 30,
+"anim": []
+},
+"objetos/GasCan.glb": {
+"kb": 44,
+"anim": []
+},
+"objetos/Knife.glb": {
+"kb": 28,
+"anim": []
+},
+"objetos/Match_Fire.glb": {
+"kb": 7,
+"anim": []
+},
+"objetos/Matchbox.glb": {
+"kb": 25,
+"anim": []
+},
+"objetos/Phone.glb": {
+"kb": 14,
+"anim": []
+},
+"objetos/Pot.glb": {
+"kb": 19,
+"anim": []
+},
+"objetos/PropaneTank.glb": {
+"kb": 31,
+"anim": []
+},
+"objetos/Radio.glb": {
+"kb": 28,
+"anim": []
+},
+"objetos/Raft.glb": {
+"kb": 57,
+"anim": []
+},
+"objetos/Shovel.glb": {
+"kb": 31,
+"anim": []
+},
+"objetos/Tent.glb": {
+"kb": 43,
+"anim": []
+},
+"objetos/Torch.glb": {
+"kb": 36,
+"anim": []
+},
+"objetos/Trashcan.glb": {
+"kb": 40,
+"anim": []
+},
+"personagens/Mannequin_Medium.glb": {
+"kb": 410,
+"anim": []
+},
+"rua/Sign_NoParking.glb": {
+"kb": 17,
+"anim": []
+},
+"rua/Sign_Stop.glb": {
+"kb": 21,
+"anim": []
+},
+"rua/Sign_Triangle.glb": {
+"kb": 6,
+"anim": []
+},
+"rua/Street_3Way.glb": {
+"kb": 34,
+"anim": []
+},
+"rua/Street_3Way_2.glb": {
+"kb": 12,
+"anim": []
+},
+"rua/Street_4Way.glb": {
+"kb": 45,
+"anim": []
+},
+"rua/Street_4Way_2.glb": {
+"kb": 14,
+"anim": []
+},
+"rua/Street_Bridge.glb": {
+"kb": 52,
+"anim": []
+},
+"rua/Street_Bridge_Ramp.glb": {
+"kb": 81,
+"anim": []
+},
+"rua/Street_Bridge_Underpass.glb": {
+"kb": 44,
+"anim": []
+},
+"rua/Street_Bridge_Water.glb": {
+"kb": 53,
+"anim": []
+},
+"rua/Street_Bridge_WaterRamp.glb": {
+"kb": 55,
+"anim": []
+},
+"rua/Street_Curve.glb": {
+"kb": 15,
+"anim": []
+},
+"rua/Street_Deadend.glb": {
+"kb": 17,
+"anim": []
+},
+"rua/Street_Elevated.glb": {
+"kb": 20,
+"anim": []
+},
+"rua/Street_Elevated_Ramp.glb": {
+"kb": 22,
+"anim": []
+},
+"rua/Street_Empty.glb": {
+"kb": 2,
+"anim": []
+},
+"rua/Street_Empty_Water.glb": {
+"kb": 3,
+"anim": []
+},
+"rua/Street_Straight.glb": {
+"kb": 19,
+"anim": []
+},
+"rua/Streetlight_Double.glb": {
+"kb": 132,
+"anim": []
+},
+"rua/Streetlight_Single.glb": {
+"kb": 57,
+"anim": []
+},
+"rua/Streetlight_Triple.glb": {
+"kb": 149,
+"anim": []
+},
+"rua/TrafficLight.glb": {
+"kb": 26,
+"anim": []
+},
+"rua/TrafficLight_2.glb": {
+"kb": 29,
+"anim": []
+},
+"vila/Bag.glb": {
+"kb": 7,
+"anim": []
+},
+"vila/Bag_Open.glb": {
+"kb": 10,
+"anim": []
+},
+"vila/Bags.glb": {
+"kb": 20,
+"anim": []
+},
+"vila/Barrel.glb": {
+"kb": 51,
+"anim": []
+},
+"vila/Bell.glb": {
+"kb": 19,
+"anim": []
+},
+"vila/Bell_Tower.glb": {
+"kb": 711,
+"anim": []
+},
+"vila/Bench_1.glb": {
+"kb": 21,
+"anim": []
+},
+"vila/Bench_2.glb": {
+"kb": 16,
+"anim": []
+},
+"vila/Blacksmith.glb": {
+"kb": 655,
+"anim": []
+},
+"vila/Bonfire.glb": {
+"kb": 29,
+"anim": []
+},
+"vila/Bonfire_Lit.glb": {
+"kb": 48,
+"anim": []
+},
+"vila/Cart.glb": {
+"kb": 106,
+"anim": []
+},
+"vila/Cauldron.glb": {
+"kb": 45,
+"anim": []
+},
+"vila/Crate.glb": {
+"kb": 34,
+"anim": []
+},
+"vila/Door_Round.glb": {
+"kb": 55,
+"anim": []
+},
+"vila/Door_Straight.glb": {
+"kb": 55,
+"anim": []
+},
+"vila/Fence.glb": {
+"kb": 12,
+"anim": []
+},
+"vila/Gazebo.glb": {
+"kb": 50,
+"anim": []
+},
+"vila/Hay.glb": {
+"kb": 26,
+"anim": []
+},
+"vila/House_1.glb": {
+"kb": 400,
+"anim": []
+},
+"vila/House_2.glb": {
+"kb": 497,
+"anim": []
+},
+"vila/House_3.glb": {
+"kb": 252,
+"anim": []
+},
+"vila/House_4.glb": {
+"kb": 200,
+"anim": []
+},
+"vila/Inn.glb": {
+"kb": 457,
+"anim": []
+},
+"vila/MarketStand_1.glb": {
+"kb": 83,
+"anim": []
+},
+"vila/MarketStand_2.glb": {
+"kb": 62,
+"anim": []
+},
+"vila/Mill.glb": {
+"kb": 562,
+"anim": []
+},
+"vila/Package_1.glb": {
+"kb": 14,
+"anim": []
+},
+"vila/Package_2.glb": {
+"kb": 15,
+"anim": []
+},
+"vila/Path_Square.glb": {
+"kb": 19,
+"anim": []
+},
+"vila/Path_Straight.glb": {
+"kb": 37,
+"anim": []
+},
+"vila/Rock_1.glb": {
+"kb": 3,
+"anim": []
+},
+"vila/Rock_2.glb": {
+"kb": 4,
+"anim": []
+},
+"vila/Rock_3.glb": {
+"kb": 5,
+"anim": []
+},
+"vila/Sawmill.glb": {
+"kb": 302,
+"anim": []
+},
+"vila/Sawmill_saw.glb": {
+"kb": 21,
+"anim": []
+},
+"vila/Smoke.glb": {
+"kb": 23,
+"anim": []
+},
+"vila/Stable.glb": {
+"kb": 434,
+"anim": []
+},
+"vila/Stairs.glb": {
+"kb": 13,
+"anim": []
+},
+"vila/Well.glb": {
+"kb": 107,
+"anim": []
+},
+"vila/Window_1.glb": {
+"kb": 7,
+"anim": []
+},
+"vila/Window_2.glb": {
+"kb": 9,
+"anim": []
+},
+"vila/Window_3.glb": {
+"kb": 9,
+"anim": []
+},
+"vila/Window_4.glb": {
+"kb": 10,
+"anim": []
+}
+}
