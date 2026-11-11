@@ -160,7 +160,31 @@ def _ativo(repo, canal):
     return canal in ativos
 
 
+TENTATIVAS = int(os.environ.get("CANAIS_TENTATIVAS", "3"))
+ORCAMENTO_MIN = int(os.environ.get("CANAIS_ORCAMENTO_MIN", "170"))  # tempo total da execucao (job tem 200 min)
+
+
 def _rodar(canal):
+    """Tenta produzir ate TENTATIVAS vezes na MESMA execucao (REGRA do Pedro, 11/11: "aumente o numero de
+    tentativas"). A voz fica guardada entre as tentativas, entao repetir nao gasta narracao a mais."""
+    import time
+    inicio = time.time()
+    res = ""
+    for n in range(1, TENTATIVAS + 1):
+        resto = ORCAMENTO_MIN * 60 - (time.time() - inicio)
+        if n > 1 and resto < 25 * 60:
+            res += f"\n(sem tempo para a tentativa {n}: fica para a proxima execucao do dia)"
+            break
+        res = _rodar_uma(canal, int(resto))
+        if "FALHOU" not in res or "roteiro com erro" in res or "POUCA MEMORIA" in res:
+            break
+        print(f"[{canal}] tentativa {n} de {TENTATIVAS} falhou; tento de novo em 1 minuto", flush=True)
+        print(res[-1500:], flush=True)
+        time.sleep(60)
+    return res
+
+
+def _rodar_uma(canal, resto_s=None):
     """Produz e agenda a proxima serie do canal. Devolve um resumo curto em texto."""
     repo = _repo()
     if not _ativo(repo, canal):
@@ -197,6 +221,8 @@ def _rodar(canal):
         # repescagem (2a tentativa do dia, canais.yml): so produz o formato que tiver menos de 2 dias agendados
         cmd += ["--fila", "2"]
     limite = int(os.environ.get("CANAIS_TIMEOUT", "3300"))
+    if resto_s:
+        limite = max(600, min(limite, resto_s - 120))
     try:
         r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, encoding="utf-8", errors="replace",
                            timeout=limite)
@@ -290,6 +316,10 @@ def estoque(repo, canal, linhas):
 
 def alertar(canal, linhas):
     """Grava o aviso em /tmp/canais-alerta.txt; o canais.yml abre (ou atualiza) uma issue e o GitHub manda e-mail."""
+    if not os.environ.get("CANAIS_ULTIMA"):
+        # REGRA do Pedro (11/11): e-mail so quando todas as tentativas do dia acabaram e o video nao subiu.
+        # Antes disso, video barrado nao vira issue (a proxima execucao do dia tenta de novo); estoque baixo continua.
+        linhas = [x for x in linhas if not any(m in x for m in ("NAO SUBIU", "VOZ FALHOU", "HORARIO VAZIO"))]
     if not linhas:
         return
     with open(os.path.join(tempfile.gettempdir(), "canais-alerta.txt"), "a", encoding="utf-8") as f:
@@ -422,4 +452,7 @@ if __name__ == "__main__":
     # no GitHub Actions, falha vira X vermelho e o GitHub manda e-mail ao Pedro. So falha quando o programa do canal
     # falhou de verdade: video barrado mas trocado pelo substituto nao e falha (vira aviso na issue, ver alertar).
     if any(m in texto for m in ("FALHOU", "NAO RODEI")):
-        sys.exit(1)
+        open(os.path.join(tempfile.gettempdir(), "canais-falhou.txt"), "w").write(texto)  # vai para a Release "logs"
+        if os.environ.get("CANAIS_ULTIMA") or qual in ("teste", "metricas", "capas-yb"):
+            sys.exit(1)  # ultima chance do dia: X vermelho e e-mail ao Pedro
+        print("FALHOU NESTA EXECUCAO, mas ainda ha tentativa hoje: fica verde, sem e-mail (REGRA do Pedro, 11/11)")
