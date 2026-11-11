@@ -47,10 +47,20 @@ window.pessoaFoto = async (spec, preset) => {
   cam.position.set(0, h * 0.55, h * 1.7); cam.lookAt(0, h * 0.5, 0);
   comp.render(); return cv.toDataURL('image/jpeg', 0.9).split(',')[1];
 };
-// retrato de uma criatura
-window.criaturaFoto = async (tipo, opts, preset) => {
+// personagem numa animação qualquer (teste do corpo inteiriço), vista 3/4
+window.poseFoto = async (spec, anim, t) => {
+  novaCena('dia');
+  const a = await pessoa(spec); a.obj.rotation.y = 0.5; scene.add(a.obj); a.acao(anim); a.setTime(t || 0.6);
+  const h = a.altura || 1.7;
+  cam.position.set(h * 0.9, h * 0.8, h * 1.7); cam.lookAt(0, h * 0.42, 0);
+  comp.render(); return cv.toDataURL('image/jpeg', 0.9).split(',')[1];
+};
+// retrato de uma criatura (acao opcional: andando)
+window.criaturaFoto = async (tipo, opts, preset, acao, t) => {
   novaCena(preset || 'noite');
-  const c = await criatura(tipo, opts || {}); if (c.obj) { c.obj.rotation.y = 0; scene.add(c.obj); } if (c.setTime) c.setTime(1.0);
+  const c = await criatura(tipo, opts || {}); if (c.obj) { c.obj.rotation.y = 0.35; scene.add(c.obj); }
+  if (acao && c.acao) c.acao(acao);
+  if (c.setTime) c.setTime(t || 1.0);
   const h = c.altura || 2.2;
   cam.position.set(0, h * 0.5, h * 1.5 + 1); cam.lookAt(0, h * 0.45, 0);
   comp.render(); return cv.toDataURL('image/jpeg', 0.9).split(',')[1];

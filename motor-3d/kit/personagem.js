@@ -10,6 +10,7 @@
 // Tudo determinístico: nenhum relógio, nenhum Math.random sem semente.
 import * as THREE from 'three';
 import { instanciar, animacoesManequim } from './modelos.js';
+import { montarHumanoide, grupoEm } from './corpo.js';
 
 // ---------------- RNG com semente ----------------
 function rng(sem) {
@@ -202,16 +203,17 @@ function fazerChapeu(tipo, raioCabeca = 0.16) {
 
 // óculos/mochila/avental presos onde fizer sentido
 function porAcessorio(tipo, head, chest, raioCabeca = 0.16) {
+  // head = grupo no centro da cabeca; chest = grupo no osso chest (metros, +Z frente)
   const R = raioCabeca;
   if (tipo === 'oculos' && head) {
     const m = new THREE.MeshStandardMaterial({ color: 0x1a1a1a, roughness: 0.4 });
     for (const dx of [-R * 0.5, R * 0.5]) { const o = new THREE.Mesh(new THREE.TorusGeometry(R * 0.33, R * 0.06, 8, 16), m); o.position.set(dx, 0.0, R * 1.02); head.add(o); }
   } else if (tipo === 'mochila' && chest) {
     const m = new THREE.Mesh(new THREE.BoxGeometry(0.26, 0.34, 0.16), new THREE.MeshStandardMaterial({ color: 0x3a5a3a, roughness: 0.9 }));
-    m.position.set(0, 0.0, -0.18); chest.add(m);
+    m.position.set(0, 0.05, -0.2); chest.add(m);
   } else if (tipo === 'avental' && chest) {
     const m = new THREE.Mesh(new THREE.BoxGeometry(0.3, 0.42, 0.06), new THREE.MeshStandardMaterial({ color: 0x8a6a4a, roughness: 1 }));
-    m.position.set(0, -0.05, 0.16); chest.add(m);
+    m.position.set(0, -0.12, 0.13); chest.add(m);
   } else if ((tipo === 'bone' || tipo === 'chapeu_palha' || tipo === 'gorro') && head) {
     head.add(fazerChapeu(tipo, R));
   }
@@ -222,9 +224,9 @@ function fazerObjeto(nome) {
   const g = new THREE.Group(); let luz = null;
   const metal = new THREE.MeshStandardMaterial({ color: 0x2a2a2e, roughness: 0.5, metalness: 0.2 });
   if (nome === 'lanterna') {
-    const corpo = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.035, 0.16, 12), metal); corpo.rotation.z = Math.PI / 2; g.add(corpo);
-    const lente = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.035, 0.04, 16), new THREE.MeshStandardMaterial({ color: 0xfff3c0, emissive: 0xffe8a0, emissiveIntensity: 2.4 })); lente.rotation.z = Math.PI / 2; lente.position.x = 0.1; g.add(lente);
-    luz = new THREE.SpotLight(0xffe2b0, 55, 24, 0.6, 0.5, 1.4); luz.position.set(0.12, 0, 0); luz.target.position.set(3, -0.2, 0); g.add(luz, luz.target); luz.castShadow = true; luz.shadow.mapSize.set(1024, 1024);
+    const corpo = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.035, 0.16, 12), metal); corpo.rotation.x = Math.PI / 2; g.add(corpo);
+    const lente = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.035, 0.04, 16), new THREE.MeshStandardMaterial({ color: 0xfff3c0, emissive: 0xffe8a0, emissiveIntensity: 2.4 })); lente.rotation.x = Math.PI / 2; lente.position.z = 0.1; g.add(lente);
+    luz = new THREE.SpotLight(0xffe2b0, 55, 24, 0.6, 0.5, 1.4); luz.position.set(0, 0, 0.12); luz.target.position.set(0, -0.4, 3); g.add(luz, luz.target); luz.castShadow = true; luz.shadow.mapSize.set(1024, 1024);
   } else if (nome === 'tocha') {
     const cabo = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.025, 0.4, 10), new THREE.MeshStandardMaterial({ color: 0x4a3420, roughness: 1 })); g.add(cabo);
     const chama = new THREE.Mesh(new THREE.SphereGeometry(0.07, 12, 10), new THREE.MeshStandardMaterial({ color: 0xffb347, emissive: 0xff7a1a, emissiveIntensity: 3 })); chama.position.y = 0.24; chama.scale.y = 1.6; g.add(chama);
@@ -240,113 +242,70 @@ function fazerObjeto(nome) {
   return { obj: g, luz };
 }
 
-// ---------------- corpo liso preso aos ossos ----------------
+// ---------------- corpo liso e INTEIRIÇO (kit/corpo.js) ----------------
 function montarCorpo(obj, spec) {
-  // esconde as malhas skinned do manequim; mantém os ossos
-  obj.traverse(m => { if (m.isMesh || m.isSkinnedMesh) m.visible = false; });
+  const f = { magro: 0.84, medio: 1.0, forte: 1.18, gordo: 1.42, idoso: 0.95, crianca: 0.92 }[spec.corpo] || 1;
+  const pele = new THREE.MeshStandardMaterial({ color: new THREE.Color(spec.pele), roughness: 0.75 });
+  const camisa = new THREE.MeshStandardMaterial({ color: new THREE.Color(spec.camisa), roughness: 0.75 });
+  const calca = new THREE.MeshStandardMaterial({ color: new THREE.Color(spec.calca), roughness: 0.75 });
+  const sapato = new THREE.MeshStandardMaterial({ color: ['medieval', 'tunica', 'chines', 'soldado'].includes(spec.roupa) ? 0x4a3524 : 0xf2f2f2, roughness: 0.75 });
+  if (spec.roupa === 'enfermeira') camisa.color.set('#eef2f6');
+  if (spec.roupa === 'policial') camisa.color.set('#1e2a44');
+  if (spec.roupa === 'guarda') camisa.color.set('#4a5e3a');
+  if (spec.roupa === 'soldado') camisa.color.set('#6a6350');
+  const mangaCurta = spec.mangaCurta && !['jaqueta', 'moletom', 'medieval', 'tunica', 'soldado', 'chines', 'enfermeira', 'policial', 'guarda'].includes(spec.roupa);
+  const escalaH = spec.altura / 1.7;
+  const R = 0.15 * (spec.corpo === 'crianca' ? 1.05 : 1) * Math.max(0.85, Math.min(1.1, escalaH));
 
-  const B = n => acharOsso(obj, n);
-  const hips = B('hips'), spine = B('spine'), chest = B('chest'), head = B('head');
-  const uar = B('upperarmr'), lar = B('lowerarmr'), wrr = B('wristr'), hnr = B('handr');
-  const ual = B('upperarml'), lal = B('lowerarml'), wrl = B('wristl'), hnl = B('handl');
-  const ulr = B('upperlegr'), llr = B('lowerlegr'), ftr = B('footr');
-  const ull = B('upperlegl'), lll = B('lowerlegl'), ftl = B('footl');
+  const c = montarHumanoide(obj, {
+    mat: { pele, camisa, calca, sapato, manga: mangaCurta ? 'curta' : 'longa' },
+    largura: 0.34 * f * escalaH, profundidade: 0.34 * f * escalaH * (spec.corpo === 'gordo' ? 0.8 : 0.6),
+    braco: 0.05 * Math.sqrt(f) * escalaH, perna: 0.064 * Math.sqrt(f) * escalaH, cabeca: R,
+  });
+  const { head, chest, hips } = c;
 
-  const fatorCorpo = { magro: 0.82, medio: 1.0, forte: 1.2, gordo: 1.45, idoso: 0.9, crianca: 0.9 }[spec.corpo] || 1;
-  const pele = new THREE.MeshStandardMaterial({ color: new THREE.Color(spec.pele), roughness: 0.78 });
-  const camisa = new THREE.MeshStandardMaterial({ color: new THREE.Color(spec.camisa), roughness: 0.8 });
-  const calca = new THREE.MeshStandardMaterial({ color: new THREE.Color(spec.calca), roughness: 0.85 });
-  const tenisMat = new THREE.MeshStandardMaterial({ color: spec.roupa === 'medieval' || spec.roupa === 'tunica' ? 0x4a3524 : 0xf2f2f2, roughness: 0.7 });
-  const mangaCurta = spec.mangaCurta && !['jaqueta', 'moletom', 'medieval', 'tunica', 'soldado', 'chines'].includes(spec.roupa);
-
-  // tronco: UMA peça presa ao hips que vai do quadril até o pescoço (cobre o vão do spine/chest).
-  // Medimos a distância real hips->head no mundo (pose de repouso) e fazemos o tronco com esse comprimento.
-  obj.updateMatrixWorld(true);
-  const pHips = hips ? hips.getWorldPosition(new THREE.Vector3()) : new THREE.Vector3();
-  const pHead = head ? head.getWorldPosition(new THREE.Vector3()) : pHips.clone().add(new THREE.Vector3(0, 0.6, 0));
-  const escalaRaiz = obj.scale.y || 1;
-  const altTronco = Math.max(0.2, (pHead.y - pHips.y) / escalaRaiz * 0.92); // em unidades locais do hips
-  if (hips) {
-    const larg = 0.34 * fatorCorpo, prof = 0.2 * fatorCorpo;
-    // caixa arredondada: usamos uma cápsula achatada (box com cantos) para o tronco
-    const t = new THREE.Mesh(new THREE.BoxGeometry(larg, altTronco, prof), camisa);
-    t.position.set(0, altTronco * 0.5, 0); t.castShadow = true; hips.add(t);
-    // barriga/peito arredondados nas pontas
-    const topo = new THREE.Mesh(new THREE.SphereGeometry(larg * 0.5, 14, 10), camisa); topo.scale.set(1, 0.6, prof / larg); topo.position.y = altTronco; hips.add(topo);
-    const base = new THREE.Mesh(new THREE.BoxGeometry(0.3 * fatorCorpo, 0.14, 0.18 * fatorCorpo), calca); base.position.y = 0.04; base.castShadow = true; hips.add(base);
-  }
-  // ombros: esferas que fecham a junta onde o braço sai
-  for (const b of [uar, ual]) if (b) { const s = new THREE.Mesh(new THREE.SphereGeometry(0.08 * Math.sqrt(fatorCorpo), 12, 10), camisa); s.castShadow = true; b.add(s); }
-  // coxas: esferas no quadril onde a perna sai
-  for (const b of [ulr, ull]) if (b) { const s = new THREE.Mesh(new THREE.SphereGeometry(0.085 * Math.sqrt(fatorCorpo), 12, 10), calca); s.castShadow = true; b.add(s); }
-  if (spec.corpo === 'idoso' && spine) spine.rotation.x += 0.25;
-
-  // cabeça: esfera levemente achatada (1,3x a real ~ raio 0.16). pescoço curto.
-  let rostoMesh = null, raioCabeca = 0.16 * (spec.corpo === 'crianca' ? 0.92 : 1);
-  if (head) {
-    const bola = new THREE.Mesh(new THREE.SphereGeometry(raioCabeca, 24, 20), pele);
-    bola.scale.y = 0.94; bola.position.y = raioCabeca * 0.95; bola.castShadow = true; head.add(bola);
-    const pescoco = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.07, 0.08, 10), pele); pescoco.position.y = 0.0; head.add(pescoco);
-    // rosto: plano na FRENTE da bola, no MEIO da altura; depthTest off -> sempre por cima da esfera
+  // rosto, cabelo, chapéu, barba e acessórios num grupo na cabeça (metros, +Z = frente)
+  let rostoMesh = null, cab = null;
+  if (head && c.centroCabeca) {
+    cab = grupoEm(head, c.centroCabeca);
     rostoMesh = new THREE.Mesh(
-      new THREE.PlaneGeometry(raioCabeca * 2.0, raioCabeca * 2.0),
+      new THREE.PlaneGeometry(R * 1.95, R * 1.95),
       new THREE.MeshBasicMaterial({ map: texturaRosto(spec.rostoEstilo, spec.rosto, spec), transparent: true, depthWrite: false, depthTest: false, side: THREE.FrontSide })
     );
-    rostoMesh.position.set(0, raioCabeca * 0.95, raioCabeca * 0.92); rostoMesh.renderOrder = 10; head.add(rostoMesh);
-    // cabelo/chapéu/barba
-    const cabWrap = new THREE.Group(); cabWrap.position.y = raioCabeca * 0.9; head.add(cabWrap);
-    cabWrap.add(fazerCabelo(spec.cabelo, spec.cabelo_cor, raioCabeca));
-    if (spec.chapeu) cabWrap.add(fazerChapeu(spec.chapeu, raioCabeca));
-    if (spec.barba) { const barba = new THREE.Mesh(new THREE.SphereGeometry(raioCabeca * 0.8, 16, 10, 0, 6.3, Math.PI * 0.55, Math.PI * 0.5), new THREE.MeshStandardMaterial({ color: spec.cabelo_cor, roughness: 1 })); barba.position.set(0, -raioCabeca * 0.25, raioCabeca * 0.2); cabWrap.add(barba); }
-    if (spec.acessorio) porAcessorio(spec.acessorio, cabWrap, chest, raioCabeca);
-  }
-
-  // braços: cápsulas (manga curta => metade de cima camisa, resto pele)
-  const rA = 0.07 * Math.sqrt(fatorCorpo);
-  if (uar) capsulaOsso(uar, lar, mangaCurta ? pele : camisa, { r: rA });
-  if (lar) capsulaOsso(lar, wrr || hnr, pele, { r: rA * 0.9 });
-  if (ual) capsulaOsso(ual, lal, mangaCurta ? pele : camisa, { r: rA });
-  if (lal) capsulaOsso(lal, wrl || hnl, pele, { r: rA * 0.9 });
-  // mãos
-  for (const h of [hnr, hnl]) if (h) { const mo = new THREE.Mesh(new THREE.SphereGeometry(rA * 1.3, 12, 10), pele); mo.castShadow = true; h.add(mo); }
-  // pernas
-  const rP = 0.075 * Math.sqrt(fatorCorpo);
-  if (ulr) capsulaOsso(ulr, llr, calca, { r: rP });
-  if (llr) capsulaOsso(llr, ftr, calca, { r: rP * 0.85 });
-  if (ull) capsulaOsso(ull, lll, calca, { r: rP });
-  if (lll) capsulaOsso(lll, ftl, calca, { r: rP * 0.85 });
-  // tênis (caixa arredondada)
-  for (const f of [ftr, ftl]) if (f) { const s = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.07, 0.2), tenisMat); s.position.set(0.02, 0, 0.04); s.castShadow = true; f.add(s); }
-
-  // roupas especiais por cima (vestido/saia/túnica/jaqueta/capuz)
-  if (spine || hips) {
-    const base = chest || spine;
-    if (spec.roupa === 'vestido' || spec.roupa === 'tunica' || spec.roupa === 'medieval' || spec.roupa === 'chines') {
-      const corV = spec.roupa === 'medieval' ? 0x5a4a6a : spec.roupa === 'chines' ? 0xb03a2a : spec.camisa;
-      const saia = new THREE.Mesh(new THREE.ConeGeometry(0.26 * fatorCorpo, 0.6, 16, 1, true), new THREE.MeshStandardMaterial({ color: corV, roughness: 0.85, side: THREE.DoubleSide }));
-      if (hips) { saia.position.y = -0.2; hips.add(saia); }
-    } else if (spec.roupa === 'saia') {
-      const saia = new THREE.Mesh(new THREE.ConeGeometry(0.22 * fatorCorpo, 0.3, 16, 1, true), new THREE.MeshStandardMaterial({ color: spec.calca, roughness: 0.85, side: THREE.DoubleSide }));
-      if (hips) { saia.position.y = -0.05; hips.add(saia); }
-    } else if (spec.roupa === 'moletom' && head) {
-      // capuz nas costas
-      if (chest) { const capuz = new THREE.Mesh(new THREE.SphereGeometry(0.16, 14, 10, 0, 6.3, 0, Math.PI * 0.6), camisa); capuz.position.set(0, 0.26, -0.08); chest.add(capuz); }
+    rostoMesh.position.set(0, 0, R * 0.93); rostoMesh.renderOrder = 10; cab.add(rostoMesh);
+    cab.add(fazerCabelo(spec.cabelo, spec.cabelo_cor, R));
+    if (spec.chapeu) cab.add(fazerChapeu(spec.chapeu, R));
+    if (spec.barba) {
+      const barba = new THREE.Mesh(new THREE.SphereGeometry(R * 0.82, 16, 10, 0, 6.3, Math.PI * 0.55, Math.PI * 0.45), new THREE.MeshStandardMaterial({ color: spec.cabelo_cor, roughness: 1 }));
+      barba.position.set(0, -R * 0.22, R * 0.18); cab.add(barba);
     }
-    // uniforme: cor fixa + detalhe
-    if (spec.roupa === 'enfermeira') camisa.color.set('#eef2f6');
-    if (spec.roupa === 'policial') camisa.color.set('#1e2a44');
-    if (spec.roupa === 'guarda') camisa.color.set('#3f5a3a');
-    if (spec.roupa === 'soldado') camisa.color.set('#6a6350');
   }
+  if (spec.acessorio) porAcessorio(spec.acessorio, cab, chest && grupoEm(chest, c.pontos.chest), R);
 
-  return { head, chest, maoDir: hnr, rostoMesh, raioCabeca };
+  // roupas por cima: vestido/túnica/saia (do quadril para baixo), capuz do moletom
+  if (hips && c.pontos.hips) {
+    const yq = c.pontos.hips.y, larg = 0.34 * f * escalaH;
+    let corV = null, alt = 0;
+    if (['vestido', 'tunica', 'medieval', 'chines', 'enfermeira'].includes(spec.roupa)) { corV = spec.roupa === 'medieval' ? 0x5a4a6a : spec.roupa === 'chines' ? 0xb03a2a : camisa.color; alt = spec.roupa === 'vestido' ? yq * 0.82 : yq * 0.62; }
+    else if (spec.roupa === 'saia') { corV = calca.color; alt = yq * 0.42; }
+    if (corV) {
+      const saia = new THREE.Mesh(new THREE.CylinderGeometry(larg * 0.52, larg * 0.82, alt, 18, 1, true), new THREE.MeshStandardMaterial({ color: corV, roughness: 0.75, side: THREE.DoubleSide }));
+      saia.position.set(c.pontos.hips.x, yq - alt / 2 + 0.05, c.pontos.hips.z); saia.castShadow = true; hips.attach(saia);
+    }
+  }
+  if (spec.roupa === 'moletom' && chest && c.pontos.chest) {
+    const capuz = new THREE.Mesh(new THREE.SphereGeometry(R * 0.95, 14, 10, 0, 6.3, 0, Math.PI * 0.6), camisa);
+    capuz.position.copy(c.centroCabeca || c.pontos.chest).add(new THREE.Vector3(0, -R * 0.7, -R * 0.75)); chest.attach(capuz);
+  }
+  const maoR = c.maos.r;
+  return { head, chest, maoDir: maoR && maoR.osso, maoCentro: maoR && maoR.centro, rostoMesh, raioCabeca: R };
 }
 
 // ---------------- pessoa ----------------
 export async function pessoa(specBruto = {}) {
   const spec = resolverSpec(specBruto);
   const { obj } = await instanciar('personagens/Mannequin_Medium', { altura: spec.altura });
-  const { head, chest, maoDir, rostoMesh, raioCabeca } = montarCorpo(obj, spec);
+  const { head, chest, maoDir, maoCentro, rostoMesh, raioCabeca } = montarCorpo(obj, spec);
 
   const mixer = new THREE.AnimationMixer(obj);
   let acaoAtual = null;
@@ -365,7 +324,7 @@ export async function pessoa(specBruto = {}) {
       nova.play(); acaoAtual = nova; return ator;
     },
     rosto(exp) { expAtual = exp; if (rostoMesh) rostoMesh.material.map = texturaRosto(spec.rostoEstilo, exp, spec); return ator; },
-    segurar(nome) { if (!maoDir || !nome) return ator; const { obj: o } = fazerObjeto(nome); maoDir.add(o); return ator; },
+    segurar(nome) { if (!maoDir || !nome) return ator; const { obj: o } = fazerObjeto(nome); o.position.copy(maoCentro || maoDir.getWorldPosition(new THREE.Vector3())); maoDir.attach(o); return ator; },
     setTime(t) { mixer.setTime(Math.max(0, t)); return ator; },
   };
   ator.acao(spec.acao || 'Idle_A');
