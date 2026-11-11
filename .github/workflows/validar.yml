@@ -6,9 +6,9 @@ name: Fiscal dos roteiros
 on:
   push:
     branches: [producao]
-    paths: ["*/stories/**", "hora-muerta/scripts/engine.html", "hora-muerta/scripts/pecas/**", "motor-en/validar_roteiros.py"]
+    paths: ["*/stories/**", "hora-muerta/scripts/engine.html", "hora-muerta/scripts/pecas/**", "motor-en/**", "hora-muerta/scripts/*.py"]
   pull_request:
-    paths: ["*/stories/**"]
+    paths: ["*/stories/**", "motor-en/**", "hora-muerta/scripts/*.py"]
   workflow_dispatch:
 
 jobs:
@@ -20,3 +20,8 @@ jobs:
         with:
           python-version: "3.12"
       - run: python motor-en/validar_roteiros.py
+      - name: Teste da mixagem (cada tema de musica)
+        run: |
+          sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q numpy soundfile
+          python motor-en/teste_mix.py
