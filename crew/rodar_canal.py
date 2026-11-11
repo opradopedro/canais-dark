@@ -450,11 +450,16 @@ if __name__ == "__main__":
                "metricas": run_metricas, "teste": run_teste, "capas-yb": run_capas_yb}
     if qual.startswith("privado:"):
         # tirar video com defeito do ar: tarefa "privado:<canal>:<id do video>" (workflow_dispatch)
-        _, canal, vid = qual.split(":", 2)
+        # varios canais/videos de uma vez: "privado:<canal>:<id>,<id>;<canal>:<id>"
         repo = _repo()
-        r = subprocess.run([sys.executable, os.path.join(repo, "motor-en", "yt_upload.py"), "privado", vid,
-                            "--canal", os.path.join(repo, canal)], cwd=repo)
-        sys.exit(r.returncode)
+        rc = 0
+        for bloco in qual.split(":", 1)[1].split(";"):
+            canal, vids = bloco.split(":", 1)
+            for vid in vids.split(","):
+                r = subprocess.run([sys.executable, os.path.join(repo, "motor-en", "yt_upload.py"), "privado", vid,
+                                    "--canal", os.path.join(repo, canal)], cwd=repo)
+                rc = rc or r.returncode
+        sys.exit(rc)
     if qual.startswith("subir:"):
         # video ja pronto (feito fora do Actions, ex.: motor cartoon): tarefa "subir:<canal>:<tag da Release>".
         # A Release tem video.mp4 + upload.json (formato do yt_upload.py, "arquivo": "video.mp4"). Publica na hora.
