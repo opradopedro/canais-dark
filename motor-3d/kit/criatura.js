@@ -58,7 +58,7 @@ async function animarManequim(obj, nome, timeScale = 1) {
 
 // configuração base de cada tipo (opts do roteiro sobrescreve altura/cor/olhos)
 const HUMANOIDES = {
-  alta: { altura: 3.5, cor: 0x3a2e22, largura: 0.3, prof: 0.17, braco: 0.045, perna: 0.06, cabeca: 0.13, antebraco: 2.4, olhos: [3.4, 2.9, 0.4], olhoR: 0.026, acao: 'Walking_A', ts: 0.5 },
+  alta: { altura: 3.5, cor: 0x3a2e22, largura: 0.3, prof: 0.17, braco: 0.045, perna: 0.06, cabeca: 0.13, antebraco: 2.4, olhos: [3.4, 2.9, 0.4], olhoR: 0.026, acao: 'Idle_A', ts: 0.5 },
   sem_rosto: { altura: 2.05, cor: 0x15151c, largura: 0.38, prof: 0.22, braco: 0.055, perna: 0.068, cabeca: 0.14, corCabeca: 0xe8e2d6, corMao: 0xe8e2d6, acao: 'Idle_A', ts: 0.7, semOlhos: true },
   mulher_branca: { altura: 1.8, cor: 0xeeeee6, largura: 0.3, prof: 0.18, braco: 0.042, perna: 0.05, cabeca: 0.14, corMao: 0xd8d8d0, acao: 'Idle_B', ts: 0.6, semOlhos: true },
   espantalho: { altura: 1.95, cor: 0x7a4a2a, calca: 0x3a4a6a, largura: 0.34, prof: 0.2, braco: 0.05, perna: 0.062, cabeca: 0.16, corCabeca: 0xc8a85a, corMao: 0xd8b25a, acao: 'Idle_A', ts: 0.8, olhos: [0.05, 0.05, 0.05], olhoR: 0.03 },

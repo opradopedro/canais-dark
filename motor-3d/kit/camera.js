@@ -59,16 +59,16 @@ function distParaEnquadrar(alturaAlvoM, fracaoTela, fovGraus) {
 function montarObjeto(plano, alvo, a, fov, orbitDeg, extra) {
   const bx = alvo.caixa || new THREE.Box3().setFromObject(alvo.obj);
   const c = bx.getCenter(new THREE.Vector3()), tam = bx.getSize(new THREE.Vector3());
-  const h = tam.y, w = Math.max(tam.x, tam.z);
+  const h = tam.y, w = Math.min(Math.max(tam.x, tam.z), h * 1.8); // caixa larga (cordas/estacas) nao afasta a camera
   const t = Math.tan(THREE.MathUtils.degToRad(fov) / 2);
-  const d = Math.max(h / 0.62, w / (0.86 * 9 / 16)) / (2 * t) + w * 0.35;
+  const d = (Math.max(h / 0.85, w / (0.95 * 9 / 16)) / (2 * t) + w * 0.15) * (extra.aproxima || 1);
   // direcao: do objeto para a marca (o lado "de frente" do cenario), girada pelo orbit e pelo deslize
   const m = alvo.marca || { x: c.x, z: c.z + 5 };
   const dir = new THREE.Vector3(m.x - c.x, 0, m.z - c.z); if (dir.lengthSq() < 0.5) dir.set(0, 0, 1); dir.normalize();
   dir.applyAxisAngle(new THREE.Vector3(0, 1, 0), THREE.MathUtils.degToRad(orbitDeg) + (a - 0.5) * 0.5);
   const pos = new THREE.Vector3(), olha = c.clone(); olha.y = bx.min.y + h * 0.45;
   if (plano === 'aereo') { pos.copy(c).addScaledVector(dir, d * 0.85); pos.y = bx.min.y + h * 0.6 + d * 0.55; }
-  else if (plano === 'baixo') { pos.copy(c).addScaledVector(dir, d * 0.7); pos.y = 0.6; olha.y = bx.min.y + h * 0.6; }
+  else if (plano === 'baixo') { pos.copy(c).addScaledVector(dir, d * 0.85); pos.y = 0.5; olha.y = bx.min.y + h * 0.5; }
   else { pos.copy(c).addScaledVector(dir, d * (1 - 0.12 * a)); pos.y = Math.max(1.6, bx.min.y + h * 0.4); }
   return { pos, olha, cab: olha.clone() };
 }
@@ -103,7 +103,7 @@ function montar(plano, alvo, a, fov, orbitDeg = 0, extra = {}) {
       const d = distParaEnquadrar(alvoAltura, 0.85, fov) * (1 - dolly * 0.5);
       pos.copy(cab).addScaledVector(fr, d).addScaledVector(lado, 0.22 * desliza);
       pos.y = cab.y + 0.04 * desliza;
-      olha.copy(cab);
+      olha.copy(cab); olha.y -= 0.14; // rosto no terco de cima: a legenda (centro) nao cobre os olhos
       break;
     }
     case 'medio': { // corpo inteiro ~65% da tela; de frente, leve lateral. Olha p/ o peito (rosto no terco de cima).
@@ -227,10 +227,11 @@ export function aplicarPlano(cam, plano, alvo, t, opts = {}) {
   // o alvo serao ESCONDIDOS pelo engine (nao basta orbitar, regra da rodada 3).
   const tentativas = [0, 25, -25, 55, -55, 90, -90, 135, -135];
   let m = null;
-  for (const orb of tentativas) {
-    const cand = montar(plano, alvo, a, fov, orb, { fundo: opts.fundo });
+  const aprox = alvo.ehObjeto ? [1, 0.8, 0.62] : [1];
+  busca: for (const ap of aprox) for (const orb of tentativas) {
+    const cand = montar(plano, alvo, a, fov, orb, { fundo: opts.fundo, aproxima: ap });
     prenderNoComodo(cand.pos, opts.limites);
-    if (!dentroDeObjeto(cand.pos, opts.obstaculos) && !pertoDeParede(cand.pos, opts.paredes, alvo)) { m = cand; break; }
+    if (!dentroDeObjeto(cand.pos, opts.obstaculos) && !pertoDeParede(cand.pos, opts.paredes, alvo)) { m = cand; break busca; }
     if (!m) m = cand;
   }
 

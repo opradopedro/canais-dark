@@ -277,7 +277,7 @@ function montarCorpo(obj, spec) {
     if (spec.chapeu) cab.add(fazerChapeu(spec.chapeu, R));
     if (spec.barba) {
       const barba = new THREE.Mesh(new THREE.SphereGeometry(R * 0.82, 16, 10, 0, 6.3, Math.PI * 0.55, Math.PI * 0.45), new THREE.MeshStandardMaterial({ color: spec.cabelo_cor, roughness: 1 }));
-      barba.position.set(0, -R * 0.22, R * 0.18); cab.add(barba);
+      barba.position.set(0, -R * 0.45, R * 0.16); barba.scale.set(0.95, 0.75, 0.9); cab.add(barba);
     }
   }
   if (spec.acessorio) porAcessorio(spec.acessorio, cab, chest && grupoEm(chest, c.pontos.chest), R);

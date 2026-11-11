@@ -249,13 +249,16 @@ function alvoDaCena(cena, plano) {
 // objeto principal visivel mais perto de (x,z), ate `max` metros (centro da caixa no chao)
 const _bxP = new THREE.Box3(), _cP = new THREE.Vector3();
 function principalPerto(x, z, max = 30, exceto = null) {
-  let melhor = null, dm = max;
+  let melhor = null, dm = Infinity;
   for (const o of principais) {
     if (o === exceto) continue;
     _bxP.setFromObject(o); if (_bxP.isEmpty()) continue; _bxP.getCenter(_cP);
     const altura = _bxP.max.y - _bxP.min.y; if (altura < 1.2) continue;
-    const d = Math.hypot(_cP.x - x, _cP.z - z);
-    if (d < dm) { dm = d; melhor = o; }
+    const d = Math.hypot(_cP.x - x, _cP.z - z); if (d > max) continue;
+    // prefere objetos GRANDES (casa > poste): distancia dividida pelo tamanho da base
+    const base = (_bxP.max.x - _bxP.min.x) * (_bxP.max.z - _bxP.min.z);
+    const nota = d / (1 + Math.min(base * altura, 320) / 40); // volume: casa/torre > carro > poste
+    if (nota < dm) { dm = nota; melhor = o; }
   }
   return melhor;
 }
