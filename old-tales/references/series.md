@@ -115,3 +115,9 @@ Peças: `f_mosteiro`, `f_igreja`, `f_aldeia`, `f_campo`, `f_estrada_antiga`, `f_
 - CL038 parte 3/5: vence o demônio, espadas quebram; palácio do Rei Dragão; pilar de ferro que mediu o mar (13.500 jin), encolhe, cajado dourado atrás da orelha; dorme e é levado ao submundo; Livro da Vida e da Morte; risca o próprio nome e o de todos os macacos; todos reclamam ao Céu. FEITO
 - CL039 parte 4/5: cavalariço do Céu, cargo mais baixo; Grande Sábio Igual ao Céu; jardim dos pêssegos (9 mil anos); não convidado ao banquete; vinho e pílulas de Laozi; exército; Erlang o prende; fornalha 49 dias, olhos dourados; ninguém o para; chamam alguém. FEITO
 - CL040 parte 5/5 (última): aposta da mão do Buda; 5 pilares, escreve "o Grande Sábio esteve aqui", faz xixi; eram dedos; montanha cai, 500 anos, pelotas de ferro; Tang Sanzang tira o selo, livre. Pergunta final que volta à pedra (loop). FEITO
+
+## wukong-cartoon (CL041-CL045) — Sun Wukong: The Monkey King — visual cartoon (skill cartoon-3d-short) — PEDIDO DO PEDRO (11/11) — por: claude
+- Pedro aprovou o teste cartoon e pediu: série de 5 episódios do Wukong, depois um conto da Grécia, depois um da China antiga, depois Zhong Kui.
+- CL041 parte 1/5: mesmo texto do CL036, feito à mão no motor cartoon (87 s) e publicado pela tarefa `subir:old-tales:cl041-wukong-1`. Registro em `arquivo/041-wukong-cartoon-1.json`. FEITO
+- CL042-CL045 partes 2-5: os roteiros `em-espera/037..040`, renumerados, quando o motor-cartoon (Antigravity) estiver no ar. FALTA
+- Depois: conto grego (3 partes, sugestão Perseu e a Medusa), conto da China antiga (3 partes, sugestão Mulan), Zhong Kui (3 partes). FALTA

@@ -1,0 +1,152 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "serie": "wukong-cartoon",
+ "serie_titulo": "Sun Wukong: The Monkey King | Old Tales",
+ "partes": 5,
+ "autor": "claude",
+ "origem": "pedido do Pedro (chat 11/11): Journey to the West, Wu Cheng'en; refeito no visual cartoon (skill cartoon-3d-short) e publicado pela tarefa subir:old-tales:cl041-wukong-1",
+ "prioridade": "pedro",
+ "ideia": "chat 11/11",
+ "tags": [
+  "sun wukong",
+  "monkey king",
+  "journey to the west",
+  "chinese mythology",
+  "wukong",
+  "mythology",
+  "old tales",
+  "legends",
+  "story time",
+  "CL041"
+ ],
+ "elenco": {
+  "wukong": {
+   "semente": 3601,
+   "corpo": "magro",
+   "pele": "#a8703f",
+   "cabelo": "moicano",
+   "cabelo_cor": "#d9a03a",
+   "camisa": "#d8b43a",
+   "calca": "#5a3a2a",
+   "roupa": "chines",
+   "acessorio": "",
+   "rosto_estilo": "redondo"
+  },
+  "macaco": {
+   "semente": 3602,
+   "corpo": "crianca",
+   "pele": "#8a5a34",
+   "cabelo": "cacheado",
+   "cabelo_cor": "#5a3a1e",
+   "camisa": "#7a5a34",
+   "calca": "#3a2f24",
+   "roupa": "camiseta",
+   "acessorio": ""
+  },
+  "subodhi": {
+   "semente": 3603,
+   "corpo": "idoso",
+   "pele": "#e8c0a0",
+   "cabelo": "careca",
+   "camisa": "#2a6a5a",
+   "roupa": "chines",
+   "acessorio": ""
+  },
+  "tang": {
+   "semente": 3604,
+   "corpo": "medio",
+   "pele": "#f2d6be",
+   "cabelo": "careca",
+   "camisa": "#d8b43a",
+   "roupa": "chines",
+   "acessorio": ""
+  }
+ },
+ "codigo": "CL041",
+ "parte": 1,
+ "titulo": "A monkey born from a stone 🐒 Sun Wukong Part 1 #story #shorts",
+ "capa": "BORN FROM STONE",
+ "descripcion": "A stone on a mountain cracks open, and a monkey climbs out with golden light in his eyes. This is how the Monkey King began.\n\n> Part 2: coming soon, follow so you don't miss it.\nWould you have jumped through the waterfall?\n\nFrom Journey to the West (Xiyouji), Wu Cheng'en, 16th century, chapters 1 and 2.\n#monkeyking #sunwukong #journeytothewest #mythology #shorts",
+ "visual": "cartoon",
+ "lineas": [
+  {
+   "texto": "Imagine a stone that has listened to the sky since the world began.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "It sits on the Mountain of *Flowers and Fruit*, across the eastern sea.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "For ages, it drinks sunlight, moonlight and wind.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then one morning, the stone *cracks open* like an egg.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Out climbs a monkey made of stone.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "His eyes shoot *golden light* up to Heaven.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "In the sky, the Jade Emperor looks down and shrugs.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "It is nothing strange, he says. Let him be.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The stone monkey plays with the other monkeys.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "One day, they find a huge *waterfall*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Whoever jumps through and comes back, they shout, is king.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Nobody moves. Nobody can see behind the water.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because this jump starts everything.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The stone monkey closes his eyes and leaps.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Behind it, he finds a dry cave with stone beds.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He comes back, and every monkey bows. He is the *Monkey King*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "For three hundred years, he never worries.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then, at a happy feast, the king starts to *cry*.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Why would a king cry? Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ]
+}
