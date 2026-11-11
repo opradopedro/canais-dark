@@ -18,6 +18,15 @@ on:
     - cron: "40 14 * * *"   # repescagem Signal Lost
     - cron: "45 16 * * *"   # repescagem So You Built It
     - cron: "50 21 * * *"   # repescagem Hora Muerta
+    # mais tentativas (REGRA do Pedro, 11/11): so a ULTIMA do dia fica vermelha e manda e-mail
+    - cron: "20 13 * * *"   # 3a tentativa Old Tales
+    - cron: "10 15 * * *"   # ULTIMA tentativa Old Tales
+    - cron: "40 17 * * *"   # 3a tentativa Signal Lost
+    - cron: "30 20 * * *"   # ULTIMA tentativa Signal Lost
+    - cron: "30 17 * * *"   # 3a tentativa So You Built It
+    - cron: "20 19 * * *"   # ULTIMA tentativa So You Built It
+    - cron: "40 23 * * *"   # 3a tentativa Hora Muerta
+    - cron: "50 1 * * *"    # ULTIMA tentativa Hora Muerta
   workflow_dispatch:
     inputs:
       tarefa:
@@ -67,15 +76,24 @@ jobs:
             "30 9 * * *") T=signal-lost ;;
             "35 12 * * *") T=so-you-built-it ;;
             "40 18 * * *") T=hora-muerta ;;
-            "15 3 * * *") T=metricas ;;
             "10 11 * * *") T=old-tales; R=1 ;;
             "40 14 * * *") T=signal-lost; R=1 ;;
             "45 16 * * *") T=so-you-built-it; R=1 ;;
             "50 21 * * *") T=hora-muerta; R=1 ;;
+            "20 13 * * *") T=old-tales; R=1 ;;
+            "10 15 * * *") T=old-tales; R=1; U=1 ;;
+            "40 17 * * *") T=signal-lost; R=1 ;;
+            "30 20 * * *") T=signal-lost; R=1; U=1 ;;
+            "30 17 * * *") T=so-you-built-it; R=1 ;;
+            "20 19 * * *") T=so-you-built-it; R=1; U=1 ;;
+            "40 23 * * *") T=hora-muerta; R=1 ;;
+            "50 1 * * *") T=hora-muerta; R=1; U=1 ;;
+            "15 3 * * *") U=1; T=metricas ;;
             *) if [ "${{ github.event_name }}" = push ]; then T=$(sed 's/^\xEF\xBB\xBF//' .github/disparar.txt | head -1 | tr -d '\r '); else T="${{ github.event.inputs.tarefa }}"; fi ;;
           esac
           echo "tarefa=$T" >> "$GITHUB_OUTPUT"
           echo "repescagem=${R:-}" >> "$GITHUB_OUTPUT"
+          echo "ultima=${U:-}" >> "$GITHUB_OUTPUT"
           echo "Tarefa: $T${R:+ (repescagem)}"
 
       - name: Canal ligado?
@@ -138,6 +156,7 @@ jobs:
         run: |
           set -o pipefail
           export CANAIS_REPESCAGEM="${{ steps.qual.outputs.repescagem }}"
+          export CANAIS_ULTIMA="${{ steps.qual.outputs.ultima }}"
           python crew/rodar_canal.py "${{ steps.qual.outputs.tarefa }}" 2>&1 | tee /tmp/rodar-log.txt
 
       # thumbnails do So You Built It ja aplicadas (capa.py): guarda a lista para nao reenviar
@@ -154,8 +173,10 @@ jobs:
 
       # se der erro, o log vai para a Release publica "logs" (Kiro e Claude leem sem entrar no GitHub)
       - name: Enviar o erro para a Release "logs"
-        if: failure() && steps.ligado.outputs.sim == '1'
+        if: always() && steps.ligado.outputs.sim == '1'
         run: |
+          # vai para a Release mesmo quando a execucao ficou verde (falhou, mas ainda ha tentativa no dia)
+          [ "${{ job.status }}" = failure ] || [ -s /tmp/canais-falhou.txt ] || exit 0
           T="${{ steps.qual.outputs.tarefa }}"
           tail -c 60000 /tmp/rodar-log.txt > "/tmp/${T}_ERRO.txt" 2>/dev/null || echo "sem log" > "/tmp/${T}_ERRO.txt"
           gh release view logs > /dev/null 2>&1 || gh release create logs --title "Logs de erro" --notes "Ultimo erro de cada tarefa (gerado pelo GitHub Actions)"
