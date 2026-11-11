@@ -2,7 +2,7 @@
 # Para tirar um canal do GitHub (ex.: voltar para a rotina do Claude), ponha # na frente da linha.
 # NUNCA deixe o mesmo canal ligado aqui E numa rotina do Claude que tambem produz: o video sairia em dobro.
 signal-lost
-old-tales
+# old-tales  (PAUSADO 11/11 pelo Pedro: so sai o Wukong cartoon CL041 pela tarefa subir:)
 hora-muerta
 so-you-built-it
 # ligados em 29/10/2026: o Pedro pausou as rotinas de producao do Hora Muerta e do So You Built It no Claude
