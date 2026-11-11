@@ -1,55 +1,49 @@
 # motor-3d — o que já está pronto e o que falta
 
-Atualizado por Kiro em 10/11/2026 (rodada 3). Branch `producao`.
+Atualizado por Kiro em 11/11/2026 (rodada 4: acabamento). Branch `producao`.
 
 ## Pronto
 
-### Rodada 1 — estrutura
-Vendor three 0.170, fonte Fredoka, kit (modelos/personagem/criatura/luz/camera/cenarios), engine determinístico,
-legenda, ligação no `render.py` (`"visual":"3d"` sobe http local). 2D e So You Built It intactos.
+### Rodadas 1–3 (resumo)
+Estrutura (kit, engine determinístico, legenda, ligação no `render.py`), câmera relativa ao ator, noite legível,
+rostos, bibliotecas de personagens (semente), 13 criaturas, fiscal, catálogos, `variedade.py`.
 
-### Rodada 2 — câmera e luz
-Câmera relativa ao ator, noite legível, rosto de frente, `entardecer` sem filtro laranja. Fiscal com brilho,
-cobertura do ator e raycast.
+### Rodada 4 — acabamento
+- **Corpo inteiriço** (`kit/corpo.js`): cada segmento vai do osso ao osso filho, medido em coordenadas do mundo na
+  pose de repouso e preso com `attach`; esfera em cada junta (ombro, cotovelo, pulso, quadril, joelho, tornozelo);
+  tronco grosso (profundidade ~60% da largura), pescoço, mãos no pulso, tênis no tornozelo. Sem vão em `Idle_A`,
+  `Walking_A`, `Running_A`, `Crawling`, `Sit_Chair_Idle`, `Death_A` (`testes/saida/catalogo_poses.jpg`,
+  gerado por `testes/poses.py`).
+- **Criaturas humanoides no mesmo corpo**: `alta`, `sem_rosto`, `mulher_branca` (cabelo preto cobrindo o rosto,
+  braços ligados, vestido), `espantalho`, `lobisomem` (focinho, orelhas, tufos, curvado com `Sneaking`),
+  `gigante_mitologico`, `rastejante`, `vulto` (silhueta humana inteira com borda esfumada), `fantasma` (corpo
+  translúcido que afina embaixo). `catalogo_criaturas.jpg` mostra cada uma parada e andando.
+- **8 cenários acabados** (`kit/cenarios/acabados.js`): `bairro`, `floresta` (com torre de vigia), `estrada`,
+  `casa_interior`, `cemiterio`, `hospital`, `vila`, `templo_oriental`. Chão com textura própria, 19–39 objetos de
+  detalhe cada, luz de dia e de noite (postes, janelas, lanternas, velas acendem; interiores trocam a cor da
+  lâmpada), 6+ marcas a ≥ 1,5 m de qualquer parede ou objeto grande. `testes/cenarios_check.py` confere tudo.
+- **Os outros 19 cenários são rascunho**: o engine dá erro claro se um roteiro pedir um deles.
+- **Câmera**: nos interiores fica presa no cômodo com 1,5 m de folga das paredes; fora, longe 1,5 m de casas e
+  objetos grandes. Em plano de ambiente sem ator, o assunto é o maior objeto principal perto da marca (casa > carro >
+  poste). Em plano aberto/aéreo com ator, um objeto principal fica ao fundo.
+- **Fiscal**: + teste "quadro sem assunto" (ator + criatura + objetos principais < 10% da tela reprova).
+  **SV, HM e CL passam.** O teste SV saiu da `torre` (rascunho) para a `floresta`.
+- **Lago congelado/cabana na neve**: chão branco-azulado em todo o cenário (continuam rascunho).
+- Catálogos novos (`catalogo_personagens`, `catalogo_criaturas`, `catalogo_cenarios` com os 8 de dia e de noite),
+  folhas SV/HM/CL e `SV-3d_amostra.mp4` (20 s, ~0,8 MB).
 
-### Rodada 3 — personagem, criatura, variedade
-- **Personagem liso em código** (`kit/personagem.js`): malhas do manequim escondidas; corpo em peças presas aos
-  ossos (bola na cabeça, tronco, braços/pernas em cápsulas, tênis). Rosto do Reel em 3 estilos (oval, redondo,
-  traço) + 8 expressões, olhos grandes pretos com brilho. **Gerador por semente**: tipo de corpo (magro, médio,
-  forte, gordo, idoso, criança), 8 tons de pele, 8 cabelos, 13 roupas (incl. uniformes, medieval, túnica, chinês),
-  acessórios (óculos, boné, chapéu de palha, gorro, mochila, avental). `pessoa({semente:17})` sai tudo sozinho.
-- **13 criaturas** (`kit/criatura.js`), montadas em peças/modelos: `alta` (3,5 m magra, braços longos, olhos
-  amarelos), `sem_rosto`, `cao_negro`, `mulher_branca`, `vulto`, `rastejante`, `espantalho`, `olhos_no_escuro`,
-  `lobisomem`, `fantasma`, `aranha_gigante`, `coisa_com_chifres`, `gigante_mitologico`. Parâmetros (altura, cor,
-  cor/nº dos olhos) para variar entre histórias.
-- **Figurantes** = versão leve do personagem liso (cores variadas), não mais cápsula azul.
-- **Enquadramento**: travelling visível (2 quadros a 2,5 s diferem), criatura inteira no plano `baixo`, troncos/
-  casas entre câmera e alvo (ou > ~20% da tela, ou perto demais) SOMEM naquele quadro; chão/rua não contam.
-- **27 cenários** (9 + 18 novos): hospital, escola, metro, elevador, posto, farol, lago_congelado, mina,
-  igreja_antiga, deserto, praia_noite, fazenda, castelo, mercado_medieval, templo_oriental, cidade_grega, navio,
-  cabana_neve.
-- **Céu e clima** (`kit/luz.js`): lua cheia/minguante (disco), neblina baixa, neve (flocos), tempestade com
-  relâmpago, nascer/pôr do sol, nublado.
-- **Fiscal** (`testes/conferir_quadros.py`): + 3 testes (quadro repetido < 2%, obstáculo > 25%, criatura > 8%).
-  **Os 3 testes (SV, HM, CL) passam.**
-- **Catálogo visual** (`testes/catalogo.py` + `catalogo.html`): `catalogo_personagens.jpg` (24 por semente),
-  `catalogo_criaturas.jpg` (13), `catalogo_cenarios.jpg` (27) em `testes/saida/`.
-- **Anti-repetição** (`motor-3d/variedade.py`): avisa quando criatura/cenário/semente de protagonista repete em
-  < 5 séries no mesmo canal (o Claude liga no `validar_roteiros.py`).
-- **Amostra de movimento**: `testes/saida/SV-3d_amostra.mp4` (20 s, 720×1280, ~0,5 MB).
+## Falta / pontos a melhorar
 
-## Falta / pontos a melhorar (para o Claude ou próxima sessão do Kiro)
-
-1. **Variante por estação do cenário**: os cenários aceitam `opts.variante` (semente) em alguns pontos, mas falta
-   ligar a estação (verão/outono/neve/chuva) trocando cores de folhagem e o preset de luz por cenário. Hoje a
-   estação vem só pelo `luz` da cena. Sugestão: `montarCenario(nome, scene, {variante, estacao})`.
-2. **Pose de repouso do manequim**: em algumas animações os braços abrem (T) por 1-2 quadros; `Idle_A` resolve,
-   mas vale revisar quais clips usar por emoção.
-3. **Catálogo de cenários** usa sempre `dia`; vale variar o preset por cenário (farol/metro à noite etc.).
-4. **Faces**: 3 estilos prontos; faltam variações de nariz/boca mais fortes e um estilo "desenho" extra se quiser.
-5. **Rostos dos figurantes**: hoje só dois olhos; dá para reusar `desenharRosto` do personagem se o custo permitir.
-6. **Tempo de render**: ~0,6 s/quadro (1080×1920, swiftshader). As criaturas/figurantes extras pesam pouco. Se um
-   canal passar de 25 min no Actions, baixar `_FATOR_ARVORES` em `kit/cenarios/index.js`.
-7. **O que o Claude faz depois** (seções "Depois" dos planos): conferir os catálogos e as folhas, atualizar
-   `ROTEIROS.md`, os `series.md` dos 3 canais e o `validar_roteiros.py` (exigir `visual:3d` + `cena` + `elenco`,
-   ligar o `variedade.py`), e escolher a 1ª série nova de cada canal em 3D. **Eu NÃO mexi nesses.**
+1. **19 cenários em rascunho**: escola, metrô, elevador, posto, farol, lago congelado, mina, igreja antiga,
+   deserto, praia, fazenda, castelo, mercado medieval, cidade grega, navio, cabana na neve, campo, acampamento, torre.
+   Cada um precisa do mesmo acabamento dos 8 (e passar no `cenarios_check.py`) antes de entrar num vídeo.
+2. **Braços da `alta`** em `Idle_A` ficam abertos em diagonal (os antebraços longos); para pendurar mais junto ao
+   corpo, vale uma animação própria ou girar os ombros por código.
+3. **Cabelo `curto`/boné** às vezes desce até a sobrancelha; subir um pouco a calota em `fazerCabelo`.
+4. **Fantasma**: as peças translúcidas sobrepostas mostram faixas; um único material com `depthWrite` e
+   ordem fixa deixaria mais liso.
+5. **Figurantes** da vila continuam na versão leve (sem esqueleto); trocar pelo personagem completo se o tempo de
+   render permitir.
+6. **O que o Claude faz depois**: conferir catálogos e folhas, atualizar `ROTEIROS.md`, os `series.md` e o
+   `validar_roteiros.py` (exigir `visual:3d` + `cena` + `elenco`, aceitar só os 8 cenários acabados, ligar o
+   `variedade.py`). **Eu NÃO mexi nesses arquivos.**
