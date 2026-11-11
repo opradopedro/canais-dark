@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deploy.outputs.page_url || steps.deploy2.outputs.page_url }}
     env:
       YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
       YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
@@ -58,5 +58,14 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: painel-web
+      # O GitHub Pages as vezes falha sozinho ("Fetching artifact metadata failed"):
+      # tenta de novo em 1 minuto antes de ficar vermelho (e mandar e-mail ao Pedro).
       - id: deploy
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - name: Espera para tentar de novo
+        if: steps.deploy.outcome == 'failure'
+        run: sleep 60
+      - id: deploy2
+        if: steps.deploy.outcome == 'failure'
         uses: actions/deploy-pages@v4

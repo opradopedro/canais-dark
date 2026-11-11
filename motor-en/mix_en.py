@@ -79,7 +79,6 @@ def main(historia, voz, tempos, saida):
             m = em_loop(rms_norm(sons.ler(arq, SR), 0.1), n)
             mix += m * entrada * (0.30 - 0.18 * fala)  # 0,30 nas pausas, 0,12 sob a voz
     else:
-        import mix as mix_motor  # piano de suspense do motor, que ja era aprovado
         sustos = [e["t"] for e in r["eventos"] if e["tipo"] in ("susto", "grito")]
         mix += mix_motor.trilha_piano(n, sustos, dur)[:n] * float(h.get("piano", 1.0))
 
