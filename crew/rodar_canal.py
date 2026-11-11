@@ -455,6 +455,17 @@ if __name__ == "__main__":
         r = subprocess.run([sys.executable, os.path.join(repo, "motor-en", "yt_upload.py"), "privado", vid,
                             "--canal", os.path.join(repo, canal)], cwd=repo)
         sys.exit(r.returncode)
+    if qual.startswith("subir:"):
+        # video ja pronto (feito fora do Actions, ex.: motor cartoon): tarefa "subir:<canal>:<tag da Release>".
+        # A Release tem video.mp4 + upload.json (formato do yt_upload.py, "arquivo": "video.mp4"). Publica na hora.
+        _, canal, tag = qual.split(":", 2)
+        repo = _repo()
+        pasta = os.path.join(tempfile.gettempdir(), "subir-" + tag)
+        os.makedirs(pasta, exist_ok=True)
+        subprocess.run(["gh", "release", "download", tag, "-D", pasta, "--clobber"], cwd=repo, check=True)
+        r = subprocess.run([sys.executable, os.path.join(repo, "motor-en", "agendar.py"), os.path.join(repo, canal),
+                            os.path.join(pasta, "upload.json"), "agora"], cwd=repo)
+        sys.exit(r.returncode)
     texto = funcoes.get(qual, run)() or ""
     # no GitHub Actions, falha vira X vermelho e o GitHub manda e-mail ao Pedro. So falha quando o programa do canal
     # falhou de verdade: video barrado mas trocado pelo substituto nao e falha (vira aviso na issue, ver alertar).

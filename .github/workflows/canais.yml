@@ -30,7 +30,7 @@ on:
   workflow_dispatch:
     inputs:
       tarefa:
-        description: "privado:<canal>:<id do video> (tira do ar), teste (nao publica nada), old-tales, signal-lost, so-you-built-it, hora-muerta, metricas ou capas-yb (thumbnail nos Shorts antigos do SYBI)"
+        description: "subir:<canal>:<tag da Release> (publica video pronto), privado:<canal>:<id do video> (tira do ar), teste (nao publica nada), old-tales, signal-lost, so-you-built-it, hora-muerta, metricas ou capas-yb (thumbnail nos Shorts antigos do SYBI)"
         default: "teste"
         required: true
   # gatilho por envio: mudar .github/disparar.txt na branch producao roda a tarefa escrita nele (1a linha).
@@ -100,7 +100,7 @@ jobs:
         id: ligado
         run: |
           T="${{ steps.qual.outputs.tarefa }}"
-          if [ "$T" = teste ] || [ "$T" = metricas ] || [ "$T" = capas-yb ] || [ "${T%%:*}" = privado ] || grep -qxF "$T" canais-ativos.txt; then
+          if [ "$T" = teste ] || [ "$T" = metricas ] || [ "$T" = capas-yb ] || [ "${T%%:*}" = privado ] || [ "${T%%:*}" = subir ] || grep -qxF "$T" canais-ativos.txt; then
             echo "sim=1" >> "$GITHUB_OUTPUT"
           else
             echo "sim=0" >> "$GITHUB_OUTPUT"
@@ -145,7 +145,7 @@ jobs:
           restore-keys: canais-
 
       - name: Aplicar pedidos do painel (Gemini gratis)
-        if: steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas' && steps.qual.outputs.tarefa != 'teste' && steps.qual.outputs.tarefa != 'capas-yb' && !startsWith(steps.qual.outputs.tarefa, 'privado:')
+        if: steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas' && steps.qual.outputs.tarefa != 'teste' && steps.qual.outputs.tarefa != 'capas-yb' && !startsWith(steps.qual.outputs.tarefa, 'privado:') && !startsWith(steps.qual.outputs.tarefa, 'subir:')
         continue-on-error: true
         run: |
           git config user.name "canais-bot"; git config user.email "canais-bot@users.noreply.github.com"
