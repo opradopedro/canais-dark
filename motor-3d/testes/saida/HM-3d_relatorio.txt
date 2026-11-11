@@ -1,37 +1,38 @@
 FISCAL OK  (HM-3d-exemplo.json)
 quadros: 34 | falhas: 0
+cortes: ae ab me ab me ba me me nu cl ba ba me ae ab me me ab ba  (aereos: 2)
 
-t=  0.0s plano=aereo   brilho= 82.9 alvo=43.4% obst=   1% assunto= 43% OK
-t=  2.5s plano=aereo   brilho= 86.9 alvo=43.8% obst=   1% assunto= 44% OK
-t=  5.0s plano=aereo   brilho= 89.4 alvo=43.7% obst=   1% assunto= 44% OK
+t=  0.0s plano=aereo   brilho= 88.1 alvo= 4.4% obst=   0% assunto= 17% OK
+t=  2.5s plano=aberto  brilho= 96.4 alvo=44.0% obst=   2% assunto= 44% OK
+t=  5.0s plano=medio   brilho=107.1 alvo=54.8% obst=   0% assunto= 61% OK
 t=  7.5s plano=aberto  brilho= 95.3 alvo=43.0% obst=   6% assunto= 43% OK
 t= 10.0s plano=aberto  brilho= 95.0 alvo=48.7% obst=   2% assunto= 49% OK
-t= 12.5s plano=medio   brilho= 85.9 alvo=19.5% obst=   0% assunto= 20% OK
-t= 15.0s plano=medio   brilho= 84.7 alvo=20.9% obst=   1% assunto= 21% OK
-t= 17.5s plano=medio   brilho= 97.8 alvo=20.3% obst=   4% assunto= 20% OK
+t= 12.5s plano=medio   brilho= 93.3 alvo=13.1% obst=   0% assunto= 36% OK
+t= 15.0s plano=medio   brilho= 93.4 alvo=14.0% obst=   1% assunto= 33% OK
+t= 17.5s plano=medio   brilho=100.1 alvo=14.6% obst=   0% assunto= 32% OK
 t= 20.0s plano=baixo   brilho= 91.4 alvo=45.7% obst=   3% assunto= 46% OK
 t= 22.5s plano=baixo   brilho= 93.7 alvo=45.8% obst=   4% assunto= 46% OK
-t= 25.0s plano=medio   brilho=110.4 alvo=19.9% obst=   2% assunto= 20% OK
-t= 27.5s plano=medio   brilho=105.9 alvo=19.6% obst=   3% assunto= 20% OK
-t= 30.0s plano=medio   brilho= 96.0 alvo=19.2% obst=   0% assunto= 19% OK
-t= 32.5s plano=medio   brilho= 95.1 alvo=20.1% obst=   1% assunto= 20% OK
-t= 35.0s plano=nuca    brilho= 96.2 alvo=24.3% obst=   4% assunto= 24% OK
-t= 37.5s plano=nuca    brilho= 96.9 alvo=27.0% obst=   4% assunto= 27% OK
-t= 40.0s plano=close   brilho= 91.1 alvo=42.9% obst=   1% assunto= 43% OK
-t= 42.5s plano=close   brilho= 92.8 alvo=47.1% obst=   0% assunto= 47% OK
-t= 45.0s plano=baixo   brilho=107.3 alvo=12.2% obst=   1% assunto= 12% OK
-t= 47.5s plano=baixo   brilho=102.5 alvo=12.8% obst=   1% assunto= 13% OK
-t= 50.0s plano=baixo   brilho=102.9 alvo=13.3% obst=   1% assunto= 13% OK
-t= 52.5s plano=baixo   brilho=110.0 alvo=12.7% obst=   1% assunto= 13% OK
-t= 55.0s plano=medio   brilho= 96.5 alvo=18.5% obst=   4% assunto= 19% OK
-t= 57.5s plano=medio   brilho= 97.5 alvo=22.2% obst=   4% assunto= 22% OK
-t= 60.0s plano=medio   brilho=120.9 alvo=22.8% obst=   4% assunto= 23% OK
-t= 62.5s plano=aereo   brilho= 77.9 alvo=51.4% obst=   1% assunto= 51% OK
-t= 65.0s plano=aereo   brilho= 69.6 alvo=51.4% obst=   2% assunto= 51% OK
-t= 67.5s plano=medio   brilho=115.9 alvo=19.3% obst=   3% assunto= 19% OK
-t= 70.0s plano=medio   brilho=109.0 alvo=18.6% obst=   2% assunto= 19% OK
-t= 72.5s plano=aereo   brilho= 82.6 alvo=43.7% obst=   1% assunto= 44% OK
-t= 75.0s plano=aereo   brilho= 85.4 alvo=43.6% obst=   1% assunto= 44% OK
-t= 77.5s plano=baixo   brilho= 97.4 alvo=23.9% obst=   0% assunto= 24% OK
-t= 80.0s plano=baixo   brilho= 88.9 alvo=25.4% obst=   1% assunto= 25% OK
-t= 82.5s plano=baixo   brilho= 97.8 alvo=25.1% obst=   0% assunto= 25% OK
+t= 25.0s plano=medio   brilho=104.8 alvo=13.3% obst=   2% assunto= 14% OK
+t= 27.5s plano=medio   brilho=103.5 alvo=14.1% obst=   1% assunto= 27% OK
+t= 30.0s plano=medio   brilho=112.9 alvo=13.3% obst=   1% assunto= 36% OK
+t= 32.5s plano=medio   brilho=110.0 alvo=14.1% obst=   1% assunto= 32% OK
+t= 35.0s plano=nuca    brilho= 96.4 alvo=24.8% obst=   4% assunto= 29% OK
+t= 37.5s plano=nuca    brilho= 97.4 alvo=27.1% obst=   4% assunto= 31% OK
+t= 40.0s plano=close   brilho= 77.4 alvo=47.4% obst=   2% assunto= 54% OK
+t= 42.5s plano=close   brilho= 84.0 alvo=52.6% obst=   0% assunto= 70% OK
+t= 45.0s plano=baixo   brilho=109.2 alvo=11.7% obst=   1% assunto= 17% OK
+t= 47.5s plano=baixo   brilho=105.6 alvo=12.9% obst=   1% assunto= 18% OK
+t= 50.0s plano=baixo   brilho=104.2 alvo=13.4% obst=   1% assunto= 20% OK
+t= 52.5s plano=baixo   brilho=109.9 alvo=12.3% obst=   1% assunto= 18% OK
+t= 55.0s plano=medio   brilho=107.0 alvo=14.2% obst=   4% assunto= 16% OK
+t= 57.5s plano=medio   brilho=106.8 alvo=14.5% obst=   3% assunto= 23% OK
+t= 60.0s plano=medio   brilho=121.5 alvo=16.6% obst=   1% assunto= 34% OK
+t= 62.5s plano=aereo   brilho= 99.6 alvo= 0.0% obst=   0% assunto= 24% OK
+t= 65.0s plano=aberto  brilho= 67.4 alvo=52.7% obst=   0% assunto= 53% OK
+t= 67.5s plano=medio   brilho=116.4 alvo=13.1% obst=   2% assunto= 16% OK
+t= 70.0s plano=medio   brilho=102.0 alvo=13.5% obst=   1% assunto= 27% OK
+t= 72.5s plano=medio   brilho=108.0 alvo=70.4% obst=   0% assunto= 70% OK
+t= 75.0s plano=aberto  brilho=106.4 alvo=46.3% obst=   0% assunto= 62% OK
+t= 77.5s plano=baixo   brilho=103.9 alvo=19.3% obst=   1% assunto= 25% OK
+t= 80.0s plano=baixo   brilho= 97.9 alvo=20.6% obst=   1% assunto= 26% OK
+t= 82.5s plano=baixo   brilho= 97.6 alvo=21.2% obst=   1% assunto= 29% OK
