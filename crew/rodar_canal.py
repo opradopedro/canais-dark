@@ -272,6 +272,8 @@ def estoque(repo, canal, linhas):
             if h.get("visual") == "3d" and h.get("codigo") in pend:
                 tres_d.append(h["codigo"])
         reserva = len(pend) - len(tres_d)
+        if len(pend) >= DIAS_DE_ESTOQUE:  # com a reserva nao falta video: so informa (a rotina escreve 3D pelo ROTEIROS.md)
+            return [f"estoque: {len(tres_d)} roteiro(s) 3D prontos ({', '.join(tres_d) or 'nenhum'}) + {reserva} de reserva no estilo antigo"]
         pend = tres_d
         if reserva:
             linhas_reserva = f" (+{reserva} de reserva no estilo antigo)"
