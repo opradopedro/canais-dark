@@ -8,6 +8,7 @@
 // Ossos do rig (o GLTFLoader tira o ponto): hips, spine, chest, head, upperarml/r, lowerarml/r, wristl/r,
 // handl/r, upperlegl/r, lowerlegl/r, footl/r, toesl/r.
 import * as THREE from 'three';
+import { animacoesManequim } from './modelos.js';
 
 const _Y = new THREE.Vector3(0, 1, 0);
 
@@ -124,10 +125,10 @@ export function montarHumanoide(obj, P) {
     add(capsulaEntre(la, p['lowerarm' + s], fimAnte, rB * 0.92, matAnte));
     // mão: encostada no fim do antebraço
     const dir = fimAnte.clone().sub(p['lowerarm' + s]).normalize();
-    const centroMao = fimAnte.clone().addScaledVector(dir, rB * 1.1);
+    const centroMao = fimAnte.clone().addScaledVector(dir, rB * 0.95);
     const ossoMao = ext === 1 && hd ? hd : la;
-    if (ext === 1 && wr) add(esferaEm(wr, fimAnte, rB * 0.95, M.pele)); else add(esferaEm(la, fimAnte, rB * 0.95, M.pele));
-    const mao = add(esferaEm(ossoMao, centroMao, rB * 1.35, P.matMao || M.pele));
+    if (ext === 1 && wr) add(esferaEm(wr, fimAnte, rB * 0.9, M.pele)); else add(esferaEm(la, fimAnte, rB * 0.9, M.pele));
+    const mao = add(esferaEm(ossoMao, centroMao, rB * 0.92 * 1.3, P.matMao || M.pele));
     maos[s] = { osso: ossoMao, centro: centroMao, mesh: mao };
   }
 
@@ -169,4 +170,96 @@ export function montarHumanoide(obj, P) {
   }
 
   return { head: o.head, chest: o.chest, hips: o.hips, spine: o.spine, maos, centroCabeca, R, ossos: o, pontos: p, pecas };
+}
+
+// ======================= rodada 5: proporção humana, pose e apoio no chão =======================
+// O esqueleto do Mannequin_Medium é "chibi": quadril a ~18% da altura e pernas curtas (a cabeça enorme da malha
+// escondida é que fazia a altura). Aqui os ossos ganham proporção humana (quadril ~50% da altura, ombro ~82%).
+// As faixas de POSIÇÃO das animações são tiradas (só ficam as rotações e a do quadril), senão elas desfazem isso.
+
+// quanto cada osso se afasta do pai (multiplica a posição local de repouso)
+const PROP = {
+  lowerlegl: 2.6, lowerlegr: 2.6, footl: 2.6, footr: 2.6, toesl: 1.3, toesr: 1.3,
+  spine: 1.1, chest: 1.1, head: 0.95,
+  upperarml: 1.2, upperarmr: 1.2, lowerarml: 1.25, lowerarmr: 1.25, wristl: 1.25, wristr: 1.25,
+};
+const OSSOS_PERNA = ['upperlegl', 'lowerlegl', 'footl', 'upperlegr', 'lowerlegr', 'footr'];
+// folga de cada osso até o chão (o centro do osso fica dentro do corpo): usado para apoiar no chão
+const APOIO = { toesl: 0.035, toesr: 0.035, footl: 0.075, footr: 0.075, lowerlegl: 0.07, lowerlegr: 0.07, handl: 0.05, handr: 0.05, chest: 0.13, head: 0.14, hips: 0.1 };
+
+export function proporcionar(obj, altura) {
+  const ossos = {};
+  obj.traverse(b => { if (b.isBone) ossos[b.name.toLowerCase().replace(/[._:]/g, '')] = b; });
+  for (const [n, f] of Object.entries(PROP)) if (ossos[n]) ossos[n].position.multiplyScalar(f);
+  const repouso = {};
+  for (const [n, b] of Object.entries(ossos)) repouso[n] = b.quaternion.clone();
+  // escala: base do pescoço a 84,5% da altura pedida
+  obj.updateMatrixWorld(true);
+  const yOsso = n => ossos[n] ? ossos[n].getWorldPosition(new THREE.Vector3()).y : 0;
+  const pes = Math.min(yOsso('toesl'), yOsso('toesr'));
+  const pesc = yOsso('head') - pes;
+  if (pesc > 1e-3) obj.scale.multiplyScalar((0.845 * altura) / pesc);
+  const info = { ossos, repouso, k: altura / 1.7 };
+  aterrar(obj, info);
+  return info;
+}
+
+// apoia o corpo no chão: o osso mais baixo (descontada a sua folga) encosta em y=0
+export function aterrar(obj, info) {
+  obj.updateMatrixWorld(true);
+  let min = Infinity;
+  for (const [n, folga] of Object.entries(APOIO)) {
+    const b = info.ossos[n]; if (!b) continue;
+    min = Math.min(min, b.getWorldPosition(_tmpA).y - folga * info.k);
+  }
+  if (isFinite(min)) { obj.position.y -= min; obj.updateMatrixWorld(true); }
+}
+const _tmpA = new THREE.Vector3(), _tmpB = new THREE.Vector3();
+const _qa = new THREE.Quaternion(), _qb = new THREE.Quaternion(), _qc = new THREE.Quaternion();
+
+// gira `osso` (em espaço de mundo) para que a direção osso->filho vá na direção `alvo`, na fração f
+export function apontar(osso, filho, alvo, f) {
+  if (!osso || !filho || !osso.parent) return;
+  osso.getWorldPosition(_tmpA); filho.getWorldPosition(_tmpB);
+  const d = _tmpB.sub(_tmpA).normalize();
+  const t = d.clone().lerp(alvo, f).normalize();
+  _qa.setFromUnitVectors(d, t);
+  osso.getWorldQuaternion(_qb); osso.parent.getWorldQuaternion(_qc);
+  osso.quaternion.copy(_qc.invert().multiply(_qa.multiply(_qb)));
+  osso.updateMatrixWorld(true);
+}
+
+// depois do mixer: endireita a perna nas poses paradas, pendura os braços (criatura alta) e apoia no chão
+const RETAS = { Idle_A: 0.75, Idle_B: 0.75, Skeletons_Idle: 0.7, Holding_A: 0.6, Holding_B: 0.6, Interact: 0.5, Use_Item: 0.5,
+  Walking_A: 0.3, Walking_B: 0.3, Walking_C: 0.3, Running_A: 0.2, Running_B: 0.2, Sneaking: 0.0 };
+export function posAnimar(obj, info, anim, t, opts = {}) {
+  const f = RETAS[anim] ?? 0;
+  if (f > 0) for (const n of OSSOS_PERNA) { const b = info.ossos[n]; if (b) b.quaternion.slerp(info.repouso[n], f); }
+  if (opts.pendurar) {
+    obj.updateMatrixWorld(true);
+    obj.getWorldQuaternion(_qa);
+    for (const s of ['l', 'r']) {
+      const lado = new THREE.Vector3(s === 'l' ? 1 : -1, 0, 0).applyQuaternion(_qa);
+      const frente = new THREE.Vector3(0, 0, 1).applyQuaternion(_qa);
+      const baixo = new THREE.Vector3(0, -1, 0).addScaledVector(lado, 0.1).addScaledVector(frente, 0.05 * Math.sin(t * 0.9 + (s === 'l' ? 0 : 1.7))).normalize();
+      apontar(info.ossos['upperarm' + s], info.ossos['lowerarm' + s], baixo, opts.pendurar);
+      apontar(info.ossos['lowerarm' + s], info.ossos['wrist' + s], baixo, opts.pendurar);
+    }
+  }
+  aterrar(obj, info);
+}
+
+// animações para o corpo de proporção humana: sem as faixas de posição (exceto o quadril)
+let _clipsHumanos = null;
+export async function clipsHumanos() {
+  if (_clipsHumanos) return _clipsHumanos;
+  const base = await animacoesManequim();
+  const out = {};
+  for (const [nome, clip] of Object.entries(base)) {
+    const c = clip.clone();
+    c.tracks = c.tracks.filter(tr => !tr.name.endsWith('.position') || tr.name.startsWith('hips.'));
+    out[nome] = c;
+  }
+  _clipsHumanos = out;
+  return out;
 }

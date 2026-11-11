@@ -10,7 +10,7 @@
 // Tudo determinístico: nenhum relógio, nenhum Math.random sem semente.
 import * as THREE from 'three';
 import { instanciar, animacoesManequim } from './modelos.js';
-import { montarHumanoide, grupoEm } from './corpo.js';
+import { montarHumanoide, grupoEm, proporcionar, posAnimar, clipsHumanos } from './corpo.js';
 
 // ---------------- RNG com semente ----------------
 function rng(sem) {
@@ -159,25 +159,30 @@ function capsulaOsso(osso, filho, mat, { r = 0.07, folga = 0.0 } = {}) {
 }
 
 // ---------------- cabelo e chapéu (primitivas) ----------------
+// calota de esfera inclinada para trás: a borda da FRENTE fica acima da sobrancelha (~0,55R acima do centro
+// da cabeça), a da nuca desce. Assim cabelo/chapéu nunca passam na frente dos olhos (a "máscara de bandido").
+function calotaInclinada(r, theta, y, incl, mat) {
+  const m = new THREE.Mesh(new THREE.SphereGeometry(r, 22, 14, 0, Math.PI * 2, 0, theta), mat);
+  mat.side = THREE.DoubleSide; // por dentro tambem (senao a fresta entre cabeca e cabelo mostra o ceu)
+  m.position.y = y; m.rotation.x = -incl; return m;
+}
 function fazerCabelo(tipo, cor, raioCabeca = 0.16) {
   const g = new THREE.Group();
   const mat = new THREE.MeshStandardMaterial({ color: cor || 0x3a2a1a, roughness: 0.9 });
   const R = raioCabeca;
   if (tipo === 'careca') return g;
   if (tipo === 'curto' || tipo === 'moicano') {
-    const calota = new THREE.Mesh(new THREE.SphereGeometry(R * 1.04, 20, 14, 0, 6.3, 0, Math.PI * 0.55), mat);
-    calota.position.y = R * 0.1; g.add(calota);
+    g.add(calotaInclinada(R * 1.04, Math.PI * 0.42, R * 0.05, 0.4, mat));
     if (tipo === 'moicano') { const crista = new THREE.Mesh(new THREE.BoxGeometry(R * 0.3, R * 0.5, R * 1.6), mat); crista.position.y = R * 0.6; g.add(crista); }
   } else if (tipo === 'longo' || tipo === 'trança' || tipo === 'rabo') {
-    const calota = new THREE.Mesh(new THREE.SphereGeometry(R * 1.05, 20, 16, 0, 6.3, 0, Math.PI * 0.8), mat);
-    g.add(calota);
+    g.add(calotaInclinada(R * 1.05, Math.PI * 0.45, R * 0.05, 0.45, mat));
     const costas = new THREE.Mesh(new THREE.CapsuleGeometry(R * 0.5, R * (tipo === 'longo' ? 1.6 : 1.1), 6, 10), mat);
     costas.position.set(0, -R * 1.0, -R * 0.7); g.add(costas);
   } else if (tipo === 'coque') {
-    const calota = new THREE.Mesh(new THREE.SphereGeometry(R * 1.04, 20, 14, 0, 6.3, 0, Math.PI * 0.6), mat); g.add(calota);
+    g.add(calotaInclinada(R * 1.04, Math.PI * 0.42, R * 0.05, 0.4, mat));
     const coque = new THREE.Mesh(new THREE.SphereGeometry(R * 0.55, 14, 12), mat); coque.position.set(0, R * 1.0, -R * 0.4); g.add(coque);
   } else if (tipo === 'cacheado') {
-    for (let i = 0; i < 10; i++) { const a = i / 10 * 6.28; const b = new THREE.Mesh(new THREE.SphereGeometry(R * 0.5, 10, 8), mat); b.position.set(Math.cos(a) * R * 0.8, R * 0.5 + (i % 3) * R * 0.1, Math.sin(a) * R * 0.8); g.add(b); }
+    for (let i = 0; i < 10; i++) { const a = i / 10 * 6.28; const b = new THREE.Mesh(new THREE.SphereGeometry(R * 0.5, 10, 8), mat); b.position.set(Math.cos(a) * R * 0.8, R * 0.72 + (i % 3) * R * 0.1, Math.sin(a) * R * 0.8 - R * 0.2); g.add(b); }
   }
   return g;
 }
@@ -194,9 +199,9 @@ function fazerChapeu(tipo, raioCabeca = 0.16) {
     const copa = new THREE.Mesh(new THREE.SphereGeometry(R * 1.1, 18, 12, 0, 6.3, 0, Math.PI * 0.5), new THREE.MeshStandardMaterial({ color: 0x2e4a6a, roughness: 0.9 })); copa.position.y = R * 0.5; g.add(copa);
     const aba = new THREE.Mesh(new THREE.BoxGeometry(R * 1.6, R * 0.1, R * 1.1), copa.material); aba.position.set(0, R * 0.45, R * 1.1); g.add(aba);
   } else if (tipo === 'gorro') {
-    const gorro = new THREE.Mesh(new THREE.SphereGeometry(R * 1.12, 20, 14, 0, 6.3, 0, Math.PI * 0.62), new THREE.MeshStandardMaterial({ color: 0x7a2b22, roughness: 1 })); gorro.position.y = R * 0.2; g.add(gorro);
+    g.add(calotaInclinada(R * 1.12, Math.PI * 0.5, R * 0.2, 0.35, new THREE.MeshStandardMaterial({ color: 0x7a2b22, roughness: 1 })));
   } else if (tipo === 'capuz') {
-    const capuz = new THREE.Mesh(new THREE.SphereGeometry(R * 1.5, 18, 14, 0, 6.3, 0, Math.PI * 0.72), new THREE.MeshStandardMaterial({ color: 0x2c2620, roughness: 1 })); capuz.position.set(0, 0, -R * 0.2); g.add(capuz);
+    const capuz = calotaInclinada(R * 1.5, Math.PI * 0.72, 0, 1.0, new THREE.MeshStandardMaterial({ color: 0x2c2620, roughness: 1 })); capuz.position.z = -R * 0.2; g.add(capuz);
   }
   return g;
 }
@@ -276,8 +281,8 @@ function montarCorpo(obj, spec) {
     cab.add(fazerCabelo(spec.cabelo, spec.cabelo_cor, R));
     if (spec.chapeu) cab.add(fazerChapeu(spec.chapeu, R));
     if (spec.barba) {
-      const barba = new THREE.Mesh(new THREE.SphereGeometry(R * 0.82, 16, 10, 0, 6.3, Math.PI * 0.55, Math.PI * 0.45), new THREE.MeshStandardMaterial({ color: spec.cabelo_cor, roughness: 1 }));
-      barba.position.set(0, -R * 0.45, R * 0.16); barba.scale.set(0.95, 0.75, 0.9); cab.add(barba);
+      const barba = new THREE.Mesh(new THREE.SphereGeometry(R * 0.82, 16, 10, 0, 6.3, Math.PI * 0.6, Math.PI * 0.4), new THREE.MeshStandardMaterial({ color: spec.cabelo_cor, roughness: 1 }));
+      barba.position.set(0, -R * 0.72, R * 0.16); barba.scale.set(0.95, 0.75, 0.9); cab.add(barba);
     }
   }
   if (spec.acessorio) porAcessorio(spec.acessorio, cab, chest && grupoEm(chest, c.pontos.chest), R);
@@ -305,11 +310,12 @@ function montarCorpo(obj, spec) {
 export async function pessoa(specBruto = {}) {
   const spec = resolverSpec(specBruto);
   const { obj } = await instanciar('personagens/Mannequin_Medium', { altura: spec.altura });
+  const prop = proporcionar(obj, spec.altura);
   const { head, chest, maoDir, maoCentro, rostoMesh, raioCabeca } = montarCorpo(obj, spec);
 
   const mixer = new THREE.AnimationMixer(obj);
-  let acaoAtual = null;
-  const dic = await animacoesManequim();
+  let acaoAtual = null, nomeAtual = 'Idle_A';
+  const dic = await clipsHumanos();
   let expAtual = spec.rosto;
 
   const ator = {
@@ -318,6 +324,7 @@ export async function pessoa(specBruto = {}) {
     _head: head, _mao: maoDir, _rosto: rostoMesh,
     acao(nome, { loop = true } = {}) {
       const clip = dic[nome] || dic['Idle_A']; if (!clip) return ator;
+      nomeAtual = dic[nome] ? nome : 'Idle_A';
       const nova = mixer.clipAction(clip); nova.reset();
       nova.setLoop(loop ? THREE.LoopRepeat : THREE.LoopOnce, Infinity); nova.clampWhenFinished = !loop;
       if (acaoAtual && acaoAtual !== nova) acaoAtual.stop();
@@ -325,7 +332,7 @@ export async function pessoa(specBruto = {}) {
     },
     rosto(exp) { expAtual = exp; if (rostoMesh) rostoMesh.material.map = texturaRosto(spec.rostoEstilo, exp, spec); return ator; },
     segurar(nome) { if (!maoDir || !nome) return ator; const { obj: o } = fazerObjeto(nome); o.position.copy(maoCentro || maoDir.getWorldPosition(new THREE.Vector3())); maoDir.attach(o); return ator; },
-    setTime(t) { mixer.setTime(Math.max(0, t)); return ator; },
+    setTime(t) { mixer.setTime(Math.max(0, t)); posAnimar(obj, prop, nomeAtual, t, { pendurar: /^Idle/.test(nomeAtual) ? 0.5 : 0 }); return ator; },
   };
   ator.acao(spec.acao || 'Idle_A');
   return ator;

@@ -9,7 +9,7 @@
 // Determinístico: setTime(t) / mixer.setTime; nenhum relógio nem random sem semente.
 import * as THREE from 'three';
 import { instanciar, animacoesManequim } from './modelos.js';
-import { montarHumanoide, grupoEm } from './corpo.js';
+import { montarHumanoide, grupoEm, proporcionar, posAnimar, clipsHumanos } from './corpo.js';
 
 function rng(sem) { let a = (sem | 0) >>> 0 || 7; return () => { a = (a * 1664525 + 1013904223) >>> 0; return a / 4294967296; }; }
 
@@ -47,18 +47,22 @@ function esconderMalhas(obj) { obj.traverse(m => { if (m.isMesh || m.isSkinnedMe
 // ======== criaturas humanoides: o MESMO corpo inteiriço do personagem (kit/corpo.js), com parâmetros ========
 const mat = (cor, extra = {}) => new THREE.MeshStandardMaterial({ color: cor, roughness: 0.9, ...extra });
 
-async function animarManequim(obj, nome, timeScale = 1) {
+async function animarManequim(obj, nome, timeScale = 1, prop = null, opts = {}) {
   const mixer = new THREE.AnimationMixer(obj);
-  const dic = await animacoesManequim();
-  let atual = null;
-  const acao = (n) => { const clip = dic[n] || dic['Idle_A']; if (!clip) return; if (atual) atual.stop(); atual = mixer.clipAction(clip); atual.reset(); atual.timeScale = 1; atual.play(); };
+  const dic = prop ? await clipsHumanos() : await animacoesManequim();
+  let atual = null, nomeAtual = nome;
+  const acao = (n) => { const clip = dic[n] || dic['Idle_A']; if (!clip) return; nomeAtual = dic[n] ? n : 'Idle_A'; if (atual) atual.stop(); atual = mixer.clipAction(clip); atual.reset(); atual.timeScale = 1; atual.play(); };
   acao(nome);
-  return { mixer, acao, setTime: t => mixer.setTime(Math.max(0, t) * timeScale) };
+  const setTime = t => {
+    const tt = Math.max(0, t) * timeScale; mixer.setTime(tt);
+    if (prop) posAnimar(obj, prop, nomeAtual, tt, { pendurar: opts.pendurar && /Idle|Holding/.test(nomeAtual) ? opts.pendurar : 0 });
+  };
+  return { mixer, acao, setTime };
 }
 
 // configuração base de cada tipo (opts do roteiro sobrescreve altura/cor/olhos)
 const HUMANOIDES = {
-  alta: { altura: 3.5, cor: 0x3a2e22, largura: 0.3, prof: 0.17, braco: 0.045, perna: 0.06, cabeca: 0.13, antebraco: 2.4, olhos: [3.4, 2.9, 0.4], olhoR: 0.026, acao: 'Idle_A', ts: 0.5 },
+  alta: { altura: 3.5, cor: 0x3a2e22, largura: 0.36, prof: 0.2, braco: 0.055, perna: 0.075, cabeca: 0.13, antebraco: 2.4, olhos: [3.4, 2.9, 0.4], olhoR: 0.026, acao: 'Idle_A', ts: 0.5, pendurar: 0.9 },
   sem_rosto: { altura: 2.05, cor: 0x15151c, largura: 0.38, prof: 0.22, braco: 0.055, perna: 0.068, cabeca: 0.14, corCabeca: 0xe8e2d6, corMao: 0xe8e2d6, acao: 'Idle_A', ts: 0.7, semOlhos: true },
   mulher_branca: { altura: 1.8, cor: 0xeeeee6, largura: 0.3, prof: 0.18, braco: 0.042, perna: 0.05, cabeca: 0.14, corMao: 0xd8d8d0, acao: 'Idle_B', ts: 0.6, semOlhos: true },
   espantalho: { altura: 1.95, cor: 0x7a4a2a, calca: 0x3a4a6a, largura: 0.34, prof: 0.2, braco: 0.05, perna: 0.062, cabeca: 0.16, corCabeca: 0xc8a85a, corMao: 0xd8b25a, acao: 'Idle_A', ts: 0.8, olhos: [0.05, 0.05, 0.05], olhoR: 0.03 },
@@ -74,6 +78,7 @@ async function humanoide(tipo, opts) {
   const altura = opts.altura || C.altura;
   const k = altura / C.altura; // escala os raios se o roteiro pedir outra altura
   const { obj } = await instanciar('personagens/Mannequin_Medium', { altura, aoChao: true });
+  const prop = proporcionar(obj, altura);
   const corpo = opts.cor || C.cor;
   const extra = C.translucido ? { transparent: true, opacity: 0.45, emissive: 0x3a5a7a, emissiveIntensity: 0.5, depthWrite: false } : {};
   const mCorpo = mat(corpo, extra), mCalca = C.calca ? mat(C.calca) : mCorpo;
@@ -85,6 +90,17 @@ async function humanoide(tipo, opts) {
     antebraco: C.antebraco || 1, semPernas: C.semPernas, caudaFim: 0.35, halo: C.halo,
   });
   const R = c.R, cab = c.head && c.centroCabeca ? grupoEm(c.head, c.centroCabeca) : null;
+  // translúcido (fantasma): sem faixas onde as peças se cruzam. Uma passada só de profundidade (não pinta) grava a
+  // superfície da frente; depois a cor só passa onde for essa superfície -> uma camada translúcida, corpo liso.
+  if (C.translucido) {
+    const soFundo = new THREE.MeshBasicMaterial({ colorWrite: false, depthWrite: true, transparent: true });
+    for (const m of c.pecas) {
+      if (!m.material || !m.material.transparent) continue;
+      const d = new THREE.Mesh(m.geometry, soFundo);
+      d.position.copy(m.position); d.quaternion.copy(m.quaternion); d.scale.copy(m.scale); d.renderOrder = 1;
+      m.parent.add(d); m.renderOrder = 2; m.castShadow = false;
+    }
+  }
 
   // olhos que brilham na frente da cabeça (só os olhos brilham)
   const olhos = opts.olhos || C.olhos;
@@ -125,9 +141,9 @@ async function humanoide(tipo, opts) {
     if (c.hips) { const yq = c.pontos.hips.y; const tun = new THREE.Mesh(new THREE.CylinderGeometry(C.largura * 0.6, C.largura * 0.95, yq * 0.5, 18, 1, true), mat(0x6a4a2a, { side: THREE.DoubleSide })); tun.position.set(c.pontos.hips.x, yq * 0.78, c.pontos.hips.z); c.hips.attach(tun); }
   }
 
-  const ctrl = await animarManequim(obj, opts.acao || C.acao, C.ts);
+  const ctrl = await animarManequim(obj, opts.acao || C.acao, C.ts, prop, { pendurar: C.pendurar ?? 0.5 });
   const flutua = tipo === 'fantasma' || tipo === 'mulher_branca';
-  const setTime = t => { ctrl.setTime(t); if (flutua) obj.position.y = (tipo === 'fantasma' ? 0.25 : 0.04) + Math.sin(t * 1.3) * 0.07; };
+  const setTime = t => { ctrl.setTime(t); if (flutua) obj.position.y += (tipo === 'fantasma' ? 0.25 : 0.04) + Math.sin(t * 1.3) * 0.07; };
   obj.updateMatrixWorld(true);
   return { obj, mixer: ctrl.mixer, setTime, acao: ctrl.acao, head: c.head, altura, raio: altura * 0.15 };
 }
