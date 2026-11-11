@@ -223,6 +223,12 @@ def _canal_do_argumento():
     if "--canal" not in sys.argv:
         return None
     pasta = sys.argv[sys.argv.index("--canal") + 1]
+    if not os.path.exists(os.path.join(pasta, "canal.json")) and os.path.basename(os.path.normpath(pasta)) == "hora-muerta":
+        # Hora Muerta tem motor proprio (sem canal.json): so precisa do token para "privado"
+        c = {"prefixo": "HM", "idioma": "es", "token_var": "YT_REFRESH_TOKEN_ES"}
+        configurar(c["prefixo"], c["idioma"])
+        os.environ["YT_TOKEN_VAR"] = c["token_var"]
+        return c
     c = json.load(open(os.path.join(pasta, "canal.json"), encoding="utf-8"))
     configurar(c["prefixo"], c.get("idioma", "en"))
     os.environ["YT_TOKEN_VAR"] = c["token_var"]
