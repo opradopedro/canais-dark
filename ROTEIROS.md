@@ -98,6 +98,11 @@ Motor: `motor-3d/` (Three.js, custo zero, mesmo render do `hora-muerta/scripts/r
   19 são rascunho e o motor recusa. Criaturas: alta, sem_rosto, cao_negro, mulher_branca, vulto, rastejante, espantalho,
   olhos_no_escuro, lobisomem, fantasma, aranha_gigante, coisa_com_chifres, gigante_mitologico, animal.
 
+**OLD TALES: 3D PAUSADO (Pedro, 11/11 11h, depois do CL036 reprovado).** Nada 3D vai ao ar no Old Tales até o Kiro
+fazer a rodada 6 (`motor-3d/PLANO-KIRO-RODADA6.md`) e o Pedro aprovar um MP4 de teste. Enquanto isso saem os roteiros
+prontos do estilo atual (CL018, CL022-CL033). Série 3D nova do Old Tales vai para `old-tales/em-espera/`, NUNCA para
+`stories/`. Hora Muerta e Signal Lost não mudam.
+
 **3D vai ao ar já (REGRA do Pedro, 11/11):** a fila (`motor-en/prioridade.py`) põe séries 3D na frente de qualquer
 série do estilo antigo que ainda não começou. As séries prontas no estilo antigo viram **RESERVA**: só saem se faltar
 roteiro 3D. Por isso o **estoque mínimo desses 3 canais conta só roteiros 3D** (reserva não conta): a rotina escreve
