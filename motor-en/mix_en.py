@@ -85,7 +85,7 @@ def main(historia, voz, tempos, saida):
     # 3. ambiente por cena, com troca suave de 0,6 s
     cenas = r["cenas"]
     for i, c in enumerate(cenas):
-        nome = (c.get("p") or {}).get("ambiente") or sons.AMBIENTE.get(c["comp"])
+        nome = (c.get("p") or {}).get("ambiente") or sons.AMBIENTE.get(c.get("comp") or (c.get("cena") or {}).get("cenario"))
         arq = sons.obter(nome) if nome else None
         if not arq:
             continue
@@ -106,7 +106,7 @@ def main(historia, voz, tempos, saida):
         nome = sons.EVENTO.get(e["tipo"])
         if e["tipo"] == "golpe":  # batida em porta de metal quando a cena e o elevador
             cena = next((c for c in reversed(cenas) if c["t0"] <= e["t"]), None)
-            if cena and cena["comp"] == "elevator":
+            if cena and cena.get("comp") == "elevator":
                 nome = "golpe_metal"
         if not nome:
             continue

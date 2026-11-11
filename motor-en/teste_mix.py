@@ -19,7 +19,7 @@ def um_por_tema():
                 h = json.load(open(f, encoding="utf-8"))
             except Exception:
                 continue
-            tema = h.get("tema") or "suspense"
+            tema = (h.get("tema") or "suspense") + ("-3d" if h.get("visual") == "3d" else "")
             if tema not in vistos and h.get("lineas") and h.get("cenas"):
                 vistos[tema] = f
     return vistos
