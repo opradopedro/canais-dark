@@ -24,7 +24,7 @@ MOTOR = os.path.join(RAIZ, "hora-muerta", "scripts")  # motor testado, nunca alt
 sys.path.insert(0, MOTOR)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from comum import carregar, resolver  # noqa: E402  (vem do motor do canal-terror)
-from prioridade import ordenar_series  # noqa: E402  (ideia do Pedro entra na frente da fila)
+from prioridade import ordenar_series, sai_agora  # noqa: E402  (ideia do Pedro entra na frente da fila)
 
 DIAS_EN = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 MESES_EN = ["January", "February", "March", "April", "May", "June",
@@ -408,6 +408,7 @@ def main():
         print(f"nenhum roteiro indicado: usando {os.path.basename(historias[0])} "
               f"(para escolher outro, passe o caminho do arquivo; para a serie inteira, use --proximo)",
               flush=True)
+    serie_agora = False
     if a.proximo:
         agora = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         fila = [k for k, v in ja.items() if (v.get("publishAt") or "") > agora]
@@ -418,12 +419,14 @@ def main():
         # REGRA do Pedro (31/10): serie pela metade termina primeiro; logo depois, ideia do Pedro ("prioridade": "pedro")
         pend = ordenar_series(pend, ja, carregar)
         meio = bool(pend) and any(carregar(f)["codigo"] in ja for f in pend[0])
-        if a.subir and len(fila) >= a.fila and not meio:
+        furar = bool(pend) and any(carregar(f).get("furar_fila") for f in pend[0])
+        if a.subir and len(fila) >= a.fila and not meio and not furar:
             print(f"FILA CHEIA: {len(fila)} videos ja agendados ({', '.join(sorted(fila))}); nada a fazer hoje")
             return
         if not pend:
             sys.exit("SEM ROTEIRO: todas as series de stories/ ja foram subidas; escreva uma nova (ver SKILL.md)")
         historias = sorted(pend[0], key=lambda f: serie_de(f)[1])
+        serie_agora = sai_agora([carregar(f) for f in historias], ja)  # serie inteira, antes de cortar as partes
         if a.max_partes:
             # o Crew da no maximo 1 h por tarefa: produz so as proximas N partes; o resto fica para o dia seguinte
             novas = [f for f in historias if carregar(f)["codigo"] not in ja]
@@ -442,6 +445,11 @@ def main():
         print(f"produzindo {len(pend)} parte(s) agora; faltam {faltam} para as proximas execucoes",
               flush=True)
     slots = []
+    agora_ja = a.subir and a.proximo and bool(pend) and serie_agora
+    if agora_ja and a.publicar == "auto":
+        # REGRA (Pedro, 11/11 "faca sair agora"): a parte 1 publica ~20 min depois de subir; o resto segue o horario
+        a.publicar = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        print(f"FURAR FILA: a parte 1 sai na hora (publicar ~{a.publicar} UTC, acertado no envio)", flush=True)
     # Um horario A MAIS do que o numero de partes: a ultima parte produzida precisa saber
     # quando sai a seguinte, para dizer "tomorrow, Thursday" sem errar.
     for i in range(len(pend) + 1):
@@ -510,6 +518,10 @@ def main():
                   flush=True)
         if os.path.exists(base + "_voz.wav"):
             os.remove(base + "_voz.wav")
+        if a.subir and agora_ja and k == 0:
+            # o render levou tempo: publica 20 min depois do envio (o YouTube exige horario no futuro)
+            up["publicar_em"] = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=20)).strftime("%Y-%m-%dT%H:%M:%SZ")
+            json.dump(up, open(base + "_upload.json", "w"), ensure_ascii=False, indent=1)
         if a.subir:
             r = yt_upload.subir(base + "_upload.json", c.get("canal_titulo"))
             ids[cod] = r["id"]

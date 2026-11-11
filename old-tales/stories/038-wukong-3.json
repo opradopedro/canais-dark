@@ -1,0 +1,440 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "serie": "wukong-3d",
+ "serie_titulo": "Sun Wukong: The Monkey King | Old Tales",
+ "partes": 5,
+ "autor": "claude",
+ "origem": "pedido do Pedro (chat 11/11): Journey to the West, Wu Cheng'en",
+ "prioridade": "pedro",
+ "ideia": "chat 11/11",
+ "furar_fila": true,
+ "tags": [
+  "sun wukong",
+  "monkey king",
+  "journey to the west",
+  "chinese mythology",
+  "wukong",
+  "mythology",
+  "old tales",
+  "legends",
+  "story time"
+ ],
+ "elenco": {
+  "wukong": {
+   "semente": 3601,
+   "corpo": "magro",
+   "pele": "#a8703f",
+   "cabelo": "moicano",
+   "cabelo_cor": "#d9a03a",
+   "camisa": "#d8b43a",
+   "calca": "#5a3a2a",
+   "roupa": "chines",
+   "acessorio": "",
+   "rosto_estilo": "redondo"
+  },
+  "macaco": {
+   "semente": 3602,
+   "corpo": "crianca",
+   "pele": "#8a5a34",
+   "cabelo": "cacheado",
+   "cabelo_cor": "#5a3a1e",
+   "camisa": "#7a5a34",
+   "calca": "#3a2f24",
+   "roupa": "camiseta",
+   "acessorio": ""
+  },
+  "subodhi": {
+   "semente": 3603,
+   "corpo": "idoso",
+   "pele": "#e8c0a0",
+   "cabelo": "careca",
+   "camisa": "#2a6a5a",
+   "roupa": "chines",
+   "acessorio": ""
+  },
+  "tang": {
+   "semente": 3604,
+   "corpo": "medio",
+   "pele": "#f2d6be",
+   "cabelo": "careca",
+   "camisa": "#d8b43a",
+   "roupa": "chines",
+   "acessorio": ""
+  }
+ },
+ "codigo": "CL038",
+ "parte": 3,
+ "anterior": "CL037",
+ "titulo": "He stole a weapon from the Dragon King 🐒 Sun Wukong Part 3 #story #shorts",
+ "capa": "THE IRON PILLAR",
+ "descripcion": "Wukong needs a weapon no one can lift. He finds it in the palace of the Dragon King, and then he goes somewhere no living thing should go.\n\n> Part 4: {when_next}.\nWhat would you erase from the Book of Life and Death?\n\nFrom Journey to the West (Xiyouji), Wu Cheng'en, 16th century, chapters 3 and 4.\n#monkeyking #sunwukong #journeytothewest #mythology #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Imagine a weapon no army could lift.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Wukong beats the demon, but every sword breaks.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "So he dives to the palace of the *Dragon King*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A sword? Too light. A spear? Too light.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then the dragon queen mentions an iron pillar that glows.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "It once measured the sea, and it weighs *thirteen thousand pounds*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Wukong says, a little smaller. It *shrinks*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "It becomes a golden staff that obeys only him.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "It can shrink to a needle *behind his ear*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He takes dragon armor too, and never says thank you.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because his next enemy is *death*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "One night, Wukong falls asleep under a tree.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Two shadows drag his soul to the *underworld*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Your time has come, the judges say.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "They show him the *Book of Life and Death*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Wukong takes out his staff. The judges step back.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He finds his own name, and crosses it out.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then the name of *every monkey* he knows.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Now everyone complains to Heaven. Part four, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "aereo",
+    "luz": "nublado"
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "auto",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Melee_1H_Attack_Chop",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "ponte",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Jump_Full_Long",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Holding_A",
+      "rosto": "desconfiado"
+     }
+    ],
+    "criatura": {
+     "tipo": "coisa_com_chifres",
+     "marca": "templo"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "lanterna",
+    "plano": "close",
+    "luz": "noite_neblina"
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "baixo",
+    "luz": "madrugada"
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Interact",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "escada",
+    "plano": "auto",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Melee_2H_Idle",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "escada",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "torii",
+    "plano": "auto",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Walking_A",
+      "rosto": "sorriso",
+      "de": "ponte",
+      "para": "torii"
+     }
+    ],
+    "criatura": {
+     "tipo": "coisa_com_chifres",
+     "marca": "ponte"
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entrada",
+    "plano": "aereo",
+    "luz": "noite_neblina"
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "toco",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Lie_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entre_cruzes",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Walking_Backwards",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "entre_cruzes"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_B",
+      "rosto": "bravo"
+     }
+    ],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "mausoleu"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "cruz_grande",
+    "plano": "close",
+    "luz": "noite_neblina"
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "medio",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo"
+     }
+    ],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "fundo"
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "cruz_grande",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Use_Item",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "cruz_grande",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Use_Item",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "baixo",
+    "luz": "dia"
+   }
+  }
+ ],
+ "eventos": []
+}
