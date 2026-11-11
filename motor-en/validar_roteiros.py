@@ -27,6 +27,48 @@ CANAIS = {
 TEMAS_CL = {"calmo", "epico", "mito"}
 PALETAS_CL = {None, "grecia", "china", "roma", "nordico", "egito", "japao"}  # roma/nordico/egito/japao: PALS.cl_<nome> vem dos pacotes 14-17 (KIRO-PROMPT.md)
 FLAT_DESDE = {"hora-muerta": 21, "signal-lost": 12, "old-tales": 13}
+# REGRA do Pedro (07-10/11): series NOVAS desses 3 canais no motor 3D (motor-3d/, estilo do Reel). ROTEIROS.md "Estilo 3D"
+TRES_D_DESDE = {"hora-muerta": 41, "signal-lost": 31, "old-tales": 34}
+sys.path.insert(0, os.path.join(RAIZ, "motor-3d"))
+from vocabulario import vocab as _vocab3d
+V3D = _vocab3d()
+
+
+def conferir_3d(n, h):
+    """Roteiro com "visual":"3d": elenco, cenas e vocabulario do motor 3D."""
+    e = []
+    elenco = h.get("elenco")
+    if not isinstance(elenco, dict) or not elenco:
+        e.append(f"{n}: roteiro 3D precisa de \"elenco\" (atores declarados uma vez no topo)")
+        elenco = {}
+    for i, c in enumerate(h.get("cenas") or []):
+        cn = c.get("cena")
+        if not isinstance(cn, dict):
+            e.append(f"{n}: cena {i} sem o bloco \"cena\" do motor 3D"); continue
+        cen = cn.get("cenario")
+        if cen not in V3D["cenarios"]:
+            e.append(f"{n}: cena {i}: cenario '{cen}' nao esta pronto; use um de {sorted(V3D['cenarios'])}"); continue
+        marcas = V3D["cenarios"][cen]
+        def ok(campo, val, lista):
+            if val is not None and val not in lista:
+                e.append(f"{n}: cena {i}: {campo} '{val}' nao existe; use um de {lista}")
+        ok("marca", cn.get("marca"), marcas)
+        ok("plano", cn.get("plano"), V3D["planos"])
+        ok("luz", cn.get("luz"), V3D["luzes"])
+        ok("efeito", cn.get("efeito"), V3D["efeitos"])
+        cr = cn.get("criatura")
+        if cr:
+            ok("criatura", cr.get("tipo"), V3D["criaturas"])
+            ok("marca da criatura", cr.get("marca"), marcas)
+        for a in cn.get("atores") or []:
+            if a.get("id") not in elenco:
+                e.append(f"{n}: cena {i}: ator '{a.get('id')}' nao esta no elenco")
+            ok("acao", a.get("acao"), V3D["acoes"])
+            ok("rosto", a.get("rosto"), V3D["expressoes"])
+            ok("segura", a.get("segura"), V3D["objetos_mao"])
+            ok("de", a.get("de"), marcas)
+            ok("para", a.get("para"), marcas)
+    return e
 PECAS_FLAT_FIXAS = {"retrato", "texto"}
 
 # REGRA do Pedro (05/11): videos mais longos. "a pessoa entende a historia e o video acaba".
@@ -122,7 +164,11 @@ def conferir(canal, engine):
             erros.append(f"{n}: paleta '{h.get('paleta')}' nao existe no Old Tales; use uma de {sorted(p for p in PALETAS_CL if p)} ou nenhuma (medieval)")
         # REGRA do Pedro (01/11): historia nova de Hora Muerta, Signal Lost e Old Tales so no estilo flat
         num = int(re.sub(r"\D", "", cod) or 0)
-        if canal in FLAT_DESDE and num >= FLAT_DESDE[canal]:
+        if canal in TRES_D_DESDE and num >= TRES_D_DESDE[canal] and h.get("visual") != "3d":
+            erros.append(f"{n}: serie nova precisa de \"visual\": \"3d\" (motor-3d, ROTEIROS.md 'Estilo 3D')")
+        if h.get("visual") == "3d":
+            erros += conferir_3d(n, h)
+        elif canal in FLAT_DESDE and num >= FLAT_DESDE[canal]:
             if h.get("visual") != "flat":
                 erros.append(f"{n}: historia nova precisa de \"visual\": \"flat\" (estilo novo, ESTILO-VISUAL.md)")
             velhas = sorted({c.get("comp") for c in h.get("cenas") or []} - PECAS_FLAT)
@@ -152,6 +198,12 @@ def conferir(canal, engine):
                 erros.append(f"{h['_arq']}: serie '{s}' pulou uma parte (esperava parte {i + 1})")
             if i > 0 and h.get("anterior") and h["anterior"] != lista[i - 1].get("codigo"):
                 erros.append(f"{h['_arq']}: 'anterior' deveria ser {lista[i - 1].get('codigo')}, nao {h['anterior']}")
+    # anti-repeticao do 3D (REGRA do Pedro 10/11: variedade de criaturas, cenarios e rostos entre historias)
+    if canal in TRES_D_DESDE:
+        import subprocess
+        r = subprocess.run([sys.executable, os.path.join(RAIZ, "motor-3d", "variedade.py"), "--canal", canal],
+                           capture_output=True, text=True)
+        avisos += [f"variedade: {l.strip()}" for l in r.stdout.splitlines() if l.strip().lower().startswith(("aviso", "-", "!"))]
     return len(hs), erros, avisos
 
 

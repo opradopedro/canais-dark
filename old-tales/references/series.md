@@ -1,5 +1,7 @@
 # Plano das séries do Old Tales
 
+> **A partir de CL034: série nova no ESTILO 3D** (`"visual": "3d"`, motor-3d/, jeito de contar do Reel). Ver ROTEIROS.md "Estilo 3D". Escolha protagonista, cenário e criatura diferentes das últimas 5 séries.
+
 Cada série tem um bloco antes de as partes serem escritas. Marque FEITO quando a parte estiver em `stories/`.
 Quem continuar uma série (Kiro ou Claude) escreve as partes FALTA seguindo o resumo. Regras: `ROTEIROS.md`.
 

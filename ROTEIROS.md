@@ -47,7 +47,7 @@ confiável; mito fiel à versão tradicional, dizendo a fonte na descrição. De
 Gráficos limpos e história contada com ritmo, INSPIRADOS num vídeo que o Pedro mandou, mas com identidade própria de
 cada canal: "só se inspire, não faça exatamente igual". Guia completo: **`ESTILO-VISUAL.md`** (seções 2 e 3).
 
-- **Toda história nova** desses 3 canais é no estilo flat. O fiscal barra quem não for: a partir de HM021, SV012 e
+- (Até HM040, SV030 e CL033. Daí em diante vale o **Estilo 3D**, seção abaixo.) **Toda história nova** desses 3 canais era no estilo flat. O fiscal barra quem não for: a partir de HM021, SV012 e
   CL013, o roteiro precisa de `"visual": "flat"` e só pode usar peças `f_*`, `retrato` e `texto`.
   Signal Lost também leva `"paleta": "sv"`; Old Tales leva `"tema"` calmo/epico/mito e `"piano": 0`.
 - **Séries que já começaram no YouTube** terminam no estilo antigo. As que não tinham começado foram para
@@ -64,6 +64,41 @@ cada canal: "só se inspire, não faça exatamente igual". Guia completo: **`EST
   fórmula, nem trem/maquinista/zumbi.
 - Modelos prontos para copiar: `hora-muerta/stories/021-*` a `024-*`, `signal-lost/stories/012-*` a `014-*`,
   `old-tales/stories/013-*` a `015-*`.
+
+## Estilo 3D: Hora Muerta, Signal Lost e Old Tales (REGRA do Pedro, 07-10/11, substitui o flat para séries NOVAS)
+
+Referência: Reel "a linha branca" (`referencias/estilo-3d-reel/`, quadros em `/mnt/project-files/estilo-3d-reel/`).
+Motor: `motor-3d/` (Three.js, custo zero, mesmo render do `hora-muerta/scripts/render.py`). O fiscal exige
+`"visual": "3d"` a partir de **HM041, SV031 e CL034**. Séries já começadas terminam no estilo em que começaram.
+
+**Jeito de contar (os 3 canais):** 3ª pessoa no presente, frases curtas, como quem explica um mistério.
+1. Gancho com o mistério em 1 frase ("Imagine viver numa cidade cercada por uma linha branca…").
+2. A regra/o fato estranho que todo mundo aceita sem saber por quê.
+3. Contraste com o normal ("Durante o dia, tudo funciona normalmente… Mas quando a noite chega…").
+4. Um personagem que duvida e resolve testar/descobrir.
+5. No meio, pedido para seguir ("…porque agora vem a parte assustadora" / "lo que viene ahora…").
+6. Escalada (barulho, silhueta, perseguição) e a virada (a regra funciona, ou não).
+7. Gancho final que deixa a pergunta aberta e puxa a próxima parte; a última frase volta para a primeira (loop).
+- Signal Lost = suspense/sobrevivência (inglês). Hora Muerta = lendas latinas e regras de terror (espanhol; susto no fim
+  pode, som depois da narração não). Old Tales = contos diversos: dia a dia, soldados, mitos (inglês; criatura rara).
+- Continuam valendo: mínimo 2 partes, `{when_next}`/`{dia_siguiente}`, "Duração", legenda, regra das ideias do Pedro.
+
+**Campos do roteiro 3D** (exemplos completos em `motor-3d/testes/*-3d-exemplo.json`, resumo em `motor-3d/README.md`):
+- `"visual": "3d"`, `"elenco": {"mateo": {"semente": 17}}` (ou altura, pele, camisa, calca, cabelo, roupa, acessorio,
+  rosto_estilo). O mesmo ator aparece igual em todas as cenas e partes da série.
+- `"cenas": [{"linea": 0, "cena": {"cenario", "marca", "plano", "luz", "efeito", "atores": [{"id", "acao", "rosto",
+  "de", "para", "segura"}], "criatura": {"tipo", "marca"}}}]`, uma cena por fala de preferência. `"plano": "auto"` deixa
+  o motor cortar sozinho a cada ~2,5 s (recomendado); fixe um plano só quando a fala pedir (revelação = `baixo`).
+- Palavra-chave entre `*asteriscos*` sai amarela na legenda (1 ou 2 por fala, no máximo).
+- Vocabulário válido (cenários prontos e marcas, luzes, criaturas, expressões, animações): `python3 motor-3d/vocabulario.py`.
+  Cenários prontos hoje: bairro, floresta, estrada, casa_interior, cemiterio, hospital, vila, templo_oriental. Os outros
+  19 são rascunho e o motor recusa. Criaturas: alta, sem_rosto, cao_negro, mulher_branca, vulto, rastejante, espantalho,
+  olhos_no_escuro, lobisomem, fantasma, aranha_gigante, coisa_com_chifres, gigante_mitologico, animal.
+
+**Variedade (REGRA do Pedro, 10/11): nada se repete sempre.** Cada série nova escolhe protagonista (`semente` nova),
+cenário principal e criatura DIFERENTES das últimas 5 séries do canal; varie também luz/clima (noite, neblina, chuva,
+lua cheia, entardecer, neve…). O fiscal avisa repetição (`motor-3d/variedade.py`). Se a história precisar de um cenário
+que ainda é rascunho, escreva com o pronto mais parecido e anote no `PLANO-MUNDOS.md` o cenário que faltou.
 
 ## Duração (REGRA do Pedro, 05/11: "a pessoa entende a história e o vídeo acaba")
 Vale por cima de qualquer número antigo (prompt, SKILL.md, temas.md) que fale em "8 frases", "40 a 58 s" ou "35 a 50 s".

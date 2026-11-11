@@ -1,5 +1,7 @@
 # Séries do Hora Muerta (plano antes das partes)
 
+> **A partir de HM041: série nova no ESTILO 3D** (`"visual": "3d"`, motor-3d/, jeito de contar do Reel). Ver ROTEIROS.md "Estilo 3D". Escolha protagonista, cenário e criatura diferentes das últimas 5 séries.
+
 Cada série: 2 partes, espanhol neutro, 40 a 58 s cada. A parte 1 para no pior momento.
 Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 
