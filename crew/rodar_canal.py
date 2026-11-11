@@ -448,6 +448,13 @@ if __name__ == "__main__":
     funcoes = {"survival": run_survival, "signal-lost": run_survival, "classics": run_classics,
                "old-tales": run_classics, "hora-muerta": run_hora_muerta, "so-you-built-it": run_so_you_built_it,
                "metricas": run_metricas, "teste": run_teste, "capas-yb": run_capas_yb}
+    if qual.startswith("privado:"):
+        # tirar video com defeito do ar: tarefa "privado:<canal>:<id do video>" (workflow_dispatch)
+        _, canal, vid = qual.split(":", 2)
+        repo = _repo()
+        r = subprocess.run([sys.executable, os.path.join(repo, "motor-en", "yt_upload.py"), "privado", vid,
+                            "--canal", os.path.join(repo, canal)], cwd=repo)
+        sys.exit(r.returncode)
     texto = funcoes.get(qual, run)() or ""
     # no GitHub Actions, falha vira X vermelho e o GitHub manda e-mail ao Pedro. So falha quando o programa do canal
     # falhou de verdade: video barrado mas trocado pelo substituto nao e falha (vira aviso na issue, ver alertar).
