@@ -40,7 +40,9 @@ FIXOS = {"vila": 703643}  # nome -> id do Freesound, quando a busca automatica e
 
 # cena (comp) -> som de ambiente que toca de fundo enquanto ela aparece
 AMBIENTE = {"vila": "passaros", "casa": "fogo", "mercado": "vila", "elevator": "elevador",
-            "reloj": "relogio", "pasillo": "zumbido", "quarto": "relogio", "olho": "relogio"}
+            "reloj": "relogio", "pasillo": "zumbido", "quarto": "relogio", "olho": "relogio",
+            # cenarios do motor 3D (campo "cena.cenario"; 11/11: o 3D nao tem "comp")
+            "floresta": "passaros", "templo_oriental": "passaros", "casa_interior": "relogio", "hospital": "zumbido"}
 # evento do roteiro -> som pontual
 EVENTO = {"sino": "sino", "golpe": "golpe", "grito": "choro", "susto": "susto", "apagon": "apagao", "vibra": "celular",
           "galo": "galo", "porta": "porta_madeira"}
