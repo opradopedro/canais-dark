@@ -123,9 +123,18 @@ def _post(path, token, corpo, **q):
 def tirar_do_ar(video_id, token=None):
     """Deixa o video PRIVADO e sem agendamento (video com defeito; REGRA do Pedro: tirar do ar sem pedir ok)."""
     token = token or access_token()
+    if re.fullmatch(rf"{re.escape(PREFIXO)}\d{{3,}}", video_id):  # aceita o codigo (ex. CL036)
+        pub = publicados(token)
+        if video_id not in pub:
+            print(f"{video_id} nao esta no canal (ja apagado?): nada a tirar do ar")
+            return
+        video_id = pub[video_id]["id"]
     v = get("videos", token, part="status", id=video_id).get("items", [])
     if not v:
-        sys.exit(f"VIDEO NAO ACHADO {video_id} neste canal")
+        # nao achou (apagado pelo dono ou id errado): nada no ar, nao e falha
+        print(f"VIDEO NAO ACHADO {video_id} neste canal: nada a tirar do ar. No canal: "
+              + ", ".join(f"{k}={x['id']}({x['privacidade']})" for k, x in sorted(publicados(token).items())[-5:]))
+        return
     st = {k: x for k, x in v[0]["status"].items() if k in ("embeddable", "license", "publicStatsViewable",
                                                           "selfDeclaredMadeForKids", "containsSyntheticMedia")}
     st["privacyStatus"] = "private"
