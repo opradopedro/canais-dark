@@ -9,6 +9,7 @@
 // Determinístico: setTime(t) / mixer.setTime; nenhum relógio nem random sem semente.
 import * as THREE from 'three';
 import { instanciar, animacoesManequim } from './modelos.js';
+import { montarHumanoide, grupoEm } from './corpo.js';
 
 function rng(sem) { let a = (sem | 0) >>> 0 || 7; return () => { a = (a * 1664525 + 1013904223) >>> 0; return a / 4294967296; }; }
 
@@ -43,107 +44,98 @@ function escurecer(obj, cor, rough = 1) {
 }
 function esconderMalhas(obj) { obj.traverse(m => { if (m.isMesh || m.isSkinnedMesh) m.visible = false; }); }
 
-// monta um corpo humanoide em peças, com parâmetros de criatura (fino, braços longos, cabeça pequena...)
-function corpoHumanoide(obj, { cor = 0x1a1510, rCorpo = 0.1, rBraco = 0.05, rPerna = 0.06, bracoLongo = 1, cabeca = 0.14 } = {}) {
-  esconderMalhas(obj);
-  const mat = new THREE.MeshStandardMaterial({ color: cor, roughness: 1 });
-  const B = n => acharOsso(obj, n);
-  const hips = B('hips'), head = B('head');
-  const uar = B('upperarmr'), lar = B('lowerarmr'), hnr = B('handr');
-  const ual = B('upperarml'), lal = B('lowerarml'), hnl = B('handl');
-  const ulr = B('upperlegr'), llr = B('lowerlegr'), ftr = B('footr');
-  const ull = B('upperlegl'), lll = B('lowerlegl'), ftl = B('footl');
-  obj.updateMatrixWorld(true);
-  // tronco
-  if (hips && head) {
-    const esc = obj.scale.y || 1;
-    const alt = Math.max(0.2, (head.getWorldPosition(new THREE.Vector3()).y - hips.getWorldPosition(new THREE.Vector3()).y) / esc * 0.9);
-    const t = new THREE.Mesh(new THREE.CapsuleGeometry(rCorpo, alt, 6, 10), mat); t.position.y = alt * 0.5; t.castShadow = true; hips.add(t);
-  }
-  // cabeça pequena
-  if (head) { const h = new THREE.Mesh(new THREE.SphereGeometry(cabeca, 16, 14), mat); h.scale.y = 1.15; h.position.y = cabeca; h.castShadow = true; head.add(h); }
-  // braços (longos): escala o comprimento por bracoLongo
-  if (uar) capsulaOsso(uar, lar, mat, rBraco, bracoLongo);
-  if (lar) capsulaOsso(lar, hnr, mat, rBraco * 0.9, bracoLongo);
-  if (ual) capsulaOsso(ual, lal, mat, rBraco, bracoLongo);
-  if (lal) capsulaOsso(lal, hnl, mat, rBraco * 0.9, bracoLongo);
-  // mãos (garras pequenas)
-  for (const h of [hnr, hnl]) if (h) { const c = new THREE.Mesh(new THREE.SphereGeometry(rBraco * 1.1, 8, 6), mat); h.add(c); }
-  // pernas
-  if (ulr) capsulaOsso(ulr, llr, mat, rPerna); if (llr) capsulaOsso(llr, ftr, mat, rPerna * 0.85);
-  if (ull) capsulaOsso(ull, lll, mat, rPerna); if (lll) capsulaOsso(lll, ftl, mat, rPerna * 0.85);
-  return { head, hips };
-}
+// ======== criaturas humanoides: o MESMO corpo inteiriço do personagem (kit/corpo.js), com parâmetros ========
+const mat = (cor, extra = {}) => new THREE.MeshStandardMaterial({ color: cor, roughness: 0.9, ...extra });
 
-// aplica uma animação lenta do manequim e devolve o controlador
 async function animarManequim(obj, nome, timeScale = 1) {
   const mixer = new THREE.AnimationMixer(obj);
   const dic = await animacoesManequim();
   let atual = null;
-  const acao = (n) => { const clip = dic[n] || dic['Idle_A']; if (!clip) return; if (atual) atual.stop(); atual = mixer.clipAction(clip); atual.reset(); atual.timeScale = timeScale; atual.play(); };
+  const acao = (n) => { const clip = dic[n] || dic['Idle_A']; if (!clip) return; if (atual) atual.stop(); atual = mixer.clipAction(clip); atual.reset(); atual.timeScale = 1; atual.play(); };
   acao(nome);
   return { mixer, acao, setTime: t => mixer.setTime(Math.max(0, t) * timeScale) };
+}
+
+// configuração base de cada tipo (opts do roteiro sobrescreve altura/cor/olhos)
+const HUMANOIDES = {
+  alta: { altura: 3.5, cor: 0x3a2e22, largura: 0.3, prof: 0.17, braco: 0.045, perna: 0.06, cabeca: 0.13, antebraco: 2.4, olhos: [3.4, 2.9, 0.4], olhoR: 0.026, acao: 'Walking_A', ts: 0.5 },
+  sem_rosto: { altura: 2.05, cor: 0x15151c, largura: 0.38, prof: 0.22, braco: 0.055, perna: 0.068, cabeca: 0.14, corCabeca: 0xe8e2d6, corMao: 0xe8e2d6, acao: 'Idle_A', ts: 0.7, semOlhos: true },
+  mulher_branca: { altura: 1.8, cor: 0xeeeee6, largura: 0.3, prof: 0.18, braco: 0.042, perna: 0.05, cabeca: 0.14, corMao: 0xd8d8d0, acao: 'Idle_B', ts: 0.6, semOlhos: true },
+  espantalho: { altura: 1.95, cor: 0x7a4a2a, calca: 0x3a4a6a, largura: 0.34, prof: 0.2, braco: 0.05, perna: 0.062, cabeca: 0.16, corCabeca: 0xc8a85a, corMao: 0xd8b25a, acao: 'Idle_A', ts: 0.8, olhos: [0.05, 0.05, 0.05], olhoR: 0.03 },
+  lobisomem: { altura: 2.3, cor: 0x3a2818, largura: 0.48, prof: 0.32, braco: 0.075, perna: 0.085, cabeca: 0.16, acao: 'Sneaking', ts: 0.8, olhos: [5, 3.5, 0.4], olhoR: 0.03, antebraco: 1.15 },
+  gigante_mitologico: { altura: 4.5, cor: 0x9a8a6a, calca: 0x6a4a2a, largura: 0.5, prof: 0.32, braco: 0.09, perna: 0.11, cabeca: 0.24, acao: 'Idle_A', ts: 0.6, olhos: [3, 3, 3], olhoR: 0.035 },
+  rastejante: { altura: 1.7, cor: 0x8a8278, largura: 0.28, prof: 0.17, braco: 0.04, perna: 0.05, cabeca: 0.12, antebraco: 1.35, acao: 'Crawling', ts: 0.8, olhos: [5, 3.6, 0.5], olhoR: 0.024 },
+  vulto: { altura: 2.25, cor: 0x050507, largura: 0.36, prof: 0.22, braco: 0.055, perna: 0.068, cabeca: 0.15, acao: 'Idle_A', ts: 0.5, olhos: [3.2, 0.4, 0.4], olhoR: 0.022, halo: 1.14 },
+  fantasma: { altura: 1.85, cor: 0xcfe0ee, largura: 0.32, prof: 0.2, braco: 0.045, perna: 0.05, cabeca: 0.15, acao: 'Idle_B', ts: 0.5, olhos: [0.05, 0.05, 0.08], olhoR: 0.03, translucido: true, semPernas: true },
+};
+
+async function humanoide(tipo, opts) {
+  const C = { ...HUMANOIDES[tipo] };
+  const altura = opts.altura || C.altura;
+  const k = altura / C.altura; // escala os raios se o roteiro pedir outra altura
+  const { obj } = await instanciar('personagens/Mannequin_Medium', { altura, aoChao: true });
+  const corpo = opts.cor || C.cor;
+  const extra = C.translucido ? { transparent: true, opacity: 0.45, emissive: 0x3a5a7a, emissiveIntensity: 0.5, depthWrite: false } : {};
+  const mCorpo = mat(corpo, extra), mCalca = C.calca ? mat(C.calca) : mCorpo;
+  const mCab = C.corCabeca ? mat(C.corCabeca) : mCorpo, mMao = C.corMao ? mat(C.corMao, extra) : mCorpo;
+  const c = montarHumanoide(obj, {
+    mat: { pele: mCorpo, camisa: mCorpo, calca: mCalca, sapato: C.translucido ? mCorpo : mat(0x1a1410), manga: 'longa' },
+    matCabeca: mCab, matMao: mMao,
+    largura: C.largura * k, profundidade: C.prof * k, braco: C.braco * k, perna: C.perna * k, cabeca: C.cabeca * k,
+    antebraco: C.antebraco || 1, semPernas: C.semPernas, caudaFim: 0.35, halo: C.halo,
+  });
+  const R = c.R, cab = c.head && c.centroCabeca ? grupoEm(c.head, c.centroCabeca) : null;
+
+  // olhos que brilham na frente da cabeça (só os olhos brilham)
+  const olhos = opts.olhos || C.olhos;
+  if (cab && olhos && !C.semOlhos) {
+    const mo = new THREE.MeshBasicMaterial({ color: new THREE.Color(olhos[0], olhos[1], olhos[2]) });
+    const n = opts.nOlhos || 1, rO = (C.olhoR || 0.03) * k;
+    for (let i = 0; i < n; i++) for (const dx of [-R * 0.38, R * 0.38]) {
+      const e = new THREE.Mesh(new THREE.SphereGeometry(rO, 10, 8), mo); e.position.set(dx, R * 0.12 + i * rO * 2.6, R * 0.9); cab.add(e);
+    }
+  }
+  // detalhes por tipo
+  if (tipo === 'mulher_branca' && cab && c.hips) {
+    const preto = mat(0x0a0a0a);
+    const calota = new THREE.Mesh(new THREE.SphereGeometry(R * 1.08, 18, 14), preto); calota.position.y = R * 0.05; cab.add(calota);
+    const frente = new THREE.Mesh(new THREE.BoxGeometry(R * 1.7, R * 3.4, R * 0.18), preto); frente.position.set(0, -R * 0.9, R * 0.95); cab.add(frente); // cobre o rosto
+    const costas = new THREE.Mesh(new THREE.BoxGeometry(R * 1.9, R * 4.4, R * 0.3), preto); costas.position.set(0, -R * 1.4, -R * 0.75); cab.add(costas);
+    const yq = c.pontos.hips.y;
+    const vest = new THREE.Mesh(new THREE.CylinderGeometry(C.largura * 0.55, C.largura * 1.25, yq + 0.05, 20, 1, true), mat(0xeeeee6, { side: THREE.DoubleSide }));
+    vest.position.set(c.pontos.hips.x, yq / 2 + 0.03, c.pontos.hips.z); c.hips.attach(vest);
+  }
+  if (tipo === 'espantalho' && cab) {
+    const chapeu = new THREE.Mesh(new THREE.ConeGeometry(R * 1.5, R * 2.0, 14), mat(0x3a2a1a)); chapeu.position.y = R * 1.35; cab.add(chapeu);
+    const aba = new THREE.Mesh(new THREE.CylinderGeometry(R * 2.1, R * 2.1, R * 0.12, 18), chapeu.material); aba.position.y = R * 0.55; cab.add(aba);
+    const boca = new THREE.Mesh(new THREE.BoxGeometry(R * 1.0, R * 0.08, R * 0.05), mat(0x1a1410)); boca.position.set(0, -R * 0.35, R * 0.96); cab.add(boca);
+    for (const m of Object.values(c.maos)) for (let i = 0; i < 4; i++) { const p = new THREE.Mesh(new THREE.ConeGeometry(0.02, 0.16, 5), mat(0xd8b25a)); p.position.copy(m.centro).add(new THREE.Vector3((i - 1.5) * 0.025, -0.08, 0)); p.rotation.x = Math.PI; m.osso.attach(p); }
+  }
+  if (tipo === 'lobisomem' && cab) {
+    const pelo = mat(0x2e2014);
+    const focinho = new THREE.Mesh(new THREE.BoxGeometry(R * 0.8, R * 0.62, R * 1.3), pelo); focinho.position.set(0, -R * 0.25, R * 1.05); cab.add(focinho);
+    const nariz = new THREE.Mesh(new THREE.SphereGeometry(R * 0.16, 10, 8), mat(0x050505)); nariz.position.set(0, -R * 0.08, R * 1.72); cab.add(nariz);
+    const dentes = new THREE.Mesh(new THREE.BoxGeometry(R * 0.7, R * 0.08, R * 0.08), mat(0xeeeedd)); dentes.position.set(0, -R * 0.55, R * 1.65); cab.add(dentes);
+    for (const sx of [-1, 1]) { const o = new THREE.Mesh(new THREE.ConeGeometry(R * 0.32, R * 0.9, 6), pelo); o.position.set(sx * R * 0.6, R * 0.95, -R * 0.1); o.rotation.z = -sx * 0.25; cab.add(o); }
+    // tufos de pelo nas costas e ombros
+    if (c.chest) for (let i = 0; i < 7; i++) { const t = new THREE.Mesh(new THREE.ConeGeometry(0.06, 0.18, 5), pelo); t.position.copy(c.pontos.chest).add(new THREE.Vector3((i - 3) * 0.07, 0.05 + (i % 2) * 0.06, -C.prof * 0.55)); t.rotation.x = -0.9; c.chest.attach(t); }
+  }
+  if (tipo === 'gigante_mitologico' && cab) {
+    const barba = new THREE.Mesh(new THREE.SphereGeometry(R * 0.85, 16, 10, 0, 6.3, Math.PI * 0.5, Math.PI * 0.5), mat(0x6a6a6a)); barba.position.set(0, -R * 0.25, R * 0.2); cab.add(barba);
+    if (c.hips) { const yq = c.pontos.hips.y; const tun = new THREE.Mesh(new THREE.CylinderGeometry(C.largura * 0.6, C.largura * 0.95, yq * 0.5, 18, 1, true), mat(0x6a4a2a, { side: THREE.DoubleSide })); tun.position.set(c.pontos.hips.x, yq * 0.78, c.pontos.hips.z); c.hips.attach(tun); }
+  }
+
+  const ctrl = await animarManequim(obj, opts.acao || C.acao, C.ts);
+  const flutua = tipo === 'fantasma' || tipo === 'mulher_branca';
+  const setTime = t => { ctrl.setTime(t); if (flutua) obj.position.y = (tipo === 'fantasma' ? 0.25 : 0.04) + Math.sin(t * 1.3) * 0.07; };
+  obj.updateMatrixWorld(true);
+  return { obj, mixer: ctrl.mixer, setTime, acao: ctrl.acao, head: c.head, altura, raio: altura * 0.15 };
 }
 
 export async function criatura(tipo = 'alta', opts = {}) {
   const r = rng(opts.semente ?? 1);
   const olhos = opts.olhos || null;
-
-  // ----- tipos baseados no manequim (peças) -----
-  if (['alta', 'sem_rosto', 'mulher_branca', 'espantalho', 'lobisomem', 'gigante_mitologico', 'rastejante'].includes(tipo)) {
-    const altura = opts.altura || ({ alta: 3.5, sem_rosto: 1.9, mulher_branca: 1.8, espantalho: 2.0, lobisomem: 2.3, gigante_mitologico: 4.5, rastejante: 1.7 })[tipo];
-    const { obj } = await instanciar('personagens/Mannequin_Medium', { altura, aoChao: true });
-
-    if (tipo === 'alta') {
-      corpoHumanoide(obj, { cor: opts.cor || 0x3a2e22, rCorpo: 0.07, rBraco: 0.045, rPerna: 0.06, bracoLongo: 2.0, cabeca: 0.1 });
-      const head = acharOsso(obj, 'head');
-      if (head) porOlhos(head, { cor: olhos || [5, 4.2, 0.6], frente: 0.1, alturaY: 0.1, raio: 0.028, sep: 0.045, n: opts.nOlhos || 1 });
-      const ctrl = await animarManequim(obj, opts.acao || 'Skeletons_Idle', opts.timeScale || 0.5);
-      return finaliza(obj, ctrl, head, altura);
-    }
-    if (tipo === 'sem_rosto') { // terno escuro, cabeça lisa pálida, SEM rosto
-      const { head } = corpoHumanoide(obj, { cor: opts.cor || 0x15151a, rCorpo: 0.12, rBraco: 0.06, rPerna: 0.075, bracoLongo: 1, cabeca: 0.14 });
-      if (head) { const bola = head.children.find(c => c.geometry && c.geometry.type === 'SphereGeometry'); if (bola) bola.material = new THREE.MeshStandardMaterial({ color: 0xe8e2d6, roughness: 1 }); }
-      const ctrl = await animarManequim(obj, 'Idle_A', 1); return finaliza(obj, ctrl, head, altura);
-    }
-    if (tipo === 'mulher_branca') { // Llorona: vestido longo branco flutuando, cabelo cobrindo o rosto
-      const { head, hips } = corpoHumanoide(obj, { cor: 0xeeeee6, rCorpo: 0.09, rBraco: 0.045, rPerna: 0.05, bracoLongo: 1.1, cabeca: 0.14 });
-      if (hips) { const saia = new THREE.Mesh(new THREE.ConeGeometry(0.4, 1.3, 16, 1, true), new THREE.MeshStandardMaterial({ color: 0xeeeee6, roughness: 1, side: THREE.DoubleSide })); saia.position.y = -0.1; hips.add(saia); }
-      if (head) { const cab = new THREE.Mesh(new THREE.SphereGeometry(0.16, 16, 14, 0, 6.3, 0, Math.PI * 0.95), new THREE.MeshStandardMaterial({ color: 0x1a1a1a, roughness: 1 })); cab.position.set(0, 0.14, 0.02); head.add(cab); }
-      const ctrl = await animarManequim(obj, 'Idle_B', 0.6); return finaliza(obj, ctrl, head, altura);
-    }
-    if (tipo === 'espantalho') {
-      const { head } = corpoHumanoide(obj, { cor: 0x6a4a2a, rCorpo: 0.09, rBraco: 0.05, rPerna: 0.06, bracoLongo: 1.1, cabeca: 0.15 });
-      if (head) { const bola = head.children.find(c => c.geometry && c.geometry.type === 'SphereGeometry'); if (bola) bola.material = new THREE.MeshStandardMaterial({ color: 0xc8a85a, roughness: 1 }); porOlhos(head, { cor: olhos || [0.1, 0.1, 0.1], frente: 0.15, alturaY: 0.14, raio: 0.03, sep: 0.06 }); const chapeu = new THREE.Mesh(new THREE.ConeGeometry(0.22, 0.3, 12), new THREE.MeshStandardMaterial({ color: 0x3a2a1a, roughness: 1 })); chapeu.position.y = 0.32; head.add(chapeu); }
-      const ctrl = await animarManequim(obj, 'Idle_A', 1); return finaliza(obj, ctrl, head, altura);
-    }
-    if (tipo === 'lobisomem') {
-      const { head } = corpoHumanoide(obj, { cor: opts.cor || 0x3a2a1a, rCorpo: 0.15, rBraco: 0.08, rPerna: 0.09, bracoLongo: 1.3, cabeca: 0.17 });
-      if (head) { const focinho = new THREE.Mesh(new THREE.ConeGeometry(0.09, 0.2, 10), new THREE.MeshStandardMaterial({ color: 0x2a1e12, roughness: 1 })); focinho.rotation.x = Math.PI / 2; focinho.position.set(0, 0.12, 0.18); head.add(focinho); porOlhos(head, { cor: olhos || [5, 3.5, 0.4], frente: 0.16, alturaY: 0.16, raio: 0.03, sep: 0.06 }); for (const sx of [-0.08, 0.08]) { const orelha = new THREE.Mesh(new THREE.ConeGeometry(0.05, 0.12, 8), head.children[0].material); orelha.position.set(sx, 0.3, 0); head.add(orelha); } }
-      const ctrl = await animarManequim(obj, opts.acao || 'Idle_A', 0.9); return finaliza(obj, ctrl, head, altura);
-    }
-    if (tipo === 'gigante_mitologico') {
-      const { head } = corpoHumanoide(obj, { cor: opts.cor || 0x7a6a52, rCorpo: 0.2, rBraco: 0.11, rPerna: 0.13, bracoLongo: 1.1, cabeca: 0.26 });
-      if (head) porOlhos(head, { cor: olhos || [4, 4, 4], frente: 0.26, alturaY: 0.24, raio: 0.05, sep: 0.1 });
-      const ctrl = await animarManequim(obj, opts.acao || 'Idle_A', 0.6); return finaliza(obj, ctrl, head, altura);
-    }
-    if (tipo === 'rastejante') {
-      corpoHumanoide(obj, { cor: opts.cor || 0x241a12, rCorpo: 0.1, rBraco: 0.05, rPerna: 0.06, bracoLongo: 1.2, cabeca: 0.12 });
-      const head = acharOsso(obj, 'head'); if (head) porOlhos(head, { cor: olhos || [5, 3.6, 0.5], frente: 0.12, alturaY: 0.08, raio: 0.028, sep: 0.05 });
-      const ctrl = await animarManequim(obj, 'Crawling', 0.8); return finaliza(obj, ctrl, head, altura);
-    }
-  }
-
-  // ----- vulto: sombra sem detalhe (peça única, sem rosto) -----
-  if (tipo === 'vulto') {
-    const altura = opts.altura || 2.3;
-    const obj = new THREE.Group();
-    const mat = new THREE.MeshStandardMaterial({ color: 0x0c0c10, roughness: 1 });
-    const corpo = new THREE.Mesh(new THREE.CapsuleGeometry(0.22, altura * 0.55, 6, 12), mat); corpo.position.y = altura * 0.45; corpo.castShadow = true; obj.add(corpo);
-    const cab = new THREE.Mesh(new THREE.SphereGeometry(0.2, 16, 14), mat); cab.position.y = altura * 0.88; obj.add(cab);
-    porOlhos(cab, { cor: olhos || [4.5, 0.5, 0.5], frente: 0.19, alturaY: 0, raio: 0.045, sep: 0.07, n: opts.nOlhos || 1 });
-    return { obj, mixer: null, setTime() {}, acao() {}, head: cab, altura, raio: altura * 0.2 };
-  }
+  if (HUMANOIDES[tipo]) return humanoide(tipo, opts);
 
   // ----- olhos_no_escuro: só pares de olhos flutuando -----
   if (tipo === 'olhos_no_escuro') {
@@ -151,18 +143,6 @@ export async function criatura(tipo = 'alta', opts = {}) {
     const n = opts.nOlhos || 3; const rr = rng(opts.semente ?? 3);
     for (let i = 0; i < n; i++) { const g = new THREE.Group(); g.position.set((rr() - 0.5) * 3, 1.2 + rr() * 1.2, (rr() - 0.5) * 2); porOlhos(g, { cor: olhos || [4.5, 3.6, 0.5], frente: 0, raio: 0.05, sep: 0.12 }); obj.add(g); }
     return { obj, mixer: null, setTime() {}, acao() {}, head: null, altura: 2.0, raio: 0.6 };
-  }
-
-  // ----- fantasma: translúcido, flutua -----
-  if (tipo === 'fantasma') {
-    const altura = opts.altura || 1.9;
-    const obj = new THREE.Group();
-    const mat = new THREE.MeshStandardMaterial({ color: 0xcfe0ee, roughness: 1, transparent: true, opacity: 0.5, emissive: 0x3a5a7a, emissiveIntensity: 0.4 });
-    const corpo = new THREE.Mesh(new THREE.ConeGeometry(0.3, altura * 0.8, 16, 1, true), mat); corpo.position.y = altura * 0.4; corpo.rotation.x = Math.PI; corpo.position.y = altura * 0.45; obj.add(corpo);
-    const cab = new THREE.Mesh(new THREE.SphereGeometry(0.22, 16, 14), mat); cab.position.y = altura * 0.82; obj.add(cab);
-    porOlhos(cab, { cor: olhos || [0.1, 0.1, 0.1], frente: 0.2, raio: 0.04, sep: 0.07 });
-    obj.userData.flutua = true;
-    return { obj, mixer: null, setTime(t) { obj.position.y = Math.sin(t * 1.2) * 0.15; }, acao() {}, head: cab, altura, raio: altura * 0.2 };
   }
 
   // ----- cão negro (Cadejo): usar Wolf escurecido, olhos vermelhos -----

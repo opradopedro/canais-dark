@@ -69,11 +69,18 @@ def gerar(quais):
             _grade(fotos, os.path.join(SAIDA, "catalogo_personagens.jpg"), cols=6, rotulos=rot)
 
         if "criaturas" in quais:
+            # cada criatura parada (Idle) e andando, lado a lado
+            ANDA = {"alta": "Walking_A", "cao_negro": "Walk", "coisa_com_chifres": "Walk", "aranha_gigante": "Spider_Walk",
+                    "rastejante": "Crawling", "olhos_no_escuro": None}
+            PARA = {"cao_negro": "Idle", "coisa_com_chifres": "Idle", "aranha_gigante": "Spider_Idle", "alta": "Idle_A",
+                    "rastejante": "Crawling", "olhos_no_escuro": None}
             fotos, rot = [], []
             for tp in TIPOS:
-                fotos.append(pg.evaluate("tp => window.criaturaFoto(tp, {}, 'noite')", tp))
-                rot.append(tp)
-            _grade(fotos, os.path.join(SAIDA, "catalogo_criaturas.jpg"), cols=5, rotulos=rot)
+                for nome, mapa, padrao, t in (("parada", PARA, "Idle_A", 0.8), ("andando", ANDA, "Walking_A", 0.45)):
+                    ac = mapa.get(tp, padrao)
+                    fotos.append(pg.evaluate("a => window.criaturaFoto(a.tp, {}, 'noite', a.ac, a.t)", {"tp": tp, "ac": ac, "t": t}))
+                    rot.append(f"{tp} ({nome})")
+            _grade(fotos, os.path.join(SAIDA, "catalogo_criaturas.jpg"), cols=6, rotulos=rot)
 
         if "cenarios" in quais:
             fotos, rot = [], []
