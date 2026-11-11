@@ -145,7 +145,7 @@ jobs:
           restore-keys: canais-
 
       - name: Aplicar pedidos do painel (Gemini gratis)
-        if: steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas' && steps.qual.outputs.tarefa != 'teste' && steps.qual.outputs.tarefa != 'capas-yb'
+        if: steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas' && steps.qual.outputs.tarefa != 'teste' && steps.qual.outputs.tarefa != 'capas-yb' && !startsWith(steps.qual.outputs.tarefa, 'privado:')
         continue-on-error: true
         run: |
           git config user.name "canais-bot"; git config user.email "canais-bot@users.noreply.github.com"
