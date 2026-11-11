@@ -1,2 +1,4 @@
-# Os MP4 de teste ficam FORA do git (pedido do Pedro). Só os 6 JPGs de cada teste entram.
+# Os MP4 de teste ficam FORA do git (pedido do Pedro). Só os JPGs e a amostra curta entram.
 *.mp4
+# excecao: a amostra de 20s do SV (ate 8 MB) ENTRA, para dar para ver o movimento
+!SV-3d_amostra.mp4

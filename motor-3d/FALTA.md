@@ -1,47 +1,55 @@
 # motor-3d — o que já está pronto e o que falta
 
-Atualizado por Kiro em 10/11/2026 (rodada 2 = qualidade visual). Branch `producao`.
+Atualizado por Kiro em 10/11/2026 (rodada 3). Branch `producao`.
 
 ## Pronto
 
-### Rodada 1 — estrutura (Etapas 1, 2 e 3 do PLANO-KIRO.md)
-- **Vendor e fonte**: `vendor/three/` (Three.js 0.170, MIT) e `fontes/Fredoka.ttf` (OFL), nos `LICENCAS.md`.
-- **Kit** (`kit/`): `modelos.js`, `personagem.js`, `criatura.js`, `luz.js`, `camera.js`, `cenarios/index.js`.
-  9 cenários com 6+ marcas cada. 8 planos de câmera.
-- **engine.html**: `setup(h)`/`render(t)` determinístico, bloom, legenda uma palavra (Fredoka, amarelo p/ destaque).
-- **Ligação**: `hora-muerta/scripts/render.py` sobe http local e abre o engine 3D quando o roteiro tem
-  `"visual": "3d"`; `comum.py` (`resolver`) trata cenas 3D e o `elenco`. 2D e So You Built It intactos.
-- **Testes**: `SV/HM/CL-3d-exemplo.json` (~80–88 s) + tempos fixos. MP4 completo fica fora do git.
+### Rodada 1 — estrutura
+Vendor three 0.170, fonte Fredoka, kit (modelos/personagem/criatura/luz/camera/cenarios), engine determinístico,
+legenda, ligação no `render.py` (`"visual":"3d"` sobe http local). 2D e So You Built It intactos.
 
-### Rodada 2 — qualidade visual (PLANO-KIRO-RODADA2.md)
-- **Câmera relativa ao ator**: `close`/`medio` na frente do rosto, `ombro`/`nuca` atrás, `baixo` de baixo p/ cima.
-  A altura do alvo vem do osso `head`/do plano do rosto real (`getWorldPosition`). Enquadramento calculado pelo
-  fov (close ≈ cabeça+ombros; medio ≈ corpo; aberto ≈ ator 25%+cenário; aereo ≈ vila/rua + horizonte).
-- **Nada entre câmera e ator**: raycast câmera→cabeça; se bloqueado, a câmera orbita (±30/60/90°) e, em último
-  caso, o engine **esconde o objeto que bloqueia** só naquele quadro. Teste de câmera dentro do núcleo de árvore/casa.
-- **Noite legível**: céu em degradê (domo), hemisférico+ambiente altos, **rim light azulada** atrás do ator.
-  Postes/janelas quentes. `entardecer` sem filtro laranja (céu laranja-rosado, cores dos objetos preservadas).
-- **Rosto sempre de frente**: em `close`/`medio` o ator vira até 35° p/ a câmera; rosto 2D com `depthTest` off
-  (nunca some dentro da cabeça), olhos/boca pretos grandes com brilho. Cabeça do manequim reduzida a 80%.
-- **Criatura reconhecível**: `alta` aparece inteira no plano `baixo`/`aberto`, recortada contra o céu pela rim
-  light, olhos brilhando. Braços compridos de verdade (ossos **sem ponto**: `upperarml/r`, `lowerarml/r`).
-- **Old Tales**: dia claro e entardecer bonito; `aereo` mais perto; `vila`/`campo` com mais casas, barracas,
-  cercas, carroças e aldeões de fundo; poço ~1,2 m, portas ~2 m.
-- **Fiscal** `testes/conferir_quadros.py`: 1 quadro a cada 2,5 s; reprova se brilho médio < 45, se o ator ocupa
-  < 3% em close/medio/baixo (passada de silhueta magenta), ou se há objeto no raycast. Gera relatório +
-  folha de contato 6×3. **Os 3 testes (SV, HM, CL) passam** (`*_folha.jpg` + `*_relatorio.txt` em `testes/saida/`).
+### Rodada 2 — câmera e luz
+Câmera relativa ao ator, noite legível, rosto de frente, `entardecer` sem filtro laranja. Fiscal com brilho,
+cobertura do ator e raycast.
 
-## Falta / pontos a melhorar (para o Claude ou uma próxima sessão do Kiro)
+### Rodada 3 — personagem, criatura, variedade
+- **Personagem liso em código** (`kit/personagem.js`): malhas do manequim escondidas; corpo em peças presas aos
+  ossos (bola na cabeça, tronco, braços/pernas em cápsulas, tênis). Rosto do Reel em 3 estilos (oval, redondo,
+  traço) + 8 expressões, olhos grandes pretos com brilho. **Gerador por semente**: tipo de corpo (magro, médio,
+  forte, gordo, idoso, criança), 8 tons de pele, 8 cabelos, 13 roupas (incl. uniformes, medieval, túnica, chinês),
+  acessórios (óculos, boné, chapéu de palha, gorro, mochila, avental). `pessoa({semente:17})` sai tudo sozinho.
+- **13 criaturas** (`kit/criatura.js`), montadas em peças/modelos: `alta` (3,5 m magra, braços longos, olhos
+  amarelos), `sem_rosto`, `cao_negro`, `mulher_branca`, `vulto`, `rastejante`, `espantalho`, `olhos_no_escuro`,
+  `lobisomem`, `fantasma`, `aranha_gigante`, `coisa_com_chifres`, `gigante_mitologico`. Parâmetros (altura, cor,
+  cor/nº dos olhos) para variar entre histórias.
+- **Figurantes** = versão leve do personagem liso (cores variadas), não mais cápsula azul.
+- **Enquadramento**: travelling visível (2 quadros a 2,5 s diferem), criatura inteira no plano `baixo`, troncos/
+  casas entre câmera e alvo (ou > ~20% da tela, ou perto demais) SOMEM naquele quadro; chão/rua não contam.
+- **27 cenários** (9 + 18 novos): hospital, escola, metro, elevador, posto, farol, lago_congelado, mina,
+  igreja_antiga, deserto, praia_noite, fazenda, castelo, mercado_medieval, templo_oriental, cidade_grega, navio,
+  cabana_neve.
+- **Céu e clima** (`kit/luz.js`): lua cheia/minguante (disco), neblina baixa, neve (flocos), tempestade com
+  relâmpago, nascer/pôr do sol, nublado.
+- **Fiscal** (`testes/conferir_quadros.py`): + 3 testes (quadro repetido < 2%, obstáculo > 25%, criatura > 8%).
+  **Os 3 testes (SV, HM, CL) passam.**
+- **Catálogo visual** (`testes/catalogo.py` + `catalogo.html`): `catalogo_personagens.jpg` (24 por semente),
+  `catalogo_criaturas.jpg` (13), `catalogo_cenarios.jpg` (27) em `testes/saida/`.
+- **Anti-repetição** (`motor-3d/variedade.py`): avisa quando criatura/cenário/semente de protagonista repete em
+  < 5 séries no mesmo canal (o Claude liga no `validar_roteiros.py`).
+- **Amostra de movimento**: `testes/saida/SV-3d_amostra.mp4` (20 s, 720×1280, ~0,5 MB).
 
-1. **Rosto meio baixo na cabeça**: os olhos ficam no terço de baixo do cabeção. Dá para subir mais em
-   `kit/personagem.js` (`rostoMesh.position.y` e as coordenadas dos olhos em `desenharRosto`).
-2. **A legenda cobre os olhos no close** (ambos ficam no centro da tela). Se incomodar, descer a legenda para
-   ~62% em `engine.html` (`desenharLegenda`, `yc`) OU subir levemente o alvo do close.
-3. **Luz da lanterna** puxa um pouco para o verde pela luz ambiente da noite; se quiser mais quente, subir a cor
-   da `SpotLight` em `kit/personagem.js`.
-4. **`animal` e `rastejante`** (criaturas) só têm teste indireto; falta uma cena de exemplo com lobo/rastejante.
-5. **Tempo de render**: a rim light e o ambiente extra pesam pouco; o custo segue dominado por floresta+chuva.
-   Se algum canal passar de 25 min no Actions, baixar `_FATOR_ARVORES` em `kit/cenarios/index.js`.
-6. **O que o Claude faz depois** (seção 4 do PLANO-KIRO.md e "Depois" do RODADA2): conferir as folhas de contato,
-   atualizar `ROTEIROS.md`, os `series.md` dos 3 canais e `validar_roteiros.py` (exigir `visual:3d` + `cena` +
-   `elenco`) e escolher a 1ª série nova de cada canal p/ sair em 3D. **Eu NÃO mexi nesses.**
+## Falta / pontos a melhorar (para o Claude ou próxima sessão do Kiro)
+
+1. **Variante por estação do cenário**: os cenários aceitam `opts.variante` (semente) em alguns pontos, mas falta
+   ligar a estação (verão/outono/neve/chuva) trocando cores de folhagem e o preset de luz por cenário. Hoje a
+   estação vem só pelo `luz` da cena. Sugestão: `montarCenario(nome, scene, {variante, estacao})`.
+2. **Pose de repouso do manequim**: em algumas animações os braços abrem (T) por 1-2 quadros; `Idle_A` resolve,
+   mas vale revisar quais clips usar por emoção.
+3. **Catálogo de cenários** usa sempre `dia`; vale variar o preset por cenário (farol/metro à noite etc.).
+4. **Faces**: 3 estilos prontos; faltam variações de nariz/boca mais fortes e um estilo "desenho" extra se quiser.
+5. **Rostos dos figurantes**: hoje só dois olhos; dá para reusar `desenharRosto` do personagem se o custo permitir.
+6. **Tempo de render**: ~0,6 s/quadro (1080×1920, swiftshader). As criaturas/figurantes extras pesam pouco. Se um
+   canal passar de 25 min no Actions, baixar `_FATOR_ARVORES` em `kit/cenarios/index.js`.
+7. **O que o Claude faz depois** (seções "Depois" dos planos): conferir os catálogos e as folhas, atualizar
+   `ROTEIROS.md`, os `series.md` dos 3 canais e o `validar_roteiros.py` (exigir `visual:3d` + `cena` + `elenco`,
+   ligar o `variedade.py`), e escolher a 1ª série nova de cada canal em 3D. **Eu NÃO mexi nesses.**
