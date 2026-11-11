@@ -6,7 +6,10 @@
   (d) dois quadros seguidos com diferenca media < 2% (camera parada entre cortes);
   (e) um objeto de cenario (tronco/casa) ocupando > 25% da tela;
   (f) em plano de criatura (baixo/aberto), a silhueta da criatura ocupa < 8% da tela;
-  (g) quadro SEM ASSUNTO: ator + criatura + objetos principais (casa, torre, poste...) somados ocupam < 10% da tela.
+  (g) quadro SEM ASSUNTO: ator + criatura + objetos principais (casa, torre, poste...) somados ocupam < 10% da tela;
+  (h) AEREO SEGUIDO DE AEREO (dois cortes seguidos em plano aereo);
+  (i) mais de 1 AEREO a cada 6 cortes (qualquer janela de 6 cortes seguidos).
+  (h) e (i) olham a lista de cortes do video inteiro (window.__cortes) e tambem os quadros amostrados.
 Escreve um relatorio (stdout + <base>_relatorio.txt) e uma folha de contato <base>_folha.jpg (6x3 quadros).
 
 Uso: python conferir_quadros.py SV-3d-exemplo.json SV-3d-tempos.json [saida/SV-3d]
@@ -31,6 +34,20 @@ OBST_MAX = 0.25      # (b) 1 objeto de cenario (tronco/casa) ocupando > 25% da t
 CRIAT_MIN = 0.08     # (c) em plano de criatura, a silhueta da criatura tem que ocupar > 8%
 PLANOS_CRIATURA = {"baixo", "aberto"}
 ASSUNTO_MIN = 0.10   # (g) todo plano tem assunto: >= 10% da tela
+JANELA_AEREO = 6     # (i) no maximo 1 aereo a cada 6 cortes
+
+
+def conferir_aereos(cortes):
+    """(h) aereo seguido de aereo e (i) mais de 1 aereo em 6 cortes. cortes = lista de planos, 1 por corte."""
+    prob = []
+    for j in range(1, len(cortes)):
+        if cortes[j] == 'aereo' and cortes[j - 1] == 'aereo':
+            prob.append(f"aereo seguido de aereo (cortes {j-1} e {j})")
+    for j in range(max(1, len(cortes) - JANELA_AEREO + 1)):
+        n = cortes[j:j + JANELA_AEREO].count('aereo')
+        if n > 1:
+            prob.append(f"{n} aereos nos cortes {j}-{j + JANELA_AEREO - 1} (max 1 a cada 6)")
+    return prob
 
 
 class _H(http.server.SimpleHTTPRequestHandler):
@@ -70,6 +87,10 @@ def conferir(historia, tempos, base_saida):
         pg.wait_for_function("() => typeof window.setup === 'function'", timeout=30000)
         pg.evaluate("h => setup(h)", estado)
         pg.wait_for_function("() => window.pronto === true", timeout=120000)
+        cortes = pg.evaluate("() => window.__cortes || []")
+        for f in conferir_aereos(cortes):
+            falhas.append("cortes: " + f)
+        corte_ant = None
         for t in pontos:
             pg.evaluate("t => window.prepararQuadro(t)", t)
             # 1) quadro normal (para a folha de contato e o brilho)
@@ -84,7 +105,7 @@ def conferir(historia, tempos, base_saida):
             pg.evaluate("() => window.__silhueta(false)")
             sil = np.asarray(Image.open(io.BytesIO(base64.b64decode(sil_b64))).convert("RGB"), dtype=np.int16)
             magenta = (sil[:, :, 0] > 150) & (sil[:, :, 1] < 90) & (sil[:, :, 2] > 150)
-            ciano = (sil[:, :, 0] < 90) & (sil[:, :, 1] > 150) & (sil[:, :, 2] > 150)
+            ciano = (sil[:, :, 1] > 150) & (sil[:, :, 2] > 150) & (sil[:, :, 0] < sil[:, :, 1] - 40)  # o tone mapping clareia o ciano (R ~160)
             area = float(magenta.mean())
             assunto = float((magenta | ciano).mean())
             # 3) passada de obstaculos: cada tronco/casa com cor unica; mede a maior fracao de uma so cor
@@ -126,6 +147,12 @@ def conferir(historia, tempos, base_saida):
                 if dif < DIF_MIN:
                     prob.append(f"parado(dif {dif*100:.1f}%<2%)")
             arr_ant = arr
+            # (h) nos quadros amostrados: corte novo em aereo logo depois de um corte aereo
+            corte = (info or {}).get("corte")
+            if corte_ant and corte is not None and corte != corte_ant[0] and plano == 'aereo' and corte_ant[1] == 'aereo' \
+                    and corte == corte_ant[0] + 1:
+                prob.append("aereo seguido de aereo")
+            corte_ant = (corte, plano) if corte is not None else None
             if prob:
                 falhas.append(f"t={t:5.1f}s {plano}: " + ", ".join(prob))
             linhas.append(f"t={t:5.1f}s plano={plano:7s} brilho={brilho:5.1f} alvo={area*100:4.1f}% "
@@ -137,7 +164,8 @@ def conferir(historia, tempos, base_saida):
     _folha(quadros, base_saida + "_folha.jpg")
     ok = not falhas
     rel = ["FISCAL " + ("OK" if ok else "REPROVADO") + f"  ({os.path.basename(historia)})",
-           f"quadros: {len(quadros)} | falhas: {len(falhas)}", ""] + linhas
+           f"quadros: {len(quadros)} | falhas: {len(falhas)}",
+           "cortes: " + " ".join(c[:2] for c in cortes) + f"  (aereos: {cortes.count('aereo')})", ""] + linhas
     if falhas:
         rel += ["", "--- FALHAS ---"] + falhas
     txt = "\n".join(rel)

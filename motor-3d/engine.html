@@ -29,7 +29,7 @@ import { pessoa } from './kit/personagem.js';
 import { criatura } from './kit/criatura.js';
 import { aplicar as aplicarLuz } from './kit/luz.js';
 import { montar as montarCenario } from './kit/cenarios/index.js';
-import { aplicarPlano, planoAutomatico } from './kit/camera.js';
+import { aplicarPlano, planoAutomatico, planejarCortes } from './kit/camera.js';
 import { preCarregar } from './kit/modelos.js';
 
 const W = 1080, H = 1920;
@@ -73,6 +73,8 @@ function posMarca(marcas, nome) {
 window.setup = async function (h) {
   ST = h;
   ST._cenas = h.cenas || [];       // [{t0, cena:{...}}] ja com tempos
+  ST._cortes = planejarCortes(ST._cenas, ST.dur || ((ST._cenas.at(-1) || { t0: 0 }).t0 + 3));
+  window.__cortes = ST._cortes.map(c => c.plano); // o fiscal confere aereo seguido de aereo / 1 a cada 6
   ST._elenco = h.elenco || {};     // id -> spec de pessoa
   ST.destaqueRX = montarDestaque(h.destaque);
 
@@ -204,6 +206,26 @@ async function trocarPara(i) {
     scene.add(criaturaAtiva.obj);
   }
   ST._iAtual = i;
+}
+
+// eixo da rua do cenario atual (para o aereo): centro dos objetos principais e a direcao em que eles se espalham
+// (casas e postes enfileirados). A camera fica do lado +z e olha ao longo desse eixo.
+let _rua = null, _ruaDe = null;
+function eixoDaRua() {
+  if (_ruaDe === cenarioAtual && _rua) return _rua;
+  const caixas = principais.map(o => new THREE.Box3().setFromObject(o)).filter(b => !b.isEmpty());
+  const pts = caixas.map(b => b.getCenter(new THREE.Vector3()));
+  // pontos para o aereo escolher o giro: centro de cada objeto, com peso pelo tamanho (casa pesa mais que poste)
+  const pontos = caixas.map(b => { const s = b.getSize(new THREE.Vector3()); return { c: b.getCenter(new THREE.Vector3()), peso: Math.cbrt(Math.max(0.05, s.x * s.y * s.z)) }; });
+  const centro = new THREE.Vector3();
+  if (pts.length) { for (const p of pts) centro.add(p); centro.multiplyScalar(1 / pts.length); }
+  let sxx = 0, szz = 0, sxz = 0;
+  for (const p of pts) { const dx = p.x - centro.x, dz = p.z - centro.z; sxx += dx * dx; szz += dz * dz; sxz += dx * dz; }
+  const ang = 0.5 * Math.atan2(2 * sxz, sxx - szz); // direcao principal do espalhamento
+  const eixo = pts.length > 1 ? new THREE.Vector3(Math.cos(ang), 0, Math.sin(ang)) : new THREE.Vector3(0, 0, -1);
+  if (eixo.z > 0) eixo.negate(); // camera (centro - eixo*17) do lado +z, a frente dos cenarios
+  if (Math.abs(eixo.z) < 0.25) { eixo.set(eixo.x * 0.7, 0, -0.7).normalize(); } // rua de lado: olha na diagonal
+  _rua = { centro, eixo, pontos }; _ruaDe = cenarioAtual; return _rua;
 }
 
 // qual cena no instante t
@@ -349,8 +371,12 @@ window.render = function (t) {
   if (luzCtrl) luzCtrl.atualizar(t);
 
   // camera: plano do roteiro ou sequencia automatica (troca a cada ~2,5 s), com travelling lento
-  const base = cena.plano || 'auto';
-  const pa = planoAutomatico(tLocal, durLinha, base);
+  let iCorte = 0;
+  for (let k = 0; k < ST._cortes.length; k++) if (t >= ST._cortes[k].t0) iCorte = k;
+  const ct = ST._cortes[iCorte];
+  const pa = ct ? { plano: ct.plano, tLocal: Math.max(0, t - ct.t0), dur: Math.max(0.6, ct.t1 - ct.t0), idx: iCorte }
+               : planoAutomatico(tLocal, durLinha, cena.plano || 'auto');
+  if (pa.plano === 'aereo' && cenarioAtual.limites) pa.plano = 'aberto'; // dentro de comodo nao ha aereo
   const tremor = (cena.tremor || 0) + sustoEm(t);
 
   // qual e o ALVO da camera: o ator principal da cena; se nao houver ator, a criatura; senao, a marca.
@@ -372,7 +398,7 @@ window.render = function (t) {
   }
   const paredes = principais.filter(o => o !== (alvo && alvo.obj)).map(o => new THREE.Box3().setFromObject(o));
   const diag = aplicarPlano(cam, pa.plano, alvo, pa.tLocal, { dur: pa.dur, tremor, obstaculos, fov: 42, fundo,
-                            limites: cenarioAtual.limites, paredes });
+                            limites: cenarioAtual.limites, paredes, rua: pa.plano === 'aereo' ? eixoDaRua() : null });
 
   // rim light azulada atras do alvo, na direcao da camera, para recortar do fundo
   if (rim && alvo) posicionarRim(alvo);
@@ -389,7 +415,7 @@ window.render = function (t) {
   window.__escondidosQuadro = escondidos; // o fiscal (obstaculo) respeita estes esconderijos
 
   // dados para o fiscal (conferir_quadros.py): plano, se o alvo e ator, e se segue bloqueado DEPOIS de esconder
-  window.__ultimoQuadro = { plano: pa.plano, alvoEhAtor: !!(alvo && alvo.ehAtor), alvoEhObjeto: !!(alvo && alvo.ehObjeto), bloqueado: false, cena: ST._iAtual,
+  window.__ultimoQuadro = { plano: pa.plano, alvoEhAtor: !!(alvo && alvo.ehAtor), alvoEhObjeto: !!(alvo && alvo.ehObjeto), bloqueado: false, cena: ST._iAtual, corte: pa.idx,
                             temCriatura: !!(cena && cena.criatura) };
   _alvoAtual = alvo;
 

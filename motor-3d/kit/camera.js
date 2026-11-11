@@ -57,6 +57,7 @@ function distParaEnquadrar(alturaAlvoM, fracaoTela, fovGraus) {
 // orbitDeg gira a posicao da camera em volta do alvo (para desviar de obstaculos).
 // plano cujo ASSUNTO e um objeto (casa, torre, mausoleu...): enquadra a caixa inteira com folga.
 function montarObjeto(plano, alvo, a, fov, orbitDeg, extra) {
+  if (plano === 'aereo' && extra.rua) return montarAereoRua(null, a, orbitDeg, extra.rua);
   const bx = alvo.caixa || new THREE.Box3().setFromObject(alvo.obj);
   const c = bx.getCenter(new THREE.Vector3()), tam = bx.getSize(new THREE.Vector3());
   const h = tam.y, w = Math.min(Math.max(tam.x, tam.z), h * 1.8); // caixa larga (cordas/estacas) nao afasta a camera
@@ -69,12 +70,55 @@ function montarObjeto(plano, alvo, a, fov, orbitDeg, extra) {
   const pos = new THREE.Vector3(), olha = c.clone(); olha.y = bx.min.y + h * 0.45;
   if (plano === 'aereo') { pos.copy(c).addScaledVector(dir, d * 0.85); pos.y = bx.min.y + h * 0.6 + d * 0.55; }
   else if (plano === 'baixo') { pos.copy(c).addScaledVector(dir, d * 0.85); pos.y = 0.5; olha.y = bx.min.y + h * 0.5; }
+  else if (plano === 'medio') {
+    const dm = dir.clone().applyAxisAngle(_Y, 0.6);
+    pos.copy(c).addScaledVector(dm, d * (0.78 - 0.08 * a)); pos.y = Math.max(1.4, bx.min.y + h * 0.3);
+  }
   else { pos.copy(c).addScaledVector(dir, d * (1 - 0.12 * a)); pos.y = Math.max(1.6, bx.min.y + h * 0.4); }
   return { pos, olha, cab: olha.clone() };
 }
 
+// AEREO (r5): a RUA inteira, alto e longe (~15-17 m), olhando ao longo do eixo da rua para caberem varias casas e
+// postes no quadro em pe. rua = { centro: Vector3, eixo: Vector3 (XZ, unitario) } calculado pelo engine.
+const _Y = new THREE.Vector3(0, 1, 0), _v = new THREE.Vector3();
+const _camTeste = new THREE.PerspectiveCamera(42, 9 / 16, 0.1, 300);
+function montarAereoRua(base, a, orbitDeg, rua) {
+  const foco = rua.centro.clone(); foco.y = 0;
+  if (base) foco.lerp(new THREE.Vector3(base.x, 0, base.z), 0.45); // com ator: ele fica no quadro, pequeno
+  // escolhe giro e deslocamento lateral que poem MAIS casas/postes bem visiveis no quadro em pe (deterministico):
+  // cada objeto soma a fracao de tela que ocuparia, com teto (um telhado so, de perto, nao ganha de uma rua inteira)
+  const monta = (giro, lat, aa = a) => {
+    const eixo = rua.eixo.clone().applyAxisAngle(_Y, THREE.MathUtils.degToRad(orbitDeg + giro) + (aa - 0.5) * 0.3);
+    const f = foco.clone().addScaledVector(new THREE.Vector3(eixo.z, 0, -eixo.x), lat);
+    const poucos = (rua.pontos || []).length < 6; // floresta/clareira: poucos objetos, aereo um pouco mais perto
+    const pos = f.clone().addScaledVector(eixo, -(poucos ? 10 : 14) - 2 * aa); pos.y = (poucos ? 9 : 12) + 1.5 * aa;
+    const olha = f.clone().addScaledVector(eixo, 4); olha.y = 0;
+    return { pos, olha };
+  };
+  if (rua._giro === undefined) {
+    let melhor = [0, 0], nota = -1;
+    const k = 1 / (2 * Math.tan(THREE.MathUtils.degToRad(21)));
+    for (const lat of [0, 5, -5, 9, -9]) for (const giro of [0, 25, -25, 45, -45, 70, -70, 100, -100]) {
+      const { pos, olha } = monta(giro, lat, 0.5);
+      _camTeste.position.copy(pos); _camTeste.lookAt(olha); _camTeste.updateMatrixWorld(true);
+      let n = 0;
+      for (const p of rua.pontos || []) {
+        _v.copy(p.c).project(_camTeste);
+        if (Math.abs(_v.x) > 0.92 || Math.abs(_v.y) > 0.88 || _v.z > 1) continue;
+        const fr = (p.peso * k / Math.max(1, p.c.distanceTo(pos))) ** 2 * 1.78;
+        n += Math.min(fr, Math.max(0.035, 0.3 / Math.max(1, (rua.pontos || []).length))); // poucos objetos (floresta): cada um pode pesar mais
+      }
+      if (n > nota + 1e-6) { nota = n; melhor = [giro, lat]; }
+    }
+    rua._giro = melhor;
+  }
+  const { pos, olha } = monta(rua._giro[0], rua._giro[1]);
+  return { pos, olha, cab: base ? new THREE.Vector3(base.x, 1.2, base.z) : olha.clone() };
+}
+
 function montar(plano, alvo, a, fov, orbitDeg = 0, extra = {}) {
   if (alvo.ehObjeto) return montarObjeto(plano, alvo, a, fov, orbitDeg, extra);
+  if (plano === 'aereo' && extra.rua) { const b = alvo.obj.getWorldPosition(new THREE.Vector3()); return montarAereoRua(b, a, orbitDeg, extra.rua); }
   const cab = cabecaDe(alvo).clone();          // topo (cabeca) do ator no mundo
   const base = alvo.obj.getWorldPosition(new THREE.Vector3()); base.y = 0; // pes
   const alturaCorpo = Math.max(0.6, cab.y - base.y + (alvo.raio || 0.3));
@@ -123,7 +167,7 @@ function montar(plano, alvo, a, fov, orbitDeg = 0, extra = {}) {
     }
     case 'baixo': { // de baixo p/ cima: a criatura/ator INTEIRO (pes ao topo) recortado no ceu.
       // enquadra a altura inteira + folga (0.82) e afasta o bastante; o olhar mira o meio do corpo.
-      const d = distParaEnquadrar(alturaCorpo * 1.12, 0.82, fov) * (1 - dolly * 0.25);
+      const d = distParaEnquadrar(alturaCorpo * 1.08, 0.9, fov) * (1 - dolly * 0.25);
       pos.copy(base).addScaledVector(fr, d).addScaledVector(lado, 0.4 + 0.5 * desliza);
       pos.y = base.y + 0.35 + a * 0.4;
       olha.set(base.x, base.y + alturaCorpo * 0.55, base.z);
@@ -229,7 +273,7 @@ export function aplicarPlano(cam, plano, alvo, t, opts = {}) {
   let m = null;
   const aprox = alvo.ehObjeto ? [1, 0.8, 0.62] : [1];
   busca: for (const ap of aprox) for (const orb of tentativas) {
-    const cand = montar(plano, alvo, a, fov, orb, { fundo: opts.fundo, aproxima: ap });
+    const cand = montar(plano, alvo, a, fov, orb, { fundo: opts.fundo, aproxima: ap, rua: opts.rua });
     prenderNoComodo(cand.pos, opts.limites);
     if (!dentroDeObjeto(cand.pos, opts.obstaculos) && !pertoDeParede(cand.pos, opts.paredes, alvo)) { m = cand; break busca; }
     if (!m) m = cand;
@@ -252,6 +296,37 @@ export function aplicarPlano(cam, plano, alvo, t, opts = {}) {
 }
 
 export const PLANOS = ['aereo', 'aberto', 'medio', 'close', 'baixo', 'ombro', 'pov', 'nuca'];
+
+// r5: lista de CORTES do video inteiro, decidida uma vez (deterministica; o quadro em t so procura o corte).
+// - plano explicito do roteiro vale a linha toda (1 corte), EXCETO 'aereo': so o 1o corte da linha (<= passo),
+//   o resto da linha segue a sequencia automatica;
+// - nunca aereo seguido de aereo, e no maximo 1 aereo a cada 6 cortes: o excedente vira 'aberto' (ou 'medio').
+// cenas: [{t0, cena}] ; devolve [{t0, t1, plano, cena: indice}]
+export function planejarCortes(cenas, durTotal, { passo = 2.5, ordem, janela = 6 } = {}) {
+  const seq = ordem || ['aberto', 'medio', 'close', 'baixo', 'medio', 'aereo'];
+  const cortes = [];
+  cenas.forEach((c, i) => {
+    const t0 = c.t0, t1 = i + 1 < cenas.length ? cenas[i + 1].t0 : durTotal;
+    const base = (c.cena && c.cena.plano) || 'auto';
+    if (base !== 'auto' && base !== 'aereo') { cortes.push({ t0, t1, plano: base, cena: i }); return; }
+    let ini = t0, k = 0;
+    if (base === 'aereo') { const f = Math.min(t1, t0 + passo); cortes.push({ t0, t1: f, plano: 'aereo', cena: i }); ini = f; }
+    while (t1 - ini > 0.05) {
+      let fim = Math.min(t1, ini + passo);
+      if (t1 - fim < 1.0) fim = t1; // sobra curta junta no ultimo corte
+      cortes.push({ t0: ini, t1: fim, plano: seq[k % seq.length], cena: i }); ini = fim; k++;
+    }
+  });
+  for (let j = 0; j < cortes.length; j++) {
+    if (cortes[j].plano !== 'aereo') continue;
+    const antes = cortes.slice(Math.max(0, j - (janela - 1)), j);
+    if (antes.some(c => c.plano === 'aereo')) {
+      const ant = j > 0 ? cortes[j - 1].plano : null, dep = j + 1 < cortes.length ? cortes[j + 1].plano : null;
+      cortes[j].plano = (ant === 'aberto' || dep === 'aberto') ? 'medio' : 'aberto';
+    }
+  }
+  return cortes;
+}
 
 // sequencia automatica de planos: troca a cada ~2,5 s sem repetir o anterior.
 export function planoAutomatico(t, durLinha, planoBase, { passo = 2.5, ordem } = {}) {
