@@ -5,7 +5,8 @@
   (c) algum objeto bloqueia o raycast camera->cabeca do alvo;
   (d) dois quadros seguidos com diferenca media < 2% (camera parada entre cortes);
   (e) um objeto de cenario (tronco/casa) ocupando > 25% da tela;
-  (f) em plano de criatura (baixo/aberto), a silhueta da criatura ocupa < 8% da tela.
+  (f) em plano de criatura (baixo/aberto), a silhueta da criatura ocupa < 8% da tela;
+  (g) quadro SEM ASSUNTO: ator + criatura + objetos principais (casa, torre, poste...) somados ocupam < 10% da tela.
 Escreve um relatorio (stdout + <base>_relatorio.txt) e uma folha de contato <base>_folha.jpg (6x3 quadros).
 
 Uso: python conferir_quadros.py SV-3d-exemplo.json SV-3d-tempos.json [saida/SV-3d]
@@ -29,6 +30,7 @@ DIF_MIN = 0.02       # (a) 2 quadros seguidos com diferenca media < 2% reprovam 
 OBST_MAX = 0.25      # (b) 1 objeto de cenario (tronco/casa) ocupando > 25% da tela reprova
 CRIAT_MIN = 0.08     # (c) em plano de criatura, a silhueta da criatura tem que ocupar > 8%
 PLANOS_CRIATURA = {"baixo", "aberto"}
+ASSUNTO_MIN = 0.10   # (g) todo plano tem assunto: >= 10% da tela
 
 
 class _H(http.server.SimpleHTTPRequestHandler):
@@ -82,7 +84,9 @@ def conferir(historia, tempos, base_saida):
             pg.evaluate("() => window.__silhueta(false)")
             sil = np.asarray(Image.open(io.BytesIO(base64.b64decode(sil_b64))).convert("RGB"), dtype=np.int16)
             magenta = (sil[:, :, 0] > 150) & (sil[:, :, 1] < 90) & (sil[:, :, 2] > 150)
+            ciano = (sil[:, :, 0] < 90) & (sil[:, :, 1] > 150) & (sil[:, :, 2] > 150)
             area = float(magenta.mean())
+            assunto = float((magenta | ciano).mean())
             # 3) passada de obstaculos: cada tronco/casa com cor unica; mede a maior fracao de uma so cor
             pg.evaluate("() => window.__obstaculoCobertura()")
             obs_b64 = pg.evaluate("() => window.__cru(0.92)")
@@ -113,6 +117,9 @@ def conferir(historia, tempos, base_saida):
             # (c) plano de criatura: a criatura (alvo, nao-ator) tem que ocupar > 8%
             if tem_criatura and not ehator and plano in PLANOS_CRIATURA and area < CRIAT_MIN:
                 prob.append(f"criatura {area*100:.1f}%<8% [{plano}]")
+            # (g) todo plano tem assunto
+            if assunto < ASSUNTO_MIN:
+                prob.append(f"sem assunto ({assunto*100:.0f}%<10%)")
             # (a) quadro quase igual ao anterior
             if arr_ant is not None:
                 dif = float(np.abs(arr - arr_ant).mean()) / 255.0
@@ -122,7 +129,7 @@ def conferir(historia, tempos, base_saida):
             if prob:
                 falhas.append(f"t={t:5.1f}s {plano}: " + ", ".join(prob))
             linhas.append(f"t={t:5.1f}s plano={plano:7s} brilho={brilho:5.1f} alvo={area*100:4.1f}% "
-                          f"obst={maior_obst*100:4.0f}% {'OK' if not prob else 'FALHA: ' + ', '.join(prob)}")
+                          f"obst={maior_obst*100:4.0f}% assunto={assunto*100:3.0f}% {'OK' if not prob else 'FALHA: ' + ', '.join(prob)}")
             quadros.append(im)
         b.close()
     srv.shutdown()

@@ -83,12 +83,13 @@ def gerar(quais):
             _grade(fotos, os.path.join(SAIDA, "catalogo_criaturas.jpg"), cols=6, rotulos=rot)
 
         if "cenarios" in quais:
+            # so os 8 ACABADOS, cada um de dia e de noite (os outros 19 sao rascunho)
             fotos, rot = [], []
             for nm in CEN_NOMES:
-                preset = 'dia'
-                fotos.append(pg.evaluate("a => window.cenarioFoto(a.nm, a.p)", {"nm": nm, "p": preset}))
-                rot.append(nm)
-            _grade(fotos, os.path.join(SAIDA, "catalogo_cenarios.jpg"), cols=6, rotulos=rot)
+                for preset in ("dia", "noite"):
+                    fotos.append(pg.evaluate("a => window.cenarioFoto(a.nm, a.p)", {"nm": nm, "p": preset}))
+                    rot.append(f"{nm} ({preset})")
+            _grade(fotos, os.path.join(SAIDA, "catalogo_cenarios.jpg"), cols=4, rotulos=rot)
         b.close()
     srv.shutdown()
 

@@ -53,6 +53,8 @@ let cenarioAtual = null, cenarioNome = null, luzNome = null, efeitoNome = null;
 let montado = false;
 let rim = null;         // rim light azulada que segue o alvo
 let obstaculos = [];    // meshes/grupos grandes (arvores, casas) p/ o raycast da camera
+let principais = [];    // objetos que podem ser o ASSUNTO do plano (casa, torre, poste, mausoleu...)
+const ehNoite = p => /noite|madrugada|fogueira|neblina|lua|tempestade/.test(p || '');
 let _silhueta = false;  // modo fiscal: pinta o alvo de magenta e o resto de preto (mede % na tela)
 let _alvoAtual = null;
 
@@ -144,7 +146,7 @@ async function trocarPara(i) {
     if (cenarioAtual.grupo) {
       const cx = new THREE.Box3();
       for (const ch of cenarioAtual.grupo.children) {
-        if (ch === cenarioAtual.piso) continue;
+        if (ch === cenarioAtual.piso || ch.userData.chao || ch.userData.parede || ch.isLight) continue;
         if (ch.geometry && ch.geometry.type === 'PlaneGeometry') continue;
         cx.setFromObject(ch);
         if (cx.isEmpty()) continue;
@@ -154,6 +156,8 @@ async function trocarPara(i) {
         obstaculos.push(ch);
       }
     }
+    principais = (cenarioAtual.principais || []).slice();
+    luzNome = null; // forca reaplicar a luz (e ajustarLuz) no cenario novo
   }
   // --- luz / efeito ---
   const preset = cena.luz || 'noite';
@@ -168,6 +172,7 @@ async function trocarPara(i) {
     if (cenarioAtual && cenarioAtual.fogoX !== undefined) { opts.fogoX = cenarioAtual.fogoX; opts.fogoZ = cenarioAtual.fogoZ; }
     luzCtrl = aplicarLuz(scene, fx, opts);
     luzNome = preset; efeitoNome = efeito;
+    if (cenarioAtual && cenarioAtual.ajustarLuz) cenarioAtual.ajustarLuz(ehNoite(preset));
   }
   // --- atores desta cena ---
   for (const id of Object.keys(atores)) atores[id].obj.visible = false;
@@ -184,7 +189,7 @@ async function trocarPara(i) {
     ator._principal = true; // marcado como candidato a alvo
     if (a.acao) ator.acao(a.acao);
     if (a.rosto) ator.rosto(a.rosto);
-    if (a.segura) ator.segurar(a.segura);
+    if (a.segura && ator._seg !== a.segura) { ator.segurar(a.segura); ator._seg = a.segura; }
   }
   // guarda a ordem dos atores desta cena (o 1o e o alvo preferido da camera)
   ST._atoresCena = (cena.atores || []).map(a => a.id).filter(id => atores[id]);
@@ -228,11 +233,31 @@ function alvoDaCena(cena, plano) {
     return { obj: criaturaAtiva.obj, head: criaturaAtiva.head, altura: criaturaAtiva.altura || 2.4,
              raio: criaturaAtiva.raio || 0.4, ehAtor: false };
   }
-  // sem ator nem criatura: um alvo "fantasma" reutilizado na marca (cenas so de cenario)
+  // sem ator nem criatura: o ASSUNTO e o objeto principal mais perto da marca (casa, torre, poste, mausoleu...)
   const m = posMarca(cenarioAtual.marcas, cena.marca || 'rua');
+  const pr = principalPerto(m.x, m.z, 40);
+  if (pr) {
+    _boxTmp.setFromObject(pr);
+    return { obj: pr, head: null, altura: _boxTmp.max.y - _boxTmp.min.y, raio: 0.5, ehAtor: false, ehObjeto: true,
+             caixa: _boxTmp.clone(), marca: m };
+  }
   if (!_fantasma) { _fantasma = new THREE.Object3D(); scene.add(_fantasma); }
   _fantasma.position.set(m.x, 0, m.z);
   return { obj: _fantasma, head: null, altura: 1.7, raio: 0.3, ehAtor: false };
+}
+
+// objeto principal visivel mais perto de (x,z), ate `max` metros (centro da caixa no chao)
+const _bxP = new THREE.Box3(), _cP = new THREE.Vector3();
+function principalPerto(x, z, max = 30, exceto = null) {
+  let melhor = null, dm = max;
+  for (const o of principais) {
+    if (o === exceto) continue;
+    _bxP.setFromObject(o); if (_bxP.isEmpty()) continue; _bxP.getCenter(_cP);
+    const altura = _bxP.max.y - _bxP.min.y; if (altura < 1.2) continue;
+    const d = Math.hypot(_cP.x - x, _cP.z - z);
+    if (d < dm) { dm = d; melhor = o; }
+  }
+  return melhor;
 }
 
 // vira o ator (no maximo maxGraus) para ficar de frente para a camera, mantendo a frente base como referencia.
@@ -294,8 +319,8 @@ function posicionarRim(alvo) {
   rim.target.position.set(_tmpVec.x, cabY, _tmpVec.z);
   rim.target.updateMatrixWorld();
   // forte a noite, suave de dia
-  const noturno = /noite|madrugada|fogueira|neblina/.test(luzNome || '');
-  rim.intensity = noturno ? 1.5 : 0.5;
+  rim.intensity = ehNoite(luzNome) ? 1.5 : 0.5;
+  if (alvo.ehObjeto) rim.intensity = 0;
 }
 
 // ------- render(t): desenha o quadro do segundo t, DETERMINISTICO -------
@@ -335,24 +360,33 @@ window.render = function (t) {
     alvo.obj.rotation.y = alvo._ryBase ?? alvo.obj.rotation.y;
   }
 
-  const diag = aplicarPlano(cam, pa.plano, alvo, pa.tLocal, { dur: pa.dur, tremor, obstaculos, fov: 42 });
+  // fundo: em plano aberto/aereo com ator, a camera fica do lado oposto a um objeto principal (assunto ao fundo)
+  let fundo = null;
+  if (alvo && !alvo.ehObjeto && (pa.plano === 'aberto' || pa.plano === 'aereo')) {
+    alvo.obj.getWorldPosition(_tmpVec);
+    const pr = principalPerto(_tmpVec.x, _tmpVec.z, 18, alvo.obj);
+    if (pr) { _boxTmp.setFromObject(pr); fundo = _boxTmp.getCenter(new THREE.Vector3()); }
+  }
+  const paredes = principais.filter(o => o !== (alvo && alvo.obj)).map(o => new THREE.Box3().setFromObject(o));
+  const diag = aplicarPlano(cam, pa.plano, alvo, pa.tLocal, { dur: pa.dur, tremor, obstaculos, fov: 42, fundo,
+                            limites: cenarioAtual.limites, paredes });
 
   // rim light azulada atras do alvo, na direcao da camera, para recortar do fundo
   if (rim && alvo) posicionarRim(alvo);
 
   // TODOS os troncos/casas entre a camera e o alvo SOMEM neste quadro (regra r3: nao basta orbitar)
-  const escondidos = (diag && diag.bloqueadores) || [];
+  const escondidos = ((diag && diag.bloqueadores) || []).filter(o => !(alvo && o === alvo.obj));
   // alem disso, esconde QUALQUER obstaculo que ocupe > 22% da tela OU esteja muito perto da camera (tronco/copa
   // gigante de lado), proibido na r3. A proximidade pega os casos em que a caixa cruza o plano da camera.
   for (const o of obstaculos) {
-    if (!o.visible || escondidos.includes(o)) continue;
+    if (!o.visible || escondidos.includes(o) || principais.includes(o)) continue;
     if (coberturaTela(o) > 0.19 || pertoDaCamera(o, 4.5)) escondidos.push(o);
   }
   for (const o of escondidos) o.visible = false;
   window.__escondidosQuadro = escondidos; // o fiscal (obstaculo) respeita estes esconderijos
 
   // dados para o fiscal (conferir_quadros.py): plano, se o alvo e ator, e se segue bloqueado DEPOIS de esconder
-  window.__ultimoQuadro = { plano: pa.plano, alvoEhAtor: !!(alvo && alvo.ehAtor), bloqueado: false, cena: ST._iAtual,
+  window.__ultimoQuadro = { plano: pa.plano, alvoEhAtor: !!(alvo && alvo.ehAtor), alvoEhObjeto: !!(alvo && alvo.ehObjeto), bloqueado: false, cena: ST._iAtual,
                             temCriatura: !!(cena && cena.criatura) };
   _alvoAtual = alvo;
 
@@ -454,15 +488,20 @@ window.prepararQuadro = async function (t) {
 // --- modo fiscal: silhueta do alvo em magenta sobre fundo preto (mede quanto o ator ocupa na tela) ---
 const _matMagenta = new THREE.MeshBasicMaterial({ color: 0xff00ff });
 const _matPreto = new THREE.MeshBasicMaterial({ color: 0x000000 });
+const _matCiano = new THREE.MeshBasicMaterial({ color: 0x00ffff });
 function desenharSilhueta(alvo) {
   // guarda materiais, pinta tudo de preto, o alvo de magenta, renderiza SEM bloom, restaura
   const trocados = [];
   scene.traverse(o => {
     if (o.isMesh && o.material) { trocados.push([o, o.material]); o.material = _matPreto; }
   });
+  // objetos principais visiveis (casa, torre, poste...) em ciano: o fiscal soma alvo+principais = "assunto"
+  for (const pr of principais) if (pr.visible && !(alvo && pr === alvo.obj)) pr.traverse(o => { if (o.isMesh) o.material = _matCiano; });
   if (alvo && alvo.obj) alvo.obj.traverse(o => { if (o.isMesh) o.material = _matMagenta; });
   const bg = scene.background; scene.background = new THREE.Color(0x000000);
+  const fog = scene.fog; scene.fog = null;
   R.render(scene, cam); // render direto (sem composer/bloom)
+  scene.fog = fog;
   scene.background = bg;
   for (const [o, m] of trocados) o.material = m;
 }
@@ -477,7 +516,7 @@ window.__obstaculoCobertura = () => {
   const escond = window.__escondidosQuadro || [];
   const cores = [];
   obstaculos.forEach((ob, i) => {
-    if (escond.includes(ob)) { cores.push(null); return; }
+    if (escond.includes(ob) || principais.includes(ob) || (_alvoAtual && ob === _alvoAtual.obj)) { cores.push(null); return; }
     const cor = new THREE.Color().setHSL((i * 0.137) % 1, 1, 0.5);
     cores.push(cor);
     ob.traverse(o => { if (o.isMesh) o.material = new THREE.MeshBasicMaterial({ color: cor }); });

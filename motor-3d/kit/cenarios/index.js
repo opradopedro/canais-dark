@@ -7,6 +7,7 @@
 // Faltam em assets/ (feitos aqui com primitivas): carro, cerca de madeira, cruz/tumba, poste de bairro simples.
 import * as THREE from 'three';
 import { instanciar, ALTURAS } from '../modelos.js';
+import { ACABADOS } from './acabados.js';
 
 function semente(s) { let a = s >>> 0; return () => { a = (a * 1664525 + 1013904223) >>> 0; return a / 4294967296; }; }
 
@@ -465,7 +466,7 @@ async function farol(scene, o) { const g = new THREE.Group(); scene.add(g); cons
   const marcas = { base: { x: 0, z: 0, cam: 'baixo' }, pedra: { x: -3, z: 2, cam: 'medio' }, mar: { x: 2, z: 4, cam: 'aberto' }, topo: { x: 0, z: 2, cam: 'aereo' }, costa: { x: 4, z: 3, cam: 'medio' }, farol: { x: 0, z: 0, cam: 'baixo' } };
   return { grupo: g, marcas, piso: p }; }
 
-async function lago_congelado(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0xcfe0ee, 90);
+async function lago_congelado(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0xdde8f2, 240);
   const gelo = new THREE.Mesh(new THREE.CircleGeometry(16, 32), new THREE.MeshStandardMaterial({ color: 0xbfe0f0, roughness: 0.25, metalness: 0.1 })); gelo.rotation.x = -Math.PI / 2; gelo.position.y = 0.02; g.add(gelo);
   // rachaduras
   for (let i = 0; i < 6; i++) { const a = i / 6 * 6.28; const c = caixa(g, Math.cos(a) * 5, 0.03, Math.sin(a) * 5, 0.08, 0.02, 6, 0x6a90a8, a); }
@@ -558,7 +559,7 @@ async function navio(scene, o) { const g = new THREE.Group(); scene.add(g); cons
   const marcas = { conves: { x: 0, z: 2, cam: 'medio' }, proa: { x: 0, z: -5, cam: 'aberto' }, mastro: { x: 0, z: -2, cam: 'baixo' }, popa: { x: 0, z: 5, cam: 'medio' }, mar: { x: 3, z: 0, cam: 'aberto' }, alto: { x: 0, z: 0, cam: 'aereo' } };
   return { grupo: g, marcas, piso: p }; }
 
-async function cabana_neve(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0xe6eef4, 90);
+async function cabana_neve(scene, o) { const g = new THREE.Group(); scene.add(g); const p = piso(scene, 0xe6eef4, 240);
   const cab = await por(g, 'casas/1Story_GableRoof_Mat', 2, -4, ALTURAS.casa, { ry: -Math.PI / 5 });
   // neve no telhado + janela acesa
   caixa(g, 2, 2.6, -4, 4, 0.3, 4, 0xf4f8fc, -Math.PI / 5);
@@ -572,9 +573,23 @@ const CENARIOS = { bairro, floresta, estrada, casa_interior, cemiterio, vila, ca
   hospital, escola, metro, elevador_predio, posto_gasolina, farol, lago_congelado, mina, igreja_antiga,
   deserto, praia_noite, fazenda, castelo, mercado_medieval, templo_oriental, cidade_grega, navio, cabana_neve };
 
+// Rodada 4: so os 8 cenarios ACABADOS podem ir para um video. Os outros 19 sao rascunho: o engine se recusa a
+// usa-los (erro claro) ate serem acabados numa proxima rodada. opts.permitirRascunho=true so para testes internos.
+export const RASCUNHOS = Object.keys(CENARIOS).filter(n => !ACABADOS[n]);
+
 export async function montar(nome, scene, opts = {}) {
-  const fn = CENARIOS[nome] || bairro;
-  return await fn(scene, opts);
+  if (ACABADOS[nome]) return await ACABADOS[nome](scene, opts);
+  if (CENARIOS[nome]) {
+    if (!opts.permitirRascunho) {
+      throw new Error(`cenario "${nome}" e RASCUNHO (rascunho: true) e nao pode ser usado num video. ` +
+        `Use um dos acabados: ${Object.keys(ACABADOS).join(', ')}.`);
+    }
+    const r = await CENARIOS[nome](scene, opts);
+    return { ...r, rascunho: true, principais: [], ajustarLuz() {} };
+  }
+  throw new Error(`cenario "${nome}" nao existe. Acabados: ${Object.keys(ACABADOS).join(', ')}.`);
 }
 
 export const NOMES = Object.keys(CENARIOS);
+export const NOMES_ACABADOS = Object.keys(ACABADOS);
+export function ehRascunho(nome) { return !ACABADOS[nome]; }

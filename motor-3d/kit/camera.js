@@ -55,11 +55,34 @@ function distParaEnquadrar(alturaAlvoM, fracaoTela, fovGraus) {
 
 // monta pos/olha para um plano, em coordenadas do MUNDO, usando a frente do ator e a cabeca real.
 // orbitDeg gira a posicao da camera em volta do alvo (para desviar de obstaculos).
-function montar(plano, alvo, a, fov, orbitDeg = 0) {
+// plano cujo ASSUNTO e um objeto (casa, torre, mausoleu...): enquadra a caixa inteira com folga.
+function montarObjeto(plano, alvo, a, fov, orbitDeg, extra) {
+  const bx = alvo.caixa || new THREE.Box3().setFromObject(alvo.obj);
+  const c = bx.getCenter(new THREE.Vector3()), tam = bx.getSize(new THREE.Vector3());
+  const h = tam.y, w = Math.max(tam.x, tam.z);
+  const t = Math.tan(THREE.MathUtils.degToRad(fov) / 2);
+  const d = Math.max(h / 0.62, w / (0.86 * 9 / 16)) / (2 * t) + w * 0.35;
+  // direcao: do objeto para a marca (o lado "de frente" do cenario), girada pelo orbit e pelo deslize
+  const m = alvo.marca || { x: c.x, z: c.z + 5 };
+  const dir = new THREE.Vector3(m.x - c.x, 0, m.z - c.z); if (dir.lengthSq() < 0.5) dir.set(0, 0, 1); dir.normalize();
+  dir.applyAxisAngle(new THREE.Vector3(0, 1, 0), THREE.MathUtils.degToRad(orbitDeg) + (a - 0.5) * 0.5);
+  const pos = new THREE.Vector3(), olha = c.clone(); olha.y = bx.min.y + h * 0.45;
+  if (plano === 'aereo') { pos.copy(c).addScaledVector(dir, d * 0.85); pos.y = bx.min.y + h * 0.6 + d * 0.55; }
+  else if (plano === 'baixo') { pos.copy(c).addScaledVector(dir, d * 0.7); pos.y = 0.6; olha.y = bx.min.y + h * 0.6; }
+  else { pos.copy(c).addScaledVector(dir, d * (1 - 0.12 * a)); pos.y = Math.max(1.6, bx.min.y + h * 0.4); }
+  return { pos, olha, cab: olha.clone() };
+}
+
+function montar(plano, alvo, a, fov, orbitDeg = 0, extra = {}) {
+  if (alvo.ehObjeto) return montarObjeto(plano, alvo, a, fov, orbitDeg, extra);
   const cab = cabecaDe(alvo).clone();          // topo (cabeca) do ator no mundo
   const base = alvo.obj.getWorldPosition(new THREE.Vector3()); base.y = 0; // pes
   const alturaCorpo = Math.max(0.6, cab.y - base.y + (alvo.raio || 0.3));
   const fr = frenteDe(alvo.obj).clone();        // para onde o ator olha (XZ)
+  if (extra.fundo && (plano === 'aberto' || plano === 'aereo')) {
+    const v = new THREE.Vector3(base.x - extra.fundo.x, 0, base.z - extra.fundo.z);
+    if (v.lengthSq() > 0.5) { fr.copy(v.normalize()).applyAxisAngle(new THREE.Vector3(0, 1, 0), 0.35); }
+  }
   const lado = new THREE.Vector3(fr.z, 0, -fr.x); // perpendicular (lado direito)
 
   // aplica o orbit (gira a direcao "frente" em volta do eixo Y) para tentar desviar
@@ -95,6 +118,7 @@ function montar(plano, alvo, a, fov, orbitDeg = 0) {
       pos.copy(centroCorpo).addScaledVector(fr, d).addScaledVector(lado, 1.2 + 2.4 * desliza);
       pos.y = base.y + alturaCorpo * 0.9 + 0.8 + 0.5 * desliza;
       olha.copy(centroCorpo); olha.y = base.y + alturaCorpo * 0.5;
+      if (extra.fundo) { olha.lerp(new THREE.Vector3(extra.fundo.x, extra.fundo.y, extra.fundo.z), 0.25); }
       break;
     }
     case 'baixo': { // de baixo p/ cima: a criatura/ator INTEIRO (pes ao topo) recortado no ceu.
@@ -120,11 +144,12 @@ function montar(plano, alvo, a, fov, orbitDeg = 0) {
       olha.copy(cab).addScaledVector(fr, 4.0);
       break;
     }
-    case 'aereo': { // de cima mas inclinado p/ o HORIZONTE; orbita visivelmente ao longo do trecho (nunca parada)
+    case 'aereo': { // de cima, do lado da frente (ou oposto ao objeto do fundo), orbitando devagar
       const h = 5.0 + alturaCorpo * 0.7;
-      const ang = desliza * 0.5; // gira a posicao em torno do alvo ao longo do trecho
-      pos.set(base.x + Math.sin(ang) * (5 + h * 0.4) + 3, base.y + h, base.z + Math.cos(ang) * (5 + h * 0.4) + h * 0.6);
-      olha.set(base.x, base.y + 2.0, base.z - 6);
+      const dirA = fr.clone().applyAxisAngle(new THREE.Vector3(0, 1, 0), desliza * 0.45);
+      pos.copy(base).addScaledVector(dirA, 6.5 + h * 0.5); pos.y = base.y + h;
+      olha.copy(base); olha.y = base.y + 1.0;
+      if (extra.fundo) olha.lerp(new THREE.Vector3(extra.fundo.x, 1.5, extra.fundo.z), 0.35);
       break;
     }
     default: {
@@ -173,6 +198,24 @@ function dentroDeObjeto(posCam, obstaculos) {
   return false;
 }
 
+// camera rente/dentro de parede ou objeto principal? (precisa de >= 1,5 m de qualquer caixa)
+function pertoDeParede(pos, paredes, alvo, minimo = 1.5) {
+  for (const b of (paredes || [])) {
+    const dx = Math.max(b.min.x - pos.x, 0, pos.x - b.max.x), dz = Math.max(b.min.z - pos.z, 0, pos.z - b.max.z);
+    const dy = Math.max(b.min.y - pos.y, 0, pos.y - b.max.y);
+    if (Math.hypot(dx, dy, dz) < minimo) return true;
+  }
+  return false;
+}
+// interior: prende a camera dentro do comodo com 1,5 m de folga das paredes e abaixo do teto
+function prenderNoComodo(pos, L, minimo = 1.5) {
+  if (!L) return pos;
+  pos.x = Math.min(L.xmax - minimo, Math.max(L.xmin + minimo, pos.x));
+  pos.z = Math.min(L.zmax - minimo, Math.max(L.zmin + minimo, pos.z));
+  if (L.ymax) pos.y = Math.min(L.ymax - 0.45, Math.max(0.35, pos.y));
+  return pos;
+}
+
 // aplica o plano no instante t (segundos dentro do trecho). alvo = {obj, head, altura, raio}.
 export function aplicarPlano(cam, plano, alvo, t, opts = {}) {
   const dur = opts.dur || 3;
@@ -182,11 +225,12 @@ export function aplicarPlano(cam, plano, alvo, t, opts = {}) {
 
   // escolhe o orbit que NAO deixa a camera dentro de um objeto (preferindo 0); os troncos que ainda taparem
   // o alvo serao ESCONDIDOS pelo engine (nao basta orbitar, regra da rodada 3).
-  const tentativas = [0, 25, -25, 55, -55, 90, -90];
+  const tentativas = [0, 25, -25, 55, -55, 90, -90, 135, -135];
   let m = null;
   for (const orb of tentativas) {
-    const cand = montar(plano, alvo, a, fov, orb);
-    if (!dentroDeObjeto(cand.pos, opts.obstaculos)) { m = cand; break; }
+    const cand = montar(plano, alvo, a, fov, orb, { fundo: opts.fundo });
+    prenderNoComodo(cand.pos, opts.limites);
+    if (!dentroDeObjeto(cand.pos, opts.obstaculos) && !pertoDeParede(cand.pos, opts.paredes, alvo)) { m = cand; break; }
     if (!m) m = cand;
   }
 

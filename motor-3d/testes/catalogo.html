@@ -27,15 +27,15 @@ R.setSize(W, H, false); R.shadowMap.enabled = true; R.shadowMap.type = THREE.PCF
 R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = 1.1;
 
 let scene, cam, comp;
-function novaCena(preset = 'dia') {
+function novaCena(preset = 'dia', comPiso = true) {
   scene = new THREE.Scene();
   cam = new THREE.PerspectiveCamera(42, W / H, 0.1, 300);
   comp = new EffectComposer(R); comp.setSize(W, H);
   comp.addPass(new RenderPass(scene, cam));
   comp.addPass(new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.8, 0.5, 0.82));
   comp.addPass(new OutputPass());
-  const piso = new THREE.Mesh(new THREE.PlaneGeometry(40, 40), new THREE.MeshStandardMaterial({ color: 0x3a4a3a, roughness: 1 }));
-  piso.rotation.x = -Math.PI / 2; piso.receiveShadow = true; scene.add(piso);
+  if (comPiso) { const piso = new THREE.Mesh(new THREE.PlaneGeometry(40, 40), new THREE.MeshStandardMaterial({ color: 0x3a4a3a, roughness: 1 }));
+  piso.rotation.x = -Math.PI / 2; piso.receiveShadow = true; scene.add(piso); }
   aplicarLuz(scene, preset, {});
 }
 
@@ -65,13 +65,39 @@ window.criaturaFoto = async (tipo, opts, preset, acao, t) => {
   cam.position.set(0, h * 0.5, h * 1.5 + 1); cam.lookAt(0, h * 0.45, 0);
   comp.render(); return cv.toDataURL('image/jpeg', 0.9).split(',')[1];
 };
-// 1 quadro de um cenario
+// 1 quadro de um cenario ACABADO, de dia ou de noite, pela vista que o proprio cenario sugere
 window.cenarioFoto = async (nome, preset) => {
-  novaCena(preset || 'dia');
-  await montarCenario(nome, scene, {});
-  cam.position.set(6, 5, 11); cam.lookAt(0, 1.2, -2);
+  novaCena(preset || 'dia', false);
+  const c = await montarCenario(nome, scene, {});
+  const noite = /noite|madrugada|lua|neblina/.test(preset || '');
+  if (c.ajustarLuz) c.ajustarLuz(noite);
+  const v = c.vista || { pos: [6, 5, 11], olha: [0, 1.2, -2] };
+  cam.position.set(...v.pos); cam.lookAt(...v.olha);
   comp.render(); return cv.toDataURL('image/jpeg', 0.9).split(',')[1];
 };
+// dados para testes/cenarios_check.py: detalhes, marcas, principais e distancia das marcas as paredes
+window.cenarioInfo = async (nome) => {
+  novaCena('dia', false);
+  const c = await montarCenario(nome, scene, {});
+  scene.updateMatrixWorld(true);
+  const caixas = [];
+  c.grupo.traverse(o => { if (o.userData && (o.userData.principal || o.userData.parede)) { const b = new THREE.Box3().setFromObject(o); if (!b.isEmpty() && (o.userData.parede || b.max.y - b.min.y >= 2.5)) caixas.push({ b, nome: (o.name || o.type) + '@' + Math.round((b.min.x+b.max.x)/2) + ',' + Math.round((b.min.z+b.max.z)/2), parede: !!o.userData.parede }); } });
+  const marcas = {};
+  for (const [k, m] of Object.entries(c.marcas || {})) {
+    let dmin = 99, quem = '';
+    for (const { b, nome, parede } of caixas) {
+      let d;
+      if (parede && c.limites) { // parede de interior: distancia ate o plano
+        const L = c.limites; d = Math.min(m.x - L.xmin, L.xmax - m.x, m.z - L.zmin, L.zmax - m.z);
+      } else { const dx = Math.max(b.min.x - m.x, 0, m.x - b.max.x), dz = Math.max(b.min.z - m.z, 0, m.z - b.max.z); d = Math.hypot(dx, dz); }
+      if (d < dmin) { dmin = d; quem = nome; }
+    }
+    marcas[k] = { x: m.x, z: m.z, dmin: Math.round(dmin * 100) / 100, quem };
+  }
+  return { nome, detalhes: c.nDetalhes || 0, principais: (c.principais || []).length, marcas, acabado: !!c.acabado,
+           luzDiaNoite: typeof c.ajustarLuz === 'function', interior: !!c.interior };
+};
+window.cenarioRascunho = async (nome) => { novaCena('dia', false); try { await montarCenario(nome, scene, {}); return 'ACEITOU'; } catch (e) { return String(e.message || e); } };
 window.pronto = true;
 </script>
 </body>
