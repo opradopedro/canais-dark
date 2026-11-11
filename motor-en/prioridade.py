@@ -7,7 +7,8 @@ Roteiro escrito a partir de uma ideia do Pedro leva no JSON:  "prioridade": "ped
 
 Ordem: 1) serie ja comecada no YouTube (alguma parte subiu e falta outra);
        2) ideias do Pedro (a mais antiga primeiro, pela ordem dos arquivos);
-       3) o resto, na ordem dos arquivos de stories/.
+       3) series no estilo 3D ("visual": "3d"; REGRA do Pedro 11/11: o 3D vai ao ar ja nas proximas series);
+       4) o resto (series prontas no estilo antigo = RESERVA, so saem se faltar 3D), na ordem dos arquivos.
 Videos que ja estao AGENDADOS no YouTube nao mudam de data: a ideia entra no primeiro horario livre depois deles.
 """
 
@@ -24,7 +25,9 @@ def ordenar_series(series, ja, carregar):
             return 0  # serie pela metade termina primeiro
         if any(e_ideia(h) for h in hs):
             return 1
-        return 2
+        if any(h.get("visual") == "3d" for h in hs):
+            return 2
+        return 3
     return sorted(series, key=chave)
 
 

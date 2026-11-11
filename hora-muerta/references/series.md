@@ -98,3 +98,8 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 - Personagens: Ana, 19, estudante de enfermagem (trança, blusa vermelha); a avó Chela, 74, rezadeira do povoado (no hospital). Peças: `f_azotea`, `f_aparicion` (lechuza_bruja), `f_cocina`, `f_cuarto`, `f_objeto` (veladora), `f_pueblo`, `f_regras`, `retrato`, `texto`.
 - HM039 parte 1/2: a avó reza pelos doentes há 50 anos; regras dela (se a lechuza rir no telhado não sai, não responde, acende a veladora); a avó vai para o hospital; 1:40 risada de mulher no telhado; Ana sobe com o celular; uma coruja enorme com rosto de mulher; ela diz com a voz da avó: "Ana, ¿ya cenaste?". FEITO
 - HM040 parte 2/2: a lechuza pede para abrir a janela "para entrar a cuidar de ti"; Ana desce, acende a veladora e reza o que a avó ensinou; batidas na janela até as 5; manhã: o hospital liga, a avó passou a noite dizendo que uma lechuza queria entrar pela janela dela, até que a vela de Ana apagou a dela... ; na laje, penas e pegadas de pés descalços de mulher; agora Ana deixa duas veladoras. FEITO
+
+## kilometro-13 (HM041-HM042) — La mujer del kilómetro 13 — origem: autoral — por: claude (11/11). PRIMERA SERIE 3D
+- 3D: estrada (noite_neblina, lua_cheia), bairro, casa_interior; criatura mulher_branca; protagonista Ricardo (semente 4113, jaqueta, boné).
+- HM041 parte 1/2: nadie se detiene en el km 13; mujer de blanco pide aventón; Ricardo vuelve a pie, niebla, pasos descalzos, una voz dice su nombre. FEITO
+- HM042 parte 2/2: camina con los ojos cerrados sin contestar; el chofer vio a la mujer con la mano en su hombro; anoche, pasos descalzos dentro de su casa. FEITO

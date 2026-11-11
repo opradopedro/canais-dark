@@ -96,3 +96,8 @@ Peças: `f_mosteiro`, `f_igreja`, `f_aldeia`, `f_campo`, `f_estrada_antiga`, `f_
 - CL031 parte 1/3: sino às 2 da manhã, Matinas no escuro e frio; volta a dormir pouco; o dia dividido em 8 horas de oração; silêncio quase o dia todo; sinais com as mãos (pão = círculo com polegares e indicadores); trabalho na horta; o abade lhe dá um trabalho que vai levar um ano. FEITO
 - CL032 parte 2/3: o scriptorium; pergaminho de pele de bezerro raspada; uma Bíblia grande (Codex Amiatinus) usou ~515 bezerros; pena de ganso; tinta de galhas de carvalho; erro raspado com faca; escribas reclamavam nas margens; à noite alguém bate no portão. FEITO
 - CL033 parte 3/3: o hóspede é recebido "como o próprio Cristo" (cap. 53), pés lavados; refeitório em silêncio com leitura (cap. 38); uma libra de pão, dois pratos cozidos, um pouco de vinho; carne só para doentes; Completas e o Grande Silêncio; um ano depois você termina a última página. FEITO
+
+## lantern-keeper (CL034-CL035) — The Lantern Keeper — tema mito — origem: autoral (folclore chinês do dragão do rio) — por: claude (11/11). FIRST 3D SERIES
+- 3D: templo_oriental (dia, entardecer, noite, madrugada, lua_cheia, nascer_sol); criatura olhos_no_escuro (o dragão); Lin (criança, semente 3401) e Master Wu (idoso, semente 3402).
+- CL034 parte 1/2: lantern lit for 300 years keeps the river dragon asleep; Lin falls asleep, lantern dark, one golden eye. FEITO
+- CL035 parte 2/2: no matches; Lin sits and talks to the dragon until dawn; the lantern was so the dragon would know someone was awake. FEITO

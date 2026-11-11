@@ -1,0 +1,371 @@
+{
+ "formato": "Regla",
+ "serie": "kilometro-13",
+ "serie_titulo": "La mujer del kilómetro 13 | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral (primera serie en 3D)",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda",
+  "carretera",
+  "mujer de blanco",
+  "reglas"
+ ],
+ "elenco": {
+  "ricardo": {
+   "semente": 4113,
+   "corpo": "medio",
+   "roupa": "jaqueta",
+   "cabelo": "curto",
+   "acessorio": "bone"
+  }
+ },
+ "codigo": "HM042",
+ "parte": 2,
+ "anterior": "HM041",
+ "titulo": "Caminó con los ojos cerrados hasta el pueblo 🚫 Parte 2 #terror #shorts",
+ "capa": "NO LA MIRES",
+ "descripcion": "Ricardo cerró los ojos y caminó sin contestar a la voz. El chofer del camión vio quién iba detrás de él.\n\nFin de La mujer del kilómetro 13.\n¿Tú la habrías mirado?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Imagina escuchar *tu nombre* en una carretera donde nadie te conoce.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Ricardo sigue quieto en el kilómetro trece, con la linterna temblando.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "El vestido blanco está a un metro, pero no se le ven los pies.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Recuerda la regla: no la mires y no te detengas.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Ya se detuvo. Así que hace lo único que le queda: *no mirar*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Cierra los ojos y camina hacia adelante, contando sus pasos.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "La voz le pide ayuda. Dice que tiene frío. Dice que está perdida.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Después llora con la voz de *su madre*, que vive a mil kilómetros.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Ricardo sigue caminando con los ojos cerrados, sin contestar.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Un camión pasa a su lado y toca la bocina tres veces.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Cuando abre los ojos, está en la entrada del pueblo, bajo un poste.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Al día siguiente, el chofer del camión le cuenta lo que vio.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Ricardo no caminaba solo. Ella iba detrás, con *la mano en su hombro*.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Desde esa noche, siente frío en el hombro a la misma hora.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Y anoche escuchó *pasos descalzos* dentro de su casa.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "¿Qué hace ella cuando por fin la miras? Imagina un pueblo donde nadie se detiene.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "indo",
+    "plano": "aereo",
+    "luz": "noite_neblina"
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "indo",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "ricardo",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "mulher_branca",
+     "marca": "indo"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "indo",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "ricardo",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "indo",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "ricardo",
+      "acao": "Idle_A",
+      "rosto": "olhos_fechados",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "indo",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "ricardo",
+      "acao": "Walking_A",
+      "rosto": "olhos_fechados",
+      "segura": "lanterna",
+      "de": "indo",
+      "para": "curva"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "curva",
+    "plano": "nuca",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "ricardo",
+      "acao": "Walking_A",
+      "rosto": "olhos_fechados",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "mulher_branca",
+     "marca": "indo"
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "curva",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "ricardo",
+      "acao": "Walking_A",
+      "rosto": "triste",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "curva",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "ricardo",
+      "acao": "Walking_A",
+      "rosto": "olhos_fechados",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "vindo",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "ricardo",
+      "acao": "Walking_A",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "poste",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "ricardo",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "ricardo",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "ricardo",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "ricardo",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "ricardo",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "mulher_branca",
+     "marca": "janela"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "meio",
+    "plano": "aereo",
+    "luz": "noite_neblina"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "susto",
+   "linea": 14,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}

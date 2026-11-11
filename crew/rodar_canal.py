@@ -261,10 +261,28 @@ def estoque(repo, canal, linhas):
             continue
         if cod and cod not in ja:
             pend.append(cod)
+    # REGRA do Pedro (11/11): nos canais com motor 3D, o estoque conta so roteiros 3D; os do estilo antigo sao reserva
+    if canal in ("hora-muerta", "signal-lost", "old-tales"):
+        tres_d = []
+        for f in sorted(glob.glob(os.path.join(repo, canal, "stories", "*.json"))):
+            try:
+                h = json.load(open(f, encoding="utf-8"))
+            except Exception:
+                continue
+            if h.get("visual") == "3d" and h.get("codigo") in pend:
+                tres_d.append(h["codigo"])
+        reserva = len(pend) - len(tres_d)
+        pend = tres_d
+        if reserva:
+            linhas_reserva = f" (+{reserva} de reserva no estilo antigo)"
+        else:
+            linhas_reserva = ""
+    else:
+        linhas_reserva = ""
     por_dia = 2 if canal == "so-you-built-it" else 1
     if len(pend) >= DIAS_DE_ESTOQUE * por_dia:
-        return [f"estoque: {len(pend)} roteiro(s) prontos ({', '.join(pend)})"]
-    return [f"ESTOQUE BAIXO {canal}: so {len(pend)} roteiro(s) prontos ({', '.join(pend) or 'nenhum'}), "
+        return [f"estoque: {len(pend)} roteiro(s) prontos ({', '.join(pend)}){linhas_reserva}"]
+    return [f"ESTOQUE BAIXO {canal}: so {len(pend)} roteiro(s) prontos ({', '.join(pend) or 'nenhum'}){linhas_reserva}, "
             f"menos de {DIAS_DE_ESTOQUE} dias. Escrever a proxima serie seguindo ROTEIROS.md"]
 
 

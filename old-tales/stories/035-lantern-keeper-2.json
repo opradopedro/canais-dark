@@ -1,0 +1,350 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "serie": "lantern-keeper",
+ "serie_titulo": "The Lantern Keeper | Old Tales",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral, inspired by Chinese river dragon folklore (first 3D series)",
+ "tags": [
+  "chinese mythology",
+  "chinese folklore",
+  "dragon legend",
+  "folk tales",
+  "old tales",
+  "mythology",
+  "bedtime story",
+  "legends",
+  "story time"
+ ],
+ "elenco": {
+  "lin": {
+   "semente": 3401,
+   "corpo": "crianca",
+   "roupa": "chines",
+   "cabelo": "curto"
+  },
+  "wu": {
+   "semente": 3402,
+   "corpo": "idoso",
+   "roupa": "chines",
+   "cabelo": "coque"
+  }
+ },
+ "codigo": "CL035",
+ "parte": 2,
+ "anterior": "CL034",
+ "titulo": "He talked to the dragon until dawn 🏮 Part 2 #story #shorts",
+ "capa": "NOT FOR FIRE",
+ "descripcion": "The lantern went dark and the river dragon woke up. Lin had no matches left, only one thing Master Wu had told him.\n\nThe end of The Lantern Keeper.\nWould you keep the lantern lit?\n\nAn original tale inspired by Chinese river dragon folklore.\n#folktales #mythology #chinesemythology #story #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Imagine waking up and knowing the whole village *depends on you*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Lin runs up the stairs with the oil jar shaking in his hands.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Below the bridge, the river rises, and the water turns gold.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "A shape bigger than the temple lifts its head out of the mist.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Lin's hands shake so much that the matches fall into the water.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then he remembers what Master Wu told him on the first night.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The dragon does not hate the light. It hates being *alone in the dark*.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "So Lin doesn't run. He sits on the bridge, and he starts to talk.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He talks about the fish, the rain, his mother, the noodles at the market.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The *golden eye* watches him for a long, long time.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Slowly, the water goes down, and the eye closes.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At dawn, the villagers find Lin asleep on the bridge, safe.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Master Wu smiles and tells him the truth.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The lantern was never for fire. It was so the dragon would know *someone was still awake*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Would you keep the lantern lit?",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Imagine a mountain village where one lantern must never go out.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "torii",
+    "plano": "aereo",
+    "luz": "madrugada"
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "escada",
+    "plano": "auto",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "lin",
+      "acao": "Running_A",
+      "rosto": "medo",
+      "segura": "tocha",
+      "de": "jardim",
+      "para": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "ponte",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "ponte"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "ponte",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "ponte"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "ponte",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "lin",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "ponte",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "lin",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "wu",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "ponte",
+    "plano": "auto",
+    "luz": "lua_cheia",
+    "atores": [
+     {
+      "id": "lin",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "neutro"
+     }
+    ],
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "ponte"
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "ponte",
+    "plano": "close",
+    "luz": "lua_cheia",
+    "atores": [
+     {
+      "id": "lin",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "ponte",
+    "plano": "baixo",
+    "luz": "lua_cheia",
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "ponte"
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "ponte",
+    "plano": "auto",
+    "luz": "lua_cheia",
+    "atores": [
+     {
+      "id": "lin",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "ponte",
+    "plano": "auto",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "lin",
+      "acao": "Lie_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "ponte",
+    "plano": "auto",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "wu",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "lin",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "lanterna",
+    "plano": "baixo",
+    "luz": "entardecer"
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "escada",
+    "plano": "close",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "lin",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "torii",
+    "plano": "aereo",
+    "luz": "noite"
+   }
+  }
+ ],
+ "eventos": []
+}

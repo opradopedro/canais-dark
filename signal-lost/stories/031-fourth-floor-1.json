@@ -1,0 +1,340 @@
+{
+ "formato": "Survivor",
+ "serie": "fourth-floor",
+ "serie_titulo": "The Fourth Floor | Signal Lost",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral (first 3D series)",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "hospital horror",
+  "night shift",
+  "rules horror",
+  "nurse",
+  "fourth floor"
+ ],
+ "elenco": {
+  "maya": {
+   "semente": 3107,
+   "corpo": "magro",
+   "roupa": "enfermeira",
+   "cabelo": "rabo"
+  }
+ },
+ "codigo": "SV031",
+ "parte": 1,
+ "titulo": "Nobody walks the 4th floor after 3 AM 🏥 Part 1 #horror #shorts",
+ "capa": "ROOM 418",
+ "descripcion": "In this hospital, nobody walks the fourth floor after 3 AM. On her first night, Maya answered the call light in room 418. It has been empty for six years.\n\n> Part 2: {when_next}.\nWould you check the room?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Imagine a hospital where nobody walks the *fourth floor* after 3 AM.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Not the doctors, not the guards, not even the cleaning crew.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "During the day, it's a normal ward, full of noise and bad coffee.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "But at three, every nurse goes back to the station and stays there.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "They turn the radio up, and nobody looks down the corridor.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "*Maya* is new. On her first night, she thinks it's a prank.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "At 3:07, a call light turns on in the last room. *Room 418*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Room 418 has been empty for *six years*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Stay with me, because this is where it gets bad.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Maya grabs a flashlight and walks down the corridor, alone.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Behind her, the lights go out one by one as she passes.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At the end of the hall, a stretcher is standing by the door.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Someone is lying under the sheet. *The sheet is breathing*.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "Then, at the station, the nurses start screaming her name.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Maya turns around. The station is *completely dark*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And the screaming is coming from room 418. Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "corredor",
+    "plano": "aereo",
+    "luz": "noite"
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "entrada",
+    "plano": "auto",
+    "luz": "noite"
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "recepcao",
+    "plano": "auto",
+    "luz": "dia"
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "recepcao",
+    "plano": "auto",
+    "luz": "noite"
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "corredor",
+    "plano": "baixo",
+    "luz": "noite"
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "recepcao",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "maya",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "recepcao",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "maya",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "porta",
+    "plano": "baixo",
+    "luz": "noite"
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "corredor",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "maya",
+      "acao": "Idle_A",
+      "rosto": "desconfiado",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "corredor",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "maya",
+      "acao": "Walking_A",
+      "rosto": "neutro",
+      "segura": "lanterna",
+      "de": "corredor",
+      "para": "maca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "corredor",
+    "plano": "nuca",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "maya",
+      "acao": "Walking_A",
+      "rosto": "desconfiado",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "maca",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "maya",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "maca",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "maya",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "maca",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "maya",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "corredor",
+    "plano": "ombro",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "maya",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "porta",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "maya",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 12,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 15,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}

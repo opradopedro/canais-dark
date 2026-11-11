@@ -95,6 +95,11 @@ Motor: `motor-3d/` (Three.js, custo zero, mesmo render do `hora-muerta/scripts/r
   19 são rascunho e o motor recusa. Criaturas: alta, sem_rosto, cao_negro, mulher_branca, vulto, rastejante, espantalho,
   olhos_no_escuro, lobisomem, fantasma, aranha_gigante, coisa_com_chifres, gigante_mitologico, animal.
 
+**3D vai ao ar já (REGRA do Pedro, 11/11):** a fila (`motor-en/prioridade.py`) põe séries 3D na frente de qualquer
+série do estilo antigo que ainda não começou. As séries prontas no estilo antigo viram **RESERVA**: só saem se faltar
+roteiro 3D. Por isso o **estoque mínimo desses 3 canais conta só roteiros 3D** (reserva não conta): a rotina escreve
+3D até ter 10 a 14 dias de 3D, mesmo que a reserva esteja cheia. Série já começada no YouTube termina antes.
+
 **Variedade (REGRA do Pedro, 10/11): nada se repete sempre.** Cada série nova escolhe protagonista (`semente` nova),
 cenário principal e criatura DIFERENTES das últimas 5 séries do canal; varie também luz/clima (noite, neblina, chuva,
 lua cheia, entardecer, neve…). O fiscal avisa repetição (`motor-3d/variedade.py`). Se a história precisar de um cenário
@@ -118,6 +123,7 @@ Vale por cima de qualquer número antigo (prompt, SKILL.md, temas.md) que fale e
 - Shorts aceita até 3 min: nunca passe de ~2min10 numa parte.
 
 ## Estoque mínimo (REGRA do Pedro, 03/11: "nunca mais" aviso de ESTOQUE BAIXO)
+- (Hora Muerta, Signal Lost e Old Tales: conta SÓ roteiro 3D; os do estilo antigo são reserva, ver "Estilo 3D".)
 - Cada canal precisa ter SEMPRE pelo menos **10 dias** de roteiros prontos em `stories/` que ainda não subiram
   (Old Tales, Hora Muerta e Signal Lost: 10 roteiros; So You Built It: 20). A produção avisa com 4 dias.
 - Quem escreve (rotina semanal de sexta, Kiro ou Claude em qualquer conversa) completa até **14 dias** à frente,

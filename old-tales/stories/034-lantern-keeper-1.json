@@ -1,0 +1,316 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "serie": "lantern-keeper",
+ "serie_titulo": "The Lantern Keeper | Old Tales",
+ "partes": 2,
+ "autor": "claude",
+ "origem": "autoral, inspired by Chinese river dragon folklore (first 3D series)",
+ "tags": [
+  "chinese mythology",
+  "chinese folklore",
+  "dragon legend",
+  "folk tales",
+  "old tales",
+  "mythology",
+  "bedtime story",
+  "legends",
+  "story time"
+ ],
+ "elenco": {
+  "lin": {
+   "semente": 3401,
+   "corpo": "crianca",
+   "roupa": "chines",
+   "cabelo": "curto"
+  },
+  "wu": {
+   "semente": 3402,
+   "corpo": "idoso",
+   "roupa": "chines",
+   "cabelo": "coque"
+  }
+ },
+ "codigo": "CL034",
+ "parte": 1,
+ "titulo": "The lantern that keeps a dragon asleep 🏮 Part 1 #story #shorts",
+ "capa": "NEVER LET IT GO OUT",
+ "descripcion": "In a mountain village, one lantern has burned every night for three hundred years. Lin thought the river dragon was just a story. Then he fell asleep.\n\n> Part 2: {when_next}.\nWould you stay awake?\n\nAn original tale inspired by Chinese river dragon folklore.\n#folktales #mythology #chinesemythology #story #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Imagine a mountain village where *one lantern* must never go out.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "It hangs at the old temple above the river, and it burns every night.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "For three hundred years, someone has kept it lit.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The villagers say it keeps the *river dragon* asleep.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "By day, the river is calm, and children fish from the bridge.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "This year the keeper is old *Master Wu*, and his helper is a boy named *Lin*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Lin thinks the dragon is just a story to scare children.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Every night he climbs the stairs with oil, and every night he yawns.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because one night Lin breaks the oldest rule in the village.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Master Wu falls sick, and Lin must keep the lantern alone.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "At midnight the wind is strong, and Lin is very tired.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He sits on the temple steps, just for a moment, and closes his eyes.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "When he wakes up, *the lantern is dark*.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "And down in the river, something enormous opens *one golden eye*.",
+   "pausa": 0.7
+  },
+  {
+   "texto": "What does the dragon do when it wakes? Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "torii",
+    "plano": "aereo",
+    "luz": "entardecer"
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "lanterna",
+    "plano": "auto",
+    "luz": "noite"
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "baixo",
+    "luz": "noite"
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "ponte",
+    "plano": "auto",
+    "luz": "lua_cheia"
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "ponte",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lin",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "escada",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wu",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "lin",
+      "acao": "Idle_B",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "jardim",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lin",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "escada",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "lin",
+      "acao": "Walking_A",
+      "rosto": "olhos_fechados",
+      "segura": "tocha",
+      "de": "jardim",
+      "para": "escada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "lanterna",
+    "plano": "auto",
+    "luz": "noite"
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "auto",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "wu",
+      "acao": "Lie_Idle",
+      "rosto": "triste"
+     },
+     {
+      "id": "lin",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "escada",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "lin",
+      "acao": "Idle_A",
+      "rosto": "triste",
+      "segura": "tocha"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "escada",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "lin",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "lanterna",
+    "plano": "baixo",
+    "luz": "madrugada"
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "ponte",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "ponte"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "escada",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "lin",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": []
+}
