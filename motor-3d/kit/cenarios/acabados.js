@@ -171,7 +171,7 @@ export async function floresta(scene) {
   lanterna(C, 2.6, 6.5, 0xffd08a, 2.0);
   await arvoreAnel(C, { r0: 11, r1: 34, n: 42, tipos: ['PineTree_1', 'PineTree_2', 'PineTree_3', 'PineTree_4', 'PineTree_5', 'CommonTree_1'], sem: 5, alt: [6, 10] });
   const marcas = { clareira: { x: 1.2, z: 3.4 }, trilha: { x: -1.5, z: 8.5 }, entre_arvores: { x: -7.5, z: -7 }, pe_torre: { x: 3.0, z: -1.6 }, fundo: { x: 0, z: -9 }, toco: { x: 2.2, z: -0.6 } };
-  return C.fim(marcas, { pos: [3, 4.5, 14], olha: [1, 2, -3] });
+  return C.fim(marcas, { pos: [-1.5, 2.4, 8.5], olha: [4, 3.2, -6] });
 }
 
 // =================================== ESTRADA ===================================
@@ -217,7 +217,7 @@ export async function casa_interior(scene) {
   const X = 5.5, Z = 4.8, H = 3.0;
   C.chao('madeira', 2 * Z, 3, 0, 0, 0, 2 * X).userData.chao = true;
   C.chao('grama', 80, 20, -0.01); // lá fora
-  const parede = M(0xd8c8a8, { side: THREE.FrontSide }), rodape = M(0x6a4a2a);
+  const parede = M(0xbca888, { side: THREE.FrontSide }), rodape = M(0x6a4a2a);
   const pared = (x, z, w, ry) => { const m = new THREE.Mesh(new THREE.PlaneGeometry(w, H), parede); m.position.set(x, H / 2, z); m.rotation.y = ry; m.receiveShadow = true; m.userData.parede = true; C.g.add(m); const r = new THREE.Mesh(new THREE.BoxGeometry(w, 0.12, 0.04), rodape); r.position.set(x, 0.06, z); r.rotation.y = ry; r.userData.parede = true; C.g.add(r); };
   pared(0, -Z, 2 * X, 0); pared(0, Z, 2 * X, Math.PI); pared(-X, 0, 2 * Z, Math.PI / 2); pared(X, 0, 2 * Z, -Math.PI / 2);
   const teto = new THREE.Mesh(new THREE.PlaneGeometry(2 * X, 2 * Z), M(0xeeeae0)); teto.rotation.x = Math.PI / 2; teto.position.y = H; teto.userData.parede = true; C.g.add(teto);
@@ -243,8 +243,8 @@ export async function casa_interior(scene) {
   const rel = C.cil(1.8, 2.3, -Z + 0.05, 0.22, 0.22, 0.05, M(0xf4f0e6), 20); rel.rotation.x = Math.PI / 2; C.det(rel);
   // luz de teto: sempre acesa (branca de dia, amarela à noite)
   C.det(await C.por('interior/Light_Ceiling1', 0, 0, 0.3, { y: H - 0.3 }));
-  C.luzSempre(0, H - 0.4, 0, [0xfff8f0, 6], [0xffd28a, 11], 14);
-  C.luzSempre(2.5, H - 0.4, 2, [0xfff8f0, 3], [0xffcf80, 5], 9);
+  C.luzSempre(0, H - 0.4, 0, [0xfff8f0, 2.5], [0xffc878, 4.5], 12);
+  C.luzSempre(2.5, H - 0.4, 2, [0xfff8f0, 1.2], [0xffc070, 2.2], 8);
   const ajustarOrig = C.fim; // vidro troca de cor com a hora
   const r = C.fim({ sala: { x: -2.2, z: 0.4 }, sofa: { x: -2.9, z: -2.4 }, cozinha: { x: 2.4, z: -2.5 }, quarto: { x: 2.0, z: 2.2 }, janela: { x: -1.2, z: -2.6 }, porta: { x: 0.6, z: 2.9 } },
     { pos: [3.2, 2.3, 3.0], olha: [-1.5, 1.0, -2] },
@@ -298,13 +298,13 @@ export async function cemiterio(scene) {
 export async function hospital(scene) {
   const C = novo(scene);
   const X = 3.6, Z = 15, H = 3.2;
-  C.chao('ladrilho', 2 * Z, 10, 0, 0, 0, 2 * X).userData.chao = true;
-  const parede = M(0xc8d6d0), faixa = M(0x6a9a8a);
+  { const ch = C.chao('ladrilho', 2 * Z, 10, 0, 0, 0, 2 * X); ch.userData.chao = true; ch.material.color.set(0xb4bcb8); }
+  const parede = M(0xa8b8b2), faixa = M(0x5a8a7a);
   for (const [x, ry] of [[-X, Math.PI / 2], [X, -Math.PI / 2]]) { const m = new THREE.Mesh(new THREE.PlaneGeometry(2 * Z, H), parede); m.position.set(x, H / 2, 0); m.rotation.y = ry; m.userData.parede = true; C.g.add(m); const fx = new THREE.Mesh(new THREE.PlaneGeometry(2 * Z, 0.25), faixa); fx.position.set(x * 0.998, 1.0, 0); fx.rotation.y = ry; fx.userData.parede = true; C.g.add(fx); }
   for (const [z, ry] of [[-Z, 0], [Z, Math.PI]]) { const m = new THREE.Mesh(new THREE.PlaneGeometry(2 * X, H), parede); m.position.set(0, H / 2, z); m.rotation.y = ry; m.userData.parede = true; C.g.add(m); }
-  const teto = new THREE.Mesh(new THREE.PlaneGeometry(2 * X, 2 * Z), M(0xe8ece8)); teto.rotation.x = Math.PI / 2; teto.position.y = H; teto.userData.parede = true; C.g.add(teto);
+  const teto = new THREE.Mesh(new THREE.PlaneGeometry(2 * X, 2 * Z), M(0xb8bcb8)); teto.rotation.x = Math.PI / 2; teto.position.y = H; teto.userData.parede = true; C.g.add(teto);
   // luminárias do teto (sempre acesas; à noite mais frias e fracas)
-  for (let z = -12; z <= 12; z += 4.8) { const pn = C.caixa(0, H - 0.04, z, 1.2, 0.05, 0.5, M(0xffffff)); pn.material.emissive = new THREE.Color(0xeaf4ff); pn.material.emissiveIntensity = 1.2; pn.userData.parede = true; C.det(pn); C.luzSempre(0, H - 0.3, z, [0xf4f8ff, 6], [0xcfe0ff, 4], 9); }
+  for (let z = -12; z <= 12; z += 4.8) { const pn = C.caixa(0, H - 0.04, z, 1.2, 0.05, 0.5, M(0xffffff)); pn.material.emissive = new THREE.Color(0xeaf4ff); pn.material.emissiveIntensity = 0.6; pn.userData.parede = true; C.det(pn); C.luzSempre(0, H - 0.3, z, [0xf4f8ff, 2.2], [0xcfe0ff, 1.6], 8); }
   // portas numeradas dos dois lados
   const placaNum = (txt) => { const c = document.createElement('canvas'); c.width = 128; c.height = 64; const x = c.getContext('2d'); x.fillStyle = '#2a4a5a'; x.fillRect(0, 0, 128, 64); x.fillStyle = '#fff'; x.font = 'bold 40px sans-serif'; x.textAlign = 'center'; x.fillText(txt, 64, 46); return new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(c) }); };
   let num = 101;
