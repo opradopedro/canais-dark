@@ -7,6 +7,7 @@ Uso:
   python3 motor-en/yt_upload.py canal      --canal signal-lost   # de quem e o token?
   python3 motor-en/yt_upload.py publicados --canal signal-lost
   python3 motor-en/yt_upload.py subir video.json --canal signal-lost
+  python3 motor-en/yt_upload.py privado VIDEO_ID --canal old-tales   # tira do ar (fica privado)
 
 Credenciais SO em variavel de ambiente (nunca no repositorio, nunca no chat):
   YT_CLIENT_ID, YT_CLIENT_SECRET e a variavel apontada por YT_TOKEN_VAR (ex. YT_REFRESH_TOKEN_SURVIVAL).
@@ -119,6 +120,23 @@ def _post(path, token, corpo, **q):
         return json.load(r)
 
 
+def tirar_do_ar(video_id, token=None):
+    """Deixa o video PRIVADO e sem agendamento (video com defeito; REGRA do Pedro: tirar do ar sem pedir ok)."""
+    token = token or access_token()
+    v = get("videos", token, part="status", id=video_id).get("items", [])
+    if not v:
+        sys.exit(f"VIDEO NAO ACHADO {video_id} neste canal")
+    st = {k: x for k, x in v[0]["status"].items() if k in ("embeddable", "license", "publicStatsViewable",
+                                                          "selfDeclaredMadeForKids", "containsSyntheticMedia")}
+    st["privacyStatus"] = "private"
+    url = f"{API}/videos?part=status"
+    req = urllib.request.Request(url, json.dumps({"id": video_id, "status": st}).encode(), method="PUT", headers={
+        "Authorization": f"Bearer {token}", "Content-Type": "application/json; charset=UTF-8"})
+    with urllib.request.urlopen(req) as r:
+        res = json.load(r)
+    print("TIRADO DO AR", video_id, res["status"].get("privacyStatus"), res["status"].get("publishAt", ""))
+
+
 def na_playlist(token, titulo, video_id):
     """Poe o video na playlist da serie (cria se nao existir). Custa 50 unidades por escrita."""
     pid = None
@@ -209,6 +227,8 @@ if __name__ == "__main__":
         print(json.dumps(de_quem(), ensure_ascii=False, indent=1))
     elif acao == "publicados":
         print(json.dumps(publicados(), ensure_ascii=False, indent=1))
+    elif acao == "privado":
+        tirar_do_ar(sys.argv[2])
     elif acao == "subir":
         subir(sys.argv[2], c.get("canal_titulo"))
     else:
