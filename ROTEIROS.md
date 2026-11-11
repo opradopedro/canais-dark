@@ -26,6 +26,9 @@ saem a 3 e a 4 e logo depois entra a minha."
   primeiro); 3) o resto, na ordem dos arquivos. Vídeo que já está AGENDADO no YouTube não muda de data: a ideia
   entra no primeiro horário livre depois dele. No So You Built It a ideia pega o primeiro horário livre, seja
   Curiosidade ou Evolução.
+- **"Faz sair AGORA"** (pedido direto do Pedro, ex. Wukong 11/11): ponha também `"furar_fila": true` em todas as partes.
+  A série passa na frente até de série pela metade, a parte 1 é publicada ~20 min depois de subir (sem esperar o
+  horário do canal) e as outras saem uma por dia no horário normal. Use só quando o Pedro pedir "agora".
 - Depois de enviar, comente na issue qual código ficou (ex.: "virou YB036, entra como próximo da fila") e feche.
   Marque o tema como ideia do Pedro em `references/temas.md`.
 

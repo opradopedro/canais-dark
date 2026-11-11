@@ -1,0 +1,444 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "serie": "wukong-3d",
+ "serie_titulo": "Sun Wukong: The Monkey King | Old Tales",
+ "partes": 5,
+ "autor": "claude",
+ "origem": "pedido do Pedro (chat 11/11): Journey to the West, Wu Cheng'en",
+ "prioridade": "pedro",
+ "ideia": "chat 11/11",
+ "furar_fila": true,
+ "tags": [
+  "sun wukong",
+  "monkey king",
+  "journey to the west",
+  "chinese mythology",
+  "wukong",
+  "mythology",
+  "old tales",
+  "legends",
+  "story time"
+ ],
+ "elenco": {
+  "wukong": {
+   "semente": 3601,
+   "corpo": "magro",
+   "pele": "#a8703f",
+   "cabelo": "moicano",
+   "cabelo_cor": "#d9a03a",
+   "camisa": "#d8b43a",
+   "calca": "#5a3a2a",
+   "roupa": "chines",
+   "acessorio": "",
+   "rosto_estilo": "redondo"
+  },
+  "macaco": {
+   "semente": 3602,
+   "corpo": "crianca",
+   "pele": "#8a5a34",
+   "cabelo": "cacheado",
+   "cabelo_cor": "#5a3a1e",
+   "camisa": "#7a5a34",
+   "calca": "#3a2f24",
+   "roupa": "camiseta",
+   "acessorio": ""
+  },
+  "subodhi": {
+   "semente": 3603,
+   "corpo": "idoso",
+   "pele": "#e8c0a0",
+   "cabelo": "careca",
+   "camisa": "#2a6a5a",
+   "roupa": "chines",
+   "acessorio": ""
+  },
+  "tang": {
+   "semente": 3604,
+   "corpo": "medio",
+   "pele": "#f2d6be",
+   "cabelo": "careca",
+   "camisa": "#d8b43a",
+   "roupa": "chines",
+   "acessorio": ""
+  }
+ },
+ "codigo": "CL039",
+ "parte": 4,
+ "anterior": "CL038",
+ "titulo": "The monkey who fought all of Heaven 🐒 Sun Wukong Part 4 #story #shorts",
+ "capa": "WAR ON HEAVEN",
+ "descripcion": "Heaven tries to control Sun Wukong with a job. It goes very wrong: peaches of immortality, a furnace, and an army that cannot stop him.\n\n> Part 5: {when_next}.\nWho could stop him now?\n\nFrom Journey to the West (Xiyouji), Wu Cheng'en, 16th century, chapters 4 to 7.\n#monkeyking #sunwukong #journeytothewest #mythology #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Imagine a job in Heaven that is the *worst job* there.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The Jade Emperor invites Wukong up, to keep him quiet.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He makes him keeper of the *heavenly horses*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Then Wukong learns it is the lowest job there.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He flies home and calls himself *Great Sage, Equal to Heaven*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He beats Heaven's soldiers, so they give him the title.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "And he guards the *peaches of immortality*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Some ripen once every nine thousand years.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Wukong eats the biggest ones.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then he learns he was *not invited* to the banquet.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Stay, because this starts a war.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He drinks the wine and eats the pills of *Laozi*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Now he cannot die. Heaven sends a huge army.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Only the god *Erlang* catches him.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Laozi throws him into a furnace.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "For *forty-nine days*, he burns.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He jumps out with golden eyes, stronger than before.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "No one in Heaven can stop him.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "So they call someone he has never met. Part five, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "aereo",
+    "luz": "dia"
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "torii",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Walking_A",
+      "rosto": "sorriso",
+      "de": "torii",
+      "para": "escada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "jardim",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Work_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "jardim",
+    "plano": "close",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "baixo",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Cheering",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "auto",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Melee_2H_Attack_Spin",
+      "rosto": "bravo"
+     }
+    ],
+    "criatura": {
+     "tipo": "gigante_mitologico",
+     "marca": "fundo"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "jardim",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "jardim",
+    "plano": "close",
+    "luz": "nascer_sol"
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "jardim",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Use_Item",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "close",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "escada",
+    "plano": "baixo",
+    "luz": "tempestade"
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Use_Item",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "aereo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "auto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Hit_B",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "gigante_mitologico",
+     "marca": "clareira"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "auto",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Crouching",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "close",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Crouching",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "baixo",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Jump_Full_Short",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "escada",
+    "plano": "auto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Running_A",
+      "rosto": "bravo",
+      "de": "torii",
+      "para": "escada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "lanterna",
+    "plano": "close",
+    "luz": "tempestade"
+   }
+  }
+ ],
+ "eventos": []
+}

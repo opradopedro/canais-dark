@@ -1,0 +1,486 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "serie": "wukong-3d",
+ "serie_titulo": "Sun Wukong: The Monkey King | Old Tales",
+ "partes": 5,
+ "autor": "claude",
+ "origem": "pedido do Pedro (chat 11/11): Journey to the West, Wu Cheng'en",
+ "prioridade": "pedro",
+ "ideia": "chat 11/11",
+ "furar_fila": true,
+ "tags": [
+  "sun wukong",
+  "monkey king",
+  "journey to the west",
+  "chinese mythology",
+  "wukong",
+  "mythology",
+  "old tales",
+  "legends",
+  "story time"
+ ],
+ "elenco": {
+  "wukong": {
+   "semente": 3601,
+   "corpo": "magro",
+   "pele": "#a8703f",
+   "cabelo": "moicano",
+   "cabelo_cor": "#d9a03a",
+   "camisa": "#d8b43a",
+   "calca": "#5a3a2a",
+   "roupa": "chines",
+   "acessorio": "",
+   "rosto_estilo": "redondo"
+  },
+  "macaco": {
+   "semente": 3602,
+   "corpo": "crianca",
+   "pele": "#8a5a34",
+   "cabelo": "cacheado",
+   "cabelo_cor": "#5a3a1e",
+   "camisa": "#7a5a34",
+   "calca": "#3a2f24",
+   "roupa": "camiseta",
+   "acessorio": ""
+  },
+  "subodhi": {
+   "semente": 3603,
+   "corpo": "idoso",
+   "pele": "#e8c0a0",
+   "cabelo": "careca",
+   "camisa": "#2a6a5a",
+   "roupa": "chines",
+   "acessorio": ""
+  },
+  "tang": {
+   "semente": 3604,
+   "corpo": "medio",
+   "pele": "#f2d6be",
+   "cabelo": "careca",
+   "camisa": "#d8b43a",
+   "roupa": "chines",
+   "acessorio": ""
+  }
+ },
+ "codigo": "CL037",
+ "parte": 2,
+ "anterior": "CL036",
+ "titulo": "The monkey who wanted to never die 🐒 Sun Wukong Part 2 #story #shorts",
+ "capa": "HE WILL NOT DIE",
+ "descripcion": "The Monkey King cries because one day he will die. So he crosses the sea to find a teacher who knows the secret of living forever.\n\n> Part 3: {when_next}.\nWould you have found the secret door?\n\nFrom Journey to the West (Xiyouji), Wu Cheng'en, 16th century, chapters 1 and 2.\n#monkeyking #sunwukong #journeytothewest #mythology #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Imagine having everything, and knowing it will end.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The Monkey King cries because one day he will *die*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "An old monkey says only immortals escape death.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "So the king sails alone across the sea on a raft.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "For years, he walks through towns, learning to act like people.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "At last, he finds a temple and an old master, *Subodhi*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The master names him *Sun Wukong*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "For seven years, Wukong only sweeps floors.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then Subodhi hits his head three times and leaves.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "The students laugh. Wukong understands the *secret*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Stay, because this is how he learned his magic.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Three knocks meant the third watch of the night, at the *back door*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At midnight, the back door is open.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "In secret, he learns *seventy-two transformations*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And the cloud somersault, a jump of thousands of miles.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "But one day, he shows off and becomes a pine tree.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Subodhi sends him away. Never tell anyone *who taught you*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Back home, a demon has taken his mountain.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "He needs a weapon, and the right one is under the sea. Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "close",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "medio",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_B",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "toco",
+    "plano": "auto",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "macaco",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "indo",
+    "plano": "aereo",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Walking_A",
+      "rosto": "bravo",
+      "de": "vindo",
+      "para": "indo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "vila",
+    "marca": "mercado",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Walking_B",
+      "rosto": "desconfiado",
+      "de": "praca",
+      "para": "mercado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "torii",
+    "plano": "auto",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Walking_A",
+      "rosto": "neutro",
+      "de": "torii",
+      "para": "escada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "subodhi",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "wukong",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "jardim",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Work_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "escada",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "subodhi",
+      "acao": "Melee_Unarmed_Attack_Punch_A",
+      "rosto": "bravo"
+     },
+     {
+      "id": "wukong",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "jardim",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "lanterna",
+    "plano": "auto",
+    "luz": "noite"
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Sneaking",
+      "rosto": "desconfiado",
+      "de": "jardim",
+      "para": "templo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Crouching",
+      "rosto": "neutro"
+     },
+     {
+      "id": "subodhi",
+      "acao": "Lie_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "jardim",
+    "plano": "auto",
+    "luz": "lua_cheia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Ranged_Magic_Spellcasting",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "torii",
+    "plano": "baixo",
+    "luz": "lua_cheia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Jump_Full_Long",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "jardim",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Ranged_Magic_Raise",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "escada",
+    "plano": "medio",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "subodhi",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     },
+     {
+      "id": "wukong",
+      "acao": "Idle_B",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "auto",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "macaco",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "triste"
+     },
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "close",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": []
+}

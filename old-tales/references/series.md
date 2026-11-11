@@ -61,6 +61,7 @@ Cenas: vila, casa, salao, mercado, texto.
 - CL019 parte 1/3: pedra na Montanha das Flores e Frutas racha, macaco de pedra, olhos de luz até o Céu; desafio da cachoeira; vira Rei Macaco. Pergunta: por que ele chorou? FEITO
 - CL020 parte 2/3: chora porque vai morrer; cruza o mar; Subodhi o chama Sun Wukong; 72 transformações e salto de nuvem (108 mil li); pilar de ferro do Rei Dragão do Mar do Leste. FEITO
 - CL021 parte 3/3 (última): cavalariço do Céu (cargo mais baixo), vai embora; come os pêssegos da imortalidade; exércitos não o param; aposta da palma do Buda; 5 pilares eram dedos; 500 anos sob a montanha. Pergunta final. FEITO
+- 11/11: DESCARTADO (arquivos em descartados/): o Pedro pediu a série do Wukong em 3D com 5 partes (wukong-3d, CL036-CL040), que conta a mesma história e mais. Não voltar com esta.
 - Próximas da frente mito: continuar a Jornada (Tang Sanzang solta o Wukong, cap. 14) ou outro mito chinês do backlog.
 
 ## Semana de 10/11 a 18/11/2026 — por: claude (rotina de terça, 03/11). Estoque antes: CL015-CL021 (7 dias). Rodízio das frentes: calmo → epico → mito. 2 gringas, 1 autoral.
@@ -101,3 +102,16 @@ Peças: `f_mosteiro`, `f_igreja`, `f_aldeia`, `f_campo`, `f_estrada_antiga`, `f_
 - 3D: templo_oriental (dia, entardecer, noite, madrugada, lua_cheia, nascer_sol); criatura olhos_no_escuro (o dragão); Lin (criança, semente 3401) e Master Wu (idoso, semente 3402).
 - CL034 parte 1/2: lantern lit for 300 years keeps the river dragon asleep; Lin falls asleep, lantern dark, one golden eye. FEITO
 - CL035 parte 2/2: no matches; Lin sits and talks to the dragon until dawn; the lantern was so the dragon would know someone was awake. FEITO
+
+## wukong-3d (CL036-CL040) — Sun Wukong: The Monkey King — tema mito, paleta china — PEDIDO DO PEDRO (chat 11/11) — por: claude
+- Pedido: "faça sair um vídeo agora no Old Tales sobre o Wukong, uma série com 5 episódios que vão saindo um por dia", no 3D.
+  Todas as partes têm `"prioridade": "pedro"` e `"furar_fila": true` (passa na frente até do CL018; a parte 1 sai na hora, depois 1 por dia).
+- Fonte: *Jornada ao Oeste* (Wu Cheng'en, séc. XVI), caps. 1-8 e 14. Substitui a monkey-king flat (CL019-021, descartada).
+- 3D: floresta (Montanha das Flores e Frutas, cachoeira = fundo com chuva), templo_oriental (Subodhi, Céu, Dragão), vila/estrada (viagem),
+  cemiterio (submundo). Criaturas: coisa_com_chifres (Rei Dragão), vulto (juízes/almas), gigante_mitologico (Erlang, Buda).
+  Elenco: wukong 3601 (dourado, moicano), macaco 3602, subodhi 3603, tang 3604. Falta no motor: modelo de macaco, mar/palácio submarino, nuvens do Céu.
+- CL036 parte 1/5: pedra na montanha racha, macaco de pedra, olhos de luz dourada até o Céu, Imperador de Jade dá de ombros; cachoeira, quem atravessa é rei; caverna atrás da água; Rei Macaco; 300 anos depois chora numa festa. FEITO
+- CL037 parte 2/5: chora porque vai morrer; atravessa o mar numa jangada; anos entre humanos; Subodhi o chama Sun Wukong; 7 anos varrendo; 3 batidas na cabeça = 3ª vigília, porta dos fundos; 72 transformações e salto de nuvem; se exibe virando pinheiro, expulso; demônio tomou a montanha; precisa de arma. FEITO
+- CL038 parte 3/5: vence o demônio, espadas quebram; palácio do Rei Dragão; pilar de ferro que mediu o mar (13.500 jin), encolhe, cajado dourado atrás da orelha; dorme e é levado ao submundo; Livro da Vida e da Morte; risca o próprio nome e o de todos os macacos; todos reclamam ao Céu. FEITO
+- CL039 parte 4/5: cavalariço do Céu, cargo mais baixo; Grande Sábio Igual ao Céu; jardim dos pêssegos (9 mil anos); não convidado ao banquete; vinho e pílulas de Laozi; exército; Erlang o prende; fornalha 49 dias, olhos dourados; ninguém o para; chamam alguém. FEITO
+- CL040 parte 5/5 (última): aposta da mão do Buda; 5 pilares, escreve "o Grande Sábio esteve aqui", faz xixi; eram dedos; montanha cai, 500 anos, pelotas de ferro; Tang Sanzang tira o selo, livre. Pergunta final que volta à pedra (loop). FEITO
