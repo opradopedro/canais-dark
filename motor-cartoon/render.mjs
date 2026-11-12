@@ -333,18 +333,33 @@ async function main() {
     return;
   }
 
-  // Full video render in 150-frame chunks
+  // Full video (or shard) render in 150-frame chunks
   const saida = path.resolve(args.saida || path.join(__dirname, "out.mp4"));
   fs.mkdirSync(path.dirname(saida), { recursive: true });
 
   const totalFrames = Math.max(1, Math.ceil((estado.dur || 10) * FPS));
+  const totalChunks = Math.ceil(totalFrames / CHUNK);
+  let startFrame = args["frame-start"] !== undefined ? Math.max(0, Number(args["frame-start"])) : 0;
+  let endFrame = args["frame-end"] !== undefined ? Math.min(totalFrames - 1, Number(args["frame-end"])) : totalFrames - 1;
+  if (typeof args.shard === "string" && args.shard.includes("/")) {
+    const [sIdx, sTot] = args.shard.split("/").map(Number);
+    const cStart = Math.floor((sIdx * totalChunks) / sTot);
+    const cEnd = Math.floor(((sIdx + 1) * totalChunks) / sTot) - 1;
+    if (cStart > cEnd || cStart >= totalChunks) {
+      console.log(`[motor-cartoon] Shard ${args.shard} vazio (totalChunks=${totalChunks})`);
+      return;
+    }
+    startFrame = cStart * CHUNK;
+    endFrame = Math.min(totalFrames - 1, (cEnd + 1) * CHUNK - 1);
+  }
+
   const chunksDir = fs.mkdtempSync(path.join(os.tmpdir(), "cartoon-chunks-"));
   const chunkFiles = [];
 
-  console.log(`[motor-cartoon] Renderizando ${totalFrames} frames (${estado.dur.toFixed(1)}s) em blocos de ${CHUNK}...`);
+  console.log(`[motor-cartoon] Renderizando quadros ${startFrame}..${endFrame} de ${totalFrames} (${estado.dur.toFixed(1)}s) em blocos de ${CHUNK}...`);
 
-  for (let a = 0; a < totalFrames; a += CHUNK) {
-    const b = Math.min(totalFrames - 1, a + CHUNK - 1);
+  for (let a = startFrame; a <= endFrame; a += CHUNK) {
+    const b = Math.min(endFrame, a + CHUNK - 1);
     const idx = Math.floor(a / CHUNK);
     const chunkPath = path.join(chunksDir, `chunk_${String(idx).padStart(3, "0")}.mp4`);
     const t0 = Date.now();
@@ -393,7 +408,10 @@ async function main() {
   console.log(`[motor-cartoon] Video salvo em ${saida}`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+const isMain = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
+if (isMain) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}

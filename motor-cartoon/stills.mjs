@@ -44,6 +44,9 @@ async function main() {
     throw new Error("Uso: node stills.mjs --roteiro <roteiro.json> [--frame <N>] [--saida <out.png>]");
   }
 
+  const estadoFile = path.join(__dirname, "estado-render.json");
+  fs.writeFileSync(estadoFile, JSON.stringify(estado));
+
   const outDir = path.join(__dirname, ".bundle");
   const serveUrl = fs.existsSync(path.join(outDir, "index.html")) && !args.rebundle
     ? outDir

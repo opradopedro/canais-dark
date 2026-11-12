@@ -73,12 +73,12 @@ def main(historia, tempos, saida):
     if estado.get("visual") == "cartoon" or (estado.get("visual") == "3d" and motor_visual(historia, h) == "cartoon"):
         with tempfile.TemporaryDirectory(prefix="capa-cartoon-") as tmpd:
             quadro_f = max(0, int(round(t * 30)))
+            png = os.path.join(tmpd, "capa.png")
             subprocess.run([node_bin(), os.path.join(MOTOR_CARTOON, "stills.mjs"),
                             "--roteiro", os.path.abspath(historia),
                             "--tempos", os.path.abspath(tempos),
-                            "--frames", str(quadro_f), "--noCaps",
-                            "--saida", tmpd], check=True)
-            png = os.path.join(tmpd, f"quadro_{quadro_f:04d}.png")
+                            "--frame", str(quadro_f), "--noCaps",
+                            "--saida", png], check=True)
             if os.path.isfile(png):
                 fundo_b64 = base64.b64encode(open(png, "rb").read()).decode("ascii")
     with sync_playwright() as p:
