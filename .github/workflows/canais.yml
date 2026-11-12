@@ -53,6 +53,7 @@ jobs:
     timeout-minutes: 240
     outputs:
       tarefa: ${{ steps.qual.outputs.tarefa }}
+      cartoon: ${{ steps.cartoon_prep.outputs.tem }}
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -110,6 +111,19 @@ jobs:
           else
             echo "sim=0" >> "$GITHUB_OUTPUT"
             echo "$T esta desligado em canais-ativos.txt (outra automacao cuida dele). Nada a fazer."
+          fi
+
+      # canal com "motor_visual": "cartoon" no canal.json: o Rodar so prepara voz/legenda/capa (CARTOON_PREP) e o
+      # desenho roda em fatias paralelas (jobs cartoon-fatias e cartoon-montar, mais abaixo)
+      - name: Motor cartoon?
+        id: cart
+        if: steps.ligado.outputs.sim == '1'
+        run: |
+          T="${{ steps.qual.outputs.tarefa }}"
+          if [ -f "$T/canal.json" ] && python3 -c "import json,sys; sys.exit(0 if json.load(open('$T/canal.json')).get('motor_visual')=='cartoon' else 1)"; then
+            echo "sim=1" >> "$GITHUB_OUTPUT"; echo "$T usa o motor cartoon: producao em fatias"
+          else
+            echo "sim=0" >> "$GITHUB_OUTPUT"
           fi
 
       - uses: actions/setup-python@v5
@@ -173,7 +187,28 @@ jobs:
           set -o pipefail
           export CANAIS_REPESCAGEM="${{ steps.qual.outputs.repescagem }}"
           export CANAIS_ULTIMA="${{ steps.qual.outputs.ultima }}"
+          [ "${{ steps.cart.outputs.sim }}" = 1 ] && export CARTOON_PREP=1
           python crew/rodar_canal.py "${{ steps.qual.outputs.tarefa }}" 2>&1 | tee /tmp/rodar-log.txt
+
+      - name: Motor cartoon - guardar o que foi preparado
+        id: cartoon_prep
+        if: always() && steps.cart.outputs.sim == '1'
+        run: |
+          D="/tmp/canais/${{ steps.qual.outputs.tarefa }}"
+          mkdir -p /tmp/cartoon-prod
+          for u in "$D"/*_upload.json; do
+            [ -f "$u" ] || continue
+            b="${u%_upload.json}"
+            cp "$u" "$b"_roteiro.json "$b"_tempos.json "$b"_trilha.m4a /tmp/cartoon-prod/
+            [ -f "$b"_capa.jpg ] && cp "$b"_capa.jpg /tmp/cartoon-prod/
+          done
+          if ls /tmp/cartoon-prod/*_upload.json > /dev/null 2>&1; then echo "tem=1" >> "$GITHUB_OUTPUT"; ls -la /tmp/cartoon-prod; else echo "tem=0" >> "$GITHUB_OUTPUT"; fi
+
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.cartoon_prep.outputs.tem == '1'
+        with:
+          name: cartoon-prod
+          path: /tmp/cartoon-prod
 
       # thumbnails do So You Built It ja aplicadas (capa.py): guarda a lista para nao reenviar
       - name: Salvar capas feitas (SYBI)
@@ -243,6 +278,121 @@ jobs:
           git diff --cached --quiet || git commit -m "metricas $(date -u +%F)"
           git push
 
+  # ---------------- Producao diaria no motor cartoon (canal com "motor_visual": "cartoon") ----------------
+  # O job "rodar" preparou voz, legenda alinhada, capa e horario (artefato cartoon-prod). Aqui: desenho em 10 fatias
+  # paralelas (cada uma ~1/10 dos quadros) e depois juntar, conferir (legenda + fim) e agendar no YouTube.
+  prod-cartoon-fatias:
+    needs: rodar
+    if: needs.rodar.outputs.cartoon == '1'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        fatia: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: motor-cartoon/package-lock.json
+      - name: Programas e Chromium
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu > /dev/null
+          pip install -q playwright
+          python -m playwright install --with-deps chromium > /dev/null
+          npm ci --prefix motor-cartoon --no-audit --no-fund
+      - uses: actions/download-artifact@v4
+        with:
+          name: cartoon-prod
+          path: /tmp/cartoon-prod
+      - name: Desenhar fatia ${{ matrix.fatia }}/10
+        run: |
+          set -o pipefail
+          mkdir -p /tmp/fatias
+          for r in /tmp/cartoon-prod/*_roteiro.json; do
+            b="${r%_roteiro.json}"; cod="$(basename "$b")"
+            node motor-cartoon/render.mjs --roteiro "$r" --tempos "${b}_tempos.json" \
+              --shard "${{ matrix.fatia }}/10" --saida "/tmp/fatias/fatia-${cod}-${{ matrix.fatia }}.mp4" 2>&1 | tee -a /tmp/fatia-log.txt
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fatia-${{ matrix.fatia }}
+          path: /tmp/fatias
+          if-no-files-found: ignore
+      - name: Enviar erro para a Release "logs"
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tail -c 60000 /tmp/fatia-log.txt > "/tmp/cartoon-fatia-${{ matrix.fatia }}_ERRO.txt" 2>/dev/null || echo "sem log" > "/tmp/cartoon-fatia-${{ matrix.fatia }}_ERRO.txt"
+          gh release upload logs "/tmp/cartoon-fatia-${{ matrix.fatia }}_ERRO.txt" --clobber || true
+
+  prod-cartoon-montar:
+    needs: [rodar, prod-cartoon-fatias]
+    if: always() && needs.rodar.outputs.cartoon == '1'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN_SURVIVAL: ${{ secrets.YT_REFRESH_TOKEN_SURVIVAL }}
+      YT_REFRESH_TOKEN_CLASSICS: ${{ secrets.YT_REFRESH_TOKEN_CLASSICS }}
+      YT_REFRESH_TOKEN_ES: ${{ secrets.YT_REFRESH_TOKEN_ES }}
+      CANAIS_REPO: ${{ github.workspace }}
+      CANAIS_SEM_ENV: "1"
+      HF_HUB_DISABLE_SYMLINKS_WARNING: "1"
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: .github/requirements-canais.txt
+      - name: Programas e pacotes Python
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q -r .github/requirements-canais.txt
+      - name: Recuperar modelos do alinhador (sincronia)
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            ~/.cache/torch
+          key: canais-${{ github.run_id }}
+          restore-keys: canais-
+      - uses: actions/download-artifact@v4
+        with:
+          name: cartoon-prod
+          path: /tmp/cartoon-prod
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: fatia-*
+          path: /tmp/fatias
+      - name: Juntar, conferir e agendar
+        run: |
+          set -o pipefail
+          python motor-en/cartoon_montar.py "${{ needs.rodar.outputs.tarefa }}" /tmp/cartoon-prod /tmp/fatias 2>&1 | tee /tmp/montar-log.txt
+      - name: Enviar videos para o painel
+        if: always()
+        run: |
+          for c in hm sv cl; do
+            d="painel-saida/$c"
+            [ -d "$d" ] && [ -n "$(ls -A "$d" 2>/dev/null)" ] || continue
+            gh release view "painel-$c" > /dev/null 2>&1 || gh release create "painel-$c" --title "Painel $c" --notes "Videos para o painel (gerado pelo GitHub Actions)"
+            gh release upload "painel-$c" "$d"/* --clobber
+          done
+      - name: Enviar erro para a Release "logs"
+        if: failure()
+        run: |
+          T="${{ needs.rodar.outputs.tarefa }}"
+          tail -c 60000 /tmp/montar-log.txt > "/tmp/${T}_ERRO.txt" 2>/dev/null || echo "sem log" > "/tmp/${T}_ERRO.txt"
+          gh release upload logs "/tmp/${T}_ERRO.txt" --clobber || true
+
   # ---------------- Entrega 3: prova em paralelo do motor-cartoon (Release 'teste-cartoon', NAO publica no YouTube) ----------------
   cartoon-audio:
     needs: rodar
@@ -292,7 +442,7 @@ jobs:
       - name: Preparar audio, legenda e capas dos 3 roteiros
         run: |
           set -o pipefail
-          python motor-en/preparar_teste_cartoon.py /tmp/cartoon-prep 2>&1 | tee /tmp/cartoon-audio-log.txt
+          TESTE_CARTOON=CL042 python motor-en/preparar_teste_cartoon.py /tmp/cartoon-prep 2>&1 | tee /tmp/cartoon-audio-log.txt
       - name: Guardar caixa de narracoes e sons
         if: always()
         uses: actions/cache/save@v4
@@ -319,12 +469,12 @@ jobs:
     needs: [rodar, cartoon-audio]
     if: needs.rodar.outputs.tarefa == 'teste-cartoon'
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 100
     strategy:
       fail-fast: false
       matrix:
-        codigo: [HM041, SV031, CL042]
-        shard: [0, 1, 2, 3, 4]
+        codigo: [CL042]
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
@@ -348,13 +498,13 @@ jobs:
         with:
           name: cartoon-prep
           path: /tmp/cartoon-prep
-      - name: Renderizar fatia ${{ matrix.codigo }} (${{ matrix.shard }}/5)
+      - name: Renderizar fatia ${{ matrix.codigo }} (${{ matrix.shard }}/10)
         run: |
           set -o pipefail
           node motor-cartoon/render.mjs \
             --roteiro "/tmp/cartoon-prep/${{ matrix.codigo }}_roteiro.json" \
             --tempos "/tmp/cartoon-prep/${{ matrix.codigo }}_tempos.json" \
-            --shard "${{ matrix.shard }}/5" \
+            --shard "${{ matrix.shard }}/10" \
             --saida "/tmp/shard-${{ matrix.codigo }}-${{ matrix.shard }}.mp4" 2>&1 | tee /tmp/shard-log.txt
       - uses: actions/upload-artifact@v4
         with:
@@ -408,7 +558,7 @@ jobs:
       - name: Juntar fatias, conferir legenda/fim e subir na Release "teste-cartoon"
         run: |
           set -o pipefail
-          python motor-en/preparar_teste_cartoon.py --montar /tmp/cartoon-prep /tmp/shards /tmp/final 2>&1 | tee /tmp/montar-log.txt
+          TESTE_CARTOON=CL042 python motor-en/preparar_teste_cartoon.py --montar /tmp/cartoon-prep /tmp/shards /tmp/final 2>&1 | tee /tmp/montar-log.txt
           cp /tmp/montar-log.txt /tmp/final/conferencia-teste-cartoon.txt
           gh release view teste-cartoon > /dev/null 2>&1 || gh release create teste-cartoon --title "Teste Motor Cartoon (HM041, SV031, CL042)" --notes "3 videos de prova renderizados pelo motor-cartoon (sem publicar no YouTube)"
           gh release edit teste-cartoon --title "Teste Motor Cartoon (HM041, SV031, CL042)" --notes "Videos de prova renderizados pelo motor-cartoon (HM041, SV031, CL042 - Parte 2 do Wukong; sem publicar no YouTube)" || true

@@ -24,6 +24,11 @@ ITENS = [
     ("CL042", "old-tales", "old-tales/stories/042-wukong-2.json", "en"),
 ]
 
+# so os codigos pedidos (ex.: TESTE_CARTOON=CL042); a matriz cartoon-shards do canais.yml tem que bater
+if os.environ.get("TESTE_CARTOON"):
+    _so = set(os.environ["TESTE_CARTOON"].split(","))
+    ITENS = [i for i in ITENS if i[0] in _so]
+
 
 def _env_canal(canal, idioma):
     env = dict(os.environ)
@@ -153,7 +158,7 @@ def montar(pasta_prep, pasta_shards, pasta_final):
 
     if falhas:
         sys.exit("FALHA NA CONFERENCIA DOS VIDEOS DE TESTE: " + ", ".join(falhas))
-    print("TODOS OS 3 VIDEOS DE TESTE PASSARAM NA CONFERENCIA!", flush=True)
+    print(f"TODOS OS {len(ITENS)} VIDEOS DE TESTE PASSARAM NA CONFERENCIA!", flush=True)
 
 
 if __name__ == "__main__":

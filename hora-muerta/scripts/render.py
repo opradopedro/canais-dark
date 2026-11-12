@@ -64,6 +64,14 @@ def main():
     estado = resolver(raw_h, json.load(open(a.tempos)))
     tresd = estado.get("visual") in ("3d", "cartoon")
     if estado.get("visual") == "cartoon" or (tresd and motor_visual(a.historia, raw_h) == "cartoon"):
+        if os.environ.get("CARTOON_PREP") and not a.teste:
+            # producao em fatias (canais.yml, jobs cartoon-*): aqui so guarda o roteiro ja preenchido ao lado dos
+            # tempos; o desenho roda em paralelo nas fatias e motor-en/cartoon_montar.py junta, confere e sobe
+            import shutil
+            base = os.path.abspath(a.video)[:-len("_video.mp4")] if a.video.endswith("_video.mp4") else os.path.splitext(os.path.abspath(a.video))[0]
+            shutil.copy(a.historia, base + "_roteiro.json")
+            print("CARTOON_PREP: roteiro guardado para as fatias", base + "_roteiro.json", flush=True)
+            return
         cmd = [node_bin(), os.path.join(MOTOR_CARTOON, "render.mjs"),
                "--roteiro", os.path.abspath(a.historia),
                "--tempos", os.path.abspath(a.tempos),

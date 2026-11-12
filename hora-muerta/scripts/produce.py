@@ -61,6 +61,8 @@ def produzir(historia, a, base):
     print("legenda alinhada:", sincronia.ajustar(base + "_trilha.m4a", base + "_tempos.json", "es"), flush=True)
     run(sys.executable, f"{AQUI}/render.py", historia, base + "_tempos.json", base + "_video.mp4")
     run(sys.executable, f"{AQUI}/capa.py", historia, base + "_tempos.json", base + "_capa.jpg")
+    if os.environ.get("CARTOON_PREP"):
+        return  # motor cartoon em fatias: o MP4 e montado depois (motor-en/cartoon_montar.py)
     run("ffmpeg", "-v", "error", "-y", "-i", base + "_video.mp4", "-i", base + "_trilha.m4a", "-c:v", "libx264",
         "-crf", "26", "-preset", "slow", "-pix_fmt", "yuv420p", "-c:a", "copy", "-movflags", "+faststart", "-shortest", base + ".mp4")
     os.remove(base + "_video.mp4")  # a voz limpa fica para a conferencia da legenda (revisar) e sai depois
@@ -170,6 +172,9 @@ def main():
         if a.subir:
             up["publicar_em"] = slots[k]
         json.dump(up, open(base + "_upload.json", "w"), ensure_ascii=False, indent=1)
+        if os.environ.get("CARTOON_PREP"):
+            print(f"PREPARADO {cod}: voz, legenda e capa prontas; o video sai nas fatias do motor cartoon", flush=True)
+            continue
         print("video:", base + ".mp4", flush=True)
         leg, ok = revisar(base, "es")
         # conserto: refaz a voz a partir da narracao bruta guardada (nao gasta cota do Gemini TTS), alinha e desenha

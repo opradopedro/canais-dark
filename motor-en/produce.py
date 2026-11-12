@@ -286,6 +286,8 @@ def desenhar(c, historia, base):
     print("legenda alinhada:", sincronia.ajustar(base + "_trilha.m4a", base + "_tempos.json", c["idioma"]), flush=True)
     run(sys.executable, os.path.join(MOTOR, "render.py"), historia, base + "_tempos.json", base + "_video.mp4")
     run(sys.executable, os.path.join(MOTOR, "capa.py"), historia, base + "_tempos.json", base + "_capa.jpg")
+    if os.environ.get("CARTOON_PREP"):
+        return  # motor cartoon em fatias: o MP4 e montado depois (motor-en/cartoon_montar.py)
     # segunda trava contra chiado no fim: o som some suave nos ultimos 0,8 s de TODO video
     dur = float(json.load(open(base + "_tempos.json"))["dur"])
     run("ffmpeg", "-v", "error", "-y", "-i", base + "_video.mp4", "-i", base + "_trilha.m4a",
@@ -494,6 +496,9 @@ def main():
         if a.subir:
             up["publicar_em"] = slots[k]
         json.dump(up, open(base + "_upload.json", "w"), ensure_ascii=False, indent=1)
+        if os.environ.get("CARTOON_PREP"):
+            print(f"PREPARADO {cod}: voz, legenda e capa prontas; o video sai nas fatias do motor cartoon", flush=True)
+            continue
         print("video:", base + ".mp4", flush=True)
 
         leg, ok = revisar(base, c["idioma"])
