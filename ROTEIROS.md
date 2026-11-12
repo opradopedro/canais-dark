@@ -46,6 +46,25 @@ Regras de cada canal: no `SKILL.md` da pasta. Old Tales (REGRA do Pedro, 02/11: 
 confiável; mito fiel à versão tradicional, dizendo a fonte na descrição. Detalhes na seção "LINHA DO CANAL" do
 `old-tales/SKILL.md`.
 
+## Tom do Old Tales (REGRA do Pedro, 12/11: "muito amigável, muito calmo, criancinha")
+
+Old Tales conta mitos, lendas, batalhas e curiosidades históricas para PRENDER, não para ninar. Vale para todo
+roteiro novo (CL042 em diante, inclusive as partes 2-5 do Wukong que estão em `old-tales/em-espera/`: reescrever).
+
+- **Primeiro segundo = choque, pergunta ou curiosidade.** Proibido abrir com "Imagine...", "You wake up...",
+  "Once upon a time", "Long ago", "Today" (o fiscal barra). Modelos:
+  - Pergunta-desafio: "Have you heard of the crazy monkey who challenged the champions of Heaven? That's Wukong, and his story starts like this."
+  - Fato chocante: "This monkey erased his own name from the Book of Death. And Heaven couldn't stop him."
+  - Ameaça: "Every Spartan boy was sent out alone to kill a man. If he got caught, he was whipped."
+- **Suspense e ação em toda parte:** perigo, briga, desafio, perseguição, castigo, traição. Cada 15-20 s algo muda
+  (virada, revelação, número absurdo). Verbos fortes, frases curtas. Nada de cena fofa parada.
+- **Curiosidade real** a cada parte (um número, um detalhe da fonte que quase ninguém sabe): é o que segura a retenção.
+- **Personagem com atitude:** herói ousado, arrogante, perigoso; vilões de verdade. Nada de "cute", "little", "happy".
+- **Gancho no meio** ("Stay, because...") e fim com cliffhanger de perigo + "Part X, {when_next}".
+- **Visual combinando:** câmera que avança, céu escuro/tempestade nas viradas, expressões de raiva/desafio, lutas.
+  Bonito, mas NÃO infantil (também evita o YouTube marcar como "feito para crianças", que corta RPM).
+- Sem susto de terror e sem sangue explícito: tensão sim, gore não.
+
 ## Estilo novo: Hora Muerta, Signal Lost e Old Tales (REGRA do Pedro, 01/11)
 Gráficos limpos e história contada com ritmo, INSPIRADOS num vídeo que o Pedro mandou, mas com identidade própria de
 cada canal: "só se inspire, não faça exatamente igual". Guia completo: **`ESTILO-VISUAL.md`** (seções 2 e 3).

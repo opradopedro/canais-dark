@@ -74,6 +74,10 @@ Nao comece pela Odisseia: ela e a que exige mais codigo novo. Comece por Macbeth
 > **Duração (Pedro, 05/11):** cada parte tem 1min30 a 2 min (150–185 palavras, 16–22 frases). Vale por cima dos
 > números antigos abaixo (40–58 s, 7–9 frases). Ver seção "Duração" do `ROTEIROS.md`.
 
+> **TOM (Pedro, 12/11): suspense e ação, nada calmo/infantil.** Abertura com choque ou pergunta ("Have you heard of the
+> crazy monkey who challenged the champions of Heaven?"), nunca "Imagine..."/"You wake up...". Regras completas na seção
+> "Tom do Old Tales" do `ROTEIROS.md`; vale por cima de tudo abaixo.
+
 > **Estilo novo (Pedro, 01/11):** séries novas usam `"visual": "flat"` e o jeito de contar do `ESTILO-VISUAL.md`
 > (raiz do repo) e da seção "Estilo novo" do `ROTEIROS.md`. Isso vale por cima do que estiver diferente abaixo.
 
