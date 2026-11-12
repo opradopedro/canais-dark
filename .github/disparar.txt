@@ -1,2 +1,2 @@
 teste-cartoon
-# disparo Entrega 3: renderiza HM041, SV031 e CL036 no motor-cartoon e sobe na Release teste-cartoon
+# disparo Entrega 3 (retry apos fix download HTTP model.pt no sincronia.py)

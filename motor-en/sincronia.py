@@ -91,6 +91,12 @@ def _modelo():
             import torch, torchaudio
         torch.set_num_threads(max(1, os.cpu_count() or 1))
         b = torchaudio.pipelines.MMS_FA
+        ckpt = os.path.join(torch.hub.get_dir(), "checkpoints", "model.pt")
+        if not os.path.exists(ckpt):
+            os.makedirs(os.path.dirname(ckpt), exist_ok=True)
+            url_http = "http://dl.fbaipublicfiles.com/mms/torchaudio/ctc_alignment_mling_uroman/model.pt"
+            subprocess.run(["curl", "-sSL", "--retry", "4", "-o", ckpt + ".tmp", url_http], check=True)
+            os.replace(ckpt + ".tmp", ckpt)
         _M["m"] = (b.get_model(with_star=False).eval(), b.get_dict(star=None), torch, torchaudio)
     return _M["m"]
 
