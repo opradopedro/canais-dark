@@ -1,6 +1,6 @@
 # Motor cartoon: onde parou (para a Kiro continuar)
 
-Atualizado em 12/11/2026 pelo Claude. Plano completo: `PLANO-ANTIGRAVITY.md` (raiz). Regras de roteiro: `ROTEIROS.md`.
+Atualizado em 12/11/2026 (noite) pelo Claude. Plano completo: `PLANO-ANTIGRAVITY.md` (raiz). Regras de roteiro: `ROTEIROS.md`.
 
 ## Feito
 
@@ -16,6 +16,18 @@ Atualizado em 12/11/2026 pelo Claude. Plano completo: `PLANO-ANTIGRAVITY.md` (ra
   3. `prod-cartoon-montar`: `motor-en/cartoon_montar.py` junta, põe o som, confere (legenda colada na voz +
      fim sem chiado) e agenda no YouTube; cópia para o painel.
   Prova do CL042 refeita em 10 fatias (`teste-cartoon`, só CL042 via `TESTE_CARTOON`).
+- **Claude (12/11 noite), consertos pedidos pelo Pedro nas provas HM041/SV031:**
+  - `elenco/objetos.ts` + `elenco/objetos-palavras.json`: quando a fala cita polícia, caminhão, ônibus, carro,
+    ambulância, vaca, cavalo, cachorro, placa, enfermeira, médico, guarda, multidão, criança, soldado ou monge, a
+    cena mostra (veículos cruzam ao fundo, animais/placas/figurantes na frente da câmera). Roteiro pode forçar com
+    `"objetos"` no bloco `cena`. Posições em `src/CartoonShort.tsx` (procure "Objetos e figurantes").
+  - Fiscal: `cenas_repetidas()` no `motor-en/validar_roteiros.py` (seção "Cena que muda" do `ROTEIROS.md`).
+  - Voz que engole o fim ("Parte dos" sem "mañana"): `sincronia.fim_mudo()` + regravação 1 vez nos 2 produce.py e
+    no `preparar_teste_cartoon.py`; `conferir()` também reprova fim mudo.
+  - Estática/zumbido do SV mais baixos (`mix_en.py`), teto no hospital e na casa, rabo de cavalo e gota de suor
+    tirados (pareciam coisa flutuando), lanterna com facho 3D saindo da lente.
+  - Ainda não mexido: a estrada "em cima do morro" (o Pedro achou estranho o morro verde atrás da estrada no
+    `cenarios/estrada`); vale baixar/afastar o morro.
 
 ## Estado dos canais
 

@@ -144,7 +144,7 @@ export function buildEstrada(): ScenarioResult {
   }
 
   // Distant rounded forest hills on the horizon
-  for (const [mx, mz, mr, mh] of [[-32, -88, 38, 14], [28, -92, 42, 16], [0, -98, 48, 18]] as const) {
+  for (const [mx, mz, mr, mh] of [[-60, -150, 50, 7], [55, -155, 55, 8], [0, -170, 60, 9]] as const) {
     const mt = mesh(
       rough(new THREE.SphereGeometry(mr, 20, 12, 0, Math.PI * 2, 0, Math.PI / 2), 0.8, 0.12, mx, false),
       groundM,
