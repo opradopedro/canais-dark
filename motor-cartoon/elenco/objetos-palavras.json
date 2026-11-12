@@ -48,7 +48,7 @@
   "guarda"
  ],
  [
-  "\\b(crowd|villagers|aldeanos|multitud|gente|people|townsfolk|vecinos|neighbors)\\b",
+  "\\b(crowds?|villagers?|aldeanos|multitud|gente|people|townsfolk|vecinos|neighbors)\\b",
   "multidao"
  ],
  [
