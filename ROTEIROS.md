@@ -51,11 +51,14 @@ confiável; mito fiel à versão tradicional, dizendo a fonte na descrição. De
 Old Tales conta mitos, lendas, batalhas e curiosidades históricas para PRENDER, não para ninar. Vale para todo
 roteiro novo (CL042 em diante, inclusive as partes 2-5 do Wukong que estão em `old-tales/em-espera/`: reescrever).
 
-- **Primeiro segundo = choque, pergunta ou curiosidade.** Proibido abrir com "Imagine...", "You wake up...",
-  "Once upon a time", "Long ago", "Today" (o fiscal barra). Modelos:
+- **Primeiro segundo = conflito, choque, pergunta ou curiosidade.** O problema não é a palavra "Imagine", é abrir
+  CALMO, descrevendo paisagem sem perigo ("Imagine a stone on a mountain...": o Pedro pularia na hora). Proibido abrir com
+  "Once upon a time", "Long ago", "There once was", "Today" (o fiscal barra). Modelos:
   - Pergunta-desafio: "Have you heard of the crazy monkey who challenged the champions of Heaven? That's Wukong, and his story starts like this."
   - Fato chocante: "This monkey erased his own name from the Book of Death. And Heaven couldn't stop him."
-  - Ameaça: "Every Spartan boy was sent out alone to kill a man. If he got caught, he was whipped."
+  - "Imagine/You wake up" COM ENRASCADA (o Pedro gosta): "Imagine you wake up in the Stone Age. You have one day to find a tribe, or you die alone."
+    "You wake up in 1500, with your modern brain, the year they reach America." "You wake up in 1600, and the village calls you a witch."
+    A primeira frase já põe você em perigo ou numa situação absurda; a segunda diz o que está em jogo.
 - **Suspense e ação em toda parte:** perigo, briga, desafio, perseguição, castigo, traição. Cada 15-20 s algo muda
   (virada, revelação, número absurdo). Verbos fortes, frases curtas. Nada de cena fofa parada.
 - **Curiosidade real** a cada parte (um número, um detalhe da fonte que quase ninguém sabe): é o que segura a retenção.

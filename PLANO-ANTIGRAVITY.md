@@ -45,8 +45,9 @@ para o motor cartoon quando o canal tiver essa chave. Sem a chave, tudo continua
    O macaco tem que ser o mesmo da parte 1 (`monkey.ts`, pelo dourado, coroa e capa depois que vira rei).
 **TOM (REGRA do Pedro, 12/11):** o Pedro achou a parte 1 "muito amigável, muito calma, criancinha". Antes de
 renderizar, REESCREVA as falas das partes 2-5 (e de toda série nova) pela seção "Tom do Old Tales" do `ROTEIROS.md`:
-abertura com choque ou pergunta ("Have you heard of the crazy monkey who challenged the champions of Heaven?"), nunca
-"Imagine..."; suspense, ação, briga, castigo e uma curiosidade real por parte. No visual: menos fofo, mais ação
+abertura com choque ou pergunta ("Have you heard of the crazy monkey who challenged the champions of Heaven?") ou
+"Imagine/You wake up" que já põe você em perigo ("You wake up in 1600, and the village calls you a witch"); nunca abertura
+calma de paisagem ("Imagine a stone on a mountain"); suspense, ação, briga, castigo e uma curiosidade real por parte. No visual: menos fofo, mais ação
 (câmera avançando, lutas, céu de tempestade nas viradas, expressões de raiva e desafio, Wukong arrogante e perigoso,
 generais do Céu ameaçadores). O fiscal `validar_roteiros.py` barra abertura calma do CL042 em diante.
 

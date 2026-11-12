@@ -181,10 +181,10 @@ def conferir(canal, engine):
             if not pmin <= pw <= pmax:
                 alvo = "~1 min" if canal == "so-you-built-it" else "1min30 a 2 min"
                 erros.append(f"{n}: {pw} palavras faladas; o video tem que dar {alvo} ({pmin} a {pmax} palavras, ROTEIROS.md 'Duracao')")
-        # REGRA do Pedro (12/11): Old Tales com suspense e acao, nada de abertura calma/infantil ("Imagine a stone...")
+        # REGRA do Pedro (12/11): Old Tales com suspense e acao, nada de abertura calma/infantil ("Once upon a time"); "Imagine" pode se ja vier com enrascada
         if canal == "old-tales" and num >= TOM_CL_DESDE and lineas:
             l0 = lineas[0] if isinstance(lineas[0], str) else (lineas[0].get("texto") or "")
-            if re.match(r"\s*(imagine|you wake up|once upon|today|long ago|in a land|there (was|once))\b", l0, re.I):
+            if re.match(r"\s*(once upon|today|long ago|in a land|there (was|once))\b", l0, re.I):
                 erros.append(f"{n}: abertura calma proibida no Old Tales ('{l0[:40]}...'); comece com choque, pergunta ou curiosidade (ROTEIROS.md 'Tom do Old Tales')")
         if canal == "signal-lost" and h.get("visual") == "flat" and h.get("paleta") != "sv":
             erros.append(f"{n}: Signal Lost no estilo flat precisa de \"paleta\": \"sv\"")
