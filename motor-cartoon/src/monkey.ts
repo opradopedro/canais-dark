@@ -5,7 +5,7 @@ import { Pen, INK, blobPts, headBlob, faceFront, Expr, mul, shade, bodyFront, Ou
 
 type P2 = [number, number];
 export type MPose = "crouch" | "stand" | "cheer" | "laugh" | "leap" | "sit";
-export type MOpts = { pose: MPose; expr: Expr; lid?: number; fur?: string; crown?: boolean; cape?: boolean; look?: number; bob?: number; seed?: number; small?: boolean };
+export type MOpts = { pose: MPose; expr: Expr; lid?: number; fur?: string; crown?: boolean; cape?: boolean; look?: number; bob?: number; seed?: number; small?: boolean; tears?: boolean };
 
 const FACE = "#f3cf9f";
 const SH: [number, number, number] = [0.72, 0.68, 0.78];
@@ -116,6 +116,11 @@ export const drawMonkey = (p: Pen, o: MOpts) => {
   // nostrils
   p.dot(cx - 4 * u, hc + 12 * u, 1.9 * u); p.dot(cx + 4 * u, hc + 12 * u, 1.9 * u);
   faceFront(p, cx, hc - 2 * u, W, o.expr, 0, o.look ?? 0, o.lid ?? 0, false, FACE);
+  if (o.tears) for (const s of [-1, 1]) { // two streams of tears
+    const x = cx + s * 13 * u, y0 = hc + 6 * u;
+    p.poly([[x - 3 * u, y0], [x + 3 * u, y0], [x + 4 * u + s * 2 * u, y0 + 26 * u], [x - 1 * u + s * 2 * u, y0 + 26 * u]], "#7cc8f2", 2.5);
+    p.ell(x + s * 3 * u, y0 + 30 * u, 4.5 * u, 6 * u, "#7cc8f2", 2.5);
+  }
   // ---- crown ----
   if (o.crown) {
     const y0 = hc - H.b + 24, pts: P2[] = [[cx - 62, y0], [cx - 70, y0 - 70], [cx - 34, y0 - 34], [cx, y0 - 86], [cx + 34, y0 - 34], [cx + 70, y0 - 70], [cx + 62, y0]];

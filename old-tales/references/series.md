@@ -119,5 +119,8 @@ Peças: `f_mosteiro`, `f_igreja`, `f_aldeia`, `f_campo`, `f_estrada_antiga`, `f_
 ## wukong-cartoon (CL041-CL045) — Sun Wukong: The Monkey King — visual cartoon (skill cartoon-3d-short) — PEDIDO DO PEDRO (11/11) — por: claude
 - Pedro aprovou o teste cartoon e pediu: série de 5 episódios do Wukong, depois um conto da Grécia, depois um da China antiga, depois Zhong Kui.
 - CL041 parte 1/5: mesmo texto do CL036, feito à mão no motor cartoon (87 s) e publicado pela tarefa `subir:old-tales:cl041-wukong-1`. Registro em `arquivo/041-wukong-cartoon-1.json`. FEITO
-- CL042-CL045 partes 2-5: os roteiros `em-espera/037..040`, renumerados, quando o motor-cartoon (Antigravity) estiver no ar. FALTA
+- CL042 parte 2/5: reescrito no tom 12/11 (conflito da morte, jangada no mar tempestuoso, Subodhi, 3 batidas na cabeça, 72 transformações, nuvem de 108 mil li, demônio da montanha). Em `stories/042-wukong-2.json`. FEITO
+- CL043 parte 3/5: reescrito no tom 12/11 (palácio submarino do Rei Dragão, pilar de ferro de 13.500 jin da enchente de Yu o Grande, submundo e Livro dos Mortos riscado). Em `stories/043-wukong-3.json`. FEITO
+- CL044 parte 4/5: reescrito no tom 12/11 (Protetor dos Cavalos no Céu, Grande Sábio Igual ao Céu, pêssegos de 9 mil anos, pílulas de Laozi, 100 mil soldados, duelo de transformações com Erlang, 49 dias na fornalha de oito trigramas). Em `stories/044-wukong-4.json`. FEITO
+- CL045 parte 5/5 (última): reescrito no tom 12/11 (aposta com a mão de Buda, 5 pilares no fim do universo, xixi no pilar do meio, Montanha dos Cinco Dedos por 500 anos com ferro derretido, Tang Sanzang tira o selo, gancho final voltando à pedra). Em `stories/045-wukong-5.json`. FEITO
 - Depois: conto grego (3 partes, sugestão Perseu e a Medusa), conto da China antiga (3 partes, sugestão Mulan), Zhong Kui (3 partes). FALTA

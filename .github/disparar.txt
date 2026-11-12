@@ -1,2 +1,2 @@
 teste-cartoon
-# disparo Entrega 3 (retry apos fix download HTTP model.pt no sincronia.py)
+# disparo Entrega 3 atualizada 12/11 (HM041, SV031, CL042 - Parte 2 do Wukong)

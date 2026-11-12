@@ -1,0 +1,423 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "serie": "wukong-cartoon",
+ "serie_titulo": "Sun Wukong: The Monkey King | Old Tales",
+ "partes": 5,
+ "autor": "claude",
+ "origem": "pedido do Pedro (chat 11-12/11): Journey to the West, Wu Cheng'en, ch. 4-7",
+ "prioridade": "pedro",
+ "ideia": "chat 11/11",
+ "furar_fila": true,
+ "tags": [
+  "sun wukong",
+  "monkey king",
+  "journey to the west",
+  "chinese mythology",
+  "wukong",
+  "mythology",
+  "old tales",
+  "legends",
+  "story time"
+ ],
+ "elenco": {
+  "wukong": {
+   "semente": 3601,
+   "corpo": "magro",
+   "pele": "#a8703f",
+   "cabelo": "moicano",
+   "cabelo_cor": "#d9a03a",
+   "camisa": "#d8b43a",
+   "calca": "#5a3a2a",
+   "roupa": "chines",
+   "acessorio": "",
+   "rosto_estilo": "redondo"
+  },
+  "imperador": {
+   "semente": 3901,
+   "corpo": "idoso",
+   "pele": "#edd0b0",
+   "cabelo": "careca",
+   "camisa": "#d4a018",
+   "roupa": "chines",
+   "acessorio": ""
+  },
+  "erlang": {
+   "semente": 3902,
+   "corpo": "medio",
+   "pele": "#e2b890",
+   "cabelo": "longo",
+   "cabelo_cor": "#181818",
+   "camisa": "#8898a8",
+   "roupa": "chines",
+   "acessorio": ""
+  }
+ },
+ "codigo": "CL044",
+ "parte": 4,
+ "anterior": "CL043",
+ "titulo": "Burned for 49 days in Heaven's furnace 🐒 Sun Wukong Part 4 #story #shorts",
+ "capa": "WAR IN HEAVEN",
+ "descripcion": "Heaven tries to trick Wukong with the lowest stable job in the sky—so he eats the immortal peaches, swallows Laozi's golden pills, fights 100,000 celestial troops, and survives 49 days inside the Eight Trigrams Furnace.\n\n> Part 5 (Finale): {when_next}.\nCould anything in Heaven stop him now?\n\nFrom Journey to the West (Xiyouji), Wu Cheng'en, 16th century, chapters 4 to 7.\n#monkeyking #sunwukong #journeytothewest #mythology #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "To keep Wukong on a leash, Heaven gave him a job in the *clouds*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "They named him *Protector of the Horses*—the lowest stable boy in the sky.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "When Wukong learned the truth, he *smashed* the celestial stables.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Back home, he raised a banner: *Great Sage, Equal to Heaven*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The Jade Emperor put him in charge of the *Immortal Peach Garden*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Its best peaches ripened every *nine thousand years* and granted eternal life.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Wukong locked the gates and *devoured* the ripest peaches.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Left off the royal guest list, he froze the servants and wrecked the *banquet*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Drunk on royal wine, he swallowed *Laozi's* five gourds of golden pills.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Heaven sent *one hundred thousand* soldiers; Wukong chewed his hairs into clones.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Only *Erlang Shen*, the three-eyed god, matched him shape for shape.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Captured, Wukong *laughed* as axes, lightning, and fire bounced off his skin.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Laozi sealed him inside the *Eight Trigrams Furnace* for forty-nine days.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Hiding in the *Wind* corner, smoke turned his eyes fiery gold.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "On day forty-nine, he *exploded* out and shattered Heaven's army.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Terrified, the Emperor begged *Buddha* for help. Final part, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "ponte",
+    "plano": "aberto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Walking_A",
+      "rosto": "sorriso",
+      "de": "ponte",
+      "para": "salao"
+     },
+     {
+      "id": "imperador",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "jardim",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "baixo",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Melee_2H_Attack_Chop",
+      "rosto": "bravo",
+      "segura": "cajado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "montanha_nuvens",
+    "marca": "topo",
+    "plano": "baixo",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Cheering",
+      "rosto": "sorriso",
+      "segura": "cajado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "jardim_pessegos",
+    "marca": "entrada",
+    "plano": "aberto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Walking_B",
+      "rosto": "sorriso",
+      "de": "entrada",
+      "para": "arvore"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "jardim_pessegos",
+    "marca": "arvore",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "jardim_pessegos",
+    "marca": "arvore",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Use_Item",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "jardim_pessegos",
+    "marca": "banquete",
+    "plano": "medio",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Melee_2H_Attack_Spin",
+      "rosto": "bravo",
+      "segura": "cajado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Use_Item",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "nuvens",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "efeito": "chuva",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Melee_2H_Attack_Slice",
+      "rosto": "bravo",
+      "segura": "cajado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "ponte",
+    "plano": "ombro",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Melee_2H_Attack_Chop",
+      "rosto": "bravo",
+      "segura": "cajado"
+     },
+     {
+      "id": "erlang",
+      "acao": "Melee_1H_Attack_Slice_Diagonal",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Cheering",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "erlang",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "fornalha_ceu",
+    "marca": "fornalha",
+    "plano": "aberto",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Crouching",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "fornalha_ceu",
+    "marca": "fornalha",
+    "plano": "close",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "fornalha_ceu",
+    "marca": "topo_fornalha",
+    "plano": "baixo",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Jump_Full_Long",
+      "rosto": "bravo",
+      "segura": "cajado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Melee_2H_Attack_Spin",
+      "rosto": "bravo",
+      "segura": "cajado"
+     },
+     {
+      "id": "imperador",
+      "acao": "Dodge_Backward",
+      "rosto": "medo"
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": []
+}

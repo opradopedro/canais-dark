@@ -29,12 +29,22 @@ def vocab():
     cenarios.update({
         "montanha_nuvens": ["clareira", "trilha", "entre_arvores", "pe_torre", "fundo", "toco", "topo", "ovo", "beira", "salto"],
         "cachoeira": ["clareira", "trilha", "entre_arvores", "pe_torre", "fundo", "toco"],
-        "caverna_reino": ["clareira", "trilha", "entre_arvores", "pe_torre", "fundo", "toco", "trono", "entrada"],
+        "caverna_reino": ["clareira", "trilha", "entre_arvores", "pe_torre", "fundo", "toco", "trono", "festa", "entrada"],
         "palacio_ceu": ["templo", "torii", "ponte", "escada", "jardim", "lanterna", "salao", "colunas", "nuvens"],
         "aldeia_china": ["praca", "poco", "moinho", "taverna", "mercado", "casa", "alto", "templo", "jardim"],
         "esparta_cidade": ["praca", "poco", "moinho", "taverna", "mercado", "casa", "alto", "templo", "escada"],
         "campo_batalha": ["clareira", "trilha", "entre_arvores", "pe_torre", "fundo", "toco", "meio", "vindo", "indo", "acostamento", "ponto", "curva", "beira_mato"],
         "mosteiro": ["clareira", "trilha", "entre_arvores", "pe_torre", "fundo", "toco", "praca", "poco", "casa", "entrada"],
+        "mar_jangada": ["clareira", "trilha", "entre_arvores", "pe_torre", "fundo", "toco", "jangada", "proa", "popa", "mar", "horizonte"],
+        "palacio_dragao": ["pilar", "trono", "entrada", "escada", "armas", "templo", "ponte", "torii", "lanterna"],
+        "submundo": ["mesa", "livro", "juiz", "entrada", "corredor", "pilares", "fundo", "mausoleu", "cruz_grande", "entre_cruzes"],
+        "jardim_pessegos": ["jardim", "arvore", "banquete", "mesa", "entrada", "templo"],
+        "fornalha_ceu": ["fornalha", "topo_fornalha", "degraus", "patio", "entrada", "templo", "escada"],
+        "mao_buda": ["palma", "pilar_central", "pilares", "beira", "templo", "pe_torre"],
+        "montanha_cinco_dedos": ["clareira", "trilha", "entre_arvores", "pe_torre", "fundo", "toco", "base", "pedra", "selo"],
+        "grecia_templo": ["praca", "poco", "moinho", "taverna", "mercado", "casa", "alto", "templo", "escada"],
+        "ilha_mar": ["clareira", "trilha", "entre_arvores", "pe_torre", "fundo", "toco", "praia", "rochas", "ruinas", "topo"],
+        "caverna_gorgonas": ["clareira", "trilha", "entre_arvores", "pe_torre", "fundo", "toco", "centro", "estatuas", "pilares", "entrada", "altar"],
     })
     luz = _ler("kit/luz.js")
     cor = re.search(r"const COR = \{(.*?)\n\};", luz, re.S)

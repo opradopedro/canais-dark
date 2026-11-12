@@ -64,14 +64,14 @@ export function buildOutfit(id: string, spec: ElencoSpec = {}): { outfit: Outfit
   const lowId = (id || "").toLowerCase();
   const seed = spec.semente ?? (lowId.split("").reduce((a, c) => a * 31 + c.charCodeAt(0), 7) % 10000);
   const skin = spec.pele || seededPick(seed, 1, SKIN_TONES);
-  const isOld = spec.corpo === "idoso" || spec.cabelo === "grisalho" || lowId.includes("subhuti") || lowId.includes("velho") || lowId.includes("ancora");
+  const isOld = spec.corpo === "idoso" || spec.cabelo === "grisalho" || lowId.includes("subhuti") || lowId.includes("subodhi") || lowId.includes("velho") || lowId.includes("ancora") || lowId.includes("juiz");
   const hairCol = isOld ? "#d8d4ce" : (spec.cabelo_cor || seededPick(seed, 2, HAIR_TONES));
 
   // Scale by body type
   let scale = spec.altura ? spec.altura / 1.75 : 1.0;
   let build: "adult" | "stout" | "kid" = "adult";
   if (spec.corpo === "crianca") { build = "kid"; scale = 0.76; }
-  else if (spec.corpo === "forte" || lowId.includes("imperador") || lowId.includes("rei")) { build = "stout"; scale = 1.06; }
+  else if (spec.corpo === "forte" || lowId.includes("imperador") || lowId.includes("rei") || lowId.includes("buda")) { build = "stout"; scale = 1.06; }
 
   let jacket = spec.camisa || seededPick(seed, 3, JACKET_TONES);
   let pants = spec.calca || seededPick(seed, 4, PANTS_TONES);
@@ -88,19 +88,20 @@ export function buildOutfit(id: string, spec: ElencoSpec = {}): { outfit: Outfit
   const roupa = (spec.roupa || "").toLowerCase();
   const chapeu = (spec.chapeu || spec.acessorio || "").toLowerCase();
 
-  if (lowId.includes("imperador") || roupa === "rei") {
+  if (lowId.includes("imperador") || lowId.includes("dragao") || lowId.includes("buda") || roupa === "rei") {
+    const robe = lowId.includes("dragao") ? "#1e6b7b" : lowId.includes("buda") ? "#e8a828" : EMPEROR.jacket;
     return {
-      outfit: { ...EMPEROR, skin },
+      outfit: { ...EMPEROR, jacket: robe, skin },
       seed,
-      scale: 1.08,
-      extras: { crown: true, beard: true, hairCol: "#f4f1ea" },
+      scale: lowId.includes("buda") ? 1.22 : 1.08,
+      extras: { crown: !lowId.includes("buda"), beard: !lowId.includes("buda"), hairCol: lowId.includes("buda") ? "#222028" : "#f4f1ea" },
     };
   }
-  if (roupa === "soldado_china" || (lowId.includes("soldado") && !roupa.includes("esparta"))) {
+  if (roupa === "soldado_china" || lowId.includes("erlang") || lowId.includes("general") || (lowId.includes("soldado") && !roupa.includes("esparta"))) {
     return {
-      outfit: { ...GENERAL, skin },
+      outfit: { ...GENERAL, skin, sword: true },
       seed,
-      scale: 1.02,
+      scale: 1.05,
       extras: { hairCol },
     };
   }
@@ -128,10 +129,10 @@ export function buildOutfit(id: string, spec: ElencoSpec = {}): { outfit: Outfit
   } else if (roupa === "vestido") {
     jacket = spec.camisa || "#9c3d4c";
     dress = spec.calca || "#b84a5a";
-  } else if (roupa === "monge" || lowId.includes("subhuti") || lowId.includes("monk") || lowId.includes("monge")) {
-    jacket = "#d4883a";
-    pants = "#7a4422";
-    sash = "#a63a28";
+  } else if (roupa === "monge" || lowId.includes("subhuti") || lowId.includes("subodhi") || lowId.includes("juiz") || lowId.includes("tang") || lowId.includes("monk") || lowId.includes("monge")) {
+    jacket = spec.camisa || "#d4883a";
+    pants = spec.calca || "#7a4422";
+    sash = lowId.includes("juiz") ? "#8e2230" : "#d8a838";
   } else if (roupa === "soldado_esparta" || lowId.includes("leonidas") || lowId.includes("esparta")) {
     jacket = "#b8322a";
     pants = "#6e4228";
@@ -180,12 +181,12 @@ export function buildOutfit(id: string, spec: ElencoSpec = {}): { outfit: Outfit
     extras: {
       ponytail: spec.cabelo === "rabo",
       longHair: spec.cabelo === "longo",
-      beard: isOld || chapeu.includes("barba") || lowId.includes("subhuti"),
+      beard: isOld || chapeu.includes("barba") || lowId.includes("subhuti") || lowId.includes("subodhi"),
       glasses: chapeu.includes("oculos"),
       spartan,
       crown,
       nurse: roupa === "enfermeira" || lowId.includes("maya"),
-      monk: roupa === "monge" || lowId.includes("subhuti"),
+      monk: roupa === "monge" || lowId.includes("subhuti") || lowId.includes("subodhi") || lowId.includes("tang"),
       hairCol,
     },
   };
@@ -380,8 +381,18 @@ export function drawActorCard(
   if (isMonkeyActor(id, elencoSpec)) {
     const lowId = id.toLowerCase();
     const isOldMonkey = lowId.includes("velho") || elencoSpec?.corpo === "idoso";
-    const isKing = Boolean(elencoSpec?.chapeu?.includes("coroa") || elencoSpec?.roupa === "rei" || poseSpec.segura === "cajado");
-    const fur = isOldMonkey ? "#9c8e80" : elencoSpec?.pele || furTones[(elencoSpec?.semente ?? 0) % furTones.length];
+    const isKing = Boolean(
+      lowId.includes("wukong") ||
+      elencoSpec?.chapeu?.includes("coroa") ||
+      elencoSpec?.roupa === "rei" ||
+      poseSpec.segura === "cajado"
+    );
+    const fur = isOldMonkey
+      ? "#9c8e80"
+      : lowId.includes("wukong")
+      ? "#b87632"
+      : elencoSpec?.pele || furTones[(elencoSpec?.semente ?? 0) % furTones.length];
+    const tears = poseSpec.rosto === "triste";
     drawMonkey(p, {
       pose: act.monkeyPose,
       expr,
@@ -391,6 +402,7 @@ export function drawActorCard(
       cape: isKing,
       bob: act.bob,
       seed: elencoSpec?.semente ?? 3,
+      tears,
     });
     if (poseSpec.segura) {
       drawExtrasAndProp(p, { hairCol: fur }, poseSpec.segura, false, t);

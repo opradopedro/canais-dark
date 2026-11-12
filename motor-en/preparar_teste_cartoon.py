@@ -21,7 +21,7 @@ import sincronia
 ITENS = [
     ("HM041", "hora-muerta", "hora-muerta/stories/041-kilometro-13-1.json", "es"),
     ("SV031", "signal-lost", "signal-lost/stories/031-fourth-floor-1.json", "en"),
-    ("CL036", "old-tales", "old-tales/em-espera/036-wukong-1.json", "en"),
+    ("CL042", "old-tales", "old-tales/stories/042-wukong-2.json", "en"),
 ]
 
 

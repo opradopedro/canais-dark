@@ -323,7 +323,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        codigo: [HM041, SV031, CL036]
+        codigo: [HM041, SV031, CL042]
         shard: [0, 1, 2, 3, 4]
     env:
       GH_TOKEN: ${{ github.token }}
@@ -410,7 +410,8 @@ jobs:
           set -o pipefail
           python motor-en/preparar_teste_cartoon.py --montar /tmp/cartoon-prep /tmp/shards /tmp/final 2>&1 | tee /tmp/montar-log.txt
           cp /tmp/montar-log.txt /tmp/final/conferencia-teste-cartoon.txt
-          gh release view teste-cartoon > /dev/null 2>&1 || gh release create teste-cartoon --title "Teste Motor Cartoon (HM041, SV031, CL036)" --notes "3 videos de prova renderizados pelo motor-cartoon (sem publicar no YouTube)"
+          gh release view teste-cartoon > /dev/null 2>&1 || gh release create teste-cartoon --title "Teste Motor Cartoon (HM041, SV031, CL042)" --notes "3 videos de prova renderizados pelo motor-cartoon (sem publicar no YouTube)"
+          gh release edit teste-cartoon --title "Teste Motor Cartoon (HM041, SV031, CL042)" --notes "Videos de prova renderizados pelo motor-cartoon (HM041, SV031, CL042 - Parte 2 do Wukong; sem publicar no YouTube)" || true
           gh release upload teste-cartoon /tmp/final/* --clobber
       - name: Enviar erro para a Release "logs"
         if: failure()

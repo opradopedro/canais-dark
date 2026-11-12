@@ -1,0 +1,487 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "serie": "wukong-cartoon",
+ "serie_titulo": "Sun Wukong: The Monkey King | Old Tales",
+ "partes": 5,
+ "autor": "claude",
+ "origem": "pedido do Pedro (chat 11-12/11): Journey to the West, Wu Cheng'en, ch. 1-2",
+ "prioridade": "pedro",
+ "ideia": "chat 11/11",
+ "furar_fila": true,
+ "tags": [
+  "sun wukong",
+  "monkey king",
+  "journey to the west",
+  "chinese mythology",
+  "wukong",
+  "mythology",
+  "old tales",
+  "legends",
+  "story time"
+ ],
+ "elenco": {
+  "wukong": {
+   "semente": 3601,
+   "corpo": "magro",
+   "pele": "#a8703f",
+   "cabelo": "moicano",
+   "cabelo_cor": "#d9a03a",
+   "camisa": "#d8b43a",
+   "calca": "#5a3a2a",
+   "roupa": "chines",
+   "acessorio": "",
+   "rosto_estilo": "redondo"
+  },
+  "macaco": {
+   "semente": 3602,
+   "corpo": "crianca",
+   "pele": "#8a5a34",
+   "cabelo": "cacheado",
+   "cabelo_cor": "#5a3a1e",
+   "camisa": "#7a5a34",
+   "calca": "#3a2f24",
+   "roupa": "camiseta",
+   "acessorio": ""
+  },
+  "subodhi": {
+   "semente": 3603,
+   "corpo": "idoso",
+   "pele": "#e8c0a0",
+   "cabelo": "careca",
+   "camisa": "#2a6a5a",
+   "roupa": "chines",
+   "acessorio": ""
+  }
+ },
+ "codigo": "CL042",
+ "parte": 2,
+ "anterior": "CL041",
+ "titulo": "Three strikes at midnight 🐒 Sun Wukong Part 2 #story #shorts",
+ "capa": "72 POWERS",
+ "descripcion": "The Monkey King realizes death will still come for him, crosses a stormy ocean on a pine raft, and solves Master Subodhi's secret midnight riddle.\n\n> Part 3: {when_next}.\nWould you have understood the three strikes on the head?\n\nFrom Journey to the West (Xiyouji), Wu Cheng'en, 16th century, chapters 1 and 2.\n#monkeyking #sunwukong #journeytothewest #mythology #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "In the middle of a royal feast, the Monkey King burst into *tears*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "One day, old age and *Yama*, Lord of Death, would drag him underground.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A king who cannot beat death owns *nothing*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "At dawn, he tied pine logs and sailed into black *storm waves*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "In human cities, he stole clothes and walked through terrified crowds.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Nobody on the streets wanted eternal life; they only chased *gold*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "At last, a woodcutter pointed him up to Master *Subodhi*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The master named him *Sun Wukong*, Awakened to Emptiness.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "For seven years, Wukong swept stone floors and waited.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "When he refused every spell that could not beat *death*, Subodhi snapped.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He struck Wukong's head *three times* and shut the back door.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Wukong grinned: three strikes meant the *third night watch*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "In ancient China, the third watch was *midnight*, between eleven and one.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "At midnight, he slipped in and learned the *Seventy-Two Transformations*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "One cloud-jump carried him *one hundred and eight thousand li*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "When he turned into a pine tree to show off, Subodhi *banished* him.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Back home, a demon in black iron had *slaughtered* his monkeys.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Wukong needed a weapon. Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "caverna_reino",
+    "marca": "festa",
+    "plano": "close",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "caverna_reino",
+    "marca": "trono",
+    "plano": "medio",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Sit_Floor_StandUp",
+      "rosto": "medo"
+     },
+     {
+      "id": "macaco",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "caverna_reino",
+    "marca": "entrada",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "jangada",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "efeito": "chuva",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_B",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Walking_A",
+      "rosto": "sorriso",
+      "de": "mercado",
+      "para": "praca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "mercado",
+    "plano": "close",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "escada",
+    "plano": "baixo",
+    "luz": "neblina_baixa",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Walking_B",
+      "rosto": "susto",
+      "de": "ponte",
+      "para": "escada"
+     },
+     {
+      "id": "subodhi",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "ombro",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "subodhi",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     },
+     {
+      "id": "wukong",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "jardim",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Working_A",
+      "rosto": "neutro",
+      "segura": "cajado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "close",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     },
+     {
+      "id": "subodhi",
+      "acao": "Idle_B",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "ombro",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "subodhi",
+      "acao": "Melee_1H_Attack_Chop",
+      "rosto": "bravo",
+      "segura": "cajado"
+     },
+     {
+      "id": "wukong",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "escada",
+    "plano": "close",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "lanterna",
+    "plano": "aberto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Sneaking",
+      "rosto": "desconfiado",
+      "de": "lanterna",
+      "para": "templo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "templo",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "subodhi",
+      "acao": "Ranged_Magic_Spellcasting",
+      "rosto": "neutro"
+     },
+     {
+      "id": "wukong",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "montanha_nuvens",
+    "marca": "salto",
+    "plano": "baixo",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Jump_Full_Long",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "templo_oriental",
+    "marca": "torii",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "subodhi",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     },
+     {
+      "id": "wukong",
+      "acao": "Walking_Backwards",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "caverna_reino",
+    "marca": "entrada",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "efeito": "chuva",
+    "criatura": {
+     "tipo": "coisa_com_chifres",
+     "marca": "fundo"
+    },
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Running_A",
+      "rosto": "bravo",
+      "de": "entrada",
+      "para": "trono"
+     },
+     {
+      "id": "macaco",
+      "acao": "Hit_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "caverna_reino",
+    "marca": "trono",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Melee_Unarmed_Attack_Punch_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": []
+}

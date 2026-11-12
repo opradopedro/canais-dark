@@ -161,6 +161,8 @@ export function resolverEstado(h, tempos) {
     dur: durTotal,
     legenda: tempos?.legenda || h.legenda || (segs.some((s) => Array.isArray(s.w)) ? "alinhamento" : "proporcional"),
     serie: h.serie || "",
+    parte: Number(h.parte || 1),
+    codigo: h.codigo || "",
     destaque: h.destaque || [],
     elenco: h.elenco || {},
     cenas,

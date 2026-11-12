@@ -192,11 +192,20 @@ def conferir(canal, engine):
         fala = json.dumps(h.get("lineas"), ensure_ascii=False)
         if parte < partes and not any(m in fala for m in ("{when_next}", "{dia_siguiente}", "{fecha_siguiente}", "{next_day}", "{next_date}")):
             avisos.append(f"{n}: parte {parte} de {partes} nao promete a seguinte com {{when_next}} na narracao")
-    # series: partes 1..N sem buraco e "anterior" certo
+    # series: partes 1..N sem buraco e "anterior" certo (inclui partes ja publicadas em arquivo/)
     series = {}
     for h in hs:
         if h.get("serie"):
             series.setdefault(h["serie"], []).append(h)
+    for a in sorted(glob.glob(os.path.join(RAIZ, canal, "arquivo", "*.json"))):
+        try:
+            ha = json.load(open(a, encoding="utf-8"))
+            s = ha.get("serie")
+            if s in series and ha.get("codigo") and all(x.get("codigo") != ha.get("codigo") for x in series[s]):
+                ha["_arq"] = os.path.relpath(a, RAIZ)
+                series[s].append(ha)
+        except Exception:
+            pass
     for s, lista in series.items():
         lista.sort(key=lambda h: int(h.get("parte", 1) or 1))
         for i, h in enumerate(lista):

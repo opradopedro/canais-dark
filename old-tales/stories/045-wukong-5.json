@@ -1,0 +1,423 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "serie": "wukong-cartoon",
+ "serie_titulo": "Sun Wukong: The Monkey King | Old Tales",
+ "partes": 5,
+ "autor": "claude",
+ "origem": "pedido do Pedro (chat 11-12/11): Journey to the West, Wu Cheng'en, ch. 7-8 & 14",
+ "prioridade": "pedro",
+ "ideia": "chat 11/11",
+ "furar_fila": true,
+ "tags": [
+  "sun wukong",
+  "monkey king",
+  "journey to the west",
+  "chinese mythology",
+  "wukong",
+  "mythology",
+  "old tales",
+  "legends",
+  "story time"
+ ],
+ "elenco": {
+  "wukong": {
+   "semente": 3601,
+   "corpo": "magro",
+   "pele": "#a8703f",
+   "cabelo": "moicano",
+   "cabelo_cor": "#d9a03a",
+   "camisa": "#d8b43a",
+   "calca": "#5a3a2a",
+   "roupa": "chines",
+   "acessorio": "",
+   "rosto_estilo": "redondo"
+  },
+  "buda": {
+   "semente": 4001,
+   "corpo": "idoso",
+   "pele": "#f0c868",
+   "cabelo": "careca",
+   "camisa": "#d89820",
+   "roupa": "chines",
+   "acessorio": ""
+  },
+  "tang": {
+   "semente": 3604,
+   "corpo": "medio",
+   "pele": "#f2d6be",
+   "cabelo": "careca",
+   "camisa": "#d8b43a",
+   "roupa": "chines",
+   "acessorio": ""
+  }
+ },
+ "codigo": "CL045",
+ "parte": 5,
+ "anterior": "CL044",
+ "titulo": "Trapped 500 years under Buddha's hand 🐒 Sun Wukong Part 5 #story #shorts",
+ "capa": "FIVE FINGERS",
+ "descripcion": "Wukong bets the throne of Heaven that he can leap across Buddha's palm in a single somersault—and discovers the five pillars at the edge of the universe were Buddha's own fingers.\n\nWould you have taken Buddha's bet?\n\nFrom Journey to the West (Xiyouji), Wu Cheng'en, 16th century, chapters 7, 8 and 14.\n#monkeyking #sunwukong #journeytothewest #mythology #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Golden *Buddha* stood before the burning throne room without a weapon.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Why should the Emperor rule? Wukong shouted. Give *me* the throne!",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Buddha opened his right *palm* and offered one wager.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Leap out of my hand in one somersault and *Heaven* is yours.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Wukong laughed: one jump covered *one hundred and eight thousand li*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He shot across the clouds until *five pink pillars* rose at the edge of the sky.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Grinning, Wukong painted on the middle pillar: *The Great Sage Was Here*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then he *peed* at the first pillar's base and somersaulted back.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Pay up! Wukong boasted—until Buddha told him to look *down*.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "On Buddha's own *middle finger* stood Wukong's fresh black ink.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He never left the palm; before he could bolt, Buddha *flipped* his hand.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Five fingers became a mountain of *Earth, Wood, Water, Fire, and Metal*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A golden seal, *Om Mani Padme Hum*, locked the mountain down.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "For *five hundred years*, Wukong ate iron pellets and drank molten copper.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "Until the monk *Tang Sanzang* peeled off the seal and set him free.",
+   "pausa": 0.6
+  },
+  {
+   "texto": "And it all began on a misty peak, where a silent *stone* cracked open.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "buda",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     },
+     {
+      "id": "wukong",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo",
+      "segura": "cajado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Melee_2H_Attack_Chop",
+      "rosto": "bravo",
+      "segura": "cajado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "mao_buda",
+    "marca": "palma",
+    "plano": "aberto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "buda",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     },
+     {
+      "id": "wukong",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "mao_buda",
+    "marca": "palma",
+    "plano": "ombro",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "buda",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     },
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "mao_buda",
+    "marca": "palma",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Cheering",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "mao_buda",
+    "marca": "pilares",
+    "plano": "baixo",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Jump_Full_Long",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "mao_buda",
+    "marca": "pilar_central",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Working_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "mao_buda",
+    "marca": "pilares",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Cheering",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "mao_buda",
+    "marca": "palma",
+    "plano": "ombro",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "buda",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "mao_buda",
+    "marca": "pilar_central",
+    "plano": "close",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "mao_buda",
+    "marca": "beira",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Running_A",
+      "rosto": "medo"
+     },
+     {
+      "id": "buda",
+      "acao": "Ranged_Magic_Raise",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "montanha_cinco_dedos",
+    "marca": "pedra",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "efeito": "chuva",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Crawling",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "montanha_cinco_dedos",
+    "marca": "selo",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Crawling",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "montanha_cinco_dedos",
+    "marca": "base",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Crawling",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "montanha_cinco_dedos",
+    "marca": "base",
+    "plano": "medio",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "tang",
+      "acao": "Interact",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "wukong",
+      "acao": "Jump_Full_Short",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "montanha_nuvens",
+    "marca": "ovo",
+    "plano": "aberto",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "wukong",
+      "acao": "Idle_A",
+      "rosto": "sorriso",
+      "segura": "cajado"
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": []
+}

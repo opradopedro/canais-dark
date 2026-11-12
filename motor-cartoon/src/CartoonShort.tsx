@@ -146,6 +146,7 @@ class StoryWorld {
   private scenarios = new Map<string, ScenarioResult>();
   private cortes: Corte[] = [];
   private isWukong: boolean;
+  private isWukongPart1: boolean;
   private estado: EstadoRender;
   private rainGroup = new THREE.Group();
   private snowGroup = new THREE.Group();
@@ -156,8 +157,9 @@ class StoryWorld {
     this.estado = estado;
     const elencoKeys = Object.keys(estado.elenco || {});
     this.isWukong =
-      estado.serie === "wukong" ||
+      /wukong/i.test(estado.serie || "") ||
       elencoKeys.some((k) => /wukong|macaco/i.test(k));
+    this.isWukongPart1 = this.isWukong && (estado.parte || 1) === 1;
 
     const R = this.root;
 
@@ -212,7 +214,7 @@ class StoryWorld {
     for (const c of estado.cenas) {
       const key = this.scenKey(c);
       if (!this.scenarios.has(key)) {
-        const sc = buildScenario(c.cenario, this.isWukong, c.idx);
+        const sc = buildScenario(c.cenario, this.isWukongPart1, c.idx);
         sc.group.visible = false;
         R.add(sc.group);
         this.scenarios.set(key, sc);
@@ -278,7 +280,7 @@ class StoryWorld {
   }
 
   private scenKey(c: CenaTimeline) {
-    return `${c.cenario}|${this.isWukong ? c.idx : 0}`;
+    return `${c.cenario}|${this.isWukongPart1 ? c.idx : 0}`;
   }
 
   private card(i: number) {
@@ -436,7 +438,7 @@ class StoryWorld {
     } else if (cena.cenario === "hospital" && cena.marca === "porta") {
       // Frame Room 418 door and its glowing red call light
       focus.set(-2.6, 0.2, -4.0);
-    } else if (this.isWukong && cena.cenario === "templo_oriental") {
+    } else if (this.isWukongPart1 && cena.cenario === "templo_oriental") {
       focus.set(-0.25, 1.2, 4.8);
     }
 
@@ -577,7 +579,7 @@ class StoryWorld {
 
     for (const ap of actorPositions) {
       // In Wukong Episode 1 (CL036) Scene 0, the stone egg has not cracked yet, so Wukong is inside the egg
-      if (this.isWukong && cena.idx === 0 && /wukong/i.test(ap.id)) {
+      if (this.isWukongPart1 && cena.idx === 0 && /wukong/i.test(ap.id)) {
         continue;
       }
 
@@ -589,8 +591,8 @@ class StoryWorld {
       );
       this.card(ci++).show(tex, ap.x, ap.y, ap.z, ap.scale, camP);
 
-      // Wukong Golden Eye Beams when eyes shoot golden light to Heaven (scene 5 in CL036)
-      if (this.isWukong && /wukong/i.test(ap.id) && cena.idx === 5) {
+      // Wukong Golden Eye Beams when eyes shoot golden light to Heaven (scene 5 in CL036, or emerging from furnace in CL044)
+      if (this.isWukong && /wukong/i.test(ap.id) && ((this.isWukongPart1 && cena.idx === 5) || (cena.cenario === "fornalha_ceu" && /Jump|Cheer/i.test(ap.acao)))) {
         const eyeY = ap.y + (975 - 473) * SU * ap.scale;
         const eyeDX = 29 * SU * ap.scale;
         const dir = new THREE.Vector3(0, 1, -0.12).normalize();
@@ -607,20 +609,22 @@ class StoryWorld {
     }
 
     // Wukong Jade Palace scenes: Jade Emperor & General + Golden beams piercing through the cloud floor
-    if (this.isWukong && cena.cenario === "templo_oriental") {
-      for (let bIdx = 0; bIdx < 2; bIdx++) {
-        const bx = -4.2 + bIdx * 0.85, bz = 8.2;
-        for (const [m, rad] of [[this.beams[bIdx], 0.28], [this.beamGlow[bIdx], 0.85]] as const) {
-          m.visible = true;
-          m.position.set(bx, -20, bz);
-          m.quaternion.identity();
-          m.scale.set(rad, 160, rad);
+    if ((this.isWukongPart1 && cena.cenario === "templo_oriental") || (this.isWukong && cena.cenario === "palacio_ceu" && actorPositions.length === 0)) {
+      if (this.isWukongPart1) {
+        for (let bIdx = 0; bIdx < 2; bIdx++) {
+          const bx = -4.2 + bIdx * 0.85, bz = 8.2;
+          for (const [m, rad] of [[this.beams[bIdx], 0.28], [this.beamGlow[bIdx], 0.85]] as const) {
+            m.visible = true;
+            m.position.set(bx, -20, bz);
+            m.quaternion.identity();
+            m.scale.set(rad, 160, rad);
+          }
         }
       }
       if (actorPositions.length === 0) {
         const k = tierK(-0.25, 1.2, 4.8);
-        const empExpr = cena.idx === 6 ? "shock" : "smile";
-        const genExpr = cena.idx === 6 ? "shock" : "grin";
+        const empExpr = cena.idx === 6 ? "shock" : "stern";
+        const genExpr = cena.idx === 6 ? "shock" : "stern";
         const empTex = cardTex(`wkEmp|${empExpr}`, k, (p) => drawGod(p, EMPEROR, empExpr, 0, 2));
         const genTex = cardTex(`wkGen|${genExpr}`, k, (p) => drawGod(p, GENERAL, genExpr, 0, 5));
         this.card(ci++).show(empTex, -0.45, 1.2, 4.8, 1.0, camP);
@@ -628,26 +632,27 @@ class StoryWorld {
       }
     }
 
-    // Wukong Cave Kingdom scenes: Cheering monkey subjects around the Stone Throne
-    if (this.isWukong && cena.idx >= 14 && cena.cenario === "floresta") {
+    // Wukong Cave Kingdom scenes: monkey subjects around the Stone Throne
+    if (this.isWukong && ((this.isWukongPart1 && cena.idx >= 14 && cena.cenario === "floresta") || cena.cenario === "caverna_reino")) {
       const monkeySpots: [number, number, number][] = [
         [-2.2, -4.2, 0.54],
         [2.2, -4.2, 0.54],
         [-3.4, -2.2, 0.56],
         [3.4, -2.2, 0.56],
       ];
+      const sadScene = actorPositions.some((a) => a.rosto === "triste" || a.rosto === "medo");
       monkeySpots.forEach(([mx, mz, msc], mi) => {
-        const bob = 8 * Math.round(3 * Math.abs(Math.sin(animStep * 6 + mi)));
+        const bob = sadScene ? 0 : 8 * Math.round(3 * Math.abs(Math.sin(animStep * 6 + mi)));
         const mOpts = {
-          pose: "cheer" as const,
-          expr: (mi % 2 ? "laugh" : "grin") as "laugh" | "grin",
+          pose: (sadScene ? "sit" : "cheer") as "sit" | "cheer",
+          expr: (sadScene ? "nervous" : mi % 2 ? "laugh" : "grin") as "nervous" | "laugh" | "grin",
           lid: 0,
           fur: furTones[mi % 5],
           seed: 10 + mi,
           bob,
         };
         const k = tierK(mx, 0, mz);
-        const tex = cardTex(`mSub|${mi}|${bob}`, k, (p) => drawMonkey(p, mOpts));
+        const tex = cardTex(`mSub|${mi}|${bob}|${sadScene ? 1 : 0}`, k, (p) => drawMonkey(p, mOpts));
         this.card(ci++).show(tex, mx, 0, mz, msc, camP, 0, mi % 2 === 1);
       });
     }

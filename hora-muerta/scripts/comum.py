@@ -79,4 +79,5 @@ def resolver(h, timing):
     return {"segs": segs, "cenas": cenas, "eventos": eventos, "destaque": h.get("destaque", []),
             "gancho": gancho, "dur": timing["dur"], "tema": h.get("tema"),
             "visual": h.get("visual"), "paleta": h.get("paleta"),
+            "serie": h.get("serie", ""), "parte": int(h.get("parte", 1) or 1), "codigo": h.get("codigo", ""),
             "elenco": h.get("elenco", {})}
