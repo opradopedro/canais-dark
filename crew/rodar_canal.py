@@ -467,7 +467,13 @@ if __name__ == "__main__":
         repo = _repo()
         pasta = os.path.join(tempfile.gettempdir(), "subir-" + tag)
         os.makedirs(pasta, exist_ok=True)
-        subprocess.run(["gh", "release", "download", tag, "-D", pasta, "--clobber"], cwd=repo, check=True)
+        # 1o: Release com esse tag; se nao houver, pasta <tag>/ no branch "entregas" (sessao do Claude nao cria Release)
+        if subprocess.run(["gh", "release", "download", tag, "-D", pasta, "--clobber"], cwd=repo).returncode:
+            subprocess.run(["git", "fetch", "--depth", "1", "origin", "entregas"], cwd=repo, check=True)
+            for nome in ("video.mp4", "upload.json"):
+                with open(os.path.join(pasta, nome), "wb") as f:
+                    f.write(subprocess.run(["git", "show", f"FETCH_HEAD:{tag}/{nome}"], cwd=repo, check=True,
+                                           capture_output=True).stdout)
         r = subprocess.run([sys.executable, os.path.join(repo, "motor-en", "agendar.py"), os.path.join(repo, canal),
                             os.path.join(pasta, "upload.json"), "agora"], cwd=repo)
         sys.exit(r.returncode)
