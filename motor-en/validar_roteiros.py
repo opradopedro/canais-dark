@@ -69,6 +69,43 @@ def conferir_3d(n, h):
             ok("de", a.get("de"), marcas)
             ok("para", a.get("para"), marcas)
     return e
+# REGRA do Pedro (12/11): "repete a mesma cena, nada muda na imagem" quando a voz fala de outra coisa. Cena seguida
+# quase igual (mesmo cenario, marca, atores fazendo o mesmo, sem criatura/objeto novo) reprova, e a mesma cena nao
+# pode voltar mais de 2 vezes no video. Os objetos que a voz cita (objetos-palavras.json do motor cartoon) contam:
+# o motor poe caminhao, viatura, vaca etc. na tela sozinho quando a fala cita.
+_PAL_OBJ = [(re.compile(r), t) for r, t in json.load(open(os.path.join(RAIZ, "motor-cartoon", "elenco", "objetos-palavras.json"), encoding="utf-8"))]
+
+
+def _objetos_fala(texto):
+    import unicodedata
+    t = "".join(ch for ch in unicodedata.normalize("NFD", texto or "") if unicodedata.category(ch) != "Mn").lower()
+    return {tp for r, tp in _PAL_OBJ if r.search(t)}
+
+
+def cenas_repetidas(n, h):
+    lineas = h.get("lineas") or []
+    e, vistas, ant = [], {}, None
+    for i, c in enumerate(h.get("cenas") or []):
+        cn = c.get("cena") if isinstance(c.get("cena"), dict) else None
+        if not cn:
+            continue
+        li = c.get("linea")
+        fala = lineas[li] if isinstance(li, int) and 0 <= li < len(lineas) else ""
+        fala = fala if isinstance(fala, str) else (fala.get("texto") or "")
+        objs = {o if isinstance(o, str) else o.get("tipo") for o in (cn.get("objetos") or [])} | _objetos_fala(fala)
+        atores = frozenset((a.get("id"), a.get("acao"), a.get("segura")) for a in cn.get("atores") or [])
+        cr = (cn.get("criatura") or {}).get("tipo")
+        assin = (cn.get("cenario"), cn.get("marca"), atores, cr, frozenset(objs), cn.get("efeito"))
+        if assin == ant:
+            e.append(f"{n}: cena {i} (fala {li}) repete a cena anterior quase igual; mude marca, ator/acao, plano com "
+                     f"criatura/objeto, ou mostre o que a fala cita (ROTEIROS.md 'Cena que muda')")
+        vistas[assin] = vistas.get(assin, 0) + 1
+        if vistas[assin] == 3:
+            e.append(f"{n}: cena {i} e a 3a vez da mesma cena no video ({cn.get('cenario')}/{cn.get('marca')}); varie")
+        ant = assin
+    return e
+
+
 PECAS_FLAT_FIXAS = {"retrato", "texto"}
 
 # REGRA do Pedro (05/11): videos mais longos. "a pessoa entende a historia e o video acaba".
@@ -169,6 +206,7 @@ def conferir(canal, engine):
             erros.append(f"{n}: serie nova precisa de \"visual\": \"3d\" (motor-3d, ROTEIROS.md 'Estilo 3D')")
         if h.get("visual") == "3d":
             erros += conferir_3d(n, h)
+            erros += cenas_repetidas(n, h)
         elif canal in FLAT_DESDE and num >= FLAT_DESDE[canal]:
             if h.get("visual") != "flat":
                 erros.append(f"{n}: historia nova precisa de \"visual\": \"flat\" (estilo novo, ESTILO-VISUAL.md)")

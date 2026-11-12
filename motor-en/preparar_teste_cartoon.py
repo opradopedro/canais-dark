@@ -88,6 +88,15 @@ def preparar(pasta_prep):
                 raise RuntimeError(f"tts_guard.py falhou para {cod} apos 3 tentativas")
             print(f"[{cod}] tts_guard tentativa {tent} falhou; aguardando 25s...", flush=True)
             time.sleep(25)
+        # REGRA (12/11): voz que engole o fim ("Parte dos" sem o "mañana") grava de novo 1 vez
+        mudas = sincronia.fim_mudo(wav_out, tp_out, idioma)
+        if mudas:
+            banco = os.environ.get("CANAIS_NARRACOES") or os.path.join(RAIZ, "narracoes")
+            for f in glob.glob(os.path.join(banco, f"{cod}_*.wav")):
+                os.remove(f)
+            print(f"[{cod}] VOZ SEM O FIM ({' '.join(mudas)}): gravo de novo", flush=True)
+            subprocess.run([sys.executable, os.path.join(AQUI, "tts_guard.py"), rot_out, wav_out, tp_out], env=env, check=True)
+            print(f"[{cod}] fim depois de gravar de novo: {sincronia.fim_mudo(wav_out, tp_out, idioma) or 'falado'}", flush=True)
         if idioma == "es":
             subprocess.run([sys.executable, os.path.join(MOTOR, "mix.py"), rot_out, wav_out, tp_out, tr_out],
                            env=env, check=True)

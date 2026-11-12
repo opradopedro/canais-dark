@@ -131,6 +131,7 @@ export function resolverEstado(h, tempos) {
         efeito: cfg.efeito,
         atores: cfg.atores || [],
         criatura: cfg.criatura || null,
+        objetos: cfg.objetos || null,
         _rawEventos: cfg.eventos || [],
       });
     });

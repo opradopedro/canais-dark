@@ -144,12 +144,12 @@
    "linea": 4,
    "cena": {
     "cenario": "estrada",
-    "marca": "acostamento",
-    "plano": "auto",
+    "marca": "beira_mato",
+    "plano": "close",
     "luz": "lua_cheia",
     "criatura": {
      "tipo": "mulher_branca",
-     "marca": "acostamento"
+     "marca": "beira_mato"
     }
    }
   },
@@ -218,13 +218,13 @@
    "linea": 9,
    "cena": {
     "cenario": "estrada",
-    "marca": "meio",
+    "marca": "curva",
     "plano": "auto",
     "luz": "noite_neblina",
     "atores": [
      {
       "id": "ricardo",
-      "acao": "Walking_A",
+      "acao": "Idle_A",
       "rosto": "desconfiado",
       "segura": "lanterna"
      }
@@ -262,7 +262,11 @@
       "rosto": "medo",
       "segura": "lanterna"
      }
-    ]
+    ],
+    "criatura": {
+     "tipo": "mulher_branca",
+     "marca": "meio"
+    }
    }
   },
   {
@@ -285,18 +289,10 @@
   {
    "linea": 13,
    "cena": {
-    "cenario": "estrada",
-    "marca": "indo",
-    "plano": "auto",
-    "luz": "noite_neblina",
-    "atores": [
-     {
-      "id": "ricardo",
-      "acao": "Idle_A",
-      "rosto": "medo",
-      "segura": "lanterna"
-     }
-    ]
+    "cenario": "bairro",
+    "marca": "poste",
+    "plano": "aereo",
+    "luz": "noite"
    }
   },
   {
@@ -325,7 +321,7 @@
    "cena": {
     "cenario": "estrada",
     "marca": "indo",
-    "plano": "close",
+    "plano": "nuca",
     "luz": "noite_neblina",
     "atores": [
      {
@@ -334,7 +330,11 @@
       "rosto": "susto",
       "segura": "lanterna"
      }
-    ]
+    ],
+    "criatura": {
+     "tipo": "mulher_branca",
+     "marca": "meio"
+    }
    }
   }
  ],

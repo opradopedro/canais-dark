@@ -235,7 +235,11 @@
       "rosto": "desconfiado",
       "segura": "lanterna"
      }
-    ]
+    ],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "entrada"
+    }
    }
   },
   {
@@ -265,7 +269,7 @@
     "atores": [
      {
       "id": "maya",
-      "acao": "Idle_A",
+      "acao": "Walking_Backwards",
       "rosto": "susto",
       "segura": "lanterna"
      }
@@ -276,17 +280,9 @@
    "linea": 13,
    "cena": {
     "cenario": "hospital",
-    "marca": "maca",
+    "marca": "recepcao",
     "plano": "auto",
-    "luz": "noite_neblina",
-    "atores": [
-     {
-      "id": "maya",
-      "acao": "Idle_A",
-      "rosto": "susto",
-      "segura": "lanterna"
-     }
-    ]
+    "luz": "noite_neblina"
    }
   },
   {

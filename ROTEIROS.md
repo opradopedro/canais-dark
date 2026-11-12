@@ -135,6 +135,19 @@ cenário principal e criatura DIFERENTES das últimas 5 séries do canal; varie 
 lua cheia, entardecer, neve…). O fiscal avisa repetição (`motor-3d/variedade.py`). Se a história precisar de um cenário
 que ainda é rascunho, escreva com o pronto mais parecido e anote no `PLANO-MUNDOS.md` o cenário que faltou.
 
+## Cena que muda (REGRA do Pedro, 12/11: "repete a mesma cena, nada muda na imagem")
+
+Vale para todo roteiro `"visual": "3d"` (motor cartoon). A imagem tem que mostrar o que a voz está falando:
+
+- Duas cenas seguidas não podem ser quase iguais: mesmo `cenario` + mesma `marca` + atores com a mesma `acao` e o
+  mesmo objeto na mão, sem criatura nem objeto novo. Mudar só o `rosto` ou o `plano` não basta. O fiscal reprova
+  ("repete a cena anterior quase igual") e também a 3ª vez da mesma cena no vídeo.
+- Quando a fala cita polícia, caminhão, ônibus, carro, ambulância, vaca, cavalo, cachorro, placa, enfermeira,
+  médico, guarda, multidão, criança, soldado ou monge, o motor põe isso na tela sozinho (lista em
+  `motor-cartoon/elenco/objetos-palavras.json`). Para forçar em outra cena: `"objetos": ["viatura", {"tipo": "vaca", "n": 3}]`
+  dentro do bloco `cena`.
+- Criatura de terror aparece de verdade: nas falas de passos, voz, sombra, "atrás dela", ponha a `criatura` na cena.
+
 ## Duração (REGRA do Pedro, 05/11: "a pessoa entende a história e o vídeo acaba")
 Vale por cima de qualquer número antigo (prompt, SKILL.md, temas.md) que fale em "8 frases", "40 a 58 s" ou "35 a 50 s".
 

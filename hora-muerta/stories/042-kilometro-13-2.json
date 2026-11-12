@@ -154,7 +154,11 @@
       "rosto": "medo",
       "segura": "lanterna"
      }
-    ]
+    ],
+    "criatura": {
+     "tipo": "mulher_branca",
+     "marca": "acostamento"
+    }
    }
   },
   {
@@ -167,7 +171,7 @@
     "atores": [
      {
       "id": "ricardo",
-      "acao": "Idle_A",
+      "acao": "Crouching",
       "rosto": "olhos_fechados",
       "segura": "lanterna"
      }
@@ -235,7 +239,7 @@
    "linea": 8,
    "cena": {
     "cenario": "estrada",
-    "marca": "curva",
+    "marca": "beira_mato",
     "plano": "auto",
     "luz": "noite_neblina",
     "atores": [
@@ -243,7 +247,9 @@
       "id": "ricardo",
       "acao": "Walking_A",
       "rosto": "olhos_fechados",
-      "segura": "lanterna"
+      "segura": "lanterna",
+      "de": "curva",
+      "para": "beira_mato"
      }
     ]
    }

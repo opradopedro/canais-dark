@@ -88,6 +88,13 @@ export function buildHospital(): ScenarioResult {
     }
   }
 
+  // Teto (Pedro, 12/11: de dia o teto "sumia" e aparecia o ceu). Nao faz sombra para nao escurecer o corredor.
+  const ceilM = lam("hosp_ceil", () => ({ color: "#e4ebea" }));
+  const ceil = mesh(new THREE.BoxGeometry(7.8, 0.12, 32), ceilM, false);
+  ceil.position.set(0, 3.64, 1);
+  ceil.castShadow = false;
+  group.add(ceil);
+
   // Overhead ceiling fluorescent tubes (on NOINK so they add atmosphere without heavy ink lines)
   const tubeMat = new THREE.MeshBasicMaterial({ color: new THREE.Color(1.6, 1.9, 2.1), fog: false });
   for (let z = -12; z <= 12; z += 6) {

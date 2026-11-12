@@ -49,6 +49,13 @@ export function buildCasaInterior(): ScenarioResult {
   rightWall.position.set(6.0, 1.8, 0);
   group.add(rightWall);
 
+  // Teto (sem sombra): de dia o ceu aparecia por cima do comodo
+  const ceilM = lam("casa_ceil", () => ({ color: "#efe6d6" }));
+  const ceil = mesh(new THREE.BoxGeometry(12.4, 0.12, 10.8), ceilM, false);
+  ceil.position.set(0, 3.62, 0);
+  ceil.castShadow = false;
+  group.add(ceil);
+
   // Baseboards
   const bbBack = mesh(new THREE.BoxGeometry(12.2, 0.18, 0.3), trimM);
   bbBack.position.set(0, 0.09, -5.15);

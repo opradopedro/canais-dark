@@ -154,6 +154,17 @@ def _palavras(tempos):
     return [(w, k, i) for k, s in enumerate(tempos["segs"]) for i, w in enumerate(s["text"].split())]
 
 
+def fim_mudo(audio, tempos_path, idioma="en"):
+    """Palavras do FIM do roteiro (as 2 ultimas) que a voz nao fala. Lista vazia = a voz chega ate o fim.
+    Usado logo depois da narracao: se o Gemini engoliu o fim, a voz e gravada de novo (uma vez)."""
+    tempos = json.load(open(tempos_path))
+    pal = [w for w, _, _ in _palavras(tempos)]
+    alinhar(audio, pal, idioma)
+    nota = _M.get("nota") or [1.0] * len(pal)
+    fim = [(w, n) for w, n in zip(pal, nota) if re.sub(r"[^\wáéíóúñ]", "", w.lower())][-2:]
+    return [w for w, n in fim if n < 0.1 and not re.search(r"\d", w)]
+
+
 def ajustar(audio, tempos_path, idioma="en"):
     """Reescreve seg["w"] (inicio de cada palavra na tela) com o alinhamento forcado do audio, LEAD s antes da voz.
     Use o audio FINAL (mixado), que e o que o espectador ouve. t0/t1 do seg passam a cobrir as palavras."""
@@ -224,6 +235,14 @@ def conferir(video, tempos_path, idioma="en", adianto=ADIANTO, atraso=ATRASO, fp
     if pal and surdas / len(pal) > 0.4:
         out["ok"] = False
         out["motivo"] = f"{surdas} de {len(pal)} palavras que a voz nao fala: lingua trocada ou audio errado"
+    # REGRA do Pedro (12/11): a voz do Gemini as vezes engole a ULTIMA palavra ("Parte dos, manana" saiu so
+    # "Parte dos", e a legenda mostrava "manana" sem voz). As 2 ultimas palavras faladas tem que ter nota: senao barra
+    # (o produce.py apaga a voz guardada ao barrar, e a proxima execucao grava de novo).
+    fim = [(w, n) for (w, _, _), n in zip(pal, nota) if re.sub(r"[^\wáéíóúñ]", "", w.lower())][-2:]
+    mudas = [w for w, n in fim if n < 0.1 and not re.search(r"\d", w)]
+    if mudas:
+        out["ok"] = False
+        out["motivo"] = "a voz nao fala o fim do roteiro: " + " ".join(mudas)
     if tempos.get("legenda") != "alinhamento":
         out["motivo_tempos"] = "tempos.json nao passou pelo alinhamento (sincronia.ajustar) antes do render"
     out["trilhas"] = trilhas(video)

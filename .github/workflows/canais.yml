@@ -444,7 +444,7 @@ jobs:
       - name: Preparar audio, legenda e capas dos 3 roteiros
         run: |
           set -o pipefail
-          TESTE_CARTOON=CL042 python motor-en/preparar_teste_cartoon.py /tmp/cartoon-prep 2>&1 | tee /tmp/cartoon-audio-log.txt
+          TESTE_CARTOON=HM041,SV031 python motor-en/preparar_teste_cartoon.py /tmp/cartoon-prep 2>&1 | tee /tmp/cartoon-audio-log.txt
       - name: Guardar caixa de narracoes e sons
         if: always()
         uses: actions/cache/save@v4
@@ -475,7 +475,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        codigo: [CL042]
+        codigo: [HM041, SV031]
         shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     env:
       GH_TOKEN: ${{ github.token }}
@@ -560,7 +560,7 @@ jobs:
       - name: Juntar fatias, conferir legenda/fim e subir na Release "teste-cartoon"
         run: |
           set -o pipefail
-          TESTE_CARTOON=CL042 python motor-en/preparar_teste_cartoon.py --montar /tmp/cartoon-prep /tmp/shards /tmp/final 2>&1 | tee /tmp/montar-log.txt
+          TESTE_CARTOON=HM041,SV031 python motor-en/preparar_teste_cartoon.py --montar /tmp/cartoon-prep /tmp/shards /tmp/final 2>&1 | tee /tmp/montar-log.txt
           cp /tmp/montar-log.txt /tmp/final/conferencia-teste-cartoon.txt
           gh release view teste-cartoon > /dev/null 2>&1 || gh release create teste-cartoon --title "Teste Motor Cartoon (HM041, SV031, CL042)" --notes "3 videos de prova renderizados pelo motor-cartoon (sem publicar no YouTube)"
           gh release edit teste-cartoon --title "Teste Motor Cartoon (HM041, SV031, CL042)" --notes "Videos de prova renderizados pelo motor-cartoon (HM041, SV031, CL042 - Parte 2 do Wukong; sem publicar no YouTube)" || true

@@ -97,8 +97,10 @@ def main(historia, voz, tempos, saida):
         f = min(int(0.6 * SR), (a1 - a0) // 2)
         if f > 0:
             seg[:f] *= np.linspace(0, 1, f); seg[-f:] *= np.linspace(1, 0, f)
-        ganho = 0.55 if calmo else 0.45
-        mix[a0:a1] += seg * (ganho - 0.3 * fala[a0:a1])
+        # Pedro (12/11): no SV031 o "zumbido" do hospital soou como estatica alta. Terror: ambiente bem baixo,
+        # zumbido/estatica ainda mais (fica de fundo, nunca por cima da voz)
+        ganho = 0.55 if calmo else (0.12 if nome in ("zumbido", "estatica", "radio") else 0.22)
+        mix[a0:a1] += seg * (ganho - (0.3 if calmo else 0.6 * ganho) * fala[a0:a1])
 
     # 4. efeitos pontuais
     cache = {}

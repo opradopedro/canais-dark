@@ -179,7 +179,7 @@ export function buildOutfit(id: string, spec: ElencoSpec = {}): { outfit: Outfit
     seed: (seed % 7) + 1,
     scale,
     extras: {
-      ponytail: spec.cabelo === "rabo",
+      ponytail: false, // rabo de cavalo parecia solto da cabeca (Pedro, 12/11): desligado
       longHair: spec.cabelo === "longo",
       beard: isOld || chapeu.includes("barba") || lowId.includes("subhuti") || lowId.includes("subodhi"),
       glasses: chapeu.includes("oculos"),
@@ -276,21 +276,7 @@ function drawExtrasAndProp(
   const prop = segura.toLowerCase();
 
   if (prop === "lanterna") {
-    // Flashlight body + bright warm light cone
-    const cone: [number, number][] = side
-      ? [[hx + 28, hy - 6], [hx + 230, hy - 85], [hx + 230, hy + 95]]
-      : [[hx + 16, hy + 8], [hx + 165, hy + 150], [hx - 75, hy + 175]];
-    p.g.save();
-    p.g.beginPath();
-    cone.forEach(([x, y], i) => (i ? p.g.lineTo(x, y) : p.g.moveTo(x, y)));
-    p.g.closePath();
-    const gr = p.g.createLinearGradient(hx, hy, cone[1][0], cone[1][1]);
-    gr.addColorStop(0, "rgba(255, 242, 175, 0.72)");
-    gr.addColorStop(1, "rgba(255, 230, 130, 0.0)");
-    p.g.fillStyle = gr;
-    p.g.fill();
-    p.g.restore();
-
+    // Lanterna: so o corpo e a lente acesa; o facho de luz e 3D (StoryWorld, feixe + luz no chao)
     p.band([[hx - 18, hy - 4], [hx + 24, hy + 4]], "#323640", 22, 6, "round");
     p.ell(hx + 24, hy + 4, 11, 14, "#fff6b8", 5);
   } else if (prop === "tocha") {

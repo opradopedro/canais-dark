@@ -48,6 +48,18 @@ def produzir(historia, a, base):
     tts = [sys.executable, f"{AQUI}/tts.py", historia, base + "_voz.wav", base + "_tempos.json"]
     run(*(tts + (["--motor", a.motor] if a.motor else [])))
     import sincronia
+    # REGRA (12/11): o Gemini as vezes engole a ultima palavra ("Parte dos, manana" saiu "Parte dos"): grava de novo 1 vez
+    try:
+        mudas = sincronia.fim_mudo(base + "_voz.wav", base + "_tempos.json", "es")
+    except Exception as e:
+        mudas = []
+        print("conferencia do fim da voz caiu (sigo):", str(e)[:150], flush=True)
+    if mudas:
+        bruto = base + "_voz_bruto.wav"
+        if os.path.exists(bruto):
+            os.remove(bruto)
+        print(f"VOZ SEM O FIM ({' '.join(mudas)}): gravo a narracao de novo", flush=True)
+        run(*(tts + (["--motor", a.motor] if a.motor else [])))
     if a.teste:
         sincronia.ajustar(base + "_voz.wav", base + "_tempos.json", "es")
         h = carregar(historia); tm = json.load(open(base + "_tempos.json")); r = resolver(h, tm)

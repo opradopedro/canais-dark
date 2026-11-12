@@ -31,6 +31,7 @@ export interface CenaTimeline {
     tipo: string;
     marca?: string;
   } | null;
+  objetos?: (string | { tipo: string; n?: number })[] | null;
   eventos?: {
     t_abs: number;
     tipo: string;

@@ -21,6 +21,7 @@ import { ctex, h3 } from "../cenarios/comum";
 import { buildScenario, ScenarioResult, MarkDef } from "../cenarios";
 import { drawPersonCard, ElencoDef } from "../elenco/pessoas";
 import { drawCreatureCard } from "../elenco/criaturas";
+import { construirObjeto, objetosDaFala, VEICULOS, ANIMAIS, PESSOAS, N_PADRAO } from "../elenco/objetos";
 import { drawMonkey, drawGod, EMPEROR, GENERAL, furTones } from "./monkey";
 import { CenaTimeline, Corte, planejarCortes, computeCamPose, clamp01, smoother } from "./camera";
 
@@ -151,6 +152,12 @@ class StoryWorld {
   private rainGroup = new THREE.Group();
   private snowGroup = new THREE.Group();
   private beams: THREE.Mesh[] = [];
+  // objetos/figurantes por cena (Pedro, 12/11: a imagem tem que mostrar o que a fala diz)
+  private objCena: { tipo: string; n: number }[][] = [];
+  private objGrupos = new Map<number, THREE.Group[]>();
+  // facho 3D da lanterna (no lugar do triangulo amarelo desenhado no cartao)
+  private facho!: THREE.Mesh;
+  private fachoLuz!: THREE.SpotLight;
   private beamGlow: THREE.Mesh[] = [];
 
   constructor(estado: EstadoRender) {
@@ -219,6 +226,55 @@ class StoryWorld {
         R.add(sc.group);
         this.scenarios.set(key, sc);
       }
+    }
+
+    // Objetos de cada cena: os do roteiro ("objetos") ou, se nao houver, os que a fala da cena cita
+    for (const c of estado.cenas) {
+      let lista: { tipo: string; n: number }[] = [];
+      if (Array.isArray(c.objetos) && c.objetos.length) {
+        lista = c.objetos.map((o) => (typeof o === "string" ? { tipo: o, n: N_PADRAO[o] || 1 } : { tipo: o.tipo, n: o.n || N_PADRAO[o.tipo] || 1 }));
+      } else {
+        const fala = (estado.segs || []).filter((sg) => sg.start >= c.t0 - 0.3 && sg.start < c.t1 - 0.2).map((sg) => sg.text).join(" ");
+        lista = objetosDaFala(fala).map((tipo) => ({ tipo, n: N_PADRAO[tipo] || 1 }));
+      }
+      this.objCena[c.idx] = lista;
+      const grupos: THREE.Group[] = [];
+      for (const o of lista) {
+        if (PESSOAS[o.tipo]) continue; // pessoas sao cartoes (desenhados no update)
+        for (let k = 0; k < Math.min(o.n, 4); k++) {
+          const gobj = construirObjeto(o.tipo, c.idx * 7 + k);
+          gobj.visible = false;
+          R.add(gobj);
+          grupos.push(gobj);
+        }
+      }
+      this.objGrupos.set(c.idx, grupos);
+      // cena sem personagem que mostra veiculo: plano aberto, para o veiculo caber inteiro no quadro
+      if (lista.some((o) => VEICULOS.has(o.tipo) || ANIMAIS.has(o.tipo)) && !(c.atores || []).length && (!c.plano || c.plano === "auto")) c.plano = "aberto";
+    }
+
+    // Facho da lanterna: cone aditivo (com bloom) + luz de verdade no chao
+    {
+      const cv = document.createElement("canvas");
+      cv.width = 4; cv.height = 128;
+      const g2 = cv.getContext("2d")!;
+      const gr = g2.createLinearGradient(0, 0, 0, 128);
+      gr.addColorStop(0, "rgba(255,255,255,0)");
+      gr.addColorStop(0.75, "rgba(255,255,255,0.55)");
+      gr.addColorStop(1, "rgba(255,255,255,1)");
+      g2.fillStyle = gr; g2.fillRect(0, 0, 4, 128);
+      const tx = new THREE.CanvasTexture(cv);
+      const geo = new THREE.ConeGeometry(0.6, 5.0, 24, 1, true);
+      geo.translate(0, -2.5, 0); // ponta na lanterna, abre para longe
+      this.facho = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({
+        color: new THREE.Color(1.5, 1.35, 0.9), map: tx, transparent: true, opacity: 0.6,
+        blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide, fog: false,
+      }));
+      this.facho.layers.set(NOINK);
+      this.facho.visible = false;
+      R.add(this.facho);
+      this.fachoLuz = new THREE.SpotLight("#fff1c8", 0, 16, 0.3, 0.6, 1.2);
+      R.add(this.fachoLuz, this.fachoLuz.target);
     }
 
     // Plan camera cuts across all scenes
@@ -487,7 +543,7 @@ class StoryWorld {
     this.sun.shadow.normalBias = L.normalBias * (Rr / 12);
 
     // Point light for flashlight / torch / campfire
-    const hasWarmProp = actorPositions.some((a) => a.segura === "lanterna" || a.segura === "tocha");
+    const hasWarmProp = actorPositions.some((a) => a.segura === "tocha");
     if (lightKey === "fogueira" || hasWarmProp) {
       this.pointLight.intensity = (lightKey === "fogueira" ? 2.4 : 1.4) * (0.92 + 0.08 * Math.sin(t * 17));
       this.pointLight.position.set(focus.x + 0.4, focus.y + 1.3, focus.z + 0.6);
@@ -672,6 +728,87 @@ class StoryWorld {
       const cKey = `c|${cTipo}|${animStep}`;
       const tex = cardTex(cKey, k, (p) => drawCreatureCard(p, cTipo, animStep, cena.idx + 7));
       this.card(ci++).show(tex, creaturePos.x, creaturePos.y, creaturePos.z, cScale, camP);
+    }
+
+    // ---- Objetos e figurantes da cena, arrumados no quadro da camera (sempre aparecem) ----
+    const fH = new THREE.Vector3(camPose.look[0] - camPose.pos[0], 0, camPose.look[2] - camPose.pos[2]).normalize();
+    const rH = new THREE.Vector3(-fH.z, 0, fH.x);
+    // ancora na frente da camera (o foco pode estar atras dela nos interiores): tudo cai dentro do quadro
+    const dFoco = Math.hypot(focus.x - cam.position.x, focus.z - cam.position.z);
+    const ancora = new THREE.Vector3(cam.position.x, focus.y, cam.position.z).addScaledVector(fH, Math.max(3.2, Math.min(8, dFoco)));
+    const lim = sc.limites;
+    const dentro = (v: THREE.Vector3) => {
+      if (lim) {
+        v.x = Math.max(-lim.x + 0.6, Math.min(lim.x - 0.6, v.x));
+        v.z = Math.max(-lim.z + 0.6, Math.min(lim.z - 0.6, v.z));
+      }
+      return v;
+    };
+    for (const [idx, gs] of this.objGrupos.entries()) if (idx !== cena.idx) gs.forEach((g) => (g.visible = false));
+    const gsAtual = this.objGrupos.get(cena.idx) || [];
+    const uC = clamp01((t - cena.t0) / Math.max(0.3, cena.t1 - cena.t0));
+    let iv = 0, ia = 0, ip = 0;
+    for (const g of gsAtual) {
+      const tipo = g.userData.tipo as string;
+      if (VEICULOS.has(tipo)) {
+        if (lim) { g.visible = false; continue; }
+        const d = 10 + 5 * iv;
+        const dir = iv % 2 ? -1 : 1;
+        const pos = ancora.clone().addScaledVector(fH, d).addScaledVector(rH, dir * (-9 + 18 * uC));
+        g.position.set(pos.x, focus.y, pos.z);
+        g.rotation.y = Math.atan2(dir * rH.x, dir * rH.z);
+        const sir = g.userData.sirene as THREE.Mesh[] | undefined;
+        if (sir) sir.forEach((m, k) => (m.visible = Math.sin(t * 12 + k * Math.PI) > 0));
+        const jan = g.userData.janelas as THREE.Mesh | undefined;
+        if (jan) (jan.material as THREE.MeshBasicMaterial).opacity = night ? 0.85 : 0;
+        iv++;
+      } else if (ANIMAIS.has(tipo)) {
+        const s = ia % 2 ? 1 : -1;
+        const pos = dentro(ancora.clone().addScaledVector(fH, 4.6 + 1.5 * ia).addScaledVector(rH, s * 0.15 * (4.6 + 1.5 * ia)));
+        g.position.set(pos.x, focus.y, pos.z);
+        g.rotation.y = Math.atan2(rH.x, rH.z) + (ia % 2 ? 2.6 : 0.4);
+        ia++;
+      } else {
+        const s = ip % 2 ? -1 : 1;
+        const pos = dentro(ancora.clone().addScaledVector(fH, 3.4 + 2.2 * ip).addScaledVector(rH, s * 0.21 * (3.4 + 2.2 * ip)));
+        g.position.set(pos.x, focus.y, pos.z);
+        g.rotation.y = Math.atan2(-fH.x, -fH.z);
+        ip++;
+      }
+      g.visible = true;
+    }
+    // figurantes (cartoes de pessoa)
+    let jf = 0;
+    const temAtor = actorPositions.length > 0;
+    for (const o of this.objCena[cena.idx] || []) {
+      const spec = PESSOAS[o.tipo];
+      if (!spec) continue;
+      for (let k = 0; k < Math.min(o.n, 5); k++, jf++) {
+        const s = jf % 2 ? 1 : -1;
+        const pos = dentro(ancora.clone().addScaledVector(fH, 3.4 + 0.8 * jf).addScaledVector(rH, s * (temAtor || jf ? 0.15 : 0) * (3.4 + 0.8 * jf)));
+        const id = `fig_${o.tipo}_${k}`;
+        const def = { ...spec, semente: 900 + cena.idx * 13 + jf * 7 };
+        const acao = o.tipo === "multidao" || o.tipo === "crianca" ? (jf % 3 ? "Idle_A" : "Idle_B") : "Idle_A";
+        const rosto = actorPositions.some((a) => a.rosto === "medo" || a.rosto === "susto") ? "medo" : "neutro";
+        const kk = tierK(pos.x, focus.y, pos.z);
+        const tex = cardTex(`fig|${o.tipo}|${jf}|${acao}|${rosto}|${cena.idx}`, kk, (p) => drawPersonCard(p, id, def, acao, rosto, undefined, 0, 0));
+        this.card(ci++).show(tex, pos.x, focus.y, pos.z, o.tipo === "crianca" ? 0.7 : 0.97, camP, 0, jf % 2 === 1);
+      }
+    }
+
+    // ---- Facho da lanterna ----
+    const comLanterna = actorPositions.find((a) => a.segura === "lanterna");
+    this.facho.visible = !!comLanterna;
+    this.fachoLuz.intensity = 0;
+    if (comLanterna) {
+      const mao = new THREE.Vector3(comLanterna.x, comLanterna.y + 0.7 * comLanterna.scale, comLanterna.z).addScaledVector(rH, 0.36 * comLanterna.scale);
+      const alvo = new THREE.Vector3(comLanterna.x, comLanterna.y, comLanterna.z).addScaledVector(fH, 4.8).addScaledVector(rH, 2.6);
+      this.facho.position.copy(mao);
+      const dir = alvo.clone().sub(mao).normalize();
+      this.facho.quaternion.setFromUnitVectors(new THREE.Vector3(0, -1, 0), dir);
+      this.fachoLuz.position.copy(mao);
+      this.fachoLuz.target.position.copy(alvo);
+      this.fachoLuz.intensity = night ? 5 : 2;
     }
 
     return { focus, cInf: camPose.cInf, lightKey, flashOverlay };
