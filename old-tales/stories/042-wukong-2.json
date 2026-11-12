@@ -149,7 +149,8 @@
      {
       "id": "wukong",
       "acao": "Sit_Floor_Idle",
-      "rosto": "triste"
+      "rosto": "triste",
+      "roupa": "nenhuma"
      }
     ]
    }
@@ -165,7 +166,8 @@
      {
       "id": "wukong",
       "acao": "Sit_Floor_StandUp",
-      "rosto": "medo"
+      "rosto": "medo",
+      "roupa": "nenhuma"
      },
      {
       "id": "macaco",
@@ -186,7 +188,8 @@
      {
       "id": "wukong",
       "acao": "Idle_A",
-      "rosto": "bravo"
+      "rosto": "bravo",
+      "roupa": "nenhuma"
      }
     ]
    }
@@ -203,7 +206,8 @@
      {
       "id": "wukong",
       "acao": "Idle_B",
-      "rosto": "bravo"
+      "rosto": "bravo",
+      "roupa": "nenhuma"
      }
     ]
    }

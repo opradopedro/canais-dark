@@ -30,6 +30,7 @@ export interface ActorPoseSpec {
   de?: string;
   para?: string;
   marca?: string;
+  roupa?: string;       // so nesta cena ("nenhuma" = sem roupa)
 }
 
 const SKIN_TONES = ["#ffe2c2", "#f6d0ad", "#eab88f", "#d69c72", "#b87b52", "#8d5838"];
@@ -385,7 +386,10 @@ export function drawActorCard(
       lid,
       fur,
       crown: isKing,
-      cape: isKing,
+      cape: false,
+      // REGRA (Pedro, 12/11): quando a historia fala de roupa, ele aparece vestido. Rei com roupa no elenco veste
+      // armadura de guerreiro; "roupa": "nenhuma" na cena (ou no elenco) deixa so o pelo
+      armor: isKing && !!(poseSpec.roupa ?? elencoSpec?.roupa) && (poseSpec.roupa ?? elencoSpec?.roupa) !== "nenhuma",
       bob: act.bob,
       seed: elencoSpec?.semente ?? 3,
       tears,

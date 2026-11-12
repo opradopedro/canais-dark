@@ -68,6 +68,13 @@ roteiro novo (CL042 em diante, inclusive as partes 2-5 do Wukong que estão em `
   Bonito, mas NÃO infantil (também evita o YouTube marcar como "feito para crianças", que corta RPM).
 - Sem susto de terror e sem sangue explícito: tensão sim, gore não.
 
+Visual e som de ação (REGRA do Pedro, 12/11 22h: "tire todos os elementos de criança e bote de ação"):
+- Pelo menos 4 cenas com ação de verdade (`Melee_*`, `Hit_*`, `Jump_*`, `Running_*`, `Dodge_*`, `Ranged_*`); o fiscal barra.
+- Rostos de raiva/medo nas viradas, céu de tempestade (`"luz": "tempestade"`) nos momentos de perigo.
+- A trilha é de ação para todo o Old Tales (tambores, `motor-en/trilha_acao.py`); o alaúde saiu.
+- Quando a narração fala de roupa, o personagem aparece vestido. Wukong veste armadura quando o elenco tem `roupa`;
+  `"roupa": "nenhuma"` no ator da cena deixa só o pelo (ex.: antes de roubar a roupa).
+
 ## Estilo novo: Hora Muerta, Signal Lost e Old Tales (REGRA do Pedro, 01/11)
 Gráficos limpos e história contada com ritmo, INSPIRADOS num vídeo que o Pedro mandou, mas com identidade própria de
 cada canal: "só se inspire, não faça exatamente igual". Guia completo: **`ESTILO-VISUAL.md`** (seções 2 e 3).

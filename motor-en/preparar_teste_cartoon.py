@@ -97,6 +97,10 @@ def preparar(pasta_prep):
             print(f"[{cod}] VOZ SEM O FIM ({' '.join(mudas)}): gravo de novo", flush=True)
             subprocess.run([sys.executable, os.path.join(AQUI, "tts_guard.py"), rot_out, wav_out, tp_out], env=env, check=True)
             print(f"[{cod}] fim depois de gravar de novo: {sincronia.fim_mudo(wav_out, tp_out, idioma) or 'falado'}", flush=True)
+        # copia da narracao crua do banco no artefato (para investigar fim engolido)
+        banco = os.environ.get("CANAIS_NARRACOES") or os.path.join(RAIZ, "narracoes")
+        for f in glob.glob(os.path.join(banco, f"{cod}_*.wav"))[:1]:
+            shutil.copy(f, os.path.join(pasta_prep, f"{cod}_banco_cru.wav"))
         if idioma == "es":
             subprocess.run([sys.executable, os.path.join(MOTOR, "mix.py"), rot_out, wav_out, tp_out, tr_out],
                            env=env, check=True)

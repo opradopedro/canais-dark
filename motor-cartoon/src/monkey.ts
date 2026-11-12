@@ -5,7 +5,7 @@ import { Pen, INK, blobPts, headBlob, faceFront, Expr, mul, shade, bodyFront, Ou
 
 type P2 = [number, number];
 export type MPose = "crouch" | "stand" | "cheer" | "laugh" | "leap" | "sit";
-export type MOpts = { pose: MPose; expr: Expr; lid?: number; fur?: string; crown?: boolean; cape?: boolean; look?: number; bob?: number; seed?: number; small?: boolean; tears?: boolean };
+export type MOpts = { pose: MPose; expr: Expr; lid?: number; fur?: string; crown?: boolean; cape?: boolean; armor?: boolean; look?: number; bob?: number; seed?: number; small?: boolean; tears?: boolean };
 
 const FACE = "#f3cf9f";
 const SH: [number, number, number] = [0.72, 0.68, 0.78];
@@ -60,17 +60,34 @@ export const drawMonkey = (p: Pen, o: MOpts) => {
       p.ell(cx + s * 80, 962, 44, 17, FACE, 7);
     }
   }
-  // ---- cape (behind the torso) ----
-  if (o.cape) {
-    const cape: P2[] = [[cx - 95, neckY + 10], [cx + 95, neckY + 10], [cx + 150, hipY + 70], [cx - 150, hipY + 70]];
-    p.shadedFill(cape, "#c8342e", "#8e2230", LIGHT, 150);
-    p.poly(cape, null, 8);
-  }
+  // (12/11, Pedro: "quadrado escroto dentro do macaco") a capa retangular saiu; roupa agora e a armadura abaixo
   // ---- torso: pear, tan belly ----
   const torso = blobPts(cx, (neckY + hipY) / 2 + 8, { a: 92, b: (hipY - neckY) / 2 + 22, nTop: 2.1, nBot: 2.4, egg: 0.22, asym: 0, rot: 0, noise: 0.01, seed: (o.seed ?? 1) + 5 });
   p.shadedFill(torso, fur, furD, LIGHT, 100);
   p.inkRing(torso, 7, 13);
   p.ell(cx, (neckY + hipY) / 2 + 22, 54, (hipY - neckY) / 2 - 12, FACE, 0);
+  // ---- armadura de guerreiro (Wukong depois de roubar roupa): tunica vermelha, peitoral dourado, cinto ----
+  if (o.armor) {
+    const midY = (neckY + hipY) / 2;
+    p.clip(torso, () => {
+      const tun: P2[] = [[cx - 140, neckY + 30], [cx + 140, neckY + 30], [cx + 140, hipY + 60], [cx - 140, hipY + 60]];
+      p.shadedFill(tun, "#a82a26", "#6e1a22", LIGHT, 120);
+      const peito: P2[] = [[cx - 70, neckY + 40], [cx + 70, neckY + 40], [cx + 58, midY + 10], [cx, midY + 34], [cx - 58, midY + 10]];
+      p.shadedFill(peito, "#e0aa3a", "#a8742a", LIGHT, 80);
+      p.poly(peito, null, 6);
+      p.line([[cx - 40, midY - 30], [cx + 40, midY - 30]], "#a8742a", 6);
+      p.line([[cx - 30, midY - 6], [cx + 30, midY - 6]], "#a8742a", 6);
+      p.band([[cx - 140, hipY - 40], [cx + 140, hipY - 40]], "#2a1d26", 34, 0);
+      p.ell(cx, hipY - 40, 22, 20, "#e0aa3a", 5);
+    });
+    p.inkRing(torso, 7, 13);
+    // ombreiras
+    for (const s of [-1, 1]) {
+      const om: P2[] = [[cx + s * 40, neckY + 18], [cx + s * 108, neckY + 26], [cx + s * 118, neckY + 78], [cx + s * 60, neckY + 70]];
+      p.shadedFill(om, "#e0aa3a", "#a8742a", LIGHT, 60);
+      p.poly(om, null, 6);
+    }
+  }
   // ---- arms ----
   const sh: P2[] = [[cx - 72, neckY + 40], [cx + 72, neckY + 40]];
   const hand = (x: number, y: number) => p.ell(x, y, 22, 20, FACE, 7);

@@ -87,7 +87,7 @@ def tirar_estatica(audio, sr, nome="narracao"):
     for i0, i1 in reversed(trechos):
         i0 = max(0, i0 - int(0.01 * sr)); i1 = min(total, i1 + int(0.02 * sr))
         if total - i1 < int(1.5 * sr):  # perto do fim: nada depois disso e fala
-            print(f"{nome}: cortei estatica de TV colada no fim ({i0 / sr:.2f} s ate o fim)", flush=True)
+            print(f"{nome}: cortei estatica de TV colada no fim ({i0 / sr:.2f} s ate o fim, trecho de {(i1 - i0) / sr:.2f} s)", flush=True)
             a = a[:i0]; total = i0
         else:
             print(f"{nome}: silenciei estatica de TV em {i0 / sr:.2f}-{i1 / sr:.2f} s", flush=True)

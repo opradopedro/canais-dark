@@ -224,6 +224,13 @@ def conferir(canal, engine):
             l0 = lineas[0] if isinstance(lineas[0], str) else (lineas[0].get("texto") or "")
             if re.match(r"\s*(once upon|today|long ago|in a land|there (was|once))\b", l0, re.I):
                 erros.append(f"{n}: abertura calma proibida no Old Tales ('{l0[:40]}...'); comece com choque, pergunta ou curiosidade (ROTEIROS.md 'Tom do Old Tales')")
+        # REGRA do Pedro (12/11 22h): "tire todos os elementos de crianca e bote de acao" no Old Tales
+        if canal == "old-tales" and num >= TOM_CL_DESDE and h.get("visual") == "3d":
+            lutas = sum(1 for c in h.get("cenas") or [] if any(
+                re.match(r"(Melee|Hit|Jump|Running|Dodge|Death|Ranged|Throw)", a.get("acao") or "")
+                for a in ((c.get("cena") or {}).get("atores") or [])))
+            if lutas < 4:
+                erros.append(f"{n}: so {lutas} cena(s) de acao (luta, golpe, pulo, corrida); Old Tales pede 4 ou mais (ROTEIROS.md 'Tom do Old Tales')")
         if canal == "signal-lost" and h.get("visual") == "flat" and h.get("paleta") != "sv":
             erros.append(f"{n}: Signal Lost no estilo flat precisa de \"paleta\": \"sv\"")
         partes, parte = int(h.get("partes", 1) or 1), int(h.get("parte", 1) or 1)

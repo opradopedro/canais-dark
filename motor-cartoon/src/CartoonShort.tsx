@@ -419,6 +419,7 @@ class StoryWorld {
       acao: string;
       rosto: string;
       segura?: string;
+      roupa?: string;
       scale: number;
     }[] = [];
 
@@ -460,7 +461,7 @@ class StoryWorld {
         }
       }
 
-      actorPositions.push({ id: a.id, x, y, z, acao, rosto, segura: a.segura, scale });
+      actorPositions.push({ id: a.id, x, y, z, acao, rosto, segura: a.segura, roupa: (a as { roupa?: string }).roupa, scale });
     });
 
     // Resolve creature position if present
@@ -639,9 +640,10 @@ class StoryWorld {
         continue;
       }
 
-      const def = (this.estado.elenco || {})[ap.id] || {};
+      const def0 = (this.estado.elenco || {})[ap.id] || {};
+      const def = ap.roupa ? { ...def0, roupa: ap.roupa } : def0;
       const k = tierK(ap.x, ap.y, ap.z);
-      const texKey = `p|${ap.id}|${ap.acao}|${ap.rosto}|${ap.segura || ""}|${animStep}`;
+      const texKey = `p|${ap.id}|${ap.acao}|${ap.rosto}|${ap.segura || ""}|${ap.roupa || ""}|${animStep}`;
       const tex = cardTex(texKey, k, (p) =>
         drawPersonCard(p, ap.id, def, ap.acao, ap.rosto, ap.segura, animStep, f)
       );

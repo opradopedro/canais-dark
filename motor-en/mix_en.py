@@ -10,7 +10,7 @@ Camadas:
 Musica e ambiente abaixam sozinhos enquanto a voz fala (a voz sempre fica na frente).
 Sem chiado no fim: tudo some suave no ultimo 1 s.
 """
-import json, os, subprocess, sys, tempfile
+import json, os, re, subprocess, sys, tempfile
 import numpy as np, soundfile as sf
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -74,10 +74,17 @@ def main(historia, voz, tempos, saida):
 
     # 2. musica
     if calmo:
-        arq = sons.obter("musica_calma")
-        if arq:
-            m = em_loop(rms_norm(sons.ler(arq, SR), 0.1), n)
-            mix += m * entrada * (0.30 - 0.18 * fala)  # 0,30 nas pausas, 0,12 sob a voz
+        # REGRA (Pedro, 12/11): "tira essa musica de crianca e coloca uma de acao", em TODO o Old Tales.
+        # O alaude saiu; trilha de tambores/cordas feita em codigo, com golpe nas cenas de luta/tempestade
+        import trilha_acao
+        viradas = []
+        for c in r["cenas"]:
+            cn = c.get("cena") or {}
+            luta = any(re.match(r"(Melee|Hit|Jump|Running|Dodge|Death)", a.get("acao") or "") for a in cn.get("atores") or [])
+            if luta or cn.get("luz") == "tempestade":
+                viradas.append(c["t0"])
+        m = trilha_acao.trilha_acao(n, SR, viradas)
+        mix += m * entrada * (0.45 - 0.29 * fala)  # 0,45 nas pausas, 0,16 sob a voz
     else:
         sustos = [e["t"] for e in r["eventos"] if e["tipo"] in ("susto", "grito")]
         mix += mix_motor.trilha_piano(n, sustos, dur)[:n] * float(h.get("piano", 1.0))
@@ -99,7 +106,7 @@ def main(historia, voz, tempos, saida):
             seg[:f] *= np.linspace(0, 1, f); seg[-f:] *= np.linspace(1, 0, f)
         # Pedro (12/11): no SV031 o "zumbido" do hospital soou como estatica alta. Terror: ambiente bem baixo,
         # zumbido/estatica ainda mais (fica de fundo, nunca por cima da voz)
-        ganho = 0.55 if calmo else (0.12 if nome in ("zumbido", "estatica", "radio") else 0.22)
+        ganho = 0.3 if calmo else (0.12 if nome in ("zumbido", "estatica", "radio") else 0.22)
         mix[a0:a1] += seg * (ganho - (0.3 if calmo else 0.6 * ganho) * fala[a0:a1])
 
     # 4. efeitos pontuais
