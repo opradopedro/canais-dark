@@ -1,11 +1,46 @@
 """Leitura do roteiro (stories/*.json) e conversao de eventos e cenas para segundos."""
-import json
+import json, os, shutil
 
 
 def carregar(path):
     h = json.load(open(path, encoding="utf-8"))
     h["lineas"] = [l if isinstance(l, dict) else {"texto": l} for l in h["lineas"]]
     return h
+
+
+def motor_visual(path, h=None):
+    """Devolve o motor visual do canal ('cartoon' ou None): le MOTOR_VISUAL ou o canal.json do canal."""
+    if os.environ.get("MOTOR_VISUAL"):
+        return os.environ["MOTOR_VISUAL"]
+    raiz = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    cands = [os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(path))), "canal.json")]
+    cod = (h or {}).get("codigo", "")
+    for pref, pasta in (("HM", "hora-muerta"), ("SV", "signal-lost"), ("CL", "old-tales")):
+        if cod.startswith(pref):
+            cands.append(os.path.join(raiz, pasta, "canal.json"))
+    for cj in cands:
+        if os.path.isfile(cj):
+            try:
+                mv = json.load(open(cj, encoding="utf-8")).get("motor_visual")
+                if mv:
+                    return mv
+            except Exception:
+                pass
+    return None
+
+
+def node_bin():
+    """Encontra o executavel do Node 22 (PATH ou Kiro-Cli no Windows)."""
+    n = shutil.which("node")
+    if n:
+        return n
+    for p in (
+        os.path.join(os.environ.get("LOCALAPPDATA", ""), "Kiro-Cli", "node.exe"),
+        r"C:\Program Files\nodejs\node.exe",
+    ):
+        if p and os.path.isfile(p):
+            return p
+    return "node"
 
 
 def _tempo(segs, ref):
@@ -24,7 +59,7 @@ def resolver(h, timing):
     declarados uma vez) vai em "elenco". Mesma linha do tempo (t0 por cena) e mesma legenda (segs com w por palavra).
     """
     segs = timing["segs"]
-    tresd = h.get("visual") == "3d"
+    tresd = h.get("visual") in ("3d", "cartoon")
     cenas = []
     for i, c in enumerate(h["cenas"]):
         t0 = 0 if i == 0 else _tempo(segs, {"en": "inicio", "mas": -0.25, **c})

@@ -6,26 +6,26 @@ name: Canais (producao diaria)
 # video AGENDADO no YouTube para a hora certa.
 on:
   schedule:
-    - cron: "30 8 * * *"    # Old Tales (sai ao meio-dia de NY)
-    - cron: "30 9 * * *"    # Signal Lost (sai as 19h de NY)
+    - cron: "15 7 * * *"    # Old Tales (sai ao meio-dia de NY; adiantado p/ render cartoon ~1h30)
+    - cron: "30 8 * * *"    # Signal Lost (sai as 19h de NY; adiantado p/ render cartoon ~1h30)
     - cron: "35 12 * * *"   # So You Built It (Curiosidade 21h UTC, Evolucao 23h UTC)
-    - cron: "40 18 * * *"   # Hora Muerta
+    - cron: "0 17 * * *"    # Hora Muerta (sai as 21h BRT / 00h UTC; adiantado p/ render cartoon ~1h30)
     - cron: "15 3 * * *"    # metricas dos canais (fim do dia em NY)
     # REPESCAGEM (Pedro, 31/10: "nunca pode ficar sem video, mesmo quando o workflow falhar"): 2a tentativa de cada
     # canal no mesmo dia, antes do proximo horario de publicacao. Se a 1a deu certo, a fila esta cheia e nao faz nada;
     # se falhou (video barrado, Gemini fora, cron atrasado/pulado pelo GitHub), produz de novo com voz nova.
-    - cron: "10 11 * * *"   # repescagem Old Tales
-    - cron: "40 14 * * *"   # repescagem Signal Lost
+    - cron: "50 9 * * *"    # repescagem Old Tales
+    - cron: "10 13 * * *"   # repescagem Signal Lost
     - cron: "45 16 * * *"   # repescagem So You Built It
-    - cron: "50 21 * * *"   # repescagem Hora Muerta
+    - cron: "10 20 * * *"   # repescagem Hora Muerta
     # mais tentativas (REGRA do Pedro, 11/11): so a ULTIMA do dia fica vermelha e manda e-mail
-    - cron: "20 13 * * *"   # 3a tentativa Old Tales
-    - cron: "10 15 * * *"   # ULTIMA tentativa Old Tales
-    - cron: "40 17 * * *"   # 3a tentativa Signal Lost
-    - cron: "30 20 * * *"   # ULTIMA tentativa Signal Lost
+    - cron: "20 12 * * *"   # 3a tentativa Old Tales
+    - cron: "30 14 * * *"   # ULTIMA tentativa Old Tales
+    - cron: "10 16 * * *"   # 3a tentativa Signal Lost
+    - cron: "0 19 * * *"    # ULTIMA tentativa Signal Lost
     - cron: "30 17 * * *"   # 3a tentativa So You Built It
     - cron: "20 19 * * *"   # ULTIMA tentativa So You Built It
-    - cron: "40 23 * * *"   # 3a tentativa Hora Muerta
+    - cron: "30 22 * * *"   # 3a tentativa Hora Muerta
     - cron: "50 1 * * *"    # ULTIMA tentativa Hora Muerta
   workflow_dispatch:
     inputs:
@@ -50,7 +50,7 @@ permissions:
 jobs:
   rodar:
     runs-on: ubuntu-latest
-    timeout-minutes: 200
+    timeout-minutes: 240
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -72,21 +72,21 @@ jobs:
         id: qual
         run: |
           case "${{ github.event.schedule }}" in
-            "30 8 * * *") T=old-tales ;;
-            "30 9 * * *") T=signal-lost ;;
+            "15 7 * * *") T=old-tales ;;
+            "30 8 * * *") T=signal-lost ;;
             "35 12 * * *") T=so-you-built-it ;;
-            "40 18 * * *") T=hora-muerta ;;
-            "10 11 * * *") T=old-tales; R=1 ;;
-            "40 14 * * *") T=signal-lost; R=1 ;;
+            "0 17 * * *") T=hora-muerta ;;
+            "50 9 * * *") T=old-tales; R=1 ;;
+            "10 13 * * *") T=signal-lost; R=1 ;;
             "45 16 * * *") T=so-you-built-it; R=1 ;;
-            "50 21 * * *") T=hora-muerta; R=1 ;;
-            "20 13 * * *") T=old-tales; R=1 ;;
-            "10 15 * * *") T=old-tales; R=1; U=1 ;;
-            "40 17 * * *") T=signal-lost; R=1 ;;
-            "30 20 * * *") T=signal-lost; R=1; U=1 ;;
+            "10 20 * * *") T=hora-muerta; R=1 ;;
+            "20 12 * * *") T=old-tales; R=1 ;;
+            "30 14 * * *") T=old-tales; R=1; U=1 ;;
+            "10 16 * * *") T=signal-lost; R=1 ;;
+            "0 19 * * *") T=signal-lost; R=1; U=1 ;;
             "30 17 * * *") T=so-you-built-it; R=1 ;;
             "20 19 * * *") T=so-you-built-it; R=1; U=1 ;;
-            "40 23 * * *") T=hora-muerta; R=1 ;;
+            "30 22 * * *") T=hora-muerta; R=1 ;;
             "50 1 * * *") T=hora-muerta; R=1; U=1 ;;
             "15 3 * * *") U=1; T=metricas ;;
             *) if [ "${{ github.event_name }}" = push ]; then T=$(sed 's/^\xEF\xBB\xBF//' .github/disparar.txt | head -1 | tr -d '\r '); else T="${{ github.event.inputs.tarefa }}"; fi ;;
@@ -113,6 +113,17 @@ jobs:
           python-version: "3.12"
           cache: pip
           cache-dependency-path: .github/requirements-canais.txt
+
+      - uses: actions/setup-node@v4
+        if: steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas'
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: motor-cartoon/package-lock.json
+
+      - name: Pacotes Node (motor-cartoon)
+        if: steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas'
+        run: npm ci --prefix motor-cartoon --no-audit --no-fund
 
       - name: Programas (FFmpeg e fontes)
         if: steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas'

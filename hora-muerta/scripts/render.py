@@ -9,11 +9,13 @@ import argparse, base64, functools, http.server, json, os, socket, subprocess, s
 from playwright.sync_api import sync_playwright
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from comum import carregar, resolver
+from comum import carregar, motor_visual, node_bin, resolver
 
 ENGINE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "engine.html")
+RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # raiz do motor 3D (motor-3d/, irma de hora-muerta/): engine.html + kit/ + vendor/ + assets/ + fontes/
-MOTOR3D = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "motor-3d")
+MOTOR3D = os.path.join(RAIZ, "motor-3d")
+MOTOR_CARTOON = os.path.join(RAIZ, "motor-cartoon")
 GRAB = "t => { render(t); return document.getElementById('c').toDataURL('image/jpeg', 0.9).split(',')[1]; }"
 
 
@@ -58,8 +60,19 @@ def main():
     ap.add_argument("historia"); ap.add_argument("tempos"); ap.add_argument("video")
     ap.add_argument("--teste"); ap.add_argument("--fps", type=int, default=30)
     a = ap.parse_args()
-    estado = resolver(carregar(a.historia), json.load(open(a.tempos)))
-    tresd = estado.get("visual") == "3d"
+    raw_h = carregar(a.historia)
+    estado = resolver(raw_h, json.load(open(a.tempos)))
+    tresd = estado.get("visual") in ("3d", "cartoon")
+    if estado.get("visual") == "cartoon" or (tresd and motor_visual(a.historia, raw_h) == "cartoon"):
+        cmd = [node_bin(), os.path.join(MOTOR_CARTOON, "render.mjs"),
+               "--roteiro", os.path.abspath(a.historia),
+               "--tempos", os.path.abspath(a.tempos),
+               "--saida", os.path.abspath(a.video)]
+        if a.teste:
+            cmd += ["--teste", a.teste]
+        subprocess.run(cmd, check=True)
+        print("ok", a.video)
+        return
     srv = None
     with sync_playwright() as p:
         try:

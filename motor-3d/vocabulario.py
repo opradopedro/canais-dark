@@ -26,6 +26,16 @@ def vocab():
         corpo = ac[ini: fim if fim > 0 else len(ac)]
         m = re.search(r"(?:const marcas = |C\.fim\()\{(.*?)\}\s*(?:;|,)\s*(?:\n|\{)", corpo, re.S)
         cenarios[n] = re.findall(r"(\w+):\s*\{\s*x:", m.group(1) + "}") if m else []
+    cenarios.update({
+        "montanha_nuvens": ["clareira", "trilha", "entre_arvores", "pe_torre", "fundo", "toco", "topo", "ovo", "beira", "salto"],
+        "cachoeira": ["clareira", "trilha", "entre_arvores", "pe_torre", "fundo", "toco"],
+        "caverna_reino": ["clareira", "trilha", "entre_arvores", "pe_torre", "fundo", "toco", "trono", "entrada"],
+        "palacio_ceu": ["templo", "torii", "ponte", "escada", "jardim", "lanterna", "salao", "colunas", "nuvens"],
+        "aldeia_china": ["praca", "poco", "moinho", "taverna", "mercado", "casa", "alto", "templo", "jardim"],
+        "esparta_cidade": ["praca", "poco", "moinho", "taverna", "mercado", "casa", "alto", "templo", "escada"],
+        "campo_batalha": ["clareira", "trilha", "entre_arvores", "pe_torre", "fundo", "toco", "meio", "vindo", "indo", "acostamento", "ponto", "curva", "beira_mato"],
+        "mosteiro": ["clareira", "trilha", "entre_arvores", "pe_torre", "fundo", "toco", "praca", "poco", "casa", "entrada"],
+    })
     luz = _ler("kit/luz.js")
     cor = re.search(r"const COR = \{(.*?)\n\};", luz, re.S)
     luzes = re.findall(r"^\s{2}(\w+):", cor.group(1), re.M) if cor else []
@@ -34,11 +44,11 @@ def vocab():
     cat = json.load(open(os.path.join(D, "assets", "catalogo.json"), encoding="utf-8"))
     anims = sorted({a for k, v in cat.items() if k.startswith("animacoes/") for a in v["anim"]})
     return {
-        "cenarios": cenarios, "luzes": luzes, "efeitos": ["chuva"],
+        "cenarios": cenarios, "luzes": luzes, "efeitos": ["chuva", "neve"],
         "planos": _lista(_ler("kit/camera.js"), "PLANOS") + ["auto"],
         "criaturas": _lista(_ler("kit/criatura.js"), "TIPOS_CRIATURA") + ["animal"],
         "expressoes": expr, "rosto_estilos": _lista(pers, "ROSTO_ESTILOS"),
-        "objetos_mao": ["lanterna", "tocha", "radio", "celular"], "acoes": anims,
+        "objetos_mao": ["lanterna", "tocha", "radio", "celular", "cajado", "espada", "lanca", "escudo"], "acoes": anims,
     }
 
 

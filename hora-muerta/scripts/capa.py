@@ -5,20 +5,27 @@ Uso: python3 capa.py historia.json tempos.json capa.jpg
 Texto = campo "capa" do roteiro (ex. "TARDÓ UN SEGUNDO"); sem ele, o titulo ate o emoji.
 1080x1920 JPG (< 2 MB, limite do YouTube). O yt_upload.py envia com thumbnails.set.
 """
-import base64, json, os, re, sys
+import base64, json, os, re, subprocess, sys, tempfile
 from playwright.sync_api import sync_playwright
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from comum import carregar, resolver
+from comum import carregar, motor_visual, node_bin, resolver
 
 ENGINE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "engine.html")
+MOTOR_CARTOON = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "motor-cartoon")
 
-DESENHA = """([t, texto, selo]) => {
+DESENHA = """async ([t, texto, selo, fundoB64]) => {
   window.__semLegenda = true;  // a capa nunca leva a legenda do video por baixo do titulo
-  render(t);
+  const c = document.getElementById('c'), g = c.getContext('2d'), W = c.width, H = c.height;
+  if (fundoB64) {
+    const img = new Image();
+    await new Promise((res, rej) => { img.onload = res; img.onerror = rej; img.src = 'data:image/png;base64,' + fundoB64; });
+    g.drawImage(img, 0, 0, W, H);
+  } else {
+    render(t);
+  }
   const calmo = typeof CALMO === 'function' && CALMO();
   const cor1 = calmo ? '#f2c66d' : '#e0262b', fonte = calmo ? 'Georgia, "Times New Roman", serif' : '"DejaVu Sans", Impact, sans-serif';
-  const c = document.getElementById('c'), g = c.getContext('2d'), W = c.width, H = c.height;
   const sombra = g.createLinearGradient(0, H * 0.55, 0, H);
   sombra.addColorStop(0, 'rgba(0,0,0,0)'); sombra.addColorStop(1, 'rgba(0,0,0,0.92)');
   g.fillStyle = sombra; g.fillRect(0, H * 0.55, W, H * 0.45);
@@ -62,6 +69,18 @@ def main(historia, tempos, saida):
     estado = resolver(h, json.load(open(tempos)))
     t = 0.3 if estado.get("gancho") else 2.0
     selo = f"{os.environ.get('CAPA_SELO', 'PARTE')} {h['parte']}" if h.get("partes", 1) > 1 else ""
+    fundo_b64 = None
+    if estado.get("visual") == "cartoon" or (estado.get("visual") == "3d" and motor_visual(historia, h) == "cartoon"):
+        with tempfile.TemporaryDirectory(prefix="capa-cartoon-") as tmpd:
+            quadro_f = max(0, int(round(t * 30)))
+            subprocess.run([node_bin(), os.path.join(MOTOR_CARTOON, "stills.mjs"),
+                            "--roteiro", os.path.abspath(historia),
+                            "--tempos", os.path.abspath(tempos),
+                            "--frames", str(quadro_f), "--noCaps",
+                            "--saida", tmpd], check=True)
+            png = os.path.join(tmpd, f"quadro_{quadro_f:04d}.png")
+            if os.path.isfile(png):
+                fundo_b64 = base64.b64encode(open(png, "rb").read()).decode("ascii")
     with sync_playwright() as p:
         try:
             b = p.chromium.launch()
@@ -70,7 +89,7 @@ def main(historia, tempos, saida):
         pg = b.new_page(viewport={"width": 1080, "height": 1920})
         pg.goto("file://" + ENGINE)
         pg.evaluate("h => setup(h)", estado)
-        open(saida, "wb").write(base64.b64decode(pg.evaluate(DESENHA, [t, texto_capa(h), selo])))
+        open(saida, "wb").write(base64.b64decode(pg.evaluate(DESENHA, [t, texto_capa(h), selo, fundo_b64])))
         b.close()
     print("ok", saida)
 

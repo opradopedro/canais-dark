@@ -207,6 +207,8 @@ async function runWorkerChunk(args) {
   const outChunk = args["chunk-out"];
   const dpr = args.dpr ? Number(args.dpr) : undefined;
   const noCaps = Boolean(args.noCaps);
+  const defaultConc = os.totalmem() >= 12 * 1024 ** 3 ? Math.min(4, Math.max(1, os.cpus().length)) : 2;
+  const concurrency = Number(args.concurrency || process.env.CARTOON_CONCURRENCY || defaultConc);
 
   const inputProps = { estado, ...(dpr ? { dpr } : {}), ...(noCaps ? { noCaps: true } : {}) };
   const composition = await selectComposition({
@@ -225,10 +227,11 @@ async function runWorkerChunk(args) {
     pixelFormat: "yuv420p",
     frameRange: [a, b],
     inputProps,
-    concurrency: 1,
+    concurrency,
+    muted: true,
     browserExecutable,
     chromiumOptions: { gl: "swangle" },
-    timeoutInMilliseconds: 180000,
+    timeoutInMilliseconds: 300000,
     outputLocation: outChunk,
   });
 }
@@ -265,10 +268,8 @@ async function main() {
   const browserExecutable = findBrowserExecutable();
   console.log(`[motor-cartoon] Browser: ${browserExecutable || "default"}`);
 
-  // --teste mode: render 6 representative stills (1 per scene up to 6)
+  // --teste mode: either comma-separated seconds (from render.py) or 6 representative stills
   if (args.teste) {
-    const stillsDir = path.resolve(args["saida-dir"] || path.join(__dirname, "stills"));
-    fs.mkdirSync(stillsDir, { recursive: true });
     const inputProps = { estado };
     const composition = await selectComposition({
       serveUrl,
@@ -277,6 +278,31 @@ async function main() {
       browserExecutable,
       chromiumOptions: { gl: "swangle" },
     });
+
+    if (typeof args.teste === "string" && args.saida) {
+      const base = path.resolve(args.saida).replace(/\.[^.]+$/, "");
+      fs.mkdirSync(path.dirname(base), { recursive: true });
+      const secs = args.teste.split(",").map((v) => Number(v.trim())).filter((v) => !Number.isNaN(v));
+      for (const sec of secs) {
+        const frame = Math.min(composition.durationInFrames - 1, Math.max(0, Math.round(sec * FPS)));
+        const outJpg = `${base}_${sec.toFixed(1).padStart(5, "0")}.jpg`;
+        await renderStill({
+          composition,
+          serveUrl,
+          frame,
+          imageFormat: "jpeg",
+          jpegQuality: 90,
+          inputProps,
+          browserExecutable,
+          chromiumOptions: { gl: "swangle" },
+          output: outJpg,
+        });
+      }
+      return;
+    }
+
+    const stillsDir = path.resolve(args["saida-dir"] || path.join(__dirname, "stills"));
+    fs.mkdirSync(stillsDir, { recursive: true });
 
     const cenas = estado.cenas || [];
     const framesToRender = [];
@@ -336,6 +362,7 @@ async function main() {
     ];
     if (args.dpr) workerArgs.push("--dpr", String(args.dpr));
     if (args.noCaps) workerArgs.push("--noCaps", "true");
+    if (args.concurrency) workerArgs.push("--concurrency", String(args.concurrency));
 
     const res = spawnSync(process.execPath, workerArgs, {
       cwd: __dirname,
