@@ -48,13 +48,16 @@ def produzir(historia, a, base):
     tts = [sys.executable, f"{AQUI}/tts.py", historia, base + "_voz.wav", base + "_tempos.json"]
     run(*(tts + (["--motor", a.motor] if a.motor else [])))
     import sincronia
-    # REGRA (12/11): o Gemini as vezes engole a ultima palavra ("Parte dos, manana" saiu "Parte dos"): grava de novo 1 vez
-    try:
-        mudas = sincronia.fim_mudo(base + "_voz.wav", base + "_tempos.json", "es")
-    except Exception as e:
-        mudas = []
-        print("conferencia do fim da voz caiu (sigo):", str(e)[:150], flush=True)
-    if mudas:
+    # REGRA (12/11): o Gemini as vezes engole a ultima palavra ("Parte dos, manana" saiu "Parte dos"): grava de novo
+    # ate 2 vezes (no HM041 a 3a tomada falou)
+    for _ in range(2):
+        try:
+            mudas = sincronia.fim_mudo(base + "_voz.wav", base + "_tempos.json", "es")
+        except Exception as e:
+            mudas = []
+            print("conferencia do fim da voz caiu (sigo):", str(e)[:150], flush=True)
+        if not mudas:
+            break
         bruto = base + "_voz_bruto.wav"
         if os.path.exists(bruto):
             os.remove(bruto)

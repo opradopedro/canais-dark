@@ -259,14 +259,17 @@ def produzir(c, historia, a, base):
     tts = [sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "tts_guard.py"),
            historia, base + "_voz.wav", base + "_tempos.json"]
     run(*(tts + (["--motor", a.motor] if a.motor else [])))
-    # REGRA (12/11): o Gemini as vezes engole a ultima palavra ("Part two, tomorrow" sai "Part two"): grava de novo 1 vez
-    try:
-        import sincronia
-        mudas = sincronia.fim_mudo(base + "_voz.wav", base + "_tempos.json", c["idioma"])
-    except Exception as e:
-        mudas = []
-        print("conferencia do fim da voz caiu (sigo):", str(e)[:150], flush=True)
-    if mudas:
+    # REGRA (12/11): o Gemini as vezes engole a ultima palavra ("Part two, tomorrow" sai "Part two"): grava de novo
+    # ate 2 vezes (no HM041 a 3a tomada falou)
+    for _ in range(2):
+        try:
+            import sincronia
+            mudas = sincronia.fim_mudo(base + "_voz.wav", base + "_tempos.json", c["idioma"])
+        except Exception as e:
+            mudas = []
+            print("conferencia do fim da voz caiu (sigo):", str(e)[:150], flush=True)
+        if not mudas:
+            break
         cod = os.path.basename(base)
         banco = os.environ.get("CANAIS_NARRACOES") or os.path.join(RAIZ, "narracoes")
         for f in glob.glob(os.path.join(banco, f"{cod}_*.wav")):
