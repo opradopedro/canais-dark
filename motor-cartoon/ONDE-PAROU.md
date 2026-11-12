@@ -26,7 +26,11 @@ Atualizado em 12/11/2026 (noite) pelo Claude. Plano completo: `PLANO-ANTIGRAVITY
     no `preparar_teste_cartoon.py`; `conferir()` também reprova fim mudo.
   - Estática/zumbido do SV mais baixos (`mix_en.py`), teto no hospital e na casa, rabo de cavalo e gota de suor
     tirados (pareciam coisa flutuando), lanterna com facho 3D saindo da lente.
-  - Ainda não mexido: a estrada "em cima do morro" (o Pedro achou estranho o morro verde atrás da estrada no
+  - Old Tales de ação (Pedro, 12/11 22h: "tire todos os elementos de criança"): trilha de tambores em código
+    (`motor-en/trilha_acao.py`) no lugar do alaúde, capa retangular do macaco saiu, Wukong de armadura quando o
+    elenco tem `roupa` (`"roupa": "nenhuma"` no ator da cena tira), fiscal pede 4+ cenas de ação no Old Tales.
+  - Estrada: morro do fundo baixado e afastado.
+  - Ainda não mexido (antes): a estrada "em cima do morro" (o Pedro achou estranho o morro verde atrás da estrada no
     `cenarios/estrada`); vale baixar/afastar o morro.
 
 ## Estado dos canais
