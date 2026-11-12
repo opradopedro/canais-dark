@@ -40,7 +40,9 @@ on:
     paths: [".github/disparar.txt"]
 
 concurrency:
-  group: canais-producao
+  # horarios do dia: uma fila so (um por vez). Disparo manual (teste-cartoon, privado:, subir:): fila propria por
+  # tarefa, para um horario agendado que chega depois nao cancelar o disparo que ainda esperava
+  group: canais-${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tarefa || 'producao' }}
   cancel-in-progress: false
 
 permissions:
