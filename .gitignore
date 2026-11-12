@@ -22,3 +22,11 @@ sons/
 # copias dos videos para o painel (vao para a Release, nao para o git)
 painel-saida/
 painel-web/dados.json
+
+# motor-cartoon (node_modules e temporarios de render)
+motor-cartoon/node_modules/
+motor-cartoon/.bundle/
+motor-cartoon/chunks/
+motor-cartoon/stills/
+motor-cartoon/*.mp4
+motor-cartoon/estado-render.json
