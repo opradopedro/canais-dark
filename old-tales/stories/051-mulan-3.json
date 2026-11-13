@@ -1,0 +1,433 @@
+{
+ "formato": "Soldier",
+ "tema": "epico",
+ "paleta": "china",
+ "piano": 0,
+ "origem": "plano do Pedro (11/11): conto da China antiga; Balada de Mulan (Wei do Norte)",
+ "serie": "mulan",
+ "serie_titulo": "The Ballad of Mulan | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "mythology",
+  "old tales",
+  "legends",
+  "history",
+  "story time",
+  "mulan",
+  "ballad of mulan",
+  "chinese legend",
+  "ancient china",
+  "woman warrior"
+ ],
+ "elenco": {
+  "mulan": {
+   "semente": 4901,
+   "corpo": "magro",
+   "cabelo": "rabo",
+   "cabelo_cor": "#1a1410",
+   "roupa": "soldado_china"
+  },
+  "pai": {
+   "semente": 4902,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "casual",
+   "acessorio": "barba"
+  },
+  "general": {
+   "semente": 4903,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "soldado_china",
+   "acessorio": "barba"
+  },
+  "imperador": {
+   "semente": 4904,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "roupa": "rei",
+   "acessorio": "barba"
+  }
+ },
+ "codigo": "CL051",
+ "parte": 3,
+ "anterior": "CL050",
+ "titulo": "Her comrades found out after 12 years 🗡️ Mulan Part 3 #story #shorts",
+ "capa": "WHO CAN TELL?",
+ "descripcion": "The Emperor offered Mulan a minister's post and a fortune. She asked for one thing only. And when her comrades finally saw her at home, they couldn't believe their eyes.\n\nWould you have taken the reward?\n\nFrom The Ballad of Mulan (Mulan ci), a Chinese folk poem from the Northern Wei era (5th-6th century), preserved in Guo Maoqian's Yuefu Shiji. A legend, not a historical record.\n#mulan #chinesehistory #legend #ancientchina #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "The Emperor sat in the *Bright Hall* and called the heroes forward.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Mulan was promoted twelve ranks at once.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Gold, silk, a high post in the court. Anything she wanted.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "And she refused.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "I don't want to be a minister. I want a camel that runs a thousand li.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Just let me *go home*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because the most famous line of the poem is still coming.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Her parents walked to the edge of town to meet her.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Her little brother sharpened a knife and ran to cook a feast.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Mulan opened the door of her old room and sat on her old bed.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "She took off her *war armor*, and put on her old clothes.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "She combed her hair at the window, like she used to.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then she walked out to see her comrades waiting outside.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "They froze. Twelve years at war, side by side.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "And not one of them knew *Mulan was a woman*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The poem ends with two rabbits running side by side in the grass.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "When they run together, who can tell which one is the girl?",
+   "pausa": 0.8
+  },
+  {
+   "texto": "From twelve scrolls with her father's name, to a legend no army could forget.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "aereo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "imperador",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Cheering",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "general",
+      "acao": "Cheering",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "imperador",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "indo",
+    "plano": "aereo",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Running_A",
+      "rosto": "sorriso"
+     }
+    ],
+    "objetos": [
+     "cavalo"
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "aereo",
+    "luz": "entardecer"
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "medio",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "pai",
+      "acao": "Waving",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "auto",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "pai",
+      "acao": "Running_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Idle_A",
+      "rosto": "neutro",
+      "segura": "espada",
+      "roupa": "casual"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Idle_B",
+      "rosto": "sorriso",
+      "roupa": "casual"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "nuca",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Walking_A",
+      "rosto": "sorriso",
+      "roupa": "casual",
+      "de": "casa",
+      "para": "praca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "general",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "general",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     },
+     {
+      "id": "mulan",
+      "acao": "Idle_A",
+      "rosto": "sorriso",
+      "roupa": "casual"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "aereo",
+    "luz": "dia"
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "close",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Jump_Full_Short",
+      "rosto": "sorriso",
+      "roupa": "casual"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "aereo",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": []
+}
