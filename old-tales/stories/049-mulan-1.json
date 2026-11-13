@@ -1,0 +1,425 @@
+{
+ "formato": "Soldier",
+ "tema": "epico",
+ "paleta": "china",
+ "piano": 0,
+ "origem": "plano do Pedro (11/11): conto da China antiga; Balada de Mulan (Wei do Norte)",
+ "serie": "mulan",
+ "serie_titulo": "The Ballad of Mulan | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "mythology",
+  "old tales",
+  "legends",
+  "history",
+  "story time",
+  "mulan",
+  "ballad of mulan",
+  "chinese legend",
+  "ancient china",
+  "woman warrior"
+ ],
+ "elenco": {
+  "mulan": {
+   "semente": 4901,
+   "corpo": "magro",
+   "cabelo": "rabo",
+   "cabelo_cor": "#1a1410",
+   "roupa": "soldado_china"
+  },
+  "pai": {
+   "semente": 4902,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "casual",
+   "acessorio": "barba"
+  },
+  "general": {
+   "semente": 4903,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "soldado_china",
+   "acessorio": "barba"
+  },
+  "imperador": {
+   "semente": 4904,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "roupa": "rei",
+   "acessorio": "barba"
+  }
+ },
+ "codigo": "CL049",
+ "parte": 1,
+ "titulo": "If they found out she was a woman, she died 🗡️ Mulan Part 1 #story #shorts",
+ "capa": "12 SCROLLS, 1 NAME",
+ "descripcion": "The army lists arrived in twelve scrolls, and every one had her father's name. He was old and sick. So Mulan bought a horse in four markets and rode to war in his place.\n\n> Part 2: {when_next}.\nWould you have gone in his place?\n\nFrom The Ballad of Mulan (Mulan ci), a Chinese folk poem from the Northern Wei era (5th-6th century), preserved in Guo Maoqian's Yuefu Shiji. A legend, not a historical record.\n#mulan #chinesehistory #legend #ancientchina #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Twelve army scrolls arrived in the village, and every single one had the same name.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Her *father's* name.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The Khan was calling every family to war on the northern border.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Mulan's father was old, and too sick to hold a sword.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He had no grown son. She had no older brother.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "At the loom, Mulan stopped weaving and only *sighed*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "If a woman was caught in the army, the punishment was death.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "She went anyway.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "In the east market she bought a horse. In the west, a saddle.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "In the south, a bridle. In the north, a long whip.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because the poem says she left before dawn, without a goodbye.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "She tied her hair like a man and put on her father's armor.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "By sunset she camped beside the *Yellow River*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "She couldn't hear her mother calling her name anymore.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Only the roar of the river, and the cold.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The next night she reached the Black Mountains.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "And in the dark she heard *enemy horses*, neighing on the other side.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Thousands of them. Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "aereo",
+    "luz": "tempestade"
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "pai",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "templo",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "general",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "auto",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "pai",
+      "acao": "Hit_B",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     },
+     {
+      "id": "pai",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "general",
+      "acao": "Melee_2H_Attack_Chop",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Melee_1H_Attack_Slice_Horizontal",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "mercado",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Walking_A",
+      "rosto": "desconfiado"
+     }
+    ],
+    "objetos": [
+     "cavalo"
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "mercado",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "PickUp",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "poco",
+    "plano": "aereo",
+    "luz": "madrugada"
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Idle_B",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "beira_mato",
+    "plano": "aereo",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Running_A",
+      "rosto": "bravo"
+     }
+    ],
+    "objetos": [
+     "cavalo"
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "acostamento",
+    "plano": "close",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "curva",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "aberto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Running_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Dodge_Left",
+      "rosto": "susto",
+      "segura": "espada"
+     }
+    ],
+    "objetos": [
+     "cavalo"
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "aereo",
+    "luz": "tempestade",
+    "objetos": [
+     "cavalo"
+    ]
+   }
+  }
+ ],
+ "eventos": []
+}
