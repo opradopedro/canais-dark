@@ -1,0 +1,447 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "origem": "plano do Pedro (11/11): Zhong Kui; Shen Kuo, Mengxi Bitan",
+ "serie": "zhong-kui",
+ "serie_titulo": "Zhong Kui, the Demon Queller | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "mythology",
+  "old tales",
+  "legends",
+  "history",
+  "story time",
+  "zhong kui",
+  "demon queller",
+  "chinese mythology",
+  "chinese legend",
+  "demons"
+ ],
+ "elenco": {
+  "zhongkui": {
+   "semente": 5201,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "cabelo_cor": "#141010",
+   "pele": "#c8865a",
+   "roupa": "chines",
+   "camisa": "#7a1c24",
+   "acessorio": "barba"
+  },
+  "imperador": {
+   "semente": 5202,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "roupa": "rei",
+   "acessorio": "barba"
+  },
+  "duping": {
+   "semente": 5203,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "chines",
+   "camisa": "#2c4a6a"
+  },
+  "juiz": {
+   "semente": 5204,
+   "corpo": "idoso",
+   "cabelo": "careca",
+   "roupa": "chines",
+   "camisa": "#2c1d3a"
+  },
+  "xuhao": {
+   "semente": 5205,
+   "corpo": "magro",
+   "cabelo": "careca",
+   "roupa": "chines",
+   "camisa": "#3a2a4a"
+  }
+ },
+ "codigo": "CL054",
+ "parte": 3,
+ "anterior": "CL053",
+ "titulo": "He ate a demon in the Emperor's dream 👹 Zhong Kui Part 3 #story #shorts",
+ "capa": "HE ATE THE DEMON",
+ "descripcion": "In Emperor Xuanzong's fever dream, a small demon steals a jade flute. Then a giant with a wild beard tears it apart. The Emperor wakes up cured, and calls the greatest painter in China.\n\nWould you hang his face on your door?\n\nFrom the Chinese legend of Zhong Kui, as recorded by Shen Kuo in Mengxi Bitan (11th century) and in later Ming-era versions.\n#zhongkui #chinesemythology #mythology #ancientchina #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "In the Emperor's dream, a tiny demon ran through the palace *laughing*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He wore one shoe, and hung the other from his belt.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He stole the Emperor's *jade flute*, and the perfume pouch of his favorite consort.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The Emperor shouted for his guards. Nobody came.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The demon danced closer. My name is Xu Hao. I steal joy from people.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because that's when the floor started shaking.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A giant stormed into the hall, with a wild beard and a torn official's hat.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He grabbed the little demon by the neck.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He tore out its *eye*, and swallowed the demon whole.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then he bowed to the Emperor.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "I am Zhong Kui. I died on the palace steps, rejected for my face.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "I swore to rid the world of demons.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The Emperor woke up drenched in sweat, and the fever was *gone*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He called Wu Daozi, the greatest painter of the empire.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Paint the man from my dream. Exactly as I saw him.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Wu Daozi painted him so perfectly that the Emperor gasped.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "For centuries after, families hung that face on their doors at New Year.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "The face the Emperor rejected became the one that protected China.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "aereo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "xuhao",
+      "acao": "Running_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "xuhao",
+      "acao": "Jump_Full_Short",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "xuhao",
+      "acao": "PickUp",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "imperador",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "xuhao",
+      "acao": "Melee_Unarmed_Attack_Kick",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "imperador",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "nuvens",
+    "plano": "aereo",
+    "luz": "tempestade"
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Running_A",
+      "rosto": "bravo",
+      "segura": "espada",
+      "de": "escada",
+      "para": "salao"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Melee_Unarmed_Attack_Punch_A",
+      "rosto": "bravo"
+     },
+     {
+      "id": "xuhao",
+      "acao": "Hit_B",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Melee_1H_Attack_Stab",
+      "rosto": "bravo",
+      "segura": "espada"
+     },
+     {
+      "id": "xuhao",
+      "acao": "Death_B",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     },
+     {
+      "id": "imperador",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Idle_B",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "medio",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "imperador",
+      "acao": "Lie_StandUp",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "aereo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "imperador",
+      "acao": "Waving",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "imperador",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "imperador",
+      "acao": "Cheering",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "aereo",
+    "luz": "nascer_sol"
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": []
+}
