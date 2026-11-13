@@ -1,0 +1,425 @@
+{
+ "formato": "Survivor",
+ "origem": "gringa: Alemanha, caso Hinterkaifeck (1922) https://en.wikipedia.org/wiki/Hinterkaifeck_murders",
+ "serie": "footprints-snow",
+ "serie_titulo": "Footprints in the Snow | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "snowed in",
+  "attic",
+  "footprints",
+  "farmhouse",
+  "hinterkaifeck"
+ ],
+ "elenco": {
+  "sam": {
+   "semente": 4111,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "jaqueta",
+   "acessorio": "barba"
+  },
+  "jess": {
+   "semente": 4112,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "roupa": "casual"
+  },
+  "sheriff": {
+   "semente": 4113,
+   "corpo": "medio",
+   "cabelo": "grisalho",
+   "roupa": "guarda",
+   "acessorio": "bone"
+  }
+ },
+ "codigo": "SV043",
+ "parte": 3,
+ "anterior": "SV042",
+ "titulo": "Someone lived in our attic for 40 years ❄️ Part 3 #horror #shorts",
+ "capa": "IT WAVED",
+ "descripcion": "Sam and Jess ran to the car through the snow. From the attic window, something tall waved goodbye. The sheriff knew this house.\n\nWould you ever go back?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Part three. The nails on the hatch *bend* like wire.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Sam and Jess run out the back door into the snow.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The car is buried to the windows. Sam digs with his hands.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Jess looks back at the house, and freezes.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "In the tiny attic window, something *tall* is standing.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Too tall for a man. Its head touches the roof beams.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "It raises one long arm, and *waves* at them.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because the snow stopped falling right then.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The engine starts on the third try. They drive until the road ends.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The sheriff finds them at dawn, at the closed bridge.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "When they say the address, he takes off his hat.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The last owner ran from that house in 1984.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He said someone walked in the attic, and repeated his words.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "That morning, the sheriff checks the attic with two deputies.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "They find an old mattress, candle wax, and a *notebook*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Every page is their routine. What they ate. When they slept.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "And outside, fresh footprints lead *away* from the house, to Sam's car.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "If the snow shows prints coming in, count the ones going out.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "quarto"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "nuca",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Running_A",
+      "rosto": "medo",
+      "de": "sala",
+      "para": "porta"
+     },
+     {
+      "id": "jess",
+      "acao": "Running_B",
+      "rosto": "susto",
+      "de": "sala",
+      "para": "porta"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "medio",
+    "luz": "neve",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Digging",
+      "rosto": "bravo"
+     }
+    ],
+    "efeito": "neve",
+    "objetos": [
+     "carro"
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "close",
+    "luz": "neve",
+    "atores": [
+     {
+      "id": "jess",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ],
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "baixo",
+    "luz": "neve",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "janela"
+    },
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "fundo",
+    "plano": "auto",
+    "luz": "neve",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "fundo"
+    },
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "close",
+    "luz": "neve",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "janela"
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "aereo",
+    "luz": "madrugada"
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "indo",
+    "plano": "auto",
+    "luz": "madrugada",
+    "objetos": [
+     "carro"
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "curva",
+    "plano": "aberto",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "sheriff",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     },
+     {
+      "id": "sam",
+      "acao": "Idle_B",
+      "rosto": "triste"
+     },
+     {
+      "id": "jess",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ],
+    "objetos": [
+     "viatura"
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "close",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "sheriff",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "aereo",
+    "luz": "nublado"
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "medio",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "sheriff",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ],
+    "objetos": [
+     "viatura"
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "sheriff",
+      "acao": "Walking_A",
+      "rosto": "desconfiado",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "sheriff",
+      "acao": "Crouching",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "sheriff",
+      "acao": "Holding_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "baixo",
+    "luz": "dia",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "fundo"
+    },
+    "objetos": [
+     "carro"
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "fundo",
+    "plano": "aereo",
+    "luz": "neve",
+    "efeito": "neve"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 6,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}
