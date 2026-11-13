@@ -133,5 +133,5 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 
 ## autobus-tres (HM053-HM054) El autobús de las tres — origem: autoral
 - 3D: estrada (ponto, vindo, meio, acostamento, curva), luz noite/noite_neblina; criatura sem_rosto; objetos onibus; Lucía, 34, cozinheira do turno da noite (semente 5311, vestido, cabelo longo); o filho Toño.
-- HM053 parte 1/2: regras dos motoristas (o ônibus das 3:00 não existe, se parar não suba, se subir alguém sem rosto não olhe); 3:00 chega um ônibus vazio de luzes verdes; o motorista não tem rosto; a porta abre e de dentro a voz do filho: "mamá, súbete"; Toño está dormindo em casa. FALTA
+- HM053 parte 1/2: regras dos motoristas (o ônibus das 3:00 não existe, se parar não suba, se subir alguém sem rosto não olhe); 3:00 chega um ônibus vazio de luzes verdes; o motorista não tem rosto; a porta abre e de dentro a voz do filho: "mamá, súbete"; Toño está dormindo em casa. FEITO
 - HM054 parte 2/2: ela não sobe; janelas cheias de rostos apertados no vidro, um é a vizinha desaparecida; vai embora; 3:30 o ônibus real; o motorista: o das 3 caiu da curva em 1994; em casa, Toño dorme, mas os tênis molhados e uma passagem de 1994 no bolso. FALTA

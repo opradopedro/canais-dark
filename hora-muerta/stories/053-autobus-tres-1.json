@@ -1,0 +1,405 @@
+{
+ "formato": "Regla",
+ "origem": "autoral",
+ "serie": "autobus-tres",
+ "serie_titulo": "El autobús de las tres | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda",
+  "autobús fantasma",
+  "carretera",
+  "choferes"
+ ],
+ "elenco": {
+  "lucia": {
+   "semente": 5311,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "vestido"
+  },
+  "tono": {
+   "semente": 5312,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "casual"
+  },
+  "chofer": {
+   "semente": 5313,
+   "corpo": "forte",
+   "cabelo": "grisalho",
+   "roupa": "guarda",
+   "acessorio": "bone"
+  }
+ },
+ "codigo": "HM053",
+ "parte": 1,
+ "titulo": "Nunca subas al autobús de las 3:00 🚌 Parte 1 #terror #shorts",
+ "capa": "NO TE SUBAS",
+ "descripcion": "Los choferes de la ruta tienen una regla: el autobús de las tres no existe. Esa madrugada se detuvo frente a Lucía, y la voz de su hijo la llamó desde adentro.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú te habrías subido?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Imagina que a las tres de la mañana llega un *autobús* que no existe.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Lucía tiene treinta y cuatro años y cocina en el turno de la noche.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Sale a las dos y media y espera en la parada de la carretera.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Los choferes de la ruta le enseñaron tres reglas.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "El autobús de las tres *no existe*. Si se detiene, no te subas.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Y si sube alguien sin cara, no lo mires.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "El primero de verdad pasa a las tres y media. Siempre.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Esa madrugada hay neblina y la parada está sola.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Quédate, porque a las tres en punto algo dobló la curva.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Un autobús viejo, con *luces verdes* por dentro, frena frente a ella.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "No hace ruido de motor. Solo el chillido de los frenos.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Por la ventana, Lucía no ve pasajeros.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "El chofer voltea despacio. *No tiene cara*, solo piel lisa.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Ella baja la mirada al suelo, como dice la regla.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "La puerta se abre con un suspiro de aire frío.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Y desde adentro, una voz que conoce muy bien.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Mamá, *súbete*, ya vámonos a la casa.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Pero Toño está dormido en casa. ¿O no? Parte dos, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "curva",
+    "plano": "aereo",
+    "luz": "noite_neblina",
+    "objetos": [
+     "onibus"
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Work_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "neutro",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "chofer",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "meio",
+    "plano": "baixo",
+    "luz": "noite_neblina"
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "acostamento"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "vindo",
+    "plano": "auto",
+    "luz": "madrugada"
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "aberto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "curva",
+    "plano": "auto",
+    "luz": "noite_neblina"
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "vindo",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ],
+    "objetos": [
+     "onibus"
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "meio",
+    "plano": "ombro",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "ponto"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "medio",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ],
+    "objetos": [
+     "onibus"
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "indo",
+    "plano": "nuca",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "Lie_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "nuca",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "ponto"
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 12,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}
