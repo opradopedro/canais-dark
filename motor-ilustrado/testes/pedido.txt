@@ -1,3 +1,2 @@
 motor-ilustrado/testes/wukong-1.json
-# tentativa 2
-# tentativa 3
+# 13/11 23h: correcoes do Pedro (piscar, macaco velho, cartoes)

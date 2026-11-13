@@ -188,7 +188,7 @@ function boneco(a, el, t, sx, sy, esc) {
   X.save(); X.translate(0, hipY); X.rotate(lean);
   if (el.manto) { X.fillStyle = el.manto; X.strokeStyle = '#141414'; X.lineWidth = 4; const bal = Math.sin(t * 2.5) * 5; X.beginPath(); X.moveTo(-20, -L.tronco + 4); X.quadraticCurveTo(0, -L.tronco - 6, 20, -L.tronco + 4); X.quadraticCurveTo(34, -40, 52 + bal, 78); X.quadraticCurveTo(0, 92, -52 + bal, 78); X.quadraticCurveTo(-34, -40, -20, -L.tronco + 4); X.closePath(); X.fill(); X.stroke();
     X.strokeStyle = 'rgba(0,0,0,0.25)'; X.lineWidth = 3; X.beginPath(); X.moveTo(0, -L.tronco + 2); X.lineTo(0, 84); X.stroke(); X.fillStyle = '#7a1a12'; X.fillRect(-26, -40, 52, 12); }
-  if (el.armadura) { X.fillStyle = el.armadura; X.strokeStyle = '#5a3a08'; X.lineWidth = 4;
+  if (el.armadura) { X.fillStyle = el.armadura === true ? '#d8a431' : el.armadura; X.strokeStyle = '#5a3a08'; X.lineWidth = 4;
     X.beginPath(); X.moveTo(-28, -L.tronco + 8); X.quadraticCurveTo(0, -L.tronco - 4, 28, -L.tronco + 8); X.lineTo(22, -28); X.quadraticCurveTo(0, -18, -22, -28); X.closePath(); X.fill(); X.stroke();
     X.beginPath(); for (let i = 1; i < 4; i++) { X.moveTo(-22, -L.tronco + 8 + i * 22); X.quadraticCurveTo(0, -L.tronco + 16 + i * 22, 22, -L.tronco + 8 + i * 22); } X.stroke(); }
   const ro = el.roupa;
@@ -214,7 +214,7 @@ function boneco(a, el, t, sx, sy, esc) {
   // sujeira e rasgos crescem com o desgaste (zumbi/sobrevivencia)
   const dg = a.desgaste ?? el.desgaste ?? 0;
   if (dg > 0 && ro) { X.fillStyle = `rgba(60,40,20,${0.35 * dg})`; for (let i = 0; i < 8; i++) { X.beginPath(); X.ellipse(-22 + rnd(i) * 44, -L.tronco + 20 + rnd(i + 5) * 90, 6 + rnd(i + 2) * 8 * dg, 4 + rnd(i + 3) * 6, 0, 0, 7); X.fill(); } }
-  if (el.faixa) { X.fillStyle = el.faixa; X.beginPath(); X.moveTo(-26, -34); X.lineTo(26, -40); X.lineTo(26, -26); X.lineTo(-26, -20); X.closePath(); X.fill();
+  if (el.faixa) { X.fillStyle = el.faixa === true ? '#b8231c' : el.faixa; X.beginPath(); X.moveTo(-26, -34); X.lineTo(26, -40); X.lineTo(26, -26); X.lineTo(-26, -20); X.closePath(); X.fill();
     const bal = Math.sin(t * 4) * 8; X.beginPath(); X.moveTo(-20, -26); X.quadraticCurveTo(-34 - bal, 0, -30 - bal, 26); X.lineTo(-20, 24); X.quadraticCurveTo(-22, 0, -10, -24); X.fill(); }
   X.restore();
   perna(pose.lL); const mR = braco(pose.aR, true);
@@ -236,6 +236,7 @@ function boneco(a, el, t, sx, sy, esc) {
     X.fillStyle = el.rosto_cor || '#f0d2b0'; X.beginPath(); X.ellipse(4, 10, R * 0.78, R * 0.7, 0, 0, 7); X.fill();
     // topete de pelo
     X.fillStyle = el.pelo || '#8a5a30'; X.beginPath(); X.moveTo(-20, -R + 6); X.lineTo(-8, -R - 14); X.lineTo(0, -R + 2); X.lineTo(10, -R - 16); X.lineTo(18, -R + 4); X.fill();
+    if (el.barba_estilo) barba(el, R, 0); // macaco velho: barba branca
   } else {
     const dgc = a.desgaste ?? el.desgaste ?? 0;
     cabeloAtras(el, R, dgc);
@@ -266,7 +267,7 @@ function fx(nome, t, k, cena, v) {
     case 'faiscas': for (let i = 0; i < 70; i++) { const kk = (t * 0.9 + rnd(i)) % 1; const ang = rnd(i + 7) * Math.PI * 2, r = kk * 500; X.fillStyle = `rgba(255,${180 + rnd(i) * 70 | 0},80,${1 - kk})`; X.fillRect(W / 2 + Math.cos(ang) * r, H * 0.55 + Math.sin(ang) * r * 0.6, 5, 5); } break;
     case 'velocidade': X.strokeStyle = 'rgba(255,255,255,0.55)'; X.lineWidth = 3; for (let i = 0; i < 46; i++) { const ang = rnd(i) * Math.PI * 2, r0 = 380 + rnd(i + 2) * 200 + ((t * 900 + i * 50) % 300); X.beginPath(); X.moveTo(W / 2 + Math.cos(ang) * r0, H / 2 + Math.sin(ang) * r0); X.lineTo(W / 2 + Math.cos(ang) * (r0 + 220), H / 2 + Math.sin(ang) * (r0 + 220)); X.stroke(); } break;
     case 'brilho': { const u = cena.brilho || [0.5, 0.5]; const [x, y] = tela(v, u[0], u[1]); const p = 0.7 + 0.3 * Math.sin(t * 6); const g = X.createRadialGradient(x, y, 10, x, y, 520 * p); g.addColorStop(0, 'rgba(255,225,120,0.85)'); g.addColorStop(1, 'rgba(255,190,60,0)'); X.fillStyle = g; X.fillRect(0, 0, W, H); break; }
-    case 'raio': if ((t * 1.7) % 1 < 0.08) { X.fillStyle = 'rgba(235,240,255,0.65)'; X.fillRect(0, 0, W, H); } break;
+    case 'raio': { const p = t % 2.4; if (p < 0.3) { X.fillStyle = `rgba(235,240,255,${0.35 * (1 - p / 0.3)})`; X.fillRect(0, 0, W, H); } } break; // um clarão suave a cada 2,4 s (Pedro: nada piscando)
     case 'sangue': { const u = cena.sangue || [0.5, 0.5]; const [x0, y0] = tela(v, u[0], u[1]); for (let i = 0; i < 60; i++) { const kk = (t * 1.2 + rnd(i)) % 1; const ang = -Math.PI / 2 + (rnd(i + 3) - 0.5) * 2.2, sp = 300 + rnd(i) * 500; X.fillStyle = `rgba(190,10,20,${1 - kk * 0.8})`; X.beginPath(); X.arc(x0 + Math.cos(ang) * sp * kk, y0 + Math.sin(ang) * sp * kk + 900 * kk * kk, 6 + rnd(i) * 7, 0, 7); X.fill(); } break; }
     case 'vermelho': X.fillStyle = `rgba(200,0,0,${0.18 + 0.1 * Math.sin(t * 8)})`; X.fillRect(0, 0, W, H); break;
     case 'escuro': X.fillStyle = 'rgba(0,0,20,0.35)'; X.fillRect(0, 0, W, H); break;
@@ -282,17 +283,17 @@ function cartao(c, k, pal) {
   const fundo = pal.cartao || '#f3ead6', tinta = pal.tinta || '#2a1d10', dest = pal.destaque || '#b8231c';
   if (c.tipo === 'nome') {
     const x = 90 - (1 - ent) * 300, y = H - 330;
-    X.fillStyle = fundo; X.strokeStyle = tinta; X.lineWidth = 5; X.beginPath(); X.roundRect(x, y, 620, 150, 14); X.fill(); X.stroke();
-    X.fillStyle = dest; X.fillRect(x, y, 14, 150);
-    X.fillStyle = tinta; X.font = '900 54px Georgia, serif'; X.fillText(c.titulo || '', x + 40, y + 70);
-    X.font = 'italic 32px Georgia, serif'; X.fillStyle = '#5a4630'; X.fillText(c.sub || '', x + 40, y + 118);
+    X.fillStyle = fundo; X.strokeStyle = tinta; X.lineWidth = 5; X.beginPath(); X.roundRect(x, y, 760, 175, 14); X.fill(); X.stroke();
+    X.fillStyle = dest; X.fillRect(x, y, 14, 175);
+    X.fillStyle = tinta; X.font = '900 64px Georgia, serif'; X.fillText(c.titulo || '', x + 40, y + 80);
+    X.font = 'italic 40px Georgia, serif'; X.fillStyle = '#3a2a18'; X.fillText(c.sub || '', x + 40, y + 140);
   } else { // fato: painel lateral com numero grande
-    const w = 600, esq = c.lado === 'esq', x = esq ? 80 - (1 - ent) * 400 : W - w - 80 + (1 - ent) * 400, y = 120;
-    X.fillStyle = fundo; X.strokeStyle = tinta; X.lineWidth = 6; X.beginPath(); X.roundRect(x, y, w, 420, 18); X.fill(); X.stroke();
-    X.fillStyle = '#5a4630'; X.font = '700 30px Georgia, serif'; X.fillText((c.titulo || '').toUpperCase(), x + 40, y + 70);
-    X.fillStyle = dest; X.font = '900 120px Georgia, serif'; X.fillText(c.valor || '', x + 36, y + 210);
-    X.fillStyle = tinta; X.font = '600 34px Georgia, serif';
-    let yy = y + 280; for (const l of quebrar(c.sub || '', 30)) { X.fillText(l, x + 40, yy); yy += 44; }
+    const w = 680, esq = c.lado === 'esq', x = esq ? 80 - (1 - ent) * 400 : W - w - 80 + (1 - ent) * 400, y = 120;
+    X.fillStyle = fundo; X.strokeStyle = tinta; X.lineWidth = 6; X.beginPath(); X.roundRect(x, y, w, 470, 18); X.fill(); X.stroke();
+    X.fillStyle = '#5a4630'; X.font = '700 36px Georgia, serif'; X.fillText((c.titulo || '').toUpperCase(), x + 40, y + 74);
+    X.fillStyle = dest; X.font = '900 130px Georgia, serif'; X.fillText(c.valor || '', x + 36, y + 218);
+    X.fillStyle = tinta; X.font = '700 44px Georgia, serif';
+    let yy = y + 300; for (const l of quebrar(c.sub || '', 26)) { X.fillText(l, x + 40, yy); yy += 54; }
   }
   X.restore();
 }
@@ -354,9 +355,16 @@ window.render = function (t) {
   vinheta(cena.vinheta ?? 0.5);
   const fl = (cena.fx || []).find(f => f.startsWith('flash'));
   if (fl) { const at = parseFloat(fl.split('@')[1] || '0'), d = tl - at; if (d >= 0 && d < 0.35) { X.fillStyle = `rgba(255,250,235,${1 - d / 0.35})`; X.fillRect(0, 0, W, H); } }
-  if (cena.cartao) { const c = cena.cartao; const c0 = c.t0 ?? 0.3, dur = c.dur ?? Math.min(3.2, cena.t1 - cena.t0 - c0); cartao(c, (tl - c0) / dur, E.paleta || {}); }
-  // corte: 2 quadros pretos no comeco da cena (menos na primeira)
-  if (i > 0 && tl < 0.05) { X.fillStyle = 'rgba(0,0,0,0.85)'; X.fillRect(0, 0, W, H); }
+  // cartoes: ficam tempo de leitura (min. 5 s, mais se tiver muito texto) e podem passar do corte (Pedro 13/11: "mais tempo na tela")
+  let proprio = false;
+  for (let j = i; j >= Math.max(0, i - 2); j--) {
+    const c = cenas[j].cartao; if (!c) continue;
+    const ini = cenas[j].t0 + (c.t0 ?? 0.3), pal = [c.titulo, c.valor, c.sub].join(' ').trim().split(/\s+/).length;
+    const dur = c.dur ?? Math.max(5, 2.5 + pal * 0.4), d = t - ini;
+    if (j < i && (proprio || d >= dur || t - cenas[j].t1 > 1.2)) continue; // passa do corte no maximo 1,2 s
+    if (d >= 0 && d < dur) { cartao(c, d / dur, E.paleta || {}); if (j === i) proprio = true; }
+    if (j < i) break;
+  }
   legenda(t);
 };
 </script></body></html>

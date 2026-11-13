@@ -40,8 +40,10 @@
   },
   "velho": {
    "tipo": "macaco",
-   "pelo": "#8a8a84",
-   "rosto_cor": "#d8c4a8"
+   "pelo": "#7a5434",
+   "rosto_cor": "#d8c4a8",
+   "barba_estilo": "cheia",
+   "barba": "#e8e6de"
   },
   "imperador": {
    "tipo": "humano",
@@ -461,7 +463,7 @@
      "titulo": "His reign",
      "valor": "300",
      "sub": "years of feasts, and no enemy alive",
-     "t0": 1.0,
+     "t0": 0.5,
      "lado": "esq"
     }
    }
@@ -563,7 +565,7 @@
    }
   },
   {
-   "texto": "Would you have jumped? Part two, {when_next}.",
+   "texto": "Would you have jumped? Part two, tomorrow.",
    "pausa": 0.3,
    "cena": {
     "fundo": "pico-pedra",
