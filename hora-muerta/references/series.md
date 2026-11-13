@@ -106,9 +106,9 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 
 ## Semana de 16/11 a 27/11/2026 (HM043-HM054) — por: claude (rotina de sexta, 13/11). Estoque 3D antes: HM041-HM042 (até 15/11). 3 gringas (EUA), 3 autorais. Motor cartoon (`"visual": "3d"`). Cenário principal e criatura diferentes em cada série.
 
-## espejo (HM043-HM044) El juego del espejo — origem: gringa: EUA, "Mirror Reflection Challenge" / Bloody Mary no TikTok https://www.urbanlegendsmysteryandmyth.com/2025/10/the-mirror-reflection-challenge.html (história nossa, Guadalajara)
+## juego-espejo (HM043-HM044) El juego del espejo — origem: gringa: EUA, "Mirror Reflection Challenge" / Bloody Mary no TikTok https://www.urbanlegendsmysteryandmyth.com/2025/10/the-mirror-reflection-challenge.html (história nossa, Guadalajara)
 - 3D: casa_interior (quarto, janela, sala, porta), luz interior_noite/madrugada; criatura fantasma; Valeria, 22, estudante (semente 4301, cabelo longo); a irmã Paola (semente 4302).
-- HM043 parte 1/2: reto viral: 3:00, vela, frente ao espelho, perguntar 3 vezes "¿quién está detrás de mí?"; regras (não tirar os olhos, não apagar a vela, se o reflexo sorrir primeiro, quebrar o espelho); Valeria grava para a irmã; 3:03 o reflexo atrasa meio segundo; a vela apaga; no espelho, uma mulher de cabelo molhado põe as mãos nos ombros dela; no quarto não há ninguém. FALTA
+- HM043 parte 1/2: reto viral: 3:00, vela, frente ao espelho, perguntar 3 vezes "¿quién está detrás de mí?"; regras (não tirar os olhos, não apagar a vela, se o reflexo sorrir primeiro, quebrar o espelho); Valeria grava para a irmã; 3:03 o reflexo atrasa meio segundo; a vela apaga; no espelho, uma mulher de cabelo molhado põe as mãos nos ombros dela; no quarto não há ninguém. FEITO
 - HM044 parte 2/2: mãos frias de verdade; ela não desvia os olhos; o reflexo sorri, ela não; quebra o espelho com o celular; Paola acende a luz; no vídeo, depois do vidro quebrado, o reflexo continua lá e sai andando do quadro; desde então todo reflexo de Valeria atrasa meio segundo; na janela, o reflexo sorri para ela. FALTA
 
 ## ojos-negros (HM045-HM046) Los niños de ojos negros — origem: gringa: EUA, lenda dos "black-eyed children" https://en.wikipedia.org/wiki/Black-eyed_children (história nossa, Monterrey)
