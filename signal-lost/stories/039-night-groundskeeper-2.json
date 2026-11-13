@@ -1,0 +1,407 @@
+{
+ "formato": "Survivor",
+ "origem": "autoral",
+ "serie": "night-groundskeeper",
+ "serie_titulo": "Rules for the Night Groundskeeper | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "cemetery",
+  "groundskeeper",
+  "rules horror",
+  "night shift"
+ ],
+ "elenco": {
+  "eli": {
+   "semente": 3811,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "guarda",
+   "acessorio": "barba"
+  }
+ },
+ "codigo": "SV039",
+ "parte": 2,
+ "anterior": "SV038",
+ "titulo": "Something crawls under the cemetery lawn ⚰️ Part 2 #horror #shorts",
+ "capa": "NEVER STEP ON IT",
+ "descripcion": "Eli broke rule three by accident. He stepped on fresh dirt after midnight. And the ground under the lawn started following him.\n\n> Part 3: {when_next}.\nWould you run or stay still?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Part two. Eli jumps back from the grave, and his boot lands on *fresh dirt*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Rule three. Never step on fresh dirt after midnight.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The ground sinks under his foot, soft, warm, like a chest breathing.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then the digging stops.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "For a second, the whole cemetery is silent.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Eli walks away slowly, flashlight down, counting his steps.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Behind him, the grass *bulges* and flattens. Bulges and flattens.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Something is crawling under the lawn, following him.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because Eli found the only place it couldn't reach.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He runs to the old *mausoleum* and climbs onto the stone roof.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The line under the grass circles the mausoleum. Once. Twice.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "His radio crackles. Static. Then a voice he doesn't know.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "New guy, stay up there. It doesn't like stone.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "At 3:40 AM, the circling stops right below him.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Eli shines the light down at the dirt.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A hand made of soil pushes out of the ground.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "It *waves at him*, slowly, like it's saying hello.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Then it points at his house. Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "fundo",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Dodge_Backward",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "fundo",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Idle_B",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "fundo"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "arvore_morta",
+    "plano": "aereo",
+    "luz": "noite_neblina"
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "cruz_grande",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entre_cruzes",
+    "plano": "nuca",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Walking_A",
+      "rosto": "medo",
+      "segura": "lanterna",
+      "de": "fundo",
+      "para": "entre_cruzes"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entre_cruzes",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "entre_cruzes"
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "cruz_grande",
+    "plano": "medio",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Walking_B",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "entre_cruzes"
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entrada",
+    "plano": "aereo",
+    "luz": "noite"
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Running_A",
+      "rosto": "susto",
+      "segura": "lanterna",
+      "de": "cruz_grande",
+      "para": "mausoleu"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "aereo",
+    "luz": "noite",
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "mausoleu"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Holding_A",
+      "rosto": "desconfiado",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "ombro",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Crouching",
+      "rosto": "medo",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "mausoleu"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Crouching",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entre_cruzes",
+    "plano": "close",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "entre_cruzes"
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "nuca",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Crouching",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "entre_cruzes"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "aereo",
+    "luz": "madrugada"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 10,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}
