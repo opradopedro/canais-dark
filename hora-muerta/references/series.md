@@ -119,7 +119,7 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 ## espantapajaros (HM047-HM048) Los siete espantapájaros — origem: autoral
 - 3D: vila (praca, moinho, poco, casa, alto), luz entardecer/lua_cheia/neblina_baixa; criatura espantalho; Juan, 30, peão da colheita (semente 4711, chapéu=bone, camisa casual).
 - HM047 parte 1/2: na fazenda de don Lalo há 7 espantalhos; regras (contar ao anoitecer, nunca dar as costas para o campo, se forem 8, não dormir); don Lalo sumiu na colheita passada; 3ª noite são 8; o oitavo veste a camisa de don Lalo; de manhã são 7, mas um está perto do poço. FEITO
-- HM048 parte 2/2: Juan vigia do poço; a cada hora um passo mais perto; ele não dá as costas; 4:50 o oitavo está a um braço, cheira a terra e tabaco do don Lalo; sussurra "ahora te toca cuidar a ti"; amanhece, são 7; no campo, um espantalho novo com o chapéu de Juan. FALTA
+- HM048 parte 2/2: Juan vigia do poço; a cada hora um passo mais perto; ele não dá as costas; 4:50 o oitavo está a um braço, cheira a terra e tabaco do don Lalo; sussurra "ahora te toca cuidar a ti"; amanhece, são 7; no campo, um espantalho novo com o chapéu de Juan. FEITO
 
 ## voz-del-monte (HM049-HM050) La voz que imita — origem: gringa: EUA, trend "mimic" (vozes que imitam gente na floresta) no TikTok https://dailydot.com/secret-of-the-mimic-tiktok (história nossa, Sierra de Durango)
 - 3D: floresta (clareira, trilha, entre_arvores, pe_torre, fundo, toco), luz noite_neblina/neblina_baixa; criatura alta; Rosa, 27, guarda-florestal (semente 4911, rabo, jaqueta); o irmão Beto (semente 4912).

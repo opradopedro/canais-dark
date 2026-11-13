@@ -1,0 +1,409 @@
+{
+ "formato": "Regla",
+ "origem": "autoral",
+ "serie": "siete-espantapajaros",
+ "serie_titulo": "Los siete espantapájaros | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda",
+  "espantapájaros",
+  "campo",
+  "rancho"
+ ],
+ "elenco": {
+  "juan": {
+   "semente": 4711,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "acessorio": "bone"
+  }
+ },
+ "codigo": "HM048",
+ "parte": 2,
+ "anterior": "HM047",
+ "titulo": "El octavo espantapájaros me habló 🌽 Parte 2 #terror #shorts",
+ "capa": "AHORA TE TOCA",
+ "descripcion": "Juan vigiló el campo desde el pozo toda la noche. Cada hora, el octavo espantapájaros estaba un paso más cerca.\n\n¿Tú le darías la espalda?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Parte dos. Juan decide vigilar desde el *pozo*, con la linterna y un machete.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Esa noche cuenta otra vez al atardecer. Son ocho.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "El octavo sigue con la camisa de Don Lalo.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Juan no le da la espalda al campo. Es la regla.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A las once, el octavo está un surco más cerca.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A la una, otro surco. Nadie lo vio moverse.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Juan escucha la paja crujir, como alguien que respira.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Quédate, porque a las cuatro y cincuenta ya no había distancia.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "El espantapájaros está *a un brazo* de él, quieto, con la cabeza ladeada.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Huele a tierra mojada y al tabaco que fumaba Don Lalo.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Juan levanta el machete, pero no se atreve a cortar.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Debajo del sombrero de paja hay una cara cosida con hilo negro.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Y la boca cosida se mueve despacio.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Gracias por cuidar mi rancho, muchacho.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Ahora *te toca a ti* cuidarlo.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Sale el sol. Juan cuenta los espantapájaros. Son siete.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Pero en el surco nuevo hay uno con *el sombrero de Juan*.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Y en la casa, el capataz cuenta siete trabajadores, aunque llegaron seis.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "vila",
+    "marca": "poco",
+    "plano": "aereo",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "juan",
+      "acao": "Walking_A",
+      "rosto": "bravo",
+      "segura": "lanterna",
+      "de": "casa",
+      "para": "poco"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "auto",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "juan",
+      "acao": "Interact",
+      "rosto": "desconfiado"
+     }
+    ],
+    "criatura": {
+     "tipo": "espantalho",
+     "marca": "moinho"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "vila",
+    "marca": "moinho",
+    "plano": "close",
+    "luz": "lua_cheia",
+    "criatura": {
+     "tipo": "espantalho",
+     "marca": "moinho"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "vila",
+    "marca": "poco",
+    "plano": "ombro",
+    "luz": "lua_cheia",
+    "atores": [
+     {
+      "id": "juan",
+      "acao": "Idle_A",
+      "rosto": "desconfiado",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "vila",
+    "marca": "mercado",
+    "plano": "baixo",
+    "luz": "lua_cheia",
+    "criatura": {
+     "tipo": "espantalho",
+     "marca": "mercado"
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "auto",
+    "luz": "neblina_baixa",
+    "criatura": {
+     "tipo": "espantalho",
+     "marca": "praca"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "vila",
+    "marca": "poco",
+    "plano": "close",
+    "luz": "neblina_baixa",
+    "atores": [
+     {
+      "id": "juan",
+      "acao": "Idle_B",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "aereo",
+    "luz": "madrugada"
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "vila",
+    "marca": "poco",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "juan",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "espantalho",
+     "marca": "poco"
+    }
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "vila",
+    "marca": "poco",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "juan",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "vila",
+    "marca": "poco",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "juan",
+      "acao": "Melee_1H_Attack_Chop",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ],
+    "criatura": {
+     "tipo": "espantalho",
+     "marca": "poco"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "espantalho",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "vila",
+    "marca": "taverna",
+    "plano": "auto",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "espantalho",
+     "marca": "taverna"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "vila",
+    "marca": "poco",
+    "plano": "ombro",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "juan",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "espantalho",
+     "marca": "poco"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "juan",
+      "acao": "Crouching",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "espantalho",
+     "marca": "praca"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "aberto",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "juan",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "vila",
+    "marca": "moinho",
+    "plano": "baixo",
+    "luz": "nascer_sol",
+    "criatura": {
+     "tipo": "espantalho",
+     "marca": "moinho"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "aereo",
+    "luz": "dia"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 8,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}
