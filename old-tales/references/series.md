@@ -124,3 +124,33 @@ Peças: `f_mosteiro`, `f_igreja`, `f_aldeia`, `f_campo`, `f_estrada_antiga`, `f_
 - CL044 parte 4/5: reescrito no tom 12/11 (Protetor dos Cavalos no Céu, Grande Sábio Igual ao Céu, pêssegos de 9 mil anos, pílulas de Laozi, 100 mil soldados, duelo de transformações com Erlang, 49 dias na fornalha de oito trigramas). Em `stories/044-wukong-4.json`. FEITO
 - CL045 parte 5/5 (última): reescrito no tom 12/11 (aposta com a mão de Buda, 5 pilares no fim do universo, xixi no pilar do meio, Montanha dos Cinco Dedos por 500 anos com ferro derretido, Tang Sanzang tira o selo, gancho final voltando à pedra). Em `stories/045-wukong-5.json`. FEITO
 - Depois: conto grego (3 partes, sugestão Perseu e a Medusa), conto da China antiga (3 partes, sugestão Mulan), Zhong Kui (3 partes). FALTA
+
+## Semana de 17/11 a 28/11/2026 (CL046-CL057) — por: claude (rotina de sexta, 13/11). Estoque antes: CL045 (até 16/11). Ordem pedida pelo Pedro (11/11): conto grego, China antiga, Zhong Kui; depois Termópilas. Tom 12/11 (ação, 4+ cenas de luta), motor cartoon, `"piano": 0`. Origem: plano do Pedro + fonte clássica (não deu para medir tendência sem ferramenta paga).
+
+## perseus (CL046-CL048) Perseus and the Gorgon — tema mito, paleta grecia — origem: plano do Pedro (11/11, "conto da Grécia")
+- Fontes: Apolodoro, *Biblioteca* 2.4.1-3; Ovídio, *Metamorfoses* 4-5; Hesíodo, *Teogonia* 270-281.
+- 3D: grecia_templo, ilha_mar, caverna_gorgonas, mar_jangada; criatura mulher_branca (Medusa; falta criatura górgona com cobras, anotado no PLANO-MUNDOS) e gigante_mitologico (Ceto, o monstro marinho); elenco perseu (semente 4601), polidectes (rei), danae, atena.
+- CL046 parte 1/3: bebê jogado ao mar num baú com a mãe (profecia de Acrísio); ilha de Sérifo; rei Polidectes quer Dânae; banquete, Perseu promete qualquer presente, "the head of the Gorgon"; quem olha vira pedra; Atena aparece com o escudo de bronze. FALTA
+- CL047 parte 2/3: as Greias com um olho só, ele rouba o olho; ninfas dão sandálias aladas, bolsa (kibisis) e elmo de Hades; caverna cheia de estátuas que eram homens; anda de costas olhando o reflexo no escudo; corta a cabeça; Pégaso e Crisaor saem do pescoço; as irmãs acordam. FALTA
+- CL048 parte 3/3: foge invisível; na Etiópia Andrômeda acorrentada para o monstro Ceto; luta no ar; volta a Sérifo; Polidectes ri; ele levanta a cabeça e a corte vira pedra; entrega a cabeça a Atena (égide); a profecia: anos depois o disco que mata Acrísio. Loop com o baú no mar. FALTA
+
+## mulan (CL049-CL051) The Ballad of Mulan — tema epico, paleta china — origem: plano do Pedro (11/11, "conto da China antiga")
+- Fonte: *Balada de Mulan* (Mulan ci, poema yuefu, dinastia Wei do Norte, séc. V-VI; compilado por Guo Maoqian, séc. XII). É lenda/poema, não registro histórico: dizer isso.
+- 3D: aldeia_china (casa, praca, mercado, poco), campo_batalha (meio, vindo, pe_torre, curva), palacio_ceu (salao = corte do imperador); luz tempestade nas viradas, neve na fronteira; elenco mulan (semente 4901, rabo, soldado_china), pai, general.
+- CL049 parte 1/3: suspiros no tear; 12 listas de convocação com o nome do pai, velho e doente, sem filho homem; ela compra cavalo, sela, rédea e chicote em 4 mercados; corta o cabelo e parte; à noite no Rio Amarelo não ouve mais a mãe chamando. FALTA
+- CL050 parte 2/3: montanhas Yan, cavaleiros xiongnu/rouran; 10 mil li a cavalo; frio que congela a armadura; esconder-se entre homens por anos; batalha, generais morrem; "after a hundred battles"; 12 anos. FALTA
+- CL051 parte 3/3: o imperador oferece cargo alto e riqueza; ela pede só um camelo rápido para voltar para casa; a família a recebe; troca a armadura pelo vestido; os camaradas a veem e ficam chocados: 12 anos e ninguém soube; a fala das lebres (macho e fêmea correndo lado a lado, quem distingue?). FALTA
+
+## zhong-kui (CL052-CL054) Zhong Kui, the Demon Queller — tema mito, paleta china — origem: plano do Pedro (11/11, "Zhong Kui")
+- Fontes: lenda registrada por Shen Kuo, *Mengxi Bitan* (séc. XI), sobre o sonho do imperador Xuanzong (Tang); versões populares da Dinastia Ming.
+- 3D: palacio_ceu (salao, colunas, escada), submundo (juiz, livro, entrada, corredor), aldeia_china (praca, casa, templo); criaturas vulto (fantasmas) e coisa_com_chifres (demônio Xu Hao); elenco zhongkui (semente 5201, forte, barba), imperador, xuhao.
+- CL052 parte 1/3: estudioso brilhante e feio; passa em 1º no exame imperial; o imperador o rejeita pela aparência; em fúria bate a cabeça nos degraus do palácio e morre; o amigo Du Ping o enterra. FALTA
+- CL053 parte 2/3: no submundo, o juiz dos mortos vê injustiça e o faz Rei dos Demônios; exército de fantasmas; ele caça demônios; séculos depois, o imperador Xuanzong cai doente de febre. FALTA
+- CL054 parte 3/3: no sonho do imperador, demônio Xu Hao rouba a flauta de jade e a bolsa de Yang Guifei; um gigante de barba e chapéu de oficial arranca o olho do demônio e o devora; diz quem é; o imperador acorda curado e manda Wu Daozi pintar; o retrato vira proteção nas portas no Ano Novo. FALTA
+
+## thermopylae (CL055-CL057) The 300 at Thermopylae — tema epico, paleta grecia — origem: autoral (backlog Esparta, frente "soldado")
+- Fonte: Heródoto, *Histórias* livro 7 (176-228); números: Heródoto diz milhões, historiadores modernos estimam 100-300 mil persas; ~7 mil gregos com os 300 espartanos.
+- 3D: esparta_cidade (praca, casa, templo, escada), campo_batalha (meio, vindo, indo, pe_torre, curva, beira_mato); luz por_sol/tempestade/nascer_sol; elenco leonidas (semente 5501, soldado_esparta, barba), dienekes, efialtes.
+- CL055 parte 1/3: "You wake up in 480 BC as one of 300"; Xerxes; oráculo de Delfos (um rei morre ou Esparta cai); Leônidas escolhe só homens com filhos; passo das Termópilas, 15 m de largura; os persas pedem as armas: "Molon labe". FALTA
+- CL056 parte 2/3: 4 dias esperando; flechas que tapam o sol, "then we fight in the shade" (Dienekes); 2 dias de muralha de escudos; os Imortais recuam; Xerxes salta do trono três vezes. FALTA
+- CL057 parte 3/3: Efialtes mostra o caminho da montanha; Leônidas manda os aliados embora; ficam 300 + téspios + tebanos; última luta no morro, lanças quebram, lutam com espadas e mãos; a pedra com a inscrição de Simônides. FALTA

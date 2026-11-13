@@ -103,3 +103,35 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 - 3D: estrada (noite_neblina, lua_cheia), bairro, casa_interior; criatura mulher_branca; protagonista Ricardo (semente 4113, jaqueta, boné).
 - HM041 parte 1/2: nadie se detiene en el km 13; mujer de blanco pide aventón; Ricardo vuelve a pie, niebla, pasos descalzos, una voz dice su nombre. FEITO
 - HM042 parte 2/2: camina con los ojos cerrados sin contestar; el chofer vio a la mujer con la mano en su hombro; anoche, pasos descalzos dentro de su casa. FEITO
+
+## Semana de 16/11 a 27/11/2026 (HM043-HM054) — por: claude (rotina de sexta, 13/11). Estoque 3D antes: HM041-HM042 (até 15/11). 3 gringas (EUA), 3 autorais. Motor cartoon (`"visual": "3d"`). Cenário principal e criatura diferentes em cada série.
+
+## espejo (HM043-HM044) El juego del espejo — origem: gringa: EUA, "Mirror Reflection Challenge" / Bloody Mary no TikTok https://www.urbanlegendsmysteryandmyth.com/2025/10/the-mirror-reflection-challenge.html (história nossa, Guadalajara)
+- 3D: casa_interior (quarto, janela, sala, porta), luz interior_noite/madrugada; criatura fantasma; Valeria, 22, estudante (semente 4301, cabelo longo); a irmã Paola (semente 4302).
+- HM043 parte 1/2: reto viral: 3:00, vela, frente ao espelho, perguntar 3 vezes "¿quién está detrás de mí?"; regras (não tirar os olhos, não apagar a vela, se o reflexo sorrir primeiro, quebrar o espelho); Valeria grava para a irmã; 3:03 o reflexo atrasa meio segundo; a vela apaga; no espelho, uma mulher de cabelo molhado põe as mãos nos ombros dela; no quarto não há ninguém. FALTA
+- HM044 parte 2/2: mãos frias de verdade; ela não desvia os olhos; o reflexo sorri, ela não; quebra o espelho com o celular; Paola acende a luz; no vídeo, depois do vidro quebrado, o reflexo continua lá e sai andando do quadro; desde então todo reflexo de Valeria atrasa meio segundo; na janela, o reflexo sorri para ela. FALTA
+
+## ojos-negros (HM045-HM046) Los niños de ojos negros — origem: gringa: EUA, lenda dos "black-eyed children" https://en.wikipedia.org/wiki/Black-eyed_children (história nossa, Monterrey)
+- 3D: bairro (frente_casa, poste, calcada, rua) + casa_interior (porta, sala); criatura olhos_no_escuro; Don Tomás, 58, taxista aposentado (semente 4511, grisalho, bigode/barba).
+- HM045 parte 1/2: 1:20 batidas; dois meninos de moletom pedem para entrar e "usar o telefone"; voz de adulto, nunca piscam; regra que a avó dizia (nunca convide ninguém a entrar de madrugada); sob a luz do pórtico, olhos todos pretos: "solo tiene que decir que sí". FALTA
+- HM046 parte 2/2: ele diz não; ficam a noite toda; o telefone toca com o número da própria casa; a voz da esposa diz "déjalos pasar", mas ela está na casa da irmã; 6:00 somem; a câmera do vizinho mostra os dois entrando na casa ao lado, convidados; na porta de Tomás, duas mãozinhas pretas marcadas por DENTRO. FALTA
+
+## espantapajaros (HM047-HM048) Los siete espantapájaros — origem: autoral
+- 3D: vila (praca, moinho, poco, casa, alto), luz entardecer/lua_cheia/neblina_baixa; criatura espantalho; Juan, 30, peão da colheita (semente 4711, chapéu=bone, camisa casual).
+- HM047 parte 1/2: na fazenda de don Lalo há 7 espantalhos; regras (contar ao anoitecer, nunca dar as costas para o campo, se forem 8, não dormir); don Lalo sumiu na colheita passada; 3ª noite são 8; o oitavo veste a camisa de don Lalo; de manhã são 7, mas um está perto do poço. FALTA
+- HM048 parte 2/2: Juan vigia do poço; a cada hora um passo mais perto; ele não dá as costas; 4:50 o oitavo está a um braço, cheira a terra e tabaco do don Lalo; sussurra "ahora te toca cuidar a ti"; amanhece, são 7; no campo, um espantalho novo com o chapéu de Juan. FALTA
+
+## voz-del-monte (HM049-HM050) La voz que imita — origem: gringa: EUA, trend "mimic" (vozes que imitam gente na floresta) no TikTok https://dailydot.com/secret-of-the-mimic-tiktok (história nossa, Sierra de Durango)
+- 3D: floresta (clareira, trilha, entre_arvores, pe_torre, fundo, toco), luz noite_neblina/neblina_baixa; criatura alta; Rosa, 27, guarda-florestal (semente 4911, rabo, jaqueta); o irmão Beto (semente 4912).
+- HM049 parte 1/2: regra dos velhos da serra (se ouvir seu nome no monte, não responda; se alguém conhecido chamar das árvores, não vá); Beto vai buscar lenha; 20 min depois a voz de Beto chama de um lado, "me torcí el pie"; e outra voz de Beto chama do outro lado. FALTA
+- HM050 parte 2/2: ela chama no rádio; o Beto de verdade responde da torre de vigia; ela anda até a torre sem responder às vozes; a coisa imita a voz dela para chamar o Beto; trancados na torre, algo alto na janela fala com a voz da mãe deles; amanhece; no rádio, a voz de Rosa: "ya estoy adentro". FALTA
+
+## nahual (HM051-HM052) El nahual del panteón — origem: autoral
+- 3D: cemiterio (entrada, entre_cruzes, cruz_grande, mausoleu, fundo, arvore_morta), luz lua_cheia/noite/madrugada; criatura lobisomem (nahual); Martín, 45, velador do panteão municipal (semente 5111, jaqueta, bone).
+- HM051 parte 1/2: regras do velador antigo (o cachorro grande que entra não é cachorro, não chame, não dê as costas, acenda a vela da capela); 2:00 um cão preto enorme entre as cruzes; fica de pé em duas patas; fala com voz de homem: "Martín, ábreme la capilla". FALTA
+- HM052 parte 2/2: não abre; acende a vela; a coisa rodeia até as 5; de manhã o curandeiro do povoado aparece arranhado, olha para Martín e sorri: "buen velador"; à noite, arranhões na porta da capela, por DENTRO. FALTA
+
+## autobus-tres (HM053-HM054) El autobús de las tres — origem: autoral
+- 3D: estrada (ponto, vindo, meio, acostamento, curva), luz noite/noite_neblina; criatura sem_rosto; objetos onibus; Lucía, 34, cozinheira do turno da noite (semente 5311, vestido, cabelo longo); o filho Toño.
+- HM053 parte 1/2: regras dos motoristas (o ônibus das 3:00 não existe, se parar não suba, se subir alguém sem rosto não olhe); 3:00 chega um ônibus vazio de luzes verdes; o motorista não tem rosto; a porta abre e de dentro a voz do filho: "mamá, súbete"; Toño está dormindo em casa. FALTA
+- HM054 parte 2/2: ela não sobe; janelas cheias de rostos apertados no vidro, um é a vizinha desaparecida; vai embora; 3:30 o ônibus real; o motorista: o das 3 caiu da curva em 1994; em casa, Toño dorme, mas os tênis molhados e uma passagem de 1994 no bolso. FALTA

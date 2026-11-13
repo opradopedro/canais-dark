@@ -85,3 +85,31 @@ Tom: tensão de sobrevivência, sem gore; susto na penúltima frase de cada part
 - 3D: hospital (noite, noite_neblina, dia); criatura vulto; protagonista Maya (semente 3107, enfermeira).
 - SV031 parte 1/2: nobody walks the 4th floor after 3 AM; call light in empty room 418; breathing sheet; screaming from 418. FEITO
 - SV032 parte 2/2: shadow that only moves when lit; rule: it can't stand noise (radio); room 418 admitted "Maya" at 3:07. FEITO
+
+## Semana de 16/11 a 27/11/2026 (SV035-SV046) — por: claude (rotina de sexta, 13/11). Estoque 3D antes: SV033-SV034 (até 15/11). 2 gringas (Japão, Alemanha), 2 autorais. Séries de 3 partes, motor cartoon (`"visual": "3d"`).
+
+## hollow-pines (SV035-SV037) The Station That Isn't There — origem: gringa: Japão, "Kisaragi Station" (2channel, 2004, viral de novo no TikTok japonês) https://en.wikipedia.org/wiki/Kisaragi_Station (história nossa: ônibus noturno no Oregon)
+- 3D: estrada (ponto, vindo, indo, curva, acostamento) + floresta (trilha, entre_arvores, clareira, fundo); criatura sem_rosto; Nora, 29, enfermeira de clínica (semente 3511, jaqueta, rabo); objetos onibus/carro.
+- SV035 parte 1/3: último ônibus 11:40, viagem de 20 min; 40 min sem parar, ninguém mais a bordo; ela posta num fórum; o ônibus para em "Hollow Pines", que não existe no mapa; o motorista: "end of the line"; ela desce, o ônibus vai embora de luzes apagadas; um homem sem rosto no ponto. FALTA
+- SV036 parte 2/3: sem sinal, só o fórum funciona; o homem diz "the next bus comes when you stop looking for it"; tambores na floresta; ela anda para uma luz; um carro para, homem simpático oferece carona até a cidade; bateria 9%; o fórum responde: "don't get in". FALTA
+- SV037 parte 3/3: ela entra; o carro vai cada vez mais fundo na mata, o motorista não responde; ela pula do carro e corre até um asfalto; amanhece num posto a 300 milhas de casa; o último post dela no fórum tem data de três dias DEPOIS; o celular vibra: "Hollow Pines. Next stop." FALTA
+
+## night-groundskeeper (SV038-SV040) Rules for the Night Groundskeeper — origem: autoral
+- 3D: cemiterio (entrada, entre_cruzes, cruz_grande, mausoleu, fundo, arvore_morta), luz noite_neblina/lua_minguante/chuva; criatura rastejante; Eli, 41, zelador noturno (semente 3811, guarda, barba).
+- Regras do antigo zelador: lock the gates at 10 / if you hear digging, it isn't yours / never step on fresh dirt after midnight / if a grave is open at dawn, fill it before anyone sees.
+- SV038 parte 1/3: 1ª semana; 1:10 som de pá; vai com a lanterna; terra fresca numa cova de 1961; o som de cavar vem de BAIXO. FALTA
+- SV039 parte 2/3: ele pisa sem querer na terra fresca; a terra afunda como respiração; algo rasteja sob o gramado seguindo os passos dele; ele sobe no mausoléu; 4:00 uma mão de terra sai da cova e acena. FALTA
+- SV040 parte 3/3: amanhece; a cova está aberta e vazia; ele enche antes de alguém ver; a lápide nova tem o nome do zelador antigo; o diário do antigo: "filled it again. Eli will be next"; ele continua no emprego, porque alguém tem que encher; à noite, cavando, só que agora é ele que ouve perto da própria casa. FALTA
+
+## footprints-snow (SV041-SV043) Footprints in the Snow — origem: gringa: Alemanha, caso Hinterkaifeck (1922: pegadas na neve chegando à fazenda e nenhuma saindo, passos no sótão, jornal estranho) https://en.wikipedia.org/wiki/Hinterkaifeck_murders (sem crime: história nossa, fazenda em Montana)
+- 3D: casa_interior (sala, cozinha, quarto, janela, porta) + floresta com neve (fundo, trilha); luz neve/noite; efeito neve; criatura alta; Sam, 36 (semente 4111, jaqueta, barba) e Jess, 34 (semente 4112).
+- SV041 parte 1/3: nevasca, estrada fechada por 5 dias; de manhã pegadas de botas da floresta até a porta dos fundos, nenhuma voltando; a chave reserva sumiu; à noite, passos no sótão (a casa não tem escada para o sótão). FALTA
+- SV042 parte 2/3: um jornal de 3 semanas atrás na mesa, que não é deles; comida sumindo; Sam pendura sino na porta do sótão; 3:12 o sino toca; uma voz de cima repete as conversas deles do jantar, palavra por palavra. FALTA
+- SV043 parte 3/3: eles saem para o carro na neve; da janela do sótão algo alto acena; a neve para; o xerife chega: o antigo dono fugiu em 1984 depois de ouvir passos no sótão; no sótão, só um colchão e um caderno com a rotina deles anotada; pegadas novas saindo da casa e indo até o carro deles. FALTA
+
+## black-dog (SV044-SV046) Don't Feed the Black Dog — origem: autoral
+- 3D: bairro (rua, calcada, frente_casa, poste, arvores, fim_rua), luz noite/neblina_baixa; criatura cao_negro (+ alta na parte 3); Kit, 31, designer que trabalha em casa (semente 4411, oculos, casual).
+- Regras do bairro (bilhete da vizinha): every house leaves a bowl out at 9 / never feed it by hand / never let it see your door open.
+- SV044 parte 1/3: Kit se muda para Alder Street; todas as casas deixam uma tigela na calçada às 9; ele ri e não deixa; 2:00 um cão preto enorme senta no meio da rua olhando para a casa dele, sem piscar. FALTA
+- SV045 parte 2/3: 2ª noite o cão está no gramado; 3ª noite na varanda; a vizinha liga desesperada: "put the bowl out now"; ele põe; o cão come, mas a tigela é devolvida com uma chave de casa dentro: a dele. FALTA
+- SV046 parte 3/3: a vizinha explica: a casa dele era do homem que alimentou na mão em 2009; o cão não quer comida, quer ser convidado; Kit tranca tudo; 3:00 batidas na porta com voz do pai dele; ele não abre; de manhã, a casa da vizinha aberta e vazia, e a tigela dela na varanda de Kit. FALTA
