@@ -161,8 +161,18 @@ def fim_mudo(audio, tempos_path, idioma="en"):
     pal = [w for w, _, _ in _palavras(tempos)]
     alinhar(audio, pal, idioma)
     nota = _M.get("nota") or [1.0] * len(pal)
-    fim = [(w, n) for w, n in zip(pal, nota) if re.sub(r"[^\wáéíóúñ]", "", w.lower())][-2:]
-    return [w for w, n in fim if n < 0.1 and not re.search(r"\d", w)]
+    return _fim_mudas(pal, nota)
+
+
+def _fim_mudas(pal, nota):
+    """Ultima palavra com nota < 0,1 = a voz nao falou. A penultima so conta se for ~0 (< 0,02): no CL042 (13/11)
+    o "tomorrow," falado de verdade, com tambor por baixo, deu nota 0,08 e barrou o video sem motivo."""
+    fim = [(w, n) for w, n in zip(pal, nota) if re.sub(r"[^\wáéíóúñ]", "", w.lower()) and not re.search(r"\d", w)][-2:]
+    out = []
+    for k, (w, n) in enumerate(fim):
+        if n < (0.1 if k == len(fim) - 1 else 0.02):
+            out.append(w)
+    return out
 
 
 def ajustar(audio, tempos_path, idioma="en"):
@@ -238,8 +248,7 @@ def conferir(video, tempos_path, idioma="en", adianto=ADIANTO, atraso=ATRASO, fp
     # REGRA do Pedro (12/11): a voz do Gemini as vezes engole a ULTIMA palavra ("Parte dos, manana" saiu so
     # "Parte dos", e a legenda mostrava "manana" sem voz). As 2 ultimas palavras faladas tem que ter nota: senao barra
     # (o produce.py apaga a voz guardada ao barrar, e a proxima execucao grava de novo).
-    fim = [(w, n) for (w, _, _), n in zip(pal, nota) if re.sub(r"[^\wáéíóúñ]", "", w.lower())][-2:]
-    mudas = [w for w, n in fim if n < 0.1 and not re.search(r"\d", w)]
+    mudas = _fim_mudas([w for w, _, _ in pal], nota)
     if mudas:
         out["ok"] = False
         out["motivo"] = "a voz nao fala o fim do roteiro: " + " ".join(mudas)
