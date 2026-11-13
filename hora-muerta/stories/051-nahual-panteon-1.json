@@ -1,0 +1,418 @@
+{
+ "formato": "Regla",
+ "origem": "autoral",
+ "serie": "nahual-panteon",
+ "serie_titulo": "El nahual del panteón | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda",
+  "nahual",
+  "panteón",
+  "velador",
+  "leyenda mexicana"
+ ],
+ "elenco": {
+  "martin": {
+   "semente": 5111,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "jaqueta",
+   "acessorio": "bone"
+  },
+  "curandero": {
+   "semente": 5112,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "casual",
+   "acessorio": "barba"
+  }
+ },
+ "codigo": "HM051",
+ "parte": 1,
+ "titulo": "El perro que entra al panteón no es perro 🐺 Parte 1 #terror #shorts",
+ "capa": "NO ES UN PERRO",
+ "descripcion": "Martín es el nuevo velador del panteón. El velador viejo le dejó una regla: el perro grande que entra de noche no es un perro.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú le habrías abierto?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Imagina cuidar un panteón donde *el perro* que entra de noche no es un perro.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Martín tiene cuarenta y cinco años y es el nuevo velador.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "El velador anterior se fue del pueblo sin despedirse.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Solo dejó un papel clavado en la puerta de la capilla.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Si entra un perro negro grande, no lo llames.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "No le des la espalda. Y prende la vela de la capilla.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "De día, el panteón es tranquilo: flores, abuelas, cempasúchil.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Las primeras dos semanas, nada. Solo gatos y viento.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Quédate, porque la noche quince Martín entendió el papel.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A las dos de la mañana, un perro negro entra por la reja.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Es enorme, del tamaño de un becerro, y camina sin hacer ruido.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Se mete entre las cruces, olfateando las tumbas nuevas.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Martín no lo llama. Lo sigue con la linterna.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "El perro se detiene frente a la capilla y lo mira.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Luego se levanta *en dos patas*, despacio, como un hombre.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Mide más que la cruz grande del centro.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Y con voz de hombre viejo dice: Martín, *ábreme la capilla*.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "¿Qué hay adentro? Parte dos, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entrada",
+    "plano": "aereo",
+    "luz": "lua_cheia"
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entrada",
+    "plano": "auto",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Walking_A",
+      "rosto": "neutro",
+      "segura": "lanterna",
+      "de": "entrada",
+      "para": "entre_cruzes"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "arvore_morta",
+    "plano": "auto",
+    "luz": "nublado"
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "close",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Interact",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entre_cruzes",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Holding_A",
+      "rosto": "neutro",
+      "segura": "tocha"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "cruz_grande",
+    "plano": "aberto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Work_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "fundo",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "neutro",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "arvore_morta",
+    "plano": "aereo",
+    "luz": "noite_neblina"
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entrada",
+    "plano": "baixo",
+    "luz": "lua_cheia",
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "entrada"
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entre_cruzes",
+    "plano": "close",
+    "luz": "lua_cheia",
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "entre_cruzes"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "fundo",
+    "plano": "auto",
+    "luz": "lua_cheia",
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "fundo"
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entre_cruzes",
+    "plano": "ombro",
+    "luz": "lua_cheia",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Sneaking",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "cruz_grande"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "medio",
+    "luz": "lua_cheia",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "mausoleu"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "baixo",
+    "luz": "lua_cheia",
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "mausoleu"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "cruz_grande",
+    "plano": "close",
+    "luz": "lua_cheia",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Idle_B",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "cruz_grande"
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "entre_cruzes"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "cruz_grande",
+    "plano": "nuca",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Walking_Backwards",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "mausoleu"
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 14,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}

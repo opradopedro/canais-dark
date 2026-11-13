@@ -116,7 +116,7 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 - HM045 parte 1/2: 1:20 batidas; dois meninos de moletom pedem para entrar e "usar o telefone"; voz de adulto, nunca piscam; regra que a avó dizia (nunca convide ninguém a entrar de madrugada); sob a luz do pórtico, olhos todos pretos: "solo tiene que decir que sí". FEITO
 - HM046 parte 2/2: ele diz não; ficam a noite toda; o telefone toca com o número da própria casa; a voz da esposa diz "déjalos pasar", mas ela está na casa da irmã; 6:00 somem; a câmera do vizinho mostra os dois entrando na casa ao lado, convidados; na porta de Tomás, duas mãozinhas pretas marcadas por DENTRO. FEITO
 
-## espantapajaros (HM047-HM048) Los siete espantapájaros — origem: autoral
+## siete-espantapajaros (HM047-HM048) Los siete espantapájaros — origem: autoral
 - 3D: vila (praca, moinho, poco, casa, alto), luz entardecer/lua_cheia/neblina_baixa; criatura espantalho; Juan, 30, peão da colheita (semente 4711, chapéu=bone, camisa casual).
 - HM047 parte 1/2: na fazenda de don Lalo há 7 espantalhos; regras (contar ao anoitecer, nunca dar as costas para o campo, se forem 8, não dormir); don Lalo sumiu na colheita passada; 3ª noite são 8; o oitavo veste a camisa de don Lalo; de manhã são 7, mas um está perto do poço. FEITO
 - HM048 parte 2/2: Juan vigia do poço; a cada hora um passo mais perto; ele não dá as costas; 4:50 o oitavo está a um braço, cheira a terra e tabaco do don Lalo; sussurra "ahora te toca cuidar a ti"; amanhece, são 7; no campo, um espantalho novo com o chapéu de Juan. FEITO
@@ -126,9 +126,9 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 - HM049 parte 1/2: regra dos velhos da serra (se ouvir seu nome no monte, não responda; se alguém conhecido chamar das árvores, não vá); Beto vai buscar lenha; 20 min depois a voz de Beto chama de um lado, "me torcí el pie"; e outra voz de Beto chama do outro lado. FEITO
 - HM050 parte 2/2: ela chama no rádio; o Beto de verdade responde da torre de vigia; ela anda até a torre sem responder às vozes; a coisa imita a voz dela para chamar o Beto; trancados na torre, algo alto na janela fala com a voz da mãe deles; amanhece; no rádio, a voz de Rosa: "ya estoy adentro". FEITO
 
-## nahual (HM051-HM052) El nahual del panteón — origem: autoral
+## nahual-panteon (HM051-HM052) El nahual del panteón — origem: autoral
 - 3D: cemiterio (entrada, entre_cruzes, cruz_grande, mausoleu, fundo, arvore_morta), luz lua_cheia/noite/madrugada; criatura lobisomem (nahual); Martín, 45, velador do panteão municipal (semente 5111, jaqueta, bone).
-- HM051 parte 1/2: regras do velador antigo (o cachorro grande que entra não é cachorro, não chame, não dê as costas, acenda a vela da capela); 2:00 um cão preto enorme entre as cruzes; fica de pé em duas patas; fala com voz de homem: "Martín, ábreme la capilla". FALTA
+- HM051 parte 1/2: regras do velador antigo (o cachorro grande que entra não é cachorro, não chame, não dê as costas, acenda a vela da capela); 2:00 um cão preto enorme entre as cruzes; fica de pé em duas patas; fala com voz de homem: "Martín, ábreme la capilla". FEITO
 - HM052 parte 2/2: não abre; acende a vela; a coisa rodeia até as 5; de manhã o curandeiro do povoado aparece arranhado, olha para Martín e sorri: "buen velador"; à noite, arranhões na porta da capela, por DENTRO. FALTA
 
 ## autobus-tres (HM053-HM054) El autobús de las tres — origem: autoral
