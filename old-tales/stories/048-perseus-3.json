@@ -1,0 +1,442 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "grecia",
+ "piano": 0,
+ "origem": "plano do Pedro (11/11): conto da Grécia; Apolodoro, Biblioteca 2.4",
+ "serie": "perseus",
+ "serie_titulo": "Perseus and the Gorgon | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "mythology",
+  "old tales",
+  "legends",
+  "history",
+  "story time",
+  "perseus",
+  "medusa",
+  "greek mythology",
+  "gorgon",
+  "greek myths"
+ ],
+ "elenco": {
+  "perseu": {
+   "semente": 4601,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "cabelo_cor": "#3a2a1a",
+   "camisa": "#e8e0cc",
+   "roupa": "casual"
+  },
+  "danae": {
+   "semente": 4602,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "roupa": "vestido"
+  },
+  "polidectes": {
+   "semente": 4603,
+   "corpo": "forte",
+   "cabelo": "grisalho",
+   "roupa": "rei",
+   "acessorio": "barba"
+  },
+  "atena": {
+   "semente": 4604,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "soldado_esparta"
+  },
+  "andromeda": {
+   "semente": 4605,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "vestido"
+  }
+ },
+ "codigo": "CL048",
+ "parte": 3,
+ "anterior": "CL047",
+ "titulo": "He turned a whole royal court into stone 🐍 Perseus Part 3 #story #shorts",
+ "capa": "THE KING TURNS TO STONE",
+ "descripcion": "Invisible, with Medusa's head in a bag, Perseus fights a sea monster for a chained princess and comes home to the king who sent him to die.\n\nWould you have opened the bag?\n\nFrom Greek myth: Apollodorus, Library 2.4; Ovid, Metamorphoses 4-5; Hesiod, Theogony.\n#perseus #medusa #greekmythology #mythology #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Invisible under the helmet of Hades, Perseus *escaped* the screaming Gorgons.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Flying home, he saw a woman chained to a rock above the sea.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Princess Andromeda. Her mother had bragged she was prettier than the sea nymphs.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "So the gods sent a *sea monster* to eat her.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Perseus dived from the sky with his blade.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He struck the monster again and again, until the water turned dark.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Andromeda was free. But Perseus still had a promise to keep.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because the king on Seriphos thought he was dead.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Polydectes was feasting, and still forcing his mother to marry him.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Perseus walked into the hall. The guests laughed.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "So, where is my gift? Where is the head of the Gorgon?",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Perseus told his mother to close her eyes.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then he lifted the head out of the bag.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The king, the guards, every guest who laughed, turned to *stone*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He gave the head to Athena, who put it on her shield forever.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Years later, at a sports contest, Perseus threw a *discus*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The wind took it into the crowd, and struck an old man dead.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "His grandfather. The prophecy came true, just like the oracle said.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "caverna_gorgonas",
+    "marca": "entrada",
+    "plano": "aereo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Running_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "horizonte",
+    "plano": "medio",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Jump_Full_Long",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "ilha_mar",
+    "marca": "rochas",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "andromeda",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "ilha_mar",
+    "marca": "praia",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "criatura": {
+     "tipo": "gigante_mitologico",
+     "marca": "praia"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "ilha_mar",
+    "marca": "topo",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Melee_1H_Attack_Jump_Chop",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ],
+    "criatura": {
+     "tipo": "gigante_mitologico",
+     "marca": "praia"
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "ilha_mar",
+    "marca": "praia",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Melee_1H_Attack_Chop",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ],
+    "criatura": {
+     "tipo": "gigante_mitologico",
+     "marca": "rochas"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "ilha_mar",
+    "marca": "rochas",
+    "plano": "aberto",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "praca",
+    "plano": "aereo",
+    "luz": "entardecer"
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "templo",
+    "plano": "medio",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "polidectes",
+      "acao": "Cheering",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "danae",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "escada",
+    "plano": "nuca",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Walking_A",
+      "rosto": "bravo",
+      "de": "praca",
+      "para": "templo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "templo",
+    "plano": "close",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "polidectes",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "templo",
+    "plano": "ombro",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     },
+     {
+      "id": "danae",
+      "acao": "Idle_A",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "templo",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Throw",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "praca",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "polidectes",
+      "acao": "Death_A_Pose",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "templo",
+    "plano": "medio",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "atena",
+      "acao": "Melee_Block",
+      "rosto": "neutro",
+      "segura": "escudo"
+     },
+     {
+      "id": "perseu",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "aereo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Throw",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "polidectes",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "aereo",
+    "luz": "por_sol"
+   }
+  }
+ ],
+ "eventos": []
+}

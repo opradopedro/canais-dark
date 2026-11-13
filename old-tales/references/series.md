@@ -132,7 +132,7 @@ Peças: `f_mosteiro`, `f_igreja`, `f_aldeia`, `f_campo`, `f_estrada_antiga`, `f_
 - 3D: grecia_templo, ilha_mar, caverna_gorgonas, mar_jangada; criatura mulher_branca (Medusa; falta criatura górgona com cobras, anotado no PLANO-MUNDOS) e gigante_mitologico (Ceto, o monstro marinho); elenco perseu (semente 4601), polidectes (rei), danae, atena.
 - CL046 parte 1/3: bebê jogado ao mar num baú com a mãe (profecia de Acrísio); ilha de Sérifo; rei Polidectes quer Dânae; banquete, Perseu promete qualquer presente, "the head of the Gorgon"; quem olha vira pedra; Atena aparece com o escudo de bronze. FEITO
 - CL047 parte 2/3: as Greias com um olho só, ele rouba o olho; ninfas dão sandálias aladas, bolsa (kibisis) e elmo de Hades; caverna cheia de estátuas que eram homens; anda de costas olhando o reflexo no escudo; corta a cabeça; Pégaso e Crisaor saem do pescoço; as irmãs acordam. FEITO
-- CL048 parte 3/3: foge invisível; na Etiópia Andrômeda acorrentada para o monstro Ceto; luta no ar; volta a Sérifo; Polidectes ri; ele levanta a cabeça e a corte vira pedra; entrega a cabeça a Atena (égide); a profecia: anos depois o disco que mata Acrísio. Loop com o baú no mar. FALTA
+- CL048 parte 3/3: foge invisível; na Etiópia Andrômeda acorrentada para o monstro Ceto; luta no ar; volta a Sérifo; Polidectes ri; ele levanta a cabeça e a corte vira pedra; entrega a cabeça a Atena (égide); a profecia: anos depois o disco que mata Acrísio. Loop com o baú no mar. FEITO
 
 ## mulan (CL049-CL051) The Ballad of Mulan — tema epico, paleta china — origem: plano do Pedro (11/11, "conto da China antiga")
 - Fonte: *Balada de Mulan* (Mulan ci, poema yuefu, dinastia Wei do Norte, séc. V-VI; compilado por Guo Maoqian, séc. XII). É lenda/poema, não registro histórico: dizer isso.
