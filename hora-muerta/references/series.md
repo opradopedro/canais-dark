@@ -129,7 +129,7 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 ## nahual-panteon (HM051-HM052) El nahual del panteón — origem: autoral
 - 3D: cemiterio (entrada, entre_cruzes, cruz_grande, mausoleu, fundo, arvore_morta), luz lua_cheia/noite/madrugada; criatura lobisomem (nahual); Martín, 45, velador do panteão municipal (semente 5111, jaqueta, bone).
 - HM051 parte 1/2: regras do velador antigo (o cachorro grande que entra não é cachorro, não chame, não dê as costas, acenda a vela da capela); 2:00 um cão preto enorme entre as cruzes; fica de pé em duas patas; fala com voz de homem: "Martín, ábreme la capilla". FEITO
-- HM052 parte 2/2: não abre; acende a vela; a coisa rodeia até as 5; de manhã o curandeiro do povoado aparece arranhado, olha para Martín e sorri: "buen velador"; à noite, arranhões na porta da capela, por DENTRO. FALTA
+- HM052 parte 2/2: não abre; acende a vela; a coisa rodeia até as 5; de manhã o curandeiro do povoado aparece arranhado, olha para Martín e sorri: "buen velador"; à noite, arranhões na porta da capela, por DENTRO. FEITO
 
 ## autobus-tres (HM053-HM054) El autobús de las tres — origem: autoral
 - 3D: estrada (ponto, vindo, meio, acostamento, curva), luz noite/noite_neblina; criatura sem_rosto; objetos onibus; Lucía, 34, cozinheira do turno da noite (semente 5311, vestido, cabelo longo); o filho Toño.

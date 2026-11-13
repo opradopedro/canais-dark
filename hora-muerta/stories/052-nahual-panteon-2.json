@@ -1,0 +1,413 @@
+{
+ "formato": "Regla",
+ "origem": "autoral",
+ "serie": "nahual-panteon",
+ "serie_titulo": "El nahual del panteón | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda",
+  "nahual",
+  "panteón",
+  "velador",
+  "leyenda mexicana"
+ ],
+ "elenco": {
+  "martin": {
+   "semente": 5111,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "jaqueta",
+   "acessorio": "bone"
+  },
+  "curandero": {
+   "semente": 5112,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "casual",
+   "acessorio": "barba"
+  }
+ },
+ "codigo": "HM052",
+ "parte": 2,
+ "anterior": "HM051",
+ "titulo": "El nahual quería entrar a la capilla 🐺 Parte 2 #terror #shorts",
+ "capa": "BUEN VELADOR",
+ "descripcion": "Martín no abrió la capilla. Prendió la vela y aguantó hasta las cinco. En la mañana descubrió quién era el perro negro.\n\n¿Tú habrías aguantado?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Parte dos. La cosa en dos patas repite: Martín, *ábreme la capilla*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Martín no contesta. Entra a la capilla de espaldas, mirándolo.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Cierra la reja y prende la vela, como dice el papel.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "La cosa rodea la capilla. Una vuelta, dos, diez.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Raspa los barrotes con unas uñas largas y amarillas.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Ya no habla como hombre viejo. Ahora habla como su mamá.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Mijo, tengo frío, déjame entrar tantito.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Quédate, porque a las cinco la vela casi se apaga.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Queda un dedo de cera. La llama tiembla.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Martín se quita la chamarra y tapa el viento con el cuerpo.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Afuera, la cosa *se ríe*, y se va corriendo hacia el monte.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "En la mañana, Martín baja al pueblo, temblando.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "En la plaza está el curandero, un viejo que todos respetan.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Tiene la cara y los brazos llenos de *rasguños frescos*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Mira a Martín, sonríe, y le dice bajito: buen velador.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Esa noche, Martín revisa la capilla antes de prender la vela.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "En la puerta hay rasguños nuevos, largos y profundos, *por dentro*.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Y la vela ya estaba encendida.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "mausoleu"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "ombro",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Walking_Backwards",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Holding_A",
+      "rosto": "medo",
+      "segura": "tocha"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entre_cruzes",
+    "plano": "aereo",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "entre_cruzes"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "cruz_grande",
+    "plano": "close",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "cruz_grande"
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "fundo",
+    "plano": "medio",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "fundo"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Crouching",
+      "rosto": "triste",
+      "segura": "tocha"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "arvore_morta",
+    "plano": "auto",
+    "luz": "noite_neblina"
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Crouching",
+      "rosto": "medo",
+      "segura": "tocha"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Melee_Blocking",
+      "rosto": "bravo",
+      "segura": "tocha"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entrada",
+    "plano": "aberto",
+    "luz": "nascer_sol",
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "entrada"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "aereo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Walking_A",
+      "rosto": "medo",
+      "de": "casa",
+      "para": "praca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "curandero",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "curandero",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "vila",
+    "marca": "mercado",
+    "plano": "ombro",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     },
+     {
+      "id": "curandero",
+      "acao": "Waving",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entrada",
+    "plano": "auto",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Walking_A",
+      "rosto": "desconfiado",
+      "segura": "lanterna",
+      "de": "entrada",
+      "para": "mausoleu"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "martin",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "aereo",
+    "luz": "noite",
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "fundo"
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 10,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}
