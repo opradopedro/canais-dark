@@ -100,7 +100,7 @@ function rosto(r, t, cor) {
 }
 
 // ---------------------------------------------------------------- boneco
-// el (elenco): {tipo:'macaco'|'humano', pelo, rosto_cor, tiara, armadura, faixa, arma:'bastao'|'lanca'|'espada', cabelo:'curto'|'coque'|'longo',
+// el (elenco): {tipo:'macaco'|'humano', pelo, rosto_cor, tiara, armadura, faixa, arma:'bastao'|'lanca'|'espada', cabelo:'curtinho'|'normal'|'longo'|'cacheado'|'careca'|'lados'|'coque', barba_estilo:'curta'|'cheia'|'cavanhaque'|'chinesa', barba (cor),
 // roupa:'tanga'|'tunica'|'trapos'|'cota'|'jaqueta', roupa_cor, elmo, elmo_med, manto, barba, olhos_ouro, desgaste 0..1}
 // REGRA do Pedro (13/11): NAO existe boneco fixo por canal. Cada conto tem o seu protagonista, vestido de acordo com a
 // historia (Idade da Pedra = tanga; medieval = tunica/cota; zumbi = desgaste sobe por parte: cabelo e barba crescem, sujeira).
@@ -111,15 +111,61 @@ function membro(x, y, a1, a2, l1, l2, vira) {
   const r2 = (a1 + a2) * D2R * vira, x2 = x1 + Math.sin(r2) * l2, y2 = y1 + Math.cos(r2) * l2;
   return [x1, y1, x2, y2, r2];
 }
+
+// ---------------------------------------------------------------- cabelos e barbas (sistema da cabeca, raio R)
+// cabelo: curtinho | normal | longo | cacheado | careca | lados (calvo, so dos lados: mais velhos) | coque
+// barba: curta | cheia | cavanhaque | chinesa (bigode fino caido + cavanhaque longo)
+// desgaste (zumbi/sobrevivencia): cabelo vira bagunca mais longa e a barba nasce e cresce.
+const CONT = '#141414';
+function pinta(cor, lw = 4) { X.fillStyle = cor; X.strokeStyle = CONT; X.lineWidth = lw; X.fill(); X.stroke(); }
+function estiloCabelo(el, dg) { let c = el.cabelo || 'normal'; if (dg > 0.55 && ['curtinho', 'normal'].includes(c)) c = 'bagunca'; return c; }
+function cabeloAtras(el, R, dg) {
+  const c = estiloCabelo(el, dg), cor = el.cabelo_cor || '#2a1a10';
+  if (c === 'longo' || (c === 'bagunca' && dg > 0.75)) { const l = c === 'longo' ? 78 : 40 + 50 * dg;
+    X.beginPath(); X.moveTo(-R - 6, -6); X.quadraticCurveTo(-R - 14, l * 0.6, -R + 4, l); X.lineTo(R - 4, l); X.quadraticCurveTo(R + 14, l * 0.6, R + 6, -6); X.arc(0, -6, R + 6, 0, Math.PI, true); X.closePath(); pinta(cor); }
+}
+function cabeloFrente(el, R, dg, t) {
+  const c = estiloCabelo(el, dg), cor = el.cabelo_cor || '#2a1a10';
+  if (c === 'careca') { X.strokeStyle = 'rgba(255,255,255,0.7)'; X.lineWidth = 5; X.beginPath(); X.arc(-14, -26, 14, Math.PI * 1.1, Math.PI * 1.6); X.stroke(); return; }
+  if (c === 'curtinho') { X.beginPath(); X.arc(0, 0, R + 3, Math.PI * 1.08, Math.PI * 1.92); X.arc(0, 4, R - 8, Math.PI * 1.85, Math.PI * 1.15, true); X.closePath(); pinta(cor); return; }
+  if (c === 'normal') { X.beginPath(); X.moveTo(-R - 3, 0); X.arc(0, 0, R + 4, Math.PI, Math.PI * 2); X.lineTo(R + 3, 2); X.quadraticCurveTo(R - 4, -18, R - 16, -22); X.quadraticCurveTo(10, -10, -14, -26); X.quadraticCurveTo(-R + 6, -20, -R - 3, 0); X.closePath(); pinta(cor); return; }
+  if (c === 'longo') { X.beginPath(); X.moveTo(-R - 4, 6); X.arc(0, 0, R + 5, Math.PI, Math.PI * 2); X.lineTo(R + 4, 6); X.quadraticCurveTo(R - 6, -22, 4, -30); X.quadraticCurveTo(-R + 6, -22, -R - 4, 6); X.closePath(); pinta(cor); return; }
+  if (c === 'cacheado') { X.fillStyle = cor; X.strokeStyle = CONT; X.lineWidth = 4;
+    for (let i = 0; i < 11; i++) { const ang = Math.PI * (0.95 + i * 1.1 / 10); X.beginPath(); X.arc(Math.cos(ang) * (R - 2), Math.sin(ang) * (R - 2) - 6, 17, 0, 7); X.fill(); X.stroke(); }
+    X.beginPath(); X.arc(0, -10, R - 6, Math.PI * 1.05, Math.PI * 1.95); X.fill(); return; }
+  if (c === 'lados') { for (const s of [-1, 1]) { X.beginPath(); X.moveTo(s * (R - 4), -22); X.quadraticCurveTo(s * (R + 16), -10, s * (R + 8), 20); X.quadraticCurveTo(s * (R - 2), 14, s * (R - 6), 8); X.closePath(); pinta(el.cabelo_cor || '#b8b8b0'); }
+    X.strokeStyle = 'rgba(255,255,255,0.6)'; X.lineWidth = 5; X.beginPath(); X.arc(-12, -28, 14, Math.PI * 1.1, Math.PI * 1.6); X.stroke(); return; }
+  if (c === 'coque') { X.beginPath(); X.arc(0, 0, R + 3, Math.PI * 1.02, Math.PI * 1.98); X.arc(0, 2, R - 10, Math.PI * 1.9, Math.PI * 1.1, true); X.closePath(); pinta(cor); X.beginPath(); X.arc(0, -R - 14, 17, 0, 7); pinta(cor); return; }
+  if (c === 'bagunca') { // cabelo crescendo sem corte
+    X.fillStyle = cor; X.strokeStyle = CONT; X.lineWidth = 4; X.beginPath(); X.moveTo(-R - 4, 8);
+    const n = 9; for (let i = 0; i <= n; i++) { const ang = Math.PI * (1.0 + i / n), r1 = R + 4, r2 = R + 14 + 26 * dg * (0.6 + rnd(i) * 0.6);
+      X.lineTo(Math.cos(ang) * r1, Math.sin(ang) * r1); if (i < n) { const am = ang + Math.PI / n / 2; X.lineTo(Math.cos(am) * r2, Math.sin(am) * r2 + 6 * dg); } }
+    X.lineTo(R + 4, 4); X.quadraticCurveTo(R - 10, -24, 0, -22); X.quadraticCurveTo(-R + 10, -24, -R - 4, 4); X.closePath(); X.fill(); X.stroke(); }
+}
+function barba(el, R, dg) {
+  let b = el.barba_estilo || (el.barba ? 'cheia' : ''); const cor = el.barba || el.cabelo_cor || '#2a1a10';
+  if (!b && dg > 0.15) b = dg < 0.45 ? 'curta' : 'cheia';
+  if (!b) return;
+  const cresce = 1 + (b === 'cheia' ? dg * 0.9 : 0);
+  if (b === 'curta') { X.fillStyle = 'rgba(30,20,10,0.55)'; for (let i = 0; i < 40; i++) { const ang = Math.PI * (0.12 + rnd(i) * 0.76), r = R * (0.55 + rnd(i + 7) * 0.4); X.beginPath(); X.arc(Math.cos(ang) * r, Math.sin(ang) * r + 4, 1.8, 0, 7); X.fill(); } return; }
+  if (b === 'cheia') { X.beginPath(); X.moveTo(-R + 3, 14); X.quadraticCurveTo(-R + 4, R * 0.9 * cresce, 0, R + 20 * cresce); X.quadraticCurveTo(R - 4, R * 0.9 * cresce, R - 3, 14); X.quadraticCurveTo(R - 12, 28, 14, 24); X.quadraticCurveTo(0, 40, -14, 24); X.quadraticCurveTo(-R + 12, 28, -R + 3, 14); X.closePath(); pinta(cor);
+    X.fillStyle = el.rosto_cor || '#fff'; X.beginPath(); X.ellipse(0, 31, 11, 5, 0, 0, 7); X.fill(); return; }
+  if (b === 'cavanhaque') { X.beginPath(); X.moveTo(-16, 24); X.quadraticCurveTo(0, 18, 16, 24); X.lineTo(10, 50); X.quadraticCurveTo(0, 58, -10, 50); X.closePath(); pinta(cor); return; }
+  if (b === 'chinesa') { // bigode fino caindo dos lados + cavanhaque longo e pontudo
+    X.strokeStyle = CONT; X.lineWidth = 9; X.lineCap = 'round'; for (const s of [-1, 1]) { X.beginPath(); X.moveTo(0, 22); X.quadraticCurveTo(s * 20, 18, s * 26, 34); X.quadraticCurveTo(s * 30, 60, s * 22, 84); X.stroke(); }
+    X.strokeStyle = cor; X.lineWidth = 5; for (const s of [-1, 1]) { X.beginPath(); X.moveTo(0, 22); X.quadraticCurveTo(s * 20, 18, s * 26, 34); X.quadraticCurveTo(s * 30, 60, s * 22, 84); X.stroke(); }
+    X.beginPath(); X.moveTo(-9, 40); X.quadraticCurveTo(0, 36, 9, 40); X.lineTo(2, 104); X.lineTo(-2, 104); X.closePath(); pinta(cor, 3); }
+}
 function boneco(a, el, t, sx, sy, esc) {
   const pose = (P[a.pose] || P.parado)(t + (a.fase || 0));
-  const vira = a.vira ?? 1, lw = 12;
+  const vira = a.vira ?? 1, lw = 13;
   X.save(); X.translate(sx, sy); X.scale(esc, esc);
   // sombra no chao
   X.fillStyle = 'rgba(0,0,0,0.28)'; X.beginPath(); X.ellipse(0, 4, 70, 12, 0, 0, 7); X.fill();
   const hipY = -(L.coxa + L.canela) + pose.y, lean = pose.lean * D2R * vira;
   const shX = Math.sin(lean) * L.tronco, shY = hipY - Math.cos(lean) * L.tronco;
-  const corMembro = el.membro || '#141414';
+  const corMembro = el.membro || (el.tipo === 'macaco' ? (el.pelo || '#8a5a30') : '#ffffff');
+  const traco = (pts, w) => { X.beginPath(); X.moveTo(pts[0], pts[1]); for (let i = 2; i < pts.length; i += 2) X.lineTo(pts[i], pts[i + 1]); X.strokeStyle = CONT; X.lineWidth = w + 9; X.stroke(); X.strokeStyle = corMembro; X.lineWidth = w; X.stroke(); };
   X.lineCap = 'round'; X.lineJoin = 'round';
   // rabo (macaco) - preso no quadril, balanca
   if (el.tipo === 'macaco') {
@@ -128,16 +174,16 @@ function boneco(a, el, t, sx, sy, esc) {
     X.bezierCurveTo(-vira * 70, hipY + 10, -vira * 90, hipY - 70 + bal, -vira * 50, hipY - 110 + bal); X.stroke();
   }
   const perna = (ang) => { const m = membro(0, hipY, ang[0], -ang[1], L.coxa, L.canela, vira);
-    X.strokeStyle = corMembro; X.lineWidth = lw; X.beginPath(); X.moveTo(0, hipY); X.lineTo(m[0], m[1]); X.lineTo(m[2], m[3]); X.stroke();
-    X.fillStyle = corMembro; X.beginPath(); X.ellipse(m[2] + vira * 8, m[3], 16, 8, 0, 0, 7); X.fill(); };
+    traco([0, hipY, m[0], m[1], m[2], m[3]], lw);
+    X.fillStyle = CONT; X.beginPath(); X.ellipse(m[2] + vira * 8, m[3], 17, 9, 0, 0, 7); X.fill(); };
   const braco = (ang, mao) => { const m = membro(shX, shY + 8, ang[0], ang[1], L.braco, L.ante, vira);
-    X.strokeStyle = corMembro; X.lineWidth = lw; X.beginPath(); X.moveTo(shX, shY + 8); X.lineTo(m[0], m[1]); X.lineTo(m[2], m[3]); X.stroke();
+    traco([shX, shY + 8, m[0], m[1], m[2], m[3]], lw);
     if (mao) { X.fillStyle = el.mao || '#fff'; X.strokeStyle = '#141414'; X.lineWidth = 4; X.beginPath(); X.arc(m[2], m[3], 13, 0, 7); X.fill(); X.stroke(); }
     return m; };
   // ordem: membros de tras, corpo, membros da frente
   perna(pose.lR); braco(pose.aL, true);
   // tronco
-  X.strokeStyle = corMembro; X.lineWidth = lw + 2; X.beginPath(); X.moveTo(0, hipY); X.lineTo(shX, shY); X.stroke();
+  traco([0, hipY, shX, shY], lw + 4);
   // roupa ao longo do tronco (segue o corpo)
   X.save(); X.translate(0, hipY); X.rotate(lean);
   if (el.manto) { X.fillStyle = el.manto; X.strokeStyle = '#141414'; X.lineWidth = 4; const bal = Math.sin(t * 2.5) * 5; X.beginPath(); X.moveTo(-20, -L.tronco + 4); X.quadraticCurveTo(0, -L.tronco - 6, 20, -L.tronco + 4); X.quadraticCurveTo(34, -40, 52 + bal, 78); X.quadraticCurveTo(0, 92, -52 + bal, 78); X.quadraticCurveTo(-34, -40, -20, -L.tronco + 4); X.closePath(); X.fill(); X.stroke();
@@ -191,18 +237,13 @@ function boneco(a, el, t, sx, sy, esc) {
     // topete de pelo
     X.fillStyle = el.pelo || '#8a5a30'; X.beginPath(); X.moveTo(-20, -R + 6); X.lineTo(-8, -R - 14); X.lineTo(0, -R + 2); X.lineTo(10, -R - 16); X.lineTo(18, -R + 4); X.fill();
   } else {
-    X.fillStyle = el.rosto_cor || '#fff'; X.strokeStyle = '#141414'; X.lineWidth = 6; X.beginPath(); X.arc(0, 0, R, 0, 7); X.fill(); X.stroke();
-    if (el.cabelo === 'coque') { X.fillStyle = el.cabelo_cor || '#222'; X.beginPath(); X.arc(0, -R + 4, R * 0.95, Math.PI * 1.05, Math.PI * 1.95); X.fill(); X.beginPath(); X.arc(0, -R - 14, 16, 0, 7); X.fill(); }
-    if (el.cabelo === 'longo') { X.fillStyle = el.cabelo_cor || '#222'; X.beginPath(); X.arc(0, -6, R + 2, Math.PI * 1.0, Math.PI * 2.0); X.lineTo(R + 4, 30); X.lineTo(R - 10, 30); X.lineTo(R - 12, -6); X.lineTo(-R + 12, -6); X.lineTo(-R + 10, 30); X.lineTo(-R - 4, 30); X.fill(); }
     const dgc = a.desgaste ?? el.desgaste ?? 0;
-    if (el.cabelo === 'curto' || dgc > 0.3) { X.fillStyle = el.cabelo_cor || '#2a1a10'; X.beginPath(); X.arc(0, -4, R + 2, Math.PI * 1.02, Math.PI * 1.98); X.lineTo(R - 6, -10); X.lineTo(-R + 6, -10); X.fill();
-      if (dgc > 0.3) { const n = 7; for (let i = 0; i < n; i++) { const ang = Math.PI * (1.05 + i * 0.9 / (n - 1)); X.beginPath(); X.moveTo(Math.cos(ang) * R, Math.sin(ang) * R - 4); X.lineTo(Math.cos(ang) * (R + 10 + 30 * dgc), Math.sin(ang) * (R + 10 + 30 * dgc) - 4 + 10 * dgc); X.lineTo(Math.cos(ang + 0.12) * R, Math.sin(ang + 0.12) * R - 4); X.fill(); }
-        if (dgc > 0.6) { X.fillRect(-R - 4, -8, 10, 40 * dgc); X.fillRect(R - 6, -8, 10, 40 * dgc); } } }
-    if (dgc > 0.15 && !el.barba) { X.fillStyle = el.cabelo_cor || '#2a1a10'; if (dgc < 0.45) { for (let i = 0; i < 26; i++) { X.beginPath(); X.arc(-30 + rnd(i) * 60, 26 + rnd(i + 9) * 22, 1.8, 0, 7); X.fill(); } }
-      else { const lb = 20 + 50 * dgc; X.beginPath(); X.moveTo(-R * 0.75, 18); X.quadraticCurveTo(-10, R + lb, 0, R + lb * 0.9); X.quadraticCurveTo(10, R + lb, R * 0.75, 18); X.quadraticCurveTo(0, 40, -R * 0.75, 18); X.fill(); } }
+    cabeloAtras(el, R, dgc);
+    X.fillStyle = el.rosto_cor || '#fff'; X.strokeStyle = '#141414'; X.lineWidth = 7; X.beginPath(); X.arc(0, 0, R, 0, 7); X.fill(); X.stroke();
+    cabeloFrente(el, R, dgc, t);
+    barba(el, R, dgc);
     if (dgc > 0) { X.fillStyle = `rgba(70,45,20,${0.4 * dgc})`; for (let i = 0; i < 5; i++) { X.beginPath(); X.ellipse(-32 + rnd(i + 20) * 64, -20 + rnd(i + 30) * 40, 5 + 6 * dgc, 3 + 4 * dgc, 0, 0, 7); X.fill(); } }
     if (el.elmo_med) { X.fillStyle = '#9aa0a8'; X.strokeStyle = '#2a2e34'; X.lineWidth = 4; X.beginPath(); X.arc(0, -4, R + 5, Math.PI * 1.0, Math.PI * 2.0); X.lineTo(R + 5, 14); X.lineTo(R - 4, 14); X.lineTo(R - 4, -2); X.lineTo(-R + 4, -2); X.lineTo(-R + 4, 14); X.lineTo(-R - 5, 14); X.closePath(); X.fill(); X.stroke(); X.fillRect(-4, -2, 8, 26); }
-    if (el.barba) { X.fillStyle = el.barba; X.beginPath(); X.moveTo(-R * 0.7, 24); X.quadraticCurveTo(0, R + 50, R * 0.7, 24); X.quadraticCurveTo(0, R * 0.7, -R * 0.7, 24); X.fill(); }
   }
   if (el.tiara) { X.strokeStyle = '#e8b830'; X.lineWidth = 8; X.beginPath(); X.arc(0, 2, R - 2, Math.PI * 1.12, Math.PI * 1.88); X.stroke(); X.fillStyle = '#c22'; X.beginPath(); X.arc(0, -R + 3, 6, 0, 7); X.fill(); }
   if (el.elmo) { X.fillStyle = el.elmo; X.strokeStyle = '#141414'; X.lineWidth = 4; X.beginPath(); X.arc(0, -4, R + 4, Math.PI, 0); X.lineTo(R + 4, 4); X.lineTo(-R - 4, 4); X.closePath(); X.fill(); X.stroke(); X.fillStyle = '#b8231c'; X.beginPath(); X.moveTo(0, -R - 4); X.quadraticCurveTo(30, -R - 50, -10, -R - 46); X.fill(); }
