@@ -1,0 +1,42 @@
+name: Fundos ilustrados
+
+# Gera na Cloudflare (gratis) SO os cenarios que ainda nao existem e guarda na Release "fundos".
+# Roda sozinho quando muda motor-ilustrado/cenarios/. Cenario que ja existe e reaproveitado, nunca refeito.
+on:
+  push:
+    branches: [producao]
+    paths: ["motor-ilustrado/cenarios/**", "motor-ilustrado/teste.txt"]
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "vazio = gerar o que falta; teste = comparar modelos"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fundos
+  cancel-in-progress: false
+
+jobs:
+  fundos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+      CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Programas
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+      - name: Gerar
+        run: |
+          if [ "${{ github.event.inputs.modo }}" = "teste" ] || git diff --name-only HEAD~1 HEAD | grep -q "motor-ilustrado/teste.txt"; then
+            python motor-ilustrado/fundos.py --teste
+          else
+            python motor-ilustrado/fundos.py
+          fi

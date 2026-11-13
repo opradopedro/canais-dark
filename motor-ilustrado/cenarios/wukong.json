@@ -1,0 +1,18 @@
+{
+  "mundo": "wukong",
+  "estilo": "dark epic ancient Chinese fantasy, misty mountains, jade green, lacquer red and gold accents, dramatic moody light, mature adult tone, not childish",
+  "cenarios": {
+    "pico-pedra": {"prompt": "the summit of a sacred mountain at dawn, a giant cracked egg-shaped boulder glowing from inside, sea of clouds below, ancient pine trees", "seed": 11},
+    "cachoeira": {"prompt": "a huge roaring waterfall falling into a misty jade gorge, wet black rocks, spray and mist, a dark cave hidden behind the water curtain", "seed": 12},
+    "caverna-cortina": {"prompt": "inside a vast stone cave behind a waterfall, stone throne carved in rock, stone tables and benches, light filtering through the water curtain", "seed": 13},
+    "floresta-macacos": {"prompt": "wild fruit forest on a mountain slope, giant peach trees, hanging vines, mossy rocks, golden afternoon light through leaves", "seed": 14},
+    "templo-mestre": {"prompt": "a secluded Taoist temple courtyard high in the mountains, stone tiles, bronze incense burner, red pillars, curved roofs, fog", "seed": 15},
+    "palacio-dragao": {"prompt": "an underwater dragon king palace, coral pillars, glowing pearls, green-blue deep sea light, schools of shadowy fish far away, golden treasure", "seed": 16},
+    "submundo": {"prompt": "the underworld court hall, dark stone, blue ghost fire lanterns, a judge desk with a huge open book, chains, black and crimson tones", "seed": 17},
+    "ceu-portao": {"prompt": "the southern gate of the heavenly palace above the clouds, giant golden gates, white jade bridge, ranks of empty banners, blinding light", "seed": 18},
+    "campo-batalha-ceu": {"prompt": "a battlefield on top of storm clouds, broken spears and banners, lightning, smoke, crimson sky, scattered celestial armor", "seed": 19},
+    "forno-laozi": {"prompt": "inside a gigantic bronze alchemy furnace, swirling eight trigram symbols on the walls, roaring blue and orange flames, molten glow", "seed": 20},
+    "mao-buda": {"prompt": "five colossal stone pillars rising into golden clouds at the edge of the world, endless sky, divine light rays", "seed": 21},
+    "montanha-prisao": {"prompt": "a lonely rocky mountain with five peaks under heavy rain, a small dark gap at its base, withered grass, centuries of weather", "seed": 22}
+  }
+}
