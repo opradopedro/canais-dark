@@ -92,7 +92,7 @@ export function buildOutfit(id: string, spec: ElencoSpec = {}): { outfit: Outfit
   if (lowId.includes("imperador") || lowId.includes("dragao") || lowId.includes("buda") || roupa === "rei") {
     const robe = lowId.includes("dragao") ? "#1e6b7b" : lowId.includes("buda") ? "#e8a828" : EMPEROR.jacket;
     return {
-      outfit: { ...EMPEROR, jacket: robe, skin },
+      outfit: { ...EMPEROR, jacket: robe, skin, beard: lowId.includes("buda") ? undefined : "#f4f1ea" },
       seed,
       scale: lowId.includes("buda") ? 1.22 : 1.08,
       extras: { crown: !lowId.includes("buda"), beard: !lowId.includes("buda"), hairCol: lowId.includes("buda") ? "#222028" : "#f4f1ea" },
@@ -173,6 +173,8 @@ export function buildOutfit(id: string, spec: ElencoSpec = {}): { outfit: Outfit
     sword,
     skin,
     build,
+    beard: isOld || chapeu.includes("barba") || lowId.includes("subhuti") || lowId.includes("subodhi") ? hairCol : undefined,
+    glasses: chapeu.includes("oculos"),
   };
 
   return {
@@ -220,28 +222,8 @@ function drawExtrasAndProp(
     }
   }
 
-  // Long flowing beard for elders / monks (Subhuti)
-  if (extras.beard && !side) {
-    const bPts: [number, number][] = [
-      [268, 370], [258, 445], [282, 505], [300, 520], [318, 505], [342, 445], [332, 370],
-    ];
-    p.shadedFill(bPts, extras.hairCol, shade(extras.hairCol, 0.82), -1.2, 42);
-    p.poly(bPts, null, 6.5);
-  }
-
-  // Glasses
-  if (extras.glasses && !side) {
-    p.ell(270, 306, 22, 16, "rgba(210,235,255,0.28)", 6);
-    p.ell(330, 306, 22, 16, "rgba(210,235,255,0.28)", 6);
-    p.line([[292, 306], [308, 306]], INK, 6);
-  }
-
-  // Nurse cross badge on chest
-  if (extras.nurse && !side) {
-    p.poly([[326, 480], [358, 480], [358, 512], [326, 512]], "#ffffff", 4);
-    p.line([[342, 487], [342, 505]], "#d8343a", 6);
-    p.line([[333, 496], [351, 496]], "#d8343a", 6);
-  }
+  // barba, oculos e cruz de enfermeira sairam daqui (12/11): eram desenhados em posicao fixa e nao acompanhavam o
+  // rosto. Barba e oculos agora vao no rosto (toon.ts faceFront); a cruz no peito o Pedro achou estranha.
 
   // Spartan helmet crest & bronze shield
   if (extras.spartan) {

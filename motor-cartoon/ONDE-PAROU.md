@@ -33,10 +33,27 @@ Atualizado em 12/11/2026 (noite) pelo Claude. Plano completo: `PLANO-ANTIGRAVITY
   - Ainda não mexido (antes): a estrada "em cima do morro" (o Pedro achou estranho o morro verde atrás da estrada no
     `cenarios/estrada`); vale baixar/afastar o morro.
 
+## Erros que o Pedro já reprovou (NUNCA repetir; confira em imagem antes de mandar prova)
+
+1. Coisa desenhada em posição fixa no cartão (barba, óculos, cruz no peito, rabo de cavalo, gota de suor) não
+   acompanha o rosto quando o boneco anda/inclina: parece "flutuando". Tudo que é do rosto vai no `faceFront`
+   (`src/toon.ts`); não criar enfeite novo em `drawExtrasAndProp` com coordenada fixa.
+2. Símbolo/emblema no peito (cruz de enfermeira) ficou estranho: roupa sem logo.
+3. Veículo anda NA rua, na faixa, ao longo dela (`pista` no cenário); nunca atravessando mato/calçada e nunca em
+   cima da câmera (9 m ou mais na frente). Cenário novo com rua declara `pista: { x, largura }`.
+4. Placa na beira da rua, nunca no meio do asfalto.
+5. Capa/peça retangular solta no corpo ("quadrado dentro do macaco"): roupa tem que seguir o contorno do corpo.
+6. Teto sumindo de dia (interior sem teto): todo interior tem teto.
+7. Narração cita algo e a imagem não mostra / cena repetida: ver "Cena que muda" no `ROTEIROS.md` (o fiscal barra).
+8. Old Tales infantil (alaúde, fofo): trilha de ação e 4+ cenas de ação (o fiscal barra).
+9. Voz que engole a última palavra ("Parte dos" sem "mañana"): a produção regrava até 2 vezes e não sobe sem o fim.
+
 ## Estado dos canais
 
-- Old Tales, Signal Lost e Hora Muerta PAUSADOS em `canais-ativos.txt` (Pedro, 11/11). Para ligar um canal: o Pedro
-  aprova a prova, põe `"motor_visual": "cartoon"` no `canal.json` e descomenta a linha em `canais-ativos.txt`.
+- 13/11: Pedro aprovou as provas; Old Tales, Signal Lost e Hora Muerta LIGADOS no motor cartoon (`"motor_visual":
+  "cartoon"` no `canal.json` e linha em `canais-ativos.txt`). Roteiros antigos sem `"visual": "3d"` (HM031-040,
+  SV018-030, CL024-033) foram para `<canal>/em-espera/`: o motor cartoon só desenha roteiro com bloco `cena`.
+- A história do hospital (Fourth Floor) virou SV033/SV034 porque SV031/SV032 já existem privados no YouTube.
 - SV031/SV032, CL018/022/023, HM029/030 estão no YouTube como PRIVADOS: a produção os trata como já enviados.
   Para refazer alguma dessas histórias, use código NOVO.
 

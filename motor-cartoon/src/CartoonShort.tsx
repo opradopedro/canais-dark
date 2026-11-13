@@ -756,9 +756,24 @@ class StoryWorld {
         if (lim) { g.visible = false; continue; }
         const d = 10 + 5 * iv;
         const dir = iv % 2 ? -1 : 1;
-        const pos = ancora.clone().addScaledVector(fH, d).addScaledVector(rH, dir * (-9 + 18 * uC));
-        g.position.set(pos.x, focus.y, pos.z);
-        g.rotation.y = Math.atan2(dir * rH.x, dir * rH.z);
+        const pista = sc.pista;
+        if (pista) {
+          // anda NA rua, na sua faixa (mao direita), ao longo de Z, perto de onde a camera olha
+          const ref = ancora.clone().addScaledVector(fH, 5 + 4 * iv);
+          let z = ref.z + dir * (-12 + 24 * uC);
+          if (Math.abs(fH.z) > 0.5) {
+            // camera olhando ao longo da rua: o carro fica sempre a 9 m ou mais na frente (nunca em cima da camera)
+            const sz = Math.sign(fH.z), perto = cam.position.z + sz * (9 + 5 * iv), longe = cam.position.z + sz * (34 + 5 * iv);
+            z = dir > 0 === sz > 0 ? perto + (longe - perto) * uC : longe + (perto - longe) * uC;
+          }
+          g.position.set(pista.x + dir * pista.largura * 0.25, focus.y, z);
+          g.rotation.y = dir > 0 ? 0 : Math.PI;
+        } else {
+          // sem rua no cenario: estacionado (nunca atravessando casa, mato ou calcada)
+          const pos = dentro(ancora.clone().addScaledVector(fH, d).addScaledVector(rH, dir * 3));
+          g.position.set(pos.x, focus.y, pos.z);
+          g.rotation.y = Math.atan2(rH.x, rH.z);
+        }
         const sir = g.userData.sirene as THREE.Mesh[] | undefined;
         if (sir) sir.forEach((m, k) => (m.visible = Math.sin(t * 12 + k * Math.PI) > 0));
         const jan = g.userData.janelas as THREE.Mesh | undefined;
@@ -773,6 +788,12 @@ class StoryWorld {
       } else {
         const s = ip % 2 ? -1 : 1;
         const pos = dentro(ancora.clone().addScaledVector(fH, 3.4 + 2.2 * ip).addScaledVector(rH, s * 0.21 * (3.4 + 2.2 * ip)));
+        // placa na beira da rua, nunca no meio do asfalto
+        if (sc.pista && Math.abs(pos.x - sc.pista.x) < sc.pista.largura / 2 + 0.6) {
+          // mais longe, para a beira da rua caber no quadro
+          pos.copy(ancora).addScaledVector(fH, 13 + 4 * ip);
+          pos.x = sc.pista.x + (s > 0 ? 1 : -1) * (sc.pista.largura / 2 + 0.7);
+        }
         g.position.set(pos.x, focus.y, pos.z);
         g.rotation.y = Math.atan2(-fH.x, -fH.z);
         ip++;

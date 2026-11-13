@@ -4,5 +4,6 @@
  "idioma": "es",
  "token_var": "YT_REFRESH_TOKEN_ES",
  "pasta_videos_var": "HM_VIDEOS",
- "pasta_videos": ""
+ "pasta_videos": "",
+ "motor_visual": "cartoon"
 }

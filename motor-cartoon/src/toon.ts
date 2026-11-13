@@ -16,7 +16,7 @@ const SH_FELT: C3 = [0.62, 0.62, 0.7];
 export type Build = "adult" | "stout" | "kid";
 export type Outfit = {
   jacket: string; pants: string; boots: string; hat?: string | null; belt?: string | null; buttons?: string; rifle?: boolean;
-  sash?: string; sword?: boolean; moustache?: string; skin?: string; head?: number; cap?: string; hair?: string; dress?: string;
+  sash?: string; sword?: boolean; moustache?: string; beard?: string; glasses?: boolean; skin?: string; head?: number; cap?: string; hair?: string; dress?: string;
   build?: Build;
 };
 type P2 = [number, number];
@@ -306,8 +306,16 @@ const mouth = (p: Pen, kind: MouthK, mx: number, my: number, u: number, k = 1) =
 /** face v2 (front / 3-4). u = 1 % of the head path width W. Eyes 26u apart on the centre line, brows 20u up, mouth 20u
  *  down, everything slid toward the facing side. No blush, no catchlights. */
 export const faceFront = (p: Pen, cx: number, cy: number, W: number, expr: Expr, facing: number, look: number, lid: number, brim: boolean,
-  skin: string, moustache?: string, stout = false) => {
+  skin: string, moustache?: string, stout = false, beard?: string, glasses = false) => {
   const u = W / 100, F = FACE[expr], fx = cx + 7 * u * facing;
+  // barba presa ao rosto (12/11, Pedro: "a barba do velho nao acompanha o rosto"): desenhada com a cabeca
+  if (beard) {
+    const bx = cx + 8 * u * facing, by = cy + 24 * u;
+    const bp: P2[] = [[bx - 17 * u, by - 4 * u], [bx - 15 * u, by + 22 * u], [bx - 6 * u, by + 40 * u], [bx, by + 46 * u],
+      [bx + 6 * u, by + 40 * u], [bx + 15 * u, by + 22 * u], [bx + 17 * u, by - 4 * u]];
+    p.shadedFill(bp, beard, mul(beard, [0.82, 0.82, 0.86]), -1.2, 20 * u);
+    p.poly(bp, null, 2.2 * u);
+  }
   const ex = (F.eye[0] === "shock" ? 12 : 13) * u, ey = cy;
   for (const side of [-1, 1]) {
     const x = fx + side * ex;
@@ -316,6 +324,10 @@ export const faceFront = (p: Pen, cx: number, cy: number, W: number, expr: Expr,
     const [dI, dO] = F.brow, by = ey - (brim ? 17 : 20) * u;
     if (kind === "shock" || kind === "shockHalf") p.arc(x, by - 6 * u, 9 * u, 3 * u, 200, 340, 4 * u);
     else taper(p, [x - side * 8.5 * u, by + dI * u], [x + side * 8.5 * u, by + dO * u], 5 * u, 2.5 * u);
+  }
+  if (glasses) {
+    for (const side of [-1, 1]) p.ell(fx + side * 13 * u, cy, 10 * u, 8 * u, "rgba(210,235,255,0.28)", 2.4 * u);
+    p.line([[fx - 3 * u, cy], [fx + 3 * u, cy]], INK, 2.4 * u);
   }
   const mx = cx + 8 * u * facing, my = cy + 20 * u;
   mouth(p, F.mouth, mx, my, u);
@@ -600,7 +612,7 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
   p.inkRing(hp, ow, thick);
   hatOn(p, o, hp, H, 300, hc, light, seed, facing, false);
   const brim = !!o.hat && o.hat !== "hair" && o.hat !== "bonnet" && o.hat !== "cap";
-  faceFront(p, 300, hc, W, expr, facing, look, lid, brim, skin, o.moustache, o.build === "stout");
+  faceFront(p, 300, hc, W, expr, facing, look, lid, brim, skin, o.moustache, o.build === "stout", o.beard, o.glasses);
   p.rot = null;
 };
 

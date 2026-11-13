@@ -110,6 +110,7 @@ export function buildBairro(): ScenarioResult {
 
   return {
     group,
+    pista: { x: 0, largura: 7.2 },
     marcas: {
       rua: { x: 0, z: 0 },
       faixa: { x: 0, z: -4 },

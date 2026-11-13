@@ -157,6 +157,7 @@ export function buildEstrada(): ScenarioResult {
 
   return {
     group,
+    pista: { x: 0, largura: 6.6 },
     marcas: {
       meio: { x: 0, z: 0 },
       vindo: { x: 0.8, z: 12 },

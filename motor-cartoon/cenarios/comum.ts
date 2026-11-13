@@ -19,6 +19,8 @@ export interface ScenarioResult {
   group: THREE.Group;
   marcas: Record<string, MarkDef>;
   limites?: { x: number; z: number; h: number };
+  /** rua ao longo de Z (centro x, largura): carros andam NELA, na faixa (12/11, Pedro: carro andando fora da rua) */
+  pista?: { x: number; largura: number };
   update?: (t: number, isNight: boolean, cenaIdx: number) => void;
 }
 
