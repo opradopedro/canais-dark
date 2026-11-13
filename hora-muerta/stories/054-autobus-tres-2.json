@@ -1,0 +1,433 @@
+{
+ "formato": "Regla",
+ "origem": "autoral",
+ "serie": "autobus-tres",
+ "serie_titulo": "El autobús de las tres | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda",
+  "autobús fantasma",
+  "carretera",
+  "choferes"
+ ],
+ "elenco": {
+  "lucia": {
+   "semente": 5311,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "vestido"
+  },
+  "tono": {
+   "semente": 5312,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "casual"
+  },
+  "chofer": {
+   "semente": 5313,
+   "corpo": "forte",
+   "cabelo": "grisalho",
+   "roupa": "guarda",
+   "acessorio": "bone"
+  }
+ },
+ "codigo": "HM054",
+ "parte": 2,
+ "anterior": "HM053",
+ "titulo": "El autobús fantasma se llevó algo de mi casa 🚌 Parte 2 #terror #shorts",
+ "capa": "BOLETO DE 1994",
+ "descripcion": "Lucía no se subió al autobús de las tres. Pero cuando llegó a casa, su hijo tenía los tenis mojados y un boleto de 1994 en el bolsillo.\n\n¿Tú habrías mirado adentro?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Parte dos. La voz de *Toño* sigue llamando desde el autobús.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Mamá, súbete, tengo frío, aquí hay lugar.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Lucía aprieta los ojos y no levanta la cabeza.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "De reojo ve las ventanas. Ya no están vacías.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Hay caras pegadas al vidrio, *apretadas*, mirándola.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Una es doña Chayo, la vecina que desapareció en mayo.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Quédate, porque el autobús no se fue solo.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "La puerta se cierra. El autobús arranca sin ruido.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Y en la última ventana, una mano pequeña *le dice adiós*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A las tres y media llega el autobús de verdad.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Lucía sube llorando y le cuenta todo al chofer.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "El chofer frena en la curva y se persigna.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "El de las tres cayó por esa curva en *mil novecientos noventa y cuatro*. No hubo sobrevivientes.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Lucía llega a casa corriendo. Toño está dormido en su cama.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Lo abraza fuerte. Respira. Está tibio.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Pero sus tenis están mojados, llenos de lodo de carretera.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Y en su bolsillo hay un boleto de autobús, con fecha de *mil novecientos noventa y cuatro*.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Si esperas en esa parada, mira tu reloj.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "objetos": [
+     "onibus"
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "vindo",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "vindo"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "medio",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Crouching",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "meio",
+    "plano": "ombro",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_B",
+      "rosto": "susto"
+     }
+    ],
+    "objetos": [
+     "onibus"
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "acostamento"
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "curva",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "curva"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "indo",
+    "plano": "aereo",
+    "luz": "madrugada"
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "indo",
+    "plano": "auto",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ],
+    "objetos": [
+     "onibus"
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "indo",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_B",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "vindo",
+    "plano": "aberto",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     },
+     {
+      "id": "chofer",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ],
+    "objetos": [
+     "onibus"
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "triste"
+     },
+     {
+      "id": "chofer",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "curva",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "chofer",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "curva",
+    "plano": "baixo",
+    "luz": "neblina_baixa",
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "curva"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Running_A",
+      "rosto": "medo",
+      "de": "porta",
+      "para": "quarto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Crouching",
+      "rosto": "triste"
+     },
+     {
+      "id": "tono",
+      "acao": "Lie_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "PickUp",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "aereo",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "ponto"
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 12,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}
