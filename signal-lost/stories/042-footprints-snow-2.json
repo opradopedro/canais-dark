@@ -1,0 +1,442 @@
+{
+ "formato": "Survivor",
+ "origem": "gringa: Alemanha, caso Hinterkaifeck (1922) https://en.wikipedia.org/wiki/Hinterkaifeck_murders",
+ "serie": "footprints-snow",
+ "serie_titulo": "Footprints in the Snow | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "snowed in",
+  "attic",
+  "footprints",
+  "farmhouse",
+  "hinterkaifeck"
+ ],
+ "elenco": {
+  "sam": {
+   "semente": 4111,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "jaqueta",
+   "acessorio": "barba"
+  },
+  "jess": {
+   "semente": 4112,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "roupa": "casual"
+  },
+  "sheriff": {
+   "semente": 4113,
+   "corpo": "medio",
+   "cabelo": "grisalho",
+   "roupa": "guarda",
+   "acessorio": "bone"
+  }
+ },
+ "codigo": "SV042",
+ "parte": 2,
+ "anterior": "SV041",
+ "titulo": "The voice in our attic repeats what we say ❄️ Part 2 #horror #shorts",
+ "capa": "IT REPEATS US",
+ "descripcion": "The attic hatch was open. A newspaper that isn't theirs appeared on the table. Sam hung a bell on the hatch. At 3:12 AM, it rang.\n\n> Part 3: {when_next}.\nWould you wait for the plow?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Part two. The attic hatch is *open*, a black square in the ceiling.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Sam climbs a chair with the flashlight. Dust, beams, cold air.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Nobody. Just a smell of wet wool.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He nails the hatch shut and they don't sleep.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "In the morning there's a *newspaper* on the kitchen table.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "It's from a town forty miles away, dated three weeks ago.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "They never bought it. The road has been closed for days.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then the food starts to disappear. Bread. A whole ham. Candles.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because Sam set a trap that night.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He hangs a little *bell* on the nails of the hatch.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "If anything moves it, they'll know.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "At 3:12 AM, the bell rings once.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then a voice comes through the ceiling, quiet and calm.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "It repeats their dinner conversation, *word for word*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Jess's laugh. Sam's joke about the hunter. In their exact voices.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Jess grabs the car keys. Sam grabs the axe.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "And the voice upstairs says, in Jess's voice: grab the keys.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Then the hatch nails start to bend. Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "quarto"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Holding_A",
+      "rosto": "desconfiado",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "aereo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Idle_B",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Hammering",
+      "rosto": "bravo"
+     },
+     {
+      "id": "jess",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "close",
+    "luz": "neve",
+    "atores": [
+     {
+      "id": "jess",
+      "acao": "PickUp",
+      "rosto": "susto"
+     }
+    ],
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "medio",
+    "luz": "neve",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     },
+     {
+      "id": "jess",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "aereo",
+    "luz": "neve",
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "jess",
+      "acao": "Interact",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "aereo",
+    "luz": "interior_noite"
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Use_Item",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "desconfiado",
+      "segura": "lanterna"
+     },
+     {
+      "id": "jess",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "quarto"
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "jess",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sofa",
+    "plano": "auto",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     },
+     {
+      "id": "jess",
+      "acao": "Idle_B",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "aereo",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "cozinha"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "jess",
+      "acao": "Running_A",
+      "rosto": "medo",
+      "de": "sala",
+      "para": "porta"
+     },
+     {
+      "id": "sam",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "jess",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "nuca",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Melee_2H_Idle",
+      "rosto": "susto",
+      "segura": "espada"
+     }
+    ],
+    "criatura": {
+     "tipo": "alta",
+     "marca": "quarto"
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 11,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}
