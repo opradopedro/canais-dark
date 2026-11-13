@@ -1,0 +1,444 @@
+{
+ "formato": "Regla",
+ "origem": "gringa: EUA, Mirror Reflection Challenge / Bloody Mary (TikTok) https://www.urbanlegendsmysteryandmyth.com/2025/10/the-mirror-reflection-challenge.html",
+ "serie": "juego-espejo",
+ "serie_titulo": "El juego del espejo | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda",
+  "espejo",
+  "bloody mary",
+  "reto viral"
+ ],
+ "elenco": {
+  "valeria": {
+   "semente": 4301,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "roupa": "casual"
+  },
+  "paola": {
+   "semente": 4302,
+   "corpo": "magro",
+   "cabelo": "rabo",
+   "roupa": "casual"
+  }
+ },
+ "codigo": "HM044",
+ "parte": 2,
+ "anterior": "HM043",
+ "titulo": "Mi reflejo salió caminando del espejo 🪞 Parte 2 #terror #shorts",
+ "capa": "ROMPE EL ESPEJO",
+ "descripcion": "Valeria rompió el espejo, como dice la regla. Pero en el video su reflejo siguió ahí, y se fue caminando.\n\n¿Tú habrías roto el espejo?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Parte dos. Las manos de la mujer siguen en los hombros de *Valeria*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Ella no aparta la vista. Es la primera regla.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "En el espejo, la mujer acerca la cara a su oído.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Le susurra con la voz de Paola: ya puedes mirar, no pasa nada.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Pero Paola sigue en la sala, riéndose del video.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Entonces su reflejo hace algo que ella no hace: *sonríe*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Una sonrisa lenta, demasiado ancha, con los ojos quietos.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Quédate, porque la tercera regla tiene un precio.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Valeria levanta el celular y *golpea el espejo* con todas sus fuerzas.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "El vidrio se rompe en mil pedazos, y las manos desaparecen.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Paola corre al cuarto y prende la luz.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "No hay nadie. Solo vidrio en el piso y la vela tibia.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Esa noche ven juntas el video, para reírse del susto.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Pero después del golpe, en los pedazos rotos, el reflejo de Valeria *sigue ahí*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Se da la vuelta, toma la mano de la mujer, y sale caminando del cuadro.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Desde entonces, en cada vidrio, su reflejo llega medio segundo tarde.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Y anoche, en la ventana, su reflejo le *sonrió primero*.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Si haces el juego, cuenta las veces que preguntas.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "valeria",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "fantasma",
+     "marca": "quarto"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "valeria",
+      "acao": "Idle_A",
+      "rosto": "desconfiado",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "ombro",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "valeria",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "fantasma",
+     "marca": "janela"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "valeria",
+      "acao": "Idle_B",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "fantasma",
+     "marca": "janela"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "paola",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "sorriso",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "valeria",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "valeria",
+      "acao": "Idle_B",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "auto",
+    "luz": "madrugada"
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "valeria",
+      "acao": "Melee_Unarmed_Attack_Punch_A",
+      "rosto": "bravo",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "aereo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "valeria",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "paola",
+      "acao": "Running_A",
+      "rosto": "medo",
+      "de": "sala",
+      "para": "quarto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "aberto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "valeria",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     },
+     {
+      "id": "paola",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sofa",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "valeria",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "sorriso",
+      "segura": "celular"
+     },
+     {
+      "id": "paola",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "valeria",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "susto",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "nuca",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "valeria",
+      "acao": "Walking_A",
+      "rosto": "neutro",
+      "de": "quarto",
+      "para": "porta"
+     }
+    ],
+    "criatura": {
+     "tipo": "fantasma",
+     "marca": "porta"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "valeria",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "valeria",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "fantasma",
+     "marca": "janela"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "aereo",
+    "luz": "madrugada"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 10,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}
