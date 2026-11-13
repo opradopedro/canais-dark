@@ -13,19 +13,19 @@ Precisa: CF_ACCOUNT_ID, CF_API_TOKEN, gh autenticado (GH_TOKEN) no Actions.
 import base64, json, os, subprocess, sys, time, urllib.request, urllib.error, glob
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
-MODELO = os.environ.get("FUNDOS_MODELO", "@cf/black-forest-labs/flux-1-schnell")
+MODELO = os.environ.get("FUNDOS_MODELO", "@cf/black-forest-labs/flux-2-klein-4b")  # teste 13/11: melhor custo/qualidade
 REL = "fundos"
 ESTILO_BASE = ("clean detailed digital illustration, crisp dark ink outlines, soft painterly shading, "
                "premium animated explainer background art, cinematic composition, wide 16:9 shot, "
                "empty scene with open floor space in the middle, no people, no characters, no animals, no text, no watermark")
 
 
-def cf(modelo, prompt, seed, w=1344, h=768):
+def cf(modelo, prompt, seed, w=1600, h=912):
     conta, tok = os.environ["CF_ACCOUNT_ID"], os.environ["CF_API_TOKEN"]
     url = f"https://api.cloudflare.com/client/v4/accounts/{conta}/ai/run/{modelo}"
     corpo = {"prompt": prompt, "seed": seed}
     if "flux-1-schnell" in modelo:
-        corpo["steps"] = 8
+        corpo = {"prompt": prompt, "steps": 8}
     else:
         corpo.update({"width": w, "height": h})
     if "flux-2" in modelo:  # flux-2 pede multipart
@@ -90,7 +90,25 @@ def prompt_de(m, c):
     return f"{c['prompt']}. {m.get('estilo', '')}. {ESTILO_BASE}"
 
 
+def conferir_lugares():
+    """REGRA do Pedro (13/11): so reaproveita fundo quando e o MESMO lugar. Cada cenario tem "lugar" proprio
+    (ex.: "quarto do Harry" e "quarto do Rony" sao 2 cenarios). Lugar repetido no mesmo mundo = erro."""
+    erros = []
+    for m in mundos():
+        vistos = {}
+        for cid, c in m["cenarios"].items():
+            lugar = (c.get("lugar") or "").strip().lower()
+            if not lugar:
+                erros.append(f"{m['mundo']}/{cid}: falta o campo lugar")
+            elif lugar in vistos:
+                erros.append(f"{m['mundo']}/{cid}: mesmo lugar de {vistos[lugar]} ({lugar})")
+            vistos[lugar] = cid
+    if erros:
+        sys.exit("CENARIOS COM PROBLEMA:\n" + "\n".join(erros))
+
+
 def gerar_faltando():
+    conferir_lugares()
     tem = existentes(REL)
     os.makedirs("/tmp/fundos", exist_ok=True)
     novos = []

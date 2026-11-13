@@ -1,0 +1,283 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#000;overflow:hidden}canvas{display:block}</style></head><body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+/* Motor ilustrado (Old Tales / Hora Muerta / Signal Lost).
+   Fundo = ilustracao da Release "fundos" (gerada uma vez por LUGAR); boneco, camera, efeitos, cartoes e legenda =
+   codigo. Tudo e funcao do tempo: render(t) desenha o quadro t (s) sem estado, entao as fatias do Actions batem.
+   Dados: window.carregar(estado) com {dur, fundos:{id:url}, elenco:{}, cenas:[], segs:[], paleta}.
+   REGRA do Pedro: tudo que e do rosto/cabeca e desenhado no sistema da cabeca (nunca coordenada fixa). */
+const C = document.getElementById('c'), X = C.getContext('2d'), W = 1920, H = 1080;
+let E = null; const IMG = {}; let faltam = 0;
+window.pronto = () => E && faltam === 0;
+window.carregar = (estado) => {
+  E = estado;
+  for (const [id, url] of Object.entries(estado.fundos || {})) {
+    faltam++; const im = new Image();
+    im.onload = () => faltam--; im.onerror = () => { faltam--; console.log('FUNDO FALTANDO ' + id); };
+    im.src = url; IMG[id] = im;
+  }
+  E.chunks = montarLegenda(E);
+};
+
+// ---------------------------------------------------------------- util
+const cl = (v, a, b) => Math.max(a, Math.min(b, v));
+const lerp = (a, b, k) => a + (b - a) * k;
+const ease = k => { k = cl(k, 0, 1); return k * k * (3 - 2 * k); };
+const easeOut = k => 1 - Math.pow(1 - cl(k, 0, 1), 3);
+const rnd = s => { const x = Math.sin(s * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+const D2R = Math.PI / 180;
+const par = (v, k) => Array.isArray(v) ? lerp(v[0], v[v.length - 1], k) : v;
+
+// ---------------------------------------------------------------- camera / fundo
+// cam: {z:[de,para], x:[de,para], y:[de,para]} centro em fracao da imagem. Atores usam coordenadas da imagem
+// (u,v em 0..1), entao o zoom da camera aproxima fundo e boneco juntos.
+function camera(cena, k) {
+  const c = cena.cam || {};
+  const z = par(c.z ?? [1.08, 1.2], ease(k)), x = par(c.x ?? 0.5, ease(k)), y = par(c.y ?? 0.55, ease(k));
+  return { z, x, y };
+}
+function vistaFundo(img, cam) {
+  const iw = img ? img.width : 1920, ih = img ? img.height : 1080;
+  const s = Math.max(W / iw, H / ih) * cam.z, w = iw * s, h = ih * s;
+  let x = W / 2 - cam.x * w, y = H / 2 - cam.y * h;
+  x = cl(x, W - w, 0); y = cl(y, H - h, 0);
+  return { x, y, w, h, s: w / 1920 };
+}
+const tela = (v, u, vv) => [v.x + u * v.w, v.y + vv * v.h];
+
+// ---------------------------------------------------------------- poses (angulos em graus; 0 = para baixo, + = para a frente)
+// p: {lean, y, aL:[ombro,cotovelo], aR, lL:[quadril,joelho], lR, cab}
+const P = {
+  parado: t => ({ lean: 2, y: Math.sin(t * 2.2) * 2, aL: [8, -10], aR: [-6, -12], lL: [4, 0], lR: [-4, 0], cab: Math.sin(t * 1.3) * 2 }),
+  andar: t => { const s = Math.sin(t * 8); return { lean: 5, y: Math.abs(Math.cos(t * 8)) * -6, aL: [-s * 28, -18], aR: [s * 28, -18], lL: [s * 26, s > 0 ? 0 : 30], lR: [-s * 26, s < 0 ? 0 : 30], cab: 0 }; },
+  correr: t => { const s = Math.sin(t * 13); return { lean: 18, y: Math.abs(Math.cos(t * 13)) * -14, aL: [-s * 55, -80], aR: [s * 55, -80], lL: [s * 45, s > 0 ? 10 : 80], lR: [-s * 45, s < 0 ? 10 : 80], cab: -6 }; },
+  pular: t => ({ lean: 25, y: 0, aL: [150, -20], aR: [130, -30], lL: [60, 90], lR: [20, 110], cab: -10 }),
+  agachar: t => ({ lean: 30, y: 70, aL: [40, -60], aR: [30, -70], lL: [80, 150], lR: [60, 140], cab: -5 }),
+  lutar: t => { const s = Math.sin(t * 5); return { lean: 10, y: 8 + s * 3, aL: [60, -90], aR: [40 + s * 10, -100], lL: [25, 25], lR: [-25, 20], cab: -4 }; },
+  golpe: t => { const k = (t * 2.2) % 1; const sw = k < 0.35 ? lerp(160, -30, easeOut(k / 0.35)) : -30; return { lean: 20, y: 10, aL: [sw, -20], aR: [sw - 10, -25], lL: [35, 20], lR: [-30, 10], cab: -5 }; },
+  apontar: t => ({ lean: 3, y: Math.sin(t * 2) * 2, aL: [10, -10], aR: [90, 0], lL: [5, 0], lR: [-5, 0], cab: 4 }),
+  triunfo: t => ({ lean: -4, y: Math.sin(t * 6) * 4, aL: [165, -10], aR: [170, -15], lL: [10, 0], lR: [-10, 0], cab: -8 }),
+  chorar: t => ({ lean: 14, y: 6 + Math.sin(t * 9) * 2, aL: [120, -150], aR: [115, -145], lL: [6, 4], lR: [-6, 4], cab: 14 }),
+  sentar: t => ({ lean: -2, y: 95, aL: [30, -50], aR: [20, -60], lL: [90, -90], lR: [85, -95], cab: Math.sin(t * 1.5) * 3 }),
+  cair: t => ({ lean: 80, y: 120, aL: [100, 0], aR: [80, -10], lL: [40, 10], lR: [70, 20], cab: 10 }),
+  deitado: t => ({ lean: 90, y: 170, aL: [20, 0], aR: [-10, 0], lL: [10, 0], lR: [-6, 0], cab: 0 }),
+  curvar: t => ({ lean: 50, y: 25, aL: [70, -20], aR: [60, -30], lL: [15, 30], lR: [-10, 25], cab: 10 }),
+  susto: t => ({ lean: -12, y: Math.sin(t * 30) * 2, aL: [100, -110], aR: [95, -100], lL: [-10, 0], lR: [-25, 5], cab: -10 }),
+  escalar: t => { const s = Math.sin(t * 6); return { lean: -6, y: s * 6, aL: [170 + s * 10, -10], aR: [150 - s * 10, -30], lL: [60 + s * 30, 80], lR: [40 - s * 30, 90], cab: -15 }; },
+};
+
+// ---------------------------------------------------------------- rostos
+function rosto(r, t, cor) {
+  const pis = (t % 3.3) < 0.1 ? 0.12 : 1;
+  X.save(); X.fillStyle = '#111'; X.strokeStyle = '#111'; X.lineCap = 'round';
+  const olho = (x, s) => { X.beginPath(); X.ellipse(x, 2, 6.5 * s, 10 * s * pis, 0, 0, 7); X.fill(); };
+  const sob = (x1, y1, x2, y2) => { X.lineWidth = 6; X.beginPath(); X.moveTo(x1, y1); X.lineTo(x2, y2); X.stroke(); };
+  const boca = f => { X.lineWidth = 5; X.beginPath(); f(); X.stroke(); };
+  switch (r) {
+    case 'raiva': case 'determinado':
+      olho(-18, 1); olho(18, 1); sob(-34, -24, -8, -12); sob(34, -24, 8, -12);
+      boca(() => r === 'raiva' ? (X.moveTo(-14, 32), X.quadraticCurveTo(0, 24, 14, 32)) : (X.moveTo(-12, 30), X.lineTo(12, 30)));
+      if (r === 'raiva') { X.fillStyle = '#fff'; X.fillRect(-10, 27, 20, 5); } break;
+    case 'medo': case 'choque':
+      olho(-18, 1.4); olho(18, 1.4); sob(-32, -28, -10, -34); sob(32, -28, 10, -34);
+      X.lineWidth = 5; X.beginPath(); X.ellipse(0, 32, 9, r === 'choque' ? 15 : 11, 0, 0, 7); X.stroke(); break;
+    case 'dor':
+      sob(-30, -2, -8, 6); sob(-30, 10, -8, 6); sob(30, -2, 8, 6); sob(30, 10, 8, 6);
+      boca(() => { X.moveTo(-14, 34); X.lineTo(-6, 28); X.lineTo(2, 34); X.lineTo(10, 28); X.lineTo(16, 34); }); break;
+    case 'triste': case 'choro':
+      olho(-18, 0.9); olho(18, 0.9); sob(-32, -14, -8, -24); sob(32, -14, 8, -24);
+      boca(() => { X.moveTo(-12, 36); X.quadraticCurveTo(0, 26, 12, 36); });
+      if (r === 'choro') { X.strokeStyle = '#5aa8e8'; X.lineWidth = 4; for (const s of [-1, 1]) { const k = (t * 1.6 + (s > 0 ? 0.5 : 0)) % 1; X.beginPath(); X.moveTo(s * 18, 14); X.lineTo(s * 20, 14 + k * 40); X.stroke(); } } break;
+    case 'sorriso': case 'riso':
+      olho(-18, 1); olho(18, 1); sob(-30, -20, -8, -22); sob(30, -20, 8, -22);
+      boca(() => { X.moveTo(-16, 26); X.quadraticCurveTo(0, r === 'riso' ? 46 : 38, 16, 26); }); break;
+    default: // calmo
+      olho(-18, 1); olho(18, 1); sob(-30, -18, -8, -20); sob(30, -18, 8, -20);
+      boca(() => { X.moveTo(-10, 30); X.quadraticCurveTo(0, 34, 10, 30); });
+  }
+  X.restore();
+}
+
+// ---------------------------------------------------------------- boneco
+// el (elenco): {tipo:'macaco'|'humano', pelo, rosto_cor, tiara, armadura, faixa, arma:'bastao'|'lanca'|'espada', cabelo, chapeu, manto, olhos_ouro}
+const L = { tronco: 125, braco: 68, ante: 62, coxa: 84, canela: 84, cab: 56 };
+function membro(x, y, a1, a2, l1, l2, vira) {
+  const r1 = a1 * D2R * vira, x1 = x + Math.sin(r1) * l1, y1 = y + Math.cos(r1) * l1;
+  const r2 = (a1 + a2) * D2R * vira, x2 = x1 + Math.sin(r2) * l2, y2 = y1 + Math.cos(r2) * l2;
+  return [x1, y1, x2, y2, r2];
+}
+function boneco(a, el, t, sx, sy, esc) {
+  const pose = (P[a.pose] || P.parado)(t + (a.fase || 0));
+  const vira = a.vira ?? 1, lw = 10;
+  X.save(); X.translate(sx, sy); X.scale(esc, esc);
+  // sombra no chao
+  X.fillStyle = 'rgba(0,0,0,0.28)'; X.beginPath(); X.ellipse(0, 4, 70, 12, 0, 0, 7); X.fill();
+  const hipY = -(L.coxa + L.canela) + pose.y, lean = pose.lean * D2R * vira;
+  const shX = Math.sin(lean) * L.tronco, shY = hipY - Math.cos(lean) * L.tronco;
+  const corMembro = el.membro || '#141414';
+  X.lineCap = 'round'; X.lineJoin = 'round';
+  // rabo (macaco) - preso no quadril, balanca
+  if (el.tipo === 'macaco') {
+    X.strokeStyle = el.pelo || '#8a5a30'; X.lineWidth = 9; X.beginPath(); X.moveTo(0, hipY);
+    const bal = Math.sin(t * 3 + (a.fase || 0)) * 25;
+    X.bezierCurveTo(-vira * 70, hipY + 10, -vira * 90, hipY - 70 + bal, -vira * 50, hipY - 110 + bal); X.stroke();
+  }
+  const perna = (ang) => { const m = membro(0, hipY, ang[0], -ang[1], L.coxa, L.canela, vira);
+    X.strokeStyle = corMembro; X.lineWidth = lw; X.beginPath(); X.moveTo(0, hipY); X.lineTo(m[0], m[1]); X.lineTo(m[2], m[3]); X.stroke();
+    X.fillStyle = corMembro; X.beginPath(); X.ellipse(m[2] + vira * 8, m[3], 16, 8, 0, 0, 7); X.fill(); };
+  const braco = (ang, mao) => { const m = membro(shX, shY + 8, ang[0], ang[1], L.braco, L.ante, vira);
+    X.strokeStyle = corMembro; X.lineWidth = lw; X.beginPath(); X.moveTo(shX, shY + 8); X.lineTo(m[0], m[1]); X.lineTo(m[2], m[3]); X.stroke();
+    if (mao) { X.fillStyle = el.mao || '#fff'; X.strokeStyle = '#141414'; X.lineWidth = 4; X.beginPath(); X.arc(m[2], m[3], 13, 0, 7); X.fill(); X.stroke(); }
+    return m; };
+  // ordem: membros de tras, corpo, membros da frente
+  perna(pose.lR); braco(pose.aL, true);
+  // tronco
+  X.strokeStyle = corMembro; X.lineWidth = lw + 2; X.beginPath(); X.moveTo(0, hipY); X.lineTo(shX, shY); X.stroke();
+  // roupa ao longo do tronco (segue o corpo)
+  X.save(); X.translate(0, hipY); X.rotate(lean);
+  if (el.manto) { X.fillStyle = el.manto; X.strokeStyle = '#141414'; X.lineWidth = 4; X.beginPath(); X.moveTo(-26, -L.tronco + 6); X.lineTo(26, -L.tronco + 6); X.lineTo(40, 30); X.lineTo(-40, 30); X.closePath(); X.fill(); X.stroke(); }
+  if (el.armadura) { X.fillStyle = el.armadura; X.strokeStyle = '#5a3a08'; X.lineWidth = 4;
+    X.beginPath(); X.moveTo(-28, -L.tronco + 8); X.quadraticCurveTo(0, -L.tronco - 4, 28, -L.tronco + 8); X.lineTo(22, -28); X.quadraticCurveTo(0, -18, -22, -28); X.closePath(); X.fill(); X.stroke();
+    X.beginPath(); for (let i = 1; i < 4; i++) { X.moveTo(-22, -L.tronco + 8 + i * 22); X.quadraticCurveTo(0, -L.tronco + 16 + i * 22, 22, -L.tronco + 8 + i * 22); } X.stroke(); }
+  if (el.faixa) { X.fillStyle = el.faixa; X.beginPath(); X.moveTo(-26, -34); X.lineTo(26, -40); X.lineTo(26, -26); X.lineTo(-26, -20); X.closePath(); X.fill();
+    const bal = Math.sin(t * 4) * 8; X.beginPath(); X.moveTo(-20, -26); X.quadraticCurveTo(-34 - bal, 0, -30 - bal, 26); X.lineTo(-20, 24); X.quadraticCurveTo(-22, 0, -10, -24); X.fill(); }
+  X.restore();
+  perna(pose.lL); const mR = braco(pose.aR, true);
+  // arma na mao da frente, na direcao do antebraco
+  if (el.arma && a.arma !== false) {
+    X.save(); X.translate(mR[2], mR[3]); X.rotate(-mR[4] + Math.PI / 2 * (a.arma_ang ?? 0));
+    if (el.arma === 'bastao') { X.fillStyle = '#b8231c'; X.fillRect(-6, -150, 12, 300); X.fillStyle = '#e8b830'; X.fillRect(-8, -160, 16, 34); X.fillRect(-8, 126, 16, 34); X.strokeStyle = '#3a1a08'; X.lineWidth = 3; X.strokeRect(-6, -150, 12, 300); }
+    else if (el.arma === 'lanca') { X.fillStyle = '#6a4a2a'; X.fillRect(-4, -200, 8, 300); X.fillStyle = '#ccd'; X.beginPath(); X.moveTo(0, -250); X.lineTo(14, -196); X.lineTo(-14, -196); X.fill(); }
+    else if (el.arma === 'espada') { X.fillStyle = '#ccd'; X.fillRect(-5, -150, 10, 130); X.fillStyle = '#6a4a2a'; X.fillRect(-16, -22, 32, 8); }
+    X.restore();
+  }
+  // cabeca (tudo dela no sistema local da cabeca)
+  X.save(); X.translate(shX + Math.sin(lean) * (L.cab + 6), shY - Math.cos(lean) * (L.cab + 6)); X.rotate(lean * 0.3 + (pose.cab || 0) * D2R * vira); X.scale(vira, 1);
+  const R = L.cab;
+  if (el.tipo === 'macaco') {
+    X.fillStyle = el.pelo || '#8a5a30'; X.strokeStyle = '#141414'; X.lineWidth = 5;
+    for (const s of [-1, 1]) { X.beginPath(); X.arc(s * (R + 4), 4, 17, 0, 7); X.fill(); X.stroke(); X.fillStyle = el.rosto_cor || '#f0d2b0'; X.beginPath(); X.arc(s * (R + 4), 4, 8, 0, 7); X.fill(); X.fillStyle = el.pelo || '#8a5a30'; }
+    X.beginPath(); X.arc(0, 0, R, 0, 7); X.fill(); X.stroke();
+    X.fillStyle = el.rosto_cor || '#f0d2b0'; X.beginPath(); X.ellipse(4, 10, R * 0.78, R * 0.7, 0, 0, 7); X.fill();
+    // topete de pelo
+    X.fillStyle = el.pelo || '#8a5a30'; X.beginPath(); X.moveTo(-20, -R + 6); X.lineTo(-8, -R - 14); X.lineTo(0, -R + 2); X.lineTo(10, -R - 16); X.lineTo(18, -R + 4); X.fill();
+  } else {
+    X.fillStyle = el.rosto_cor || '#fff'; X.strokeStyle = '#141414'; X.lineWidth = 6; X.beginPath(); X.arc(0, 0, R, 0, 7); X.fill(); X.stroke();
+    if (el.cabelo === 'coque') { X.fillStyle = el.cabelo_cor || '#222'; X.beginPath(); X.arc(0, -R + 4, R * 0.95, Math.PI * 1.05, Math.PI * 1.95); X.fill(); X.beginPath(); X.arc(0, -R - 14, 16, 0, 7); X.fill(); }
+    if (el.cabelo === 'longo') { X.fillStyle = el.cabelo_cor || '#222'; X.beginPath(); X.arc(0, -6, R + 2, Math.PI * 1.0, Math.PI * 2.0); X.lineTo(R + 4, 30); X.lineTo(R - 10, 30); X.lineTo(R - 12, -6); X.lineTo(-R + 12, -6); X.lineTo(-R + 10, 30); X.lineTo(-R - 4, 30); X.fill(); }
+    if (el.barba) { X.fillStyle = el.barba; X.beginPath(); X.moveTo(-R * 0.7, 24); X.quadraticCurveTo(0, R + 50, R * 0.7, 24); X.quadraticCurveTo(0, R * 0.7, -R * 0.7, 24); X.fill(); }
+  }
+  if (el.tiara) { X.strokeStyle = '#e8b830'; X.lineWidth = 8; X.beginPath(); X.arc(0, 2, R - 2, Math.PI * 1.12, Math.PI * 1.88); X.stroke(); X.fillStyle = '#c22'; X.beginPath(); X.arc(0, -R + 3, 6, 0, 7); X.fill(); }
+  if (el.elmo) { X.fillStyle = el.elmo; X.strokeStyle = '#141414'; X.lineWidth = 4; X.beginPath(); X.arc(0, -4, R + 4, Math.PI, 0); X.lineTo(R + 4, 4); X.lineTo(-R - 4, 4); X.closePath(); X.fill(); X.stroke(); X.fillStyle = '#b8231c'; X.beginPath(); X.moveTo(0, -R - 4); X.quadraticCurveTo(30, -R - 50, -10, -R - 46); X.fill(); }
+  rosto(a.rosto || 'calmo', t + (a.fase || 0), el.rosto_cor);
+  if (el.olhos_ouro && a.olhos_brilho) { const g = X.createRadialGradient(0, 2, 2, 0, 2, 60); g.addColorStop(0, 'rgba(255,220,90,0.95)'); g.addColorStop(1, 'rgba(255,200,60,0)'); X.fillStyle = g; X.beginPath(); X.arc(-18, 2, 60, 0, 7); X.arc(18, 2, 60, 0, 7); X.fill(); }
+  X.restore();
+  X.restore();
+}
+
+// ---------------------------------------------------------------- efeitos (todos funcao de t)
+function fx(nome, t, k, cena, v) {
+  const [n, arg] = nome.split('@');
+  switch (n) {
+    case 'chuva': X.strokeStyle = 'rgba(200,220,255,0.35)'; X.lineWidth = 2; for (let i = 0; i < 160; i++) { const x = (rnd(i) * W + t * 300) % W, y = (rnd(i + 9) * H + t * 1800) % H; X.beginPath(); X.moveTo(x, y); X.lineTo(x - 12, y + 40); X.stroke(); } break;
+    case 'neblina': for (let i = 0; i < 12; i++) { const x = ((rnd(i) * (W + 600) + t * (20 + i * 5)) % (W + 600)) - 300, y = H * (0.4 + rnd(i + 3) * 0.6); X.fillStyle = `rgba(220,230,240,${0.06 + 0.04 * Math.sin(t + i)})`; X.beginPath(); X.ellipse(x, y, 260, 60, 0, 0, 7); X.fill(); } break;
+    case 'respingo': for (let i = 0; i < 90; i++) { const kk = (rnd(i) + t * (0.6 + rnd(i + 1))) % 1; const x = W * (0.2 + rnd(i + 2) * 0.6) + Math.sin(i) * kk * 80, y = H * 0.85 - kk * H * 0.5; X.fillStyle = `rgba(230,245,255,${0.5 * (1 - kk)})`; X.beginPath(); X.arc(x, y, 3 + rnd(i) * 4, 0, 7); X.fill(); } break;
+    case 'poeira': for (let i = 0; i < 40; i++) { const kk = (t * 0.4 + rnd(i)) % 1; X.fillStyle = `rgba(200,180,140,${0.25 * (1 - kk)})`; X.beginPath(); X.arc(W * rnd(i + 4), H * (0.75 + rnd(i) * 0.25) - kk * 120, 6 + kk * 30, 0, 7); X.fill(); } break;
+    case 'faiscas': for (let i = 0; i < 70; i++) { const kk = (t * 0.9 + rnd(i)) % 1; const ang = rnd(i + 7) * Math.PI * 2, r = kk * 500; X.fillStyle = `rgba(255,${180 + rnd(i) * 70 | 0},80,${1 - kk})`; X.fillRect(W / 2 + Math.cos(ang) * r, H * 0.55 + Math.sin(ang) * r * 0.6, 5, 5); } break;
+    case 'velocidade': X.strokeStyle = 'rgba(255,255,255,0.55)'; X.lineWidth = 3; for (let i = 0; i < 46; i++) { const ang = rnd(i) * Math.PI * 2, r0 = 380 + rnd(i + 2) * 200 + ((t * 900 + i * 50) % 300); X.beginPath(); X.moveTo(W / 2 + Math.cos(ang) * r0, H / 2 + Math.sin(ang) * r0); X.lineTo(W / 2 + Math.cos(ang) * (r0 + 220), H / 2 + Math.sin(ang) * (r0 + 220)); X.stroke(); } break;
+    case 'brilho': { const u = cena.brilho || [0.5, 0.5]; const [x, y] = tela(v, u[0], u[1]); const p = 0.7 + 0.3 * Math.sin(t * 6); const g = X.createRadialGradient(x, y, 10, x, y, 520 * p); g.addColorStop(0, 'rgba(255,225,120,0.85)'); g.addColorStop(1, 'rgba(255,190,60,0)'); X.fillStyle = g; X.fillRect(0, 0, W, H); break; }
+    case 'raio': if ((t * 1.7) % 1 < 0.08) { X.fillStyle = 'rgba(235,240,255,0.65)'; X.fillRect(0, 0, W, H); } break;
+    case 'sangue': { const u = cena.sangue || [0.5, 0.5]; const [x0, y0] = tela(v, u[0], u[1]); for (let i = 0; i < 60; i++) { const kk = (t * 1.2 + rnd(i)) % 1; const ang = -Math.PI / 2 + (rnd(i + 3) - 0.5) * 2.2, sp = 300 + rnd(i) * 500; X.fillStyle = `rgba(190,10,20,${1 - kk * 0.8})`; X.beginPath(); X.arc(x0 + Math.cos(ang) * sp * kk, y0 + Math.sin(ang) * sp * kk + 900 * kk * kk, 6 + rnd(i) * 7, 0, 7); X.fill(); } break; }
+    case 'vermelho': X.fillStyle = `rgba(200,0,0,${0.18 + 0.1 * Math.sin(t * 8)})`; X.fillRect(0, 0, W, H); break;
+    case 'escuro': X.fillStyle = 'rgba(0,0,20,0.35)'; X.fillRect(0, 0, W, H); break;
+    case 'dourado': X.fillStyle = 'rgba(255,190,80,0.12)'; X.fillRect(0, 0, W, H); break;
+  }
+}
+
+// ---------------------------------------------------------------- cartoes
+function cartao(c, k, pal) {
+  const ent = easeOut(k * 4), sai = 1 - ease((k - 0.9) * 10);
+  const a = cl(Math.min(ent, sai), 0, 1); if (a <= 0) return;
+  X.save(); X.globalAlpha = a;
+  const fundo = pal.cartao || '#f3ead6', tinta = pal.tinta || '#2a1d10', dest = pal.destaque || '#b8231c';
+  if (c.tipo === 'nome') {
+    const x = 90 - (1 - ent) * 300, y = H - 330;
+    X.fillStyle = fundo; X.strokeStyle = tinta; X.lineWidth = 5; X.beginPath(); X.roundRect(x, y, 620, 150, 14); X.fill(); X.stroke();
+    X.fillStyle = dest; X.fillRect(x, y, 14, 150);
+    X.fillStyle = tinta; X.font = '900 54px Georgia, serif'; X.fillText(c.titulo || '', x + 40, y + 70);
+    X.font = 'italic 32px Georgia, serif'; X.fillStyle = '#5a4630'; X.fillText(c.sub || '', x + 40, y + 118);
+  } else { // fato: painel lateral com numero grande
+    const w = 600, x = W - w - 80 + (1 - ent) * 400, y = 120;
+    X.fillStyle = fundo; X.strokeStyle = tinta; X.lineWidth = 6; X.beginPath(); X.roundRect(x, y, w, 420, 18); X.fill(); X.stroke();
+    X.fillStyle = '#5a4630'; X.font = '700 30px Georgia, serif'; X.fillText((c.titulo || '').toUpperCase(), x + 40, y + 70);
+    X.fillStyle = dest; X.font = '900 120px Georgia, serif'; X.fillText(c.valor || '', x + 36, y + 210);
+    X.fillStyle = tinta; X.font = '600 34px Georgia, serif';
+    let yy = y + 280; for (const l of quebrar(c.sub || '', 30)) { X.fillText(l, x + 40, yy); yy += 44; }
+  }
+  X.restore();
+}
+function quebrar(s, n) { const out = []; let cur = ''; for (const w of s.split(' ')) { if ((cur + ' ' + w).trim().length > n) { out.push(cur.trim()); cur = w; } else cur += ' ' + w; } if (cur.trim()) out.push(cur.trim()); return out; }
+
+// ---------------------------------------------------------------- legenda (3 palavras, colada na voz)
+function montarLegenda(e) {
+  const chunks = [];
+  for (const s of e.segs || []) {
+    const raw = String(s.text || '').trim().split(/\s+/).filter(Boolean); if (!raw.length) continue;
+    const tot = raw.reduce((a, b) => a + b.length, 0) || 1; let cum = 0; const ws = [];
+    raw.forEach((r, i) => {
+      let a0, a1; if (s.w && s.w.length === raw.length) { a0 = s.w[i]; a1 = i + 1 < raw.length ? s.w[i + 1] : (s.w_fim ? s.w_fim[i] : s.t1); }
+      else { a0 = s.t0 + (cum / tot) * (s.t1 - s.t0); cum += r.length; a1 = s.t0 + (cum / tot) * (s.t1 - s.t0); }
+      const limpo = r.replace(/\*/g, '').replace(/[.,!?¡¿"—;:()]/g, '');
+      if (limpo) ws.push({ w: limpo, a0, a1, hi: r.includes('*') });
+    });
+    let cur = []; ws.forEach((w, i) => { cur.push(w); if (cur.length === 3 || /[.,!?—]$/.test(raw[i] || '')) { chunks.push(cur); cur = []; } }); if (cur.length) chunks.push(cur);
+  }
+  return chunks;
+}
+function legenda(t) {
+  const ch = E.chunks; let at = null;
+  for (let i = 0; i < ch.length; i++) { const a = ch[i][0].a0, nx = i + 1 < ch.length ? ch[i + 1][0].a0 : 1e9; const fim = Math.min(nx, ch[i][ch[i].length - 1].a1 + 0.5); if (t >= a && t < fim) { at = ch[i]; break; } }
+  if (!at) return;
+  X.save(); X.font = '900 74px "Arial Black", Arial, sans-serif'; X.textBaseline = 'middle'; X.lineJoin = 'round';
+  const txt = at.map(w => w.w.toUpperCase()); const sp = X.measureText(' ').width;
+  const larg = txt.reduce((a, w) => a + X.measureText(w).width, 0) + sp * (txt.length - 1);
+  let x = W / 2 - larg / 2; const y = H - 120;
+  const pop = 1 + 0.08 * (1 - ease((t - at[0].a0) / 0.12));
+  X.translate(W / 2, y); X.scale(pop, pop); X.translate(-W / 2, -y);
+  at.forEach((w, i) => { const s = txt[i]; X.lineWidth = 14; X.strokeStyle = '#000'; X.strokeText(s, x, y); X.fillStyle = w.hi ? '#ffd23a' : '#fff'; X.fillText(s, x, y); x += X.measureText(s).width + sp; });
+  X.restore();
+}
+
+// ---------------------------------------------------------------- quadro
+function vinheta(a) { const g = X.createRadialGradient(W / 2, H / 2, H * 0.35, W / 2, H / 2, H * 0.95); g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, `rgba(0,0,0,${a})`); X.fillStyle = g; X.fillRect(0, 0, W, H); }
+window.render = function (t) {
+  X.setTransform(1, 0, 0, 1, 0, 0); X.fillStyle = '#000'; X.fillRect(0, 0, W, H);
+  const cenas = E.cenas; let i = cenas.findIndex(c => t >= c.t0 && t < c.t1); if (i < 0) i = t < cenas[0].t0 ? 0 : cenas.length - 1;
+  const cena = cenas[i], k = cl((t - cena.t0) / Math.max(0.01, cena.t1 - cena.t0), 0, 1), tl = t - cena.t0;
+  // tremor de camera
+  let sx = 0, sy = 0; const tr = (cena.fx || []).find(f => f.startsWith('tremor'));
+  if (tr) { const at = parseFloat(tr.split('@')[1] || '0'); const d = tl - at; if (d >= 0 && d < 0.6) { const amp = 26 * (1 - d / 0.6); sx = Math.sin(d * 90) * amp; sy = Math.cos(d * 77) * amp; } }
+  X.setTransform(1, 0, 0, 1, sx, sy);
+  const cam = camera(cena, k), img = IMG[cena.fundo]; const v = vistaFundo(img, cam);
+  if (img && img.width) X.drawImage(img, v.x, v.y, v.w, v.h); else { X.fillStyle = '#334'; X.fillRect(0, 0, W, H); }
+  if (cena.luz) { X.fillStyle = cena.luz; X.fillRect(-50, -50, W + 100, H + 100); }
+  for (const f of (cena.fx || [])) if (['brilho', 'neblina', 'escuro', 'dourado'].includes(f.split('@')[0])) fx(f, t, k, cena, v);
+  // atores (u,v na imagem; x pode andar de u0 a u1)
+  const atores = (cena.atores || []).slice().sort((a, b) => (a.v ?? 0.9) - (b.v ?? 0.9));
+  for (const a of atores) {
+    const el = (E.elenco || {})[a.id] || {}; const u = par(a.u ?? 0.5, a.mov === 'rapido' ? easeOut(k * 1.4) : k);
+    let vv = a.v ?? 0.9; if (a.pose === 'pular') vv -= Math.sin(cl(k, 0, 1) * Math.PI) * (a.altura ?? 0.25);
+    const [x, y] = tela(v, u, vv); boneco(a, el, tl, x, y, (a.esc ?? 1) * v.s * 1.0);
+  }
+  for (const f of (cena.fx || [])) if (!['brilho', 'neblina', 'escuro', 'dourado'].includes(f.split('@')[0]) && !f.startsWith('tremor') && !f.startsWith('flash')) fx(f, t, k, cena, v);
+  X.setTransform(1, 0, 0, 1, 0, 0);
+  vinheta(cena.vinheta ?? 0.5);
+  const fl = (cena.fx || []).find(f => f.startsWith('flash'));
+  if (fl) { const at = parseFloat(fl.split('@')[1] || '0'), d = tl - at; if (d >= 0 && d < 0.35) { X.fillStyle = `rgba(255,250,235,${1 - d / 0.35})`; X.fillRect(0, 0, W, H); } }
+  if (cena.cartao) { const c = cena.cartao; const c0 = c.t0 ?? 0.3, dur = c.dur ?? Math.min(3.2, cena.t1 - cena.t0 - c0); cartao(c, (tl - c0) / dur, E.paleta || {}); }
+  // corte: 2 quadros pretos no comeco da cena (menos na primeira)
+  if (i > 0 && tl < 0.05) { X.fillStyle = 'rgba(0,0,0,0.85)'; X.fillRect(0, 0, W, H); }
+  legenda(t);
+};
+</script></body></html>
