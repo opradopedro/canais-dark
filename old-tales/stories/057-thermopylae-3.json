@@ -1,0 +1,417 @@
+{
+ "formato": "Soldier",
+ "tema": "epico",
+ "paleta": "grecia",
+ "piano": 0,
+ "origem": "autoral (frente soldado/Esparta do SKILL.md); Heródoto, Histórias 7",
+ "serie": "thermopylae",
+ "serie_titulo": "The 300 at Thermopylae | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "mythology",
+  "old tales",
+  "legends",
+  "history",
+  "story time",
+  "thermopylae",
+  "300 spartans",
+  "leonidas",
+  "sparta",
+  "ancient greece",
+  "history"
+ ],
+ "elenco": {
+  "leonidas": {
+   "semente": 5501,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "soldado_esparta",
+   "acessorio": "barba"
+  },
+  "dienekes": {
+   "semente": 5502,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "soldado_esparta",
+   "acessorio": "barba"
+  },
+  "efialtes": {
+   "semente": 5503,
+   "corpo": "magro",
+   "cabelo": "grisalho",
+   "roupa": "casual"
+  },
+  "xerxes": {
+   "semente": 5504,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "roupa": "rei",
+   "acessorio": "barba"
+  }
+ },
+ "codigo": "CL057",
+ "parte": 3,
+ "anterior": "CL056",
+ "titulo": "The last stand of the 300 ⚔️ Thermopylae Part 3 #story #shorts",
+ "capa": "GO TELL THE SPARTANS",
+ "descripcion": "Betrayed by a mountain path, Leonidas sends the allies home and stays with his 300, plus Thespians and Thebans, for the last stand on a small hill.\n\nWould you have stayed?\n\nFrom Herodotus, Histories, book 7 (chapters 175-228). Herodotus gives millions of Persians; modern historians estimate roughly 100,000 to 300,000.\n#thermopylae #sparta #300 #ancienthistory #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "At dawn, the lookouts ran down the mountain *screaming*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The Persians are behind us. Ephialtes showed them the path.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The pass was lost. Everyone knew it.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Leonidas sent most of the Greek allies home, to fight another day.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Three hundred Spartans stayed. And seven hundred men from Thespiae refused to leave.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because what they did with their last morning still has no equal.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "They didn't wait behind the wall anymore. They *charged*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Out into the open, straight into the Persian army.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Their spears broke. They fought on with swords.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Leonidas fell. The Spartans fought four times to recover his body, and won it back.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then they pulled back to a small hill, back to back.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Herodotus says they fought with swords, then hands, then *teeth*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Until arrows covered the hill, and the last one fell.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Xerxes won the pass. But Greece had time to prepare.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "That same year, the Persian fleet was crushed at Salamis.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Later, the poet Simonides wrote a line for their stone.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Go tell the Spartans, stranger passing by, that here, obedient to their laws, we lie.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "All because you woke up as one of three hundred.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "aereo",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "dienekes",
+      "acao": "Running_A",
+      "rosto": "medo",
+      "de": "pe_torre",
+      "para": "meio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "close",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "dienekes",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     },
+     {
+      "id": "leonidas",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "aereo",
+    "luz": "tempestade"
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "acostamento",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Waving",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "aberto",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo",
+      "segura": "lanca"
+     },
+     {
+      "id": "dienekes",
+      "acao": "Melee_Block",
+      "rosto": "bravo",
+      "segura": "escudo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "aereo",
+    "luz": "tempestade"
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "indo",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Running_A",
+      "rosto": "bravo",
+      "segura": "lanca"
+     },
+     {
+      "id": "dienekes",
+      "acao": "Running_B",
+      "rosto": "bravo",
+      "segura": "escudo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Melee_2H_Attack_Stab",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "dienekes",
+      "acao": "Melee_1H_Attack_Slice_Horizontal",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "curva",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Death_A",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "dienekes",
+      "acao": "Melee_Blocking",
+      "rosto": "bravo",
+      "segura": "escudo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "dienekes",
+      "acao": "Melee_Unarmed_Attack_Punch_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "aereo",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "dienekes",
+      "acao": "Death_B_Pose",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "medio",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "xerxes",
+      "acao": "Cheering",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "aereo",
+    "luz": "tempestade",
+    "efeito": "chuva"
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "templo",
+    "plano": "medio",
+    "luz": "nascer_sol"
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "aberto",
+    "luz": "nascer_sol"
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "aereo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": []
+}
