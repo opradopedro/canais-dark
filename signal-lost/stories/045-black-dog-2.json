@@ -1,0 +1,411 @@
+{
+ "formato": "Survivor",
+ "origem": "autoral",
+ "serie": "black-dog",
+ "serie_titulo": "Don't Feed the Black Dog | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "black dog",
+  "neighborhood rules",
+  "suburban horror"
+ ],
+ "elenco": {
+  "kit": {
+   "semente": 4411,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "acessorio": "oculos"
+  },
+  "ruth": {
+   "semente": 4412,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "vestido"
+  }
+ },
+ "codigo": "SV045",
+ "parte": 2,
+ "anterior": "SV044",
+ "titulo": "The black dog brought back my house key 🐕 Part 2 #horror #shorts",
+ "capa": "IT BROUGHT A KEY",
+ "descripcion": "Kit never put the bowl out. Each night the black dog came closer: the street, the lawn, the porch. When he finally fed it, the bowl came back with something inside.\n\n> Part 3: {when_next}.\nWould you open the door?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Part two. Kit slams the *open window* shut and backs away.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "On the lawn, the black dog sits down, facing his front door.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "It stays there until sunrise, then walks away down the street.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "In the morning, the grass where it sat is dead, in a perfect circle.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Second night. No bowl again. Kit wants to prove it's just a stray.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "At 2 AM the dog is *on the porch*, breathing on the glass.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Third night. Kit's phone rings at 1:59. It's Ruth, crying.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Put the bowl out now. Please. It's at your door.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because this is the part Ruth never told the police.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Kit fills a mixing bowl with meat and opens the door a crack.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He slides it out with his foot. He never looks up.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Something wet and hot breathes on his ankle.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then he hears it eat. Slowly. *Carefully*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "At sunrise, the bowl is back on his doormat, licked clean.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "But it isn't empty. There's something shiny at the bottom.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A house key, covered in saliva.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Kit checks his pocket. It's *his key*. He never lost it.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "So whose key is in his pocket? Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "frente_casa"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "fim_rua",
+    "plano": "aereo",
+    "luz": "nascer_sol",
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "fim_rua"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Crouching",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "auto",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "porta"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Holding_A",
+      "rosto": "susto",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "ruth",
+      "acao": "Holding_A",
+      "rosto": "medo",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "poste",
+    "plano": "aereo",
+    "luz": "noite_neblina"
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Work_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Interact",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "porta"
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "close",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "frente_casa"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "aberto",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Walking_A",
+      "rosto": "desconfiado",
+      "de": "calcada",
+      "para": "frente_casa"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "close",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Crouching",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "close",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "PickUp",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Idle_B",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "aereo",
+    "luz": "nublado",
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "fim_rua"
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 11,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}
