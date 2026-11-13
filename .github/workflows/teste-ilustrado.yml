@@ -43,8 +43,8 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-dejavu ttf-mscorefonts-installer > /dev/null
           pip install -q -r .github/requirements-canais.txt
-          npm install --prefix motor-ilustrado --no-audit --no-fund
-          npx --prefix motor-ilustrado playwright install --with-deps chromium > /dev/null
+          npm install --prefix motor-ilustrado --no-audit --no-fund playwright@latest
+          cd motor-ilustrado && npx playwright install --with-deps chromium > /dev/null && cd ..
       - name: Recuperar modelos e sons
         uses: actions/cache/restore@v4
         with:
