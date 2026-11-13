@@ -1,0 +1,374 @@
+{
+ "formato": "Regla",
+ "origem": "gringa: EUA, lenda dos black-eyed children https://en.wikipedia.org/wiki/Black-eyed_children",
+ "serie": "ojos-negros",
+ "serie_titulo": "Los niños de ojos negros | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda",
+  "niños de ojos negros",
+  "black eyed kids"
+ ],
+ "elenco": {
+  "tomas": {
+   "semente": 4511,
+   "corpo": "medio",
+   "cabelo": "grisalho",
+   "roupa": "casual",
+   "acessorio": "barba"
+  }
+ },
+ "codigo": "HM046",
+ "parte": 2,
+ "anterior": "HM045",
+ "titulo": "Le dijeron que no y entraron en otra casa 👁️ Parte 2 #terror #shorts",
+ "capa": "DIJO QUE NO",
+ "descripcion": "Don Tomás dijo que no. Los niños se quedaron toda la noche. Y a las seis, la cámara del vecino grabó a dónde fueron.\n\n¿Tú los habrías dejado pasar?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Parte dos. Don Tomás cierra la ventanita y dice: *no*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Los niños no se van. Se quedan quietos en el porche.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Cada diez minutos tocan. Tres golpes, lentos, iguales.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A las dos, la luz de la calle empieza a parpadear.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A las tres, suena su teléfono fijo.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "En la pantalla aparece *su propio número*, el de su casa.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Contesta. Es la voz de su esposa, llorando.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Tomás, déjalos pasar, pobrecitos, se van a congelar.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Pero su esposa está al otro lado de la ciudad, dormida.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Quédate, porque lo peor no pasó en la casa de Tomás.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Él cuelga, prende todas las luces y reza hasta el amanecer.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A las seis, los golpes paran. El porche está vacío.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Ese día, el vecino le enseña el video de su cámara.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A las cinco y cincuenta, los dos niños tocan *la casa de al lado*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Una señora joven abre la puerta, les sonríe y dice: pasen.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Desde entonces, en esa casa nadie abre las cortinas.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Y en la puerta de Tomás hay dos manitas negras marcadas, *por dentro*.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Si tocan a la una y veinte, ya sabes qué decir.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "tomas",
+      "acao": "Interact",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "auto",
+    "luz": "noite",
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "frente_casa"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "tomas",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "poste",
+    "plano": "aereo",
+    "luz": "noite_neblina"
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "tomas",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "tomas",
+      "acao": "Holding_A",
+      "rosto": "susto",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "tomas",
+      "acao": "Holding_A",
+      "rosto": "medo",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "ombro",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "tomas",
+      "acao": "Idle_B",
+      "rosto": "triste",
+      "segura": "celular"
+     }
+    ],
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "janela"
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "aereo",
+    "luz": "noite"
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "auto",
+    "luz": "madrugada"
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "aberto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "tomas",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "aberto",
+    "luz": "nascer_sol"
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "tomas",
+      "acao": "Idle_A",
+      "rosto": "desconfiado",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "fim_rua",
+    "plano": "close",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "fim_rua"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "arvores",
+    "plano": "auto",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "arvores"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "aereo",
+    "luz": "nublado"
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "tomas",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "baixo",
+    "luz": "noite",
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "frente_casa"
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 13,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}

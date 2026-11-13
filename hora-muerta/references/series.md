@@ -114,7 +114,7 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 ## ojos-negros (HM045-HM046) Los niños de ojos negros — origem: gringa: EUA, lenda dos "black-eyed children" https://en.wikipedia.org/wiki/Black-eyed_children (história nossa, Monterrey)
 - 3D: bairro (frente_casa, poste, calcada, rua) + casa_interior (porta, sala); criatura olhos_no_escuro; Don Tomás, 58, taxista aposentado (semente 4511, grisalho, bigode/barba).
 - HM045 parte 1/2: 1:20 batidas; dois meninos de moletom pedem para entrar e "usar o telefone"; voz de adulto, nunca piscam; regra que a avó dizia (nunca convide ninguém a entrar de madrugada); sob a luz do pórtico, olhos todos pretos: "solo tiene que decir que sí". FEITO
-- HM046 parte 2/2: ele diz não; ficam a noite toda; o telefone toca com o número da própria casa; a voz da esposa diz "déjalos pasar", mas ela está na casa da irmã; 6:00 somem; a câmera do vizinho mostra os dois entrando na casa ao lado, convidados; na porta de Tomás, duas mãozinhas pretas marcadas por DENTRO. FALTA
+- HM046 parte 2/2: ele diz não; ficam a noite toda; o telefone toca com o número da própria casa; a voz da esposa diz "déjalos pasar", mas ela está na casa da irmã; 6:00 somem; a câmera do vizinho mostra os dois entrando na casa ao lado, convidados; na porta de Tomás, duas mãozinhas pretas marcadas por DENTRO. FEITO
 
 ## espantapajaros (HM047-HM048) Los siete espantapájaros — origem: autoral
 - 3D: vila (praca, moinho, poco, casa, alto), luz entardecer/lua_cheia/neblina_baixa; criatura espantalho; Juan, 30, peão da colheita (semente 4711, chapéu=bone, camisa casual).
