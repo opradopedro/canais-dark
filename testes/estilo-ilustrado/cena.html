@@ -1,0 +1,85 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head><body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+const C=document.getElementById('c'),X=C.getContext('2d'),W=1920,H=1080;
+const IM={};let carregadas=0;
+['rua','cozinha'].forEach(n=>{const i=new Image();i.onload=()=>{carregadas++};i.src='bg/'+n+'.jpg';IM[n]=i});
+window.pronto=()=>carregadas===2;
+const ease=t=>t<0?0:t>1?1:t*t*(3-2*t);
+const lerp=(a,b,t)=>a+(b-a)*t;
+// fundo com camera: zoom e alvo (fração da imagem); zoom mínimo 1.1 esconde a marca no canto
+function fundo(img,z,cx,cy){const iw=img.width,ih=img.height,s=Math.max(W/iw,H/ih)*z;const w=iw*s,h=ih*s;
+ let x=W/2-cx*w,y=H/2-cy*h;x=Math.min(0,Math.max(W-w,x));y=Math.min(0,Math.max(H-h,y));X.drawImage(img,x,y,w,h);return{x,y,s}}
+// boneco proprio: cabeça redonda, sombrero de palha, rebozo laranja
+function boneco(px,py,esc,t,o){X.save();X.translate(px,py);X.scale(esc,esc);
+ const lw=9;X.lineCap='round';X.lineJoin='round';X.strokeStyle='#111';X.lineWidth=lw;
+ const anda=o.anda?Math.sin(t*9):0, resp=Math.sin(t*2.2)*3;
+ // pernas
+ const quad=[0,-170+resp];
+ X.beginPath();X.moveTo(0,-170+resp);X.lineTo(-10+anda*28,-85);X.lineTo(-14+anda*40,0);X.stroke();
+ X.beginPath();X.moveTo(0,-170+resp);X.lineTo(10-anda*28,-85);X.lineTo(14-anda*40,0);X.stroke();
+ X.fillStyle='#111';[[-14+anda*40],[14-anda*40]].forEach(([fx])=>{X.beginPath();X.ellipse(fx+8,0,17,8,0,0,7);X.fill()});
+ // tronco
+ X.beginPath();X.moveTo(0,-170+resp);X.lineTo(0,-300+resp);X.stroke();
+ // braços
+ const br=o.medo?1:0;
+ const mao=(s)=>{const ax=s*(lerp(30,48,br))+(o.anda?-s*anda*0:0)+(o.anda?anda*s*-22:0), ay=lerp(-200,-325,br);
+  X.beginPath();X.moveTo(0,-285+resp);X.quadraticCurveTo(s*40,-250+resp,ax,ay+resp);X.stroke();
+  X.fillStyle='#fff';X.beginPath();X.arc(ax,ay+resp,15,0,7);X.fill();X.stroke()};
+ mao(-1);mao(1);
+ // rebozo laranja
+ X.fillStyle='#e8742a';X.strokeStyle='#7a3510';X.lineWidth=4;
+ X.beginPath();X.moveTo(-34,-305+resp);X.quadraticCurveTo(0,-285+resp,34,-305+resp);X.lineTo(30,-285+resp);X.quadraticCurveTo(0,-265+resp,-30,-285+resp);X.closePath();X.fill();X.stroke();
+ const bal=Math.sin(t*3)*4+(o.anda?anda*6:0);
+ X.beginPath();X.moveTo(14,-290+resp);X.lineTo(26+bal,-215+resp);X.lineTo(44+bal,-220+resp);X.lineTo(32,-292+resp);X.closePath();X.fill();X.stroke();
+ // cabeça
+ X.strokeStyle='#111';X.lineWidth=lw;X.fillStyle='#fff';const hy=-370+resp;
+ X.beginPath();X.arc(0,hy,62,0,7);X.fill();X.stroke();
+ // olhos (olhar segue o.olhar), piscada
+ const pis=(t%3.7)<0.12?0.15:1, ol=o.olhar||0, arreg=o.medo?1.45:1;
+ X.fillStyle='#111';[-22,22].forEach(ex=>{X.beginPath();X.ellipse(ex+ol*10,hy+4,7*arreg,11*arreg*pis,0,0,7);X.fill()});
+ // sobrancelhas
+ X.lineWidth=6;[-1,1].forEach(s=>{X.beginPath();X.moveTo(s*12+ol*8,hy-20-(o.medo?10:0)-(s<0&&!o.medo?0:0));X.lineTo(s*34+ol*8,hy-(o.medo?34:22));X.stroke()});
+ // boca
+ X.lineWidth=5;X.beginPath();if(o.medo){X.ellipse(ol*8,hy+34,9,13,0,0,7);X.stroke()}else{X.moveTo(-12+ol*8,hy+32);X.quadraticCurveTo(ol*8,hy+38,12+ol*8,hy+32);X.stroke()}
+ // sombrero
+ X.fillStyle='#d9b45a';X.strokeStyle='#5a4310';X.lineWidth=5;
+ X.beginPath();X.ellipse(0,hy-46,108,22,0,0,7);X.fill();X.stroke();
+ X.beginPath();X.moveTo(-46,hy-50);X.quadraticCurveTo(-40,hy-118,0,hy-120);X.quadraticCurveTo(40,hy-118,46,hy-50);X.closePath();X.fill();X.stroke();
+ X.fillStyle='#b23a2a';X.fillRect(-45,hy-66,90,12);
+ X.restore()}
+// particulas de neblina/poeira
+function neblina(t,cor,n){for(let i=0;i<n;i++){const s=i*97.13;const x=((s*13.7+t*(18+i%7*6))%(W+400))-200,y=(s*7.31)%H;
+ X.fillStyle=cor;X.globalAlpha=0.05+0.04*Math.sin(t+i);X.beginPath();X.ellipse(x,y,160+i%5*40,40,0,0,7);X.fill()}X.globalAlpha=1}
+function vinheta(a){const g=X.createRadialGradient(W/2,H/2,H*0.35,W/2,H/2,H*0.95);g.addColorStop(0,'rgba(0,0,0,0)');g.addColorStop(1,'rgba(0,0,0,'+a+')');X.fillStyle=g;X.fillRect(0,0,W,H)}
+function legenda(txt,chave){X.font='900 64px Arial Black, Arial';X.textAlign='center';X.lineWidth=12;X.strokeStyle='#000';
+ const ws=txt.split(' ');let tot=X.measureText(txt).width,x=W/2-tot/2;X.textAlign='left';
+ ws.forEach(w=>{X.strokeText(w,x,H-90);X.fillStyle=w===chave?'#ffd23a':'#fff';X.fillText(w,x,H-90);x+=X.measureText(w+' ').width})}
+// cartão-infográfico desenhado em código
+function cartao(t){X.fillStyle='#eef0f3';X.fillRect(0,0,W,H);
+ const cx=W/2-260,cy=H/2,r=190,ap=ease(t/0.6);X.save();X.translate(cx,cy);X.scale(ap,ap);
+ X.fillStyle='#fff';X.strokeStyle='#222';X.lineWidth=10;X.beginPath();X.arc(0,0,r,0,7);X.fill();X.stroke();
+ for(let i=0;i<12;i++){const a=i/12*Math.PI*2;X.lineWidth=i%3?4:9;X.beginPath();X.moveTo(Math.sin(a)*r*0.82,-Math.cos(a)*r*0.82);X.lineTo(Math.sin(a)*r*0.93,-Math.cos(a)*r*0.93);X.stroke()}
+ const min=lerp(50,60,ease((t-0.4)/2)),hr=2+min/60; // 2:50 -> 3:00
+ const ponteiro=(ang,len,lw,cor)=>{X.strokeStyle=cor;X.lineWidth=lw;X.beginPath();X.moveTo(0,0);X.lineTo(Math.sin(ang)*len,-Math.cos(ang)*len);X.stroke()};
+ ponteiro(hr/12*Math.PI*2,r*0.5,14,'#222');ponteiro(min/60*Math.PI*2,r*0.75,8,'#c22');X.fillStyle='#222';X.beginPath();X.arc(0,0,14,0,7);X.fill();X.restore();
+ X.globalAlpha=ease((t-1.2)/0.5);X.fillStyle='#222';X.font='900 96px Arial Black, Arial';X.textAlign='left';X.fillText('3:00 AM',W/2,H/2-20);
+ X.fillStyle='#c22';X.font='700 46px Arial';X.fillText('LA HORA MUERTA',W/2,H/2+50);
+ X.globalAlpha=ease((t-1.9)/0.5);X.fillStyle='#555';X.font='600 32px Arial';X.fillText('nadie contesta la radio',W/2,H/2+110);X.globalAlpha=1}
+window.render=function(t){X.clearRect(0,0,W,H);
+ if(t<4.2){ // cena 1: rua, travelling lento, ele entra andando e para com medo
+  const k=t/4.2;fundo(IM.rua,lerp(1.12,1.32,ease(k)),lerp(0.42,0.5,ease(k)),0.62);
+  const lamp=0.85+0.15*Math.sin(t*23)*Math.sin(t*7);X.fillStyle='rgba(255,200,120,'+(0.10*lamp)+')';X.fillRect(0,0,W,H);
+  neblina(t,'#9fb3d8',14);const px=lerp(-150,820,ease(Math.min(1,t/2.6)));const parado=t>2.6;
+  boneco(px,1050,1.4,t,{anda:!parado,medo:t>3.1,olhar:t>3.1?1:0});vinheta(0.55);
+  legenda(t<2.6?'Rafael volvía solo a casa':'y entonces la oyó','oyó');
+ }else if(t<7.4){ // cena 2: cozinha, push-in, o rádio liga sozinho
+  const k=(t-4.2)/3.2;fundo(IM.cozinha,lerp(1.15,1.4,ease(k)),0.55,0.55);
+  const pisca=(t>5.4)?(0.5+0.5*Math.sin(t*40)):0;X.fillStyle='rgba(120,255,170,'+(0.08*pisca)+')';X.fillRect(0,0,W,H);
+  neblina(t,'#c8b48a',6);boneco(1350,1120,1.55,t,{medo:t>5.5,olhar:t>5.5?-1:0});vinheta(0.6);
+  legenda(t<5.5?'En la cocina todo estaba quieto':'hasta que la radio se encendió','radio');
+ }else{cartao(t-7.4);legenda('a las tres en punto','tres')}
+ // transição: corte com flash curto
+ [4.2,7.4].forEach(c=>{const d=t-c;if(d>=0&&d<0.12){X.fillStyle='rgba(0,0,0,'+(1-d/0.12)+')';X.fillRect(0,0,W,H)}});
+}
+</script></body></html>
