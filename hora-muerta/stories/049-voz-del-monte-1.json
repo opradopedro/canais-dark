@@ -1,0 +1,410 @@
+{
+ "formato": "Regla",
+ "origem": "gringa: EUA, trend 'mimic' (vozes que imitam gente na floresta) no TikTok https://dailydot.com/secret-of-the-mimic-tiktok",
+ "serie": "voz-del-monte",
+ "serie_titulo": "La voz que imita | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda",
+  "la voz que imita",
+  "mimic",
+  "bosque",
+  "sierra"
+ ],
+ "elenco": {
+  "rosa": {
+   "semente": 4911,
+   "corpo": "magro",
+   "cabelo": "rabo",
+   "roupa": "jaqueta"
+  },
+  "beto": {
+   "semente": 4912,
+   "corpo": "medio",
+   "cabelo": "curto",
+   "roupa": "jaqueta",
+   "acessorio": "bone"
+  }
+ },
+ "codigo": "HM049",
+ "parte": 1,
+ "titulo": "Si oyes tu nombre en el monte, no contestes 🌲 Parte 1 #terror #shorts",
+ "capa": "NO CONTESTES",
+ "descripcion": "En la Sierra de Durango hay una regla: si alguien que conoces te llama desde los árboles, no vayas. Rosa escuchó a su hermano llamarla. Dos veces. Desde dos lados.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿A cuál habrías ido?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Imagina escuchar la voz de tu hermano pidiendo ayuda, *desde dos lados* del bosque.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "En la Sierra de Durango, los viejos tienen una regla.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Si oyes tu nombre en el monte, *no contestes*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Y si alguien que conoces te llama desde los árboles, no vayas.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Rosa tiene veintisiete años y es guardabosques.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Cree que la regla es para que los niños no se pierdan.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Esa noche acampa con su hermano Beto cerca de la torre de vigilancia.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A las diez, Beto va por leña con la linterna.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Quédate, porque los viejos nunca dicen qué es lo que llama.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Pasan veinte minutos. La niebla baja entre los pinos.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Entonces, desde la izquierda, la voz de Beto.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Rosa, ayúdame, me torcí el pie, no puedo caminar.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Ella agarra la linterna y da un paso.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Pero desde la derecha, otra voz, *la misma voz*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Rosa, no vayas. Ese no soy yo.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Las dos voces se callan al mismo tiempo.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Y algo alto, entre los árboles, *repite su nombre*, con la voz de ella.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "¿A cuál le crees? Parte dos, {dia_siguiente}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "fundo",
+    "plano": "aereo",
+    "luz": "noite_neblina"
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "auto",
+    "luz": "entardecer"
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "medio",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "entre_arvores",
+    "plano": "auto",
+    "luz": "noite",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "fundo"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "auto",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Walking_A",
+      "rosto": "sorriso",
+      "de": "trilha",
+      "para": "pe_torre"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "medio",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "beto",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "aberto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "neutro"
+     },
+     {
+      "id": "beto",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "nuca",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "beto",
+      "acao": "Walking_A",
+      "rosto": "neutro",
+      "segura": "lanterna",
+      "de": "clareira",
+      "para": "trilha"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "fundo",
+    "plano": "auto",
+    "luz": "noite_neblina"
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "ombro",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "entre_arvores",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "toco",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "entre_arvores"
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Walking_A",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Idle_B",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "fundo",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "fundo"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "toco",
+    "plano": "aereo",
+    "luz": "neblina_baixa"
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "entre_arvores",
+    "plano": "nuca",
+    "luz": "neblina_baixa",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "alta",
+     "marca": "entre_arvores"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "baixo",
+    "luz": "neblina_baixa",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "alta",
+     "marca": "fundo"
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 14,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}
