@@ -138,7 +138,7 @@ Peças: `f_mosteiro`, `f_igreja`, `f_aldeia`, `f_campo`, `f_estrada_antiga`, `f_
 - Fonte: *Balada de Mulan* (Mulan ci, poema yuefu, dinastia Wei do Norte, séc. V-VI; compilado por Guo Maoqian, séc. XII). É lenda/poema, não registro histórico: dizer isso.
 - 3D: aldeia_china (casa, praca, mercado, poco), campo_batalha (meio, vindo, pe_torre, curva), palacio_ceu (salao = corte do imperador); luz tempestade nas viradas, neve na fronteira; elenco mulan (semente 4901, rabo, soldado_china), pai, general.
 - CL049 parte 1/3: suspiros no tear; 12 listas de convocação com o nome do pai, velho e doente, sem filho homem; ela compra cavalo, sela, rédea e chicote em 4 mercados; corta o cabelo e parte; à noite no Rio Amarelo não ouve mais a mãe chamando. FEITO
-- CL050 parte 2/3: montanhas Yan, cavaleiros xiongnu/rouran; 10 mil li a cavalo; frio que congela a armadura; esconder-se entre homens por anos; batalha, generais morrem; "after a hundred battles"; 12 anos. FALTA
+- CL050 parte 2/3: montanhas Yan, cavaleiros xiongnu/rouran; 10 mil li a cavalo; frio que congela a armadura; esconder-se entre homens por anos; batalha, generais morrem; "after a hundred battles"; 12 anos. FEITO
 - CL051 parte 3/3: o imperador oferece cargo alto e riqueza; ela pede só um camelo rápido para voltar para casa; a família a recebe; troca a armadura pelo vestido; os camaradas a veem e ficam chocados: 12 anos e ninguém soube; a fala das lebres (macho e fêmea correndo lado a lado, quem distingue?). FALTA
 
 ## zhong-kui (CL052-CL054) Zhong Kui, the Demon Queller — tema mito, paleta china — origem: plano do Pedro (11/11, "Zhong Kui")

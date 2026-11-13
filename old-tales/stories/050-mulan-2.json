@@ -1,0 +1,433 @@
+{
+ "formato": "Soldier",
+ "tema": "epico",
+ "paleta": "china",
+ "piano": 0,
+ "origem": "plano do Pedro (11/11): conto da China antiga; Balada de Mulan (Wei do Norte)",
+ "serie": "mulan",
+ "serie_titulo": "The Ballad of Mulan | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "mythology",
+  "old tales",
+  "legends",
+  "history",
+  "story time",
+  "mulan",
+  "ballad of mulan",
+  "chinese legend",
+  "ancient china",
+  "woman warrior"
+ ],
+ "elenco": {
+  "mulan": {
+   "semente": 4901,
+   "corpo": "magro",
+   "cabelo": "rabo",
+   "cabelo_cor": "#1a1410",
+   "roupa": "soldado_china"
+  },
+  "pai": {
+   "semente": 4902,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "casual",
+   "acessorio": "barba"
+  },
+  "general": {
+   "semente": 4903,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "soldado_china",
+   "acessorio": "barba"
+  },
+  "imperador": {
+   "semente": 4904,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "roupa": "rei",
+   "acessorio": "barba"
+  }
+ },
+ "codigo": "CL050",
+ "parte": 2,
+ "anterior": "CL049",
+ "titulo": "12 years at war and no one knew her secret 🗡️ Mulan Part 2 #story #shorts",
+ "capa": "A HUNDRED BATTLES",
+ "descripcion": "Ten thousand li on horseback, iron armor frozen by the northern wind, a hundred battles. And every night, Mulan had to keep the secret that could get her killed.\n\n> Part 3: {when_next}.\nHow long could you keep a secret like that?\n\nFrom The Ballad of Mulan (Mulan ci), a Chinese folk poem from the Northern Wei era (5th-6th century), preserved in Guo Maoqian's Yuefu Shiji. A legend, not a historical record.\n#mulan #chinesehistory #legend #ancientchina #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Mulan rode *ten thousand li* to the frontier, across mountains and passes.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "That's further than walking across the whole of China.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The northern wind froze the iron of her armor at night.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The poem says the cold light shone on the metal, and the night gong rang in the frost.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "She slept beside men who would kill her if they knew.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "She bathed alone. She spoke low. She never laughed too loud.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then the riders came over the hills.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because the poem hides the battles in just one line.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Generals die in a *hundred battles*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Arrows like rain. Horses screaming. Shields splitting in half.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Mulan fought in the front line, and she didn't fall.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Her commanders died, one after another.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Comrades she had shared fires with, never came back.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Year after year, the war didn't end.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Ten years. Then *twelve*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "And not one soldier ever found out her secret.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Finally, the survivors were called to the Emperor's hall.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "And he wanted to reward Mulan personally. Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "aereo",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Running_A",
+      "rosto": "bravo"
+     }
+    ],
+    "objetos": [
+     "cavalo"
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "curva",
+    "plano": "aberto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Running_B",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "medio",
+    "luz": "neve",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Idle_A",
+      "rosto": "triste",
+      "segura": "lanca"
+     }
+    ],
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "close",
+    "luz": "neve",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Melee_2H_Idle",
+      "rosto": "neutro",
+      "segura": "lanca"
+     }
+    ],
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "acostamento",
+    "plano": "auto",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "desconfiado"
+     },
+     {
+      "id": "general",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "beira_mato",
+    "plano": "close",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "indo",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "objetos": [
+     "cavalo"
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "aereo",
+    "luz": "tempestade"
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "general",
+      "acao": "Melee_2H_Attack_Spin",
+      "rosto": "bravo",
+      "segura": "lanca"
+     },
+     {
+      "id": "mulan",
+      "acao": "Melee_Block",
+      "rosto": "bravo",
+      "segura": "escudo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Ranged_Bow_Release",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Melee_1H_Attack_Jump_Chop",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "curva",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "general",
+      "acao": "Death_B_Pose",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "beira_mato",
+    "plano": "medio",
+    "luz": "chuva",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Crouching",
+      "rosto": "triste"
+     }
+    ],
+    "efeito": "chuva"
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "aereo",
+    "luz": "neve",
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "acostamento",
+    "plano": "close",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Idle_A",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "medio",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Cheering",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "general",
+      "acao": "Cheering",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "aereo",
+    "luz": "dia"
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "imperador",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "mulan",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": []
+}
