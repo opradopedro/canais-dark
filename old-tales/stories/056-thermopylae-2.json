@@ -1,0 +1,445 @@
+{
+ "formato": "Soldier",
+ "tema": "epico",
+ "paleta": "grecia",
+ "piano": 0,
+ "origem": "autoral (frente soldado/Esparta do SKILL.md); Heródoto, Histórias 7",
+ "serie": "thermopylae",
+ "serie_titulo": "The 300 at Thermopylae | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "mythology",
+  "old tales",
+  "legends",
+  "history",
+  "story time",
+  "thermopylae",
+  "300 spartans",
+  "leonidas",
+  "sparta",
+  "ancient greece",
+  "history"
+ ],
+ "elenco": {
+  "leonidas": {
+   "semente": 5501,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "soldado_esparta",
+   "acessorio": "barba"
+  },
+  "dienekes": {
+   "semente": 5502,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "soldado_esparta",
+   "acessorio": "barba"
+  },
+  "efialtes": {
+   "semente": 5503,
+   "corpo": "magro",
+   "cabelo": "grisalho",
+   "roupa": "casual"
+  },
+  "xerxes": {
+   "semente": 5504,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "roupa": "rei",
+   "acessorio": "barba"
+  }
+ },
+ "codigo": "CL056",
+ "parte": 2,
+ "anterior": "CL055",
+ "titulo": "Then we will fight in the shade ⚔️ Thermopylae Part 2 #story #shorts",
+ "capa": "FIGHT IN THE SHADE",
+ "descripcion": "Persian arrows would block out the sun, they warned. A Spartan named Dienekes had an answer. For two days the wall of shields held, and Xerxes leapt from his throne three times.\n\n> Part 3: {when_next}.\nWould you have stood in the front row?\n\nFrom Herodotus, Histories, book 7 (chapters 175-228). Herodotus gives millions of Persians; modern historians estimate roughly 100,000 to 300,000.\n#thermopylae #sparta #300 #ancienthistory #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "On the fifth day, Xerxes stopped waiting, and *attacked*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A local man warned the Greeks what was coming.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The Persians have so many archers, their arrows will hide the sun.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A Spartan named Dienekes only shrugged.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Good. Then we will fight *in the shade*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Herodotus wrote that line down, and it's been quoted for 2,500 years.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because the first wave hit the pass like a flood.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The Spartans locked their shields into a wall of bronze.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Long spears over the top. Strike, push, step back, strike again.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Wave after wave broke against it, and the bodies piled up.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then Xerxes sent his best: *the Immortals*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Ten thousand elite soldiers. When one fell, another took his place.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The Spartans faked a retreat, turned around, and cut them down.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Herodotus says Xerxes, watching from his throne, *leapt up three times* in fear for his army.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Two days. The pass held.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "But that night, a Greek walked into the Persian camp.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "His name was *Ephialtes*, and he wanted gold.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "He knew a path over the mountain. Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "aereo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "xerxes",
+      "acao": "Melee_2H_Attack_Chop",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "acostamento",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "efialtes",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     },
+     {
+      "id": "leonidas",
+      "acao": "Idle_A",
+      "rosto": "desconfiado",
+      "segura": "escudo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "baixo",
+    "luz": "tempestade"
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "dienekes",
+      "acao": "Idle_B",
+      "rosto": "sorriso",
+      "segura": "escudo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "dienekes",
+      "acao": "Melee_2H_Idle",
+      "rosto": "sorriso",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "templo",
+    "plano": "aereo",
+    "luz": "nublado"
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "indo",
+    "plano": "aereo",
+    "luz": "tempestade"
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Melee_Blocking",
+      "rosto": "bravo",
+      "segura": "escudo"
+     },
+     {
+      "id": "dienekes",
+      "acao": "Melee_Blocking",
+      "rosto": "bravo",
+      "segura": "escudo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Melee_2H_Attack_Stab",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "curva",
+    "plano": "aereo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "dienekes",
+      "acao": "Melee_Block_Hit",
+      "rosto": "bravo",
+      "segura": "escudo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "xerxes",
+      "acao": "Idle_B",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "xerxes",
+      "acao": "Melee_2H_Attack_Chop",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Dodge_Backward",
+      "rosto": "bravo",
+      "segura": "escudo"
+     },
+     {
+      "id": "dienekes",
+      "acao": "Melee_1H_Attack_Chop",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "xerxes",
+      "acao": "Jump_Full_Short",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "aberto",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Cheering",
+      "rosto": "bravo",
+      "segura": "lanca"
+     },
+     {
+      "id": "dienekes",
+      "acao": "Cheering",
+      "rosto": "sorriso",
+      "segura": "escudo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "beira_mato",
+    "plano": "nuca",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "efialtes",
+      "acao": "Sneaking",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "close",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "efialtes",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "xerxes",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "aereo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "efialtes",
+      "acao": "Walking_A",
+      "rosto": "sorriso",
+      "de": "beira_mato",
+      "para": "pe_torre"
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": []
+}
