@@ -103,7 +103,7 @@ Tom: tensão de sobrevivência, sem gore; susto na penúltima frase de cada part
 
 ## footprints-snow (SV041-SV043) Footprints in the Snow — origem: gringa: Alemanha, caso Hinterkaifeck (1922: pegadas na neve chegando à fazenda e nenhuma saindo, passos no sótão, jornal estranho) https://en.wikipedia.org/wiki/Hinterkaifeck_murders (sem crime: história nossa, fazenda em Montana)
 - 3D: casa_interior (sala, cozinha, quarto, janela, porta) + floresta com neve (fundo, trilha); luz neve/noite; efeito neve; criatura alta; Sam, 36 (semente 4111, jaqueta, barba) e Jess, 34 (semente 4112).
-- SV041 parte 1/3: nevasca, estrada fechada por 5 dias; de manhã pegadas de botas da floresta até a porta dos fundos, nenhuma voltando; a chave reserva sumiu; à noite, passos no sótão (a casa não tem escada para o sótão). FALTA
+- SV041 parte 1/3: nevasca, estrada fechada por 5 dias; de manhã pegadas de botas da floresta até a porta dos fundos, nenhuma voltando; a chave reserva sumiu; à noite, passos no sótão (a casa não tem escada para o sótão). FEITO
 - SV042 parte 2/3: um jornal de 3 semanas atrás na mesa, que não é deles; comida sumindo; Sam pendura sino na porta do sótão; 3:12 o sino toca; uma voz de cima repete as conversas deles do jantar, palavra por palavra. FALTA
 - SV043 parte 3/3: eles saem para o carro na neve; da janela do sótão algo alto acena; a neve para; o xerife chega: o antigo dono fugiu em 1984 depois de ouvir passos no sótão; no sótão, só um colchão e um caderno com a rotina deles anotada; pegadas novas saindo da casa e indo até o carro deles. FALTA
 

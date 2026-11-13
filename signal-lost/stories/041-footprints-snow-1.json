@@ -1,0 +1,432 @@
+{
+ "formato": "Survivor",
+ "origem": "gringa: Alemanha, caso Hinterkaifeck (1922) https://en.wikipedia.org/wiki/Hinterkaifeck_murders",
+ "serie": "footprints-snow",
+ "serie_titulo": "Footprints in the Snow | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "snowed in",
+  "attic",
+  "footprints",
+  "farmhouse",
+  "hinterkaifeck"
+ ],
+ "elenco": {
+  "sam": {
+   "semente": 4111,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "jaqueta",
+   "acessorio": "barba"
+  },
+  "jess": {
+   "semente": 4112,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "roupa": "casual"
+  },
+  "sheriff": {
+   "semente": 4113,
+   "corpo": "medio",
+   "cabelo": "grisalho",
+   "roupa": "guarda",
+   "acessorio": "bone"
+  }
+ },
+ "codigo": "SV041",
+ "parte": 1,
+ "titulo": "Footprints came to our door. None went back ❄️ Part 1 #horror #shorts",
+ "capa": "NONE WENT BACK",
+ "descripcion": "Sam and Jess are snowed in at an old Montana farmhouse for five days. One morning, boot prints come out of the forest to their back door. None go back.\n\n> Part 2: {when_next}.\nWould you check the attic?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Imagine waking up to *footprints* that walk to your back door, and none that walk away.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Sam and Jess just bought an old farmhouse in Montana.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Cheap, quiet, two miles from the nearest neighbor.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "In their first week, a blizzard closes the road for *five days*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "No plows, no mail, just snow up to the windows.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "On the third morning, Sam goes out for firewood.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "There's a line of boot prints coming out of the forest.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Big boots, deep steps, straight to their back door.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because Sam checked the snow all around the house.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "There are no prints going back. Not one.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Inside, Jess checks the hook where they keep the spare key.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The *spare key* is gone.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "They search every room. Closets, basement, under the beds. Nothing.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Sam says it must be a hunter who got lost, and left.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "That night, at 2:10 AM, Jess shakes him awake.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Above the bedroom ceiling, someone is walking. *Slow, heavy steps*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "But this house has no stairs to the attic. Only a sealed hatch.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "And the hatch is open. Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "fundo",
+    "plano": "aereo",
+    "luz": "neve",
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "jess",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "aberto",
+    "luz": "dia"
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "auto",
+    "luz": "neve",
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "medio",
+    "luz": "neve",
+    "atores": [
+     {
+      "id": "jess",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ],
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "nuca",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Walking_A",
+      "rosto": "neutro",
+      "de": "clareira",
+      "para": "trilha"
+     }
+    ],
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "entre_arvores",
+    "plano": "baixo",
+    "luz": "nublado",
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "toco",
+    "plano": "close",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Crouching",
+      "rosto": "desconfiado"
+     }
+    ],
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "aereo",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Walking_A",
+      "rosto": "desconfiado"
+     }
+    ],
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "close",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "efeito": "neve"
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "jess",
+      "acao": "Interact",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "jess",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Crouching",
+      "rosto": "desconfiado",
+      "segura": "lanterna"
+     },
+     {
+      "id": "jess",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "ombro",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "aereo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "jess",
+      "acao": "Lie_StandUp",
+      "rosto": "medo"
+     },
+     {
+      "id": "sam",
+      "acao": "Lie_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "lanterna"
+     },
+     {
+      "id": "jess",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "close",
+    "luz": "interior_noite",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "sala"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "nuca",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "alta",
+     "marca": "quarto"
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 11,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}
