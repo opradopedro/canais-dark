@@ -100,7 +100,11 @@ function rosto(r, t, cor) {
 }
 
 // ---------------------------------------------------------------- boneco
-// el (elenco): {tipo:'macaco'|'humano', pelo, rosto_cor, tiara, armadura, faixa, arma:'bastao'|'lanca'|'espada', cabelo, chapeu, manto, olhos_ouro}
+// el (elenco): {tipo:'macaco'|'humano', pelo, rosto_cor, tiara, armadura, faixa, arma:'bastao'|'lanca'|'espada', cabelo:'curto'|'coque'|'longo',
+// roupa:'tanga'|'tunica'|'trapos'|'cota'|'jaqueta', roupa_cor, elmo, elmo_med, manto, barba, olhos_ouro, desgaste 0..1}
+// REGRA do Pedro (13/11): NAO existe boneco fixo por canal. Cada conto tem o seu protagonista, vestido de acordo com a
+// historia (Idade da Pedra = tanga; medieval = tunica/cota; zumbi = desgaste sobe por parte: cabelo e barba crescem, sujeira).
+// "desgaste" pode ir no elenco (vale o video todo) ou no ator da cena (muda ao longo do video).
 const L = { tronco: 125, braco: 68, ante: 62, coxa: 84, canela: 84, cab: 56 };
 function membro(x, y, a1, a2, l1, l2, vira) {
   const r1 = a1 * D2R * vira, x1 = x + Math.sin(r1) * l1, y1 = y + Math.cos(r1) * l1;
@@ -141,6 +145,29 @@ function boneco(a, el, t, sx, sy, esc) {
   if (el.armadura) { X.fillStyle = el.armadura; X.strokeStyle = '#5a3a08'; X.lineWidth = 4;
     X.beginPath(); X.moveTo(-28, -L.tronco + 8); X.quadraticCurveTo(0, -L.tronco - 4, 28, -L.tronco + 8); X.lineTo(22, -28); X.quadraticCurveTo(0, -18, -22, -28); X.closePath(); X.fill(); X.stroke();
     X.beginPath(); for (let i = 1; i < 4; i++) { X.moveTo(-22, -L.tronco + 8 + i * 22); X.quadraticCurveTo(0, -L.tronco + 16 + i * 22, 22, -L.tronco + 8 + i * 22); } X.stroke(); }
+  const ro = el.roupa;
+  if (ro === 'tanga') { // idade da pedra: tanga de pele + alca no peito
+    X.fillStyle = el.roupa_cor || '#a0703a'; X.strokeStyle = '#3a2410'; X.lineWidth = 4;
+    X.beginPath(); X.moveTo(-30, -14); X.lineTo(30, -14); X.lineTo(24, 26); X.lineTo(8, 16); X.lineTo(0, 30); X.lineTo(-10, 16); X.lineTo(-26, 26); X.closePath(); X.fill(); X.stroke();
+    X.beginPath(); X.moveTo(-22, -L.tronco + 10); X.lineTo(26, -20); X.lineTo(16, -14); X.lineTo(-28, -L.tronco + 22); X.closePath(); X.fill(); X.stroke();
+    X.fillStyle = 'rgba(60,35,10,0.5)'; for (let i = 0; i < 5; i++) { X.beginPath(); X.arc(-18 + i * 9, -2 + (i % 2) * 8, 3, 0, 7); X.fill(); } }
+  if (ro === 'tunica' || ro === 'trapos') { // medieval / roupa rasgada
+    X.fillStyle = el.roupa_cor || '#6a5a3a'; X.strokeStyle = '#2a2010'; X.lineWidth = 4;
+    X.beginPath(); X.moveTo(-24, -L.tronco + 4); X.lineTo(24, -L.tronco + 4); X.lineTo(38, 40);
+    if (ro === 'trapos') { X.lineTo(26, 30); X.lineTo(16, 46); X.lineTo(4, 32); X.lineTo(-8, 48); X.lineTo(-20, 30); } X.lineTo(-38, 40); X.closePath(); X.fill(); X.stroke();
+    X.fillStyle = '#3a2a14'; X.fillRect(-30, -34, 60, 9); }
+  if (ro === 'cota') { // armadura medieval: cota de malha + peitoral
+    X.fillStyle = '#8a8f96'; X.strokeStyle = '#2a2e34'; X.lineWidth = 4;
+    X.beginPath(); X.moveTo(-28, -L.tronco + 4); X.lineTo(28, -L.tronco + 4); X.lineTo(36, 36); X.lineTo(-36, 36); X.closePath(); X.fill(); X.stroke();
+    X.strokeStyle = 'rgba(40,44,50,0.45)'; X.lineWidth = 2; for (let y = -L.tronco + 14; y < 34; y += 9) { X.beginPath(); X.moveTo(-30, y); X.lineTo(30, y); X.stroke(); }
+    X.fillStyle = el.roupa_cor || '#b8231c'; X.beginPath(); X.moveTo(-16, -L.tronco + 10); X.lineTo(16, -L.tronco + 10); X.lineTo(14, -20); X.lineTo(-14, -20); X.closePath(); X.fill(); }
+  if (ro === 'jaqueta') { // atual / apocalipse
+    X.fillStyle = el.roupa_cor || '#3a4a3a'; X.strokeStyle = '#141814'; X.lineWidth = 4;
+    X.beginPath(); X.moveTo(-28, -L.tronco + 4); X.lineTo(28, -L.tronco + 4); X.lineTo(30, -6); X.lineTo(-30, -6); X.closePath(); X.fill(); X.stroke();
+    X.beginPath(); X.moveTo(0, -L.tronco + 6); X.lineTo(0, -8); X.stroke(); }
+  // sujeira e rasgos crescem com o desgaste (zumbi/sobrevivencia)
+  const dg = a.desgaste ?? el.desgaste ?? 0;
+  if (dg > 0 && ro) { X.fillStyle = `rgba(60,40,20,${0.35 * dg})`; for (let i = 0; i < 8; i++) { X.beginPath(); X.ellipse(-22 + rnd(i) * 44, -L.tronco + 20 + rnd(i + 5) * 90, 6 + rnd(i + 2) * 8 * dg, 4 + rnd(i + 3) * 6, 0, 0, 7); X.fill(); } }
   if (el.faixa) { X.fillStyle = el.faixa; X.beginPath(); X.moveTo(-26, -34); X.lineTo(26, -40); X.lineTo(26, -26); X.lineTo(-26, -20); X.closePath(); X.fill();
     const bal = Math.sin(t * 4) * 8; X.beginPath(); X.moveTo(-20, -26); X.quadraticCurveTo(-34 - bal, 0, -30 - bal, 26); X.lineTo(-20, 24); X.quadraticCurveTo(-22, 0, -10, -24); X.fill(); }
   X.restore();
@@ -167,6 +194,14 @@ function boneco(a, el, t, sx, sy, esc) {
     X.fillStyle = el.rosto_cor || '#fff'; X.strokeStyle = '#141414'; X.lineWidth = 6; X.beginPath(); X.arc(0, 0, R, 0, 7); X.fill(); X.stroke();
     if (el.cabelo === 'coque') { X.fillStyle = el.cabelo_cor || '#222'; X.beginPath(); X.arc(0, -R + 4, R * 0.95, Math.PI * 1.05, Math.PI * 1.95); X.fill(); X.beginPath(); X.arc(0, -R - 14, 16, 0, 7); X.fill(); }
     if (el.cabelo === 'longo') { X.fillStyle = el.cabelo_cor || '#222'; X.beginPath(); X.arc(0, -6, R + 2, Math.PI * 1.0, Math.PI * 2.0); X.lineTo(R + 4, 30); X.lineTo(R - 10, 30); X.lineTo(R - 12, -6); X.lineTo(-R + 12, -6); X.lineTo(-R + 10, 30); X.lineTo(-R - 4, 30); X.fill(); }
+    const dgc = a.desgaste ?? el.desgaste ?? 0;
+    if (el.cabelo === 'curto' || dgc > 0.3) { X.fillStyle = el.cabelo_cor || '#2a1a10'; X.beginPath(); X.arc(0, -4, R + 2, Math.PI * 1.02, Math.PI * 1.98); X.lineTo(R - 6, -10); X.lineTo(-R + 6, -10); X.fill();
+      if (dgc > 0.3) { const n = 7; for (let i = 0; i < n; i++) { const ang = Math.PI * (1.05 + i * 0.9 / (n - 1)); X.beginPath(); X.moveTo(Math.cos(ang) * R, Math.sin(ang) * R - 4); X.lineTo(Math.cos(ang) * (R + 10 + 30 * dgc), Math.sin(ang) * (R + 10 + 30 * dgc) - 4 + 10 * dgc); X.lineTo(Math.cos(ang + 0.12) * R, Math.sin(ang + 0.12) * R - 4); X.fill(); }
+        if (dgc > 0.6) { X.fillRect(-R - 4, -8, 10, 40 * dgc); X.fillRect(R - 6, -8, 10, 40 * dgc); } } }
+    if (dgc > 0.15 && !el.barba) { X.fillStyle = el.cabelo_cor || '#2a1a10'; if (dgc < 0.45) { for (let i = 0; i < 26; i++) { X.beginPath(); X.arc(-30 + rnd(i) * 60, 26 + rnd(i + 9) * 22, 1.8, 0, 7); X.fill(); } }
+      else { const lb = 20 + 50 * dgc; X.beginPath(); X.moveTo(-R * 0.75, 18); X.quadraticCurveTo(-10, R + lb, 0, R + lb * 0.9); X.quadraticCurveTo(10, R + lb, R * 0.75, 18); X.quadraticCurveTo(0, 40, -R * 0.75, 18); X.fill(); } }
+    if (dgc > 0) { X.fillStyle = `rgba(70,45,20,${0.4 * dgc})`; for (let i = 0; i < 5; i++) { X.beginPath(); X.ellipse(-32 + rnd(i + 20) * 64, -20 + rnd(i + 30) * 40, 5 + 6 * dgc, 3 + 4 * dgc, 0, 0, 7); X.fill(); } }
+    if (el.elmo_med) { X.fillStyle = '#9aa0a8'; X.strokeStyle = '#2a2e34'; X.lineWidth = 4; X.beginPath(); X.arc(0, -4, R + 5, Math.PI * 1.0, Math.PI * 2.0); X.lineTo(R + 5, 14); X.lineTo(R - 4, 14); X.lineTo(R - 4, -2); X.lineTo(-R + 4, -2); X.lineTo(-R + 4, 14); X.lineTo(-R - 5, 14); X.closePath(); X.fill(); X.stroke(); X.fillRect(-4, -2, 8, 26); }
     if (el.barba) { X.fillStyle = el.barba; X.beginPath(); X.moveTo(-R * 0.7, 24); X.quadraticCurveTo(0, R + 50, R * 0.7, 24); X.quadraticCurveTo(0, R * 0.7, -R * 0.7, 24); X.fill(); }
   }
   if (el.tiara) { X.strokeStyle = '#e8b830'; X.lineWidth = 8; X.beginPath(); X.arc(0, 2, R - 2, Math.PI * 1.12, Math.PI * 1.88); X.stroke(); X.fillStyle = '#c22'; X.beginPath(); X.arc(0, -R + 3, 6, 0, 7); X.fill(); }

@@ -17,6 +17,8 @@ sobrevivente, como se fosse um relato gravado.
 - Nunca marcado como feito para criancas. Publico 16+. Sem sangue, sem gore.
 - Custo zero de ferramenta: cenas desenhadas em codigo, voz Gemini TTS no plano gratis, YouTube Data API.
 
+- **Protagonista muda por conto (REGRA do Pedro, 13/11):** sem personagem fixo do canal. Roupa e aspecto combinam com a história e a época (Idade da Pedra = tanga; medieval = túnica ou cota de malha; zumbi = `desgaste` sobe parte a parte: cabelo e barba crescem, sujeira, roupa rasgada).
+
 ## Como rodar
 
 ```bash

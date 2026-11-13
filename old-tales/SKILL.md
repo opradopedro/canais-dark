@@ -5,6 +5,8 @@ description: Produz e agenda no YouTube os Shorts do canal Old Tales (ingles) �
 
 # Canal Old Tales (historias antigas e mitos, ingles)
 
+- **Protagonista muda por conto (REGRA do Pedro, 13/11):** sem personagem fixo do canal. Roupa e aspecto combinam com a história e a época (Idade da Pedra = tanga; medieval = túnica ou cota de malha; zumbi = `desgaste` sobe parte a parte: cabelo e barba crescem, sujeira, roupa rasgada).
+
 ## LINHA DO CANAL (REGRA do Pedro, 13/11/2026) — SUBSTITUI a linha de 02/11 e qualquer regra antiga de narrativa
 
 O Old Tales conta **histórias de ação, aventura, dia a dia de época, contos míticos, mitologia, histórias bíblicas,

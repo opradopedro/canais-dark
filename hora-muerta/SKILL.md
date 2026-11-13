@@ -176,6 +176,13 @@ essencial? (Ela fica em 62% da altura, puxada para a esquerda: abaixo de ~72% e 
 
 ## Regras do canal
 
+- **PÚBLICO = TODOS OS HISPANOHABLANTES (REGRA do Pedro, 13/11/2026).** Nada de estereótipo do México (sombrero,
+  rebozo, cempasúchil, mariachi, "leyenda mexicana", gírias só mexicanas). Lendas e cenários de vários países
+  (Colômbia, Argentina, Chile, Peru, Venezuela, Espanha, Caribe, Centro-América, México também, sem cliché),
+  em espanhol neutro. Revezar o país de origem entre as séries e citar o país só quando a lenda pede.
+- **Protagonista muda por conto (REGRA do Pedro, 13/11):** sem personagem fixo do canal. Roupa e aspecto combinam
+  com a história e a época; em sobrevivência, `desgaste` sobe ao longo das partes (cabelo e barba crescem, sujeira).
+
 - O susto tem que **aparecer na tela**, não só ser contado. O primeiro quadro tem que ser forte.
 - Sem sangue, sem violência gráfica, sem suicídio, sem crianças em perigo de forma explícita.
 - Tudo narrado como ficção ("Historia de ficción narrada" na descrição). `containsSyntheticMedia` fica
