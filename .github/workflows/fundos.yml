@@ -5,7 +5,7 @@ name: Fundos ilustrados
 on:
   push:
     branches: [producao]
-    paths: ["motor-ilustrado/cenarios/**", "motor-ilustrado/teste.txt"]
+    paths: ["motor-ilustrado/cenarios/**", "motor-ilustrado/fundos-manuais/**", "motor-ilustrado/teste.txt"]
   schedule:
     - cron: "15 0 * * *"   # cota gratis da Cloudflare zera 00:00 UTC: termina o que ficou faltando
   workflow_dispatch:

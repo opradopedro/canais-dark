@@ -7,68 +7,585 @@
  "serie": "wukong-ilustrado",
  "parte": 1,
  "partes": 5,
- "paleta": {"cartao": "#efe3c8", "tinta": "#2a1d10", "destaque": "#b8231c"},
+ "paleta": {
+  "cartao": "#efe3c8",
+  "tinta": "#2a1d10",
+  "destaque": "#b8231c"
+ },
  "elenco": {
-  "wukong": {"tipo": "macaco", "pelo": "#9a6430", "rosto_cor": "#f2d6b2", "membro": "#2a1a0e", "olhos_ouro": true},
-  "rei": {"tipo": "macaco", "pelo": "#9a6430", "rosto_cor": "#f2d6b2", "membro": "#2a1a0e", "tiara": true, "armadura": "#d8a431", "faixa": "#b8231c", "olhos_ouro": true},
-  "macaco1": {"tipo": "macaco", "pelo": "#6e4a2a", "rosto_cor": "#e8c8a0", "membro": "#2a1a0e"},
-  "macaco2": {"tipo": "macaco", "pelo": "#5a3e24", "rosto_cor": "#dcbc94", "membro": "#2a1a0e"},
-  "velho": {"tipo": "macaco", "pelo": "#8a8a84", "rosto_cor": "#d8c4a8", "membro": "#3a3a36"},
-  "imperador": {"tipo": "humano", "rosto_cor": "#f4dcc0", "cabelo": "coque", "cabelo_cor": "#1a1a1a", "barba": "#1a1a1a", "manto": "#d8a431", "membro": "#2a1a0e"}
+  "wukong": {
+   "tipo": "macaco",
+   "pelo": "#9a6430",
+   "rosto_cor": "#f2d6b2",
+   "olhos_ouro": true
+  },
+  "rei": {
+   "tipo": "macaco",
+   "pelo": "#9a6430",
+   "rosto_cor": "#f2d6b2",
+   "tiara": true,
+   "armadura": "#d8a431",
+   "faixa": "#b8231c",
+   "olhos_ouro": true
+  },
+  "macaco1": {
+   "tipo": "macaco",
+   "pelo": "#6e4a2a",
+   "rosto_cor": "#e8c8a0"
+  },
+  "macaco2": {
+   "tipo": "macaco",
+   "pelo": "#5a3e24",
+   "rosto_cor": "#dcbc94"
+  },
+  "velho": {
+   "tipo": "macaco",
+   "pelo": "#8a8a84",
+   "rosto_cor": "#d8c4a8"
+  },
+  "imperador": {
+   "tipo": "humano",
+   "rosto_cor": "#f4dcc0",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a1a1a",
+   "barba": "#1a1a1a",
+   "manto": "#d8a431"
+  }
  },
  "lineas": [
-  {"texto": "On a mountain at the edge of the world, a stone drank sunlight for ten thousand years.", "pausa": 0.4,
-   "cena": {"fundo": "pico-pedra", "cam": {"z": [1.05, 1.25], "x": [0.5, 0.5], "y": [0.55, 0.45]}, "fx": ["brilho", "neblina"], "brilho": [0.5, 0.4]}},
-  {"texto": "One morning, it *cracked*.", "pausa": 0.3,
-   "cena": {"fundo": "pico-pedra", "cam": {"z": [1.6, 1.75], "x": 0.5, "y": 0.42}, "fx": ["tremor@0.2", "flash@0.25", "faiscas", "brilho"], "brilho": [0.5, 0.42]}},
-  {"texto": "A monkey of stone stepped out, and two beams of *gold* burst from his eyes.", "pausa": 0.4,
-   "cena": {"fundo": "pico-pedra", "cam": {"z": [1.5, 1.3], "x": 0.5, "y": 0.62}, "fx": ["brilho", "neblina"], "brilho": [0.5, 0.35],
-    "atores": [{"id": "wukong", "pose": "triunfo", "rosto": "choque", "u": 0.5, "v": 0.86, "esc": 1.1, "olhos_brilho": true}]}},
-  {"texto": "The light pierced the clouds and hit the throne of the *Jade Emperor*.", "pausa": 0.4,
-   "cena": {"fundo": "ceu-portao", "cam": {"z": [1.1, 1.3], "x": 0.5, "y": 0.55}, "fx": ["dourado", "flash@0.1"],
-    "atores": [{"id": "imperador", "pose": "susto", "rosto": "choque", "u": 0.5, "v": 0.9, "esc": 1.0}],
-    "cartao": {"tipo": "nome", "titulo": "The Jade Emperor", "sub": "ruler of Heaven", "t0": 0.6}}},
-  {"texto": "Heaven looked down and laughed. Just a monkey. That was its first *mistake*.", "pausa": 0.5,
-   "cena": {"fundo": "ceu-portao", "cam": {"z": [1.5, 1.6], "x": 0.48, "y": 0.6},
-    "atores": [{"id": "imperador", "pose": "parado", "rosto": "riso", "u": 0.5, "v": 0.95, "esc": 1.3}]}},
-  {"texto": "He grew up wild, racing a whole tribe up cliffs no animal dared to climb.", "pausa": 0.4,
-   "cena": {"fundo": "floresta-macacos", "cam": {"z": [1.15, 1.3], "x": [0.4, 0.6], "y": 0.6}, "fx": ["poeira"],
-    "atores": [{"id": "wukong", "pose": "correr", "rosto": "riso", "u": [0.15, 0.75], "v": 0.9, "esc": 0.9},
-               {"id": "macaco1", "pose": "correr", "rosto": "sorriso", "u": [0.02, 0.6], "v": 0.93, "esc": 0.8, "fase": 0.4},
-               {"id": "macaco2", "pose": "correr", "rosto": "sorriso", "u": [-0.1, 0.48], "v": 0.88, "esc": 0.75, "fase": 0.8}]}},
-  {"texto": "Then they found a *waterfall* so loud it swallowed their screams.", "pausa": 0.4,
-   "cena": {"fundo": "cachoeira", "cam": {"z": [1.05, 1.2], "x": 0.5, "y": [0.4, 0.6]}, "fx": ["respingo", "neblina"],
-    "atores": [{"id": "macaco1", "pose": "susto", "rosto": "medo", "u": 0.3, "v": 0.95, "esc": 0.7},
-               {"id": "wukong", "pose": "parado", "rosto": "determinado", "u": 0.55, "v": 0.95, "esc": 0.75, "vira": -1}]}},
-  {"texto": "The rule was simple: whoever jumps through and comes back alive becomes *king*.", "pausa": 0.4,
-   "cena": {"fundo": "cachoeira", "cam": {"z": [1.4, 1.5], "x": 0.35, "y": 0.62}, "fx": ["respingo"],
-    "atores": [{"id": "velho", "pose": "apontar", "rosto": "calmo", "u": 0.32, "v": 0.95, "esc": 0.9}],
-    "cartao": {"tipo": "fato", "titulo": "Rule of the tribe", "valor": "1 jump", "sub": "through the falls and back alive = king", "t0": 0.5}}},
-  {"texto": "Hundreds of monkeys froze. The stone monkey *jumped*.", "pausa": 0.3,
-   "cena": {"fundo": "cachoeira", "cam": {"z": [1.2, 1.7], "x": [0.45, 0.5], "y": [0.65, 0.5]}, "fx": ["velocidade", "respingo", "tremor@1.6"],
-    "atores": [{"id": "wukong", "pose": "pular", "rosto": "raiva", "u": [0.2, 0.52], "v": 0.92, "esc": 0.9, "altura": 0.22, "mov": "rapido"}]}},
-  {"texto": "Behind the water waited a hidden cave, a stone throne, and room for an *army*.", "pausa": 0.4,
-   "cena": {"fundo": "caverna-cortina", "cam": {"z": [1.0, 1.2], "x": [0.4, 0.55], "y": 0.55}, "fx": ["neblina"],
-    "atores": [{"id": "wukong", "pose": "triunfo", "rosto": "riso", "u": 0.5, "v": 0.92, "esc": 0.8}],
-    "cartao": {"tipo": "nome", "titulo": "Water Curtain Cave", "sub": "Mountain of Flowers and Fruit", "t0": 0.8}}},
-  {"texto": "He crowned himself the *Handsome Monkey King*, and ruled for three hundred years.", "pausa": 0.5,
-   "cena": {"fundo": "caverna-cortina", "cam": {"z": [1.35, 1.45], "x": 0.5, "y": 0.6}, "fx": ["dourado"],
-    "atores": [{"id": "rei", "pose": "sentar", "rosto": "sorriso", "u": 0.5, "v": 0.86, "esc": 0.95},
-               {"id": "macaco1", "pose": "curvar", "rosto": "sorriso", "u": 0.28, "v": 0.95, "esc": 0.8},
-               {"id": "macaco2", "pose": "curvar", "rosto": "sorriso", "u": 0.72, "v": 0.95, "esc": 0.8, "vira": -1}],
-    "cartao": {"tipo": "fato", "titulo": "His reign", "valor": "300", "sub": "years of feasts, and no enemy alive", "t0": 1.0}}},
-  {"texto": "Until the oldest monkey fell at his feet, and never got up.", "pausa": 0.5,
-   "cena": {"fundo": "caverna-cortina", "cam": {"z": [1.5, 1.8], "x": 0.48, "y": 0.68}, "fx": ["escuro"],
-    "atores": [{"id": "velho", "pose": "deitado", "rosto": "dor", "u": 0.4, "v": 0.86, "esc": 0.9},
-               {"id": "rei", "pose": "susto", "rosto": "choque", "u": 0.62, "v": 0.95, "esc": 0.95, "vira": -1}]}},
-  {"texto": "For the first time, the king understood: even he would *die*.", "pausa": 0.5,
-   "cena": {"fundo": "caverna-cortina", "cam": {"z": [2.0, 2.3], "x": 0.5, "y": 0.62}, "fx": ["escuro"], "vinheta": 0.8,
-    "atores": [{"id": "rei", "pose": "chorar", "rosto": "choro", "u": 0.5, "v": 0.96, "esc": 1.2}]}},
-  {"texto": "So he swore to steal the one thing no king can buy.", "pausa": 0.4,
-   "cena": {"fundo": "cachoeira", "cam": {"z": [1.3, 1.1], "x": 0.5, "y": 0.6}, "fx": ["respingo", "raio"],
-    "atores": [{"id": "rei", "pose": "lutar", "rosto": "raiva", "u": 0.5, "v": 0.95, "esc": 1.0, "olhos_brilho": true}]}},
-  {"texto": "Would you have jumped? Part two, {when_next}.", "pausa": 0.3,
-   "cena": {"fundo": "pico-pedra", "cam": {"z": [1.1, 1.0], "x": 0.5, "y": 0.5}, "fx": ["neblina"],
-    "cartao": {"tipo": "fato", "titulo": "Part 2", "valor": "Next", "sub": "the forbidden master", "t0": 0.2}}}
+  {
+   "texto": "On a mountain at the edge of the world, a stone drank sunlight for ten thousand years.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "pico-pedra",
+    "cam": {
+     "z": [
+      1.05,
+      1.25
+     ],
+     "x": [
+      0.5,
+      0.5
+     ],
+     "y": [
+      0.55,
+      0.45
+     ]
+    },
+    "fx": [
+     "brilho",
+     "neblina"
+    ],
+    "brilho": [
+     0.5,
+     0.4
+    ]
+   }
+  },
+  {
+   "texto": "One morning, it *cracked*.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "pico-pedra",
+    "cam": {
+     "z": [
+      1.6,
+      1.75
+     ],
+     "x": 0.5,
+     "y": 0.42
+    },
+    "fx": [
+     "tremor@0.2",
+     "flash@0.25",
+     "faiscas",
+     "brilho"
+    ],
+    "brilho": [
+     0.5,
+     0.42
+    ]
+   }
+  },
+  {
+   "texto": "A monkey of stone stepped out, and two beams of *gold* burst from his eyes.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "pico-pedra",
+    "cam": {
+     "z": [
+      1.5,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.62
+    },
+    "fx": [
+     "brilho",
+     "neblina"
+    ],
+    "brilho": [
+     0.5,
+     0.35
+    ],
+    "atores": [
+     {
+      "id": "wukong",
+      "pose": "triunfo",
+      "rosto": "choque",
+      "u": 0.5,
+      "v": 0.86,
+      "esc": 1.1,
+      "olhos_brilho": true
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The light pierced the clouds and hit the throne of the *Jade Emperor*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "ceu-portao",
+    "cam": {
+     "z": [
+      1.1,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "dourado",
+     "flash@0.1"
+    ],
+    "atores": [
+     {
+      "id": "imperador",
+      "pose": "susto",
+      "rosto": "choque",
+      "u": 0.5,
+      "v": 0.9,
+      "esc": 1.0
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "The Jade Emperor",
+     "sub": "ruler of Heaven",
+     "t0": 0.6
+    }
+   }
+  },
+  {
+   "texto": "Heaven looked down and laughed. Just a monkey. That was its first *mistake*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "ceu-portao",
+    "cam": {
+     "z": [
+      1.3,
+      1.4
+     ],
+     "x": 0.45,
+     "y": 0.55
+    },
+    "atores": [
+     {
+      "id": "imperador",
+      "pose": "parado",
+      "rosto": "riso",
+      "u": 0.45,
+      "v": 0.93,
+      "esc": 1.05
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He grew up wild, racing a whole tribe up cliffs no animal dared to climb.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "floresta-macacos",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": [
+      0.4,
+      0.6
+     ],
+     "y": 0.6
+    },
+    "fx": [
+     "poeira"
+    ],
+    "atores": [
+     {
+      "id": "wukong",
+      "pose": "correr",
+      "rosto": "riso",
+      "u": [
+       0.15,
+       0.75
+      ],
+      "v": 0.9,
+      "esc": 0.9
+     },
+     {
+      "id": "macaco1",
+      "pose": "correr",
+      "rosto": "sorriso",
+      "u": [
+       0.02,
+       0.6
+      ],
+      "v": 0.93,
+      "esc": 0.8,
+      "fase": 0.4
+     },
+     {
+      "id": "macaco2",
+      "pose": "correr",
+      "rosto": "sorriso",
+      "u": [
+       -0.1,
+       0.48
+      ],
+      "v": 0.88,
+      "esc": 0.75,
+      "fase": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then they found a *waterfall* so loud it swallowed their screams.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "cachoeira",
+    "cam": {
+     "z": [
+      1.05,
+      1.2
+     ],
+     "x": 0.5,
+     "y": [
+      0.4,
+      0.6
+     ]
+    },
+    "fx": [
+     "respingo",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "macaco1",
+      "pose": "susto",
+      "rosto": "medo",
+      "u": 0.3,
+      "v": 0.95,
+      "esc": 0.9
+     },
+     {
+      "id": "wukong",
+      "pose": "parado",
+      "rosto": "determinado",
+      "u": 0.55,
+      "v": 0.95,
+      "esc": 0.95,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The rule was simple: whoever jumps through and comes back alive becomes *king*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "cachoeira",
+    "cam": {
+     "z": [
+      1.4,
+      1.5
+     ],
+     "x": 0.35,
+     "y": 0.62
+    },
+    "fx": [
+     "respingo"
+    ],
+    "atores": [
+     {
+      "id": "velho",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "u": 0.32,
+      "v": 0.95,
+      "esc": 0.9
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Rule of the tribe",
+     "valor": "1 jump",
+     "sub": "through the falls and back alive = king",
+     "t0": 0.5
+    }
+   }
+  },
+  {
+   "texto": "Hundreds of monkeys froze. The stone monkey *jumped*.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "cachoeira",
+    "cam": {
+     "z": [
+      1.2,
+      1.7
+     ],
+     "x": [
+      0.45,
+      0.5
+     ],
+     "y": [
+      0.65,
+      0.5
+     ]
+    },
+    "fx": [
+     "velocidade",
+     "respingo",
+     "tremor@1.6"
+    ],
+    "atores": [
+     {
+      "id": "wukong",
+      "pose": "pular",
+      "rosto": "raiva",
+      "u": [
+       0.2,
+       0.52
+      ],
+      "v": 0.92,
+      "esc": 0.9,
+      "altura": 0.22,
+      "mov": "rapido"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Behind the water waited a hidden cave, a stone throne, and room for an *army*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "caverna-cortina",
+    "cam": {
+     "z": [
+      1.0,
+      1.2
+     ],
+     "x": [
+      0.4,
+      0.55
+     ],
+     "y": 0.55
+    },
+    "fx": [
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "wukong",
+      "pose": "triunfo",
+      "rosto": "riso",
+      "u": 0.5,
+      "v": 0.92,
+      "esc": 0.8
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Water Curtain Cave",
+     "sub": "Mountain of Flowers and Fruit",
+     "t0": 0.8
+    }
+   }
+  },
+  {
+   "texto": "He crowned himself the *Handsome Monkey King*, and ruled for three hundred years.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "caverna-cortina",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.6,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "rei",
+      "pose": "sentar",
+      "rosto": "sorriso",
+      "u": 0.635,
+      "v": 0.655,
+      "esc": 0.55
+     },
+     {
+      "id": "macaco1",
+      "pose": "curvar",
+      "rosto": "sorriso",
+      "u": 0.5,
+      "v": 0.95,
+      "esc": 0.75
+     },
+     {
+      "id": "macaco2",
+      "pose": "curvar",
+      "rosto": "sorriso",
+      "u": 0.84,
+      "v": 0.95,
+      "esc": 0.75,
+      "vira": -1
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "His reign",
+     "valor": "300",
+     "sub": "years of feasts, and no enemy alive",
+     "t0": 1.0,
+     "lado": "esq"
+    }
+   }
+  },
+  {
+   "texto": "Until the oldest monkey fell at his feet, and never got up.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "caverna-cortina",
+    "cam": {
+     "z": [
+      1.5,
+      1.8
+     ],
+     "x": 0.48,
+     "y": 0.68
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "velho",
+      "pose": "deitado",
+      "rosto": "dor",
+      "u": 0.4,
+      "v": 0.86,
+      "esc": 0.9
+     },
+     {
+      "id": "rei",
+      "pose": "susto",
+      "rosto": "choque",
+      "u": 0.62,
+      "v": 0.95,
+      "esc": 0.95,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "For the first time, the king understood: even he would *die*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "caverna-cortina",
+    "cam": {
+     "z": [
+      2.0,
+      2.3
+     ],
+     "x": 0.5,
+     "y": 0.62
+    },
+    "fx": [
+     "escuro"
+    ],
+    "vinheta": 0.8,
+    "atores": [
+     {
+      "id": "rei",
+      "pose": "chorar",
+      "rosto": "choro",
+      "u": 0.5,
+      "v": 0.96,
+      "esc": 1.2
+     }
+    ]
+   }
+  },
+  {
+   "texto": "So he swore to steal the one thing no king can buy.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "cachoeira",
+    "cam": {
+     "z": [
+      1.3,
+      1.1
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "respingo",
+     "raio"
+    ],
+    "atores": [
+     {
+      "id": "rei",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "u": 0.5,
+      "v": 0.95,
+      "esc": 1.0,
+      "olhos_brilho": true
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Would you have jumped? Part two, {when_next}.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "pico-pedra",
+    "cam": {
+     "z": [
+      1.1,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.5
+    },
+    "fx": [
+     "neblina"
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Part 2",
+     "valor": "Next",
+     "sub": "the forbidden master",
+     "t0": 0.2
+    }
+   }
+  }
  ]
 }

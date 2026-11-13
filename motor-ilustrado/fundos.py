@@ -113,9 +113,22 @@ def conferir_lugares():
         sys.exit("CENARIOS COM PROBLEMA:\n" + "\n".join(erros))
 
 
+MANUAIS = os.path.join(AQUI, "fundos-manuais")
+
+
+def subir_manuais(tem):
+    """Fundos feitos a mao (ex.: Gemini do Pedro, ja sem a marca d'agua) em fundos-manuais/<mundo>__<id>.jpg sobem
+    para a Release e passam a valer como qualquer outro (nao sao gerados de novo)."""
+    novos = [f for f in sorted(glob.glob(os.path.join(MANUAIS, "*.jpg"))) if os.path.basename(f) not in tem]
+    if novos:
+        subprocess.run(["gh", "release", "upload", REL, *novos, "--clobber"], check=True)
+        print(f"{len(novos)} fundos manuais enviados")
+    return tem | {os.path.basename(f) for f in novos}
+
+
 def gerar_faltando():
     conferir_lugares()
-    tem = existentes(REL)
+    tem = subir_manuais(existentes(REL))
     os.makedirs("/tmp/fundos", exist_ok=True)
     novos, parar = [], False
     for m in mundos():
@@ -142,7 +155,10 @@ def gerar_faltando():
 
 def baixar(mundo, pasta):
     os.makedirs(pasta, exist_ok=True)
-    subprocess.run(["gh", "release", "download", REL, "-p", f"{mundo}__*", "-D", pasta, "--clobber"], check=True)
+    subprocess.run(["gh", "release", "download", REL, "-p", f"{mundo}__*", "-D", pasta, "--clobber"])
+    import shutil
+    for f in glob.glob(os.path.join(MANUAIS, f"{mundo}__*.jpg")):  # o manual vale por cima
+        shutil.copy(f, pasta)
 
 
 def teste():
