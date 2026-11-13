@@ -1,0 +1,400 @@
+{
+ "formato": "Survivor",
+ "origem": "autoral",
+ "serie": "night-groundskeeper",
+ "serie_titulo": "Rules for the Night Groundskeeper | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "cemetery",
+  "groundskeeper",
+  "rules horror",
+  "night shift"
+ ],
+ "elenco": {
+  "eli": {
+   "semente": 3811,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "guarda",
+   "acessorio": "barba"
+  }
+ },
+ "codigo": "SV040",
+ "parte": 3,
+ "anterior": "SV039",
+ "titulo": "The new headstone had my boss's name ⚰️ Part 3 #horror #shorts",
+ "capa": "FILL IT AGAIN",
+ "descripcion": "At dawn the grave was open and empty. Rule four: fill it before anyone sees. Then Eli read the name on the new headstone, and found the old keeper's diary.\n\nWould you keep the job?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Part three. At *dawn*, the hand sinks back into the ground.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Eli climbs down and walks to the grave from 1961.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "It's open. A deep, clean hole. And it's *empty*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Rule four. If a grave is open at dawn, fill it before anyone sees.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He grabs a shovel and works until his hands bleed.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "When he finishes, he notices the headstone has changed.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "It's new, polished, and it carries a different name.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Walter Grimes. The old groundskeeper. Died last night.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because the shed had one more thing Eli hadn't read.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Behind the rules, there's a notebook with forty years of handwriting.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Filled it again. Filled it again. Filled it again.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The last page is from yesterday, in shaky letters.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "It wants a keeper. *Eli will be next*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Eli doesn't quit. Someone has to fill the holes.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "So now he locks the gates at ten and never steps on fresh dirt.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "But last night, at home, he woke up at 1:10.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "And under his own bedroom floor, something was *digging*.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "If you ever hear it, remember: it isn't yours.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "fundo",
+    "plano": "aberto",
+    "luz": "nascer_sol",
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "fundo"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entre_cruzes",
+    "plano": "nuca",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Walking_A",
+      "rosto": "triste",
+      "de": "mausoleu",
+      "para": "fundo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "fundo",
+    "plano": "baixo",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "cruz_grande",
+    "plano": "auto",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "fundo",
+    "plano": "medio",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Digging",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "fundo",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Crouching",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "arvore_morta",
+    "plano": "aereo",
+    "luz": "nublado"
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entrada",
+    "plano": "auto",
+    "luz": "nublado"
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Holding_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "mausoleu",
+    "plano": "close",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Holding_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entrada",
+    "plano": "close",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Holding_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entrada",
+    "plano": "baixo",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "entrada"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entre_cruzes",
+    "plano": "aberto",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Work_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "entrada",
+    "plano": "aereo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Interact",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Lie_StandUp",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "eli",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "quarto"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "cemiterio",
+    "marca": "fundo",
+    "plano": "aereo",
+    "luz": "noite_neblina"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 12,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}

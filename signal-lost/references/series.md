@@ -99,7 +99,7 @@ Tom: tensão de sobrevivência, sem gore; susto na penúltima frase de cada part
 - Regras do antigo zelador: lock the gates at 10 / if you hear digging, it isn't yours / never step on fresh dirt after midnight / if a grave is open at dawn, fill it before anyone sees.
 - SV038 parte 1/3: 1ª semana; 1:10 som de pá; vai com a lanterna; terra fresca numa cova de 1961; o som de cavar vem de BAIXO. FEITO
 - SV039 parte 2/3: ele pisa sem querer na terra fresca; a terra afunda como respiração; algo rasteja sob o gramado seguindo os passos dele; ele sobe no mausoléu; 4:00 uma mão de terra sai da cova e acena. FEITO
-- SV040 parte 3/3: amanhece; a cova está aberta e vazia; ele enche antes de alguém ver; a lápide nova tem o nome do zelador antigo; o diário do antigo: "filled it again. Eli will be next"; ele continua no emprego, porque alguém tem que encher; à noite, cavando, só que agora é ele que ouve perto da própria casa. FALTA
+- SV040 parte 3/3: amanhece; a cova está aberta e vazia; ele enche antes de alguém ver; a lápide nova tem o nome do zelador antigo; o diário do antigo: "filled it again. Eli will be next"; ele continua no emprego, porque alguém tem que encher; à noite, cavando, só que agora é ele que ouve perto da própria casa. FEITO
 
 ## footprints-snow (SV041-SV043) Footprints in the Snow — origem: gringa: Alemanha, caso Hinterkaifeck (1922: pegadas na neve chegando à fazenda e nenhuma saindo, passos no sótão, jornal estranho) https://en.wikipedia.org/wiki/Hinterkaifeck_murders (sem crime: história nossa, fazenda em Montana)
 - 3D: casa_interior (sala, cozinha, quarto, janela, porta) + floresta com neve (fundo, trilha); luz neve/noite; efeito neve; criatura alta; Sam, 36 (semente 4111, jaqueta, barba) e Jess, 34 (semente 4112).
