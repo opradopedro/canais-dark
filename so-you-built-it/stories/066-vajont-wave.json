@@ -1,0 +1,317 @@
+{
+ "codigo": "YB066",
+ "mundo": "riacho",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "gringa: Itália (Vajont, 1963) https://en.wikipedia.org/wiki/Vajont_Dam",
+ "titulo": "The dam that didn't break, and still wiped out a town 🇮🇹 #engineering #shorts",
+ "capa": "THE DAM SURVIVED",
+ "descripcion": "In 1963 the Vajont Dam in Italy held perfectly. The mountain beside the lake didn't. A landslide hit the reservoir and threw a wave over the top of the dam.\n\nWhat should we explain next?\n\n#howitworks #engineering #science #shorts",
+ "tags": [
+  "vajont",
+  "dam",
+  "landslide",
+  "italy",
+  "disaster",
+  "how it works",
+  "engineering",
+  "science",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "In 1963, one of the tallest dams in the world did its job perfectly. And two thousand people died anyway.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The Vajont Dam in the Italian Alps was a huge wall, 262 meters tall.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Behind it, a lake filled a narrow valley between two steep mountains.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the slope on one side was weak rock, sitting on layers of slippery clay.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Every time engineers raised the water, the mountain crept a little more.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Water soaked the clay and made it even slicker.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "On October 9th, at night, the whole slope let go.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "About 270 million cubic meters of rock slid into the lake in under a minute.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It pushed the water up like a giant hand in a bathtub.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A wave taller than the dam itself rolled right over the top.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It crashed into the town of Longarone below, and wiped it off the map.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And the dam? It's still standing today, almost undamaged.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The concrete was fine. The problem was the mountain next to it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's why engineers now study the hills around a reservoir as hard as the dam itself.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A dam is only as safe as the valley it sits in. What should we explain next?",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 3.0,
+    "vertedouro": 1,
+    "rotulo": "VAJONT, ITALY",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 3.0,
+    "vertedouro": 1,
+    "foco": "represa",
+    "rotulo": "262 M",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": [
+     2.2,
+     3.0
+    ],
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 3.0,
+    "marcas": [
+     {
+      "t": "Slippery clay",
+      "x": -8,
+      "y": -1.5,
+      "cor": "red"
+     }
+    ],
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": [
+     3.0,
+     3.4
+    ],
+    "rotulo": "CREEPING",
+    "cor": "red",
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 3.4,
+    "vaza": 1,
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 3.4,
+    "chuva": 1,
+    "rotulo": "OCT 9, 1963",
+    "cor": "red",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": [
+     3.4,
+     3.9
+    ],
+    "lama": 1,
+    "rotulo": "270 MILLION M³",
+    "cor": "red",
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 3.9,
+    "lama": 1,
+    "empurra": 1,
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 3.9,
+    "lama": 1,
+    "transborda": [
+     0,
+     1
+    ],
+    "rotulo": "OVER THE TOP",
+    "cor": "red",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 3.6,
+    "lama": 1,
+    "transborda": 1,
+    "foco": "jusante",
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 0.8,
+    "vertedouro": 1,
+    "rotulo": "STILL STANDING",
+    "cor": "green",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 0.8,
+    "marcas": [
+     {
+      "t": "The real problem",
+      "x": -8,
+      "y": -1.5,
+      "cor": "red"
+     }
+    ],
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 2.0,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "riacho",
+   "p": {
+    "perfil": "represa",
+    "agua": 2.0,
+    "vertedouro": 1,
+    "enrocamento": 1,
+    "etapa": "c14"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 14,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "tallest dams",
+  "262",
+  "weak rock",
+  "crept",
+  "slid",
+  "270 million",
+  "over the top",
+  "Longarone",
+  "still standing",
+  "mountain"
+ ]
+}

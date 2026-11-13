@@ -1,0 +1,305 @@
+{
+ "codigo": "YB067",
+ "mundo": "terreno",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "gringa: China (ferrovia Qinghai-Tibete) https://en.wikipedia.org/wiki/Qinghai%E2%80%93Tibet_railway",
+ "titulo": "Why this railway keeps its ground frozen 🇨🇳 #engineering #shorts",
+ "capa": "KEEP IT FROZEN",
+ "descripcion": "The Qinghai-Tibet railway runs over hundreds of kilometers of frozen ground. If that ground thaws, the tracks sink. So engineers built ways to keep the soil frozen all year.\n\nWhat should we explain next?\n\n#howitworks #engineering #science #shorts",
+ "tags": [
+  "tibet railway",
+  "permafrost",
+  "railway",
+  "china",
+  "frozen ground",
+  "how it works",
+  "engineering",
+  "science",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "The highest railway on Earth runs on ground that must never melt.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The Qinghai-Tibet line in China crosses about 550 kilometers of permafrost.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's soil frozen solid all year, as hard as concrete.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Here's the problem. A railway embankment is dark, and it soaks up the sun.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The heat sinks into the ground, and the ice under the tracks starts to melt.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Melted permafrost turns into mud, and the tracks sink unevenly.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A train at 100 km/h can't survive a dip like that.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So the engineers did something clever. They keep the ground cold on purpose.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "They built the embankment from big loose rocks, so cold winter air sinks deep into the gaps.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Along the line stand thousands of metal pipes, like giant straws in the ground.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Inside, a liquid boils with ground heat, rises, cools in the wind, and drips back down.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "No pump, no power. They just move heat out of the soil all winter.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And where the ice is worst, the track runs on bridges instead of soil.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A railway built to protect the cold underneath it. What should we explain next?",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "foco": "trilho",
+    "trilho": "brita",
+    "rotulo": "5,072 M HIGH",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "foco": "trilho",
+    "trilho": "brita",
+    "marcas": [
+     {
+      "t": "Permafrost",
+      "x": 0,
+      "y": -3
+     }
+    ],
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "foco": "trilho",
+    "trilho": "brita",
+    "rotulo": "HARD AS CONCRETE",
+    "cor": "green",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "foco": "trilho",
+    "trilho": "brita",
+    "rotulo": "SUN",
+    "cor": "white",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "foco": "trilho",
+    "trilho": "brita",
+    "marcas": [
+     {
+      "t": "Ice melting",
+      "x": 0,
+      "y": -2.5,
+      "cor": "red"
+     }
+    ],
+    "etapa": "c4",
+    "solo_cede": 0.3
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "foco": "trilho",
+    "trilho": "brita",
+    "afunda_trilho": [
+     0,
+     0.6
+    ],
+    "rotulo": "TRACKS SINK",
+    "cor": "red",
+    "etapa": "c5",
+    "solo_cede": 0.3
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "foco": "trilho",
+    "trilho": "brita",
+    "afunda_trilho": 0.6,
+    "solo_cede": 0.4,
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "foco": "trilho",
+    "trilho": "brita",
+    "rotulo": "KEEP IT COLD",
+    "cor": "green",
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "foco": "trilho",
+    "trilho": "brita",
+    "marcas": [
+     {
+      "t": "Cold air flows in",
+      "x": 0,
+      "y": -1.5,
+      "cor": "green"
+     }
+    ],
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "terreno",
+   "p": {
+    "foco": "trilho",
+    "trilho": "brita",
+    "rotulo": "HEAT PIPES",
+    "cor": "green",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "terreno",
+   "p": {
+    "foco": "trilho",
+    "trilho": "brita",
+    "marcas": [
+     {
+      "t": "Heat goes up",
+      "x": 0,
+      "y": -2,
+      "cor": "green"
+     }
+    ],
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "terreno",
+   "p": {
+    "foco": "trilho",
+    "trilho": "brita",
+    "rotulo": "NO POWER",
+    "cor": "green",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "terreno",
+   "p": {
+    "foco": "trilho",
+    "trilho": "brita",
+    "estacas": 8.5,
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "terreno",
+   "p": {
+    "foco": "geral",
+    "trilho": "brita",
+    "etapa": "c13"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 13,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "highest railway",
+  "550",
+  "permafrost",
+  "dark",
+  "melt",
+  "sink",
+  "cold",
+  "rocks",
+  "metal pipes",
+  "No pump",
+  "bridges"
+ ]
+}

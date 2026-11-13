@@ -1,0 +1,333 @@
+{
+ "codigo": "YB068",
+ "mundo": "terreno",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "autoral https://en.wikipedia.org/wiki/Root",
+ "titulo": "How a tree root lifts a slab of concrete 🌳 #engineering #shorts",
+ "capa": "ROOTS LIFT CONCRETE",
+ "descripcion": "A tree root is soft, but it never stops growing. Under a sidewalk it finds water, gets thicker every year, and lifts slabs that weigh hundreds of kilos.\n\nWhat should we explain next?\n\n#howitworks #engineering #science #shorts",
+ "tags": [
+  "tree roots",
+  "sidewalk",
+  "concrete",
+  "trees",
+  "city",
+  "how it works",
+  "engineering",
+  "science",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "A soft little tree root can lift a slab of concrete that weighs more than a car.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It starts underground, right under the sidewalk.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "At night, the concrete cools, and water from the soil condenses under it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So the space under a slab is wet, dark, and full of air. Perfect for roots.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A root grows toward it, and spreads flat along the bottom of the concrete.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Every year, it adds a new ring of wood and gets a little thicker.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Thicker means pushing up. Slowly, but with huge pressure.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Concrete is great at handling squeezing, but terrible at bending.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So the slab tilts at a joint, or cracks right down the middle.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Cutting the root doesn't really work. It can kill the tree, and a new one comes back.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Cities now bury plastic root barriers that steer roots down, away from the slab.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Some use loose, airy soil deeper down, so roots have a better place to go.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And some sidewalks are made of rubber, so they just bend over the root.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Slow and soft still wins, if you give it enough years. What should we explain next?",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": 0.6,
+    "rotulo": "HOW?",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": 0.1,
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": 0.1,
+    "marcas": [
+     {
+      "t": "Moisture",
+      "x": 0,
+      "y": -0.6
+     }
+    ],
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": 0.2,
+    "rotulo": "ROOT HEAVEN",
+    "cor": "green",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": [
+     0.2,
+     0.4
+    ],
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": [
+     0.4,
+     0.6
+    ],
+    "rotulo": "+1 RING A YEAR",
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": [
+     0.6,
+     0.8
+    ],
+    "peso": 1,
+    "rotulo": "PRESSURE",
+    "cor": "red",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": 0.8,
+    "trinca": [
+     0,
+     0.5
+    ],
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": 0.9,
+    "trinca": [
+     0.5,
+     1
+    ],
+    "rotulo": "CRACK",
+    "cor": "red",
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": 0.9,
+    "trinca": 1,
+    "rotulo": "CUT IT?",
+    "cor": "red",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": 0.2,
+    "manta": 1,
+    "rotulo": "ROOT BARRIER",
+    "cor": "green",
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": 0.2,
+    "manta": 1,
+    "marcas": [
+     {
+      "t": "Airy soil",
+      "x": 0,
+      "y": -3,
+      "cor": "green"
+     }
+    ],
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": 0.5,
+    "rotulo": "RUBBER",
+    "cor": "green",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "terreno",
+   "p": {
+    "foco": "geral",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": 0.6,
+    "etapa": "c13"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 12,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 13,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "concrete",
+  "condenses",
+  "wet",
+  "thicker",
+  "pressure",
+  "bending",
+  "cracks",
+  "root barriers",
+  "rubber"
+ ]
+}

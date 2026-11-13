@@ -78,3 +78,6 @@ Estoque antes: 18 roteiros prontos (YB043-YB046, YB049, YB052-YB064) + 4 agendad
 | Código | Formato | Tema | Origem | Estado |
 |---|---|---|---|---|
 | YB065 | Curiosidade | como a cola gruda (adesão, coesão, super cola) (cola, mundo novo) | ideia do Pedro (issue #25) | FEITO |
+| YB066 | Curiosidade | Vajont 1963: a barragem aguentou, a montanha caiu no lago (riacho, represa, transborda) | gringa: Itália https://en.wikipedia.org/wiki/Vajont_Dam | FEITO |
+| YB067 | Curiosidade | ferrovia do Tibete que mantém o chão congelado (terreno, trilho, solo_cede) | gringa: China https://en.wikipedia.org/wiki/Qinghai%E2%80%93Tibet_railway | FEITO |
+| YB068 | Curiosidade | raiz de árvore levanta a calçada (terreno, calcada, raiz, trinca, manta) | autoral | FEITO |
