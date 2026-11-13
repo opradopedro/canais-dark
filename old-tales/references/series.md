@@ -1,5 +1,7 @@
 # Plano das séries do Old Tales
 
+> **13/11/2026 (Pedro): nova LINHA DO CANAL no topo do `SKILL.md`** (narrador + protagonista na tela, adulto, YOU no POV e 3ª pessoa nos contos, cartões explicativos, gore de desenho permitido). Vale por cima das notas antigas abaixo. Backlog novo: `temas.md` seção "LINHA 13/11". Primeira série: Wukong do zero.
+
 > **A partir de CL034: série nova no ESTILO 3D** (`"visual": "3d"`, motor-3d/, jeito de contar do Reel). Ver ROTEIROS.md "Estilo 3D". Escolha protagonista, cenário e criatura diferentes das últimas 5 séries.
 
 Cada série tem um bloco antes de as partes serem escritas. Marque FEITO quando a parte estiver em `stories/`.

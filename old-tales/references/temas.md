@@ -1,5 +1,66 @@
 # Backlog de temas — Old Tales
 
+## LINHA 13/11 (Pedro) — backlog principal; marque [x] ao planejar a série no series.md
+Revezar as frentes; **apocalipse/zumbi aparece bastante** (no mínimo 1 a cada 3 séries).
+
+### Primeiro
+- [ ] Sun Wukong do zero (5 partes, 3ª pessoa): pedra, mestre proibido, bastão do Rei Dragão, guerra com o Céu, palma do Buda
+
+### You wake up em mundos de ficção (YOU)
+- [ ] You wake up in Hogwarts
+- [ ] You wake up on the Death Star
+- [ ] You wake up in the Marvel universe
+- [ ] You wake up in Asgard
+- [ ] You wake up on Mount Olympus
+- [ ] You wake up in Middle-earth
+- [ ] You wake up in Westeros
+- [ ] You wake up in Skyrim
+- [ ] You wake up in Raccoon City (Resident Evil)
+- [ ] You wake up in Rapture (BioShock)
+
+### Apocalipse e zumbi (vários; YOU nos POV, 3ª pessoa nos contos)
+- [ ] You wake up on Day 1 of the zombie outbreak
+- [ ] You wake up 1 year after the zombie apocalypse (como se vive: água, comida, comércio)
+- [ ] You wake up in a nuclear fallout bunker
+- [ ] You wake up as the last person in the city
+- [ ] You wake up in the frozen apocalypse (nova era do gelo)
+- [ ] You wake up in a zombie prison camp
+- [ ] Conto: the doctor who found the cure (3ª pessoa)
+- [ ] Conto: the convoy to the last safe zone (3ª pessoa)
+- [ ] Conto: the family on the zombie island (3ª pessoa)
+- [ ] You wake up after the solar flare (sem eletricidade, mundo inteiro)
+
+### You wake up em épocas reais (YOU, fatos conferidos)
+- [ ] You wake up in the Stone Age
+- [ ] You wake up in the year 2100
+- [ ] You wake up during the Black Death, 1347
+- [ ] You wake up on a Viking raid
+- [ ] You wake up as a Roman gladiator
+- [ ] You wake up in the Aztec capital Tenochtitlan
+- [ ] You wake up on a pirate ship, 1715
+- [ ] You wake up in the trenches, 1916
+
+### Contos de livros e de jogos (3ª pessoa; livros de domínio público primeiro)
+- [ ] The Odyssey
+- [ ] Beowulf
+- [ ] Dante's Inferno (os 9 círculos)
+- [ ] Dracula
+- [ ] Frankenstein
+- [ ] The War of the Worlds
+- [ ] Lore de jogo: Elden Ring / Dark Souls (história nossa contando o mito do mundo)
+- [ ] Lore de jogo: God of War (mitologia nórdica)
+
+### Mitologia e bíblicos (3ª pessoa)
+- [ ] Hércules: os 12 trabalhos
+- [ ] Ragnarök
+- [ ] Gilgamesh
+- [ ] David and Goliath
+- [ ] Samson
+- [ ] Moses and the ten plagues
+- [ ] Noah and the flood
+
+## (ANTIGO, antes de 13/11) — ainda vale como ideia, mas siga a LINHA 13/11
+
 ## NOVO (REGRA do Pedro, 02/11/2026): 3 frentes, revezando — ver "LINHA DO CANAL" no SKILL.md
 Tudo no estilo flat. Ao escrever uma série, marque `[x]`. Peças entre parênteses: as que o Kiro vai criar
 (`KIRO-PROMPT.md`); até existirem, use `f_aldeia`, `f_casa`, `retrato`, `texto`.

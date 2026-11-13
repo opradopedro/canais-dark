@@ -5,7 +5,34 @@ description: Produz e agenda no YouTube os Shorts do canal Old Tales (ingles) �
 
 # Canal Old Tales (historias antigas e mitos, ingles)
 
-## LINHA DO CANAL (REGRA do Pedro, 02/11/2026) — vale por cima de tudo abaixo
+## LINHA DO CANAL (REGRA do Pedro, 13/11/2026) — SUBSTITUI a linha de 02/11 e qualquer regra antiga de narrativa
+
+O Old Tales conta **histórias de ação, aventura, dia a dia de época, contos míticos, mitologia, histórias bíblicas,
+contos de livros e de jogos, e "POV: you wake up in X"** (Idade Média, Idade da Pedra, ano 2100, apocalipse,
+mundos de ficção...). Objetivo: **explicar** bem o conto e mostrar como a vida funcionaria ali. Público **ADULTO**
+(nada com cara de infantil).
+
+- **Formato:** um narrador fala e o protagonista faz as coisas na tela (a imagem mostra o que a voz diz).
+- **Protagonista:** cada história tem o seu (Wukong, um legionário, um sobrevivente...). Não existe mascote fixo.
+- **Pessoa do narrador:**
+  - "como é a vida em tal época/lugar" e "you wake up in X" = **2ª pessoa, YOU** ("You wake up in 1347. The bells won't stop.");
+  - contos, mitos, livros, jogos e bíblicos = **3ª pessoa** ("He was born from a stone.").
+- **Cartões explicativos:** SIM, no meio do vídeo (números e fatos: salário, expectativa de vida, comida, armas,
+  distâncias, regras do mundo). É o que faz o "explicar melhor".
+- **Tamanho:** 1min30 a 2 min por parte, mínimo 2 partes, gancho no fim ("Part X tomorrow"). Série fechada vira
+  compilação em vídeo longo depois.
+- **Violência (são bonequinhos):** pode gore de desenho: perna voando, sangue falso jorrando/pulsando, golpe com
+  sangue. **Proibido:** mostrar retirada de órgãos. Exceção: zumbi ou sobrevivência em que alguém come órgão de animal;
+  aí mostra SÓ o órgão (fígado, coração), nunca o animal sendo aberto.
+- **Bíblicos:** tom narrativo e respeitoso, fiel ao texto, sem opinião.
+- **Fatos:** época real = fatos conferidos (fonte no `series.md`). Mundo de ficção = fiel às regras daquele mundo.
+- **Mundos de outras obras (Hogwarts, Star Wars, Marvel, jogos):** história nossa, desenhada por nós, com o nome
+  do mundo no título (ajuda na busca). Nada de logo, música, imagem ou trecho oficial. Personagem famoso pode
+  aparecer de longe ou citado; o protagonista é sempre "você" ou um personagem nosso.
+- **Ordem:** 1º Wukong do zero (5 partes, 3ª pessoa, ação forte). Depois revezar as frentes do `references/temas.md`
+  (seção "LINHA 13/11"), com **muito apocalipse/zumbi** (várias séries e vários "you wake up").
+
+## (ANTIGA, substituída em 13/11) LINHA DO CANAL de 02/11/2026
 
 "Não quero só coisas calmas no Old Tales, mas histórias ou contos antigos." O canal conta **histórias e contos
 antigos**, em 3 frentes, revezando entre elas (não fazer 2 séries seguidas da mesma frente):
