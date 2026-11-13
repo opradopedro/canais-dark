@@ -1,0 +1,418 @@
+{
+ "formato": "Survivor",
+ "origem": "gringa: Japão, Kisaragi Station (2channel, 2004) https://en.wikipedia.org/wiki/Kisaragi_Station",
+ "serie": "hollow-pines",
+ "serie_titulo": "The Station That Isn't There | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "kisaragi station",
+  "night bus",
+  "wrong stop",
+  "liminal"
+ ],
+ "elenco": {
+  "nora": {
+   "semente": 3511,
+   "corpo": "magro",
+   "cabelo": "rabo",
+   "roupa": "jaqueta"
+  },
+  "driver": {
+   "semente": 3512,
+   "corpo": "forte",
+   "cabelo": "grisalho",
+   "roupa": "terno"
+  }
+ },
+ "codigo": "SV037",
+ "parte": 3,
+ "anterior": "SV036",
+ "titulo": "I posted from Hollow Pines three days in the future 🚌 Part 3 #horror #shorts",
+ "capa": "NEXT STOP",
+ "descripcion": "Nora got in the car. It drove deeper into the forest. She jumped, ran, and woke up 300 miles from home. Her last forum post is dated three days later.\n\nWould you have jumped?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Part three. Nora is so tired that she *gets in the car*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The kind man locks the doors with a soft click.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He drives away from the lights, deeper into the forest.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "She asks where town is. He doesn't answer.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "In the mirror, his smile hasn't moved for ten minutes.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The drums are louder now, right outside the windows.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Her battery dies at the exact moment the forum says: *jump*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because what happened next is why she never rides at night again.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Nora pulls the handle. The lock gives. She throws herself out.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "She rolls into the ferns and runs, without looking back.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Behind her, the car stops. Doors open. *Many* doors.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "She runs until the trees end and her feet hit real asphalt.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Sunrise. A gas station. A trucker gives her coffee.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "She is in Nevada, *three hundred miles* from home.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "When her phone charges, she opens the forum thread.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Her last post is there. Dated three days from now.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "And this morning her phone vibrated: Hollow Pines, *next stop*.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "If your bus stops talking, get off early.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nora",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ],
+    "objetos": [
+     "carro"
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "ombro",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "driver",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ],
+    "objetos": [
+     "carro"
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "aereo",
+    "luz": "noite_neblina",
+    "objetos": [
+     "carro"
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "indo",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "nora",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "curva",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "driver",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "fundo",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "fundo"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "meio",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "nora",
+      "acao": "Holding_A",
+      "rosto": "susto",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "aereo",
+    "luz": "noite"
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nora",
+      "acao": "Dodge_Right",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "entre_arvores",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nora",
+      "acao": "Running_A",
+      "rosto": "medo",
+      "de": "clareira",
+      "para": "entre_arvores"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "auto",
+    "luz": "noite",
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "trilha"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "indo",
+    "plano": "nuca",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "nora",
+      "acao": "Running_B",
+      "rosto": "medo",
+      "de": "curva",
+      "para": "indo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "aberto",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "nora",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "triste"
+     }
+    ],
+    "objetos": [
+     "caminhao"
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "vindo",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "nora",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "nora",
+      "acao": "Holding_A",
+      "rosto": "desconfiado",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "nora",
+      "acao": "Holding_B",
+      "rosto": "medo",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "nuca",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "nora",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "celular"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "ponto"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "curva",
+    "plano": "aereo",
+    "luz": "noite",
+    "objetos": [
+     "onibus"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 10,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}
