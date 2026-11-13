@@ -1,0 +1,377 @@
+{
+ "formato": "Survivor",
+ "origem": "autoral",
+ "serie": "black-dog",
+ "serie_titulo": "Don't Feed the Black Dog | Signal Lost",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "black dog",
+  "neighborhood rules",
+  "suburban horror"
+ ],
+ "elenco": {
+  "kit": {
+   "semente": 4411,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "acessorio": "oculos"
+  },
+  "ruth": {
+   "semente": 4412,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "vestido"
+  }
+ },
+ "codigo": "SV044",
+ "parte": 1,
+ "titulo": "Every house on my street leaves a bowl out at 9 🐕 Part 1 #horror #shorts",
+ "capa": "THE BOWL",
+ "descripcion": "On Alder Street every house leaves a bowl on the sidewalk at nine. Kit laughed at the rule. At 2 AM, a huge black dog sat in the street, staring at his house.\n\n> Part 2: {when_next}.\nWould you put the bowl out?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Imagine a street where every house leaves *a bowl* on the sidewalk at nine.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Kit is thirty-one. He just moved to Alder Street.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Cheap rent, big trees, and very polite neighbors.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "On the first night, his neighbor Ruth leaves a note in his mailbox.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Every house leaves a bowl out at nine.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Never *feed it by hand*. Never let it see your door open.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Kit looks outside. Every porch has a metal bowl of raw meat.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "No dogs on the street. No barking. Just the bowls.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because Kit decided not to follow the rule.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He laughs, throws the note away, and goes to bed.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "At 2 AM, the streetlights flicker and the *barking* of every real dog stops.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Kit looks through the blinds.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "In the middle of the street sits a black dog, the size of a horse.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "It's not eating. All the bowls on the street are full.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "It's sitting in front of the *only house without a bowl*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Its eyes reflect the streetlight, and it doesn't blink.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then it stands up and walks onto his lawn.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "And one window is still open. Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "aereo",
+    "luz": "noite"
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "auto",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Walking_A",
+      "rosto": "sorriso",
+      "de": "calcada",
+      "para": "frente_casa"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "arvores",
+    "plano": "aberto",
+    "luz": "dia"
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "medio",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "ruth",
+      "acao": "Interact",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "close",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Holding_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "close",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "ruth",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "fim_rua",
+    "plano": "aereo",
+    "luz": "noite"
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "poste",
+    "plano": "auto",
+    "luz": "noite_neblina"
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Lie_Down",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "poste",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "rua"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "close",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "rua"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "aereo",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "rua"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "rua"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "close",
+    "luz": "neblina_baixa",
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "faixa"
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "aberto",
+    "luz": "neblina_baixa",
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "frente_casa"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "nuca",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "kit",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "janela"
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 12,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}
