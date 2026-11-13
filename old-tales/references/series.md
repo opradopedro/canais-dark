@@ -123,7 +123,7 @@ Peças: `f_mosteiro`, `f_igreja`, `f_aldeia`, `f_campo`, `f_estrada_antiga`, `f_
 - CL043 parte 3/5: reescrito no tom 12/11 (palácio submarino do Rei Dragão, pilar de ferro de 13.500 jin da enchente de Yu o Grande, submundo e Livro dos Mortos riscado). Em `stories/043-wukong-3.json`. FEITO
 - CL044 parte 4/5: reescrito no tom 12/11 (Protetor dos Cavalos no Céu, Grande Sábio Igual ao Céu, pêssegos de 9 mil anos, pílulas de Laozi, 100 mil soldados, duelo de transformações com Erlang, 49 dias na fornalha de oito trigramas). Em `stories/044-wukong-4.json`. FEITO
 - CL045 parte 5/5 (última): reescrito no tom 12/11 (aposta com a mão de Buda, 5 pilares no fim do universo, xixi no pilar do meio, Montanha dos Cinco Dedos por 500 anos com ferro derretido, Tang Sanzang tira o selo, gancho final voltando à pedra). Em `stories/045-wukong-5.json`. FEITO
-- Depois: conto grego (3 partes, sugestão Perseu e a Medusa), conto da China antiga (3 partes, sugestão Mulan), Zhong Kui (3 partes). FALTA
+- Depois: conto grego, China antiga e Zhong Kui: planejados e escritos em CL046-CL054 (rotina 13/11). FEITO
 
 ## Semana de 17/11 a 28/11/2026 (CL046-CL057) — por: claude (rotina de sexta, 13/11). Estoque antes: CL045 (até 16/11). Ordem pedida pelo Pedro (11/11): conto grego, China antiga, Zhong Kui; depois Termópilas. Tom 12/11 (ação, 4+ cenas de luta), motor cartoon, `"piano": 0`. Origem: plano do Pedro + fonte clássica (não deu para medir tendência sem ferramenta paga).
 
@@ -144,7 +144,7 @@ Peças: `f_mosteiro`, `f_igreja`, `f_aldeia`, `f_campo`, `f_estrada_antiga`, `f_
 ## zhong-kui (CL052-CL054) Zhong Kui, the Demon Queller — tema mito, paleta china — origem: plano do Pedro (11/11, "Zhong Kui")
 - Fontes: lenda registrada por Shen Kuo, *Mengxi Bitan* (séc. XI), sobre o sonho do imperador Xuanzong (Tang); versões populares da Dinastia Ming.
 - 3D: palacio_ceu (salao, colunas, escada), submundo (juiz, livro, entrada, corredor), aldeia_china (praca, casa, templo); criaturas vulto (fantasmas) e coisa_com_chifres (demônio Xu Hao); elenco zhongkui (semente 5201, forte, barba), imperador, xuhao.
-- CL052 parte 1/3: estudioso brilhante e feio; passa em 1º no exame imperial; o imperador o rejeita pela aparência; em fúria bate a cabeça nos degraus do palácio e morre; o amigo Du Ping o enterra. FALTA
+- CL052 parte 1/3: estudioso brilhante e feio; passa em 1º no exame imperial; o imperador o rejeita pela aparência; em fúria bate a cabeça nos degraus do palácio e morre; o amigo Du Ping o enterra. FEITO
 - CL053 parte 2/3: no submundo, o juiz dos mortos vê injustiça e o faz Rei dos Demônios; exército de fantasmas; ele caça demônios; séculos depois, o imperador Xuanzong cai doente de febre. FALTA
 - CL054 parte 3/3: no sonho do imperador, demônio Xu Hao rouba a flauta de jade e a bolsa de Yang Guifei; um gigante de barba e chapéu de oficial arranca o olho do demônio e o devora; diz quem é; o imperador acorda curado e manda Wu Daozi pintar; o retrato vira proteção nas portas no Ano Novo. FALTA
 

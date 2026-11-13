@@ -1,0 +1,405 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "origem": "plano do Pedro (11/11): Zhong Kui; Shen Kuo, Mengxi Bitan",
+ "serie": "zhong-kui",
+ "serie_titulo": "Zhong Kui, the Demon Queller | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "mythology",
+  "old tales",
+  "legends",
+  "history",
+  "story time",
+  "zhong kui",
+  "demon queller",
+  "chinese mythology",
+  "chinese legend",
+  "demons"
+ ],
+ "elenco": {
+  "zhongkui": {
+   "semente": 5201,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "cabelo_cor": "#141010",
+   "pele": "#c8865a",
+   "roupa": "chines",
+   "camisa": "#7a1c24",
+   "acessorio": "barba"
+  },
+  "imperador": {
+   "semente": 5202,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "roupa": "rei",
+   "acessorio": "barba"
+  },
+  "duping": {
+   "semente": 5203,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "chines",
+   "camisa": "#2c4a6a"
+  },
+  "juiz": {
+   "semente": 5204,
+   "corpo": "idoso",
+   "cabelo": "careca",
+   "roupa": "chines",
+   "camisa": "#2c1d3a"
+  }
+ },
+ "codigo": "CL052",
+ "parte": 1,
+ "titulo": "Too ugly to be rewarded, so he became the demon king 👹 Zhong Kui Part 1 #story #shorts",
+ "capa": "TOO UGLY TO WIN",
+ "descripcion": "Zhong Kui came first in the imperial exam. Then the Emperor saw his face. What happened next on the palace steps turned a scholar into China's most feared demon hunter.\n\n> Part 2: {when_next}.\nWas the Emperor right to judge him by his face?\n\nFrom the Chinese legend of Zhong Kui, as recorded by Shen Kuo in Mengxi Bitan (11th century) and in later Ming-era versions.\n#zhongkui #chinesemythology #mythology #ancientchina #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "He came *first* in all of China, and lost everything because of his face.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "His name was Zhong Kui, a scholar from the Zhongnan Mountains.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Huge, dark, with a wild beard and eyes like fire.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "But nobody in the empire wrote better than him.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because the exam was the only door out of poverty.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Thousands of scholars traveled to the capital for the imperial exam.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Zhong Kui walked for weeks, with his best friend, *Du Ping*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "When the results were posted, his name was at the very top.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He was led into the palace to meet the Emperor himself.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The Emperor took one look at his face, and *turned away*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A man this ugly cannot be the top scholar of my empire.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The title was taken from him, right there, in front of the court.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Zhong Kui shouted that it was unjust. The guards drew their swords.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "And in his rage, he threw himself headfirst against the *palace steps*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He died on the stone, in front of everyone.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Du Ping carried his body home and buried him with honor.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "But in the world below, someone was watching. Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "templo",
+    "plano": "aereo",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Walking_A",
+      "rosto": "neutro",
+      "de": "praca",
+      "para": "templo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "close",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Idle_B",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "poco",
+    "plano": "aereo",
+    "luz": "entardecer"
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "nuvens",
+    "plano": "aereo",
+    "luz": "dia"
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Running_A",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "duping",
+      "acao": "Running_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Jump_Full_Short",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "duping",
+      "acao": "Cheering",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "nuca",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Walking_A",
+      "rosto": "neutro",
+      "de": "escada",
+      "para": "salao"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "imperador",
+      "acao": "Idle_B",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "imperador",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Hit_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Melee_Unarmed_Attack_Punch_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Jump_Full_Long",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "aereo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Death_A_Pose",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "templo",
+    "plano": "medio",
+    "luz": "chuva",
+    "atores": [
+     {
+      "id": "duping",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ],
+    "efeito": "chuva"
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "entrada",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "entrada"
+    }
+   }
+  }
+ ],
+ "eventos": []
+}

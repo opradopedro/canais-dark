@@ -68,3 +68,6 @@ tabela de cima estão dentro dos pacotes 08, 09, 10 e 12 (fazer lá, não aqui).
 5. Prévia na nuvem: caminho do roteiro em `.github/previa.txt`, commit, push. Espere uns 4 a 6 minutos e baixe os JPGs
    `<CODIGO>_previa_*.jpg` da Release `previas`. Olhe e conserte (no máximo 2 voltas).
 6. Atualize `MUNDOS.md` (tabela), `temas.md` (`[x]`), `series.md`; marque o item `FEITO`; commit e push.
+
+## Faltou na rotina de roteiros de 13/11 (claude)
+- Old Tales / Perseu (CL046-CL048): não existe criatura górgona (mulher com cobras no cabelo). Usei `mulher_branca` na `caverna_gorgonas` com luz `tempestade`. Criatura nova sugerida: `gorgona` (cabelo de cobras animado, olhos que brilham) e `monstro_marinho` para o Ceto (usei `gigante_mitologico` na `ilha_mar`).
