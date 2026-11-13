@@ -24,6 +24,8 @@ concurrency:
 jobs:
   fundos:
     runs-on: ubuntu-latest
+    # nao publica video: falha aqui nunca manda e-mail ao Pedro (REGRA 13/11); o erro fica no log
+    continue-on-error: true
     timeout-minutes: 60
     env:
       GH_TOKEN: ${{ github.token }}

@@ -28,6 +28,8 @@ concurrency:
 jobs:
   publicar:
     runs-on: ubuntu-latest
+    # nao publica video: falha aqui nunca manda e-mail ao Pedro (REGRA 13/11); o erro fica no log
+    continue-on-error: true
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url || steps.deploy2.outputs.page_url }}

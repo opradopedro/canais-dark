@@ -14,6 +14,8 @@ on:
 jobs:
   fiscal:
     runs-on: ubuntu-latest
+    # nao publica video: falha aqui nunca manda e-mail ao Pedro (REGRA 13/11); o erro fica no log
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

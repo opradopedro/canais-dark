@@ -19,6 +19,8 @@ concurrency:
 jobs:
   prova:
     runs-on: ubuntu-latest
+    # nao publica video: falha aqui nunca manda e-mail ao Pedro (REGRA 13/11); o erro fica no log
+    continue-on-error: true
     timeout-minutes: 90
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

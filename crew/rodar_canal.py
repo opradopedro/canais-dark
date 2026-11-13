@@ -320,6 +320,10 @@ def alertar(canal, linhas):
         # REGRA do Pedro (11/11): e-mail so quando todas as tentativas do dia acabaram e o video nao subiu.
         # Antes disso, video barrado nao vira issue (a proxima execucao do dia tenta de novo); estoque baixo continua.
         linhas = [x for x in linhas if not any(m in x for m in ("NAO SUBIU", "VOZ FALHOU", "HORARIO VAZIO"))]
+    # REGRA do Pedro (13/11): as rotinas de roteiro repoem o estoque; e-mail de estoque so quando ZERA.
+    import re
+    linhas = [x for x in linhas if not (("ESTOQUE BAIXO" in x and not re.search(r"(so |: )0 roteiro", x))
+                                        or "FALTA ROTEIRO" in x)]
     if not linhas:
         return
     with open(os.path.join(tempfile.gettempdir(), "canais-alerta.txt"), "a", encoding="utf-8") as f:
