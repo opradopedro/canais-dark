@@ -72,3 +72,9 @@ Estoque antes: 20 (YB033, YB035, YB039-YB056 sem os publicados; 8 Evolução e 1
 | YB062 | Curiosidade | por que barragem é mais grossa embaixo (riacho, represa, empurra) | autoral | FEITO |
 | YB063 | Curiosidade | por que pontes velhas são cheias de triângulos (riacho, trelica) | autoral https://en.wikipedia.org/wiki/Truss | FEITO |
 | YB064 | Curiosidade | enchente empurra a ponte para fora (riacho, pilar, leva) | autoral | FEITO |
+
+## Semana de 23/11 a 28/11/2026 (YB065-YB072) — por: claude (rotina de sexta, 13/11)
+Estoque antes: 18 roteiros prontos (YB043-YB046, YB049, YB052-YB064) + 4 agendados até 14/11. Com estes, 26 roteiros = 13 dias (até ~27/11). Mundo novo `cola` para a ideia do Pedro (#25). Mundos já usados nos demais (sem peça nova). 4 gringas, 4 autorais (contando a ideia).
+| Código | Formato | Tema | Origem | Estado |
+|---|---|---|---|---|
+| YB065 | Curiosidade | como a cola gruda (adesão, coesão, super cola) (cola, mundo novo) | ideia do Pedro (issue #25) | FEITO |

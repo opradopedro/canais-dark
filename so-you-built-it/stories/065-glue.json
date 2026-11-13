@@ -1,0 +1,206 @@
+{
+ "codigo": "YB065",
+ "mundo": "cola",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "ideia do Pedro (issue #25)",
+ "prioridade": "pedro",
+ "ideia": "#25",
+ "titulo": "How glue actually sticks things together 🧴 #howitworks #shorts",
+ "capa": "GLUE HAS 2 GRIPS",
+ "descripcion": "Glue fills the microscopic mountains and valleys of a surface, grabs it (adhesion), then dries into tangled chains that hold onto each other (cohesion). Super glue skips the drying: moisture in the air triggers it.\n\nWhat should we explain next?\n\n#howitworks #engineering #glue #science #shorts",
+ "tags": [
+  "how it works",
+  "glue",
+  "super glue",
+  "adhesion",
+  "engineering",
+  "science",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "How does glue hold two things together, when it starts out as a liquid?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Zoom in on any surface, even one that feels smooth. It's full of mountains and valleys.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Liquid glue flows into every one of those tiny valleys and fills the gaps.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Up close, its molecules pull on the molecules of the surface. That grip is called adhesion.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "White glue is mostly water. As the water escapes into the air and the wood, the glue dries.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "What's left are long chains of plastic, tangled together like cooked spaghetti.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And that inner grip, glue holding onto itself, is called cohesion.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's why you clamp it. The pressure pushes glue deep into every valley.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It also squeezes out the extra. A thin layer beats a thick one, because thick glue cracks in the middle.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Super glue is different. It has no water to lose.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It reacts with the moisture in the air, and on your skin. That's why fingers stick in seconds.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So every glue is two grips at once. It holds the surface, and it holds itself.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know. What should we explain next?",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "cola",
+   "p": {
+    "etapa": "junta"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "cola",
+   "p": {
+    "etapa": "aspera"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "cola",
+   "p": {
+    "etapa": "escorre"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "cola",
+   "p": {
+    "etapa": "gruda"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "cola",
+   "p": {
+    "etapa": "seca"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "cola",
+   "p": {
+    "etapa": "corrente"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "cola",
+   "p": {
+    "etapa": "corrente"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "cola",
+   "p": {
+    "etapa": "aperta"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "cola",
+   "p": {
+    "etapa": "fina"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "cola",
+   "p": {
+    "etapa": "super"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "cola",
+   "p": {
+    "etapa": "super"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "cola",
+   "p": {
+    "etapa": "final"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "cola",
+   "p": {
+    "etapa": "final"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 3,
+   "en": 0.7
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 8,
+   "en": 0.7
+  },
+  {
+   "tipo": "certo",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 12,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "mountains and valleys",
+  "adhesion",
+  "water",
+  "chains",
+  "cohesion",
+  "clamp",
+  "thin layer",
+  "moisture",
+  "two grips"
+ ]
+}
