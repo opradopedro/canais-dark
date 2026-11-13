@@ -9,6 +9,7 @@ continua de onde parou, só lendo os arquivos.
 2. Leia o `SKILL.md` do canal, o `references/temas.md` e o `references/series.md` (o plano das séries).
 3. Se houver série com parte marcada `FALTA` em `series.md`, **termine essa série primeiro**, seguindo o resumo que está lá.
 4. Depois disso, **as ideias do Pedro vêm antes de qualquer tema próprio** (ver a seção abaixo).
+5. **Escolher tema olhando YouTube E TikTok** (REGRA do Pedro, 13/11): antes de escolher temas novos, veja quais vídeos foram melhor nos dois. YouTube: views do painel (dados.json). TikTok: `vidiq_tiktok_profile_videos` das contas @horamuerta7, @old.tales1 e a do So You Built It (o que postamos está em `tiktok/postados.json`). Tema, gancho ou formato que foi bem em qualquer um dos dois ganha mais séries parecidas.
 
 ## Ideia do Pedro = próximo vídeo (REGRA do Pedro, 31/10: vale para todos os canais)
 "Quando eu mandar uma ideia, esse vídeo é o próximo a sair. Se for história em sequência (estou na parte 2 de 4),
