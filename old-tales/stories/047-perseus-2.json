@@ -1,0 +1,418 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "grecia",
+ "piano": 0,
+ "origem": "plano do Pedro (11/11): conto da Grécia; Apolodoro, Biblioteca 2.4",
+ "serie": "perseus",
+ "serie_titulo": "Perseus and the Gorgon | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "mythology",
+  "old tales",
+  "legends",
+  "history",
+  "story time",
+  "perseus",
+  "medusa",
+  "greek mythology",
+  "gorgon",
+  "greek myths"
+ ],
+ "elenco": {
+  "perseu": {
+   "semente": 4601,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "cabelo_cor": "#3a2a1a",
+   "camisa": "#e8e0cc",
+   "roupa": "casual"
+  },
+  "danae": {
+   "semente": 4602,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "roupa": "vestido"
+  },
+  "polidectes": {
+   "semente": 4603,
+   "corpo": "forte",
+   "cabelo": "grisalho",
+   "roupa": "rei",
+   "acessorio": "barba"
+  },
+  "atena": {
+   "semente": 4604,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "soldado_esparta"
+  }
+ },
+ "codigo": "CL047",
+ "parte": 2,
+ "anterior": "CL046",
+ "titulo": "He cut off Medusa's head without looking 🐍 Perseus Part 2 #story #shorts",
+ "capa": "DON'T LOOK",
+ "descripcion": "Perseus steals the only eye of three ancient sisters, takes winged sandals and a helmet of invisibility, and walks backwards into the Gorgon's lair using a bronze shield as a mirror.\n\n> Part 3: {when_next}.\nCould you fight without looking?\n\nFrom Greek myth: Apollodorus, Library 2.4; Ovid, Metamorphoses 4-5; Hesiod, Theogony.\n#perseus #medusa #greekmythology #mythology #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Three old sisters shared *one eye* and one tooth between them.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Only they knew the way to the Gorgons.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "So Perseus waited until they passed the eye from hand to hand, and *stole it*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Tell me the way, or you stay blind forever.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "They told him. Find the nymphs at the edge of the world.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The nymphs gave him three weapons of the gods.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Winged sandals. A magic bag. And the helmet of Hades, that makes you invisible.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Hermes added a curved blade of unbreakable metal.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because the Gorgons' cave was full of men who came before him.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Hundreds of them, frozen mid-scream, turned into *statues*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Perseus walked in *backwards*, eyes on his bronze shield.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "In the reflection, three Gorgons slept. Two were immortal.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Only Medusa could die. Her snakes moved even in her sleep.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "One swing of the blade, guided by a mirror.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The head fell into the bag, and Perseus never once looked at it.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "From her neck burst a winged horse, *Pegasus*, and a warrior with a golden sword.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Then the other two sisters woke up screaming.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "And they could fly. Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "caverna_gorgonas",
+    "marca": "entrada",
+    "plano": "aereo",
+    "luz": "tempestade"
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "ilha_mar",
+    "marca": "rochas",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Sneaking",
+      "rosto": "desconfiado",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "ilha_mar",
+    "marca": "rochas",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Jump_Full_Long",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "ilha_mar",
+    "marca": "rochas",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Melee_Unarmed_Attack_Punch_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "horizonte",
+    "plano": "aereo",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "ilha_mar",
+    "marca": "topo",
+    "plano": "medio",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "ilha_mar",
+    "marca": "ruinas",
+    "plano": "close",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Holding_A",
+      "rosto": "sorriso",
+      "segura": "escudo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "templo",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Melee_1H_Attack_Slice_Horizontal",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "caverna_gorgonas",
+    "marca": "entrada",
+    "plano": "auto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Walking_A",
+      "rosto": "desconfiado",
+      "segura": "escudo",
+      "de": "entrada",
+      "para": "estatuas"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "caverna_gorgonas",
+    "marca": "estatuas",
+    "plano": "aereo",
+    "luz": "tempestade"
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "caverna_gorgonas",
+    "marca": "estatuas",
+    "plano": "nuca",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Walking_Backwards",
+      "rosto": "medo",
+      "segura": "escudo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "caverna_gorgonas",
+    "marca": "centro",
+    "plano": "medio",
+    "luz": "tempestade",
+    "criatura": {
+     "tipo": "mulher_branca",
+     "marca": "centro"
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "caverna_gorgonas",
+    "marca": "altar",
+    "plano": "close",
+    "luz": "tempestade",
+    "criatura": {
+     "tipo": "mulher_branca",
+     "marca": "altar"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "caverna_gorgonas",
+    "marca": "centro",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Melee_1H_Attack_Slice_Diagonal",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ],
+    "criatura": {
+     "tipo": "mulher_branca",
+     "marca": "centro"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "caverna_gorgonas",
+    "marca": "pilares",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "PickUp",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "caverna_gorgonas",
+    "marca": "centro",
+    "plano": "aereo",
+    "luz": "tempestade",
+    "objetos": [
+     "cavalo"
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "caverna_gorgonas",
+    "marca": "altar",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Dodge_Left",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "mulher_branca",
+     "marca": "altar"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "caverna_gorgonas",
+    "marca": "entrada",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Running_A",
+      "rosto": "medo",
+      "de": "centro",
+      "para": "entrada"
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": []
+}
