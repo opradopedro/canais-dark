@@ -90,7 +90,7 @@ Tom: tensão de sobrevivência, sem gore; susto na penúltima frase de cada part
 
 ## hollow-pines (SV035-SV037) The Station That Isn't There — origem: gringa: Japão, "Kisaragi Station" (2channel, 2004, viral de novo no TikTok japonês) https://en.wikipedia.org/wiki/Kisaragi_Station (história nossa: ônibus noturno no Oregon)
 - 3D: estrada (ponto, vindo, indo, curva, acostamento) + floresta (trilha, entre_arvores, clareira, fundo); criatura sem_rosto; Nora, 29, enfermeira de clínica (semente 3511, jaqueta, rabo); objetos onibus/carro.
-- SV035 parte 1/3: último ônibus 11:40, viagem de 20 min; 40 min sem parar, ninguém mais a bordo; ela posta num fórum; o ônibus para em "Hollow Pines", que não existe no mapa; o motorista: "end of the line"; ela desce, o ônibus vai embora de luzes apagadas; um homem sem rosto no ponto. FALTA
+- SV035 parte 1/3: último ônibus 11:40, viagem de 20 min; 40 min sem parar, ninguém mais a bordo; ela posta num fórum; o ônibus para em "Hollow Pines", que não existe no mapa; o motorista: "end of the line"; ela desce, o ônibus vai embora de luzes apagadas; um homem sem rosto no ponto. FEITO
 - SV036 parte 2/3: sem sinal, só o fórum funciona; o homem diz "the next bus comes when you stop looking for it"; tambores na floresta; ela anda para uma luz; um carro para, homem simpático oferece carona até a cidade; bateria 9%; o fórum responde: "don't get in". FALTA
 - SV037 parte 3/3: ela entra; o carro vai cada vez mais fundo na mata, o motorista não responde; ela pula do carro e corre até um asfalto; amanhece num posto a 300 milhas de casa; o último post dela no fórum tem data de três dias DEPOIS; o celular vibra: "Hollow Pines. Next stop." FALTA
 
