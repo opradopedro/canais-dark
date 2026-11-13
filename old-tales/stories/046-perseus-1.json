@@ -1,0 +1,425 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "grecia",
+ "piano": 0,
+ "origem": "plano do Pedro (11/11): conto da Grécia; Apolodoro, Biblioteca 2.4",
+ "serie": "perseus",
+ "serie_titulo": "Perseus and the Gorgon | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "mythology",
+  "old tales",
+  "legends",
+  "history",
+  "story time",
+  "perseus",
+  "medusa",
+  "greek mythology",
+  "gorgon",
+  "greek myths"
+ ],
+ "elenco": {
+  "perseu": {
+   "semente": 4601,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "cabelo_cor": "#3a2a1a",
+   "camisa": "#e8e0cc",
+   "roupa": "casual"
+  },
+  "danae": {
+   "semente": 4602,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "roupa": "vestido"
+  },
+  "polidectes": {
+   "semente": 4603,
+   "corpo": "forte",
+   "cabelo": "grisalho",
+   "roupa": "rei",
+   "acessorio": "barba"
+  },
+  "atena": {
+   "semente": 4604,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "soldado_esparta"
+  }
+ },
+ "codigo": "CL046",
+ "parte": 1,
+ "titulo": "He promised a king the head of Medusa 🐍 Perseus Part 1 #story #shorts",
+ "capa": "ONE LOOK = STONE",
+ "descripcion": "Thrown into the sea in a wooden chest as a baby, Perseus grows up to make the most reckless promise in Greek myth: bring a king the head of the Gorgon.\n\n> Part 2: {when_next}.\nWould you have made that promise?\n\nFrom Greek myth: Apollodorus, Library 2.4; Ovid, Metamorphoses 4-5; Hesiod, Theogony.\n#perseus #medusa #greekmythology #mythology #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "A king locked his own daughter in a *bronze room*, because of a prophecy.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The oracle said: your grandson will kill you.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "But Zeus came into the room as a rain of gold, and a boy was born.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "His name was *Perseus*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The king threw mother and baby into the sea, inside a wooden chest.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "They drifted for days, until a fisherman pulled them onto the island of Seriphos.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Perseus grew up strong, and fast with a spear.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Too strong for the island's king, Polydectes.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Because Polydectes wanted his mother, *Danaë*, and Perseus stood in the way.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because the king set a trap at a feast.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Every guest had to bring the king a gift. A horse, at least.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Perseus owned nothing. So he said something stupid.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Name it, and I'll bring it. Even the *head of the Gorgon*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The king smiled. That was exactly what he wanted.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Medusa. Snakes for hair. One look, and you turn to stone.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "No man who went to find her ever came back.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "That night, a goddess in armor appeared with a shield of polished bronze.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Athena said: never look at her. Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "templo",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "danae",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "templo",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "polidectes",
+      "acao": "Idle_B",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "escada",
+    "plano": "aereo",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "danae",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "ilha_mar",
+    "marca": "praia",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "aereo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "danae",
+      "acao": "Crouching",
+      "rosto": "medo"
+     }
+    ],
+    "efeito": "chuva"
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "jangada",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "danae",
+      "acao": "Crouching",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "ilha_mar",
+    "marca": "praia",
+    "plano": "aberto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Melee_1H_Attack_Stab",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "praca",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "polidectes",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Melee_Block",
+      "rosto": "bravo",
+      "segura": "escudo"
+     },
+     {
+      "id": "danae",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "taverna",
+    "plano": "aereo",
+    "luz": "entardecer"
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "mercado",
+    "plano": "auto",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "polidectes",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ],
+    "objetos": [
+     "cavalo"
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "taverna",
+    "plano": "close",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "taverna",
+    "plano": "baixo",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Jump_Full_Short",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "templo",
+    "plano": "close",
+    "luz": "fogueira",
+    "atores": [
+     {
+      "id": "polidectes",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "caverna_gorgonas",
+    "marca": "centro",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "criatura": {
+     "tipo": "mulher_branca",
+     "marca": "centro"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "caverna_gorgonas",
+    "marca": "estatuas",
+    "plano": "aereo",
+    "luz": "tempestade"
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "ilha_mar",
+    "marca": "ruinas",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "atena",
+      "acao": "Melee_Block",
+      "rosto": "neutro",
+      "segura": "escudo"
+     },
+     {
+      "id": "perseu",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "ilha_mar",
+    "marca": "topo",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "atena",
+      "acao": "Idle_A",
+      "rosto": "bravo",
+      "segura": "escudo"
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": []
+}
