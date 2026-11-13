@@ -10,7 +10,7 @@
 //        "jusante" | "dique" | "sob" | "lago" | "geral"
 //  agua: nivel da agua em m (vale: leito em -2.4, margem em 0; perfil: chao em 0)   chuva: 0..1   lama: 1 (agua marrom)
 //  VALE: ponte: "tronco" | "tabuas" | "pilar" | "arco" | "trelica"   quebra: 0..1 (meio da ponte cede/cai)
-//   podre: 0..1   leva: 0..1 (enchente leva a ponte)   cimbre: 1 (forma de madeira sob o arco)
+//   podre: 0..1   leva: 0..1 (enchente leva a ponte)   telhado: 1 (ponte coberta, so com "tabuas")   cimbre: 1 (forma de madeira sob o arco)
 //   pedras: 0..1 (quantas aduelas do arco ja estao no lugar; 1 = todas)   chave: 1 (pedra-chave em amarelo)
 //   forca: 0..1 (setas do peso descendo pelo arco)   junta: 1 (junta de dilatacao no meio, pede ponte "pilar")
 //   calor: -1..1 (frio abre a junta, calor fecha)   empena: 0..1 (sem junta: o calor levanta o tabuleiro)
@@ -93,6 +93,12 @@ function monta() {
     const dedos = grupo(piv); for (let k = 0; k < 6; k++) box(0.3, 0.06, 0.18, mat(0x9aa3ad, { metalness: 0.6, roughness: 0.4 }), 0, 0.12, -1.05 + k * 0.42 + (sx > 0 ? 0.21 : 0), dedos);
     return { piv, me, corr, corr2, dedos, sx };
   });
+  // telhado de ponte coberta (p.telhado, so com ponte "tabuas"): postes, paredes baixas e telhado de duas aguas (YB069)
+  P.telhado = grupo(P.tab);
+  const telhaM = mat(0x8a3a2a, { roughness: 0.8 }), posteM = mat(0x7a5232, { roughness: 0.9 });
+  for (const xx of [-6.2, -3.1, 0, 3.1, 6.2]) for (const zz of [-1.25, 1.25]) box(0.16, 2.3, 0.16, posteM, xx, 0.46 + 1.15, zz, P.telhado);
+  for (const zz of [-1.28, 1.28]) { box(12.6, 0.9, 0.06, posteM, 0, 1.25, zz, P.telhado); box(12.6, 0.14, 0.18, posteM, 0, 2.7, zz * 0.98, P.telhado); }
+  for (const sz of [-1, 1]) { const r = box(13.4, 0.1, 1.75, telhaM, 0, 3.05, sz * 0.72, P.telhado); r.rotation.x = sz * 0.55; }
   P.pilar = box(0.9, 1, 2.4, conc, 0, 0, 0); uvMundo(P.pilar, 2);
   // arco de pedra
   const R = 7.117, CY = -4.517, RE = R + 0.6, AL = Math.atan2(-CY, VW), NA = 15;
@@ -232,6 +238,7 @@ function atualiza(t, ctx) {
   P.tab.visible = ['tabuas', 'pilar', 'trelica'].includes(tipo);
   P.pilar.visible = tipo === 'pilar';
   P.arco.visible = tipo === 'arco'; P.trel.visible = tipo === 'trelica';
+  P.telhado.visible = tipo === 'tabuas' && !!p.telhado;
   const des = leva > 0 ? { z: ease(leva) * 9, r: ease(leva) * 0.7, y: -ease(leva) * 1.2 } : { z: 0, r: 0, y: 0 };
   for (const g of [P.tronco, P.tab, P.trel]) { g.position.set(0, des.y, des.z); g.rotation.y = des.r; }
   P.pilar.scale.y = 0.35 - BED + 0.6; P.pilar.position.y = (BED - 0.6 + 0.24) / 2 + 0.06;

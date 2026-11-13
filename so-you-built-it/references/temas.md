@@ -105,3 +105,5 @@ Marque `[x]` quando o roteiro entrar em `stories/`. Um tema por roteiro, sem rep
 
 ## Semana 7/11 a 20/11 (rotina de 06/11, mundo novo `riacho`)
 - [x] Roman arch bridge (YB049) · [x] Street over a leaking water main (YB051, terreno) · [x] Culvert (YB052) · [x] Flood water floats a car (YB053) · [x] Dutch dike (YB055) · [x] Expansion joint (YB056)
+
+- Como a cola gruda (adesão, coesão, super cola): IDEIA DO PEDRO (issue #25) -> YB065, mundo `cola`.

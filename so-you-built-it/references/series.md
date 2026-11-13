@@ -81,3 +81,5 @@ Estoque antes: 18 roteiros prontos (YB043-YB046, YB049, YB052-YB064) + 4 agendad
 | YB066 | Curiosidade | Vajont 1963: a barragem aguentou, a montanha caiu no lago (riacho, represa, transborda) | gringa: Itália https://en.wikipedia.org/wiki/Vajont_Dam | FEITO |
 | YB067 | Curiosidade | ferrovia do Tibete que mantém o chão congelado (terreno, trilho, solo_cede) | gringa: China https://en.wikipedia.org/wiki/Qinghai%E2%80%93Tibet_railway | FEITO |
 | YB068 | Curiosidade | raiz de árvore levanta a calçada (terreno, calcada, raiz, trinca, manta) | autoral | FEITO |
+| YB069 | Curiosidade | por que pontes de madeira antigas tinham telhado (riacho, tabuas, podre, `telhado` novo) | gringa: Suíça https://en.wikipedia.org/wiki/Covered_bridge | FEITO |
+Ficaram 5 (não 8): os mundos fixos já cobriram quase todos os temas (bomba manual, lastro, porta do micro-ondas já saíram). Kamakura (Japão) foi descartado porque o mundo `iglu` mostra blocos e "You built an igloo". Para mais Evolução e Curiosidade nova falta MUNDO NOVO (ver PLANO-KIRO-MUNDOS.md).

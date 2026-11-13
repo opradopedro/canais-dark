@@ -1,0 +1,316 @@
+{
+ "codigo": "YB069",
+ "mundo": "riacho",
+ "formato": "Curiosidade",
+ "autor": "claude",
+ "origem": "gringa: Suíça (Kapellbrücke, Lucerna, 1333) https://en.wikipedia.org/wiki/Covered_bridge",
+ "titulo": "Why old wooden bridges had roofs 🇨🇭 #engineering #shorts",
+ "capa": "THE ROOF IS FOR THE BRIDGE",
+ "descripcion": "Covered bridges weren't built to keep travelers dry. The roof protects the wooden beams from rain, and turns a 20-year bridge into a 100-year bridge. Lucerne's Chapel Bridge dates from 1333.\n\nWhat should we explain next?\n\n#howitworks #engineering #science #shorts",
+ "tags": [
+  "covered bridge",
+  "wooden bridge",
+  "switzerland",
+  "lucerne",
+  "bridges",
+  "how it works",
+  "engineering",
+  "science",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Why would anyone put a roof on a bridge?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "In Lucerne, Switzerland, a wooden bridge with a roof has crossed the river since 1333.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Most people guess the roof is for the people walking across. It isn't.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It's for the bridge.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Wood gets soaked every time it rains, then dries in the sun.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Wet, dry, wet, dry. Water sits in the joints, where the beams meet.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Fungus loves damp wood, and it eats the inside of the beam first.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "An open wooden bridge could rot through in ten or twenty years.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Replacing the whole thing meant cutting giant trees and closing the road.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But a roof and side walls keep the rain off the beams that carry the load.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now only the roof boards get wet, and those are cheap and easy to swap.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A covered bridge can last eighty years, or more. Some stand for centuries.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Germany, Switzerland and the United States still have hundreds of them.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So the roof was never for you. It was armor for the wood. What should we explain next?",
+   "pausa": 0.2
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "tabuas",
+    "agua": -1.8,
+    "rotulo": "A ROOF?",
+    "etapa": "c0",
+    "telhado": 1
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "tabuas",
+    "agua": -1.6,
+    "rotulo": "SINCE 1333",
+    "etapa": "c1",
+    "telhado": 1
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "riacho",
+   "p": {
+    "foco": "deck",
+    "ponte": "tabuas",
+    "agua": -1.8,
+    "rotulo": "FOR PEOPLE?",
+    "cor": "red",
+    "etapa": "c2",
+    "telhado": 1
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "tabuas",
+    "agua": -1.8,
+    "rotulo": "FOR THE BRIDGE",
+    "cor": "green",
+    "etapa": "c3",
+    "telhado": 1
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "riacho",
+   "p": {
+    "foco": "deck",
+    "ponte": "tabuas",
+    "agua": -1.8,
+    "chuva": 1,
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "riacho",
+   "p": {
+    "foco": "deck",
+    "ponte": "tabuas",
+    "agua": -1.8,
+    "chuva": 1,
+    "podre": [
+     0,
+     0.3
+    ],
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "riacho",
+   "p": {
+    "foco": "deck",
+    "ponte": "tabuas",
+    "agua": -1.8,
+    "chuva": 0.6,
+    "podre": [
+     0.3,
+     0.7
+    ],
+    "rotulo": "ROT",
+    "cor": "red",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "tabuas",
+    "agua": -1.8,
+    "podre": 0.9,
+    "quebra": [
+     0,
+     0.5
+    ],
+    "rotulo": "10-20 YEARS",
+    "cor": "red",
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "tabuas",
+    "agua": -1.8,
+    "podre": 1,
+    "quebra": 0.5,
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "tabuas",
+    "agua": -1.8,
+    "chuva": 1,
+    "rotulo": "ROOF + WALLS",
+    "cor": "green",
+    "etapa": "c9",
+    "telhado": 1
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "riacho",
+   "p": {
+    "foco": "deck",
+    "ponte": "tabuas",
+    "agua": -1.8,
+    "chuva": 1,
+    "rotulo": "CHEAP TO SWAP",
+    "cor": "green",
+    "etapa": "c10",
+    "telhado": 1
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "tabuas",
+    "agua": -1.7,
+    "rotulo": "80+ YEARS",
+    "cor": "green",
+    "etapa": "c11",
+    "telhado": 1
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "riacho",
+   "p": {
+    "foco": "geral",
+    "ponte": "tabuas",
+    "agua": -1.7,
+    "etapa": "c12",
+    "telhado": 1
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "riacho",
+   "p": {
+    "foco": "ponte",
+    "ponte": "tabuas",
+    "agua": -1.8,
+    "etapa": "c13",
+    "telhado": 1
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 13,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "roof",
+  "1333",
+  "It isn't",
+  "for the bridge",
+  "rains",
+  "joints",
+  "Fungus",
+  "twenty years",
+  "rain off",
+  "eighty years",
+  "armor"
+ ]
+}
