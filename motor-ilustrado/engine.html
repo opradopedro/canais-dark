@@ -61,7 +61,7 @@ const P = {
   chorar: t => ({ lean: 14, y: 6 + Math.sin(t * 9) * 2, aL: [120, -150], aR: [115, -145], lL: [6, 4], lR: [-6, 4], cab: 14 }),
   sentar: t => ({ lean: -2, y: 95, aL: [30, -50], aR: [20, -60], lL: [90, -90], lR: [85, -95], cab: Math.sin(t * 1.5) * 3 }),
   cair: t => ({ lean: 80, y: 120, aL: [100, 0], aR: [80, -10], lL: [40, 10], lR: [70, 20], cab: 10 }),
-  deitado: t => ({ lean: 90, y: 170, aL: [20, 0], aR: [-10, 0], lL: [10, 0], lR: [-6, 0], cab: 0 }),
+  deitado: t => ({ lean: 90, y: 150, aL: [100, 0], aR: [80, 0], lL: [-88, 0], lR: [-92, 0], cab: 0 }),
   curvar: t => ({ lean: 50, y: 25, aL: [70, -20], aR: [60, -30], lL: [15, 30], lR: [-10, 25], cab: 10 }),
   susto: t => ({ lean: -12, y: Math.sin(t * 30) * 2, aL: [100, -110], aR: [95, -100], lL: [-10, 0], lR: [-25, 5], cab: -10 }),
   escalar: t => { const s = Math.sin(t * 6); return { lean: -6, y: s * 6, aL: [170 + s * 10, -10], aR: [150 - s * 10, -30], lL: [60 + s * 30, 80], lR: [40 - s * 30, 90], cab: -15 }; },
@@ -109,7 +109,7 @@ function membro(x, y, a1, a2, l1, l2, vira) {
 }
 function boneco(a, el, t, sx, sy, esc) {
   const pose = (P[a.pose] || P.parado)(t + (a.fase || 0));
-  const vira = a.vira ?? 1, lw = 10;
+  const vira = a.vira ?? 1, lw = 12;
   X.save(); X.translate(sx, sy); X.scale(esc, esc);
   // sombra no chao
   X.fillStyle = 'rgba(0,0,0,0.28)'; X.beginPath(); X.ellipse(0, 4, 70, 12, 0, 0, 7); X.fill();
@@ -136,7 +136,8 @@ function boneco(a, el, t, sx, sy, esc) {
   X.strokeStyle = corMembro; X.lineWidth = lw + 2; X.beginPath(); X.moveTo(0, hipY); X.lineTo(shX, shY); X.stroke();
   // roupa ao longo do tronco (segue o corpo)
   X.save(); X.translate(0, hipY); X.rotate(lean);
-  if (el.manto) { X.fillStyle = el.manto; X.strokeStyle = '#141414'; X.lineWidth = 4; X.beginPath(); X.moveTo(-26, -L.tronco + 6); X.lineTo(26, -L.tronco + 6); X.lineTo(40, 30); X.lineTo(-40, 30); X.closePath(); X.fill(); X.stroke(); }
+  if (el.manto) { X.fillStyle = el.manto; X.strokeStyle = '#141414'; X.lineWidth = 4; const bal = Math.sin(t * 2.5) * 5; X.beginPath(); X.moveTo(-20, -L.tronco + 4); X.quadraticCurveTo(0, -L.tronco - 6, 20, -L.tronco + 4); X.quadraticCurveTo(34, -40, 52 + bal, 78); X.quadraticCurveTo(0, 92, -52 + bal, 78); X.quadraticCurveTo(-34, -40, -20, -L.tronco + 4); X.closePath(); X.fill(); X.stroke();
+    X.strokeStyle = 'rgba(0,0,0,0.25)'; X.lineWidth = 3; X.beginPath(); X.moveTo(0, -L.tronco + 2); X.lineTo(0, 84); X.stroke(); X.fillStyle = '#7a1a12'; X.fillRect(-26, -40, 52, 12); }
   if (el.armadura) { X.fillStyle = el.armadura; X.strokeStyle = '#5a3a08'; X.lineWidth = 4;
     X.beginPath(); X.moveTo(-28, -L.tronco + 8); X.quadraticCurveTo(0, -L.tronco - 4, 28, -L.tronco + 8); X.lineTo(22, -28); X.quadraticCurveTo(0, -18, -22, -28); X.closePath(); X.fill(); X.stroke();
     X.beginPath(); for (let i = 1; i < 4; i++) { X.moveTo(-22, -L.tronco + 8 + i * 22); X.quadraticCurveTo(0, -L.tronco + 16 + i * 22, 22, -L.tronco + 8 + i * 22); } X.stroke(); }
@@ -171,7 +172,9 @@ function boneco(a, el, t, sx, sy, esc) {
   if (el.tiara) { X.strokeStyle = '#e8b830'; X.lineWidth = 8; X.beginPath(); X.arc(0, 2, R - 2, Math.PI * 1.12, Math.PI * 1.88); X.stroke(); X.fillStyle = '#c22'; X.beginPath(); X.arc(0, -R + 3, 6, 0, 7); X.fill(); }
   if (el.elmo) { X.fillStyle = el.elmo; X.strokeStyle = '#141414'; X.lineWidth = 4; X.beginPath(); X.arc(0, -4, R + 4, Math.PI, 0); X.lineTo(R + 4, 4); X.lineTo(-R - 4, 4); X.closePath(); X.fill(); X.stroke(); X.fillStyle = '#b8231c'; X.beginPath(); X.moveTo(0, -R - 4); X.quadraticCurveTo(30, -R - 50, -10, -R - 46); X.fill(); }
   rosto(a.rosto || 'calmo', t + (a.fase || 0), el.rosto_cor);
-  if (el.olhos_ouro && a.olhos_brilho) { const g = X.createRadialGradient(0, 2, 2, 0, 2, 60); g.addColorStop(0, 'rgba(255,220,90,0.95)'); g.addColorStop(1, 'rgba(255,200,60,0)'); X.fillStyle = g; X.beginPath(); X.arc(-18, 2, 60, 0, 7); X.arc(18, 2, 60, 0, 7); X.fill(); }
+  if (el.olhos_ouro && a.olhos_brilho) { // raios dourados saindo dos olhos (sistema da cabeca)
+    for (const ex of [-18, 18]) { const g = X.createRadialGradient(ex, 2, 1, ex, 2, 24); g.addColorStop(0, 'rgba(255,240,150,1)'); g.addColorStop(1, 'rgba(255,200,60,0)'); X.fillStyle = g; X.beginPath(); X.arc(ex, 2, 24, 0, 7); X.fill();
+      const p = 0.6 + 0.4 * Math.sin(t * 9); X.strokeStyle = `rgba(255,215,90,${0.55 * p})`; X.lineWidth = 9; X.beginPath(); X.moveTo(ex, 2); X.lineTo(ex * 6 + 60, -1400); X.stroke(); } }
   X.restore();
   X.restore();
 }
@@ -268,7 +271,7 @@ window.render = function (t) {
   for (const a of atores) {
     const el = (E.elenco || {})[a.id] || {}; const u = par(a.u ?? 0.5, a.mov === 'rapido' ? easeOut(k * 1.4) : k);
     let vv = a.v ?? 0.9; if (a.pose === 'pular') vv -= Math.sin(cl(k, 0, 1) * Math.PI) * (a.altura ?? 0.25);
-    const [x, y] = tela(v, u, vv); boneco(a, el, tl, x, y, (a.esc ?? 1) * v.s * 1.0);
+    const [x, y] = tela(v, u, vv); boneco(a, el, tl, x, y, (a.esc ?? 1) * v.s * 1.25);
   }
   for (const f of (cena.fx || [])) if (!['brilho', 'neblina', 'escuro', 'dourado'].includes(f.split('@')[0]) && !f.startsWith('tremor') && !f.startsWith('flash')) fx(f, t, k, cena, v);
   X.setTransform(1, 0, 0, 1, 0, 0);

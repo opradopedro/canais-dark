@@ -1,0 +1,70 @@
+name: Prova do motor ilustrado
+
+# Faz o video de prova de um roteiro do motor ilustrado (voz, trilha, legenda, fundos, desenho, conferencia).
+# NAO publica. Para pedir: escreva o caminho do roteiro em motor-ilustrado/testes/pedido.txt e envie para producao.
+# Saida: Release publica "teste-ilustrado".
+on:
+  push:
+    branches: [producao]
+    paths: ["motor-ilustrado/testes/pedido.txt"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: teste-ilustrado
+  cancel-in-progress: false
+
+jobs:
+  prova:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      FREESOUND_API_KEY: ${{ secrets.FREESOUND_API_KEY }}
+      CANAIS_REPO: ${{ github.workspace }}
+      CANAIS_SEM_ENV: "1"
+      HF_HUB_DISABLE_SYMLINKS_WARNING: "1"
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: .github/requirements-canais.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Programas e pacotes
+        run: |
+          echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | sudo debconf-set-selections
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu ttf-mscorefonts-installer > /dev/null
+          pip install -q -r .github/requirements-canais.txt
+          npm install --prefix motor-ilustrado --no-audit --no-fund
+          npx --prefix motor-ilustrado playwright install --with-deps chromium > /dev/null
+      - name: Recuperar modelos e sons
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            narracoes
+            sons
+            ~/.cache/huggingface
+            ~/.cache/torch
+            ~/.cache/hora-muerta
+          key: canais-ilustrado-${{ github.run_id }}
+          restore-keys: |
+            canais-cartoon-audio-
+            canais-
+      - name: Fazer a prova
+        run: |
+          set -o pipefail
+          python motor-ilustrado/preparar_teste.py "$(head -1 motor-ilustrado/testes/pedido.txt)" /tmp/ilustrado 2>&1 | tee /tmp/ilustrado-log.txt
+      - name: Enviar erro para a Release "logs"
+        if: failure()
+        run: |
+          tail -c 60000 /tmp/ilustrado-log.txt > /tmp/teste-ilustrado_ERRO.txt 2>/dev/null || echo "sem log" > /tmp/teste-ilustrado_ERRO.txt
+          gh release view logs > /dev/null 2>&1 || gh release create logs --title "Logs de erro" --notes "Ultimo erro de cada tarefa"
+          gh release upload logs /tmp/teste-ilustrado_ERRO.txt --clobber

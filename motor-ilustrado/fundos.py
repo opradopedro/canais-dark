@@ -52,12 +52,18 @@ def cf(modelo, prompt, seed, w=1600, h=912):
         except urllib.error.HTTPError as e:
             msg = e.read().decode()[:400]
             print(f"  {modelo} HTTP {e.code}: {msg}")
+            if "4006" in msg or "daily free allocation" in msg:
+                raise CotaDoDia()
             if e.code in (400, 401, 403, 404):
                 raise
         except Exception as e:  # noqa
             print(f"  {modelo} erro: {e}")
         time.sleep(10 * (tentativa + 1))
     raise RuntimeError(f"falhou {modelo}")
+
+
+class CotaDoDia(Exception):
+    """Cota gratis do dia (10 mil neurons) acabou: para sem erro e continua amanha (cron do fundos.yml)."""
 
 
 def para_16x9(caminho):
@@ -111,14 +117,21 @@ def gerar_faltando():
     conferir_lugares()
     tem = existentes(REL)
     os.makedirs("/tmp/fundos", exist_ok=True)
-    novos = []
+    novos, parar = [], False
     for m in mundos():
+        if parar:
+            break
         for cid, c in m["cenarios"].items():
             nome = f"{m['mundo']}__{cid}.jpg"
             if nome in tem:
                 continue
-            print("gerando", nome)
-            raw = cf(m.get("modelo", MODELO), prompt_de(m, c), c.get("seed", 7))
+            print("gerando", nome, flush=True)
+            try:
+                raw = cf(m.get("modelo", MODELO), prompt_de(m, c), c.get("seed", 7))
+            except CotaDoDia:
+                print("COTA GRATIS DO DIA ACABOU: o resto sai amanha (cron 00:15 UTC)", flush=True)
+                parar = True
+                break
             p = f"/tmp/fundos/{m['mundo']}__{cid}.png"
             open(p, "wb").write(raw)
             novos.append(para_16x9(p))
