@@ -61,7 +61,15 @@ def resolver(h, timing):
     segs = timing["segs"]
     tresd = h.get("visual") in ("3d", "cartoon")
     cenas = []
-    for i, c in enumerate(h["cenas"]):
+    if h.get("visual") == "ilustrado" and "cenas" not in h:
+        # motor ilustrado: a cena vem de cada linea (t0 da fala). A mixagem so precisa saber onde tem luta
+        luta = {"lutar": "Melee", "golpe": "Hit", "correr": "Running", "pular": "Jump", "cair": "Death"}
+        for i, ln in enumerate(h.get("lineas", [])):
+            c = ln.get("cena") or (ln.get("cenas") or [{}])[0]
+            atores = [{"acao": luta.get(a.get("pose"), "")} for a in c.get("atores", [])]
+            t0 = 0 if i == 0 or i >= len(segs) else max(0, segs[i]["t0"] - 0.15)
+            cenas.append({"t0": t0, "cena": {"atores": atores, "luz": "tempestade" if "raio" in (c.get("fx") or []) else None}})
+    for i, c in enumerate(h.get("cenas", [])):
         t0 = 0 if i == 0 else _tempo(segs, {"en": "inicio", "mas": -0.25, **c})
         if tresd:
             cenas.append({"t0": t0, "cena": c.get("cena", {})})
