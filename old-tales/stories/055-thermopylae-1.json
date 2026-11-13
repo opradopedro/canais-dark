@@ -1,0 +1,420 @@
+{
+ "formato": "Soldier",
+ "tema": "epico",
+ "paleta": "grecia",
+ "piano": 0,
+ "origem": "autoral (frente soldado/Esparta do SKILL.md); Heródoto, Histórias 7",
+ "serie": "thermopylae",
+ "serie_titulo": "The 300 at Thermopylae | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "mythology",
+  "old tales",
+  "legends",
+  "history",
+  "story time",
+  "thermopylae",
+  "300 spartans",
+  "leonidas",
+  "sparta",
+  "ancient greece",
+  "history"
+ ],
+ "elenco": {
+  "leonidas": {
+   "semente": 5501,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "soldado_esparta",
+   "acessorio": "barba"
+  },
+  "dienekes": {
+   "semente": 5502,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "soldado_esparta",
+   "acessorio": "barba"
+  },
+  "efialtes": {
+   "semente": 5503,
+   "corpo": "magro",
+   "cabelo": "grisalho",
+   "roupa": "casual"
+  },
+  "xerxes": {
+   "semente": 5504,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "roupa": "rei",
+   "acessorio": "barba"
+  }
+ },
+ "codigo": "CL055",
+ "parte": 1,
+ "titulo": "You wake up in 480 BC as one of the 300 ⚔️ Thermopylae Part 1 #story #shorts",
+ "capa": "1 KING MUST DIE",
+ "descripcion": "The oracle of Delphi gave Sparta two choices: the city falls, or a king dies. King Leonidas chose 300 men, all fathers with living sons, and marched to a narrow pass.\n\n> Part 2: {when_next}.\nWould you have marched?\n\nFrom Herodotus, Histories, book 7 (chapters 175-228). Herodotus gives millions of Persians; modern historians estimate roughly 100,000 to 300,000.\n#thermopylae #sparta #300 #ancienthistory #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "You wake up in 480 BC, and the largest army the world has ever seen is coming for you.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Xerxes, King of Persia, is marching on Greece.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Herodotus says millions. Historians today say maybe two hundred thousand.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Either way, more men than the whole of Sparta.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The oracle of *Delphi* gave Sparta a terrible answer.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Either your city burns, or a king of Sparta dies.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "King Leonidas made his choice.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because the way he picked his men tells you everything.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He took *three hundred* Spartans, and every one had a living son.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "So that no family line would end on the battlefield.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "They marched north to a pass called *Thermopylae*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Mountains on one side, the sea on the other.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "In places, the road was barely wide enough for one cart.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Here, numbers didn't matter. Only shields.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A Persian rider came to spy on them.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "He found the Spartans combing their long hair, and exercising.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Xerxes laughed when he heard it. He waited four days for them to run.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "They didn't. Part two, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "aereo",
+    "luz": "tempestade"
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "xerxes",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "indo",
+    "plano": "aereo",
+    "luz": "por_sol"
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "aereo",
+    "luz": "nublado"
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "templo",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "templo",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Idle_B",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "escada",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "auto",
+    "luz": "nublado"
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "aberto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Melee_Block",
+      "rosto": "bravo",
+      "segura": "escudo"
+     },
+     {
+      "id": "dienekes",
+      "acao": "Melee_1H_Attack_Stab",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "dienekes",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "curva",
+    "plano": "nuca",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Walking_A",
+      "rosto": "bravo",
+      "segura": "lanca",
+      "de": "vindo",
+      "para": "curva"
+     },
+     {
+      "id": "dienekes",
+      "acao": "Walking_A",
+      "rosto": "bravo",
+      "segura": "escudo",
+      "de": "vindo",
+      "para": "curva"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "aereo",
+    "luz": "por_sol"
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Idle_A",
+      "rosto": "desconfiado",
+      "segura": "escudo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "dienekes",
+      "acao": "Melee_Blocking",
+      "rosto": "bravo",
+      "segura": "escudo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "beira_mato",
+    "plano": "medio",
+    "luz": "dia",
+    "objetos": [
+     "cavalo"
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "acostamento",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "dienekes",
+      "acao": "Push_Ups",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "leonidas",
+      "acao": "Melee_2H_Attack_Spin",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "close",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "xerxes",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo",
+      "segura": "lanca"
+     },
+     {
+      "id": "dienekes",
+      "acao": "Melee_Block",
+      "rosto": "bravo",
+      "segura": "escudo"
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": []
+}

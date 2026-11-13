@@ -151,6 +151,6 @@ Peças: `f_mosteiro`, `f_igreja`, `f_aldeia`, `f_campo`, `f_estrada_antiga`, `f_
 ## thermopylae (CL055-CL057) The 300 at Thermopylae — tema epico, paleta grecia — origem: autoral (backlog Esparta, frente "soldado")
 - Fonte: Heródoto, *Histórias* livro 7 (176-228); números: Heródoto diz milhões, historiadores modernos estimam 100-300 mil persas; ~7 mil gregos com os 300 espartanos.
 - 3D: esparta_cidade (praca, casa, templo, escada), campo_batalha (meio, vindo, indo, pe_torre, curva, beira_mato); luz por_sol/tempestade/nascer_sol; elenco leonidas (semente 5501, soldado_esparta, barba), dienekes, efialtes.
-- CL055 parte 1/3: "You wake up in 480 BC as one of 300"; Xerxes; oráculo de Delfos (um rei morre ou Esparta cai); Leônidas escolhe só homens com filhos; passo das Termópilas, 15 m de largura; os persas pedem as armas: "Molon labe". FALTA
+- CL055 parte 1/3: "You wake up in 480 BC as one of 300"; Xerxes; oráculo de Delfos (um rei morre ou Esparta cai); Leônidas escolhe só homens com filhos; passo das Termópilas, 15 m de largura; os persas pedem as armas: "Molon labe". FEITO
 - CL056 parte 2/3: 4 dias esperando; flechas que tapam o sol, "then we fight in the shade" (Dienekes); 2 dias de muralha de escudos; os Imortais recuam; Xerxes salta do trono três vezes. FALTA
 - CL057 parte 3/3: Efialtes mostra o caminho da montanha; Leônidas manda os aliados embora; ficam 300 + téspios + tebanos; última luta no morro, lanças quebram, lutam com espadas e mãos; a pedra com a inscrição de Simônides. FALTA
