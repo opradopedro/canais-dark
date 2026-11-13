@@ -1,0 +1,436 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "origem": "plano do Pedro (11/11): Zhong Kui; Shen Kuo, Mengxi Bitan",
+ "serie": "zhong-kui",
+ "serie_titulo": "Zhong Kui, the Demon Queller | Old Tales",
+ "partes": 3,
+ "autor": "claude",
+ "tags": [
+  "mythology",
+  "old tales",
+  "legends",
+  "history",
+  "story time",
+  "zhong kui",
+  "demon queller",
+  "chinese mythology",
+  "chinese legend",
+  "demons"
+ ],
+ "elenco": {
+  "zhongkui": {
+   "semente": 5201,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "cabelo_cor": "#141010",
+   "pele": "#c8865a",
+   "roupa": "chines",
+   "camisa": "#7a1c24",
+   "acessorio": "barba"
+  },
+  "imperador": {
+   "semente": 5202,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "roupa": "rei",
+   "acessorio": "barba"
+  },
+  "duping": {
+   "semente": 5203,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "chines",
+   "camisa": "#2c4a6a"
+  },
+  "juiz": {
+   "semente": 5204,
+   "corpo": "idoso",
+   "cabelo": "careca",
+   "roupa": "chines",
+   "camisa": "#2c1d3a"
+  },
+  "xuhao": {
+   "semente": 5205,
+   "corpo": "magro",
+   "cabelo": "careca",
+   "roupa": "chines",
+   "camisa": "#3a2a4a"
+  }
+ },
+ "codigo": "CL053",
+ "parte": 2,
+ "anterior": "CL052",
+ "titulo": "The judge of the dead made him king of demons 👹 Zhong Kui Part 2 #story #shorts",
+ "capa": "KING OF DEMONS",
+ "descripcion": "In the Underworld, the judge of the dead saw the injustice done to Zhong Kui and gave him an army of ghosts. Centuries later, an emperor would need him.\n\n> Part 3: {when_next}.\nWould you have forgiven the Emperor?\n\nFrom the Chinese legend of Zhong Kui, as recorded by Shen Kuo in Mengxi Bitan (11th century) and in later Ming-era versions.\n#zhongkui #chinesemythology #mythology #ancientchina #shorts",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "In the Underworld, a dead man arrived with his skull *cracked open*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The judge of the dead opened the Book of Life and Death.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "First in the imperial exam. Rejected for his face. Died on the palace steps.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "The judge slammed the book shut. This was an *injustice*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "So in the later legends, he gave Zhong Kui a new title.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Not scholar. Not minister. *King of Demons*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "His job: hunt every evil spirit that escapes into the human world.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Stay, because Zhong Kui didn't hunt alone.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "An army of ghosts marched behind him, carrying his banners.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Demons who stole children. Spirits who brought fevers.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Ghosts who hid in houses and whispered at night.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Zhong Kui found them, fought them, and *ate them*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "His sword never rusted. His beard was full of thunder.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Centuries passed in the world of the living.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "A new Emperor took the throne, Xuanzong of Tang.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "And one winter, the Emperor fell sick with a fever no doctor could cure.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Every night, he dreamed of a small demon in his palace.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Stealing his treasures, and laughing. Part three, {when_next}.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "entrada",
+    "plano": "aereo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Walking_A",
+      "rosto": "triste",
+      "de": "entrada",
+      "para": "corredor"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "livro",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "juiz",
+      "acao": "Interact",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "juiz",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "juiz",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     },
+     {
+      "id": "zhongkui",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "mesa",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "juiz",
+      "acao": "Melee_Unarmed_Attack_Punch_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "pilares",
+    "plano": "aereo",
+    "luz": "interior_noite"
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "juiz",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Cheering",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "corredor",
+    "plano": "nuca",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Running_A",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "fundo"
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "fundo",
+    "plano": "aereo",
+    "luz": "tempestade",
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "fundo"
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "corredor",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Walking_A",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "corredor"
+    }
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "noite",
+    "criatura": {
+     "tipo": "coisa_com_chifres",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "baixo",
+    "luz": "noite",
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "praca"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Melee_1H_Attack_Slice_Diagonal",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ],
+    "criatura": {
+     "tipo": "coisa_com_chifres",
+     "marca": "praca"
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "templo",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "zhongkui",
+      "acao": "Melee_2H_Attack_Chop",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "nuvens",
+    "plano": "aereo",
+    "luz": "nascer_sol"
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "imperador",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "imperador",
+      "acao": "Lie_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "xuhao",
+      "acao": "Running_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "xuhao",
+      "acao": "Jump_Full_Short",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": []
+}

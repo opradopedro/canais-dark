@@ -145,7 +145,7 @@ Peças: `f_mosteiro`, `f_igreja`, `f_aldeia`, `f_campo`, `f_estrada_antiga`, `f_
 - Fontes: lenda registrada por Shen Kuo, *Mengxi Bitan* (séc. XI), sobre o sonho do imperador Xuanzong (Tang); versões populares da Dinastia Ming.
 - 3D: palacio_ceu (salao, colunas, escada), submundo (juiz, livro, entrada, corredor), aldeia_china (praca, casa, templo); criaturas vulto (fantasmas) e coisa_com_chifres (demônio Xu Hao); elenco zhongkui (semente 5201, forte, barba), imperador, xuhao.
 - CL052 parte 1/3: estudioso brilhante e feio; passa em 1º no exame imperial; o imperador o rejeita pela aparência; em fúria bate a cabeça nos degraus do palácio e morre; o amigo Du Ping o enterra. FEITO
-- CL053 parte 2/3: no submundo, o juiz dos mortos vê injustiça e o faz Rei dos Demônios; exército de fantasmas; ele caça demônios; séculos depois, o imperador Xuanzong cai doente de febre. FALTA
+- CL053 parte 2/3: no submundo, o juiz dos mortos vê injustiça e o faz Rei dos Demônios; exército de fantasmas; ele caça demônios; séculos depois, o imperador Xuanzong cai doente de febre. FEITO
 - CL054 parte 3/3: no sonho do imperador, demônio Xu Hao rouba a flauta de jade e a bolsa de Yang Guifei; um gigante de barba e chapéu de oficial arranca o olho do demônio e o devora; diz quem é; o imperador acorda curado e manda Wu Daozi pintar; o retrato vira proteção nas portas no Ano Novo. FALTA
 
 ## thermopylae (CL055-CL057) The 300 at Thermopylae — tema epico, paleta grecia — origem: autoral (backlog Esparta, frente "soldado")
