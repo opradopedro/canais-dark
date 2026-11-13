@@ -1,0 +1,426 @@
+{
+ "formato": "Regla",
+ "origem": "gringa: EUA, trend 'mimic' (vozes que imitam gente na floresta) no TikTok https://dailydot.com/secret-of-the-mimic-tiktok",
+ "serie": "voz-del-monte",
+ "serie_titulo": "La voz que imita | Hora Muerta",
+ "partes": 2,
+ "autor": "claude",
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda",
+  "la voz que imita",
+  "mimic",
+  "bosque",
+  "sierra"
+ ],
+ "elenco": {
+  "rosa": {
+   "semente": 4911,
+   "corpo": "magro",
+   "cabelo": "rabo",
+   "roupa": "jaqueta"
+  },
+  "beto": {
+   "semente": 4912,
+   "corpo": "medio",
+   "cabelo": "curto",
+   "roupa": "jaqueta",
+   "acessorio": "bone"
+  }
+ },
+ "codigo": "HM050",
+ "parte": 2,
+ "anterior": "HM049",
+ "titulo": "La cosa del monte aprendió mi voz 🌲 Parte 2 #terror #shorts",
+ "capa": "YA ESTOY ADENTRO",
+ "descripcion": "Rosa no contestó a ninguna de las dos voces. Caminó hasta la torre. Pero la cosa del monte ya había aprendido a hablar como ella.\n\n¿Tú habrías abierto?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "3d",
+ "lineas": [
+  {
+   "texto": "Parte dos. Rosa no contesta. Ni a la izquierda, *ni a la derecha*.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Saca el radio y llama en voz baja: Beto, ¿dónde estás?",
+   "pausa": 0.5
+  },
+  {
+   "texto": "La respuesta llega del radio, no del bosque.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Estoy en la torre. Nunca salí. Me quedé dormido.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "¿Quién se llevó la linterna?",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Rosa camina hacia la torre, sin correr, sin mirar a los lados.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Las dos voces la siguen, una a cada lado, entre los pinos.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Quédate, porque la cosa aprendió algo nuevo esa noche.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Detrás de ella, una voz grita *¡Beto, ábreme!*, con la voz de Rosa.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "En el radio, Beto dice: ya bajo, te estoy oyendo en la puerta.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Rosa grita al radio: no abras, esa no soy yo.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Ella llega primero, sube, y cierran la escotilla juntos.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Toda la noche, algo alto camina alrededor de la torre.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Golpea la ventana y habla con la voz de *su mamá*, que murió hace años.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Al amanecer, se va. Solo quedan huellas largas en el lodo.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "La linterna de Beto está en la puerta, encendida.",
+   "pausa": 0.5
+  },
+  {
+   "texto": "Esa tarde, en el radio de la central, alguien llama con la voz de Rosa: *ya estoy adentro*.",
+   "pausa": 0.8
+  },
+  {
+   "texto": "Si oyes tu nombre, no contestes.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Walking_A",
+      "rosto": "bravo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "medio",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Holding_A",
+      "rosto": "medo",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "toco",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Idle_A",
+      "rosto": "desconfiado",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "aberto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "beto",
+      "acao": "Lie_Idle",
+      "rosto": "neutro",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "entre_arvores",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "entre_arvores"
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "nuca",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Walking_A",
+      "rosto": "medo",
+      "segura": "radio",
+      "de": "clareira",
+      "para": "pe_torre"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "fundo",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "fundo"
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "aereo",
+    "luz": "neblina_baixa"
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Running_A",
+      "rosto": "susto",
+      "de": "trilha",
+      "para": "pe_torre"
+     }
+    ],
+    "criatura": {
+     "tipo": "alta",
+     "marca": "trilha"
+    }
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "beto",
+      "acao": "Walking_A",
+      "rosto": "neutro",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Running_A",
+      "rosto": "bravo",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Interact",
+      "rosto": "medo"
+     },
+     {
+      "id": "beto",
+      "acao": "Interact",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "aereo",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "pe_torre"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "ombro",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Crouching",
+      "rosto": "medo"
+     },
+     {
+      "id": "beto",
+      "acao": "Crouching",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "alta",
+     "marca": "pe_torre"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "baixo",
+    "luz": "nascer_sol"
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "close",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "PickUp",
+      "rosto": "triste",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "close",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "rosa",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "fundo",
+    "plano": "aereo",
+    "luz": "neblina_baixa",
+    "criatura": {
+     "tipo": "alta",
+     "marca": "fundo"
+    }
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 8,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ]
+}

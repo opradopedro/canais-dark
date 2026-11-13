@@ -124,7 +124,7 @@ Qualquer IA (Kiro ou Claude) pode continuar uma série daqui.
 ## voz-del-monte (HM049-HM050) La voz que imita — origem: gringa: EUA, trend "mimic" (vozes que imitam gente na floresta) no TikTok https://dailydot.com/secret-of-the-mimic-tiktok (história nossa, Sierra de Durango)
 - 3D: floresta (clareira, trilha, entre_arvores, pe_torre, fundo, toco), luz noite_neblina/neblina_baixa; criatura alta; Rosa, 27, guarda-florestal (semente 4911, rabo, jaqueta); o irmão Beto (semente 4912).
 - HM049 parte 1/2: regra dos velhos da serra (se ouvir seu nome no monte, não responda; se alguém conhecido chamar das árvores, não vá); Beto vai buscar lenha; 20 min depois a voz de Beto chama de um lado, "me torcí el pie"; e outra voz de Beto chama do outro lado. FEITO
-- HM050 parte 2/2: ela chama no rádio; o Beto de verdade responde da torre de vigia; ela anda até a torre sem responder às vozes; a coisa imita a voz dela para chamar o Beto; trancados na torre, algo alto na janela fala com a voz da mãe deles; amanhece; no rádio, a voz de Rosa: "ya estoy adentro". FALTA
+- HM050 parte 2/2: ela chama no rádio; o Beto de verdade responde da torre de vigia; ela anda até a torre sem responder às vozes; a coisa imita a voz dela para chamar o Beto; trancados na torre, algo alto na janela fala com a voz da mãe deles; amanhece; no rádio, a voz de Rosa: "ya estoy adentro". FEITO
 
 ## nahual (HM051-HM052) El nahual del panteón — origem: autoral
 - 3D: cemiterio (entrada, entre_cruzes, cruz_grande, mausoleu, fundo, arvore_morta), luz lua_cheia/noite/madrugada; criatura lobisomem (nahual); Martín, 45, velador do panteão municipal (semente 5111, jaqueta, bone).
