@@ -97,7 +97,7 @@ Tom: tensão de sobrevivência, sem gore; susto na penúltima frase de cada part
 ## night-groundskeeper (SV038-SV040) Rules for the Night Groundskeeper — origem: autoral
 - 3D: cemiterio (entrada, entre_cruzes, cruz_grande, mausoleu, fundo, arvore_morta), luz noite_neblina/lua_minguante/chuva; criatura rastejante; Eli, 41, zelador noturno (semente 3811, guarda, barba).
 - Regras do antigo zelador: lock the gates at 10 / if you hear digging, it isn't yours / never step on fresh dirt after midnight / if a grave is open at dawn, fill it before anyone sees.
-- SV038 parte 1/3: 1ª semana; 1:10 som de pá; vai com a lanterna; terra fresca numa cova de 1961; o som de cavar vem de BAIXO. FALTA
+- SV038 parte 1/3: 1ª semana; 1:10 som de pá; vai com a lanterna; terra fresca numa cova de 1961; o som de cavar vem de BAIXO. FEITO
 - SV039 parte 2/3: ele pisa sem querer na terra fresca; a terra afunda como respiração; algo rasteja sob o gramado seguindo os passos dele; ele sobe no mausoléu; 4:00 uma mão de terra sai da cova e acena. FALTA
 - SV040 parte 3/3: amanhece; a cova está aberta e vazia; ele enche antes de alguém ver; a lápide nova tem o nome do zelador antigo; o diário do antigo: "filled it again. Eli will be next"; ele continua no emprego, porque alguém tem que encher; à noite, cavando, só que agora é ele que ouve perto da própria casa. FALTA
 
