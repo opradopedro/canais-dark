@@ -9,7 +9,7 @@ continua de onde parou, só lendo os arquivos.
 2. Leia o `SKILL.md` do canal, o `references/temas.md` e o `references/series.md` (o plano das séries).
 3. Se houver série com parte marcada `FALTA` em `series.md`, **termine essa série primeiro**, seguindo o resumo que está lá.
 4. Depois disso, **as ideias do Pedro vêm antes de qualquer tema próprio** (ver a seção abaixo).
-5. **Escolher tema olhando YouTube E TikTok** (REGRA do Pedro, 13/11): antes de escolher temas novos, veja quais vídeos foram melhor nos dois. YouTube: views do painel (dados.json). TikTok: `vidiq_tiktok_profile_videos` das contas @horamuerta7, @old.tales1 e a do So You Built It (o que postamos está em `tiktok/postados.json`). Tema, gancho ou formato que foi bem em qualquer um dos dois ganha mais séries parecidas.
+5. **Escolher tema olhando YouTube E TikTok** (REGRA do Pedro, 13/11): antes de escolher temas novos, veja quais vídeos foram melhor nos dois. YouTube: views do painel (dados.json). TikTok: `vidiq_tiktok_profile_videos` das contas @horamuerta.relatos, @oldtales.retold e @so.you.built.it (o que postamos está em `tiktok/postados.json`). Tema, gancho ou formato que foi bem em qualquer um dos dois ganha mais séries parecidas.
 
 ## Ideia do Pedro = próximo vídeo (REGRA do Pedro, 31/10: vale para todos os canais)
 "Quando eu mandar uma ideia, esse vídeo é o próximo a sair. Se for história em sequência (estou na parte 2 de 4),
@@ -162,14 +162,32 @@ Vale por cima de qualquer número antigo (prompt, SKILL.md, temas.md) que fale e
 | Canal | Duração | Palavras faladas | Frases |
 |---|---|---|---|
 | So You Built It | ~1 min (55–75 s); pode ir até ~90 s se o tema pedir | 170–210 (fiscal aceita 165–280) | 14–18 |
-| Hora Muerta, Signal Lost, Old Tales | 1min30 a 2 min, CADA parte | 150–185 (fiscal aceita 135–195) | 16–22 |
+| Hora Muerta, Signal Lost (a partir de HM055 e SV047) | **1min50 a 2 min**, CADA parte | 185–205 (fiscal aceita 170–215) | 20–26 |
+| Old Tales (a partir de CL059) | **1min50 a 2 min**, CADA parte | 250–275 (fiscal aceita 235–285) | 22–30 |
 
-- Medido nos vídeos prontos: a voz do SYBI fala ~3,1 palavras/s; a das histórias ~1,55 palavras/s (lenta, com pausas).
+- Medido nos vídeos prontos (14/11): SYBI ~3,1 palavras/s; Hora Muerta ~1,7 palavras/s (HM041: 180 palavras = 1min46); Old Tales ~2,3 palavras/s (Wukong 1: 179 palavras = 1min18, curto demais).
+
+### Por que 2 min (REGRA do Pedro, 14/11) e o vídeo longo
+Cada série vira um vídeo longo no YouTube, e o longo precisa de **8 min ou mais** (anúncio no meio). 5 partes de 1min18
+davam 6min30: não serve. Com ~1min55 por parte:
+- **Old Tales:** série de 5 partes (no máximo 5) = ~9min30 + extras só do longo = **10 a 11 min**.
+- **Hora Muerta e Signal Lost:** séries de 2 a 3 partes; o longo junta 2 ou 3 séries do mesmo tema (10 a 14 min).
+- **Extras só do longo** (o motor monta, o roteirista escreve no campo `"longo"` da última parte): abertura de 15–20 s
+  com a promessa da história inteira, um cartão explicativo extra por parte e um epílogo de 45–90 s ("o que
+  aconteceu depois" / "o que é verdade nessa lenda"). Isso dá ao público do Short um motivo para ver o longo.
+- No TikTok, 2 min também é bom: só vídeo com mais de 1 min entra no Creator Rewards.
+
+### Retenção dentro de cada parte (vale para os 4 canais)
+- 0–2 s: a frase de abertura já é o conflito ou a imagem mais forte. Nada de "Na parte anterior...": no máximo 1 linha de recapitulação, e depois do gancho.
+- A cada 20–30 s, um novo "gancho aberto" (pergunta sem resposta, "mas não era o pior", número que choca). Em 2 min são 4 a 5.
+- Corte a cada 2–4 s (já é regra); cartão com texto fica pelo menos 2,5 s na tela (pedido do Pedro, 13/11).
+- Aos 60–70% da parte, a virada; nos últimos 10 s, o gancho da próxima parte e uma pergunta simples para comentar.
+- A última frase emenda com a primeira quando der (loop).
 - O fiscal conta as palavras a partir de YB048, HM037, SV024 e CL031 (os roteiros anteriores já estavam escritos).
 - O tempo a mais é para a história **respirar**, não para encher: mais detalhe concreto, mais um obstáculo, mais
   uma regra quebrada, o personagem tentando algo antes da virada. Continue com frases curtas e um plano por linha.
 - Séries continuam com **no mínimo 2 partes** e gancho de "quero mais" no fim de cada parte não final. Com partes
-  maiores, prefira séries de 2 a 3 partes (4 só em história muito longa).
+  maiores, prefira séries de 2 a 3 partes (4 só em história muito longa). Old Tales: até 5 partes (série que vira longo).
 - O último susto continua na **penúltima** frase (trava de chiado no fim) e a legenda continua presa na voz.
 - Shorts aceita até 3 min: nunca passe de ~2min10 numa parte.
 

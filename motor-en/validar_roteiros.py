@@ -118,6 +118,16 @@ DURACAO_DESDE = {
     "signal-lost": (24, 135, 195),
     "old-tales": (31, 135, 195),
 }
+# REGRA do Pedro (14/11): cada parte com ~1min50-2min, para 5 partes darem um video longo de 10+ min.
+# Medido: voz do HM ~1,7 palavras/s (HM041: 180 palavras = 106 s); voz do CL ~2,3 palavras/s (Wukong 1: 179 = 78 s).
+# Vale a partir destes codigos (o estoque escrito antes fica como esta).
+DURACAO_DESDE_V2 = {
+    "hora-muerta": (55, 170, 215),   # ideal 185-205
+    "signal-lost": (47, 170, 215),   # ideal 185-205
+    "old-tales": (59, 235, 285),     # ideal 250-275
+}
+for _c, _v in DURACAO_DESDE_V2.items():
+    DURACAO_DESDE[_c] = _v
 TOM_CL_DESDE = 42  # CL042 em diante: regra de tom de 12/11 (CL041 ja saiu)
 MARCADOR_PALAVRAS = 3  # {when_next}/{dia_siguiente} viram ~3 palavras faladas ("tomorrow, Thursday")
 

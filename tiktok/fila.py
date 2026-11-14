@@ -62,12 +62,8 @@ def fila(agora=None):
                 prontos.append(i)
         prontos.sort(key=lambda i: i["codigo"])
         passo = INTERVALO_SOLTO_H if c["id"] == "yb" else INTERVALO_SERIE_H
-        # nao encostar no ultimo post desta conta
-        ultimos = [dt.datetime.fromisoformat(v["quando"]) for k, v in feitos.items()
-                   if v.get("canal") == c["id"] and v.get("quando")]
+        # o primeiro sai agora; os outros atrasados da mesma conta, de passo em passo
         prox = agora + dt.timedelta(minutes=5)
-        if ultimos:
-            prox = max(prox, max(ultimos) + dt.timedelta(hours=passo))
         for i in prontos:
             saida.append({"codigo": i["codigo"], "canal": c["id"], "conta": cfg["conta"], "nome": cfg["nome"],
                           "youtube": i["youtube"], "legenda": legenda(i["titulo"], cfg["tags"]),
