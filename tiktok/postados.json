@@ -117,6 +117,16 @@
    "postId": "5c80e2e2-4bc2-46cc-ba86-8c4f0854e5e5",
    "quando": "2026-11-14T07:00:00+00:00",
    "canal": "cl"
+  },
+  "HM041": {
+   "postId": "d87db1af-3569-4ea1-ba24-ad322187e9c6",
+   "quando": "2026-11-14T00:46:06+00:00",
+   "canal": "hm"
+  },
+  "YB050": {
+   "postId": "d064f96f-7217-47cd-90ad-48ea1e0fee1d",
+   "quando": "2026-11-14T00:46:06+00:00",
+   "canal": "yb"
   }
  }
 }
