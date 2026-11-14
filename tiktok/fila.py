@@ -90,7 +90,8 @@ def fila():
                 break
             if not ainda_publico(v["id"]):
                 continue
-            saida.append({"youtubeId": v["id"], "canal": cid, "conta": cfg["conta"], "nome": cfg["nome"],
+            saida.append({"youtubeId": v["id"], "codigo": v["id"], "agora": True,  # compatibilidade: sempre na hora
+                          "quando": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat(), "canal": cid, "conta": cfg["conta"], "nome": cfg["nome"],
                           "youtube": "https://www.youtube.com/shorts/" + v["id"], "titulo": v["titulo"],
                           "legenda": legenda(v["titulo"], cfg["tags"]),
                           "no_youtube_desde": v["publicado"].isoformat()})
@@ -120,7 +121,9 @@ def ignorar(vid, canal, motivo=""):
 
 if __name__ == "__main__":
     a = sys.argv[1:]
-    if len(a) >= 4 and a[0] == "--marcar":
+    if len(a) == 5 and a[0] == "--marcar" and re.match(r"\d{4}-\d\d-\d\dT", a[3]):
+        marcar(a[1], a[2], a[4])  # forma antiga: --marcar <codigo=youtubeId> <postId> <quando> <canal>
+    elif len(a) >= 4 and a[0] == "--marcar":
         marcar(a[1], a[2], a[3], a[4] if len(a) > 4 else None)
     elif len(a) >= 3 and a[0] == "--ignorar":
         ignorar(a[1], a[2], " ".join(a[3:]))
