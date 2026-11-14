@@ -41,23 +41,29 @@ def main(rot_src, pasta):
     rodar([sys.executable, os.path.join(AQUI, "fundos.py"), "--baixar", rot["mundo"], fundos])
     est = os.path.join(pasta, "estado.json")
     montar_estado.montar(rot_out, tp, fundos, est)
-    # desenho em 2 processos paralelos
+    # vertical NATIVO 9:16 (camera segue os atores; Pedro/retencao 14/11: nada de 16:9 no meio com faixas borradas)
+    est_v = os.path.join(pasta, "estado_v.json")
+    ev = json.load(open(est)); ev["formato"] = "vertical"; json.dump(ev, open(est_v, "w"))
+    # desenho em 2 processos paralelos por formato (4 ao todo)
     n = 2
-    procs = [subprocess.Popen(["node", os.path.join(AQUI, "render.cjs"), est, os.path.join(pasta, f"f{i}.mp4"), "--shard", f"{i}/{n}"]) for i in range(n)]
+    procs = [subprocess.Popen(["node", os.path.join(AQUI, "render.cjs"), e, os.path.join(pasta, f"{nome}{i}.mp4"), "--shard", f"{i}/{n}"])
+             for nome, e in (("f", est), ("g", est_v)) for i in range(n)]
     if any(p.wait() for p in procs):
         sys.exit("render falhou")
-    lista = os.path.join(pasta, "lista.txt")
-    open(lista, "w").write("".join(f"file '{os.path.join(pasta, f'f{i}.mp4')}'\n" for i in range(n)))
-    mudo = os.path.join(pasta, "mudo.mp4")
-    rodar(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", lista, "-c", "copy", mudo])
+    mudos = {}
+    for nome in ("f", "g"):
+        lista = os.path.join(pasta, f"lista_{nome}.txt")
+        open(lista, "w").write("".join(f"file '{os.path.join(pasta, f'{nome}{i}.mp4')}'\n" for i in range(n)))
+        mudos[nome] = os.path.join(pasta, f"mudo_{nome}.mp4")
+        rodar(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", lista, "-c", "copy", mudos[nome]])
+    mudo = mudos["f"]
     dur = float(json.load(open(tp))["dur"])
     h = os.path.join(pasta, f"{cod}-horizontal.mp4")
     rodar(["ffmpeg", "-v", "error", "-y", "-i", mudo, "-i", tr, "-c:v", "libx264", "-crf", "22", "-preset", "medium", "-pix_fmt", "yuv420p",
            "-af", f"afade=t=out:st={max(0.0, dur - 0.8):.2f}:d=0.8", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", h])
     v = os.path.join(pasta, f"{cod}-vertical.mp4")
-    rodar(["ffmpeg", "-v", "error", "-y", "-i", h, "-filter_complex",
-           "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=30:2,eq=brightness=-0.1[bg];[0:v]scale=1080:-2[fg];[bg][fg]overlay=0:(H-h)/2",
-           "-c:v", "libx264", "-crf", "23", "-pix_fmt", "yuv420p", "-c:a", "copy", "-movflags", "+faststart", v])
+    rodar(["ffmpeg", "-v", "error", "-y", "-i", mudos["g"], "-i", h, "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-crf", "22",
+           "-preset", "medium", "-pix_fmt", "yuv420p", "-c:a", "copy", "-shortest", "-movflags", "+faststart", v])
     rel = sincronia.conferir(h, tp, idioma)
     fim = checar_fim.conferir(h)
     print("LEGENDA", "OK" if rel["ok"] else "FORA", json.dumps(rel, ensure_ascii=False), flush=True)

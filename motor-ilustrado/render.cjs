@@ -10,7 +10,7 @@ const sh = process.argv.includes('--shard') ? process.argv[process.argv.indexOf(
 const est = JSON.parse(fs.readFileSync(estPath, 'utf8')); const fps = est.fps || 30;
 const N = Math.ceil(est.dur * fps), por = Math.ceil(N / sh[1]), a = sh[0] * por, b = Math.min(N, a + por);
 const nav = await chromium.launch({ args: ['--allow-file-access-from-files'] });
-const pg = await nav.newPage({ viewport: { width: 1920, height: 1080 } });
+const pg = await nav.newPage({ viewport: est.formato === 'vertical' ? { width: 1080, height: 1920 } : { width: 1920, height: 1080 } });
 pg.on('console', m => { if (/FALTANDO|Error/.test(m.text())) console.log('[pagina]', m.text()); });
 await pg.goto('file://' + path.join(aqui, 'engine.html'));
 await pg.evaluate(e => window.carregar(e), est);

@@ -7,11 +7,13 @@
    codigo. Tudo e funcao do tempo: render(t) desenha o quadro t (s) sem estado, entao as fatias do Actions batem.
    Dados: window.carregar(estado) com {dur, fundos:{id:url}, elenco:{}, cenas:[], segs:[], paleta}.
    REGRA do Pedro: tudo que e do rosto/cabeca e desenhado no sistema da cabeca (nunca coordenada fixa). */
-const C = document.getElementById('c'), X = C.getContext('2d'), W = 1920, H = 1080;
+const C = document.getElementById('c'), X = C.getContext('2d'); let W = 1920, H = 1080, VERT = false;
 let E = null; const IMG = {}; let faltam = 0;
 window.pronto = () => E && faltam === 0;
 window.carregar = (estado) => {
   E = estado;
+  // formato vertical (Shorts/TikTok): quadro 9:16 nativo, camera segue os atores (Pedro 14/11: nada de faixas borradas)
+  if (estado.formato === 'vertical') { VERT = true; W = 1080; H = 1920; C.width = W; C.height = H; }
   for (const [id, url] of Object.entries(estado.fundos || {})) {
     faltam++; const im = new Image();
     im.onload = () => faltam--; im.onerror = () => { faltam--; console.log('FUNDO FALTANDO ' + id); };
@@ -34,7 +36,17 @@ const par = (v, k) => Array.isArray(v) ? lerp(v[0], v[v.length - 1], k) : v;
 // (u,v em 0..1), entao o zoom da camera aproxima fundo e boneco juntos.
 function camera(cena, k) {
   const c = cena.cam || {};
-  const z = par(c.z ?? [1.08, 1.2], ease(k)), x = par(c.x ?? 0.5, ease(k)), y = par(c.y ?? 0.55, ease(k));
+  let z = par(c.z ?? [1.08, 1.2], ease(k)), x = par(c.x ?? 0.5, ease(k)), y = par(c.y ?? 0.55, ease(k));
+  if (VERT) {
+    z = Math.max(1, 1 + (z - 1) * 0.6);
+    const at = cena.atores || [];
+    if (c.xv !== undefined) x = par(c.xv, ease(k));
+    else if (at.length) { // centro dos atores (o principal e o 1o); dois longe demais: fica no 1o
+      const us = at.map(a => par(a.u ?? 0.5, a.mov === 'rapido' ? easeOut(k * 1.4) : k));
+      const lo = Math.min(...us), hi = Math.max(...us);
+      x = (hi - lo) < 0.16 ? (lo + hi) / 2 : us[0];
+    }
+  }
   return { z, x, y };
 }
 function vistaFundo(img, cam) {
@@ -282,13 +294,13 @@ function cartao(c, k, pal) {
   X.save(); X.globalAlpha = a;
   const fundo = pal.cartao || '#f3ead6', tinta = pal.tinta || '#2a1d10', dest = pal.destaque || '#b8231c';
   if (c.tipo === 'nome') {
-    const x = 90 - (1 - ent) * 300, y = H - 330;
+    const x = (VERT ? 40 : 90) - (1 - ent) * 300, y = VERT ? 200 : H - 330;
     X.fillStyle = fundo; X.strokeStyle = tinta; X.lineWidth = 5; X.beginPath(); X.roundRect(x, y, 760, 175, 14); X.fill(); X.stroke();
     X.fillStyle = dest; X.fillRect(x, y, 14, 175);
     X.fillStyle = tinta; X.font = '900 64px Georgia, serif'; X.fillText(c.titulo || '', x + 40, y + 80);
     X.font = 'italic 40px Georgia, serif'; X.fillStyle = '#3a2a18'; X.fillText(c.sub || '', x + 40, y + 140);
   } else { // fato: painel lateral com numero grande
-    const w = 680, esq = c.lado === 'esq', x = esq ? 80 - (1 - ent) * 400 : W - w - 80 + (1 - ent) * 400, y = 120;
+    const w = 680, esq = c.lado === 'esq', x = VERT ? (W - w) / 2 + (esq ? -1 : 1) * (1 - ent) * 400 : esq ? 80 - (1 - ent) * 400 : W - w - 80 + (1 - ent) * 400, y = VERT ? 170 : 120;
     X.fillStyle = fundo; X.strokeStyle = tinta; X.lineWidth = 6; X.beginPath(); X.roundRect(x, y, w, 470, 18); X.fill(); X.stroke();
     X.fillStyle = '#5a4630'; X.font = '700 36px Georgia, serif'; X.fillText((c.titulo || '').toUpperCase(), x + 40, y + 74);
     X.fillStyle = dest; let fv = 130; X.font = `900 ${fv}px Georgia, serif`; while (fv > 60 && X.measureText(c.valor || '').width > w - 76) { fv -= 6; X.font = `900 ${fv}px Georgia, serif`; } X.fillText(c.valor || '', x + 36, y + 218); // numero sempre cabe no cartao
@@ -322,9 +334,9 @@ function legenda(t) {
   X.save(); X.font = '900 74px "Arial Black", Arial, sans-serif'; X.textBaseline = 'middle'; X.lineJoin = 'round';
   const txt = at.map(w => w.w.toUpperCase()); const sp = X.measureText(' ').width;
   const larg = txt.reduce((a, w) => a + X.measureText(w).width, 0) + sp * (txt.length - 1);
-  let x = W / 2 - larg / 2; const y = H - 120;
+  const enc = Math.min(1, (W - 70) / larg); let x = W / 2 - larg / 2; const y = VERT ? H * 0.74 : H - 120;
   const pop = 1 + 0.08 * (1 - ease((t - at[0].a0) / 0.12));
-  X.translate(W / 2, y); X.scale(pop, pop); X.translate(-W / 2, -y);
+  X.translate(W / 2, y); X.scale(pop * enc, pop * enc); X.translate(-W / 2, -y);
   at.forEach((w, i) => { const s = txt[i]; X.lineWidth = 14; X.strokeStyle = '#000'; X.strokeText(s, x, y); X.fillStyle = w.hi ? '#ffd23a' : '#fff'; X.fillText(s, x, y); x += X.measureText(s).width + sp; });
   X.restore();
 }
@@ -348,7 +360,7 @@ window.render = function (t) {
   for (const a of atores) {
     const el = (E.elenco || {})[a.id] || {}; const u = par(a.u ?? 0.5, a.mov === 'rapido' ? easeOut(k * 1.4) : k);
     let vv = a.v ?? 0.9; if (a.pose === 'pular') vv -= Math.sin(cl(k, 0, 1) * Math.PI) * (a.altura ?? 0.25);
-    const [x, y] = tela(v, u, vv); boneco(a, el, tl, x, y, (a.esc ?? 1) * v.s * 1.25);
+    const [x, y] = tela(v, u, vv); boneco(a, el, tl, x, y, (a.esc ?? 1) * v.s * 1.25 * (VERT ? 0.72 : 1));
   }
   for (const f of (cena.fx || [])) if (!['brilho', 'neblina', 'escuro', 'dourado'].includes(f.split('@')[0]) && !f.startsWith('tremor') && !f.startsWith('flash')) fx(f, t, k, cena, v);
   X.setTransform(1, 0, 0, 1, 0, 0);
