@@ -1,35 +1,44 @@
-"""Fila do TikTok: diz quais videos do YouTube ainda faltam postar no TikTok, quando e com qual legenda.
+"""Fila do TikTok: diz quais videos do YouTube ainda faltam postar no TikTok, com qual legenda.
 
-Regras do Pedro (13/11/2026):
-- O TikTok acompanha o YouTube, na mesma frequencia: video que entrou no ar no YouTube vai para o TikTok.
-- Series antigas (ja no ar quando o TikTok comecou) nunca vao: estao em postados.json -> "ignorar".
-- Serie que estava rodando: as partes atrasadas saem de 8 em 8 horas ate alcancar o YouTube.
+Regras do Pedro:
+- (13/11/2026) O TikTok acompanha o YouTube: video que entrou no ar no YouTube vai para o TikTok.
+- (14/11/2026) So posta o video que esta PUBLICO no YouTube AGORA, e o MESMO arquivo (mesmo ID do YouTube).
+  Nunca agenda com antecedencia na vidIQ (post agendado la nao pode ser cancelado: foi assim que o
+  Wukong cartoon antigo CL042 saiu no TikTok em 14/11 depois de ter sido trocado pelo ilustrado).
 
-Uso: python tiktok/fila.py            -> imprime JSON com a lista do que postar agora
-     python tiktok/fila.py --marcar CL043 7f3c...   -> grava em postados.json (codigo + postId da vidIQ)
+Fonte da verdade = feed publico do canal no YouTube (feeds/videos.xml): so lista video publico.
+Video privado, desagendado, substituido ou ainda agendado nao aparece la, entao nao vai para o TikTok.
+O controle e pelo ID do video do YouTube (a "versao"): o cartoon e o ilustrado tem IDs diferentes.
+
+Uso: python tiktok/fila.py                       -> JSON com o que postar AGORA (publicar na hora, sem publishAt)
+     python tiktok/fila.py --marcar <youtubeId> <postId> <canal> [codigo]   -> grava em postados.json
+     python tiktok/fila.py --ignorar <youtubeId> <canal> [motivo]           -> nunca postar esse video
 A postagem em si e feita pela rotina do Claude com a vidIQ (TIKTOK.md explica o passo a passo).
 """
 import datetime as dt
 import json
 import os
+import re
 import sys
 import urllib.request
+import xml.etree.ElementTree as ET
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 ESTADO = os.path.join(AQUI, "postados.json")
-DADOS = "https://opradopedro.github.io/canais-dark/dados.json"
+INICIO = dt.datetime(2026, 11, 13, 22, 0, tzinfo=dt.timezone.utc)  # o que ja estava no ar antes do TikTok nao vai
 
-# canal do painel -> conta do TikTok na vidIQ (platformAccountId). Signal Lost entra quando a conta existir.
+# canal -> canal do YouTube + conta do TikTok na vidIQ (platformAccountId). Signal Lost entra quando a conta existir.
 CONTAS = {
-    "hm": {"nome": "Hora Muerta", "conta": "_000FBVWbbJdNMceopUD4slkvmLZlmLG8U3G",
+    "hm": {"nome": "Hora Muerta", "yt": "UCiLd9rv-eC7-22CkPNMAF4A", "conta": "_000FBVWbbJdNMceopUD4slkvmLZlmLG8U3G",
            "tags": "#terror #historiasdeterror #leyendas #miedo #fyp"},
-    "cl": {"nome": "Old Tales", "conta": "_000c1r5lizrOj4PxU5edauda4atRTSfCXOB",
+    "cl": {"nome": "Old Tales", "yt": "UCmpeyiBOctQZsuwQkATFM9w", "conta": "_000c1r5lizrOj4PxU5edauda4atRTSfCXOB",
            "tags": "#history #mythology #storytime #fyp"},
-    "yb": {"nome": "So You Built It", "conta": "_000gO7yEeCRneJHtqZge5qXHTrBrOrGCaR0",
+    "yb": {"nome": "So You Built It", "yt": "UC1ZjZVb5O-Bv_GXfukN3Tqw", "conta": "_000gO7yEeCRneJHtqZge5qXHTrBrOrGCaR0",
            "tags": "#engineering #howitworks #science #fyp"},
 }
-INTERVALO_SERIE_H = 8    # partes atrasadas da mesma conta: 8 em 8 horas
-INTERVALO_SOLTO_H = 2    # SYBI (sem serie): 2 no mesmo dia saem com 2 h de distancia, como no YouTube
+MAX_POR_RODADA = {"yb": 2}  # por conta, por execucao (o resto fica para a proxima). Padrao: 1
+NS = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015",
+      "media": "http://search.yahoo.com/mrss/"}
 
 
 def legenda(titulo, tags):
@@ -39,49 +48,81 @@ def legenda(titulo, tags):
     return (t + " " + " ".join(extra)).strip()[:2200]
 
 
-def fila(agora=None):
-    agora = agora or dt.datetime.now(dt.timezone.utc)
+def publicos(canal_yt):
+    """Videos PUBLICOS do canal agora: [{id, titulo, publicado}] do mais antigo para o mais novo."""
+    url = "https://www.youtube.com/feeds/videos.xml?channel_id=" + canal_yt
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    raiz = ET.fromstring(urllib.request.urlopen(req, timeout=60).read())
+    out = []
+    for e in raiz.findall("a:entry", NS):
+        out.append({"id": e.find("yt:videoId", NS).text, "titulo": e.find("a:title", NS).text or "",
+                    "publicado": dt.datetime.fromisoformat(e.find("a:published", NS).text)})
+    return sorted(out, key=lambda v: v["publicado"])
+
+
+def ainda_publico(vid):
+    """Segunda conferencia, na hora de postar: o oEmbed so responde para video publico."""
+    try:
+        u = "https://www.youtube.com/oembed?format=json&url=https://www.youtube.com/watch?v=" + vid
+        urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=30)
+        return True
+    except Exception:
+        return False
+
+
+def carregar():
     est = json.load(open(ESTADO, encoding="utf-8"))
-    dados = json.load(urllib.request.urlopen(DADOS, timeout=60))
+    est.setdefault("ignorar_youtube", {})
+    return est
+
+
+def fila():
+    est = carregar()
+    feitos = {p.get("youtube") for p in est["postados"].values() if p.get("youtube")}
+    ign = set(est["ignorar_youtube"])
     saida = []
-    for c in dados["canais"]:
-        cfg = CONTAS.get(c["id"])
-        if not cfg:
-            continue
-        ign = set(est["ignorar"].get(c["id"], []))
-        feitos = est["postados"]
-        prontos = []
-        for i in c["itens"]:
-            cod = i["codigo"]
-            if cod in ign or cod in feitos or not i.get("youtube"):
+    for cid, cfg in CONTAS.items():
+        n = 0
+        for v in publicos(cfg["yt"]):
+            if v["publicado"] < INICIO or v["id"] in feitos or v["id"] in ign:
                 continue
-            no_ar = i["estado"] == "publicado" or (
-                i["estado"] == "agendado" and i.get("publica_em")
-                and dt.datetime.fromisoformat(i["publica_em"].replace("Z", "+00:00")) <= agora)
-            if no_ar:
-                prontos.append(i)
-        prontos.sort(key=lambda i: i["codigo"])
-        passo = INTERVALO_SOLTO_H if c["id"] == "yb" else INTERVALO_SERIE_H
-        # o primeiro sai agora; os outros atrasados da mesma conta, de passo em passo
-        prox = agora + dt.timedelta(minutes=5)
-        for i in prontos:
-            saida.append({"codigo": i["codigo"], "canal": c["id"], "conta": cfg["conta"], "nome": cfg["nome"],
-                          "youtube": i["youtube"], "legenda": legenda(i["titulo"], cfg["tags"]),
-                          "agora": prox <= agora + dt.timedelta(minutes=20),
-                          "quando": prox.replace(microsecond=0).isoformat()})
-            prox += dt.timedelta(hours=passo)
+            if n >= MAX_POR_RODADA.get(cid, 1):
+                break
+            if not ainda_publico(v["id"]):
+                continue
+            saida.append({"youtubeId": v["id"], "canal": cid, "conta": cfg["conta"], "nome": cfg["nome"],
+                          "youtube": "https://www.youtube.com/shorts/" + v["id"], "titulo": v["titulo"],
+                          "legenda": legenda(v["titulo"], cfg["tags"]),
+                          "no_youtube_desde": v["publicado"].isoformat()})
+            n += 1
     return saida
 
 
-def marcar(cod, post_id, quando, canal):
-    est = json.load(open(ESTADO, encoding="utf-8"))
-    est["postados"][cod] = {"postId": post_id, "quando": quando, "canal": canal}
+def salvar(est):
     json.dump(est, open(ESTADO, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print("MARCADO", cod)
+
+
+def marcar(vid, post_id, canal, cod=None):
+    est = carregar()
+    chave = cod or vid
+    est["postados"][chave] = {"postId": post_id, "youtube": vid, "canal": canal,
+                              "quando": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()}
+    salvar(est)
+    print("MARCADO", chave, vid)
+
+
+def ignorar(vid, canal, motivo=""):
+    est = carregar()
+    est["ignorar_youtube"][vid] = {"canal": canal, "motivo": motivo}
+    salvar(est)
+    print("IGNORADO", vid)
 
 
 if __name__ == "__main__":
-    if len(sys.argv) >= 6 and sys.argv[1] == "--marcar":
-        marcar(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
+    a = sys.argv[1:]
+    if len(a) >= 4 and a[0] == "--marcar":
+        marcar(a[1], a[2], a[3], a[4] if len(a) > 4 else None)
+    elif len(a) >= 3 and a[0] == "--ignorar":
+        ignorar(a[1], a[2], " ".join(a[3:]))
     else:
         print(json.dumps(fila(), ensure_ascii=False, indent=1))
