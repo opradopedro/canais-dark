@@ -92,6 +92,11 @@
    "lugar": "salao do trono do Imperador de Jade",
    "prompt": "the grand throne hall of the Jade Emperor, enormous red lacquer columns with golden dragons, a high golden throne on steps, jade floor, incense smoke",
    "seed": 1724
+  },
+  "palacio-laozi": {
+   "lugar": "palacio de Laozi (Tushita), onde fica o forno",
+   "prompt": "the Tushita palace of the sage Laozi in heaven, a huge bronze eight trigram alchemy furnace in the center seen from outside, gourds of golden pills on shelves, scrolls, blue smoke, warm lamp light",
+   "seed": 1825
   }
  }
 }

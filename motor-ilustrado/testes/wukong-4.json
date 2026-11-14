@@ -1,0 +1,912 @@
+{
+ "codigo": "CLX04",
+ "_obs": "Wukong ilustrado parte 4 (publica como CL061).",
+ "visual": "ilustrado",
+ "mundo": "wukong",
+ "tema": "mito",
+ "serie": "wukong-ilustrado",
+ "parte": 4,
+ "partes": 5,
+ "paleta": {
+  "cartao": "#efe3c8",
+  "tinta": "#2a1d10",
+  "destaque": "#b8231c"
+ },
+ "elenco": {
+  "wk": {
+   "tipo": "macaco",
+   "pelo": "#9a6430",
+   "rosto_cor": "#f2d6b2",
+   "olhos_ouro": true,
+   "tiara": true
+  },
+  "wk_armado": {
+   "tipo": "macaco",
+   "pelo": "#9a6430",
+   "rosto_cor": "#f2d6b2",
+   "olhos_ouro": true,
+   "tiara": true,
+   "arma": "bastao",
+   "armadura": "#d8a431",
+   "faixa": "#b8231c"
+  },
+  "imperador": {
+   "tipo": "humano",
+   "rosto_cor": "#f0d4a8",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a1a1a",
+   "barba_estilo": "chinesa",
+   "barba": "#1a1a1a",
+   "manto": "#d8a431",
+   "tiara": true
+  },
+  "laozi": {
+   "tipo": "humano",
+   "rosto_cor": "#f0d8b8",
+   "cabelo": "lados",
+   "cabelo_cor": "#eeeeee",
+   "barba_estilo": "cheia",
+   "barba": "#f4f4f4",
+   "manto": "#7a7a86"
+  },
+  "cavalarico": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c8a0",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#6a7a4a"
+  },
+  "rainha_mae": {
+   "tipo": "humano",
+   "rosto_cor": "#f4dcc0",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "tunica",
+   "roupa_cor": "#b8231c",
+   "tiara": true
+  },
+  "general": {
+   "tipo": "humano",
+   "rosto_cor": "#e0c098",
+   "cabelo": "careca",
+   "armadura": "#8a8a96",
+   "faixa": "#1f3a6a",
+   "elmo": true,
+   "arma": "espada"
+  },
+  "soldado": {
+   "tipo": "humano",
+   "rosto_cor": "#e0c098",
+   "cabelo": "careca",
+   "armadura": "#a8a8b0",
+   "faixa": "#b8231c",
+   "elmo": true,
+   "arma": "lanca"
+  },
+  "erlang": {
+   "tipo": "humano",
+   "rosto_cor": "#f0d4b0",
+   "olhos_ouro": true,
+   "cabelo": "careca",
+   "armadura": "#c8ccd8",
+   "faixa": "#2a4a8a",
+   "elmo": true,
+   "arma": "lanca"
+  },
+  "clone1": {
+   "tipo": "macaco",
+   "pelo": "#6e4a2a",
+   "rosto_cor": "#e8c8a0",
+   "arma": "bastao"
+  },
+  "clone2": {
+   "tipo": "macaco",
+   "pelo": "#5a3e24",
+   "rosto_cor": "#dcbc94",
+   "arma": "bastao"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "What happens when you insult a monkey who already erased his own death?",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "salao-jade",
+    "cam": {
+     "z": [
+      1.5,
+      1.7
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "parado",
+      "rosto": "raiva",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.25
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Heaven's answer was not an army. It was a job.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "salao-jade",
+    "cam": {
+     "z": [
+      1.1,
+      1.25
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "imperador",
+      "pose": "sentar",
+      "rosto": "sorriso",
+      "u": 0.62,
+      "v": 0.9,
+      "esc": 1.0
+     },
+     {
+      "id": "wk_armado",
+      "pose": "curvar",
+      "rosto": "calmo",
+      "u": 0.36,
+      "v": 0.93,
+      "esc": 0.95
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The Jade Emperor named Wukong the official Keeper of the Heavenly *Horses*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "salao-jade",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.6,
+     "y": 0.58
+    },
+    "fx": [
+     "brilho"
+    ],
+    "atores": [
+     {
+      "id": "imperador",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "u": 0.6,
+      "v": 0.92,
+      "esc": 1.05
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "The Jade Emperor",
+     "sub": "Ruler of Heaven",
+     "t0": 1.0
+    }
+   }
+  },
+  {
+   "texto": "He worked until every horse in the sky was fat and fast.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "estabulo-celeste",
+    "cam": {
+     "z": [
+      1.1,
+      1.3
+     ],
+     "x": [
+      0.4,
+      0.55
+     ],
+     "y": 0.6
+    },
+    "fx": [
+     "brilho"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "andar",
+      "rosto": "sorriso",
+      "u": [
+       0.3,
+       0.5
+      ],
+      "v": 0.93,
+      "esc": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then a stable hand laughed in his face. His title was the *lowest* rank in Heaven.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "estabulo-celeste",
+    "cam": {
+     "z": [
+      1.4,
+      1.55
+     ],
+     "x": 0.52,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "cavalarico",
+      "pose": "apontar",
+      "rosto": "riso",
+      "u": 0.64,
+      "v": 0.93,
+      "esc": 1.0
+     },
+     {
+      "id": "wk_armado",
+      "pose": "parado",
+      "rosto": "choque",
+      "u": 0.38,
+      "v": 0.93,
+      "esc": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Wukong smashed the stable gate and flew home in a rage.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "estabulo-celeste",
+    "cam": {
+     "z": [
+      1.5,
+      1.7
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@1.0",
+     "poeira",
+     "velocidade"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "u": 0.45,
+      "v": 0.93,
+      "esc": 1.1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "On a giant banner he painted his new name: *Great Sage, Equal to Heaven*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "caverna-cortina",
+    "cam": {
+     "z": [
+      1.2,
+      1.4
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "triunfo",
+      "rosto": "riso",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.05
+     },
+     {
+      "id": "clone1",
+      "pose": "triunfo",
+      "rosto": "sorriso",
+      "u": 0.25,
+      "v": 0.95,
+      "esc": 0.8
+     },
+     {
+      "id": "clone2",
+      "pose": "triunfo",
+      "rosto": "sorriso",
+      "u": 0.75,
+      "v": 0.95,
+      "esc": 0.8
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "His self-given title",
+     "valor": "Qitian Dasheng",
+     "sub": "Great Sage, Equal to Heaven",
+     "t0": 1.2
+    }
+   }
+  },
+  {
+   "texto": "Heaven sent its best generals. He beat every single one before lunch.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo-batalha-ceu",
+    "cam": {
+     "z": [
+      1.3,
+      1.5
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@1.2",
+     "flash@1.2",
+     "faiscas"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "u": 0.4,
+      "v": 0.93,
+      "esc": 1.05
+     },
+     {
+      "id": "general",
+      "pose": "cair",
+      "rosto": "dor",
+      "u": 0.66,
+      "v": 0.95,
+      "esc": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "So the Emperor gave up, let him keep the title, and handed him the Peach Garden.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "jardim-pessegos",
+    "cam": {
+     "z": [
+      1.1,
+      1.25
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "brilho",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "andar",
+      "rosto": "sorriso",
+      "u": [
+       0.35,
+       0.5
+      ],
+      "v": 0.93,
+      "esc": 0.95
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Its oldest trees ripen once every *nine thousand* years. One bite means eternal life.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "jardim-pessegos",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "brilho"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "sentar",
+      "rosto": "riso",
+      "u": 0.5,
+      "v": 0.9,
+      "esc": 1.0
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Peaches of Immortality",
+     "valor": "9,000 years",
+     "sub": "the oldest trees ripen once every nine thousand years",
+     "t0": 0.6
+    }
+   }
+  },
+  {
+   "texto": "Then he heard the Queen Mother was throwing a banquet. Every god was invited. Except *him*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "jardim-pessegos",
+    "cam": {
+     "z": [
+      1.2,
+      1.35
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "rainha_mae",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "u": 0.62,
+      "v": 0.93,
+      "esc": 1.0
+     },
+     {
+      "id": "wk_armado",
+      "pose": "agachar",
+      "rosto": "raiva",
+      "u": 0.3,
+      "v": 0.94,
+      "esc": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He drank the gods' wine first and stumbled into the palace of *Laozi*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio-laozi",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": [
+      0.4,
+      0.5
+     ],
+     "y": 0.6
+    },
+    "fx": [
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "andar",
+      "rosto": "riso",
+      "u": [
+       0.3,
+       0.45
+      ],
+      "v": 0.93,
+      "esc": 0.95
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Laozi",
+     "sub": "Sage of the Way, keeper of the elixir",
+     "t0": 2.2
+    }
+   }
+  },
+  {
+   "texto": "There he swallowed a whole gourd of golden pills made to grant immortality.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio-laozi",
+    "cam": {
+     "z": [
+      1.5,
+      1.7
+     ],
+     "x": 0.5,
+     "y": 0.56
+    },
+    "fx": [
+     "dourado",
+     "brilho"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "triunfo",
+      "rosto": "riso",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.15
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Now he had five reasons he couldn't die. And all of Heaven wanted his head.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio-laozi",
+    "cam": {
+     "z": [
+      1.3,
+      1.5
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "laozi",
+      "pose": "susto",
+      "rosto": "raiva",
+      "u": 0.66,
+      "v": 0.93,
+      "esc": 1.0
+     },
+     {
+      "id": "wk_armado",
+      "pose": "parado",
+      "rosto": "riso",
+      "u": 0.38,
+      "v": 0.93,
+      "esc": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "One hundred thousand heavenly soldiers surrounded his mountain.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "floresta-macacos",
+    "cam": {
+     "z": [
+      1.0,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "neblina",
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "soldado",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "u": 0.2,
+      "v": 0.95,
+      "esc": 0.75
+     },
+     {
+      "id": "soldado",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "u": 0.4,
+      "v": 0.96,
+      "esc": 0.8
+     },
+     {
+      "id": "soldado",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "u": 0.62,
+      "v": 0.96,
+      "esc": 0.8
+     },
+     {
+      "id": "soldado",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "u": 0.82,
+      "v": 0.95,
+      "esc": 0.75
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "The army of Heaven",
+     "valor": "100,000",
+     "sub": "soldiers sent for one monkey",
+     "t0": 0.6
+    }
+   }
+  },
+  {
+   "texto": "He blew on his hairs. Each one became a monkey with a staff.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "floresta-macacos",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "poeira",
+     "flash@1.4"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "lutar",
+      "rosto": "riso",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.05
+     },
+     {
+      "id": "clone1",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "u": 0.27,
+      "v": 0.95,
+      "esc": 0.85
+     },
+     {
+      "id": "clone2",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "u": 0.73,
+      "v": 0.95,
+      "esc": 0.85
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then came Erlang, the god with a *third eye*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo-batalha-ceu",
+    "cam": {
+     "z": [
+      1.35,
+      1.55
+     ],
+     "x": 0.55,
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@1.6",
+     "raio"
+    ],
+    "atores": [
+     {
+      "id": "erlang",
+      "pose": "lutar",
+      "rosto": "determinado",
+      "u": 0.64,
+      "v": 0.93,
+      "esc": 1.05
+     },
+     {
+      "id": "wk_armado",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "u": 0.38,
+      "v": 0.93,
+      "esc": 1.05
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Erlang Shen",
+     "sub": "The god with the third eye",
+     "t0": 0.8
+    }
+   }
+  },
+  {
+   "texto": "Bird against hawk, fish against cormorant, through all seventy-two shapes.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo-batalha-ceu",
+    "cam": {
+     "z": [
+      1.5,
+      1.65
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "velocidade",
+     "faiscas"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "pular",
+      "rosto": "raiva",
+      "u": [
+       0.35,
+       0.55
+      ],
+      "v": 0.9,
+      "esc": 1.0,
+      "altura": 0.15
+     },
+     {
+      "id": "erlang",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "u": 0.68,
+      "v": 0.93,
+      "esc": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Finally a dog bit his leg and a steel ring cracked his *head*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo-batalha-ceu",
+    "cam": {
+     "z": [
+      1.6,
+      1.8
+     ],
+     "x": 0.45,
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@1.3",
+     "flash@1.3",
+     "sangue"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "cair",
+      "rosto": "dor",
+      "u": 0.45,
+      "v": 0.86,
+      "esc": 1.1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Blades bounced off. Fire would not burn him.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo-batalha-ceu",
+    "cam": {
+     "z": [
+      1.4,
+      1.55
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "raio",
+     "faiscas"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "deitado",
+      "rosto": "riso",
+      "u": 0.5,
+      "v": 0.8,
+      "esc": 1.05
+     },
+     {
+      "id": "soldado",
+      "pose": "golpe",
+      "rosto": "medo",
+      "u": 0.72,
+      "v": 0.94,
+      "esc": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "texto": "So Laozi threw him into his eight trigram furnace and *sealed* the door.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio-laozi",
+    "cam": {
+     "z": [
+      1.3,
+      1.5
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "vermelho",
+     "escuro",
+     "tremor@2.0"
+    ],
+    "atores": [
+     {
+      "id": "laozi",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "u": 0.62,
+      "v": 0.93,
+      "esc": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Forty-nine days of fire. Nobody was ready for what walked out. Part five, tomorrow.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "forno-laozi",
+    "cam": {
+     "z": [
+      1.5,
+      1.7
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "vermelho",
+     "escuro"
+    ]
+   }
+  }
+ ]
+}

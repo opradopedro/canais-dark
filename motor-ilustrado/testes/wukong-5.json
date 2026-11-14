@@ -1,0 +1,753 @@
+{
+ "codigo": "CLX05",
+ "_obs": "Wukong ilustrado parte 5, final (publica como CL062).",
+ "visual": "ilustrado",
+ "mundo": "wukong",
+ "tema": "mito",
+ "serie": "wukong-ilustrado",
+ "parte": 5,
+ "partes": 5,
+ "paleta": {
+  "cartao": "#efe3c8",
+  "tinta": "#2a1d10",
+  "destaque": "#b8231c"
+ },
+ "elenco": {
+  "wk_armado": {
+   "tipo": "macaco",
+   "pelo": "#9a6430",
+   "rosto_cor": "#f2d6b2",
+   "olhos_ouro": true,
+   "tiara": true,
+   "arma": "bastao",
+   "armadura": "#d8a431",
+   "faixa": "#b8231c"
+  },
+  "imperador": {
+   "tipo": "humano",
+   "rosto_cor": "#f0d4a8",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a1a1a",
+   "barba_estilo": "chinesa",
+   "barba": "#1a1a1a",
+   "manto": "#d8a431",
+   "tiara": true
+  },
+  "laozi": {
+   "tipo": "humano",
+   "rosto_cor": "#f0d8b8",
+   "cabelo": "lados",
+   "cabelo_cor": "#eeeeee",
+   "barba_estilo": "cheia",
+   "barba": "#f4f4f4",
+   "manto": "#7a7a86"
+  },
+  "buda": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c070",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a2a5a",
+   "manto": "#e07a20",
+   "olhos_ouro": true
+  },
+  "tang": {
+   "tipo": "humano",
+   "rosto_cor": "#f0d4b0",
+   "cabelo": "careca",
+   "manto": "#b8231c",
+   "roupa": "tunica",
+   "roupa_cor": "#d8a431"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "How does a monkey who can't die end up trapped under a mountain for *500 years*?",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "forno-laozi",
+    "cam": {
+     "z": [
+      1.55,
+      1.75
+     ],
+     "x": 0.5,
+     "y": 0.56
+    },
+    "fx": [
+     "vermelho",
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "agachar",
+      "rosto": "raiva",
+      "u": 0.5,
+      "v": 0.94,
+      "esc": 1.25
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The furnace burned for forty-nine days.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio-laozi",
+    "cam": {
+     "z": [
+      1.2,
+      1.35
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "vermelho",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "laozi",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "u": 0.62,
+      "v": 0.93,
+      "esc": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "On the last day the lid cracked, and Wukong burst out *laughing*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio-laozi",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "tremor@0.9",
+     "flash@0.9",
+     "faiscas"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "pular",
+      "rosto": "riso",
+      "u": [
+       0.45,
+       0.55
+      ],
+      "v": 0.92,
+      "esc": 1.0,
+      "altura": 0.12
+     },
+     {
+      "id": "laozi",
+      "pose": "cair",
+      "rosto": "choque",
+      "u": 0.75,
+      "v": 0.93,
+      "esc": 0.95
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The smoke had burned his eyes gold forever. Now he could see through any *lie*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio-laozi",
+    "cam": {
+     "z": [
+      1.7,
+      1.9
+     ],
+     "x": 0.5,
+     "y": 0.52
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "parado",
+      "rosto": "determinado",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.35
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Fiery Golden Eyes",
+     "valor": "49 days",
+     "sub": "inside the furnace turned his eyes to gold",
+     "t0": 0.8
+    }
+   }
+  },
+  {
+   "texto": "He kicked the furnace over and fought his way to the Hall of Jade.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "salao-jade",
+    "cam": {
+     "z": [
+      1.3,
+      1.5
+     ],
+     "x": [
+      0.4,
+      0.55
+     ],
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@1.0",
+     "poeira",
+     "velocidade"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "correr",
+      "rosto": "raiva",
+      "u": [
+       0.25,
+       0.55
+      ],
+      "v": 0.93,
+      "esc": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The Emperor hid behind his throne and called for the *Buddha*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "salao-jade",
+    "cam": {
+     "z": [
+      1.2,
+      1.35
+     ],
+     "x": 0.55,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "imperador",
+      "pose": "agachar",
+      "rosto": "medo",
+      "u": 0.66,
+      "v": 0.94,
+      "esc": 0.95
+     },
+     {
+      "id": "wk_armado",
+      "pose": "triunfo",
+      "rosto": "riso",
+      "u": 0.36,
+      "v": 0.93,
+      "esc": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The Buddha arrived smiling and offered the monkey a simple bet.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "salao-jade",
+    "cam": {
+     "z": [
+      1.1,
+      1.25
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "brilho",
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "buda",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.6,
+      "v": 0.93,
+      "esc": 1.1
+     },
+     {
+      "id": "wk_armado",
+      "pose": "parado",
+      "rosto": "choque",
+      "u": 0.36,
+      "v": 0.93,
+      "esc": 0.95
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "The Buddha",
+     "sub": "Tathagata of the Western Heaven",
+     "t0": 1.5
+    }
+   }
+  },
+  {
+   "texto": "Jump out of my palm, and Heaven is *yours*. Fail, and you stay on Earth.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "salao-jade",
+    "cam": {
+     "z": [
+      1.4,
+      1.55
+     ],
+     "x": 0.6,
+     "y": 0.56
+    },
+    "fx": [
+     "brilho"
+    ],
+    "atores": [
+     {
+      "id": "buda",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "u": 0.6,
+      "v": 0.93,
+      "esc": 1.15
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Wukong laughed. One cloud jump carried him a hundred and eight thousand li.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mao-buda",
+    "cam": {
+     "z": [
+      1.05,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "velocidade"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "pular",
+      "rosto": "riso",
+      "u": [
+       0.3,
+       0.62
+      ],
+      "v": 0.92,
+      "esc": 0.9,
+      "altura": 0.15
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "One somersault cloud",
+     "valor": "108,000 li",
+     "sub": "about 54,000 km in a single jump",
+     "t0": 1.6
+    }
+   }
+  },
+  {
+   "texto": "At the end of the world he found five pink pillars holding up the sky.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mao-buda",
+    "cam": {
+     "z": [
+      1.0,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.5
+    },
+    "fx": [
+     "neblina",
+     "brilho"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "parado",
+      "rosto": "choque",
+      "u": 0.5,
+      "v": 0.94,
+      "esc": 0.75
+     }
+    ]
+   }
+  },
+  {
+   "texto": "On the middle one he wrote: *The Great Sage was here*. Then he peed on it.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mao-buda",
+    "cam": {
+     "z": [
+      1.5,
+      1.7
+     ],
+     "x": 0.5,
+     "y": 0.56
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "agachar",
+      "rosto": "riso",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.15
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He flew back in a blink and demanded his prize.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "salao-jade",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.55,
+     "y": 0.58
+    },
+    "fx": [
+     "velocidade"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "triunfo",
+      "rosto": "riso",
+      "u": 0.38,
+      "v": 0.93,
+      "esc": 1.0
+     },
+     {
+      "id": "buda",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.64,
+      "v": 0.93,
+      "esc": 1.1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The Buddha raised his hand. The words were on his middle finger. And it still *smelled*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "salao-jade",
+    "cam": {
+     "z": [
+      1.45,
+      1.65
+     ],
+     "x": 0.6,
+     "y": 0.55
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "buda",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "u": 0.6,
+      "v": 0.93,
+      "esc": 1.2
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Those pillars were his fingers. Wukong had never left his *palm*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "salao-jade",
+    "cam": {
+     "z": [
+      1.6,
+      1.8
+     ],
+     "x": 0.45,
+     "y": 0.56
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "susto",
+      "rosto": "choque",
+      "u": 0.45,
+      "v": 0.93,
+      "esc": 1.25
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Before he could run, the hand became Five Finger Mountain and fell on him.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "montanha-prisao",
+    "cam": {
+     "z": [
+      1.1,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "tremor@1.5",
+     "poeira",
+     "flash@1.5"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "cair",
+      "rosto": "medo",
+      "u": 0.5,
+      "v": 0.96,
+      "esc": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "texto": "For *five hundred* years he ate iron pellets and drank melted copper.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "montanha-prisao",
+    "cam": {
+     "z": [
+      1.5,
+      1.7
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "deitado",
+      "rosto": "triste",
+      "u": 0.5,
+      "v": 0.8,
+      "esc": 1.15
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Five Finger Mountain",
+     "valor": "500 years",
+     "sub": "buried with only his head out",
+     "t0": 0.8
+    }
+   }
+  },
+  {
+   "texto": "Rain, snow, centuries. Only his golden eyes still moved.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "montanha-prisao",
+    "cam": {
+     "z": [
+      1.8,
+      2.0
+     ],
+     "x": 0.5,
+     "y": 0.62
+    },
+    "fx": [
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "deitado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.8,
+      "esc": 1.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Until a young monk climbed the mountain and tore off the Buddha's seal.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "montanha-prisao",
+    "cam": {
+     "z": [
+      1.2,
+      1.4
+     ],
+     "x": 0.55,
+     "y": 0.6
+    },
+    "fx": [
+     "brilho"
+    ],
+    "atores": [
+     {
+      "id": "tang",
+      "pose": "escalar",
+      "rosto": "determinado",
+      "u": [
+       0.6,
+       0.66
+      ],
+      "v": 0.93,
+      "esc": 1.0
+     },
+     {
+      "id": "wk_armado",
+      "pose": "deitado",
+      "rosto": "choque",
+      "u": 0.35,
+      "v": 0.8,
+      "esc": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Tang Sanzang needed a bodyguard for the long road west.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "montanha-prisao",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.6,
+     "y": 0.58
+    },
+    "fx": [
+     "brilho"
+    ],
+    "atores": [
+     {
+      "id": "tang",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.62,
+      "v": 0.93,
+      "esc": 1.05
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Tang Sanzang",
+     "sub": "The monk of the Journey to the West",
+     "t0": 1.2
+    }
+   }
+  },
+  {
+   "texto": "The mountain split in two. The Monkey King was *free*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "montanha-prisao",
+    "cam": {
+     "z": [
+      1.3,
+      1.55
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@0.8",
+     "flash@0.8",
+     "poeira",
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "triunfo",
+      "rosto": "riso",
+      "u": 0.45,
+      "v": 0.93,
+      "esc": 1.15
+     },
+     {
+      "id": "tang",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "u": 0.72,
+      "v": 0.93,
+      "esc": 0.95
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And it all began with a stone that cracked open on a mountain. Would you take the bet?",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "pico-pedra",
+    "cam": {
+     "z": [
+      1.2,
+      1.4
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "dourado",
+     "neblina"
+    ]
+   }
+  }
+ ]
+}
