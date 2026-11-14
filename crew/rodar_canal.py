@@ -478,8 +478,11 @@ if __name__ == "__main__":
                 with open(os.path.join(pasta, nome), "wb") as f:
                     f.write(subprocess.run(["git", "show", f"FETCH_HEAD:{tag}/{nome}"], cwd=repo, check=True,
                                            capture_output=True).stdout)
+        # upload.json com "publicar_em" (ISO UTC) agenda nesse horario; sem ele, publica na hora
+        import json as _json
+        quando = _json.load(open(os.path.join(pasta, "upload.json"), encoding="utf-8")).get("publicar_em") or "agora"
         r = subprocess.run([sys.executable, os.path.join(repo, "motor-en", "agendar.py"), os.path.join(repo, canal),
-                            os.path.join(pasta, "upload.json"), "agora"], cwd=repo)
+                            os.path.join(pasta, "upload.json"), quando], cwd=repo)
         sys.exit(r.returncode)
     texto = funcoes.get(qual, run)() or ""
     # no GitHub Actions, falha vira X vermelho e o GitHub manda e-mail ao Pedro. So falha quando o programa do canal

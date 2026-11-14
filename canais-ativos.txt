@@ -3,7 +3,8 @@
 # NUNCA deixe o mesmo canal ligado aqui E numa rotina do Claude que tambem produz: o video sairia em dobro.
 # 13/11: signal-lost, old-tales e hora-muerta religados no motor cartoon (Pedro aprovou as provas)
 signal-lost
-old-tales
+# 14/11: old-tales PAUSADO enquanto o Wukong ilustrado (CL058-CL062) sai 1 por dia pela tarefa subir: (Claude). Religar depois da parte 5.
+#old-tales
 hora-muerta
 so-you-built-it
 # ligados em 29/10/2026: o Pedro pausou as rotinas de producao do Hora Muerta e do So You Built It no Claude
