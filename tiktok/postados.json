@@ -127,6 +127,11 @@
    "postId": "d064f96f-7217-47cd-90ad-48ea1e0fee1d",
    "quando": "2026-11-14T00:46:06+00:00",
    "canal": "yb"
+  },
+  "CL058": {
+   "postId": "13a713bc-328d-45d3-ae17-4cfdaf82b2ba",
+   "quando": "2026-11-14T00:52:00+00:00",
+   "canal": "cl"
   }
  }
 }
