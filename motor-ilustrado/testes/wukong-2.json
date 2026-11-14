@@ -1,0 +1,721 @@
+{
+ "codigo": "CLX02",
+ "_obs": "Wukong ilustrado parte 2 (publica como CL059).",
+ "visual": "ilustrado",
+ "mundo": "wukong",
+ "tema": "mito",
+ "serie": "wukong-ilustrado",
+ "parte": 2,
+ "partes": 5,
+ "paleta": {
+  "cartao": "#efe3c8",
+  "tinta": "#2a1d10",
+  "destaque": "#b8231c"
+ },
+ "elenco": {
+  "wukong": {
+   "tipo": "macaco",
+   "pelo": "#9a6430",
+   "rosto_cor": "#f2d6b2",
+   "olhos_ouro": true
+  },
+  "rei": {
+   "tipo": "macaco",
+   "pelo": "#9a6430",
+   "rosto_cor": "#f2d6b2",
+   "tiara": true,
+   "armadura": "#d8a431",
+   "faixa": "#b8231c",
+   "olhos_ouro": true
+  },
+  "macaco1": {
+   "tipo": "macaco",
+   "pelo": "#6e4a2a",
+   "rosto_cor": "#e8c8a0"
+  },
+  "macaco2": {
+   "tipo": "macaco",
+   "pelo": "#5a3e24",
+   "rosto_cor": "#dcbc94"
+  },
+  "velho": {
+   "tipo": "macaco",
+   "pelo": "#7a5434",
+   "rosto_cor": "#d8c4a8",
+   "barba_estilo": "cheia",
+   "barba": "#e8e6de"
+  },
+  "imperador": {
+   "tipo": "humano",
+   "rosto_cor": "#f4dcc0",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a1a1a",
+   "barba": "#1a1a1a",
+   "manto": "#d8a431"
+  },
+  "wukong_viagem": {
+   "tipo": "macaco",
+   "pelo": "#9a6430",
+   "rosto_cor": "#f2d6b2",
+   "roupa": "tunica",
+   "roupa_cor": "#6a4a2a"
+  },
+  "subodhi": {
+   "tipo": "humano",
+   "rosto_cor": "#f2dcc4",
+   "cabelo": "lados",
+   "cabelo_cor": "#e8e6de",
+   "barba_estilo": "chinesa",
+   "barba": "#e8e6de",
+   "manto": "#5a6e8a"
+  },
+  "lenhador": {
+   "tipo": "humano",
+   "rosto_cor": "#e6c6a0",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "trapos",
+   "roupa_cor": "#7a6a50"
+  },
+  "aldeao": {
+   "tipo": "humano",
+   "rosto_cor": "#f0d4b4",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "tunica",
+   "roupa_cor": "#5a7a6a"
+  },
+  "demonio": {
+   "tipo": "humano",
+   "rosto_cor": "#8a9a8a",
+   "cabelo": "careca",
+   "armadura": "#2a2a30",
+   "faixa": "#5a1010",
+   "arma": "espada",
+   "elmo": true
+  }
+ },
+ "lineas": [
+  {
+   "texto": "In the middle of a royal feast, the Monkey King suddenly burst into *tears*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "caverna-cortina",
+    "cam": {
+     "z": [
+      1.3,
+      1.5
+     ],
+     "x": 0.6,
+     "y": 0.62
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "rei",
+      "pose": "chorar",
+      "rosto": "choro",
+      "u": 0.6,
+      "v": 0.9,
+      "esc": 1.1
+     },
+     {
+      "id": "macaco1",
+      "pose": "susto",
+      "rosto": "choque",
+      "u": 0.35,
+      "v": 0.95,
+      "esc": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Three hundred years of glory, and one day *Yama*, Lord of Death, would still come for him.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "caverna-cortina",
+    "cam": {
+     "z": [
+      1.6,
+      1.8
+     ],
+     "x": 0.6,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "rei",
+      "pose": "sentar",
+      "rosto": "triste",
+      "u": 0.62,
+      "v": 0.82,
+      "esc": 1.2
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Yama",
+     "sub": "Lord of Death, judge of every soul",
+     "t0": 0.8
+    }
+   }
+  },
+  {
+   "texto": "So he tied pine logs into a raft and sailed alone into black *storm waves*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar-tempestade",
+    "cam": {
+     "z": [
+      1.2,
+      1.45
+     ],
+     "x": [
+      0.4,
+      0.55
+     ],
+     "y": 0.55
+    },
+    "fx": [
+     "chuva",
+     "raio"
+    ],
+    "atores": [
+     {
+      "id": "wukong_viagem",
+      "pose": "agachar",
+      "rosto": "determinado",
+      "u": 0.5,
+      "v": 0.62,
+      "esc": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "For years he wandered human cities, stealing clothes and walking among terrified crowds.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "cidade-humana",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": [
+      0.35,
+      0.6
+     ],
+     "y": 0.65
+    },
+    "fx": [
+     "poeira"
+    ],
+    "atores": [
+     {
+      "id": "wukong_viagem",
+      "pose": "andar",
+      "rosto": "calmo",
+      "u": [
+       0.3,
+       0.55
+      ],
+      "v": 0.92,
+      "esc": 0.9
+     },
+     {
+      "id": "aldeao",
+      "pose": "susto",
+      "rosto": "medo",
+      "u": 0.78,
+      "v": 0.94,
+      "esc": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Nobody he met wanted eternal life. Every single one of them only chased *gold*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "cidade-humana",
+    "cam": {
+     "z": [
+      1.5,
+      1.6
+     ],
+     "x": 0.62,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "aldeao",
+      "pose": "triunfo",
+      "rosto": "riso",
+      "u": 0.62,
+      "v": 0.93,
+      "esc": 1.1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Finally, deep in a pine forest, a woodcutter pointed up the cliffs to Master *Subodhi*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "trilha-lenhador",
+    "cam": {
+     "z": [
+      1.2,
+      1.35
+     ],
+     "x": 0.5,
+     "y": 0.62
+    },
+    "atores": [
+     {
+      "id": "lenhador",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "u": 0.62,
+      "v": 0.93,
+      "esc": 1.0
+     },
+     {
+      "id": "wukong_viagem",
+      "pose": "parado",
+      "rosto": "choque",
+      "u": 0.35,
+      "v": 0.94,
+      "esc": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The old master looked at him for a long time, and gave him a name: *Sun Wukong*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "templo-mestre",
+    "cam": {
+     "z": [
+      1.3,
+      1.5
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "subodhi",
+      "pose": "sentar",
+      "rosto": "calmo",
+      "u": 0.6,
+      "v": 0.86,
+      "esc": 1.1
+     },
+     {
+      "id": "wukong_viagem",
+      "pose": "curvar",
+      "rosto": "determinado",
+      "u": 0.35,
+      "v": 0.94,
+      "esc": 0.9
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Sun Wukong",
+     "sub": "\"Awakened to Emptiness\"",
+     "t0": 1.2
+    }
+   }
+  },
+  {
+   "texto": "For seven years, Wukong swept stone floors, carried water, and waited in silence.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "templo-mestre",
+    "cam": {
+     "z": [
+      1.15,
+      1.25
+     ],
+     "x": [
+      0.4,
+      0.6
+     ],
+     "y": 0.66
+    },
+    "fx": [
+     "poeira"
+    ],
+    "atores": [
+     {
+      "id": "wukong_viagem",
+      "pose": "curvar",
+      "rosto": "triste",
+      "u": [
+       0.3,
+       0.6
+      ],
+      "v": 0.94,
+      "esc": 0.85
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Training before magic",
+     "valor": "7 years",
+     "sub": "of sweeping, chopping wood and carrying water",
+     "t0": 0.6
+    }
+   }
+  },
+  {
+   "texto": "When he refused every lesson that could not defeat *death*, Subodhi lost his temper.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "templo-mestre",
+    "cam": {
+     "z": [
+      1.5,
+      1.7
+     ],
+     "x": 0.55,
+     "y": 0.58
+    },
+    "atores": [
+     {
+      "id": "subodhi",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "u": 0.62,
+      "v": 0.93,
+      "esc": 1.1
+     },
+     {
+      "id": "wukong_viagem",
+      "pose": "parado",
+      "rosto": "determinado",
+      "u": 0.38,
+      "v": 0.94,
+      "esc": 0.95
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He struck Wukong's head *three times* with a ruler, and walked out through the back door.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "templo-mestre",
+    "cam": {
+     "z": [
+      1.7,
+      1.9
+     ],
+     "x": 0.5,
+     "y": 0.5
+    },
+    "fx": [
+     "tremor@0.6",
+     "tremor@1.3",
+     "tremor@2.0"
+    ],
+    "atores": [
+     {
+      "id": "subodhi",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "u": 0.58,
+      "v": 0.93,
+      "esc": 1.2
+     },
+     {
+      "id": "wukong_viagem",
+      "pose": "agachar",
+      "rosto": "dor",
+      "u": 0.4,
+      "v": 0.95,
+      "esc": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The other students laughed. Wukong only *smiled*. He had understood the secret.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "templo-mestre",
+    "cam": {
+     "z": [
+      1.6,
+      1.7
+     ],
+     "x": 0.45,
+     "y": 0.55
+    },
+    "atores": [
+     {
+      "id": "wukong_viagem",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "u": 0.45,
+      "v": 0.93,
+      "esc": 1.15
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Three strikes meant the third watch of the night. Behind the door meant come *in secret*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "templo-mestre",
+    "cam": {
+     "z": [
+      1.1,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Ancient China",
+     "valor": "3rd watch",
+     "sub": "of the night = between 11 pm and 1 am",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "At *midnight* he knelt by the master's bed, and Subodhi taught him everything.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "templo-mestre",
+    "cam": {
+     "z": [
+      1.5,
+      1.6
+     ],
+     "x": 0.55,
+     "y": 0.62
+    },
+    "fx": [
+     "escuro",
+     "brilho"
+    ],
+    "atores": [
+     {
+      "id": "subodhi",
+      "pose": "sentar",
+      "rosto": "calmo",
+      "u": 0.62,
+      "v": 0.86,
+      "esc": 1.1
+     },
+     {
+      "id": "wukong_viagem",
+      "pose": "curvar",
+      "rosto": "determinado",
+      "u": 0.38,
+      "v": 0.94,
+      "esc": 0.95
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Seventy-two transformations, and a cloud somersault that crossed *one hundred and eight thousand li*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "ceu-portao",
+    "cam": {
+     "z": [
+      1.1,
+      1.4
+     ],
+     "x": [
+      0.3,
+      0.6
+     ],
+     "y": 0.5
+    },
+    "fx": [
+     "velocidade",
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "wukong_viagem",
+      "pose": "pular",
+      "rosto": "riso",
+      "u": [
+       0.15,
+       0.75
+      ],
+      "v": 0.7,
+      "esc": 0.8,
+      "altura": 0.3,
+      "mov": "rapido"
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "One somersault",
+     "valor": "108,000 li",
+     "sub": "about 54,000 km, more than once around the Earth",
+     "t0": 0.8
+    }
+   }
+  },
+  {
+   "texto": "But he showed off, turning into a pine tree for a crowd, and Subodhi threw him out *forever*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "templo-mestre",
+    "cam": {
+     "z": [
+      1.4,
+      1.5
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "flash@0.3"
+    ],
+    "atores": [
+     {
+      "id": "subodhi",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "u": 0.65,
+      "v": 0.93,
+      "esc": 1.1
+     },
+     {
+      "id": "wukong_viagem",
+      "pose": "susto",
+      "rosto": "choque",
+      "u": 0.38,
+      "v": 0.94,
+      "esc": 0.95
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Never tell anyone who your master was, the old man warned, or I will *destroy* you.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "templo-mestre",
+    "cam": {
+     "z": [
+      1.8,
+      1.95
+     ],
+     "x": 0.62,
+     "y": 0.5
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "subodhi",
+      "pose": "parado",
+      "rosto": "raiva",
+      "u": 0.62,
+      "v": 0.93,
+      "esc": 1.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Wukong flew home in a single jump, and found his cave silent, full of *blood*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "caverna-cortina",
+    "cam": {
+     "z": [
+      1.2,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.62
+    },
+    "fx": [
+     "escuro",
+     "sangue"
+    ],
+    "atores": [
+     {
+      "id": "wukong_viagem",
+      "pose": "susto",
+      "rosto": "medo",
+      "u": 0.5,
+      "v": 0.92,
+      "esc": 1.0
+     },
+     {
+      "id": "macaco1",
+      "pose": "deitado",
+      "rosto": "dor",
+      "u": 0.3,
+      "v": 0.97,
+      "esc": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A demon in black iron had slaughtered his monkeys. And Wukong had no weapon. Part three, tomorrow.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "caverna-cortina",
+    "cam": {
+     "z": [
+      1.5,
+      1.7
+     ],
+     "x": 0.55,
+     "y": 0.5
+    },
+    "fx": [
+     "escuro",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "u": 0.6,
+      "v": 0.92,
+      "esc": 1.25
+     }
+    ]
+   }
+  }
+ ]
+}

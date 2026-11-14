@@ -62,6 +62,36 @@
    "prompt": "a lonely rocky mountain with five peaks under heavy rain, a small dark gap at its base, withered grass, centuries of weather",
    "seed": 22,
    "lugar": "montanha dos cinco elementos (prisao)"
+  },
+  "mar-tempestade": {
+   "lugar": "mar do leste em tempestade (viagem de jangada)",
+   "prompt": "a violent night storm on a dark open sea, towering black waves, a tiny pine-log raft riding a wave crest, lightning in heavy clouds, rain streaks",
+   "seed": 1219
+  },
+  "cidade-humana": {
+   "lugar": "cidade humana da China antiga",
+   "prompt": "a crowded ancient Chinese market street at dusk, wooden shops with red lanterns, tiled roofs, stalls with cloth and pottery, dusty stone road, distant city wall",
+   "seed": 1320
+  },
+  "trilha-lenhador": {
+   "lugar": "trilha do lenhador na montanha de Subodhi",
+   "prompt": "a narrow mountain path through tall pine forest, a woodcutter's stacked logs and stump, cliffs and mist, distant temple roofs on a far peak",
+   "seed": 1421
+  },
+  "estabulo-celeste": {
+   "lugar": "estabulo dos cavalos celestes",
+   "prompt": "celestial stables floating on clouds, long red wooden stalls, golden troughs, white cloud ground, bridles hanging, soft heavenly light",
+   "seed": 1522
+  },
+  "jardim-pessegos": {
+   "lugar": "jardim dos pessegos imortais",
+   "prompt": "the immortal peach garden of heaven, ancient twisted peach trees heavy with glowing pink peaches, jade paths, small pavilions, golden mist",
+   "seed": 1623
+  },
+  "salao-jade": {
+   "lugar": "salao do trono do Imperador de Jade",
+   "prompt": "the grand throne hall of the Jade Emperor, enormous red lacquer columns with golden dragons, a high golden throne on steps, jade floor, incense smoke",
+   "seed": 1724
   }
  }
 }
