@@ -293,7 +293,7 @@ function cartao(c, k, pal) {
     X.fillStyle = '#5a4630'; X.font = '700 36px Georgia, serif'; X.fillText((c.titulo || '').toUpperCase(), x + 40, y + 74);
     X.fillStyle = dest; let fv = 130; X.font = `900 ${fv}px Georgia, serif`; while (fv > 60 && X.measureText(c.valor || '').width > w - 76) { fv -= 6; X.font = `900 ${fv}px Georgia, serif`; } X.fillText(c.valor || '', x + 36, y + 218); // numero sempre cabe no cartao
     X.fillStyle = tinta; X.font = '700 44px Georgia, serif';
-    let yy = y + 300; for (const l of quebrar(c.sub || '', 26)) { X.fillText(l, x + 40, yy); yy += 54; }
+    let yy = y + 300; let nq = 26; while (nq > 12 && quebrar(c.sub || '', nq).some(l => X.measureText(l).width > w - 76)) nq--; for (const l of quebrar(c.sub || '', nq)) { X.fillText(l, x + 40, yy); yy += 54; }
   }
   X.restore();
 }
