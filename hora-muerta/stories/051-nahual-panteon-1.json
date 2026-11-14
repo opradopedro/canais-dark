@@ -43,19 +43,19 @@
  "visual": "3d",
  "lineas": [
   {
-   "texto": "Imagina cuidar un panteón donde *el perro* que entra de noche no es un perro.",
+   "texto": "En este panteón, el perro negro que entra de noche camina en *dos patas*.",
    "pausa": 0.5
   },
   {
-   "texto": "Martín tiene cuarenta y cinco años y es el nuevo velador.",
+   "texto": "El último velador lo vio, y se fue del pueblo sin despedirse.",
    "pausa": 0.5
   },
   {
-   "texto": "El velador anterior se fue del pueblo sin despedirse.",
+   "texto": "Martín, el nuevo velador, empieza esta semana.",
    "pausa": 0.5
   },
   {
-   "texto": "Solo dejó un papel clavado en la puerta de la capilla.",
+   "texto": "El viejo solo dejó un papel clavado en la puerta de la capilla.",
    "pausa": 0.5
   },
   {
@@ -121,8 +121,12 @@
    "cena": {
     "cenario": "cemiterio",
     "marca": "entrada",
-    "plano": "aereo",
-    "luz": "lua_cheia"
+    "plano": "baixo",
+    "luz": "lua_cheia",
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "entrada"
+    }
    }
   },
   {

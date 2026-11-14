@@ -138,7 +138,7 @@
    "cena": {
     "cenario": "campo_batalha",
     "marca": "pe_torre",
-    "plano": "aereo",
+    "plano": "medio",
     "luz": "nascer_sol",
     "atores": [
      {

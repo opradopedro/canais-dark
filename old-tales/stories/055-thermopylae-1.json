@@ -59,7 +59,7 @@
  "visual": "3d",
  "lineas": [
   {
-   "texto": "You wake up in 480 BC, and the largest army the world has ever seen is coming for you.",
+   "texto": "You wake up in 480 BC, and the biggest army on Earth is coming *for you*.",
    "pausa": 0.5
   },
   {
@@ -137,8 +137,16 @@
    "cena": {
     "cenario": "campo_batalha",
     "marca": "vindo",
-    "plano": "aereo",
-    "luz": "tempestade"
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "leonidas",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
    }
   },
   {

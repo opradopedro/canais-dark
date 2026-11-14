@@ -58,7 +58,7 @@ Estrutura de uma parte (1min30 a 2 min em HM, SV e CL; regra de 05/11, ROTEIROS.
 | Momento | O que faz | Hora Muerta (exemplo) | Old Tales (exemplo) |
 |---|---|---|---|
 | 0–5 s Gancho | uma situação estranha e concreta, sem enrolar | "Doña Marta cuida el panteón desde hace treinta años. Y nunca ha roto sus tres reglas." | "You wake up in 1300, as the miller's new apprentice." |
-| 5–15 s Quem | nome, idade, ofício (fala + cartão `nome`) | "Doña Marta, 67" | "Walter, 52, the village miller" |
+| 5–15 s Quem (só da 3ª fala em diante, REGRA 14/11) | nome, idade, ofício (fala + cartão `nome`) | "Doña Marta, 67" | "Walter, 52, the village miller" |
 | 15–30 s Como funciona | rotina/regras/plano em lista de 3 (cartão `lista`) | as 3 reglas | "carry the grain, check the wheel, keep the stones apart" |
 | 30–45 s Virada | hora exata no relógio + algo quebra o normal (cartão `msg` ou `rotulo`) | "A las 3:10, una nota en la reja. Era su propia letra." | "By noon, a farmer is shouting at the door." |
 | Fim | pergunta aberta + aviso da parte 2 | "¿Quién la escribió? Parte dos, {dia_siguiente}." | "What did Walter take from his sack? Part two, {when_next}." |

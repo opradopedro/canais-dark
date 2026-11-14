@@ -35,11 +35,11 @@
  "visual": "3d",
  "lineas": [
   {
-   "texto": "Imagina un rancho donde cada noche tienes que *contar* los espantapájaros.",
+   "texto": "En este rancho, si sobra un *espantapájaros*, alguien desaparece.",
    "pausa": 0.5
   },
   {
-   "texto": "Deben ser siete. Siempre siete, uno por cada surco de maíz.",
+   "texto": "Deben ser siete. Siempre siete. El año pasado contaron ocho.",
    "pausa": 0.5
   },
   {
@@ -113,7 +113,7 @@
    "cena": {
     "cenario": "vila",
     "marca": "alto",
-    "plano": "aereo",
+    "plano": "baixo",
     "luz": "entardecer",
     "criatura": {
      "tipo": "espantalho",

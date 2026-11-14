@@ -39,11 +39,11 @@
  "visual": "3d",
  "lineas": [
   {
-   "texto": "Imagine a street where every house leaves *a bowl* on the sidewalk at nine.",
+   "texto": "Every house on Alder Street leaves raw meat out at nine. Never *forget yours*.",
    "pausa": 0.5
   },
   {
-   "texto": "Kit is thirty-one. He just moved to Alder Street.",
+   "texto": "Kit just moved in, and he thinks it's a joke.",
    "pausa": 0.5
   },
   {
@@ -117,8 +117,12 @@
    "cena": {
     "cenario": "bairro",
     "marca": "rua",
-    "plano": "aereo",
-    "luz": "noite"
+    "plano": "baixo",
+    "luz": "noite",
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "rua"
+    }
    }
   },
   {

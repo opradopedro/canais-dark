@@ -48,15 +48,15 @@
  "visual": "3d",
  "lineas": [
   {
-   "texto": "Imagine waking up to *footprints* that walk to your back door, and none that walk away.",
+   "texto": "Fresh boot prints walk to Sam's back door, and *none walk away*.",
    "pausa": 0.5
   },
   {
-   "texto": "Sam and Jess just bought an old farmhouse in Montana.",
+   "texto": "Someone is inside the house. And the snow says they never left.",
    "pausa": 0.5
   },
   {
-   "texto": "Cheap, quiet, two miles from the nearest neighbor.",
+   "texto": "Sam and Jess just bought this old farmhouse in Montana.",
    "pausa": 0.5
   },
   {
@@ -126,9 +126,16 @@
    "cena": {
     "cenario": "floresta",
     "marca": "fundo",
-    "plano": "aereo",
+    "plano": "medio",
     "luz": "neve",
-    "efeito": "neve"
+    "efeito": "neve",
+    "atores": [
+     {
+      "id": "sam",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
    }
   },
   {

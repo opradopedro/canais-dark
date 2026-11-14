@@ -117,6 +117,9 @@ publicacoes por dia a parte seguinte pode sair no mesmo dia). Diferencas deste c
 
 - **Serie de 2 a 4 partes** por obra. Cada parte tem 1min30 a 2 min (150-185 palavras); uma tragedia inteira nao cabe: corte em atos.
   Ex.: Macbeth em 3 partes (a profecia / o assassinato / a queda).
+- **Primeiros 3 segundos (REGRA 14/11):** siga ROTEIROS.md "Primeiros 3 segundos" (rodizio A-G, nada de "Part two",
+  nome so da 3a fala em diante, 1a cena com o heroi ou o monstro de perto). Modelo de mito: "How does a monkey who
+  can't die end up trapped under a mountain for 500 years?"
 - **Primeira frase = o gancho da historia, nao o nome da obra.** Errado: "Today, Macbeth."
   Certo: "Three witches told him he would be king. So he killed to make it true."
   O nome da obra entra no titulo e na descricao, nao na narracao.

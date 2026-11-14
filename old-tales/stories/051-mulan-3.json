@@ -59,7 +59,7 @@
  "visual": "3d",
  "lineas": [
   {
-   "texto": "The Emperor sat in the *Bright Hall* and called the heroes forward.",
+   "texto": "After twelve years of war, the Emperor offered Mulan *anything she wanted*.",
    "pausa": 0.5
   },
   {
@@ -137,13 +137,18 @@
    "cena": {
     "cenario": "palacio_ceu",
     "marca": "salao",
-    "plano": "aereo",
+    "plano": "medio",
     "luz": "dia",
     "atores": [
      {
       "id": "imperador",
       "acao": "Idle_A",
       "rosto": "sorriso"
+     },
+     {
+      "id": "mulan",
+      "acao": "Idle_A",
+      "rosto": "neutro"
      }
     ]
    }

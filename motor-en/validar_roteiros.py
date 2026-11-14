@@ -10,6 +10,8 @@ Sai com erro (e o GitHub fica vermelho) se achar:
   - serie quebrada (parte faltando, "anterior" errado)
   - parte que promete a seguinte sem o marcador {when_next}
   - Old Tales sem "tema" calmo/epico/mito ou com paleta de epoca que nao existe
+  - gancho fraco nos primeiros segundos (REGRA do Pedro, 14/11): "Parte dos" na 1a fala, 1a fala longa,
+    biografia nas 2 primeiras falas, 1a imagem vazia ou aerea, mesmo gancho gasto em duas series seguidas
   - roteiro novo curto ou longo demais (REGRA do Pedro, 05/11: SYBI ~1 min, historias 1min30 a 2 min)
 """
 import glob, json, os, re, sys
@@ -129,6 +131,49 @@ DURACAO_DESDE_V2 = {
 for _c, _v in DURACAO_DESDE_V2.items():
     DURACAO_DESDE[_c] = _v
 TOM_CL_DESDE = 42  # CL042 em diante: regra de tom de 12/11 (CL041 ja saiu)
+# REGRA do Pedro (14/11): "fazer a pessoa ficar nos primeiros segundos". ROTEIROS.md "Primeiros 3 segundos".
+# Vale a partir destes codigos (o estoque HM045+, SV035+ e CL046+ foi reescrito em 14/11 para seguir a regra).
+GANCHO_DESDE = {"hora-muerta": 45, "signal-lost": 35, "old-tales": 46}
+GANCHO_MAX_PALAVRAS = 16  # a 1a fala inteira cabe em ~3-6 s; o ideal e 8-13 palavras
+RE_BIO = re.compile(
+    r"\b(tiene|tenia|tenía|cumple)\s+[\w\s]{0,25}?\baños\b|\b\d+\s+(años|years?\s+old)\b"
+    r"|,\s*(twenty|thirty|forty|fifty|sixty|seventy|veinti\w*|treinta|cuarenta|cincuenta|sesenta)[\w\s-]*,"
+    r"|\b(is|was)\s+(\d+|twenty|thirty|forty|fifty|sixty|seventy)[\w-]*(\s+years)?\s*[.,]",
+    re.I)
+RE_ABERTURA_CALMA = re.compile(r"\s*(once upon|today|long ago|in a land|there (was|once)|había una vez|habia una vez|hace mucho|érase|erase|hoy\b)", re.I)
+RE_PARTE = re.compile(r"\s*(parte|part)\s+(\d+|dos|tres|cuatro|cinco|two|three|four|five)\b", re.I)
+GANCHO_GASTO = {"imagine", "imagina", "if", "si", "you", "what", "qué", "que"}
+
+
+def _txt(l):
+    return l if isinstance(l, str) else (l.get("texto") or "")
+
+
+def conferir_gancho(n, h):
+    """Os 3 primeiros segundos: 1a fala curta e com perigo, sem 'Parte dos', sem biografia nas 2 primeiras falas,
+    e a 1a imagem mostrando gente ou criatura (nada de paisagem vazia vista de cima)."""
+    e = []
+    lineas = h.get("lineas") or []
+    if not lineas:
+        return e
+    l0 = _txt(lineas[0])
+    if RE_PARTE.match(l0):
+        e.append(f"{n}: a 1a fala comeca com '{l0[:12]}...'. Nada de 'Parte dos/Part two': o titulo ja diz a parte; comece no perigo (ROTEIROS.md 'Primeiros 3 segundos')")
+    if RE_ABERTURA_CALMA.match(l0):
+        e.append(f"{n}: abertura calma proibida ('{l0[:40]}...'); comece com perigo, regra, fim primeiro ou fato real (ROTEIROS.md 'Primeiros 3 segundos')")
+    np0 = len(re.sub(r"\{\w+\}", "", l0).split())
+    if np0 > GANCHO_MAX_PALAVRAS:
+        e.append(f"{n}: a 1a fala tem {np0} palavras; o gancho tem que caber em {GANCHO_MAX_PALAVRAS} (ideal 8-13)")
+    for i, l in enumerate(lineas[:2]):
+        if RE_BIO.search(_txt(l)):
+            e.append(f"{n}: fala {i} apresenta o personagem (nome/idade/profissao). Biografia so da 3a fala em diante; as 2 primeiras sao perigo e o que esta em jogo")
+    if h.get("visual") == "3d":
+        c0 = next((c.get("cena") or {} for c in h.get("cenas") or [] if c.get("linea") == 0), {})
+        if not (c0.get("atores") or c0.get("criatura") or c0.get("objetos")):
+            e.append(f"{n}: a cena da 1a fala nao mostra ninguem; ponha o protagonista, a criatura ou o objeto do perigo (1a imagem decide se a pessoa fica)")
+        if c0.get("plano") == "aereo":
+            e.append(f"{n}: a cena da 1a fala e 'aereo' (tudo pequeno na tela do celular); use close, medio, baixo ou ombro")
+    return e
 MARCADOR_PALAVRAS = 3  # {when_next}/{dia_siguiente} viram ~3 palavras faladas ("tomorrow, Thursday")
 
 
@@ -234,6 +279,8 @@ def conferir(canal, engine):
             l0 = lineas[0] if isinstance(lineas[0], str) else (lineas[0].get("texto") or "")
             if re.match(r"\s*(once upon|today|long ago|in a land|there (was|once))\b", l0, re.I):
                 erros.append(f"{n}: abertura calma proibida no Old Tales ('{l0[:40]}...'); comece com choque, pergunta ou curiosidade (ROTEIROS.md 'Tom do Old Tales')")
+        if canal in GANCHO_DESDE and num >= GANCHO_DESDE[canal]:
+            erros += conferir_gancho(n, h)
         # REGRA do Pedro (12/11 22h): "tire todos os elementos de crianca e bote de acao" no Old Tales
         if canal == "old-tales" and num >= TOM_CL_DESDE and h.get("visual") == "3d":
             lutas = sum(1 for c in h.get("cenas") or [] if any(
@@ -268,6 +315,17 @@ def conferir(canal, engine):
                 erros.append(f"{h['_arq']}: serie '{s}' pulou uma parte (esperava parte {i + 1})")
             if i > 0 and h.get("anterior") and h["anterior"] != lista[i - 1].get("codigo"):
                 erros.append(f"{h['_arq']}: 'anterior' deveria ser {lista[i - 1].get('codigo')}, nao {h['anterior']}")
+    # rodizio de ganchos (REGRA do Pedro 14/11): duas series seguidas nao abrem com a mesma 1a palavra gasta
+    if canal in GANCHO_DESDE:
+        p1 = sorted((h for h in hs if int(h.get("parte", 1) or 1) == 1 and h.get("lineas")),
+                    key=lambda h: int(re.sub(r"\D", "", h.get("codigo", "")) or 0))
+        for a, b in zip(p1, p1[1:]):
+            if int(re.sub(r"\D", "", b.get("codigo", "")) or 0) < GANCHO_DESDE[canal]:
+                continue
+            wa = (_txt(a["lineas"][0]).split() or [""])[0].strip("*¿¡,.").lower()
+            wb = (_txt(b["lineas"][0]).split() or [""])[0].strip("*¿¡,.").lower()
+            if wa == wb and wb in GANCHO_GASTO:
+                erros.append(f"{b['_arq']}: abre com '{wb}' igual a serie anterior ({a.get('codigo')}); troque o tipo de gancho (rodizio, ROTEIROS.md 'Primeiros 3 segundos')")
     # anti-repeticao do 3D (REGRA do Pedro 10/11: variedade de criaturas, cenarios e rostos entre historias)
     if canal in TRES_D_DESDE:
         import subprocess

@@ -47,15 +47,15 @@
  "visual": "3d",
  "lineas": [
   {
-   "texto": "Imagina que a las tres de la mañana llega un *autobús* que no existe.",
+   "texto": "A las tres, un autobús sin luces se detiene frente a Lucía y *abre la puerta*.",
    "pausa": 0.5
   },
   {
-   "texto": "Lucía tiene treinta y cuatro años y cocina en el turno de la noche.",
+   "texto": "Ese autobús no existe.",
    "pausa": 0.5
   },
   {
-   "texto": "Sale a las dos y media y espera en la parada de la carretera.",
+   "texto": "Lucía cocina de noche, sale a las dos y media y espera en la carretera.",
    "pausa": 0.5
   },
   {
@@ -124,11 +124,18 @@
    "linea": 0,
    "cena": {
     "cenario": "estrada",
-    "marca": "curva",
-    "plano": "aereo",
+    "marca": "ponto",
+    "plano": "medio",
     "luz": "noite_neblina",
     "objetos": [
      "onibus"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
     ]
    }
   },

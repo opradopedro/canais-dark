@@ -116,7 +116,8 @@ Modelo completo e testado: a serie `elevator` (`001` a `004`).
 
   Tambem existem `{next_day}` ("Thursday") e `{next_date}` ("Thursday, October 29") se precisar da
   data pura. **Nunca falar hora do dia** (o publico esta em varios fusos).
-- **Partes 2 em diante:** comecam com `"Part two."` + uma frase que relembra onde parou.
+- **Partes 2 em diante:** NAO comecam com "Part two" (REGRA 14/11, ROTEIROS.md "Primeiros 3 segundos"): a 1a fala ja e o
+  perigo do cliffhanger, entendivel para quem nao viu a parte 1; no maximo 1 frase de recapitulacao, depois.
   A ultima parte fecha com a reviravolta explicada e a regra.
 - Campos de serie em todas as partes: `"serie"`, `"serie_titulo"` (vira playlist), `"parte"`,
   `"partes"`; da parte 2 em diante, `"anterior": "SV001"` (codigo da parte anterior).

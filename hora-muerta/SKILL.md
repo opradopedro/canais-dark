@@ -100,7 +100,8 @@ Use o backlog de [references/temas.md](references/temas.md) e as regras de lá.
   `{"comp": "texto", "p": {"lineas": ["PARTE 2", "Mañana · {fecha_siguiente}"]}}`. Na descrição: `▶ Parte 2: mañana, {fecha_siguiente}.`
   O `produce.py` troca `{dia_siguiente}` ("jueves") e `{fecha_siguiente}` ("jueves 22") pelo dia em que a próxima parte
   sai. **Nunca falar horário**: o público hispano está em vários fusos.
-- Parte 2 (e seguintes): começa com `"Parte dos."` + uma frase que relembra onde parou, e o `gancho` mostra
+- Parte 2 (e seguintes): **NÃO começa com "Parte dos"** (REGRA 14/11, ROTEIROS.md "Primeiros 3 segundos"): a 1ª fala já é
+  o perigo do cliffhanger, entendível para quem não viu a parte 1; recapitulação no máximo 1 frase, depois. O `gancho` mostra
   o susto da própria parte. A última parte fecha a história com uma reviravolta **explicada** (quem assiste
   só uma vez tem que entender) e uma frase de regra ou loop no fim.
 - Campos de série em todas as partes: `"serie": "slug"`, `"serie_titulo": "Nome | Hora Muerta"` (vira playlist),

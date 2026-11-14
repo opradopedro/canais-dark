@@ -45,7 +45,7 @@ HM015-016 El oso de noviembre (Testigo, gringa EUA, peça oso) · HM017-018 La v
 - O motorista de aplicativo que pergunta "você vai sozinho?" com alguém no banco de trás. `autobus`
 
 ## Regras de roteiro
-- Séries de 2 partes (ou 3 em história muito boa), 1min30 a 2 min cada (150–185 palavras). Primeira frase já é a regra ou o fato mais assustador.
+- Séries de 2 partes (ou 3 em história muito boa), 1min30 a 2 min cada (150–185 palavras). Primeira frase já é a regra ou o fato mais assustador (ROTEIROS.md "Primeiros 3 segundos": nome do personagem só da 3ª fala em diante).
 - Parte 1 termina no pior momento + "Parte dos, mañana, {dia_siguiente}" (sem horário: fusos diferentes); a última parte explica a reviravolta.
 - Susto visível na tela, com `susto` + evento do componente no mesmo instante, e `gancho` apontando para ele.
 - 1 a 2 sustos por parte; o da parte final pode aparecer na imagem no fim, mas sem som depois que a narração acaba (Pedro, 05/11: nenhum estrondo nem chiado no fim; o mix.py silencia e o checar_fim.py barra).

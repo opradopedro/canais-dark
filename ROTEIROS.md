@@ -47,6 +47,60 @@ Regras de cada canal: no `SKILL.md` da pasta. Old Tales (REGRA do Pedro, 02/11: 
 confiável; mito fiel à versão tradicional, dizendo a fonte na descrição. Detalhes na seção "LINHA DO CANAL" do
 `old-tales/SKILL.md`.
 
+## Primeiros 3 segundos (REGRA do Pedro, 14/11: "fazer a pessoa ficar no vídeo nos primeiros segundos")
+
+Vale para **Hora Muerta, Signal Lost e Old Tales** (o So You Built It está bom, não muda). Vale por cima de qualquer
+modelo antigo de abertura (o "Imagine..." do Estilo 3D e o "quem é: nome, idade, ofício" do flat). No Shorts e no
+TikTok a pessoa decide em 1 a 3 segundos se fica ou desliza; quem desliza derruba o vídeo inteiro.
+
+### O que os números mostraram (14/11)
+- **Nossos vídeos:** as aberturas que mais seguraram foram a **regra com ameaça para VOCÊ** ("Si un perro negro te
+  sigue de noche, nunca lo mires a los ojos" 1.156 views; "Si alguien te llama por tu nombre a las 3:33... no contestes"
+  1.030), o **fato real** ("En 2023, todo internet compartía una foto..." 1.177) e o **meio do perigo** sem
+  "Part two" ("There was no her. Just the car, and the dark trees." 988). As que morreram abriam **apresentando
+  alguém** ("Doña Marta tiene tres reglas" 72, "En el perchero de Andrés..." 21, "El trabajo de Don Chuy..." 0,
+  "You wake up in Japan... You grow rice." 0).
+- **Concorrentes (vidIQ, 14/11):** "If your mom wakes you up at 3 AM... do not get out of bed" (2,8 mi, regra para
+  você); Wukong do Henreeeology, 1,5 mi: "Imagine you crossed your own name out of the Book of Death. Nothing can
+  kill you now. So, how do you end up trapped under a mountain for 500 years?" (poder + o fim primeiro + pergunta);
+  "In this town, there's a monster that can only move in the dark. If the lights go out for one second, it's over
+  for all of us." (103 mil em 1 dia: regra + o que está em jogo; o pai/narrador só aparece aos 15 s).
+- **Nosso erro de molde (3D, até 14/11):** toda parte 1 abria com "Imagina/Imagine..." + plano **aéreo vazio** +
+  2ª fala de biografia ("Martín tiene cuarenta y cinco años..."). As partes 2 abriam com "Parte dos.". Tudo isso saiu.
+
+### As regras (o fiscal barra a partir de HM045, SV035 e CL046)
+1. **1ª fala = perigo ou pergunta, em até 16 palavras (ideal 8-13).** A palavra-chave (amarela) vem cedo.
+2. **2ª fala = o que está em jogo** (o que acontece se errar, o que vem aí, o fim que vamos ver). **Nome, idade e
+   profissão só da 3ª fala em diante**, curtinho ("Martín, el nuevo velador, empieza esta semana.").
+3. **Parte 2, 3, 4, 5: nunca "Parte dos/Part two" na voz.** O título e o cartão já dizem a parte. Abra no perigo do
+   cliffhanger, explicado para quem NÃO viu a parte 1 (o Shorts mostra a parte 2 para gente nova):
+   "Algo en dos patas rasca la reja y dice: Martín, ábreme la capilla."
+4. **Rodízio de ganchos** (duas séries seguidas do canal não abrem com a mesma 1ª palavra gasta: Imagine/Imagina,
+   If/Si, You, What/Qué):
+   - **A. Regra-ameaça para você:** "Si en el monte oyes la voz de tu hermano desde dos lados, no contestes."
+   - **B. O fim primeiro / paradoxo:** "How does a boy born in a locked bronze room end up holding Medusa's head?"
+   - **C. No meio do perigo:** "A las tres, un autobús sin luces se detiene frente a Lucía y abre la puerta."
+   - **D. Fato real / viral:** "En 2023, todo internet compartía una foto..." (só com fonte de verdade).
+   - **E. Lugar com regra + preço:** "En este panteón, el perro negro que entra de noche camina en dos patas."
+   - **F. "Imagine/You wake up" com enrascada:** só se a mesma frase já disser o perigo ("You wake up in 480 BC, and
+     the biggest army on Earth is coming for you."). No máximo 1 em cada 3 séries.
+   - **G. Prova / último rastro:** "Nora's last post came from a town that isn't on any map."
+5. **A 1ª imagem também é gancho.** A cena da fala 0 mostra o protagonista com medo, a criatura ou o objeto do perigo,
+   em `close`, `medio`, `baixo` ou `ombro`. **Nunca `aereo`**, nunca paisagem vazia (no celular fica tudo pequeno).
+   No motor ilustrado: personagem GRANDE ocupando a tela vertical, nunca o quadro 16:9 com faixas borradas.
+6. **Promessa em até 5 s:** quem fica precisa saber a pergunta que o vídeo vai responder (vai sobreviver? o que é a
+   coisa? como ele acabou preso?). A resposta vem no fim da série, não antes.
+7. **Mito em 3ª pessoa (Old Tales):** o gancho pode ser pergunta ao espectador (tipo B) sem trocar a pessoa da
+   história. "You" fica para o POV e a vida de época (regra de 13/11).
+8. **Título e 1ª fala se completam, não se repetem:** o título promete, a 1ª fala já entrega o perigo.
+9. **Rotina de seguir/compartilhar:** em regra de terror, a última fala pode ser "Send this to someone who walks
+   alone at night" / "Mándaselo a quien camina solo de noche" no lugar da pergunta de comentário (compartilhamento
+   pesa no Shorts e no TikTok). Use em 1 de cada 3 séries, para não virar fórmula.
+
+O fiscal (`validar_roteiros.py`, `conferir_gancho`) barra: "Parte/Part" na 1ª fala, 1ª fala com mais de 16 palavras,
+abertura calma, biografia (nome + idade) nas 2 primeiras falas, cena da fala 0 vazia ou `aereo`, e mesma 1ª palavra
+gasta em duas séries seguidas.
+
 ## Tom do Old Tales (REGRA do Pedro, 12/11: "muito amigável, muito calmo, criancinha")
 
 Old Tales conta mitos, lendas, batalhas e curiosidades históricas para PRENDER, não para ninar. Vale para todo
@@ -105,10 +159,10 @@ Motor: `motor-3d/` (Three.js, custo zero, mesmo render do `hora-muerta/scripts/r
 `"visual": "3d"` a partir de **HM041, SV031 e CL034**. Séries já começadas terminam no estilo em que começaram.
 
 **Jeito de contar (os 3 canais):** 3ª pessoa no presente, frases curtas, como quem explica um mistério.
-1. Gancho com o mistério em 1 frase ("Imagine viver numa cidade cercada por uma linha branca…").
+1. Gancho em 1 frase, seguindo **"Primeiros 3 segundos"** (rodízio A-G; "Imagine" só de vez em quando e já com perigo).
 2. A regra/o fato estranho que todo mundo aceita sem saber por quê.
 3. Contraste com o normal ("Durante o dia, tudo funciona normalmente… Mas quando a noite chega…").
-4. Um personagem que duvida e resolve testar/descobrir.
+4. Um personagem que duvida e resolve testar/descobrir (o nome dele entra aqui, da 3ª fala em diante, nunca na 2ª).
 5. No meio, pedido para seguir ("…porque agora vem a parte assustadora" / "lo que viene ahora…").
 6. Escalada (barulho, silhueta, perseguição) e a virada (a regra funciona, ou não).
 7. Gancho final que deixa a pergunta aberta e puxa a próxima parte; a última frase volta para a primeira (loop).
@@ -178,7 +232,7 @@ davam 6min30: não serve. Com ~1min55 por parte:
 - No TikTok, 2 min também é bom: só vídeo com mais de 1 min entra no Creator Rewards.
 
 ### Retenção dentro de cada parte (vale para os 4 canais)
-- 0–2 s: a frase de abertura já é o conflito ou a imagem mais forte. Nada de "Na parte anterior...": no máximo 1 linha de recapitulação, e depois do gancho.
+- 0–3 s: ver **"Primeiros 3 segundos"** (acima). Nada de "Parte dos" nem "Na parte anterior...": no máximo 1 linha de recapitulação, e depois do gancho.
 - A cada 20–30 s, um novo "gancho aberto" (pergunta sem resposta, "mas não era o pior", número que choca). Em 2 min são 4 a 5.
 - Corte a cada 2–4 s (já é regra); cartão com texto fica pelo menos 2,5 s na tela (pedido do Pedro, 13/11).
 - Aos 60–70% da parte, a virada; nos últimos 10 s, o gancho da próxima parte e uma pergunta simples para comentar.

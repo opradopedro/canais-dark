@@ -58,11 +58,11 @@
  "visual": "3d",
  "lineas": [
   {
-   "texto": "Three old sisters shared *one eye* and one tooth between them.",
+   "texto": "To find Medusa, Perseus had to *steal an eye* from three blind old witches.",
    "pausa": 0.5
   },
   {
-   "texto": "Only they knew the way to the Gorgons.",
+   "texto": "They shared one eye and one tooth, and only they knew the way.",
    "pausa": 0.5
   },
   {
@@ -136,8 +136,15 @@
    "cena": {
     "cenario": "caverna_gorgonas",
     "marca": "entrada",
-    "plano": "aereo",
-    "luz": "tempestade"
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "perseu",
+      "acao": "Sneaking",
+      "rosto": "bravo"
+     }
+    ]
    }
   },
   {

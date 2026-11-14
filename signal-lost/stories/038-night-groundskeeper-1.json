@@ -34,15 +34,15 @@
  "visual": "3d",
  "lineas": [
   {
-   "texto": "Imagine a job where one of the rules says: if you hear *digging*, it isn't yours.",
+   "texto": "If you hear *digging* in this cemetery at night, don't look. It isn't yours.",
    "pausa": 0.5
   },
   {
-   "texto": "Eli is forty-one. He just took the night shift at Saint Bram's cemetery.",
+   "texto": "Somebody under the grass is digging *up*.",
    "pausa": 0.5
   },
   {
-   "texto": "The old groundskeeper retired without meeting him.",
+   "texto": "Eli just took the night shift. The old keeper left without meeting him.",
    "pausa": 0.5
   },
   {
@@ -112,8 +112,12 @@
    "cena": {
     "cenario": "cemiterio",
     "marca": "entrada",
-    "plano": "aereo",
-    "luz": "noite_neblina"
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "entrada"
+    }
    }
   },
   {

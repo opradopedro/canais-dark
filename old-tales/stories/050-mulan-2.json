@@ -59,11 +59,11 @@
  "visual": "3d",
  "lineas": [
   {
-   "texto": "Mulan rode *ten thousand li* to the frontier, across mountains and passes.",
+   "texto": "For twelve years, Mulan hid in a men's army. If they found out, *she died*.",
    "pausa": 0.5
   },
   {
-   "texto": "That's further than walking across the whole of China.",
+   "texto": "She rode ten thousand li to the frontier, further than walking across China.",
    "pausa": 0.5
   },
   {
@@ -137,7 +137,7 @@
    "cena": {
     "cenario": "campo_batalha",
     "marca": "vindo",
-    "plano": "aereo",
+    "plano": "medio",
     "luz": "nascer_sol",
     "atores": [
      {

@@ -136,8 +136,15 @@
    "cena": {
     "cenario": "aldeia_china",
     "marca": "praca",
-    "plano": "aereo",
-    "luz": "tempestade"
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "mulan",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
    }
   },
   {

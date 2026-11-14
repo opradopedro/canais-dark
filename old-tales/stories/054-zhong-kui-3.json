@@ -147,7 +147,7 @@
    "cena": {
     "cenario": "palacio_ceu",
     "marca": "salao",
-    "plano": "aereo",
+    "plano": "medio",
     "luz": "interior_noite",
     "atores": [
      {

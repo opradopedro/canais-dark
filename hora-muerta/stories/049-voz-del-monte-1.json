@@ -42,15 +42,15 @@
  "visual": "3d",
  "lineas": [
   {
-   "texto": "Imagina escuchar la voz de tu hermano pidiendo ayuda, *desde dos lados* del bosque.",
+   "texto": "Si en el monte oyes la voz de tu hermano *desde dos lados*, no contestes.",
    "pausa": 0.5
   },
   {
-   "texto": "En la Sierra de Durango, los viejos tienen una regla.",
+   "texto": "Una de las dos no es tu hermano. Y ya sabe tu nombre.",
    "pausa": 0.5
   },
   {
-   "texto": "Si oyes tu nombre en el monte, *no contestes*.",
+   "texto": "En la Sierra de Durango, los viejos lo saben: si oyes tu nombre, *no contestes*.",
    "pausa": 0.5
   },
   {
@@ -120,8 +120,12 @@
    "cena": {
     "cenario": "floresta",
     "marca": "fundo",
-    "plano": "aereo",
-    "luz": "noite_neblina"
+    "plano": "medio",
+    "luz": "noite_neblina",
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "fundo"
+    }
    }
   },
   {

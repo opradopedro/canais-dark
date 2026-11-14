@@ -34,15 +34,15 @@
  "visual": "3d",
  "lineas": [
   {
-   "texto": "Imagina que tocan tu puerta a la *una y veinte* de la mañana.",
+   "texto": "Si unos *niños* tocan tu puerta a la una y veinte, no los dejes entrar.",
    "pausa": 0.5
   },
   {
-   "texto": "Don Tomás tiene cincuenta y ocho años y vive solo esta semana.",
+   "texto": "Parecen perdidos, pero nunca parpadean.",
    "pausa": 0.5
   },
   {
-   "texto": "Su esposa está en casa de su hermana, al otro lado de Monterrey.",
+   "texto": "Don Tomás está solo esta semana; su esposa está con su hermana en Monterrey.",
    "pausa": 0.5
   },
   {
@@ -110,10 +110,17 @@
   {
    "linea": 0,
    "cena": {
-    "cenario": "bairro",
-    "marca": "frente_casa",
-    "plano": "aereo",
-    "luz": "noite"
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "tomas",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
    }
   },
   {

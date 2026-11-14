@@ -39,15 +39,15 @@
  "visual": "3d",
  "lineas": [
   {
-   "texto": "Imagine your bus stops at a town that *isn't on any map*.",
+   "texto": "Nora's last post came from a town that *isn't on any map*.",
    "pausa": 0.5
   },
   {
-   "texto": "Nora, twenty-nine, works late shifts at a clinic in Oregon.",
+   "texto": "Nobody who lives there has a face.",
    "pausa": 0.5
   },
   {
-   "texto": "Every night she takes the last bus home, at 11:40.",
+   "texto": "Nora, a nurse, takes the last bus home every night, at 11:40.",
    "pausa": 0.5
   },
   {
@@ -116,11 +116,19 @@
    "linea": 0,
    "cena": {
     "cenario": "estrada",
-    "marca": "curva",
-    "plano": "aereo",
+    "marca": "ponto",
+    "plano": "medio",
     "luz": "noite",
     "objetos": [
      "onibus"
+    ],
+    "atores": [
+     {
+      "id": "nora",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "celular"
+     }
     ]
    }
   },

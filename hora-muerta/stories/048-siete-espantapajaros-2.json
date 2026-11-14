@@ -36,15 +36,15 @@
  "visual": "3d",
  "lineas": [
   {
-   "texto": "Parte dos. Juan decide vigilar desde el *pozo*, con la linterna y un machete.",
+   "texto": "Ocho espantapájaros, y el octavo lleva la camisa de un *desaparecido*.",
    "pausa": 0.5
   },
   {
-   "texto": "Esa noche cuenta otra vez al atardecer. Son ocho.",
+   "texto": "Juan vigila desde el pozo, con la linterna y un machete.",
    "pausa": 0.5
   },
   {
-   "texto": "El octavo sigue con la camisa de Don Lalo.",
+   "texto": "Es la camisa de Don Lalo, el dueño que nunca volvió.",
    "pausa": 0.5
   },
   {
@@ -114,7 +114,7 @@
    "cena": {
     "cenario": "vila",
     "marca": "poco",
-    "plano": "aereo",
+    "plano": "medio",
     "luz": "entardecer",
     "atores": [
      {
