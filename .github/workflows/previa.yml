@@ -40,6 +40,14 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu ttf-mscorefonts-installer > /dev/null
           pip install -q numpy soundfile playwright tzdata
           python -m playwright install --with-deps chromium > /dev/null
+      # roteiro 3D/cartoon desenha pelo motor-cartoon (Remotion): precisa dos pacotes Node (14/11: faltava, previa dava ERR_MODULE_NOT_FOUND)
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: motor-cartoon/package-lock.json
+      - name: Pacotes Node (motor-cartoon)
+        run: npm ci --prefix motor-cartoon --no-audit --no-fund
       - uses: actions/cache/restore@v4
         with:
           path: so-you-built-it/scripts/vendor
