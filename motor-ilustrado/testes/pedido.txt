@@ -1,2 +1,2 @@
-motor-ilustrado/testes/wukong-1.json
-# 13/11 23h: correcoes do Pedro (piscar, macaco velho, cartoes)
+motor-ilustrado/testes/wukong-2.json
+# 14/11: parte 2 com fundos do Pedro (Gemini)
