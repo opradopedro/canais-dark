@@ -237,10 +237,16 @@ Vale por cima de qualquer número antigo (prompt, SKILL.md, temas.md) que fale e
 - Medido nos vídeos prontos (14/11): SYBI ~3,1 palavras/s; Hora Muerta ~1,7 palavras/s (HM041: 180 palavras = 1min46); Old Tales ~2,3 palavras/s (Wukong 1: 179 palavras = 1min18, curto demais).
 
 ### Por que 2 min (REGRA do Pedro, 14/11) e o vídeo longo
-Cada série vira um vídeo longo no YouTube, e o longo precisa de **8 min ou mais** (anúncio no meio). 5 partes de 1min18
-davam 6min30: não serve. Com ~1min55 por parte:
-- **Old Tales:** série de 5 partes (no máximo 5) = ~9min30 + extras só do longo = **10 a 11 min**.
-- **Hora Muerta e Signal Lost:** séries de 2 a 3 partes; o longo junta 2 ou 3 séries do mesmo tema (10 a 14 min).
+Cada série vira um vídeo longo no YouTube. **PISO DURO: nenhum longo sai com menos de 10 min, em hipótese nenhuma**
+(REGRA do Pedro, 15/11; o YouTube libera anúncio no meio a partir de 8 min, e 10 min é a nossa margem).
+- A trava é `python motor-en/longo.py trava <video.mp4>`: abaixo de 10 min ela sai com erro e o longo NÃO sobe.
+  Todo código que subir longo roda a trava antes do upload.
+- Quem decide o que entra é `python motor-en/longo.py plano <canal>`: junta séries inteiras, em ordem, até a
+  estimativa passar de 10min30. Série que sozinha não chega (ex.: Old Tales com 4 partes = ~7min40) **junta a série
+  seguinte** no mesmo longo; nunca sai curta. O que ainda não chega fica esperando a próxima série.
+- **Old Tales:** séries de 4 a 5 partes de ~1min55. Com 5 partes + extras dá ~10min30; com 4, o longo junta 2 séries.
+- **Hora Muerta e Signal Lost:** séries de 2 a 3 partes; o longo junta 3 ou mais séries (10 a 14 min).
+- **So You Built It:** o longo junta 9 a 12 vídeos do mesmo tema (cada um ~1 min) até passar de 10 min.
 - **Extras só do longo** (o motor monta, o roteirista escreve no campo `"longo"` da última parte): abertura de 15–20 s
   com a promessa da história inteira, um cartão explicativo extra por parte e um epílogo de 45–90 s ("o que
   aconteceu depois" / "o que é verdade nessa lenda"). Isso dá ao público do Short um motivo para ver o longo.
