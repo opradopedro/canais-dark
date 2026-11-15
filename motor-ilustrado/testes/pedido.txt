@@ -1,4 +1,2 @@
-motor-ilustrado/testes/wukong-2.json
-# 14/11: parte 2 com fundos do Pedro (Gemini)
-# re-render: numero do cartao cabe sempre
-# re-render 2: texto do cartao quebra pela largura
+motor-ilustrado/testes/wukong-3.json
+# 15/11: parte 3 (CL060), fundos da Cloudflare gerados 15/11 06:41Z, vertical nativo
