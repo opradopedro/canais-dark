@@ -1,2 +1,3 @@
 hora-muerta/stories/045-ojos-negros-1.json
 # 15/11: teste do HM045 convertido para o ilustrado (NAO publica)
+# 15/11 18h50: prova de novo com o gancho visual
