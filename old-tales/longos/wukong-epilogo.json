@@ -674,6 +674,32 @@
    }
   },
   {
+   "texto": "Today, temples in China and Taiwan still burn incense for the Great Sage, Equal of *Heaven*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "templo-mestre",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "neblina",
+     "dourado"
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Great Sage Equal of Heaven",
+     "valor": "temples",
+     "sub": "he is still worshipped as a god today",
+     "t0": 1.4
+    }
+   }
+  },
+  {
    "texto": "Not bad for a monkey born from a *stone*.",
    "pausa": 0.4,
    "cena": {
