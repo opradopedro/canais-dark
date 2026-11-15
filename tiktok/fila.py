@@ -36,7 +36,7 @@ CONTAS = {
     "yb": {"nome": "So You Built It", "yt": "UC1ZjZVb5O-Bv_GXfukN3Tqw", "conta": "_000gO7yEeCRneJHtqZge5qXHTrBrOrGCaR0",
            "tags": "#engineering #howitworks #science #fyp"},
     # REGRA do Pedro (15/11): o Signal Lost so posta no TikTok os videos do motor NOVO (ilustrado).
-    "sv": {"nome": "Signal Lost", "yt": "UC9gwQy8PJ5DA6Ii4ic8Pr-g", "conta": "",
+    "sv": {"nome": "Signal Lost", "yt": "UC9gwQy8PJ5DA6Ii4ic8Pr-g", "conta": "_000YWmW5XJxNaQwk5spdhkLeeujRfv_CCJ4",
            "tags": "#horror #scarystories #survival #creepy #fyp", "so_visual": "ilustrado"},
 }
 DADOS = "https://opradopedro.github.io/canais-dark/dados.json"

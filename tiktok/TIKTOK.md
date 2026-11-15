@@ -11,7 +11,7 @@ O TikTok acompanha o YouTube. Todo vídeo que entra no ar no YouTube vai para a 
 - Escolhas do TikTok, dadas pelo Pedro, valem para todo post: `privacyLevel` PUBLIC_TO_EVERYONE, `allowComment` true, `musicUsageConfirmed` true (ele aceitou), `isAiGenerated` true. Não perguntar de novo. O Pedro autorizou postar sem aprovação a cada vídeo.
 - Sem marca d'água: o vídeo vem do próprio YouTube (download da vidIQ, 1080x1920).
 - Radar GTA não vai para o TikTok.
-- (15/11) Signal Lost: conta criada pelo Pedro. Só posta vídeo do motor NOVO (roteiro com `"visual": "ilustrado"`); o `fila.py` confere pelo dados.json + arquivo do roteiro (`so_visual`). Enquanto `conta` estiver vazio em `CONTAS`, o canal fica de fora: preencher com o platformAccountId da vidIQ quando o Pedro autorizar.
+- (15/11) Signal Lost: conta criada pelo Pedro. Só posta vídeo do motor NOVO (roteiro com `"visual": "ilustrado"`); o `fila.py` confere pelo dados.json + arquivo do roteiro (`so_visual`). Ligada na vidIQ em 15/11 (_000YWmW5XJxNaQwk5spdhkLeeujRfv_CCJ4).
 
 ## Passo a passo da rotina
 1. `git pull origin producao` e `python tiktok/fila.py`. Lista vazia = nada a fazer.
