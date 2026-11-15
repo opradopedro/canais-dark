@@ -10,7 +10,8 @@ O TikTok acompanha o YouTube. Todo vídeo que entra no ar no YouTube vai para a 
 - Vídeo trocado/substituído no YouTube: se por acaso ainda estiver público, marcar com `python tiktok/fila.py --ignorar <youtubeId> <canal> <motivo>`. Wukong cartoon CL041-CL045 está em `ignorar`.
 - Escolhas do TikTok, dadas pelo Pedro, valem para todo post: `privacyLevel` PUBLIC_TO_EVERYONE, `allowComment` true, `musicUsageConfirmed` true (ele aceitou), `isAiGenerated` true. Não perguntar de novo. O Pedro autorizou postar sem aprovação a cada vídeo.
 - Sem marca d'água: o vídeo vem do próprio YouTube (download da vidIQ, 1080x1920).
-- Radar GTA não vai para o TikTok. Signal Lost entra quando a conta existir (o Google travou criar e-mail em 13/11): pôr a conta em `CONTAS` no `fila.py` e os códigos já no ar em `ignorar`.
+- Radar GTA não vai para o TikTok.
+- (15/11) Signal Lost: conta criada pelo Pedro. Só posta vídeo do motor NOVO (roteiro com `"visual": "ilustrado"`); o `fila.py` confere pelo dados.json + arquivo do roteiro (`so_visual`). Enquanto `conta` estiver vazio em `CONTAS`, o canal fica de fora: preencher com o platformAccountId da vidIQ quando o Pedro autorizar.
 
 ## Passo a passo da rotina
 1. `git pull origin producao` e `python tiktok/fila.py`. Lista vazia = nada a fazer.

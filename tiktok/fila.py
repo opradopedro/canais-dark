@@ -35,7 +35,37 @@ CONTAS = {
            "tags": "#history #mythology #storytime #fyp"},
     "yb": {"nome": "So You Built It", "yt": "UC1ZjZVb5O-Bv_GXfukN3Tqw", "conta": "_000gO7yEeCRneJHtqZge5qXHTrBrOrGCaR0",
            "tags": "#engineering #howitworks #science #fyp"},
+    # REGRA do Pedro (15/11): o Signal Lost so posta no TikTok os videos do motor NOVO (ilustrado).
+    "sv": {"nome": "Signal Lost", "yt": "UC9gwQy8PJ5DA6Ii4ic8Pr-g", "conta": "",
+           "tags": "#horror #scarystories #survival #creepy #fyp", "so_visual": "ilustrado"},
 }
+DADOS = "https://opradopedro.github.io/canais-dark/dados.json"
+RAIZ = os.path.dirname(AQUI)
+
+
+def visuais(cid):
+    """youtubeId -> "visual" do roteiro (dados.json do painel liga o video ao arquivo do roteiro)."""
+    out = {}
+    try:
+        dados = json.load(urllib.request.urlopen(DADOS, timeout=60))
+    except Exception as e:
+        print("dados.json falhou (%s): canal com filtro de visual fica de fora nesta rodada" % e, file=sys.stderr)
+        return out
+    for c in dados["canais"]:
+        if c["id"] != cid:
+            continue
+        for i in c["itens"]:
+            m = re.search(r"(?:youtu\.be/|shorts/|v=)([\w-]{11})", i.get("youtube") or "")
+            if not m or not i.get("arquivo"):
+                continue
+            arq = os.path.join(RAIZ, i["arquivo"])
+            if not os.path.exists(arq):  # roteiro pode ter ido para arquivo/
+                arq = os.path.join(RAIZ, os.path.dirname(os.path.dirname(i["arquivo"])), "arquivo", os.path.basename(i["arquivo"]))
+            try:
+                out[m.group(1)] = json.load(open(arq, encoding="utf-8")).get("visual")
+            except Exception:
+                pass
+    return out
 MAX_POR_RODADA = {"yb": 2}  # por conta, por execucao (o resto fica para a proxima). Padrao: 1
 NS = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015",
       "media": "http://search.yahoo.com/mrss/"}
@@ -118,10 +148,15 @@ def fila():
     ign = set(est["ignorar_youtube"])
     saida = []
     for cid, cfg in CONTAS.items():
+        if not cfg.get("conta"):
+            continue  # conta ainda nao ligada na vidIQ
+        vis = visuais(cid) if cfg.get("so_visual") else None
         n = 0
         for v in publicos(cfg["yt"]):
             if v["publicado"] < INICIO or v["id"] in feitos or v["id"] in ign:
                 continue
+            if vis is not None and vis.get(v["id"]) != cfg["so_visual"]:
+                continue  # Signal Lost: video do motor antigo nao vai
             if n >= MAX_POR_RODADA.get(cid, 1):
                 break
             if not ainda_publico(v["id"]):
