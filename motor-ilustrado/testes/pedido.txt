@@ -1,2 +1,2 @@
-motor-ilustrado/testes/wukong-4.json
-# 15/11: parte 4 (CL061), publica 16/11 17:00Z
+motor-ilustrado/testes/wukong-5.json
+# 15/11: parte 5 (CL062), publica 17/11 17:00Z

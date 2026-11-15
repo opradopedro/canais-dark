@@ -481,6 +481,10 @@ if __name__ == "__main__":
         # upload.json com "publicar_em" (ISO UTC) agenda nesse horario; sem ele, publica na hora
         import json as _json
         quando = _json.load(open(os.path.join(pasta, "upload.json"), encoding="utf-8")).get("publicar_em") or "agora"
+        if quando != "agora":  # a fila do Actions atrasou e o horario ja passou: publica na hora (YouTube recusa data passada)
+            import datetime as _dt
+            if _dt.datetime.strptime(quando, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=_dt.timezone.utc) < _dt.datetime.now(_dt.timezone.utc) + _dt.timedelta(minutes=15):
+                quando = "agora"
         r = subprocess.run([sys.executable, os.path.join(repo, "motor-en", "agendar.py"), os.path.join(repo, canal),
                             os.path.join(pasta, "upload.json"), quando], cwd=repo)
         sys.exit(r.returncode)
