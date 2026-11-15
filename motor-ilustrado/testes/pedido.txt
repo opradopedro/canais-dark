@@ -1,3 +1,2 @@
-motor-ilustrado/testes/wukong-3.json
-# 15/11: parte 3 (CL060), fundos da Cloudflare gerados 15/11 06:41Z, vertical nativo
-# 15/11 15h40: deitado/curvar mais altos (cortavam embaixo no vertical)
+motor-ilustrado/testes/wukong-4.json
+# 15/11: parte 4 (CL061), publica 16/11 17:00Z
