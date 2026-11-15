@@ -19,11 +19,32 @@
  ],
  "elenco": {
   "tomas": {
-   "semente": 4511,
-   "corpo": "medio",
-   "cabelo": "grisalho",
-   "roupa": "casual",
-   "acessorio": "barba"
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#3a5a4a",
+   "barba_estilo": "curta",
+   "barba": "#8a8a8a"
+  },
+  "nino1": {
+   "tipo": "humano",
+   "rosto_cor": "#e6e2da",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#2a2a2e",
+   "olhos": "pretos"
+  },
+  "nino2": {
+   "tipo": "humano",
+   "rosto_cor": "#e6e2da",
+   "cabelo": "normal",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#4a4a50",
+   "olhos": "pretos"
   }
  },
  "codigo": "HM046",
@@ -32,82 +53,546 @@
  "titulo": "Le dijeron que no y entraron en otra casa 👁️ Parte 2 #terror #shorts",
  "capa": "DIJO QUE NO",
  "descripcion": "Don Tomás dijo que no. Los niños se quedaron toda la noche. Y a las seis, la cámara del vecino grabó a dónde fueron.\n\n¿Tú los habrías dejado pasar?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
- "visual": "3d",
+ "visual": "ilustrado",
  "lineas": [
   {
    "texto": "Don Tomás les dijo que no, pero los niños de *ojos negros* no se van.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Se quedan quietos en el porche, sin parpadear.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.44,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.56,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Cada diez minutos tocan. Tres golpes, lentos, iguales.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "A las dos, la luz de la calle empieza a parpadear.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-poste",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
   },
   {
    "texto": "A las tres, suena su teléfono fijo.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "sentar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "En la pantalla aparece *su propio número*, el de su casa.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "apontar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Contesta. Es la voz de su esposa, llorando.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Tomás, déjalos pasar, pobrecitos, se van a congelar.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-janela",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.59,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.64,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": -1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.76,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Pero su esposa está al otro lado de la ciudad, dormida.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
   },
   {
    "texto": "Quédate, porque lo peor no pasó en la casa de Tomás.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
   },
   {
    "texto": "Él cuelga, prende todas las luces y reza hasta el amanecer.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "sentar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "A las seis, los golpes paran. El porche está vacío.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "dourado"
+    ]
+   }
   },
   {
    "texto": "Ese día, el vecino le enseña el video de su cámara.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "A las cinco y cincuenta, los dos niños tocan *la casa de al lado*.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-fim_rua",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.44,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.56,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Una señora joven abre la puerta, les sonríe y dice: pasen.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-arvores",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.44,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.56,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Desde entonces, en esa casa nadie abre las cortinas.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua-dia",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": []
+   }
   },
   {
    "texto": "Y en la puerta de Tomás hay dos manitas negras marcadas, *por dentro*.",
-   "pausa": 0.8
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "casa_interior-porta-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Si tocan a la una y veinte, ya sabes qué decir.",
-   "pausa": 0.3
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.44,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.56,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
   }
  ],
- "cenas": [
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 13,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "hm-ojos-negros",
+ "elenco_3d": {
+  "tomas": {
+   "semente": 4511,
+   "corpo": "medio",
+   "cabelo": "grisalho",
+   "roupa": "casual",
+   "acessorio": "barba"
+  }
+ },
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -356,19 +841,6 @@
      "marca": "frente_casa"
     }
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 13,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }

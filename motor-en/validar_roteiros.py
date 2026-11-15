@@ -36,6 +36,33 @@ from vocabulario import vocab as _vocab3d
 V3D = _vocab3d()
 
 
+# REGRA do Pedro (15/11): a serie seguinte a atual de HM e SV ja sai no motor ilustrado (fundo IA + boneco)
+ILUSTRADO_DESDE = {"hora-muerta": 45, "signal-lost": 38}
+
+
+def conferir_ilustrado(n, h):
+    """Roteiro "visual":"ilustrado": cada fala tem cena com fundo do mundo e atores do elenco."""
+    import os as _os
+    erros = []
+    raiz = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+    cp = _os.path.join(raiz, "motor-ilustrado", "cenarios", f"{h.get('mundo')}.json")
+    if not _os.path.exists(cp):
+        return [f"{n}: mundo '{h.get('mundo')}' sem motor-ilustrado/cenarios/{h.get('mundo')}.json"]
+    cen = json.load(open(cp, encoding="utf-8")).get("cenarios", {})
+    el = h.get("elenco") or {}
+    for i, l in enumerate(h.get("lineas") or []):
+        c = l.get("cena") if isinstance(l, dict) else None
+        if not c:
+            erros.append(f"{n}: fala {i} sem 'cena' (motor ilustrado)")
+            continue
+        if c.get("fundo") not in cen:
+            erros.append(f"{n}: fala {i}: fundo '{c.get('fundo')}' nao existe em {cp}")
+        for a in c.get("atores") or []:
+            if a.get("id") not in el:
+                erros.append(f"{n}: fala {i}: ator '{a.get('id')}' fora do elenco")
+    return erros
+
+
 def conferir_3d(n, h):
     """Roteiro com "visual":"3d": elenco, cenas e vocabulario do motor 3D."""
     e = []
@@ -229,6 +256,8 @@ def conferir(canal, engine):
     for h in hs:
         n, cod = h["_arq"], h.get("codigo", "")
         for campo in ("codigo", "titulo", "lineas", "cenas"):
+            if campo == "cenas" and h.get("visual") == "ilustrado":
+                continue  # ilustrado: a cena vai dentro de cada fala
             if not h.get(campo):
                 erros.append(f"{n}: falta o campo '{campo}'")
         if not (h.get("descripcion") or h.get("description")):
@@ -257,12 +286,17 @@ def conferir(canal, engine):
             erros.append(f"{n}: paleta '{h.get('paleta')}' nao existe no Old Tales; use uma de {sorted(p for p in PALETAS_CL if p)} ou nenhuma (medieval)")
         # REGRA do Pedro (01/11): historia nova de Hora Muerta, Signal Lost e Old Tales so no estilo flat
         num = int(re.sub(r"\D", "", cod) or 0)
-        if canal in TRES_D_DESDE and num >= TRES_D_DESDE[canal] and h.get("visual") != "3d":
+        if h.get("visual") == "ilustrado":
+            erros += conferir_ilustrado(n, h)
+        elif canal in ILUSTRADO_DESDE and num >= ILUSTRADO_DESDE[canal]:
+            erros.append(f"{n}: serie nova de {canal} sai no motor ILUSTRADO (Pedro 15/11). Escreva como 3D e rode: "
+                         f"python motor-ilustrado/converter_3d.py {n}")
+        elif canal in TRES_D_DESDE and num >= TRES_D_DESDE[canal] and h.get("visual") != "3d":
             erros.append(f"{n}: serie nova precisa de \"visual\": \"3d\" (motor-3d, ROTEIROS.md 'Estilo 3D')")
         if h.get("visual") == "3d":
             erros += conferir_3d(n, h)
             erros += cenas_repetidas(n, h)
-        elif canal in FLAT_DESDE and num >= FLAT_DESDE[canal]:
+        elif canal in FLAT_DESDE and num >= FLAT_DESDE[canal] and h.get("visual") != "ilustrado":
             if h.get("visual") != "flat":
                 erros.append(f"{n}: historia nova precisa de \"visual\": \"flat\" (estilo novo, ESTILO-VISUAL.md)")
             velhas = sorted({c.get("comp") for c in h.get("cenas") or []} - PECAS_FLAT)

@@ -20,6 +20,569 @@
  ],
  "elenco": {
   "sam": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "jaqueta",
+   "roupa_cor": "#40405a",
+   "barba_estilo": "curta",
+   "barba": "#4a2a14"
+  },
+  "jess": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#6a5a3a"
+  },
+  "sheriff": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#1f2a44",
+   "chapeu": "bone",
+   "chapeu_cor": "#5a5040"
+  },
+  "alta": {
+   "tipo": "humano",
+   "rosto_cor": "#2a2a2a",
+   "membro": "#1c1c1c",
+   "roupa": "trapos",
+   "roupa_cor": "#111",
+   "sem_rosto": true,
+   "cabelo": "careca"
+  }
+ },
+ "codigo": "SV043",
+ "parte": 3,
+ "anterior": "SV042",
+ "titulo": "Someone lived in our attic for 40 years ❄️ Part 3 #horror #shorts",
+ "capa": "IT WAVED",
+ "descripcion": "Sam and Jess ran to the car through the snow. From the attic window, something tall waved goodbye. The sheriff knew this house.\n\nWould you ever go back?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "The nails on the attic hatch *bend* like wire, from the inside.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Sam and Jess run out the back door into the snow.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.42,
+      1.3
+     ],
+     "x": 0.38,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     },
+     {
+      "id": "jess",
+      "pose": "correr",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The car is buried to the windows. Sam digs with his hands.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Jess looks back at the house, and freezes.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "jess",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In the tiny attic window, something *tall* is standing.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-janela",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Too tall for a man. Its head touches the roof beams.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-fundo",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It raises one long arm, and *waves* at them.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-janela",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because the snow stopped falling right then.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
+  },
+  {
+   "texto": "The engine starts on the third try. They drive until the road ends.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-indo",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
+  },
+  {
+   "texto": "The sheriff finds them at dawn, at the closed bridge.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-curva-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "sheriff",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "sam",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     },
+     {
+      "id": "jess",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "When they say the address, he takes off his hat.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-acostamento-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "sheriff",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The last owner ran from that house in 1984.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala-dia",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": []
+   }
+  },
+  {
+   "texto": "He said someone walked in the attic, and repeated his words.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-acostamento-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "sheriff",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "That morning, the sheriff checks the attic with two deputies.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto-dia",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "sheriff",
+      "pose": "andar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "They find an old mattress, candle wax, and a *notebook*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "sheriff",
+      "pose": "agachar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Every page is their routine. What they ate. When they slept.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "sheriff",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And outside, fresh footprints lead *away* from the house, to Sam's car.",
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "floresta-trilha-dia",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.86,
+      "esc": 1.2,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "If the snow shows prints coming in, count the ones going out.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "floresta-fundo",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 6,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "sv-footprints-snow",
+ "elenco_3d": {
+  "sam": {
    "semente": 4111,
    "corpo": "forte",
    "cabelo": "curto",
@@ -40,88 +603,7 @@
    "acessorio": "bone"
   }
  },
- "codigo": "SV043",
- "parte": 3,
- "anterior": "SV042",
- "titulo": "Someone lived in our attic for 40 years ❄️ Part 3 #horror #shorts",
- "capa": "IT WAVED",
- "descripcion": "Sam and Jess ran to the car through the snow. From the attic window, something tall waved goodbye. The sheriff knew this house.\n\nWould you ever go back?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
- "visual": "3d",
- "lineas": [
-  {
-   "texto": "The nails on the attic hatch *bend* like wire, from the inside.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Sam and Jess run out the back door into the snow.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The car is buried to the windows. Sam digs with his hands.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Jess looks back at the house, and freezes.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "In the tiny attic window, something *tall* is standing.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Too tall for a man. Its head touches the roof beams.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "It raises one long arm, and *waves* at them.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Stay, because the snow stopped falling right then.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The engine starts on the third try. They drive until the road ends.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The sheriff finds them at dawn, at the closed bridge.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "When they say the address, he takes off his hat.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The last owner ran from that house in 1984.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "He said someone walked in the attic, and repeated his words.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "That morning, the sheriff checks the attic with two deputies.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "They find an old mattress, candle wax, and a *notebook*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Every page is their routine. What they ate. When they slept.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "And outside, fresh footprints lead *away* from the house, to Sam's car.",
-   "pausa": 0.8
-  },
-  {
-   "texto": "If the snow shows prints coming in, count the ones going out.",
-   "pausa": 0.3
-  }
- ],
- "cenas": [
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -407,19 +889,6 @@
     "luz": "neve",
     "efeito": "neve"
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 6,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }

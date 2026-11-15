@@ -70,7 +70,14 @@ def main(historia, tempos, saida):
     t = 0.3 if estado.get("gancho") else 2.0
     selo = f"{os.environ.get('CAPA_SELO', 'PARTE')} {h['parte']}" if h.get("partes", 1) > 1 else ""
     fundo_b64 = None
-    if estado.get("visual") == "cartoon" or (estado.get("visual") == "3d" and motor_visual(historia, h) == "cartoon"):
+    if h.get("visual") == "ilustrado":  # fundo da capa = quadro do motor ilustrado (sem legenda)
+        with tempfile.TemporaryDirectory(prefix="capa-ilustrado-") as tmpd:
+            png = os.path.join(tmpd, "capa.png")
+            subprocess.run([sys.executable, os.path.join(os.path.dirname(MOTOR_CARTOON), "motor-ilustrado", "producao.py"), "quadro",
+                            os.path.abspath(historia), os.path.abspath(tempos), str(max(t, 1.2)), png], check=True)
+            if os.path.isfile(png):
+                fundo_b64 = base64.b64encode(open(png, "rb").read()).decode("ascii")
+    elif estado.get("visual") == "cartoon" or (estado.get("visual") == "3d" and motor_visual(historia, h) == "cartoon"):
         with tempfile.TemporaryDirectory(prefix="capa-cartoon-") as tmpd:
             quadro_f = max(0, int(round(t * 30)))
             png = os.path.join(tmpd, "capa.png")

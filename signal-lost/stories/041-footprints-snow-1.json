@@ -20,6 +20,582 @@
  ],
  "elenco": {
   "sam": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "jaqueta",
+   "roupa_cor": "#40405a",
+   "barba_estilo": "curta",
+   "barba": "#4a2a14"
+  },
+  "jess": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#6a5a3a"
+  },
+  "sheriff": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#1f2a44",
+   "chapeu": "bone",
+   "chapeu_cor": "#5a5040"
+  },
+  "alta": {
+   "tipo": "humano",
+   "rosto_cor": "#2a2a2a",
+   "membro": "#1c1c1c",
+   "roupa": "trapos",
+   "roupa_cor": "#111",
+   "sem_rosto": true,
+   "cabelo": "careca"
+  }
+ },
+ "codigo": "SV041",
+ "parte": 1,
+ "titulo": "Footprints came to our door. None went back ❄️ Part 1 #horror #shorts",
+ "capa": "NONE WENT BACK",
+ "descripcion": "Sam and Jess are snowed in at an old Montana farmhouse for five days. One morning, boot prints come out of the forest to their back door. None go back.\n\n> Part 2: {when_next}.\nWould you check the attic?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "Fresh boot prints walk to Sam's back door, and *none walk away*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-fundo",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Someone is inside the house. And the snow says they never left.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "jess",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Sam and Jess just bought this old farmhouse in Montana.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira-dia",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": []
+   }
+  },
+  {
+   "texto": "In their first week, a blizzard closes the road for *five days*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-trilha",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
+  },
+  {
+   "texto": "No plows, no mail, just snow up to the windows.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-janela",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "jess",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "On the third morning, Sam goes out for firewood.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-trilha-dia",
+    "cam": {
+     "z": [
+      1.42,
+      1.3
+     ],
+     "x": 0.38,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "texto": "There's a line of boot prints coming out of the forest.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-entre_arvores-dia",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": []
+   }
+  },
+  {
+   "texto": "Big boots, deep steps, straight to their back door.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-toco-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "agachar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because Sam checked the snow all around the house.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira-dia",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "andar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "There are no prints going back. Not one.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Inside, Jess checks the hook where they keep the spare key.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "jess",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The *spare key* is gone.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "jess",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "They search every room. Closets, basement, under the beds. Nothing.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "agachar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "jess",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Sam says it must be a hunter who got lost, and left.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "That night, at 2:10 AM, Jess shakes him awake.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "jess",
+      "pose": "deitado",
+      "rosto": "medo",
+      "v": 0.8,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "sam",
+      "pose": "deitado",
+      "rosto": "triste",
+      "v": 0.8,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Above the bedroom ceiling, someone is walking. *Slow, heavy steps*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "jess",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "But this house has no stairs to the attic. Only a sealed hatch.",
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And the hatch is open. Part two, {when_next}.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.42,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.86,
+      "esc": 1.2,
+      "vira": -1
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 11,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "sv-footprints-snow",
+ "elenco_3d": {
+  "sam": {
    "semente": 4111,
    "corpo": "forte",
    "cabelo": "curto",
@@ -40,87 +616,7 @@
    "acessorio": "bone"
   }
  },
- "codigo": "SV041",
- "parte": 1,
- "titulo": "Footprints came to our door. None went back ❄️ Part 1 #horror #shorts",
- "capa": "NONE WENT BACK",
- "descripcion": "Sam and Jess are snowed in at an old Montana farmhouse for five days. One morning, boot prints come out of the forest to their back door. None go back.\n\n> Part 2: {when_next}.\nWould you check the attic?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
- "visual": "3d",
- "lineas": [
-  {
-   "texto": "Fresh boot prints walk to Sam's back door, and *none walk away*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Someone is inside the house. And the snow says they never left.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Sam and Jess just bought this old farmhouse in Montana.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "In their first week, a blizzard closes the road for *five days*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "No plows, no mail, just snow up to the windows.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "On the third morning, Sam goes out for firewood.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "There's a line of boot prints coming out of the forest.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Big boots, deep steps, straight to their back door.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Stay, because Sam checked the snow all around the house.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "There are no prints going back. Not one.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Inside, Jess checks the hook where they keep the spare key.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The *spare key* is gone.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "They search every room. Closets, basement, under the beds. Nothing.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Sam says it must be a hunter who got lost, and left.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "That night, at 2:10 AM, Jess shakes him awake.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Above the bedroom ceiling, someone is walking. *Slow, heavy steps*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "But this house has no stairs to the attic. Only a sealed hatch.",
-   "pausa": 0.8
-  },
-  {
-   "texto": "And the hatch is open. Part two, {when_next}.",
-   "pausa": 0.3
-  }
- ],
- "cenas": [
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -421,19 +917,6 @@
      "marca": "quarto"
     }
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 11,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }

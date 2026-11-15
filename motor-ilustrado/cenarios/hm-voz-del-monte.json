@@ -1,0 +1,53 @@
+{
+ "mundo": "hm-voz-del-monte",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "eerie horror story illustration, dark moody atmosphere, muted desaturated colors with cold blue shadows, realistic proportions, unsettling and lonely, mature adult tone, not childish",
+ "ordem": 5,
+ "cenarios": {
+  "floresta-fundo": {
+   "lugar": "floresta/fundo (noite)",
+   "prompt": "deep inside a dense pine forest, in a mountain pine forest of the sierra, at night, dark blue moonlight, deep shadows",
+   "seed": 103
+  },
+  "floresta-clareira-dia": {
+   "lugar": "floresta/clareira (dia)",
+   "prompt": "a small clearing in a pine forest, in a mountain pine forest of the sierra, in pale overcast daylight",
+   "seed": 110
+  },
+  "floresta-trilha-dia": {
+   "lugar": "floresta/trilha (dia)",
+   "prompt": "a narrow dirt trail between tall pine trees, in a mountain pine forest of the sierra, in pale overcast daylight",
+   "seed": 117
+  },
+  "floresta-entre_arvores": {
+   "lugar": "floresta/entre_arvores (noite)",
+   "prompt": "dense tall tree trunks close together, dark gaps between them, in a mountain pine forest of the sierra, at night, dark blue moonlight, deep shadows",
+   "seed": 124
+  },
+  "floresta-pe_torre-dia": {
+   "lugar": "floresta/pe_torre (dia)",
+   "prompt": "the base of a tall wooden fire lookout tower in a pine forest, a ladder going up, in a mountain pine forest of the sierra, in pale overcast daylight",
+   "seed": 131
+  },
+  "floresta-pe_torre": {
+   "lugar": "floresta/pe_torre (noite)",
+   "prompt": "the base of a tall wooden fire lookout tower in a pine forest, a ladder going up, in a mountain pine forest of the sierra, at night, dark blue moonlight, deep shadows",
+   "seed": 138
+  },
+  "floresta-trilha": {
+   "lugar": "floresta/trilha (noite)",
+   "prompt": "a narrow dirt trail between tall pine trees, in a mountain pine forest of the sierra, at night, dark blue moonlight, deep shadows",
+   "seed": 145
+  },
+  "floresta-clareira": {
+   "lugar": "floresta/clareira (noite)",
+   "prompt": "a small clearing in a pine forest, in a mountain pine forest of the sierra, at night, dark blue moonlight, deep shadows",
+   "seed": 152
+  },
+  "floresta-toco": {
+   "lugar": "floresta/toco (noite)",
+   "prompt": "a large tree stump with an axe and stacked firewood beside a small cabin, in a mountain pine forest of the sierra, at night, dark blue moonlight, deep shadows",
+   "seed": 159
+  }
+ }
+}

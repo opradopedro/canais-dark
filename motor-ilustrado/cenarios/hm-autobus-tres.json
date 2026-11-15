@@ -1,0 +1,73 @@
+{
+ "mundo": "hm-autobus-tres",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "eerie horror story illustration, dark moody atmosphere, muted desaturated colors with cold blue shadows, realistic proportions, unsettling and lonely, mature adult tone, not childish",
+ "ordem": 8,
+ "cenarios": {
+  "estrada-ponto-onibus": {
+   "lugar": "estrada/ponto com onibus (noite)",
+   "prompt": "a lonely roadside bus stop with a small concrete shelter and one lamp, an old empty bus with dim green interior lights stopped there with its door open, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
+   "seed": 103
+  },
+  "casa_interior-cozinha": {
+   "lugar": "casa_interior/cozinha (noite)",
+   "prompt": "a small home kitchen with a table, two chairs, a fridge and a window over the sink, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
+   "seed": 110
+  },
+  "estrada-ponto": {
+   "lugar": "estrada/ponto (noite)",
+   "prompt": "a lonely roadside bus stop with a small concrete shelter and one lamp, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
+   "seed": 117
+  },
+  "estrada-meio": {
+   "lugar": "estrada/meio (noite)",
+   "prompt": "the middle of an empty two-lane highway, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
+   "seed": 124
+  },
+  "estrada-acostamento": {
+   "lugar": "estrada/acostamento (noite)",
+   "prompt": "the gravel shoulder of a highway with a metal guardrail, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
+   "seed": 131
+  },
+  "estrada-vindo": {
+   "lugar": "estrada/vindo (noite)",
+   "prompt": "an empty highway stretching toward the viewer, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
+   "seed": 138
+  },
+  "estrada-curva": {
+   "lugar": "estrada/curva (noite)",
+   "prompt": "a sharp mountain highway curve with a bent guardrail over a drop, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
+   "seed": 145
+  },
+  "estrada-vindo-onibus": {
+   "lugar": "estrada/vindo com onibus (noite)",
+   "prompt": "an empty highway stretching toward the viewer, an old empty bus with dim green interior lights stopped there with its door open, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
+   "seed": 152
+  },
+  "estrada-indo": {
+   "lugar": "estrada/indo (noite)",
+   "prompt": "an empty highway stretching away into the distance, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
+   "seed": 159
+  },
+  "casa_interior-quarto": {
+   "lugar": "casa_interior/quarto (noite)",
+   "prompt": "a simple bedroom with a bed, a nightstand lamp and a closed closet, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
+   "seed": 166
+  },
+  "estrada-meio-onibus": {
+   "lugar": "estrada/meio com onibus (noite)",
+   "prompt": "the middle of an empty two-lane highway, an old empty bus with dim green interior lights stopped there with its door open, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
+   "seed": 124
+  },
+  "estrada-indo-onibus": {
+   "lugar": "estrada/indo com onibus (noite)",
+   "prompt": "an empty highway stretching away into the distance, an old empty bus with dim green interior lights stopped there with its door open, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
+   "seed": 152
+  },
+  "casa_interior-porta": {
+   "lugar": "casa_interior/porta (noite)",
+   "prompt": "the inside of a modest house's front door, a small entry hall with a coat hook and a little table, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
+   "seed": 166
+  }
+ }
+}

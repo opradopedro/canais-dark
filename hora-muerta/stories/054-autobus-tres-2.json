@@ -20,6 +20,604 @@
  ],
  "elenco": {
   "lucia": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "longo",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "tunica",
+   "roupa_cor": "#7a3a4a"
+  },
+  "tono": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "jaqueta",
+   "roupa_cor": "#5a3a3a"
+  },
+  "chofer": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#1f2a44",
+   "chapeu": "bone",
+   "chapeu_cor": "#6a5a3a"
+  },
+  "sem_rosto": {
+   "tipo": "humano",
+   "rosto_cor": "#e8e0d0",
+   "sem_rosto": true,
+   "cabelo": "careca",
+   "roupa": "jaqueta",
+   "roupa_cor": "#2a3a2a"
+  }
+ },
+ "codigo": "HM054",
+ "parte": 2,
+ "anterior": "HM053",
+ "titulo": "El autobús fantasma se llevó algo de mi casa 🚌 Parte 2 #terror #shorts",
+ "capa": "BOLETO DE 1994",
+ "descripcion": "Lucía no se subió al autobús de las tres. Pero cuando llegó a casa, su hijo tenía los tenis mojados y un boleto de 1994 en el bolsillo.\n\n¿Tú habrías mirado adentro?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "Desde el autobús fantasma, la voz de su hijo *Toño* la llama.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto-onibus",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Mamá, súbete, tengo frío, aquí hay lugar.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-vindo",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Lucía aprieta los ojos y no levanta la cabeza.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "De reojo ve las ventanas. Ya no están vacías.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-meio-onibus",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Hay caras pegadas al vidrio, *apretadas*, mirándola.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-acostamento",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Una es doña Chayo, la vecina que desapareció en mayo.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-curva",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Quédate, porque el autobús no se fue solo.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-indo",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
+  },
+  {
+   "texto": "La puerta se cierra. El autobús arranca sin ruido.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-indo-onibus",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y en la última ventana, una mano pequeña *le dice adiós*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-indo",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A las tres y media llega el autobús de verdad.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-vindo-onibus",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "chofer",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Lucía sube llorando y le cuenta todo al chofer.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "sentar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "chofer",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "El chofer frena en la curva y se persigna.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-curva",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "chofer",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "El de las tres cayó por esa curva en *mil novecientos noventa y cuatro*. No hubo sobrevivientes.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-curva",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Lucía llega a casa corriendo. Toño está dormido en su cama.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.38,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Lo abraza fuerte. Respira. Está tibio.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "agachar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "tono",
+      "pose": "deitado",
+      "rosto": "triste",
+      "v": 0.8,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pero sus tenis están mojados, llenos de lodo de carretera.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "agachar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y en su bolsillo hay un boleto de autobús, con fecha de *mil novecientos noventa y cuatro*.",
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Si esperas en esa parada, mira tu reloj.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 12,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "hm-autobus-tres",
+ "elenco_3d": {
+  "lucia": {
    "semente": 5311,
    "corpo": "medio",
    "cabelo": "longo",
@@ -39,88 +637,7 @@
    "acessorio": "bone"
   }
  },
- "codigo": "HM054",
- "parte": 2,
- "anterior": "HM053",
- "titulo": "El autobús fantasma se llevó algo de mi casa 🚌 Parte 2 #terror #shorts",
- "capa": "BOLETO DE 1994",
- "descripcion": "Lucía no se subió al autobús de las tres. Pero cuando llegó a casa, su hijo tenía los tenis mojados y un boleto de 1994 en el bolsillo.\n\n¿Tú habrías mirado adentro?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
- "visual": "3d",
- "lineas": [
-  {
-   "texto": "Desde el autobús fantasma, la voz de su hijo *Toño* la llama.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Mamá, súbete, tengo frío, aquí hay lugar.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Lucía aprieta los ojos y no levanta la cabeza.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "De reojo ve las ventanas. Ya no están vacías.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Hay caras pegadas al vidrio, *apretadas*, mirándola.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Una es doña Chayo, la vecina que desapareció en mayo.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Quédate, porque el autobús no se fue solo.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "La puerta se cierra. El autobús arranca sin ruido.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Y en la última ventana, una mano pequeña *le dice adiós*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "A las tres y media llega el autobús de verdad.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Lucía sube llorando y le cuenta todo al chofer.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "El chofer frena en la curva y se persigna.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "El de las tres cayó por esa curva en *mil novecientos noventa y cuatro*. No hubo sobrevivientes.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Lucía llega a casa corriendo. Toño está dormido en su cama.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Lo abraza fuerte. Respira. Está tibio.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Pero sus tenis están mojados, llenos de lodo de carretera.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Y en su bolsillo hay un boleto de autobús, con fecha de *mil novecientos noventa y cuatro*.",
-   "pausa": 0.8
-  },
-  {
-   "texto": "Si esperas en esa parada, mira tu reloj.",
-   "pausa": 0.3
-  }
- ],
- "cenas": [
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -415,19 +932,6 @@
      "marca": "ponto"
     }
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 12,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }

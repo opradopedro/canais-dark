@@ -21,6 +21,600 @@
  ],
  "elenco": {
   "rosa": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "longo",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#3a4a5a"
+  },
+  "beto": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#6a5a3a",
+   "chapeu": "bone",
+   "chapeu_cor": "#3a4a5a"
+  },
+  "alta": {
+   "tipo": "humano",
+   "rosto_cor": "#2a2a2a",
+   "membro": "#1c1c1c",
+   "roupa": "trapos",
+   "roupa_cor": "#111",
+   "sem_rosto": true,
+   "cabelo": "careca"
+  }
+ },
+ "codigo": "HM050",
+ "parte": 2,
+ "anterior": "HM049",
+ "titulo": "La cosa del monte aprendió mi voz 🌲 Parte 2 #terror #shorts",
+ "capa": "YA ESTOY ADENTRO",
+ "descripcion": "Rosa no contestó a ninguna de las dos voces. Caminó hasta la torre. Pero la cosa del monte ya había aprendido a hablar como ella.\n\n¿Tú habrías abierto?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "Dos voces de su hermano la llaman, una a cada *lado*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-trilha",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "andar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Rosa no contesta. Saca el radio: Beto, ¿dónde estás?",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "La respuesta llega del radio, no del bosque.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-toco",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Estoy en la torre. Nunca salí. Me quedé dormido.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "beto",
+      "pose": "deitado",
+      "rosto": "calmo",
+      "v": 0.8,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "¿Quién se llevó la linterna?",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-entre_arvores",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Rosa camina hacia la torre, sin correr, sin mirar a los lados.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-trilha",
+    "cam": {
+     "z": [
+      1.42,
+      1.3
+     ],
+     "x": 0.38,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Las dos voces la siguen, una a cada lado, entre los pinos.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-fundo",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Quédate, porque la cosa aprendió algo nuevo esa noche.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
+  },
+  {
+   "texto": "Detrás de ella, una voz grita *¡Beto, ábreme!*, con la voz de Rosa.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "correr",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.86,
+      "esc": 1.2,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "En el radio, Beto dice: ya bajo, te estoy oyendo en la puerta.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "beto",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Rosa grita al radio: no abras, esa no soy yo.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-trilha",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "correr",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ella llega primero, sube, y cierran la escotilla juntos.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "beto",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Toda la noche, algo alto camina alrededor de la torre.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Golpea la ventana y habla con la voz de *su mamá*, que murió hace años.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.46,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "beto",
+      "pose": "agachar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Al amanecer, se va. Solo quedan huellas largas en el lodo.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-trilha-dia",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "dourado"
+    ]
+   }
+  },
+  {
+   "texto": "La linterna de Beto está en la puerta, encendida.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "agachar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Esa tarde, en el radio de la central, alguien llama con la voz de Rosa: *ya estoy adentro*.",
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "floresta-clareira-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Si oyes tu nombre, no contestes.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "floresta-fundo",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": 1
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 8,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "hm-voz-del-monte",
+ "elenco_3d": {
+  "rosa": {
    "semente": 4911,
    "corpo": "magro",
    "cabelo": "rabo",
@@ -34,88 +628,7 @@
    "acessorio": "bone"
   }
  },
- "codigo": "HM050",
- "parte": 2,
- "anterior": "HM049",
- "titulo": "La cosa del monte aprendió mi voz 🌲 Parte 2 #terror #shorts",
- "capa": "YA ESTOY ADENTRO",
- "descripcion": "Rosa no contestó a ninguna de las dos voces. Caminó hasta la torre. Pero la cosa del monte ya había aprendido a hablar como ella.\n\n¿Tú habrías abierto?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
- "visual": "3d",
- "lineas": [
-  {
-   "texto": "Dos voces de su hermano la llaman, una a cada *lado*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Rosa no contesta. Saca el radio: Beto, ¿dónde estás?",
-   "pausa": 0.5
-  },
-  {
-   "texto": "La respuesta llega del radio, no del bosque.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Estoy en la torre. Nunca salí. Me quedé dormido.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "¿Quién se llevó la linterna?",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Rosa camina hacia la torre, sin correr, sin mirar a los lados.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Las dos voces la siguen, una a cada lado, entre los pinos.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Quédate, porque la cosa aprendió algo nuevo esa noche.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Detrás de ella, una voz grita *¡Beto, ábreme!*, con la voz de Rosa.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "En el radio, Beto dice: ya bajo, te estoy oyendo en la puerta.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Rosa grita al radio: no abras, esa no soy yo.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Ella llega primero, sube, y cierran la escotilla juntos.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Toda la noche, algo alto camina alrededor de la torre.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Golpea la ventana y habla con la voz de *su mamá*, que murió hace años.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Al amanecer, se va. Solo quedan huellas largas en el lodo.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "La linterna de Beto está en la puerta, encendida.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Esa tarde, en el radio de la central, alguien llama con la voz de Rosa: *ya estoy adentro*.",
-   "pausa": 0.8
-  },
-  {
-   "texto": "Si oyes tu nombre, no contestes.",
-   "pausa": 0.3
-  }
- ],
- "cenas": [
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -408,19 +921,6 @@
      "marca": "fundo"
     }
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 8,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }

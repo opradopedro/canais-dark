@@ -197,6 +197,21 @@ cenário principal e criatura DIFERENTES das últimas 5 séries do canal; varie 
 lua cheia, entardecer, neve…). O fiscal avisa repetição (`motor-3d/variedade.py`). Se a história precisar de um cenário
 que ainda é rascunho, escreva com o pronto mais parecido e anote no `PLANO-MUNDOS.md` o cenário que faltou.
 
+## Motor ILUSTRADO no Hora Muerta e no Signal Lost (REGRA do Pedro, 15/11: "a próxima série já no modelo novo")
+
+A partir de **HM045** e **SV038** (o fiscal barra), HM e SV saem no motor ilustrado: fundo ilustrado por IA (um por LUGAR,
+Release "fundos") + boneco 2D, câmera, criatura e legenda em código, vertical 9:16 nativo. O jeito de escrever NÃO muda:
+
+1. Escreva a parte como sempre no formato 3D (`"visual": "3d"`, `elenco`, `cenas` com cenario/marca/plano/luz/atores/criatura).
+2. Rode `python motor-ilustrado/converter_3d.py <arquivo.json> [...]`. Ele troca para `"visual": "ilustrado"`, põe a cena em
+   cada fala e cria/atualiza `motor-ilustrado/cenarios/<hm|sv>-<serie>.json` (um fundo por lugar, variante de dia).
+3. Rode o fiscal. Envie os roteiros JUNTO com o `cenarios/*.json`: o push gera os fundos (cota grátis da Cloudflare,
+   ~45 por dia; o que não couber sai no dia seguinte às 00:15 UTC). Escreva com pelo menos 3 dias de antecedência.
+4. Criaturas que o motor desenha: olhos_no_escuro (crianças de olhos pretos), espantalho, alta/vulto (sem rosto),
+   lobisomem (nahual), cao_negro, sem_rosto, rastejante. Outra criatura nova: use a mais parecida ou peça para incluir.
+   Cenários conhecidos: casa_interior, bairro, vila, floresta, cemiterio, estrada (outro: o conversor usa o nome como
+   descrição; prefira acrescentar a descrição em LUGARES do converter_3d.py).
+
 ## Cena que muda (REGRA do Pedro, 12/11: "repete a mesma cena, nada muda na imagem")
 
 Vale para todo roteiro `"visual": "3d"` (motor cartoon). A imagem tem que mostrar o que a voz está falando:

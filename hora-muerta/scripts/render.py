@@ -63,6 +63,18 @@ def main():
     raw_h = carregar(a.historia)
     estado = resolver(raw_h, json.load(open(a.tempos)))
     tresd = estado.get("visual") in ("3d", "cartoon")
+    if raw_h.get("visual") == "ilustrado":
+        # motor ilustrado (Pedro 15/11): no Actions o desenho roda nas fatias (como o cartoon); aqui so guarda o roteiro
+        base = os.path.abspath(a.video)[:-len("_video.mp4")] if a.video.endswith("_video.mp4") else os.path.splitext(os.path.abspath(a.video))[0]
+        if os.environ.get("CARTOON_PREP") and not a.teste:
+            import shutil
+            shutil.copy(a.historia, base + "_roteiro.json")
+            print("CARTOON_PREP: roteiro ilustrado guardado para as fatias", base + "_roteiro.json", flush=True)
+            return
+        subprocess.run([sys.executable, os.path.join(RAIZ, "motor-ilustrado", "producao.py"), "video",
+                        os.path.abspath(a.historia), os.path.abspath(a.tempos), os.path.abspath(a.video)], check=True)
+        print("ok", a.video)
+        return
     if estado.get("visual") == "cartoon" or (tresd and motor_visual(a.historia, raw_h) == "cartoon"):
         if os.environ.get("CARTOON_PREP") and not a.teste:
             # producao em fatias (canais.yml, jobs cartoon-*): aqui so guarda o roteiro ja preenchido ao lado dos

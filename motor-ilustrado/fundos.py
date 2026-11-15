@@ -88,8 +88,9 @@ def existentes(rel):
 
 
 def mundos():
-    for f in sorted(glob.glob(os.path.join(AQUI, "cenarios", "*.json"))):
-        yield json.load(open(f))
+    ms = [json.load(open(f)) for f in sorted(glob.glob(os.path.join(AQUI, "cenarios", "*.json")))]
+    # "ordem" menor gera primeiro (a cota gratis do dia acaba: o que sai antes no YouTube vem antes)
+    yield from sorted(ms, key=lambda m: m.get("ordem", 50))
 
 
 def prompt_de(m, c):

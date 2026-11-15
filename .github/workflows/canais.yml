@@ -162,6 +162,14 @@ jobs:
         if: steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas'
         run: python -m playwright install --with-deps chromium > /dev/null
 
+      # motor ilustrado (HM/SV/CL com "visual": "ilustrado", Pedro 15/11): a capa sai de um quadro dele
+      - name: Motor ilustrado (Node)
+        if: steps.ligado.outputs.sim == '1' && steps.qual.outputs.tarefa != 'metricas'
+        continue-on-error: true
+        run: |
+          npm install --prefix motor-ilustrado --no-audit --no-fund playwright@latest > /dev/null
+          cd motor-ilustrado && npx playwright install --with-deps chromium > /dev/null && cd ..
+
       # caixa de narracoes + contador, sons, modelos do Whisper e do alinhador da legenda (torch), voz reserva e Three.js: guardados entre execucoes
       - name: Recuperar caixa de narracoes e sons
         if: steps.ligado.outputs.sim == '1'
@@ -309,16 +317,26 @@ jobs:
           pip install -q playwright
           python -m playwright install --with-deps chromium > /dev/null
           npm ci --prefix motor-cartoon --no-audit --no-fund
+          npm install --prefix motor-ilustrado --no-audit --no-fund playwright@latest > /dev/null
+          cd motor-ilustrado && npx playwright install --with-deps chromium > /dev/null && cd ..
       - uses: actions/download-artifact@v4
         with:
           name: cartoon-prod
           path: /tmp/cartoon-prod
       - name: Desenhar fatia ${{ matrix.fatia }}/10
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -o pipefail
           mkdir -p /tmp/fatias
           for r in /tmp/cartoon-prod/*_roteiro.json; do
             b="${r%_roteiro.json}"; cod="$(basename "$b")"
+            if python3 -c "import json,sys; sys.exit(0 if json.load(open('$r')).get('visual')=='ilustrado' else 1)"; then
+              # motor ilustrado (Pedro 15/11): vertical 9:16 nativo, so os quadros desta fatia
+              python3 motor-ilustrado/producao.py fatia "$r" "${b}_tempos.json" "${{ matrix.fatia }}" 10 \
+                "/tmp/fatias/fatia-${cod}-${{ matrix.fatia }}.mp4" 2>&1 | tee -a /tmp/fatia-log.txt
+              continue
+            fi
             node motor-cartoon/render.mjs --roteiro "$r" --tempos "${b}_tempos.json" \
               --shard "${{ matrix.fatia }}/10" --saida "/tmp/fatias/fatia-${cod}-${{ matrix.fatia }}.mp4" 2>&1 | tee -a /tmp/fatia-log.txt
           done

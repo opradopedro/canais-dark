@@ -18,6 +18,572 @@
  ],
  "elenco": {
   "kit": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#3a4a5a"
+  },
+  "ruth": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "roupa_cor": "#7a3a4a"
+  },
+  "cao": {
+   "tipo": "cao",
+   "pelo": "#141414",
+   "olhos_cor": "#ffd23a"
+  }
+ },
+ "codigo": "SV045",
+ "parte": 2,
+ "anterior": "SV044",
+ "titulo": "The black dog brought back my house key 🐕 Part 2 #horror #shorts",
+ "capa": "IT BROUGHT A KEY",
+ "descripcion": "Kit never put the bowl out. Each night the black dog came closer: the street, the lawn, the porch. When he finally fed it, the bowl came back with something inside.\n\n> Part 3: {when_next}.\nWould you open the door?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "A black dog sits on Kit's lawn, staring at his *open window*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-janela",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Kit slams it shut. The dog faces his door.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It stays there until sunrise, then walks away down the street.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-fim_rua-dia",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In the morning, the grass where it sat is dead, in a perfect circle.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "agachar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Second night. No bowl again. Kit wants to prove it's just a stray.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "At 2 AM the dog is *on the porch*, breathing on the glass.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Third night. Kit's phone rings at 1:59. It's Ruth, crying.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "apontar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Put the bowl out now. Please. It's at your door.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "ruth",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because this is the part Ruth never told the police.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-poste",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
+  },
+  {
+   "texto": "Kit fills a mixing bowl with meat and opens the door a crack.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He slides it out with his foot. He never looks up.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Something wet and hot breathes on his ankle.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then he hears it eat. Slowly. *Carefully*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "cao",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "At sunrise, the bowl is back on his doormat, licked clean.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.38,
+     "y": 0.55
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "andar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "texto": "But it isn't empty. There's something shiny at the bottom.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A house key, covered in saliva.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "agachar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Kit checks his pocket. It's *his key*. He never lost it.",
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "casa_interior-sala-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "So whose key is in his pocket? Part three, {when_next}.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "bairro-rua-dia",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.86,
+      "esc": 0.96,
+      "vira": 1
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 11,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "sv-black-dog",
+ "elenco_3d": {
+  "kit": {
    "semente": 4411,
    "corpo": "magro",
    "cabelo": "curto",
@@ -31,88 +597,7 @@
    "roupa": "vestido"
   }
  },
- "codigo": "SV045",
- "parte": 2,
- "anterior": "SV044",
- "titulo": "The black dog brought back my house key 🐕 Part 2 #horror #shorts",
- "capa": "IT BROUGHT A KEY",
- "descripcion": "Kit never put the bowl out. Each night the black dog came closer: the street, the lawn, the porch. When he finally fed it, the bowl came back with something inside.\n\n> Part 3: {when_next}.\nWould you open the door?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
- "visual": "3d",
- "lineas": [
-  {
-   "texto": "A black dog sits on Kit's lawn, staring at his *open window*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Kit slams it shut. The dog faces his door.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "It stays there until sunrise, then walks away down the street.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "In the morning, the grass where it sat is dead, in a perfect circle.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Second night. No bowl again. Kit wants to prove it's just a stray.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "At 2 AM the dog is *on the porch*, breathing on the glass.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Third night. Kit's phone rings at 1:59. It's Ruth, crying.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Put the bowl out now. Please. It's at your door.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Stay, because this is the part Ruth never told the police.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Kit fills a mixing bowl with meat and opens the door a crack.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "He slides it out with his foot. He never looks up.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Something wet and hot breathes on his ankle.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Then he hears it eat. Slowly. *Carefully*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "At sunrise, the bowl is back on his doormat, licked clean.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "But it isn't empty. There's something shiny at the bottom.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "A house key, covered in saliva.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Kit checks his pocket. It's *his key*. He never lost it.",
-   "pausa": 0.8
-  },
-  {
-   "texto": "So whose key is in his pocket? Part three, {when_next}.",
-   "pausa": 0.3
-  }
- ],
- "cenas": [
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -393,19 +878,6 @@
      "marca": "fim_rua"
     }
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 11,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }

@@ -21,6 +21,600 @@
  ],
  "elenco": {
   "martin": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "jaqueta",
+   "roupa_cor": "#5a3a3a",
+   "chapeu": "bone",
+   "chapeu_cor": "#6a5a3a"
+  },
+  "curandero": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#6a5a3a",
+   "barba_estilo": "curta",
+   "barba": "#8a8a8a"
+  },
+  "cao": {
+   "tipo": "cao",
+   "pelo": "#141414",
+   "olhos_cor": "#ffd23a"
+  },
+  "nahual": {
+   "tipo": "macaco",
+   "pelo": "#1c1a1a",
+   "rosto_cor": "#3a3030",
+   "olhos": "vermelhos"
+  }
+ },
+ "codigo": "HM051",
+ "parte": 1,
+ "titulo": "El perro que entra al panteón no es perro 🐺 Parte 1 #terror #shorts",
+ "capa": "NO ES UN PERRO",
+ "descripcion": "Martín es el nuevo velador del panteón. El velador viejo le dejó una regla: el perro grande que entra de noche no es un perro.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú le habrías abierto?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "En este panteón, el perro negro que entra de noche camina en *dos patas*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entrada",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "cao",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "El último velador lo vio, y se fue del pueblo sin despedirse.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entrada-dia",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.38,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Martín, el nuevo velador, empieza esta semana.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-arvore_morta-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": []
+   }
+  },
+  {
+   "texto": "El viejo solo dejó un papel clavado en la puerta de la capilla.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Si entra un perro negro grande, no lo llames.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entre_cruzes",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "No le des la espalda. Y prende la vela de la capilla.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "De día, el panteón es tranquilo: flores, abuelas, cempasúchil.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-cruz_grande-dia",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Las primeras dos semanas, nada. Solo gatos y viento.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-fundo",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "sentar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Quédate, porque la noche quince Martín entendió el papel.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-arvore_morta",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
+  },
+  {
+   "texto": "A las dos de la mañana, un perro negro entra por la reja.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entrada",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.3,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Es enorme, del tamaño de un becerro, y camina sin hacer ruido.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entre_cruzes",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.3,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Se mete entre las cruces, olfateando las tumbas nuevas.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-fundo",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.3,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Martín no lo llama. Lo sigue con la linterna.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entre_cruzes",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.86,
+      "esc": 1.04,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "El perro se detiene frente a la capilla y lo mira.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.3,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Luego se levanta *en dos patas*, despacio, como un hombre.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.3,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Mide más que la cruz grande del centro.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-cruz_grande",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.3,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y con voz de hombre viejo dice: Martín, *ábreme la capilla*.",
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.86,
+      "esc": 1.04,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "¿Qué hay adentro? Parte dos, {dia_siguiente}.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "cemiterio-cruz_grande",
+    "cam": {
+     "z": [
+      1.42,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.86,
+      "esc": 1.04,
+      "vira": -1
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 14,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "hm-nahual-panteon",
+ "elenco_3d": {
+  "martin": {
    "semente": 5111,
    "corpo": "forte",
    "cabelo": "curto",
@@ -35,87 +629,7 @@
    "acessorio": "barba"
   }
  },
- "codigo": "HM051",
- "parte": 1,
- "titulo": "El perro que entra al panteón no es perro 🐺 Parte 1 #terror #shorts",
- "capa": "NO ES UN PERRO",
- "descripcion": "Martín es el nuevo velador del panteón. El velador viejo le dejó una regla: el perro grande que entra de noche no es un perro.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú le habrías abierto?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
- "visual": "3d",
- "lineas": [
-  {
-   "texto": "En este panteón, el perro negro que entra de noche camina en *dos patas*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "El último velador lo vio, y se fue del pueblo sin despedirse.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Martín, el nuevo velador, empieza esta semana.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "El viejo solo dejó un papel clavado en la puerta de la capilla.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Si entra un perro negro grande, no lo llames.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "No le des la espalda. Y prende la vela de la capilla.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "De día, el panteón es tranquilo: flores, abuelas, cempasúchil.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Las primeras dos semanas, nada. Solo gatos y viento.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Quédate, porque la noche quince Martín entendió el papel.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "A las dos de la mañana, un perro negro entra por la reja.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Es enorme, del tamaño de un becerro, y camina sin hacer ruido.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Se mete entre las cruces, olfateando las tumbas nuevas.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Martín no lo llama. Lo sigue con la linterna.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "El perro se detiene frente a la capilla y lo mira.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Luego se levanta *en dos patas*, despacio, como un hombre.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Mide más que la cruz grande del centro.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Y con voz de hombre viejo dice: Martín, *ábreme la capilla*.",
-   "pausa": 0.8
-  },
-  {
-   "texto": "¿Qué hay adentro? Parte dos, {dia_siguiente}.",
-   "pausa": 0.3
-  }
- ],
- "cenas": [
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -404,19 +918,6 @@
      "marca": "mausoleu"
     }
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 14,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }

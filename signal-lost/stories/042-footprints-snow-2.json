@@ -20,6 +20,615 @@
  ],
  "elenco": {
   "sam": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "jaqueta",
+   "roupa_cor": "#40405a",
+   "barba_estilo": "curta",
+   "barba": "#4a2a14"
+  },
+  "jess": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#6a5a3a"
+  },
+  "sheriff": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#1f2a44",
+   "chapeu": "bone",
+   "chapeu_cor": "#5a5040"
+  },
+  "alta": {
+   "tipo": "humano",
+   "rosto_cor": "#2a2a2a",
+   "membro": "#1c1c1c",
+   "roupa": "trapos",
+   "roupa_cor": "#111",
+   "sem_rosto": true,
+   "cabelo": "careca"
+  }
+ },
+ "codigo": "SV042",
+ "parte": 2,
+ "anterior": "SV041",
+ "titulo": "The voice in our attic repeats what we say ❄️ Part 2 #horror #shorts",
+ "capa": "IT REPEATS US",
+ "descripcion": "The attic hatch was open. A newspaper that isn't theirs appeared on the table. Sam hung a bell on the hatch. At 3:12 AM, it rang.\n\n> Part 3: {when_next}.\nWould you wait for the plow?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "At midnight, the attic hatch is *open*, a black square in the ceiling.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Sam climbs a chair with the flashlight. Dust, beams, cold air.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Nobody. Just a smell of wet wool.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He nails the hatch shut and they don't sleep.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "jess",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In the morning there's a *newspaper* on the kitchen table.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "jess",
+      "pose": "agachar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It's from a town forty miles away, dated three weeks ago.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "jess",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "They never bought it. The road has been closed for days.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-trilha",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
+  },
+  {
+   "texto": "Then the food starts to disappear. Bread. A whole ham. Candles.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "jess",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because Sam set a trap that night.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
+  },
+  {
+   "texto": "He hangs a little *bell* on the nails of the hatch.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "If anything moves it, they'll know.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "sentar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "jess",
+      "pose": "sentar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "At 3:12 AM, the bell rings once.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then a voice comes through the ceiling, quiet and calm.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "jess",
+      "pose": "sentar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It repeats their dinner conversation, *word for word*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sofa",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "jess",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Jess's laugh. Sam's joke about the hunter. In their exact voices.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Jess grabs the car keys. Sam grabs the axe.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.49,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "jess",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     },
+     {
+      "id": "sam",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And the voice upstairs says, in Jess's voice: grab the keys.",
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "jess",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then the hatch nails start to bend. Part three, {when_next}.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.42,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sam",
+      "pose": "lutar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": -1
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 11,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "sv-footprints-snow",
+ "elenco_3d": {
+  "sam": {
    "semente": 4111,
    "corpo": "forte",
    "cabelo": "curto",
@@ -40,88 +649,7 @@
    "acessorio": "bone"
   }
  },
- "codigo": "SV042",
- "parte": 2,
- "anterior": "SV041",
- "titulo": "The voice in our attic repeats what we say ❄️ Part 2 #horror #shorts",
- "capa": "IT REPEATS US",
- "descripcion": "The attic hatch was open. A newspaper that isn't theirs appeared on the table. Sam hung a bell on the hatch. At 3:12 AM, it rang.\n\n> Part 3: {when_next}.\nWould you wait for the plow?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
- "visual": "3d",
- "lineas": [
-  {
-   "texto": "At midnight, the attic hatch is *open*, a black square in the ceiling.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Sam climbs a chair with the flashlight. Dust, beams, cold air.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Nobody. Just a smell of wet wool.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "He nails the hatch shut and they don't sleep.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "In the morning there's a *newspaper* on the kitchen table.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "It's from a town forty miles away, dated three weeks ago.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "They never bought it. The road has been closed for days.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Then the food starts to disappear. Bread. A whole ham. Candles.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Stay, because Sam set a trap that night.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "He hangs a little *bell* on the nails of the hatch.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "If anything moves it, they'll know.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "At 3:12 AM, the bell rings once.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Then a voice comes through the ceiling, quiet and calm.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "It repeats their dinner conversation, *word for word*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Jess's laugh. Sam's joke about the hunter. In their exact voices.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Jess grabs the car keys. Sam grabs the axe.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "And the voice upstairs says, in Jess's voice: grab the keys.",
-   "pausa": 0.8
-  },
-  {
-   "texto": "Then the hatch nails start to bend. Part three, {when_next}.",
-   "pausa": 0.3
-  }
- ],
- "cenas": [
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -424,19 +952,6 @@
      "marca": "quarto"
     }
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 11,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }

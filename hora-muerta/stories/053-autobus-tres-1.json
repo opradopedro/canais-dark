@@ -20,6 +20,567 @@
  ],
  "elenco": {
   "lucia": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "longo",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "tunica",
+   "roupa_cor": "#7a3a4a"
+  },
+  "tono": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "jaqueta",
+   "roupa_cor": "#5a3a3a"
+  },
+  "chofer": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#1f2a44",
+   "chapeu": "bone",
+   "chapeu_cor": "#6a5a3a"
+  },
+  "sem_rosto": {
+   "tipo": "humano",
+   "rosto_cor": "#e8e0d0",
+   "sem_rosto": true,
+   "cabelo": "careca",
+   "roupa": "jaqueta",
+   "roupa_cor": "#2a3a2a"
+  }
+ },
+ "codigo": "HM053",
+ "parte": 1,
+ "titulo": "Nunca subas al autobús de las 3:00 🚌 Parte 1 #terror #shorts",
+ "capa": "NO TE SUBAS",
+ "descripcion": "Los choferes de la ruta tienen una regla: el autobús de las tres no existe. Esa madrugada se detuvo frente a Lucía, y la voz de su hijo la llamó desde adentro.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú te habrías subido?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "A las tres, un autobús sin luces se detiene frente a Lucía y *abre la puerta*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto-onibus",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ese autobús no existe.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Lucía cocina de noche, sale a las dos y media y espera en la carretera.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "sentar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Los choferes de la ruta le enseñaron tres reglas.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "chofer",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "El autobús de las tres *no existe*. Si se detiene, no te subas.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-meio",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
+  },
+  {
+   "texto": "Y si sube alguien sin cara, no lo mires.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-acostamento",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "El primero de verdad pasa a las tres y media. Siempre.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-vindo",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
+  },
+  {
+   "texto": "Esa madrugada hay neblina y la parada está sola.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Quédate, porque a las tres en punto algo dobló la curva.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-curva",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
+  },
+  {
+   "texto": "Un autobús viejo, con *luces verdes* por dentro, frena frente a ella.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-vindo-onibus",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "No hace ruido de motor. Solo el chillido de los frenos.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Por la ventana, Lucía no ve pasajeros.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-meio",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "El chofer voltea despacio. *No tiene cara*, solo piel lisa.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ella baja la mirada al suelo, como dice la regla.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-acostamento",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "La puerta se abre con un suspiro de aire frío.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto-onibus",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y desde adentro, una voz que conoce muy bien.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-indo",
+    "cam": {
+     "z": [
+      1.42,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Mamá, *súbete*, ya vámonos a la casa.",
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "tono",
+      "pose": "deitado",
+      "rosto": "triste",
+      "v": 0.8,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pero Toño está dormido en casa. ¿O no? Parte dos, {dia_siguiente}.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.42,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 12,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "hm-autobus-tres",
+ "elenco_3d": {
+  "lucia": {
    "semente": 5311,
    "corpo": "medio",
    "cabelo": "longo",
@@ -39,87 +600,7 @@
    "acessorio": "bone"
   }
  },
- "codigo": "HM053",
- "parte": 1,
- "titulo": "Nunca subas al autobús de las 3:00 🚌 Parte 1 #terror #shorts",
- "capa": "NO TE SUBAS",
- "descripcion": "Los choferes de la ruta tienen una regla: el autobús de las tres no existe. Esa madrugada se detuvo frente a Lucía, y la voz de su hijo la llamó desde adentro.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú te habrías subido?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
- "visual": "3d",
- "lineas": [
-  {
-   "texto": "A las tres, un autobús sin luces se detiene frente a Lucía y *abre la puerta*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Ese autobús no existe.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Lucía cocina de noche, sale a las dos y media y espera en la carretera.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Los choferes de la ruta le enseñaron tres reglas.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "El autobús de las tres *no existe*. Si se detiene, no te subas.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Y si sube alguien sin cara, no lo mires.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "El primero de verdad pasa a las tres y media. Siempre.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Esa madrugada hay neblina y la parada está sola.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Quédate, porque a las tres en punto algo dobló la curva.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Un autobús viejo, con *luces verdes* por dentro, frena frente a ella.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "No hace ruido de motor. Solo el chillido de los frenos.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Por la ventana, Lucía no ve pasajeros.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "El chofer voltea despacio. *No tiene cara*, solo piel lisa.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Ella baja la mirada al suelo, como dice la regla.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "La puerta se abre con un suspiro de aire frío.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Y desde adentro, una voz que conoce muy bien.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Mamá, *súbete*, ya vámonos a la casa.",
-   "pausa": 0.8
-  },
-  {
-   "texto": "Pero Toño está dormido en casa. ¿O no? Parte dos, {dia_siguiente}.",
-   "pausa": 0.3
-  }
- ],
- "cenas": [
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -394,19 +875,6 @@
      "marca": "ponto"
     }
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 12,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }

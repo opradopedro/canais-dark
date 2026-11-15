@@ -1,0 +1,78 @@
+{
+ "mundo": "hm-siete-espantapajaros",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "eerie horror story illustration, dark moody atmosphere, muted desaturated colors with cold blue shadows, realistic proportions, unsettling and lonely, mature adult tone, not childish",
+ "ordem": 3,
+ "cenarios": {
+  "vila-alto-dia": {
+   "lugar": "vila/alto (dia)",
+   "prompt": "a low hill above a wide cornfield, seven scarecrows on wooden poles standing in a row, on a dry farm in the Latin American countryside, in pale overcast daylight",
+   "seed": 100
+  },
+  "vila-moinho-dia": {
+   "lugar": "vila/moinho (dia)",
+   "prompt": "an old metal windmill at the edge of a cornfield, on a dry farm in the Latin American countryside, in pale overcast daylight",
+   "seed": 107
+  },
+  "vila-praca-dia": {
+   "lugar": "vila/praca (dia)",
+   "prompt": "a small town square with a kiosk, benches and an old church, on a dry farm in the Latin American countryside, in pale overcast daylight",
+   "seed": 114
+  },
+  "vila-casa-dia": {
+   "lugar": "vila/casa (dia)",
+   "prompt": "the porch of a humble farmhouse with adobe walls, on a dry farm in the Latin American countryside, in pale overcast daylight",
+   "seed": 121
+  },
+  "vila-taverna-dia": {
+   "lugar": "vila/taverna (dia)",
+   "prompt": "a small rural cantina with wooden tables, on a dry farm in the Latin American countryside, in pale overcast daylight",
+   "seed": 128
+  },
+  "vila-mercado-dia": {
+   "lugar": "vila/mercado (dia)",
+   "prompt": "a narrow village market street with closed stalls, on a dry farm in the Latin American countryside, in pale overcast daylight",
+   "seed": 135
+  },
+  "vila-alto": {
+   "lugar": "vila/alto (noite)",
+   "prompt": "a low hill above a wide cornfield, seven scarecrows on wooden poles standing in a row, on a dry farm in the Latin American countryside, at night, dark blue moonlight, deep shadows",
+   "seed": 142
+  },
+  "vila-praca": {
+   "lugar": "vila/praca (noite)",
+   "prompt": "a small town square with a kiosk, benches and an old church, on a dry farm in the Latin American countryside, at night, dark blue moonlight, deep shadows",
+   "seed": 149
+  },
+  "vila-moinho": {
+   "lugar": "vila/moinho (noite)",
+   "prompt": "an old metal windmill at the edge of a cornfield, on a dry farm in the Latin American countryside, at night, dark blue moonlight, deep shadows",
+   "seed": 156
+  },
+  "vila-casa": {
+   "lugar": "vila/casa (noite)",
+   "prompt": "the porch of a humble farmhouse with adobe walls, on a dry farm in the Latin American countryside, at night, dark blue moonlight, deep shadows",
+   "seed": 163
+  },
+  "vila-poco-dia": {
+   "lugar": "vila/poco (dia)",
+   "prompt": "an old stone well in a dirt farmyard facing the cornfield, on a dry farm in the Latin American countryside, in pale overcast daylight",
+   "seed": 170
+  },
+  "vila-poco": {
+   "lugar": "vila/poco (noite)",
+   "prompt": "an old stone well in a dirt farmyard facing the cornfield, on a dry farm in the Latin American countryside, at night, dark blue moonlight, deep shadows",
+   "seed": 121
+  },
+  "vila-mercado": {
+   "lugar": "vila/mercado (noite)",
+   "prompt": "a narrow village market street with closed stalls, on a dry farm in the Latin American countryside, at night, dark blue moonlight, deep shadows",
+   "seed": 128
+  },
+  "vila-taverna": {
+   "lugar": "vila/taverna (noite)",
+   "prompt": "a small rural cantina with wooden tables, on a dry farm in the Latin American countryside, at night, dark blue moonlight, deep shadows",
+   "seed": 156
+  }
+ }
+}

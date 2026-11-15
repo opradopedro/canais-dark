@@ -20,11 +20,23 @@
  ],
  "elenco": {
   "juan": {
-   "semente": 4711,
-   "corpo": "forte",
-   "cabelo": "curto",
-   "roupa": "casual",
-   "acessorio": "bone"
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#40405a",
+   "chapeu": "bone",
+   "chapeu_cor": "#5a3a3a"
+  },
+  "espantalho": {
+   "tipo": "humano",
+   "rosto_cor": "#cdb48a",
+   "membro": "#c8a050",
+   "roupa": "trapos",
+   "roupa_cor": "#6a4a2a",
+   "chapeu": "palha",
+   "olhos": "pretos"
   }
  },
  "codigo": "HM048",
@@ -33,82 +45,576 @@
  "titulo": "El octavo espantapájaros me habló 🌽 Parte 2 #terror #shorts",
  "capa": "AHORA TE TOCA",
  "descripcion": "Juan vigiló el campo desde el pozo toda la noche. Cada hora, el octavo espantapájaros estaba un paso más cerca.\n\n¿Tú le darías la espalda?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
- "visual": "3d",
+ "visual": "ilustrado",
  "lineas": [
   {
    "texto": "Ocho espantapájaros, y el octavo lleva la camisa de un *desaparecido*.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-poco-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.38,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "juan",
+      "pose": "andar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
   },
   {
    "texto": "Juan vigila desde el pozo, con la linterna y un machete.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "juan",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "espantalho",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.86,
+      "esc": 0.88,
+      "vira": -1
+     }
+    ]
+   }
   },
   {
    "texto": "Es la camisa de Don Lalo, el dueño que nunca volvió.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-moinho",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "espantalho",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.1,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Juan no le da la espalda al campo. Es la regla.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-poco",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "juan",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "A las once, el octavo está un surco más cerca.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-mercado",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "espantalho",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.1,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "A la una, otro surco. Nadie lo vio moverse.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "espantalho",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.1,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Juan escucha la paja crujir, como alguien que respira.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-poco",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "juan",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Quédate, porque a las cuatro y cincuenta ya no había distancia.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
   },
   {
    "texto": "El espantapájaros está *a un brazo* de él, quieto, con la cabeza ladeada.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-poco",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "juan",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "espantalho",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.1,
+      "vira": -1
+     }
+    ]
+   }
   },
   {
    "texto": "Huele a tierra mojada y al tabaco que fumaba Don Lalo.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-poco",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "juan",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Juan levanta el machete, pero no se atreve a cortar.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-poco",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "juan",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "espantalho",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.1,
+      "vira": -1
+     }
+    ]
+   }
   },
   {
    "texto": "Debajo del sombrero de paja hay una cara cosida con hilo negro.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "espantalho",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.1,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Y la boca cosida se mueve despacio.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-taverna",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "espantalho",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.1,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Gracias por cuidar mi rancho, muchacho.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-poco",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "juan",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "espantalho",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.1,
+      "vira": -1
+     }
+    ]
+   }
   },
   {
    "texto": "Ahora *te toca a ti* cuidarlo.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "juan",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "espantalho",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.1,
+      "vira": -1
+     }
+    ]
+   }
   },
   {
    "texto": "Sale el sol. Juan cuenta los espantapájaros. Son siete.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "juan",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Pero en el surco nuevo hay uno con *el sombrero de Juan*.",
-   "pausa": 0.8
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "vila-moinho-dia",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "dourado",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "espantalho",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.1,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Y en la casa, el capataz cuenta siete trabajadores, aunque llegaron seis.",
-   "pausa": 0.3
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": []
+   }
   }
  ],
- "cenas": [
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 8,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "hm-siete-espantapajaros",
+ "elenco_3d": {
+  "juan": {
+   "semente": 4711,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "acessorio": "bone"
+  }
+ },
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -391,19 +897,6 @@
     "plano": "aereo",
     "luz": "dia"
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 8,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }

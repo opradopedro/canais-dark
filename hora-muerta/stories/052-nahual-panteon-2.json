@@ -21,6 +21,571 @@
  ],
  "elenco": {
   "martin": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "jaqueta",
+   "roupa_cor": "#5a3a3a",
+   "chapeu": "bone",
+   "chapeu_cor": "#6a5a3a"
+  },
+  "curandero": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#6a5a3a",
+   "barba_estilo": "curta",
+   "barba": "#8a8a8a"
+  },
+  "nahual": {
+   "tipo": "macaco",
+   "pelo": "#1c1a1a",
+   "rosto_cor": "#3a3030",
+   "olhos": "vermelhos"
+  }
+ },
+ "codigo": "HM052",
+ "parte": 2,
+ "anterior": "HM051",
+ "titulo": "El nahual quería entrar a la capilla 🐺 Parte 2 #terror #shorts",
+ "capa": "BUEN VELADOR",
+ "descripcion": "Martín no abrió la capilla. Prendió la vela y aguantó hasta las cinco. En la mañana descubrió quién era el perro negro.\n\n¿Tú habrías aguantado?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "Algo en dos patas rasca la reja y dice: Martín, *ábreme la capilla*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.3,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Martín no contesta. Entra a la capilla de espaldas, mirándolo.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Cierra la reja y prende la vela, como dice el papel.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "La cosa rodea la capilla. Una vuelta, dos, diez.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entre_cruzes",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.3,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Raspa los barrotes con unas uñas largas y amarillas.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-cruz_grande",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.3,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ya no habla como hombre viejo. Ahora habla como su mamá.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-fundo",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.3,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Mijo, tengo frío, déjame entrar tantito.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "agachar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Quédate, porque a las cinco la vela casi se apaga.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-arvore_morta",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
+  },
+  {
+   "texto": "Queda un dedo de cera. La llama tiembla.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Martín se quita la chamarra y tapa el viento con el cuerpo.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Afuera, la cosa *se ríe*, y se va corriendo hacia el monte.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entrada-dia",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "dourado",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.3,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "En la mañana, Martín baja al pueblo, temblando.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca-dia",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.38,
+     "y": 0.45
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "texto": "En la plaza está el curandero, un viejo que todos respetan.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "curandero",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Tiene la cara y los brazos llenos de *rasguños frescos*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "curandero",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Mira a Martín, sonríe, y le dice bajito: buen velador.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-mercado-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "curandero",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Esa noche, Martín revisa la capilla antes de prender la vela.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entrada-dia",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.38,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "andar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "texto": "En la puerta hay rasguños nuevos, largos y profundos, *por dentro*.",
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "martin",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y la vela ya estaba encendida.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.86,
+      "esc": 1.04,
+      "vira": 1
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 10,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "hm-nahual-panteon",
+ "elenco_3d": {
+  "martin": {
    "semente": 5111,
    "corpo": "forte",
    "cabelo": "curto",
@@ -35,88 +600,7 @@
    "acessorio": "barba"
   }
  },
- "codigo": "HM052",
- "parte": 2,
- "anterior": "HM051",
- "titulo": "El nahual quería entrar a la capilla 🐺 Parte 2 #terror #shorts",
- "capa": "BUEN VELADOR",
- "descripcion": "Martín no abrió la capilla. Prendió la vela y aguantó hasta las cinco. En la mañana descubrió quién era el perro negro.\n\n¿Tú habrías aguantado?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
- "visual": "3d",
- "lineas": [
-  {
-   "texto": "Algo en dos patas rasca la reja y dice: Martín, *ábreme la capilla*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Martín no contesta. Entra a la capilla de espaldas, mirándolo.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Cierra la reja y prende la vela, como dice el papel.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "La cosa rodea la capilla. Una vuelta, dos, diez.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Raspa los barrotes con unas uñas largas y amarillas.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Ya no habla como hombre viejo. Ahora habla como su mamá.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Mijo, tengo frío, déjame entrar tantito.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Quédate, porque a las cinco la vela casi se apaga.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Queda un dedo de cera. La llama tiembla.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Martín se quita la chamarra y tapa el viento con el cuerpo.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Afuera, la cosa *se ríe*, y se va corriendo hacia el monte.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "En la mañana, Martín baja al pueblo, temblando.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "En la plaza está el curandero, un viejo que todos respetan.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Tiene la cara y los brazos llenos de *rasguños frescos*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Mira a Martín, sonríe, y le dice bajito: buen velador.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Esa noche, Martín revisa la capilla antes de prender la vela.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "En la puerta hay rasguños nuevos, largos y profundos, *por dentro*.",
-   "pausa": 0.8
-  },
-  {
-   "texto": "Y la vela ya estaba encendida.",
-   "pausa": 0.3
-  }
- ],
- "cenas": [
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -395,19 +879,6 @@
      "marca": "fundo"
     }
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 10,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }

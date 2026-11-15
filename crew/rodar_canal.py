@@ -295,7 +295,7 @@ def estoque(repo, canal, linhas):
                 h = json.load(open(f, encoding="utf-8"))
             except Exception:
                 continue
-            if h.get("visual") == "3d" and h.get("codigo") in pend:
+            if h.get("visual") in ("3d", "ilustrado") and h.get("codigo") in pend:
                 tres_d.append(h["codigo"])
         reserva = len(pend) - len(tres_d)
         if len(pend) >= DIAS_DE_ESTOQUE:  # com a reserva nao falta video: so informa (a rotina escreve 3D pelo ROTEIROS.md)

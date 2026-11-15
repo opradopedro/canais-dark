@@ -19,11 +19,32 @@
  ],
  "elenco": {
   "tomas": {
-   "semente": 4511,
-   "corpo": "medio",
-   "cabelo": "grisalho",
-   "roupa": "casual",
-   "acessorio": "barba"
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#3a5a4a",
+   "barba_estilo": "curta",
+   "barba": "#8a8a8a"
+  },
+  "nino1": {
+   "tipo": "humano",
+   "rosto_cor": "#e6e2da",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#2a2a2e",
+   "olhos": "pretos"
+  },
+  "nino2": {
+   "tipo": "humano",
+   "rosto_cor": "#e6e2da",
+   "cabelo": "normal",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#4a4a50",
+   "olhos": "pretos"
   }
  },
  "codigo": "HM045",
@@ -31,82 +52,631 @@
  "titulo": "Nunca dejes entrar a estos niños 👁️ Parte 1 #terror #shorts",
  "capa": "NO LOS INVITES",
  "descripcion": "A la 1:20 de la mañana, dos niños tocaron la puerta de Don Tomás. Solo querían usar el teléfono. Solo tenía que decir que sí.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú abrirías?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
- "visual": "3d",
+ "visual": "ilustrado",
  "lineas": [
   {
    "texto": "Si unos *niños* tocan tu puerta a la una y veinte, no los dejes entrar.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Parecen perdidos, pero nunca parpadean.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "sentar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Don Tomás está solo esta semana; su esposa está con su hermana en Monterrey.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Su abuela le repetía una regla de niño.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "De madrugada, *nunca invites a nadie* a entrar. Aunque te dé lástima.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Por la mirilla ve a dos niños con sudadera, bajo el poste de la calle.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-poste",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.44,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.56,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Tocan otra vez. Tres golpes, lentos, iguales.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Señor, ¿nos deja pasar? Solo queremos usar el teléfono.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.44,
+      "v": 0.86,
+      "esc": 0.62,
+      "vira": 1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.56,
+      "v": 0.86,
+      "esc": 0.62,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "La voz es de niño, pero habla como un adulto cansado.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Quédate, porque lo que Tomás vio después no tiene explicación.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
   },
   {
    "texto": "Tomás abre solo la ventanita de la puerta.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Los niños no tiemblan, aunque hace frío. Y *nunca parpadean*.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.44,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.56,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Señor, hace frío. Nuestra mamá nos está buscando.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-arvores",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.44,
+      "v": 0.86,
+      "esc": 0.62,
+      "vira": 1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.56,
+      "v": 0.86,
+      "esc": 0.62,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Él les ofrece llamar desde adentro, con la puerta cerrada.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "El más alto sonríe. No, señor. Tenemos que pasar nosotros.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.44,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.56,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Entonces la luz del porche les alumbra la cara.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-poste",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.44,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.56,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Sus ojos son *negros*, todo negro, sin nada blanco.",
-   "pausa": 0.8
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.59,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.64,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": -1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.76,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Solo tiene que decir que sí. Parte dos, {dia_siguiente}.",
-   "pausa": 0.3
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.42,
+      1.3
+     ],
+     "x": 0.59,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tomas",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.64,
+      "v": 0.86,
+      "esc": 0.62,
+      "vira": -1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.76,
+      "v": 0.86,
+      "esc": 0.62,
+      "vira": 1
+     }
+    ]
+   }
   }
  ],
- "cenas": [
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 16,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "hm-ojos-negros",
+ "elenco_3d": {
+  "tomas": {
+   "semente": 4511,
+   "corpo": "medio",
+   "cabelo": "grisalho",
+   "roupa": "casual",
+   "acessorio": "barba"
+  }
+ },
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -379,19 +949,6 @@
      "marca": "janela"
     }
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 16,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }

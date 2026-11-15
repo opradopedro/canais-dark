@@ -18,6 +18,564 @@
  ],
  "elenco": {
   "kit": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#3a4a5a"
+  },
+  "ruth": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "roupa_cor": "#7a3a4a"
+  },
+  "cao": {
+   "tipo": "cao",
+   "pelo": "#141414",
+   "olhos_cor": "#ffd23a"
+  }
+ },
+ "codigo": "SV046",
+ "parte": 3,
+ "anterior": "SV045",
+ "titulo": "The dog doesn't want food. It wants an invitation 🐕 Part 3 #horror #shorts",
+ "capa": "LET ME IN",
+ "descripcion": "Ruth finally told Kit why Alder Street feeds the black dog, and what happened to the man who lived in his house in 2009.\n\nWould you have opened the door?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "Kit runs across the street holding *two identical keys*, and only one is his.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.38,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ruth opens the door only after he says the rules out loud.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "ruth",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "kit",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "She sits him down and tells him about the man who lived in his house.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "ruth",
+      "pose": "sentar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "kit",
+      "pose": "sentar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In 2009, he fed the black dog *by hand*, like a pet.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "cao",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "After that, the dog stopped eating from bowls.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It didn't want food anymore. It wanted to be *invited in*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The man opened his door one night. They never found him.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-fim_rua",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because the dog had already chosen Kit's door.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "ruth",
+      "pose": "sentar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "That night Kit locks every window and sits facing the front door.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-janela",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "At 3 AM, three soft knocks.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "sentar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then his father's voice: Kit, it's cold, let me in.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "sentar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "His father lives two thousand miles away.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "sentar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The knocking goes on until sunrise. Kit never opens.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "cao",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In the morning, the street is quiet. Too quiet.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua-dia",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "dourado"
+    ]
+   }
+  },
+  {
+   "texto": "Ruth's front door is wide open. Her house is *empty*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "On his own porch there's a metal bowl, licked clean.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It's Ruth's bowl. Her name is written on the bottom.",
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "bairro-frente_casa-dia",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "kit",
+      "pose": "agachar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.86,
+      "esc": 0.96,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "On Alder Street, there's a new rule now: count your neighbors.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "bairro-poste-dia",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": []
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 10,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "sv-black-dog",
+ "elenco_3d": {
+  "kit": {
    "semente": 4411,
    "corpo": "magro",
    "cabelo": "curto",
@@ -31,88 +589,7 @@
    "roupa": "vestido"
   }
  },
- "codigo": "SV046",
- "parte": 3,
- "anterior": "SV045",
- "titulo": "The dog doesn't want food. It wants an invitation 🐕 Part 3 #horror #shorts",
- "capa": "LET ME IN",
- "descripcion": "Ruth finally told Kit why Alder Street feeds the black dog, and what happened to the man who lived in his house in 2009.\n\nWould you have opened the door?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
- "visual": "3d",
- "lineas": [
-  {
-   "texto": "Kit runs across the street holding *two identical keys*, and only one is his.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Ruth opens the door only after he says the rules out loud.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "She sits him down and tells him about the man who lived in his house.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "In 2009, he fed the black dog *by hand*, like a pet.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "After that, the dog stopped eating from bowls.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "It didn't want food anymore. It wanted to be *invited in*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The man opened his door one night. They never found him.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Stay, because the dog had already chosen Kit's door.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "That night Kit locks every window and sits facing the front door.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "At 3 AM, three soft knocks.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Then his father's voice: Kit, it's cold, let me in.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "His father lives two thousand miles away.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The knocking goes on until sunrise. Kit never opens.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "In the morning, the street is quiet. Too quiet.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Ruth's front door is wide open. Her house is *empty*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "On his own porch there's a metal bowl, licked clean.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "It's Ruth's bowl. Her name is written on the bottom.",
-   "pausa": 0.8
-  },
-  {
-   "texto": "On Alder Street, there's a new rule now: count your neighbors.",
-   "pausa": 0.3
-  }
- ],
- "cenas": [
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -387,19 +864,6 @@
     "plano": "aereo",
     "luz": "nublado"
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 10,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }

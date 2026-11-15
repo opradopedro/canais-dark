@@ -21,6 +21,591 @@
  ],
  "elenco": {
   "rosa": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "longo",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#3a4a5a"
+  },
+  "beto": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#6a5a3a",
+   "chapeu": "bone",
+   "chapeu_cor": "#3a4a5a"
+  },
+  "alta": {
+   "tipo": "humano",
+   "rosto_cor": "#2a2a2a",
+   "membro": "#1c1c1c",
+   "roupa": "trapos",
+   "roupa_cor": "#111",
+   "sem_rosto": true,
+   "cabelo": "careca"
+  }
+ },
+ "codigo": "HM049",
+ "parte": 1,
+ "titulo": "Si oyes tu nombre en el monte, no contestes 🌲 Parte 1 #terror #shorts",
+ "capa": "NO CONTESTES",
+ "descripcion": "En la Sierra de Durango hay una regla: si alguien que conoces te llama desde los árboles, no vayas. Rosa escuchó a su hermano llamarla. Dos veces. Desde dos lados.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿A cuál habrías ido?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "Si en el monte oyes la voz de tu hermano *desde dos lados*, no contestes.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-fundo",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Una de las dos no es tu hermano. Y ya sabe tu nombre.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira-dia",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ]
+   }
+  },
+  {
+   "texto": "En la Sierra de Durango, los viejos lo saben: si oyes tu nombre, *no contestes*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-trilha-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y si alguien que conoces te llama desde los árboles, no vayas.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-entre_arvores",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.86,
+      "esc": 1.2,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Rosa tiene veintisiete años y es guardabosques.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.38,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "andar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Cree que la regla es para que los niños no se pierdan.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "beto",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Esa noche acampa con su hermano Beto cerca de la torre de vigilancia.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "sentar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "beto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A las diez, Beto va por leña con la linterna.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-trilha",
+    "cam": {
+     "z": [
+      1.42,
+      1.3
+     ],
+     "x": 0.38,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "beto",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Quédate, porque los viejos nunca dicen qué es lo que llama.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-fundo",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
+  },
+  {
+   "texto": "Pasan veinte minutos. La niebla baja entre los pinos.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "sentar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Entonces, desde la izquierda, la voz de Beto.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-entre_arvores",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Rosa, ayúdame, me torcí el pie, no puedo caminar.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-toco",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.86,
+      "esc": 1.2,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ella agarra la linterna y da un paso.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pero desde la derecha, otra voz, *la misma voz*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-trilha",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Rosa, no vayas. Ese no soy yo.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-fundo",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Las dos voces se callan al mismo tiempo.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-toco",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
+  },
+  {
+   "texto": "Y algo alto, entre los árboles, *repite su nombre*, con la voz de ella.",
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "floresta-entre_arvores",
+    "cam": {
+     "z": [
+      1.3,
+      1.42
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "¿A cuál le crees? Parte dos, {dia_siguiente}.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "rosa",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.86,
+      "esc": 1.2,
+      "vira": -1
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 14,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "hm-voz-del-monte",
+ "elenco_3d": {
+  "rosa": {
    "semente": 4911,
    "corpo": "magro",
    "cabelo": "rabo",
@@ -34,87 +619,7 @@
    "acessorio": "bone"
   }
  },
- "codigo": "HM049",
- "parte": 1,
- "titulo": "Si oyes tu nombre en el monte, no contestes 🌲 Parte 1 #terror #shorts",
- "capa": "NO CONTESTES",
- "descripcion": "En la Sierra de Durango hay una regla: si alguien que conoces te llama desde los árboles, no vayas. Rosa escuchó a su hermano llamarla. Dos veces. Desde dos lados.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿A cuál habrías ido?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
- "visual": "3d",
- "lineas": [
-  {
-   "texto": "Si en el monte oyes la voz de tu hermano *desde dos lados*, no contestes.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Una de las dos no es tu hermano. Y ya sabe tu nombre.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "En la Sierra de Durango, los viejos lo saben: si oyes tu nombre, *no contestes*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Y si alguien que conoces te llama desde los árboles, no vayas.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Rosa tiene veintisiete años y es guardabosques.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Cree que la regla es para que los niños no se pierdan.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Esa noche acampa con su hermano Beto cerca de la torre de vigilancia.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "A las diez, Beto va por leña con la linterna.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Quédate, porque los viejos nunca dicen qué es lo que llama.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Pasan veinte minutos. La niebla baja entre los pinos.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Entonces, desde la izquierda, la voz de Beto.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Rosa, ayúdame, me torcí el pie, no puedo caminar.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Ella agarra la linterna y da un paso.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Pero desde la derecha, otra voz, *la misma voz*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Rosa, no vayas. Ese no soy yo.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Las dos voces se callan al mismo tiempo.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Y algo alto, entre los árboles, *repite su nombre*, con la voz de ella.",
-   "pausa": 0.8
-  },
-  {
-   "texto": "¿A cuál le crees? Parte dos, {dia_siguiente}.",
-   "pausa": 0.3
-  }
- ],
- "cenas": [
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -396,19 +901,6 @@
      "marca": "fundo"
     }
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 14,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }

@@ -19,11 +19,24 @@
  ],
  "elenco": {
   "eli": {
-   "semente": 3811,
-   "corpo": "forte",
-   "cabelo": "curto",
-   "roupa": "guarda",
-   "acessorio": "barba"
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "jaqueta",
+   "roupa_cor": "#1f2a44",
+   "barba_estilo": "curta",
+   "barba": "#4a2a14"
+  },
+  "rastejante": {
+   "tipo": "humano",
+   "rosto_cor": "#4a3a2a",
+   "membro": "#4a3a2a",
+   "roupa": "trapos",
+   "roupa_cor": "#2e2216",
+   "sem_rosto": true,
+   "cabelo": "careca",
+   "desgaste": 0.8
   }
  },
  "codigo": "SV039",
@@ -32,82 +45,557 @@
  "titulo": "Something crawls under the cemetery lawn ⚰️ Part 2 #horror #shorts",
  "capa": "NEVER STEP ON IT",
  "descripcion": "Eli broke rule three by accident. He stepped on fresh dirt after midnight. And the ground under the lawn started following him.\n\n> Part 3: {when_next}.\nWould you run or stay still?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
- "visual": "3d",
+ "visual": "ilustrado",
  "lineas": [
   {
    "texto": "Something is digging under the grave, and Eli's boot just landed on *fresh dirt*.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-fundo",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Rule three. Never step on fresh dirt after midnight.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "The ground sinks under his foot, soft, warm, like a chest breathing.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-fundo",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
   },
   {
    "texto": "Then the digging stops.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-arvore_morta",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
   },
   {
    "texto": "For a second, the whole cemetery is silent.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-cruz_grande",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Eli walks away slowly, flashlight down, counting his steps.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entre_cruzes",
+    "cam": {
+     "z": [
+      1.42,
+      1.3
+     ],
+     "x": 0.38,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
   },
   {
    "texto": "Behind him, the grass *bulges* and flattens. Bulges and flattens.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entre_cruzes",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Something is crawling under the lawn, following him.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-cruz_grande",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.86,
+      "esc": 0.8,
+      "vira": -1
+     }
+    ]
+   }
   },
   {
    "texto": "Stay, because Eli found the only place it couldn't reach.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entrada",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
   },
   {
    "texto": "He runs to the old *mausoleum* and climbs onto the stone roof.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.38,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "correr",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
   },
   {
    "texto": "The line under the grass circles the mausoleum. Once. Twice.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "His radio crackles. Static. Then a voice he doesn't know.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "New guy, stay up there. It doesn't like stone.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "At 3:40 AM, the circling stops right below him.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Eli shines the light down at the dirt.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "A hand made of soil pushes out of the ground.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entre_cruzes",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "It *waves at him*, slowly, like it's saying hello.",
-   "pausa": 0.8
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "cemiterio-mausoleu",
+    "cam": {
+     "z": [
+      1.3,
+      1.42
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "agachar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.86,
+      "esc": 0.8,
+      "vira": -1
+     }
+    ]
+   }
   },
   {
    "texto": "Then it points at his house. Part three, {when_next}.",
-   "pausa": 0.3
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
   }
  ],
- "cenas": [
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 10,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "sv-night-groundskeeper",
+ "elenco_3d": {
+  "eli": {
+   "semente": 3811,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "guarda",
+   "acessorio": "barba"
+  }
+ },
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -389,19 +877,6 @@
     "plano": "aereo",
     "luz": "madrugada"
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 10,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }

@@ -19,11 +19,24 @@
  ],
  "elenco": {
   "eli": {
-   "semente": 3811,
-   "corpo": "forte",
-   "cabelo": "curto",
-   "roupa": "guarda",
-   "acessorio": "barba"
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "jaqueta",
+   "roupa_cor": "#1f2a44",
+   "barba_estilo": "curta",
+   "barba": "#4a2a14"
+  },
+  "rastejante": {
+   "tipo": "humano",
+   "rosto_cor": "#4a3a2a",
+   "membro": "#4a3a2a",
+   "roupa": "trapos",
+   "roupa_cor": "#2e2216",
+   "sem_rosto": true,
+   "cabelo": "careca",
+   "desgaste": 0.8
   }
  },
  "codigo": "SV038",
@@ -31,82 +44,527 @@
  "titulo": "If you hear digging at night, it isn't yours ⚰️ Part 1 #horror #shorts",
  "capa": "IT ISN'T YOURS",
  "descripcion": "Eli's new job is night groundskeeper at Saint Bram's cemetery. The old keeper left four rules. Rule two: if you hear digging, it isn't yours.\n\n> Part 2: {when_next}.\nWould you go look?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
- "visual": "3d",
+ "visual": "ilustrado",
  "lineas": [
   {
    "texto": "If you hear *digging* in this cemetery at night, don't look. It isn't yours.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entrada",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "Somebody under the grass is digging *up*.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entrada-dia",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.38,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
   },
   {
    "texto": "Eli just took the night shift. The old keeper left without meeting him.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": []
+   }
   },
   {
    "texto": "He left four rules taped inside the tool shed.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-mausoleu-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Lock the gates at ten. If you hear digging, it isn't yours.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entrada",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Never step on *fresh dirt* after midnight.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entre_cruzes",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
   },
   {
    "texto": "And if a grave is open at dawn, fill it before anyone sees.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-cruz_grande",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
   },
   {
    "texto": "During the day, Saint Bram's is just old stones and lawnmowers.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-fundo-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "The first five nights are quiet. Owls, wind, one lost cat.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-arvore_morta",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "sentar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Stay, because on night six, rule two stopped being a joke.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-fundo",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
   },
   {
    "texto": "At 1:10 AM, Eli hears a *shovel* biting into soil.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entre_cruzes",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Scrape. Pause. Scrape. Somewhere near the old section.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-arvore_morta",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
   },
   {
    "texto": "He takes the flashlight and follows the sound between the graves.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-entre_cruzes",
+    "cam": {
+     "z": [
+      1.3,
+      1.42
+     ],
+     "x": 0.38,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
   },
   {
    "texto": "There's nobody there. No shovel, no footprints.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-cruz_grande",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "But one grave from 1961 is covered in *fresh dark dirt*.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-fundo",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "Eli kneels and puts his hand on the ground.",
-   "pausa": 0.5
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "cemiterio-fundo",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
   },
   {
    "texto": "The digging is still going. It's coming *from below*.",
-   "pausa": 0.8
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "cemiterio-fundo",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "eli",
+      "pose": "agachar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
   },
   {
    "texto": "Something is coming up. Part two, {when_next}.",
-   "pausa": 0.3
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "cemiterio-entre_cruzes",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.86,
+      "esc": 0.8,
+      "vira": 1
+     }
+    ]
+   }
   }
  ],
- "cenas": [
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 12,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 16,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "sv-night-groundskeeper",
+ "elenco_3d": {
+  "eli": {
+   "semente": 3811,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "guarda",
+   "acessorio": "barba"
+  }
+ },
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -372,19 +830,6 @@
      "marca": "fundo"
     }
    }
-  }
- ],
- "eventos": [
-  {
-   "tipo": "golpe",
-   "linea": 12,
-   "en": 0.4
-  },
-  {
-   "tipo": "susto",
-   "linea": 16,
-   "en": "fin",
-   "mas": 0.05
   }
  ]
 }
