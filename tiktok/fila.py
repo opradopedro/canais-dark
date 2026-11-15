@@ -48,8 +48,44 @@ def legenda(titulo, tags):
     return (t + " " + " ".join(extra)).strip()[:2200]
 
 
+def _token():
+    import urllib.parse
+    for k in ("YT_REFRESH_TOKEN_EN", "YT_REFRESH_TOKEN_ES"):
+        if os.environ.get(k):
+            dados = urllib.parse.urlencode({"client_id": os.environ["YT_CLIENT_ID"],
+                                            "client_secret": os.environ["YT_CLIENT_SECRET"],
+                                            "refresh_token": os.environ[k], "grant_type": "refresh_token"}).encode()
+            return json.load(urllib.request.urlopen("https://oauth2.googleapis.com/token", dados, timeout=60))["access_token"]
+    raise RuntimeError("sem token do YouTube para o plano B")
+
+
+def publicos_api(canal_yt):
+    """Plano B (15/11: feed do YouTube dando 404): API do YouTube, playlist de uploads, so status public."""
+    tok = _token()
+    def get(u):
+        return json.load(urllib.request.urlopen(urllib.request.Request(
+            "https://www.googleapis.com/youtube/v3/" + u, headers={"Authorization": "Bearer " + tok}), timeout=60))
+    itens = get("playlistItems?part=contentDetails&maxResults=30&playlistId=UU" + canal_yt[2:])["items"]
+    ids = ",".join(i["contentDetails"]["videoId"] for i in itens)
+    out = []
+    for v in get("videos?part=snippet,status&id=" + ids)["items"]:
+        if v["status"]["privacyStatus"] != "public":
+            continue
+        out.append({"id": v["id"], "titulo": v["snippet"]["title"],
+                    "publicado": dt.datetime.fromisoformat(v["snippet"]["publishedAt"].replace("Z", "+00:00"))})
+    return sorted(out, key=lambda v: v["publicado"])
+
+
 def publicos(canal_yt):
     """Videos PUBLICOS do canal agora: [{id, titulo, publicado}] do mais antigo para o mais novo."""
+    try:
+        return publicos_feed(canal_yt)
+    except Exception as e:
+        print("feed falhou (%s), usando a API do YouTube" % e, file=sys.stderr)
+        return publicos_api(canal_yt)
+
+
+def publicos_feed(canal_yt):
     url = "https://www.youtube.com/feeds/videos.xml?channel_id=" + canal_yt
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     raiz = ET.fromstring(urllib.request.urlopen(req, timeout=60).read())
