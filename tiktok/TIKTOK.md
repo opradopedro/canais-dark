@@ -1,6 +1,6 @@
 # TikTok: como a postagem funciona
 
-O TikTok acompanha o YouTube. Todo vídeo que entra no ar no YouTube vai para a conta do canal no TikTok, pela vidIQ (app já aprovado pelo TikTok, post grátis). Quem posta é a rotina diária do Claude, às 00h20 UTC (21h20 de Brasília), logo depois dos horários de publicação do Hora Muerta e do So You Built It.
+O TikTok acompanha o YouTube. Todo vídeo que entra no ar no YouTube vai para a conta do canal no TikTok, pela vidIQ (app já aprovado pelo TikTok, post grátis). Quem posta é a rotina do Claude, 10 minutos depois de cada horário de publicação do YouTube (15/11, pedido do Pedro: TikTok sai junto com o YouTube): 17h10 UTC (Old Tales, meio-dia de NY), 21h10 e 23h10 UTC (So You Built It) e 00h10 UTC (Hora Muerta e Signal Lost). Cron `10 0,17,21,23 * * *` (UTC). Execução sem nada público novo termina sem fazer nada. Se um canal mudar de horário no YouTube, mudar a tarefa também.
 
 ## Regras do Pedro (13/11/2026)
 - Mesma frequência do YouTube. Série antiga (já no ar em 13/11) nunca vai: está em `postados.json` → `ignorar`.
