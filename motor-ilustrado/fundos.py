@@ -162,8 +162,9 @@ def baixar(mundo, pasta):
 
 
 def teste():
-    modelos = ["@cf/black-forest-labs/flux-1-schnell", "@cf/leonardo/lucid-origin",
-               "@cf/leonardo/phoenix-1.0", "@cf/black-forest-labs/flux-2-dev", "@cf/black-forest-labs/flux-2-klein-4b"]
+    # 15/11: lucid-origin e phoenix gastam ~5 mil neurons POR imagem; o teste de 13/11 passou da cota
+    # e bloqueou a Cloudflare o dia 14/11 inteiro. Teste so com modelos baratos.
+    modelos = ["@cf/black-forest-labs/flux-1-schnell", "@cf/black-forest-labs/flux-2-klein-4b"]
     m = json.load(open(os.path.join(AQUI, "cenarios", "wukong.json")))
     ids = list(m["cenarios"])[:2]
     tem = existentes("fundos-teste")
