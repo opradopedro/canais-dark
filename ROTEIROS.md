@@ -207,6 +207,9 @@ Release "fundos") + boneco 2D, câmera, criatura e legenda em código, vertical 
    cada fala e cria/atualiza `motor-ilustrado/cenarios/<hm|sv>-<serie>.json` (um fundo por lugar, variante de dia).
 3. Rode o fiscal. Envie os roteiros JUNTO com o `cenarios/*.json`: o push gera os fundos (cota grátis da Cloudflare,
    ~45 por dia; o que não couber sai no dia seguinte às 00:15 UTC). Escreva com pelo menos 3 dias de antecedência.
+   O conversor já monta o **gancho visual** (Pedro 15/11: "ganhar o público nos primeiros 5 segundos"): a 1ª cena é a
+   criatura de perto no lugar dela (se ela aparece nas 7 primeiras falas) ou o herói em close; o motor abre com um
+   avanço rápido de câmera e a legenda grande. O fiscal barra 1ª cena sem ninguém ou de longe.
 4. Criaturas que o motor desenha: olhos_no_escuro (crianças de olhos pretos), espantalho, alta/vulto (sem rosto),
    lobisomem (nahual), cao_negro, sem_rosto, rastejante. Outra criatura nova: use a mais parecida ou peça para incluir.
    Cenários conhecidos: casa_interior, bairro, vila, floresta, cemiterio, estrada (outro: o conversor usa o nome como

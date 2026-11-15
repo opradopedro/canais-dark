@@ -54,11 +54,11 @@
     "fundo": "cemiterio-fundo",
     "cam": {
      "z": [
-      1.2,
-      1.32
+      1.75,
+      1.6
      ],
      "x": 0.5,
-     "y": 0.66
+     "y": 0.6
     },
     "fx": [
      "escuro",
@@ -66,12 +66,12 @@
     ],
     "atores": [
      {
-      "id": "eli",
-      "pose": "parado",
-      "rosto": "choque",
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
       "v": 0.93,
-      "esc": 1.0,
-      "u": 0.5
+      "esc": 1.15
      }
     ]
    }
@@ -878,5 +878,6 @@
     "luz": "madrugada"
    }
   }
- ]
+ ],
+ "gancho_visual": true
 }

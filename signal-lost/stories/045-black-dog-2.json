@@ -51,26 +51,26 @@
    "texto": "A black dog sits on Kit's lawn, staring at his *open window*.",
    "pausa": 0.5,
    "cena": {
-    "fundo": "casa_interior-janela",
+    "fundo": "bairro-frente_casa",
     "cam": {
      "z": [
-      1.45,
+      1.75,
       1.6
      ],
      "x": 0.5,
-     "y": 0.58
+     "y": 0.6
     },
     "fx": [
      "escuro"
     ],
     "atores": [
      {
-      "id": "kit",
+      "id": "cao",
       "pose": "parado",
-      "rosto": "choque",
+      "rosto": "calmo",
+      "u": 0.5,
       "v": 0.93,
-      "esc": 1.0,
-      "u": 0.5
+      "esc": 1.38
      }
     ]
    }
@@ -879,5 +879,6 @@
     }
    }
   }
- ]
+ ],
+ "gancho_visual": true
 }

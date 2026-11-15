@@ -135,6 +135,39 @@ def elenco_2d(el3d):
     return out
 
 
+def gancho_visual(d):
+    """REGRA do Pedro (14-15/11: "ganhar o publico nos primeiros 5 segundos"). A 1a cena e a CRIATURA de perto, no lugar
+    dela, se ela aparece nas 7 primeiras falas; senao, o heroi em close. Sem plano aberto vazio no 1o quadro."""
+    ls = d.get("lineas") or []
+    if not ls or not isinstance(ls[0], dict) or not ls[0].get("cena"):
+        return
+    gente = set(d.get("elenco_3d") or {})
+    cri = None
+    for j in range(min(7, len(ls))):
+        c = ls[j].get("cena") or {}
+        ats = [a for a in c.get("atores") or [] if a["id"] not in gente]
+        if ats:
+            cri = (c, ats)
+            break
+    c0 = ls[0]["cena"]
+    if cri:
+        c, ats = cri
+        novos = []
+        for k, a in enumerate(ats[:2]):
+            n = dict(a, u=0.5 if len(ats) == 1 else round(0.44 + 0.12 * k, 2), v=0.93, esc=round(min(a.get("esc", 1.0) / 0.8 if a.get("v", 0.93) < 0.9 else a.get("esc", 1.0), 1.6) * 1.15, 2))
+            n.pop("vira", None)
+            novos.append(n)
+        ls[0]["cena"] = {"fundo": c["fundo"], "cam": {"z": [1.75, 1.6], "x": 0.5, "y": 0.6},
+                         "fx": [f for f in c.get("fx", []) if not f.startswith(("tremor", "flash"))], "atores": novos}
+    else:
+        c0["cam"] = {"z": [1.75, 1.6], "x": c0.get("cam", {}).get("x", 0.5), "y": 0.58}
+        for a in c0.get("atores") or []:
+            a["esc"] = max(a.get("esc", 1.0), 1.15)
+            if a.get("pose") == "deitado":
+                a["pose"] = "parado"
+    d["gancho_visual"] = True
+
+
 def converter(path):
     d = json.load(open(path, encoding="utf-8"))
     if d.get("visual") == "ilustrado":
@@ -224,6 +257,7 @@ def converter(path):
     d["elenco"] = elenco
     if "cenas" in d:
         d["cenas_3d"] = d.pop("cenas")
+    gancho_visual(d)
     json.dump(d, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     # cenarios do mundo (junta com o que ja existe)
     cp = os.path.join(AQUI, "cenarios", f"{mundo}.json")
@@ -237,5 +271,13 @@ def converter(path):
 
 
 if __name__ == "__main__":
-    for p in sys.argv[1:]:
-        print(p, converter(p))
+    if sys.argv[1] == "--gancho":  # aplica o gancho visual em roteiros ja convertidos
+        for p in sys.argv[2:]:
+            h = json.load(open(p, encoding="utf-8"))
+            if h.get("visual") == "ilustrado" and h.get("elenco_3d") is not None and not h.get("gancho_visual"):
+                gancho_visual(h)
+                json.dump(h, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+                print("gancho visual:", p)
+    else:
+        for p in sys.argv[1:]:
+            print(p, converter(p))

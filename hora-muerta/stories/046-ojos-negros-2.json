@@ -59,26 +59,34 @@
    "texto": "Don Tomás les dijo que no, pero los niños de *ojos negros* no se van.",
    "pausa": 0.5,
    "cena": {
-    "fundo": "casa_interior-porta",
+    "fundo": "bairro-frente_casa",
     "cam": {
      "z": [
-      1.45,
+      1.75,
       1.6
      ],
      "x": 0.5,
-     "y": 0.58
+     "y": 0.6
     },
     "fx": [
      "escuro"
     ],
     "atores": [
      {
-      "id": "tomas",
-      "pose": "apontar",
-      "rosto": "raiva",
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.44,
       "v": 0.93,
-      "esc": 1.0,
-      "u": 0.5
+      "esc": 0.9
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.56,
+      "v": 0.93,
+      "esc": 0.9
      }
     ]
    }
@@ -842,5 +850,6 @@
     }
    }
   }
- ]
+ ],
+ "gancho_visual": true
 }

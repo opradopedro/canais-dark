@@ -72,11 +72,11 @@
     "fundo": "casa_interior-quarto",
     "cam": {
      "z": [
-      1.2,
-      1.32
+      1.75,
+      1.6
      ],
      "x": 0.5,
-     "y": 0.66
+     "y": 0.6
     },
     "fx": [
      "escuro"
@@ -88,8 +88,7 @@
       "rosto": "calmo",
       "u": 0.5,
       "v": 0.93,
-      "esc": 1.5,
-      "vira": 1
+      "esc": 1.72
      }
     ]
    }
@@ -890,5 +889,6 @@
     "efeito": "neve"
    }
   }
- ]
+ ],
+ "gancho_visual": true
 }

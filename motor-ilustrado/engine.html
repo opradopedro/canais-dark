@@ -370,7 +370,7 @@ function legenda(t) {
   const ch = E.chunks; let at = null;
   for (let i = 0; i < ch.length; i++) { const a = ch[i][0].a0, nx = i + 1 < ch.length ? ch[i + 1][0].a0 : 1e9; const fim = Math.min(nx, ch[i][ch[i].length - 1].a1 + 0.5); if (t >= a && t < fim) { at = ch[i]; break; } }
   if (!at) return;
-  X.save(); X.font = '900 74px "Arial Black", Arial, sans-serif'; X.textBaseline = 'middle'; X.lineJoin = 'round';
+  X.save(); X.font = `900 ${VERT ? 88 : 74}px "Arial Black", Arial, sans-serif`; X.textBaseline = 'middle'; X.lineJoin = 'round';
   const txt = at.map(w => w.w.toUpperCase()); const sp = X.measureText(' ').width;
   const larg = txt.reduce((a, w) => a + X.measureText(w).width, 0) + sp * (txt.length - 1);
   const enc = Math.min(1, (W - 70) / larg); let x = W / 2 - larg / 2; const y = VERT ? H * 0.74 : H - 120;
@@ -389,8 +389,12 @@ window.render = function (t) {
   // tremor de camera
   let sx = 0, sy = 0; const tr = (cena.fx || []).find(f => f.startsWith('tremor'));
   if (tr) { const at = parseFloat(tr.split('@')[1] || '0'); const d = tl - at; if (d >= 0 && d < 0.6) { const amp = 26 * (1 - d / 0.6); sx = Math.sin(d * 90) * amp; sy = Math.cos(d * 77) * amp; } }
+  // GANCHO VISUAL (Pedro 15/11: "ganhar o publico nos primeiros 5 segundos"): o video abre com um avanco rapido de
+  // camera (comeca bem perto e assenta no plano em 0,7 s; nunca abaixo de 1 para nao mostrar borda), sem tranco nem quadro preto nem tela de titulo
+  let zAbre = 1;
+  if (t < 0.7) { const q = easeOut(t / 0.7); zAbre = 1.22 - 0.22 * q; }
   X.setTransform(1, 0, 0, 1, sx, sy);
-  const cam = camera(cena, k), img = IMG[cena.fundo]; const v = vistaFundo(img, cam);
+  const cam = camera(cena, k), img = IMG[cena.fundo]; cam.z *= zAbre; const v = vistaFundo(img, cam);
   if (img && img.width) X.drawImage(img, v.x, v.y, v.w, v.h); else { X.fillStyle = '#334'; X.fillRect(0, 0, W, H); }
   if (cena.luz) { X.fillStyle = cena.luz; X.fillRect(-50, -50, W + 100, H + 100); }
   for (const f of (cena.fx || [])) if (['brilho', 'neblina', 'escuro', 'dourado'].includes(f.split('@')[0])) fx(f, t, k, cena, v);

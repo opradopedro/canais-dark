@@ -63,7 +63,7 @@
     "fundo": "floresta-trilha",
     "cam": {
      "z": [
-      1.45,
+      1.75,
       1.6
      ],
      "x": 0.5,
@@ -79,7 +79,7 @@
       "pose": "andar",
       "rosto": "raiva",
       "v": 0.93,
-      "esc": 1.0,
+      "esc": 1.15,
       "u": 0.5
      }
     ]
@@ -922,5 +922,6 @@
     }
    }
   }
- ]
+ ],
+ "gancho_visual": true
 }

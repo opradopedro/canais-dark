@@ -66,14 +66,14 @@
    "texto": "Desde el autobús fantasma, la voz de su hijo *Toño* la llama.",
    "pausa": 0.5,
    "cena": {
-    "fundo": "estrada-ponto-onibus",
+    "fundo": "estrada-vindo",
     "cam": {
      "z": [
-      1.45,
+      1.75,
       1.6
      ],
      "x": 0.5,
-     "y": 0.58
+     "y": 0.6
     },
     "fx": [
      "escuro",
@@ -81,12 +81,12 @@
     ],
     "atores": [
      {
-      "id": "lucia",
+      "id": "sem_rosto",
       "pose": "parado",
-      "rosto": "medo",
+      "rosto": "calmo",
+      "u": 0.5,
       "v": 0.93,
-      "esc": 1.0,
-      "u": 0.5
+      "esc": 1.15
      }
     ]
    }
@@ -933,5 +933,6 @@
     }
    }
   }
- ]
+ ],
+ "gancho_visual": true
 }

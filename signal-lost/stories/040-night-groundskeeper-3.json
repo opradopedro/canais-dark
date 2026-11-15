@@ -54,11 +54,11 @@
     "fundo": "cemiterio-fundo-dia",
     "cam": {
      "z": [
-      1.0,
-      1.12
+      1.75,
+      1.6
      ],
      "x": 0.5,
-     "y": 0.55
+     "y": 0.6
     },
     "fx": [
      "dourado"
@@ -70,8 +70,7 @@
       "rosto": "calmo",
       "u": 0.5,
       "v": 0.93,
-      "esc": 1.0,
-      "vira": 1
+      "esc": 1.15
      }
     ]
    }
@@ -837,5 +836,6 @@
     "luz": "noite_neblina"
    }
   }
- ]
+ ],
+ "gancho_visual": true
 }

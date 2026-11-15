@@ -50,6 +50,12 @@ def conferir_ilustrado(n, h):
         return [f"{n}: mundo '{h.get('mundo')}' sem motor-ilustrado/cenarios/{h.get('mundo')}.json"]
     cen = json.load(open(cp, encoding="utf-8")).get("cenarios", {})
     el = h.get("elenco") or {}
+    l0 = (h.get("lineas") or [{}])[0]
+    c0 = (l0.get("cena") or {}) if isinstance(l0, dict) else {}
+    z0 = (c0.get("cam") or {}).get("z", 1)
+    if not c0.get("atores") or max(z0 if isinstance(z0, list) else [z0]) < 1.4:
+        erros.append(f"{n}: 1a cena precisa da criatura ou do heroi DE PERTO (camera z >= 1.4), gancho dos 5 primeiros "
+                     f"segundos (Pedro 15/11). Rode: python motor-ilustrado/converter_3d.py --gancho {n}")
     for i, l in enumerate(h.get("lineas") or []):
         c = l.get("cena") if isinstance(l, dict) else None
         if not c:
