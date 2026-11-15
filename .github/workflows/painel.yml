@@ -16,7 +16,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
   issues: write
@@ -56,6 +56,15 @@ jobs:
           done
       - name: Dados do painel
         run: pip install -q tzdata && python motor-en/painel_dados.py
+      # guarda a foto do dia (inscritos, views, seguidores do TikTok) para os graficos por dia da aba Metricas
+      - name: Salvar historico das metricas
+        continue-on-error: true
+        run: |
+          git config user.name "painel-bot"; git config user.email "painel-bot@users.noreply.github.com"
+          git add metricas/painel-historico.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "painel: historico das metricas $(date -u +%F)"
+          for i in 1 2 3 4; do git pull -q --rebase origin producao && git push -q origin HEAD:producao && exit 0; sleep $((i*5)); done
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

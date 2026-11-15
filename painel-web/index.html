@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#0f1115">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Painel dos canais</title>
-<!-- versao 2026-10-29: celular primeiro -->
+<!-- versao 2026-11-15: TikTok completo, botoes dos canais e aba Metricas -->
 <link rel="manifest" href="data:application/manifest+json,{&quot;name&quot;:&quot;Painel dos canais&quot;,&quot;short_name&quot;:&quot;Painel&quot;,&quot;display&quot;:&quot;standalone&quot;,&quot;background_color&quot;:&quot;%230f1115&quot;,&quot;theme_color&quot;:&quot;%230f1115&quot;}">
 <style>
   :root { --bg:#0f1115; --card:#181b22; --card2:#20242d; --line:#2a2f3a; --txt:#eceae5; --mut:#9aa0ab;
@@ -48,7 +48,7 @@
   .vazio { color:var(--mut); text-align:center; padding:28px 0; }
 
   /* barra de baixo: secoes (polegar alcanca) */
-  nav { position:fixed; left:0; right:0; bottom:0; z-index:6; display:grid; grid-template-columns:repeat(3,1fr);
+  nav { position:fixed; left:0; right:0; bottom:0; z-index:6; display:grid; grid-template-columns:repeat(4,1fr);
         background:rgba(15,17,21,.97); border-top:1px solid var(--line); padding:6px 8px calc(6px + var(--safe-b)); }
   nav button { height:54px; border:0; background:none; border-radius:12px; font-size:12px; color:var(--mut); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; }
   nav button b { font-size:20px; font-weight:400; }
@@ -71,6 +71,35 @@
   .fala { background:var(--bg); border-radius:12px; padding:12px; font-size:14px; color:#d6d3cc; }
   .fala p { margin:0 0 8px; } .fala p:last-child { margin:0; }
   .dica { color:var(--mut); font-size:12px; margin-top:10px; }
+
+  /* plataforma (YouTube / TikTok) */
+  .seg { display:grid; grid-template-columns:1fr 1fr; gap:4px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:4px; margin-bottom:12px; }
+  .seg button { height:36px; border:0; border-radius:9px; background:none; color:var(--mut); font-size:14px; }
+  .seg button.on { background:var(--card2); color:var(--txt); font-weight:700; }
+  .links { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:18px 0 6px; }
+  .links a { display:flex; align-items:center; justify-content:center; gap:6px; height:48px; border-radius:14px; text-decoration:none; font-weight:700; font-size:14px; }
+  .l-yt { background:#2b1414; color:#ffb4b4; border:1px solid #5a2626; }
+  .l-tt { background:#10282a; color:#9eeef0; border:1px solid #1f4f52; }
+  .l-off { opacity:.4; pointer-events:none; }
+
+  /* metricas */
+  h2 { font-size:15px; margin:18px 0 8px; } h2 small { color:var(--mut); font-weight:400; font-size:12px; }
+  .kpis { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+  .kpi { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:10px; min-width:0; }
+  .kpi b { display:block; font-size:19px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; } .kpi span { color:var(--mut); font-size:11.5px; display:block; }
+  .kpi i { font-style:normal; font-size:11.5px; } .up { color:var(--ok); } .down { color:#e07b6f; }
+  .graf { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:10px 10px 6px; }
+  .graf .leit { font-size:13px; color:var(--mut); min-height:18px; margin-bottom:4px; } .graf .leit b { color:var(--txt); }
+  .graf svg { display:block; width:100%; height:130px; overflow:visible; } .graf rect.hit { fill:transparent; cursor:pointer; }
+  .graf text { fill:var(--mut); font-size:10px; }
+  .hb { display:grid; grid-template-columns:minmax(0,1.4fr) 1.3fr auto; gap:8px; align-items:center; font-size:13px; padding:4px 0; }
+  .hb .trilho { height:8px; background:var(--card2); border-radius:4px; overflow:hidden; } .hb .trilho div { height:100%; border-radius:4px; }
+  .hb span:first-child { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; } .hb span:last-child { color:var(--mut); font-variant-numeric:tabular-nums; }
+  .caixa { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:8px 12px; }
+  .rank { display:flex; gap:10px; align-items:center; padding:8px 0; border-top:1px solid var(--line); color:inherit; text-decoration:none; width:100%; background:none; border-left:0; border-right:0; border-bottom:0; text-align:left; }
+  .rank:first-child { border-top:0; } .rank .mini { width:40px; height:70px; }
+  .grade4 { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin:12px 0; }
+  .grade4 div { background:var(--bg); border-radius:10px; padding:8px; text-align:center; } .grade4 b { display:block; } .grade4 span { color:var(--mut); font-size:11px; }
 </style>
 </head>
 <body>
@@ -81,12 +110,14 @@
 <main id="main"><div class="vazio">carregando...</div></main>
 <nav id="nav">
   <button data-s="fila" onclick="secao('fila')"><b>🎬</b>A postar</button>
-  <button data-s="postados" onclick="secao('postados')"><b>📈</b>Postados</button>
+  <button data-s="postados" onclick="secao('postados')"><b>📺</b>Postados</button>
+  <button data-s="metricas" onclick="secao('metricas')"><b>📊</b>Métricas</button>
   <button data-s="ideia" onclick="secao('ideia')"><b>💡</b>Ideias</button>
 </nav>
 <div id="det"><div class="fundo" onclick="fechar()"></div><div class="folha" id="folha"></div></div>
 <script>
-let DADOS = null, PEDIDOS = {}, CANAL = localStorage.getItem("canal") || "sv", SECAO = "fila";
+let DADOS = null, PEDIDOS = {}, CANAL = "sv", SECAO = "fila", PLAT = "yt";
+try { CANAL = localStorage.getItem("canal") || "sv"; PLAT = localStorage.getItem("plat") || "yt"; } catch (e) {}
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const quando = iso => iso ? new Date(iso).toLocaleString("pt-BR", {weekday:"short", day:"2-digit", month:"2-digit", hour:"2-digit", minute:"2-digit"}) : "";
 const k = n => n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1) + " mil" : String(n || 0);
@@ -130,8 +161,8 @@ function render() {
       <button class="num" onclick="${prox ? `abrirCod('${prox.codigo}')` : `secao('fila')`}"><b>${prox ? quando(prox.publica_em).split(",")[0] : "—"}</b><span>próximo post ›</span></button>
       <button class="num" onclick="secao('postados')"><b>${k(total)}</b><span>views ›</span></button></div>`;
   const t = c.tiktok, tp = t && t.perfil;
-  const tiktok = t ? `<a class="tt" href="${esc(t.link)}" target="_blank"><b>TikTok</b> @${esc(t.handle)}
-      <span>${tp ? `${k(tp.seguidores)} seguidores · ${k(t.views)} views · ${t.posts} posts · ${k(tp.curtidas)} curtidas` : `${t.posts} posts`} ›</span></a>` : "";
+  const tiktok = t && SECAO !== "metricas" ? `<button class="tt" style="width:100%;text-align:left" onclick="PLAT='tt';guardar();secao('postados')"><b>TikTok</b> @${esc(t.handle)}
+      <span>${tp ? `${k(tp.seguidores)} seguidores · ${k(t.views)} views · ${t.posts} posts · ${k(tp.curtidas)} curtidas` : `${t.posts} posts`} ›</span></button>` : "";
   const aviso = c.aviso_youtube ? `<div class="aviso">${esc(c.aviso_youtube)}</div>` : "";
   let corpo;
   if (SECAO === "ideia") {
@@ -139,11 +170,156 @@ function render() {
     corpo = `<div class="fala"><p><b>Mande uma ideia para o ${esc(c.nome)}</b></p><p>Um tema, um link de vídeo que bombou ou um print. Ela vira um ticket que a próxima escrita de roteiros lê.</p></div>
       <div class="acoes"><a class="btn pri" href="${issue("ideia", c, null)}" target="_blank">💡 Escrever ideia</a>
       <a class="btn larga" href="https://github.com/${DADOS.repo}/issues?q=is%3Aopen+label%3A${c.id}" target="_blank">Ver pedidos e ideias abertos</a></div>`;
+  } else if (SECAO === "metricas") {
+    LISTA = pub;
+    corpo = seletor() + (PLAT === "tt" ? metricasTT(c) : metricasYT(c, pub));
+  } else if (SECAO === "postados" && c.tiktok) {
+    LISTA = pub;
+    if (PLAT === "tt") {
+      const l = (c.tiktok.lista || []).slice().reverse();
+      corpo = seletor() + (l.length ? l.map(linhaTT).join("") : `<div class="vazio">Nada postado no TikTok ainda.</div>`);
+    } else corpo = seletor() + (pub.length ? pub.map(linha).join("") : `<div class="vazio">Nada publicado ainda.</div>`);
   } else {
     LISTA = SECAO === "fila" ? fila : pub;
     corpo = LISTA.length ? LISTA.map(linha).join("") : `<div class="vazio">${SECAO === "fila" ? "Nenhum roteiro na fila." : "Nada publicado ainda."}</div>`;
   }
-  document.getElementById("main").innerHTML = aviso + resumo + tiktok + corpo;
+  document.getElementById("main").innerHTML = (SECAO === "metricas" ? aviso : aviso + resumo + tiktok) + corpo + botoesCanal(c);
+}
+
+function guardar() { try { localStorage.setItem("plat", PLAT); } catch (e) {} }
+function seletor() {
+  return `<div class="seg"><button class="${PLAT === "yt" ? "on" : ""}" onclick="PLAT='yt';guardar();render()">▶ YouTube</button>
+    <button class="${PLAT === "tt" ? "on" : ""}" onclick="PLAT='tt';guardar();render()">♪ TikTok</button></div>`;
+}
+function botoesCanal(c) {
+  const yt = c.yt_canal && c.yt_canal.link, tt = c.tiktok && c.tiktok.link;
+  if (!yt && !tt) return "";
+  return `<div class="links"><a class="l-yt ${yt ? "" : "l-off"}" href="${esc(yt || "#")}" target="_blank">▶ Ir ao YouTube</a>
+    <a class="l-tt ${tt ? "" : "l-off"}" href="${esc(tt || "#")}" target="_blank">♪ Ir ao TikTok</a></div>`;
+}
+const pct = (a, b) => b ? (100 * a / b).toFixed(1).replace(".", ",") + "%" : "—";
+const eng = (a, b) => b >= 20 ? pct(a, b) : "— (poucas views)";
+let PAIS = c => c; try { const dn = new Intl.DisplayNames(["pt-BR"], { type: "region" }); PAIS = c => dn.of(c) || c; } catch (e) {}
+const dia = iso => iso ? new Date(iso).toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" }) : "";
+const engaj = x => (x.likes || 0) + (x.comentarios || 0) + (x.compart || 0);
+
+function linhaTT(p) {
+  const mini = p.capa ? `style="background-image:url('${esc(p.capa)}')"` : "";
+  return `<a class="item" style="text-decoration:none;color:inherit" href="${esc(p.link)}" target="_blank"><div class="mini" ${mini}>${p.capa ? "" : "♪"}</div>
+    <div class="info"><span class="tag publicado">TikTok · ${esc(quando(p.quando))}</span><div class="tit">${esc(p.titulo || p.codigo || "Vídeo no TikTok")}</div>
+    <div class="sub">${esc(p.codigo || "")}${p.codigo ? " · " : ""}👁 ${k(p.views)} · ❤️ ${k(p.likes)} · 💬 ${k(p.comentarios)} · ↗ ${k(p.compart)}</div>
+    <div class="sub">engajamento ${eng(engaj(p), p.views)}${p.yt_views != null ? ` · no YouTube 👁 ${k(p.yt_views)}` : ""}</div></div></a>`;
+}
+
+// grafico de barras de uma serie (toque/passe o dedo numa barra para ver o numero)
+let GRAFS = [];
+function barras(pontos, cor, unidade) {
+  if (!pontos.length) return `<div class="graf"><div class="leit">Ainda sem dados suficientes.</div></div>`;
+  const id = GRAFS.push({ pontos, unidade }) - 1;
+  const W = 300, H = 110, max = Math.max(1, ...pontos.map(p => p.v)), n = pontos.length, passo = W / n, larg = Math.max(2, passo - 2);
+  const barras = pontos.map((p, i) => {
+    const h = p.v > 0 ? Math.max(2, (p.v / max) * H) : 0, x = i * passo + 1;
+    return `<path d="M${x},${H} v${-Math.max(0, h - 2)} q0,-2 2,-2 h${larg - 4} q2,0 2,2 v${Math.max(0, h - 2)} z" fill="${cor}" opacity="${p.v > 0 ? 1 : 0}"/>` +
+      `<rect class="hit" x="${i * passo}" y="0" width="${passo}" height="${H}" onpointerenter="leit(${id},${i})" onclick="leit(${id},${i})"/>`;
+  }).join("");
+  const ult = pontos[n - 1];
+  return `<div class="graf"><div class="leit" id="leit${id}"><b>${k(ult.v)}</b> ${unidade} · ${esc(ult.rot)}</div>
+    <svg viewBox="0 -2 ${W} ${H + 16}" preserveAspectRatio="none"><line x1="0" x2="${W}" y1="${H}" y2="${H}" stroke="#2a2f3a"/>
+    ${barras}<text x="0" y="${H + 13}">${esc(pontos[0].rot)}</text><text x="${W}" y="${H + 13}" text-anchor="end">${esc(ult.rot)}</text>
+    <text x="0" y="8">${k(max)}</text></svg></div>`;
+}
+function leit(id, i) {
+  const g = GRAFS[id], p = g.pontos[i];
+  document.getElementById("leit" + id).innerHTML = `<b>${p.v.toLocaleString("pt-BR")}</b> ${g.unidade} · ${esc(p.rot)}`;
+}
+function hbarras(linhas, cor) {
+  const max = Math.max(1, ...linhas.map(l => l.v)), tot = linhas.reduce((s, l) => s + l.v, 0);
+  return `<div class="caixa">${linhas.map(l => `<div class="hb"><span>${esc(l.rot)}</span><div class="trilho"><div style="width:${100 * l.v / max}%;background:${cor}"></div></div>
+    <span>${k(l.v)} · ${pct(l.v, tot)}</span></div>`).join("")}</div>`;
+}
+function kpi(v, rot, extra) { return `<div class="kpi"><b>${v}</b><span>${rot}</span>${extra ? `<i>${extra}</i>` : ""}</div>`; }
+// diferenca dia a dia a partir das fotos diarias (historico)
+function porDia(hist, plat, campo) {
+  const out = [];
+  for (let i = 1; i < hist.length; i++) {
+    const a = (hist[i - 1][plat] || {})[campo], b = (hist[i][plat] || {})[campo];
+    if (a != null && b != null) out.push({ rot: dia(hist[i].dia + "T12:00:00"), v: Math.max(0, b - a) });
+  }
+  return out;
+}
+const CORYT = "#ff6b6b", CORTT = "#2fd3d6";
+const ORIGEM = { SHORTS: "Feed de Shorts", YT_SEARCH: "Pesquisa do YouTube", BROWSE: "Início / navegar", SUBSCRIBER: "Inscrições",
+  EXT_URL: "Sites e apps de fora", RELATED_VIDEO: "Vídeos sugeridos", YT_CHANNEL: "Página do canal", NO_LINK_OTHER: "Direto / outros",
+  PLAYLIST: "Playlists", NOTIFICATION: "Notificações", HASHTAGS: "Hashtags", END_SCREEN: "Tela final", YT_OTHER_PAGE: "Outras páginas do YouTube",
+  SOUND_PAGE: "Página do som", ANNOTATION: "Cards", CAMPAIGN_CARD: "Campanhas", ADVERTISING: "Anúncios", LIVE_REDIRECT: "Lives", SHORTS_CONTENT_LINKS: "Links em Shorts" };
+const seg = s => { s = Math.round(s || 0); return s >= 60 ? `${Math.floor(s / 60)}min${String(s % 60).padStart(2, "0")}` : s + "s"; };
+
+function metricasYT(c, pub) {
+  GRAFS = [];
+  const ci = c.yt_canal, an = c.analytics || {}, hist = c.historico || [];
+  let h = "";
+  if (ci) h += `<h2>Canal agora</h2><div class="kpis">${kpi(ci.inscritos_ocultos ? "oculto" : k(ci.inscritos), "inscritos")}${kpi(k(ci.views), "views no total")}${kpi(k(ci.videos), "vídeos")}</div>`;
+  const porVideo = Object.fromEntries(pub.filter(i => i.youtube).map(i => [i.youtube.split("/").pop(), i]));
+  if (an.dias) {
+    const t = an.total || {}, eng = (t.likes || 0) + (t.comments || 0) + (t.shares || 0);
+    const liq = (t.subscribersGained || 0) - (t.subscribersLost || 0);
+    h += `<h2>Últimos 28 dias <small>(YouTube Studio, atraso de 2 a 3 dias)</small></h2><div class="kpis">
+      ${kpi(k(t.views || 0), "views")}${kpi(k(Math.round((t.estimatedMinutesWatched || 0) / 60)), "horas assistidas")}
+      ${kpi((liq >= 0 ? "+" : "") + liq, "inscritos", `<span class="up">+${t.subscribersGained || 0}</span> <span class="down">−${t.subscribersLost || 0}</span>`)}
+      ${kpi(t.averageViewPercentage != null ? t.averageViewPercentage.toFixed(0) + "%" : "—", "% assistida (média)")}${kpi(seg(t.averageViewDuration), "tempo médio visto")}
+      ${kpi(pct(eng, t.views), "engajamento")}${kpi(k(t.likes || 0), "curtidas")}${kpi(k(t.comments || 0), "comentários")}${kpi(k(t.shares || 0), "compartilh.")}</div>`;
+    h += `<h2>Views por dia</h2>` + barras(an.dias.map(d => ({ rot: dia(d.day + "T12:00:00"), v: d.views || 0 })), CORYT, "views");
+    h += `<h2>Inscritos ganhos por dia</h2>` + barras(an.dias.map(d => ({ rot: dia(d.day + "T12:00:00"), v: d.subscribersGained || 0 })), CORYT, "inscritos");
+    h += `<h2>% assistida por dia</h2>` + barras(an.dias.filter(d => d.views).map(d => ({ rot: dia(d.day + "T12:00:00"), v: Math.round(d.averageViewPercentage || 0) })), CORYT, "% assistida");
+    if ((an.origem || []).length) h += `<h2>De onde vêm as views</h2>` + hbarras(an.origem.map(o => ({ rot: ORIGEM[o.insightTrafficSourceType] || o.insightTrafficSourceType, v: o.views })), CORYT);
+    if ((an.paises || []).length) h += `<h2>Países</h2>` + hbarras(an.paises.map(o => ({ rot: PAIS(o.country), v: o.views })), CORYT);
+    if ((an.top || []).length) h += `<h2>Melhores vídeos <small>(28 dias)</small></h2><div class="caixa">` + an.top.map(v => {
+      const it = porVideo[v.video] || {};
+      return `<a class="rank" href="https://youtu.be/${esc(v.video)}" target="_blank"><div class="mini" style="background-image:url('${esc(it.capa || `https://i.ytimg.com/vi/${v.video}/hqdefault.jpg`)}')"></div>
+        <div class="info"><div class="tit">${esc(it.titulo || v.video)}</div><div class="sub">👁 ${k(v.views)} · ${Math.round(v.averageViewPercentage || 0)}% assistida · ${seg(v.averageViewDuration)}</div>
+        <div class="sub">👍 ${k(v.likes)} · 💬 ${k(v.comments)} · ↗ ${k(v.shares)} · +${v.subscribersGained || 0} inscritos</div></div></a>`;
+    }).join("") + `</div>`;
+  } else {
+    const msg = { sem_escopo: "A chave do YouTube deste canal ainda não tem permissão de Analytics. Por isso aparecem só os números públicos (sem % assistida, tempo visto e origem das views).",
+                  api_desligada: "A YouTube Analytics API está desligada no Google Cloud. Por isso aparecem só os números públicos." }[an.erro]
+      || (an.erro ? "Não consegui ler o YouTube Analytics: " + an.erro : "Sem dados do YouTube Analytics.");
+    h += `<div class="aviso" style="margin-top:14px">${esc(msg)}</div>`;
+    const tot = pub.reduce((s, i) => ({ v: s.v + (i.views || 0), l: s.l + (i.likes || 0), c: s.c + (i.comentarios || 0) }), { v: 0, l: 0, c: 0 });
+    h += `<h2>Vídeos publicados</h2><div class="kpis">${kpi(k(tot.v), "views")}${kpi(k(tot.l), "curtidas")}${kpi(k(tot.c), "comentários")}
+      ${kpi(pct(tot.l + tot.c, tot.v), "engajamento")}${kpi(k(pub.length ? Math.round(tot.v / pub.length) : 0), "views por vídeo")}${kpi(k(pub.length), "publicados")}</div>`;
+    const vd = porDia(hist, "yt", "views");
+    h += `<h2>Views por dia</h2>` + (vd.length ? barras(vd, CORYT, "views") : `<div class="graf"><div class="leit">O gráfico por dia aparece a partir de amanhã (o painel guarda uma foto por dia).</div></div>`);
+    const sd = porDia(hist, "yt", "inscritos");
+    if (sd.length) h += `<h2>Inscritos ganhos por dia</h2>` + barras(sd, CORYT, "inscritos");
+    const top = pub.slice().sort((a, b) => (b.views || 0) - (a.views || 0)).slice(0, 10);
+    if (top.length) h += `<h2>Melhores vídeos <small>(desde sempre)</small></h2><div class="caixa">` + top.map(it =>
+      `<a class="rank" href="${esc(it.youtube)}" target="_blank"><div class="mini" style="background-image:url('${esc(it.capa || "")}')"></div>
+        <div class="info"><div class="tit">${esc(it.titulo)}</div><div class="sub">${esc(it.codigo)} · 👁 ${k(it.views)} · 👍 ${k(it.likes)} · 💬 ${k(it.comentarios)}</div>
+        <div class="sub">engajamento ${eng((it.likes || 0) + (it.comentarios || 0), it.views)}</div></div></a>`).join("") + `</div>`;
+  }
+  return h;
+}
+
+function metricasTT(c) {
+  GRAFS = [];
+  const t = c.tiktok;
+  if (!t) return `<div class="vazio">Este canal ainda não tem TikTok.</div>`;
+  const tp = t.perfil || {}, l = t.lista || [], hist = c.historico || [];
+  const tot = l.reduce((s, p) => ({ v: s.v + (p.views || 0), l: s.l + (p.likes || 0), c: s.c + (p.comentarios || 0), sh: s.sh + (p.compart || 0) }), { v: 0, l: 0, c: 0, sh: 0 });
+  let h = `<h2>Conta @${esc(t.handle)}</h2><div class="kpis">${kpi(k(tp.seguidores || 0), "seguidores")}${kpi(k(tot.v), "views")}${kpi(k(tp.curtidas || tot.l), "curtidas")}
+    ${kpi(k(tot.c), "comentários")}${kpi(k(tot.sh), "compartilh.")}${kpi(pct(tot.l + tot.c + tot.sh, tot.v), "engajamento")}
+    ${kpi(k(l.length ? Math.round(tot.v / l.length) : 0), "views por post")}${kpi(k(tp.videos || l.length), "posts")}${kpi(pct(tp.seguidores || 0, tot.v), "seguidores por view")}</div>`;
+  const vd = porDia(hist, "tt", "views"), sd = porDia(hist, "tt", "seguidores");
+  h += `<h2>Views por dia</h2>` + (vd.length ? barras(vd, CORTT, "views") : `<div class="graf"><div class="leit">O gráfico por dia aparece a partir de amanhã (o painel guarda uma foto por dia).</div></div>`);
+  if (sd.length) h += `<h2>Seguidores ganhos por dia</h2>` + barras(sd, CORTT, "seguidores");
+  if (l.length) h += `<h2>Views de cada post <small>(em ordem de postagem)</small></h2>` + barras(l.map(p => ({ rot: (p.codigo || "") + " " + dia(p.quando), v: p.views || 0 })), CORTT, "views");
+  const top = l.slice().sort((a, b) => (b.views || 0) - (a.views || 0)).slice(0, 10);
+  if (top.length) h += `<h2>Melhores posts</h2><div class="caixa">` + top.map(p =>
+    `<a class="rank" href="${esc(p.link)}" target="_blank"><div class="mini" style="background-image:url('${esc(p.capa || "")}')"></div>
+      <div class="info"><div class="tit">${esc(p.titulo || p.codigo || "Post")}</div><div class="sub">👁 ${k(p.views)} · ❤️ ${k(p.likes)} · 💬 ${k(p.comentarios)} · ↗ ${k(p.compart)}</div>
+      <div class="sub">engajamento ${eng(engaj(p), p.views)}${p.yt_views != null ? ` · YouTube 👁 ${k(p.yt_views)}` : ""}</div></div></a>`).join("") + `</div>`;
+  h += `<div class="dica">TikTok lido da página pública (grátis), ${esc(quando(t.lido_em))}. O TikTok não mostra % assistida nem origem das views de graça.</div>`;
+  return h;
 }
 
 function abrir(i) {

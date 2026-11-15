@@ -6,6 +6,8 @@ a API do YouTube (leitura) e as Releases painel-<canal> (copias leves dos videos
 import csv, datetime as dt, glob, importlib.util, json, os, sys, urllib.request
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import painel_metricas as PM  # noqa: E402
 REPO = os.environ.get("GITHUB_REPOSITORY", "opradopedro/canais-dark")
 SAIDA = os.path.join(RAIZ, "painel-web")
 
@@ -37,7 +39,7 @@ def assets(cid):
 def youtube(modulo, token_var, prefixo):
     """{codigo: {...}} com estado e numeros. Vazio se a chave nao estiver disponivel."""
     if not os.environ.get(token_var):
-        return {}, "sem chave"
+        return {}, "sem chave", None
     os.environ["YT_TOKEN_VAR"] = token_var
     caminho = os.path.join(RAIZ, modulo)
     sys.path.insert(0, os.path.dirname(caminho))
@@ -58,9 +60,23 @@ def youtube(modulo, token_var, prefixo):
             st = stats.get(v["id"], {})
             v.update(views=int(st.get("viewCount", 0)), likes=int(st.get("likeCount", 0)),
                      comentarios=int(st.get("commentCount", 0)))
-        return ja, None
+        return ja, None, metricas_yt(m, token)
     except BaseException as e:  # sys.exit dos scripts antigos tambem
-        return {}, str(e)[:200]
+        return {}, str(e)[:200], None
+
+
+def metricas_yt(m, token):
+    """Numeros do canal + YouTube Analytics (aba Metricas). Nunca derruba o painel."""
+    out = {}
+    try:
+        out["canal"] = PM.canal_info(m, token)
+    except BaseException as e:
+        out["canal_erro"] = str(e)[:160]
+    try:
+        out["analytics"] = PM.analytics(token)
+    except BaseException as e:
+        out["analytics"] = {"erro": str(e)[:160]}
+    return out
 
 
 def gta():
@@ -117,8 +133,11 @@ def main():
     canais = []
     tt = tiktok()
     tt_canais = tt.get("canais", {})
+    hist = PM.historico_ler()
+    hoje = agora.astimezone(dt.timezone(dt.timedelta(hours=-3))).strftime("%Y-%m-%d")  # dia de Brasilia
     for cid, pasta, nome, idioma, quando, modulo, tvar, pref in CANAIS:
-        ja, erro = youtube(modulo, tvar, pref)
+        ja, erro, met = youtube(modulo, tvar, pref)
+        met = met or {}
         arq = assets(cid)
         itens = []
         for f in sorted(glob.glob(os.path.join(RAIZ, pasta, "stories", "*.json"))):
@@ -147,14 +166,42 @@ def main():
                 it["video"] = arq[cod + ".mp4"]
             if cod + ".jpg" in arq:
                 it["capa"] = arq[cod + ".jpg"]
+            elif v:  # sem capa leve na Release: usa a miniatura do proprio YouTube
+                it["capa"] = f"https://i.ytimg.com/vi/{v['id']}/hqdefault.jpg"
             itens.append(it)
         ct = tt_canais.get(cid)
         resumo_tt = None
         if ct:
+            por_yt = {(i.get("youtube") or "").rsplit("/", 1)[-1]: i for i in itens if i.get("youtube")}
+            por_cod = {i["codigo"]: i for i in itens}
+            lista = []
+            for p in ct.get("posts", []):
+                it = por_yt.get(p.get("youtube") or "") or por_cod.get(p.get("codigo") or "") or {}
+                lista.append({"codigo": it.get("codigo") or p.get("codigo"), "titulo": it.get("titulo"),
+                              "capa": it.get("capa") or (f"https://i.ytimg.com/vi/{p['youtube']}/hqdefault.jpg" if p.get("youtube") else None),
+                              "youtube": it.get("youtube"), "yt_views": it.get("views"), "link": p.get("tiktok"),
+                              "quando": p.get("quando"), **{k: p.get(k) for k in ("views", "likes", "comentarios", "compart")}})
             resumo_tt = {"handle": ct.get("handle"), "link": ct.get("link"), "perfil": ct.get("perfil"),
-                         "views": ct.get("views", 0), "posts": len(ct.get("posts", [])), "lido_em": tt.get("gerado")}
+                         "views": ct.get("views", 0), "posts": len(ct.get("posts", [])), "lido_em": tt.get("gerado"),
+                         "lista": lista}
+        # foto do dia (YouTube e TikTok) para os graficos por dia da aba Metricas
+        foto = {}
+        cinfo = met.get("canal")
+        if cinfo:
+            pub = [i for i in itens if i["estado"] == "publicado"]
+            foto["yt"] = {"inscritos": cinfo["inscritos"], "views": cinfo["views"], "videos": cinfo["videos"],
+                          "likes": sum(i.get("likes", 0) for i in pub), "comentarios": sum(i.get("comentarios", 0) for i in pub)}
+        if resumo_tt:
+            tp = resumo_tt.get("perfil") or {}
+            ls = resumo_tt["lista"]
+            foto["tt"] = {"seguidores": tp.get("seguidores"), "curtidas": tp.get("curtidas"), "views": resumo_tt["views"],
+                          "posts": tp.get("videos") or len(ls), "comentarios": sum(x.get("comentarios") or 0 for x in ls),
+                          "compart": sum(x.get("compart") or 0 for x in ls)}
+        if foto:
+            PM.historico_gravar(hist, hoje, cid, foto)
         canais.append({"id": cid, "nome": nome, "pasta": pasta, "idioma": idioma, "quando": quando,
-                       "aviso_youtube": erro, "itens": itens, "tiktok": resumo_tt})
+                       "aviso_youtube": erro, "itens": itens, "tiktok": resumo_tt,
+                       "yt_canal": cinfo, "analytics": met.get("analytics"), "historico": PM.serie(hist, cid)})
     canais.append(gta())
     os.makedirs(SAIDA, exist_ok=True)
     json.dump({"gerado": agora.strftime("%Y-%m-%dT%H:%M:%SZ"), "repo": REPO, "canais": canais},
