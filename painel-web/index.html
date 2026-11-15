@@ -76,7 +76,7 @@
   .seg { display:grid; grid-template-columns:1fr 1fr; gap:4px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:4px; margin-bottom:12px; }
   .seg button { height:36px; border:0; border-radius:9px; background:none; color:var(--mut); font-size:14px; }
   .seg button.on { background:var(--card2); color:var(--txt); font-weight:700; }
-  .links { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:18px 0 6px; }
+  .links { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:0 0 12px; }
   .links a { display:flex; align-items:center; justify-content:center; gap:6px; height:48px; border-radius:14px; text-decoration:none; font-weight:700; font-size:14px; }
   .l-yt { background:#2b1414; color:#ffb4b4; border:1px solid #5a2626; }
   .l-tt { background:#10282a; color:#9eeef0; border:1px solid #1f4f52; }
@@ -183,7 +183,7 @@ function render() {
     LISTA = SECAO === "fila" ? fila : pub;
     corpo = LISTA.length ? LISTA.map(linha).join("") : `<div class="vazio">${SECAO === "fila" ? "Nenhum roteiro na fila." : "Nada publicado ainda."}</div>`;
   }
-  document.getElementById("main").innerHTML = (SECAO === "metricas" ? aviso : aviso + resumo + tiktok) + corpo + botoesCanal(c);
+  document.getElementById("main").innerHTML = (SECAO === "metricas" ? aviso : aviso + resumo + tiktok) + botoesCanal(c) + corpo;
 }
 
 function guardar() { try { localStorage.setItem("plat", PLAT); } catch (e) {} }
