@@ -2,7 +2,11 @@
 
 REGRA do Pedro (15/11/2026): nenhum video longo sai, em hipotese nenhuma, com menos de 10 minutos.
 (O YouTube libera anuncio no meio a partir de 8 min; 10 min e o nosso piso, com margem.)
-Se uma serie sozinha nao chega a 10 min, o longo junta a serie seguinte do mesmo canal (ou aumenta os extras).
+Formato aprovado pelo Pedro (15/11):
+- Old Tales: 1 serie por longo, sempre (5 partes de ~2 min + extras). Se a estimativa nao chega, AUMENTA OS EXTRAS;
+  nunca junta outra serie.
+- Hora Muerta e Signal Lost: coletanea assumida ("3 relatos..."), 3+ series inteiras em ordem, 10 a 14 min.
+- So You Built It: junta videos em ordem ate passar de 10 min.
 
 Uso:
   python motor-en/longo.py plano <pasta do canal>    -> grupos de series (em ordem) que dao >= 10 min cada
@@ -20,6 +24,8 @@ MINIMO_S = 600          # 10 min: piso duro (Pedro, 15/11)
 MARGEM_PLANO_S = 630    # o plano mira 10min30 para sobrar folga depois da montagem
 EXTRAS_S = 60           # abertura + epilogo + cartoes extras (estimativa conservadora)
 # palavras faladas por segundo, medido nos videos prontos (ROTEIROS.md 'Duracao')
+UMA_SERIE = {"old-tales"}  # 1 serie = 1 longo
+MAXIMO_COLETANEA_S = 14 * 60
 RITMO = {"hora-muerta": 1.7, "signal-lost": 1.7, "old-tales": 2.3, "so-you-built-it": 3.1}
 
 
@@ -61,15 +67,25 @@ def plano(pasta):
         else:
             series.append([nome, [h.get("codigo")], seg])
     grupos, atual, soma = [], [], EXTRAS_S
+    if canal in UMA_SERIE:
+        for nome, cods, seg in series:
+            total = EXTRAS_S + seg
+            g = {"series": [nome], "codigos": cods, "estimado_min": round(total / 60, 1)}
+            if total < MARGEM_PLANO_S:
+                g["aumentar_extras_s"] = round(MARGEM_PLANO_S - total)  # epilogo/cartoes a mais; nunca juntar serie
+            grupos.append(g)
+        return {"canal": canal, "formato": "1 serie por longo", "minimo_min": MINIMO_S / 60, "grupos": grupos,
+                "esperando_mais_series": None}
     for s in series:
         atual.append(s)
         soma += s[2]
         if soma >= MARGEM_PLANO_S:
             grupos.append({"series": [x[0] for x in atual], "codigos": [c for x in atual for c in x[1]],
-                           "estimado_min": round(soma / 60, 1)})
+                           "estimado_min": round(soma / 60, 1), "coletanea": len(atual) > 1,
+                           "passa_de_14_min": soma > MAXIMO_COLETANEA_S})
             atual, soma = [], EXTRAS_S
     sobra = {"series": [x[0] for x in atual], "estimado_min": round(soma / 60, 1)} if atual else None
-    return {"canal": canal, "minimo_min": MINIMO_S / 60, "grupos": grupos, "esperando_mais_series": sobra}
+    return {"canal": canal, "formato": "coletanea", "minimo_min": MINIMO_S / 60, "grupos": grupos, "esperando_mais_series": sobra}
 
 
 if __name__ == "__main__":

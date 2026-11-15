@@ -1,6 +1,6 @@
 # TikTok: como a postagem funciona
 
-O TikTok acompanha o YouTube. Todo vídeo que entra no ar no YouTube vai para a conta do canal no TikTok, pela vidIQ (app já aprovado pelo TikTok, post grátis). Quem posta é a rotina do Claude, 10 minutos depois de cada horário de publicação do YouTube (15/11, pedido do Pedro: TikTok sai junto com o YouTube): 17h10 UTC (Old Tales, meio-dia de NY), 21h10 e 23h10 UTC (So You Built It) e 00h10 UTC (Hora Muerta e Signal Lost). Cron `10 0,17,21,23 * * *` (UTC). Execução sem nada público novo termina sem fazer nada. Se um canal mudar de horário no YouTube, mudar a tarefa também.
+O TikTok acompanha o YouTube. Todo vídeo que entra no ar no YouTube vai para a conta do canal no TikTok, pela vidIQ (app já aprovado pelo TikTok, post grátis). Quem posta é a rotina do Claude, 10 minutos depois de cada horário de publicação do YouTube (15/11, pedido do Pedro: TikTok sai junto com o YouTube): 17h10 UTC (Old Tales, meio-dia de NY), 21h10 e 23h10 UTC (So You Built It) e 00h10 UTC (Hora Muerta e Signal Lost). Cron `10 0,17,21,23 * * *` (UTC). Execução sem nada público novo só atualiza os números do painel (passo 5b). Se um canal mudar de horário no YouTube, mudar a tarefa também.
 
 ## Regras do Pedro (13/11/2026)
 - Mesma frequência do YouTube. Série antiga (já no ar em 13/11) nunca vai: está em `postados.json` → `ignorar`.
@@ -19,7 +19,8 @@ O TikTok acompanha o YouTube. Todo vídeo que entra no ar no YouTube vai para a 
    Conferir que a duração do vídeo baixado bate com a do YouTube (ffprobe no `videoUrl`).
 3. `vidiq_social_post_draft_create` com `text` = `legenda`, `media` = o vídeo, destino TIKTOK com `platformAccountId` = `conta` e as 4 escolhas acima. SEM `publishAt`.
 4. `vidiq_social_post_publish` com o `postId` e a `revision`.
-5. `python tiktok/fila.py --marcar <youtubeId> <postId> <canal> [codigo]`; no fim, commit e push em producao.
+5. `vidiq_social_post_status` com o `postId` (grátis) para pegar o `postUrl` e `python tiktok/fila.py --marcar <youtubeId> <postId> <canal> [codigo] <postUrl>` (o link é o que o painel usa para ler as views).
+5b. Em TODA execução (mesmo sem post novo): `python tiktok/estatisticas.py --salvar` (seguidores, views e curtidas lidos de graça na página pública do TikTok; não usa crédito da vidIQ). No fim, commit e push em producao: o painel atualiza sozinho com o `tiktok/estatisticas.json`.
 6. Falhou (conta desconectada, `canPublish` false): não marcar; avisar o Pedro na thread "Planejar vídeos longos e TikTok" com o link de reconectar (`vidiq_social_account_connect`, em bloco de código, porque ele não consegue copiar hyperlink).
 
 Post agendado na vidIQ não pode ser cancelado nem mudado (por isso a regra de nunca agendar). Se um vídeo do YouTube for tirado do ar, apagar o do TikTok pelo app.

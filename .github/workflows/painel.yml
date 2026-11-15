@@ -9,7 +9,7 @@ on:
     - cron: "0 21 * * *"
   push:
     branches: [producao]
-    paths: ["*/stories/**", "painel-web/**", "motor-en/painel_dados.py"]
+    paths: ["*/stories/**", "painel-web/**", "motor-en/painel_dados.py", "tiktok/estatisticas.json"]
   workflow_run:
     workflows: ["Canais (producao diaria)"]
     types: [completed]

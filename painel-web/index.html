@@ -30,6 +30,8 @@
   .num { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:10px; text-align:left; cursor:pointer; }
   .num:active { background:var(--card2); }
   .num b { display:block; font-size:20px; } .num span { color:var(--mut); font-size:12px; }
+  .tt { display:block; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:10px 12px; margin:-4px 0 12px; color:inherit; text-decoration:none; font-size:14px; }
+  .tt span { display:block; color:var(--mut); font-size:12px; margin-top:2px; }
   .aviso { background:#2a2214; color:#f3d79b; border:1px solid #4a3a1c; padding:10px 12px; border-radius:12px; font-size:13px; margin-bottom:12px; }
 
   /* lista compacta: miniatura + texto, toque abre o detalhe */
@@ -103,7 +105,8 @@ function issue(tipo, c, it) {
 
 function linha(it, i) {
   const estado = { roteiro: "roteiro", agendado: "sai " + quando(it.publica_em), publicado: "publicado" }[it.estado];
-  const sub = it.estado === "publicado" ? `👁 ${k(it.views)} · 👍 ${k(it.likes)} · 💬 ${k(it.comentarios)}`
+  const tt = it.tiktok && it.tiktok.views != null ? ` · TikTok 👁 ${k(it.tiktok.views)}` : "";
+  const sub = it.estado === "publicado" ? `👁 ${k(it.views)} · 👍 ${k(it.likes)} · 💬 ${k(it.comentarios)}${tt}`
             : (it.partes > 1 ? `${it.serie} · parte ${it.parte}/${it.partes}` : (it.formato || it.codigo));
   const ped = (PEDIDOS[it.codigo] || []).length ? `<div class="ped">● ${PEDIDOS[it.codigo].length} pedido(s) aberto(s)</div>` : "";
   const mini = it.capa ? `style="background-image:url('${esc(it.capa)}')"` : "";
@@ -126,6 +129,9 @@ function render() {
       <button class="num" onclick="secao('fila')"><b>${fila.length}</b><span>na fila ›</span></button>
       <button class="num" onclick="${prox ? `abrirCod('${prox.codigo}')` : `secao('fila')`}"><b>${prox ? quando(prox.publica_em).split(",")[0] : "—"}</b><span>próximo post ›</span></button>
       <button class="num" onclick="secao('postados')"><b>${k(total)}</b><span>views ›</span></button></div>`;
+  const t = c.tiktok, tp = t && t.perfil;
+  const tiktok = t ? `<a class="tt" href="${esc(t.link)}" target="_blank"><b>TikTok</b> @${esc(t.handle)}
+      <span>${tp ? `${k(tp.seguidores)} seguidores · ${k(t.views)} views · ${t.posts} posts · ${k(tp.curtidas)} curtidas` : `${t.posts} posts`} ›</span></a>` : "";
   const aviso = c.aviso_youtube ? `<div class="aviso">${esc(c.aviso_youtube)}</div>` : "";
   let corpo;
   if (SECAO === "ideia") {
@@ -137,7 +143,7 @@ function render() {
     LISTA = SECAO === "fila" ? fila : pub;
     corpo = LISTA.length ? LISTA.map(linha).join("") : `<div class="vazio">${SECAO === "fila" ? "Nenhum roteiro na fila." : "Nada publicado ainda."}</div>`;
   }
-  document.getElementById("main").innerHTML = aviso + resumo + corpo;
+  document.getElementById("main").innerHTML = aviso + resumo + tiktok + corpo;
 }
 
 function abrir(i) {
@@ -152,6 +158,7 @@ function abrir(i) {
       <a class="btn" href="${issue("gostei", c, it)}" target="_blank">👍 Gostei</a>
       <a class="btn" href="${issue("naogostei", c, it)}" target="_blank">👎 Não gostei</a>
       ${it.youtube ? `<a class="btn larga" href="${esc(it.youtube)}" target="_blank">▶ Abrir no YouTube</a>` : ""}
+      ${it.tiktok ? `<a class="btn larga" href="${esc(it.tiktok.tiktok)}" target="_blank">♪ TikTok: ${k(it.tiktok.views)} views · ${k(it.tiktok.likes)} curtidas</a>` : ""}
       ${peds}
     </div>
     <div class="fala">${it.roteiro.map(l => `<p>${esc(l).replace(/\{(when_next|next_card|next_day|next_date|dia_siguiente|fecha_siguiente)\}/g, "<i>[dia da próxima parte]</i>")}</p>`).join("")}</div>

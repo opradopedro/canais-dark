@@ -11,7 +11,7 @@ Video privado, desagendado, substituido ou ainda agendado nao aparece la, entao 
 O controle e pelo ID do video do YouTube (a "versao"): o cartoon e o ilustrado tem IDs diferentes.
 
 Uso: python tiktok/fila.py                       -> JSON com o que postar AGORA (publicar na hora, sem publishAt)
-     python tiktok/fila.py --marcar <youtubeId> <postId> <canal> [codigo]   -> grava em postados.json
+     python tiktok/fila.py --marcar <youtubeId> <postId> <canal> [codigo] [<link do post no TikTok>]
      python tiktok/fila.py --ignorar <youtubeId> <canal> [motivo]           -> nunca postar esse video
 A postagem em si e feita pela rotina do Claude com a vidIQ (TIKTOK.md explica o passo a passo).
 """
@@ -174,11 +174,13 @@ def salvar(est):
     json.dump(est, open(ESTADO, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 
-def marcar(vid, post_id, canal, cod=None):
+def marcar(vid, post_id, canal, cod=None, link=None):
     est = carregar()
     chave = cod or vid
     est["postados"][chave] = {"postId": post_id, "youtube": vid, "canal": canal,
                               "quando": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()}
+    if link:  # postUrl do vidiq_social_post_status: o painel le as views do TikTok por ele
+        est["postados"][chave]["tiktok"] = link
     salvar(est)
     print("MARCADO", chave, vid)
 
@@ -195,7 +197,9 @@ if __name__ == "__main__":
     if len(a) == 5 and a[0] == "--marcar" and re.match(r"\d{4}-\d\d-\d\dT", a[3]):
         marcar(a[1], a[2], a[4])  # forma antiga: --marcar <codigo=youtubeId> <postId> <quando> <canal>
     elif len(a) >= 4 and a[0] == "--marcar":
-        marcar(a[1], a[2], a[3], a[4] if len(a) > 4 else None)
+        link = next((x for x in a[4:] if x.startswith("https://")), None)
+        cod = next((x for x in a[4:] if not x.startswith("https://")), None)
+        marcar(a[1], a[2], a[3], cod, link)
     elif len(a) >= 3 and a[0] == "--ignorar":
         ignorar(a[1], a[2], " ".join(a[3:]))
     else:

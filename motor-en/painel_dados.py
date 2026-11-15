@@ -95,9 +95,28 @@ def gta():
     return c
 
 
+def tiktok():
+    """Numeros do TikTok (tiktok/estatisticas.py): le ao vivo; se o TikTok bloquear, usa o ultimo arquivo gravado."""
+    try:
+        spec = importlib.util.spec_from_file_location("tt_est", os.path.join(RAIZ, "tiktok", "estatisticas.py"))
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        dados, lidos = mod.coletar()
+        if lidos:
+            return dados
+    except Exception as e:
+        print("TikTok ao vivo falhou:", e, file=sys.stderr)
+    try:
+        return json.load(open(os.path.join(RAIZ, "tiktok", "estatisticas.json"), encoding="utf-8"))
+    except Exception:
+        return {}
+
+
 def main():
     agora = dt.datetime.now(dt.timezone.utc)
     canais = []
+    tt = tiktok()
+    tt_canais = tt.get("canais", {})
     for cid, pasta, nome, idioma, quando, modulo, tvar, pref in CANAIS:
         ja, erro = youtube(modulo, tvar, pref)
         arq = assets(cid)
@@ -121,13 +140,21 @@ def main():
                 it.update(estado="agendado" if futuro else "publicado", youtube=f"https://youtu.be/{v['id']}",
                           publica_em=quando_pub, views=v.get("views", 0), likes=v.get("likes", 0),
                           comentarios=v.get("comentarios", 0))
+            for p in (tt_canais.get(cid) or {}).get("posts", []):
+                if (v and p.get("youtube") == v.get("id")) or p.get("codigo") == cod:
+                    it["tiktok"] = {k2: p.get(k2) for k2 in ("tiktok", "views", "likes", "comentarios")}
             if cod + ".mp4" in arq:
                 it["video"] = arq[cod + ".mp4"]
             if cod + ".jpg" in arq:
                 it["capa"] = arq[cod + ".jpg"]
             itens.append(it)
+        ct = tt_canais.get(cid)
+        resumo_tt = None
+        if ct:
+            resumo_tt = {"handle": ct.get("handle"), "link": ct.get("link"), "perfil": ct.get("perfil"),
+                         "views": ct.get("views", 0), "posts": len(ct.get("posts", [])), "lido_em": tt.get("gerado")}
         canais.append({"id": cid, "nome": nome, "pasta": pasta, "idioma": idioma, "quando": quando,
-                       "aviso_youtube": erro, "itens": itens})
+                       "aviso_youtube": erro, "itens": itens, "tiktok": resumo_tt})
     canais.append(gta())
     os.makedirs(SAIDA, exist_ok=True)
     json.dump({"gerado": agora.strftime("%Y-%m-%dT%H:%M:%SZ"), "repo": REPO, "canais": canais},

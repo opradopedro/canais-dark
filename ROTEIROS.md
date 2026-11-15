@@ -244,11 +244,13 @@ Cada série vira um vídeo longo no YouTube. **PISO DURO: nenhum longo sai com m
 (REGRA do Pedro, 15/11; o YouTube libera anúncio no meio a partir de 8 min, e 10 min é a nossa margem).
 - A trava é `python motor-en/longo.py trava <video.mp4>`: abaixo de 10 min ela sai com erro e o longo NÃO sobe.
   Todo código que subir longo roda a trava antes do upload.
-- Quem decide o que entra é `python motor-en/longo.py plano <canal>`: junta séries inteiras, em ordem, até a
-  estimativa passar de 10min30. Série que sozinha não chega (ex.: Old Tales com 4 partes = ~7min40) **junta a série
-  seguinte** no mesmo longo; nunca sai curta. O que ainda não chega fica esperando a próxima série.
-- **Old Tales:** séries de 4 a 5 partes de ~1min55. Com 5 partes + extras dá ~10min30; com 4, o longo junta 2 séries.
-- **Hora Muerta e Signal Lost:** séries de 2 a 3 partes; o longo junta 3 ou mais séries (10 a 14 min).
+- Quem decide o que entra é `python motor-en/longo.py plano <canal>` (formato APROVADO pelo Pedro em 15/11):
+- **Old Tales: 1 série por longo, sempre.** Toda série do Old Tales tem **5 partes** de ~2 min (250–275 palavras)
+  e os extras do longo (abertura, cartões, epílogo) completam até passar de 10 min. Série que não chega a 10min30
+  na estimativa NÃO junta outra série: o plano manda **aumentar os extras** (epílogo maior, mais cartões).
+- **Hora Muerta e Signal Lost: coletânea assumida.** O longo junta 3 ou mais séries inteiras, em ordem, de 10 a 14 min,
+  com título de coletânea (ex.: HM "3 relatos de terror para escuchar en la oscuridad" / SV "3 true scary stories to listen to in
+  the dark"), abertura curta que promete as 3 histórias e uma vinheta entre elas. Séries de 2 a 3 partes.
 - **So You Built It:** o longo junta 9 a 12 vídeos do mesmo tema (cada um ~1 min) até passar de 10 min.
 - **Extras só do longo** (o motor monta, o roteirista escreve no campo `"longo"` da última parte): abertura de 15–20 s
   com a promessa da história inteira, um cartão explicativo extra por parte e um epílogo de 45–90 s ("o que
@@ -265,7 +267,7 @@ Cada série vira um vídeo longo no YouTube. **PISO DURO: nenhum longo sai com m
 - O tempo a mais é para a história **respirar**, não para encher: mais detalhe concreto, mais um obstáculo, mais
   uma regra quebrada, o personagem tentando algo antes da virada. Continue com frases curtas e um plano por linha.
 - Séries continuam com **no mínimo 2 partes** e gancho de "quero mais" no fim de cada parte não final. Com partes
-  maiores, prefira séries de 2 a 3 partes (4 só em história muito longa). Old Tales: até 5 partes (série que vira longo).
+  maiores, prefira séries de 2 a 3 partes (4 só em história muito longa). Old Tales: sempre 5 partes (1 série = 1 longo).
 - O último susto continua na **penúltima** frase (trava de chiado no fim) e a legenda continua presa na voz.
 - Shorts aceita até 3 min: nunca passe de ~2min10 numa parte.
 
