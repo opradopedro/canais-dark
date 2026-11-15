@@ -252,9 +252,19 @@ Cada série vira um vídeo longo no YouTube. **PISO DURO: nenhum longo sai com m
   com título de coletânea (ex.: HM "3 relatos de terror para escuchar en la oscuridad" / SV "3 true scary stories to listen to in
   the dark"), abertura curta que promete as 3 histórias e uma vinheta entre elas. Séries de 2 a 3 partes.
 - **So You Built It:** o longo junta 9 a 12 vídeos do mesmo tema (cada um ~1 min) até passar de 10 min.
-- **Extras só do longo** (o motor monta, o roteirista escreve no campo `"longo"` da última parte): abertura de 15–20 s
-  com a promessa da história inteira, um cartão explicativo extra por parte e um epílogo de 45–90 s ("o que
-  aconteceu depois" / "o que é verdade nessa lenda"). Isso dá ao público do Short um motivo para ver o longo.
+- **Extras só do longo (Old Tales, OBRIGATÓRIO):** ao escrever a ÚLTIMA parte de uma série do Old Tales, escreva também
+  `old-tales/longos/<serie>.json` com `titulo` (título do longo, em inglês, com o nome do mito), `descricao`, `tags`,
+  `capa_texto` (2 a 4 palavras) e dois roteiros completos do motor ilustrado, mesmo formato de uma parte (`codigo`
+  tipo `CL070A`/`CL070E`, `mundo`, `elenco`, `lineas` com `cena`): `abertura` (40–55 palavras, ~20 s, promete a
+  história inteira) e `epilogo` (230–270 palavras, ~2 min: "o que aconteceu depois" / "o que é verdade nessa lenda",
+  com cartões de fato; termina com uma pergunta para comentar). Modelo: `old-tales/longos/wukong-ilustrado.json` +
+  `wukong-abertura.json` + `wukong-epilogo.json`. Sem esse arquivo o longo da série NÃO sai (não chega a 10 min).
+- **Hora Muerta e Signal Lost:** a coletânea é montada sozinha (título, descrição e capítulos automáticos); não precisa
+  de extras. Só entram séries do motor ilustrado (o 16:9 é desenhado de novo, com a mesma voz do Short).
+- **Como sai:** `.github/workflows/longos.yml` roda 2x por dia (17h40 e 1h40 UTC). Quando todas as partes estão no ar, ele
+  redesenha cada parte em 16:9 com a voz guardada (Release `longo-<canal>`), tira o "Part two, tomorrow", junta abertura
+  + partes + epílogo, faz a capa e os capítulos, confere legenda, fim e a trava de 10 min, e publica. O plano ganha
+  `"feito"` com o link.
 - No TikTok, 2 min também é bom: só vídeo com mais de 1 min entra no Creator Rewards.
 
 ### Retenção dentro de cada parte (vale para os 4 canais)

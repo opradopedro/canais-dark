@@ -1,0 +1,124 @@
+name: Videos longos
+
+# Video LONGO 16:9 automatico (Pedro, 15/11/2026): quando uma serie fecha (Old Tales) ou quando ha series fechadas
+# suficientes para uma coletanea (Hora Muerta / Signal Lost), monta e publica no canal certo.
+# Trava de 10 min, legenda presa na voz e fim sem chiado: se reprovar, NAO sobe. Ver motor-en/longo_montar.py.
+on:
+  schedule:
+    - cron: "40 17 * * *"   # depois do Short do Old Tales (17h UTC)
+    - cron: "40 1 * * *"    # depois do Short de Hora Muerta e Signal Lost (00h UTC)
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "publicar (padrao) ou prova (monta e guarda na Release teste-longo, sem publicar)"
+        default: publicar
+      plano:
+        description: "opcional: caminho de um plano (ex.: old-tales/longos/wukong-ilustrado.json), mesmo antes de liberar"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: longos
+  cancel-in-progress: false
+
+jobs:
+  longo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      FREESOUND_API_KEY: ${{ secrets.FREESOUND_API_KEY }}
+      CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN_SURVIVAL: ${{ secrets.YT_REFRESH_TOKEN_SURVIVAL }}
+      YT_REFRESH_TOKEN_CLASSICS: ${{ secrets.YT_REFRESH_TOKEN_CLASSICS }}
+      YT_REFRESH_TOKEN_ES: ${{ secrets.YT_REFRESH_TOKEN_ES }}
+      CANAIS_REPO: ${{ github.workspace }}
+      CANAIS_SEM_ENV: "1"
+      HF_HUB_DISABLE_SYMLINKS_WARNING: "1"
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: .github/requirements-canais.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Ha longo para fazer?
+        id: tem
+        run: |
+          if [ -n "${{ github.event.inputs.plano }}" ]; then echo "sim=1" >> "$GITHUB_OUTPUT"; exit 0; fi
+          # so instala o pesado quando algum plano esta liberado ou alguma serie pode ter fechado
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import glob, json, datetime as dt
+          agora = dt.datetime.now(dt.timezone.utc)
+          sim = 0
+          for f in glob.glob("*/longos/*.json"):
+              try:
+                  p = json.load(open(f, encoding="utf-8"))
+              except Exception:
+                  continue
+              lib = p.get("liberar_em")
+              if p.get("partes") and not p.get("feito") and (not lib or dt.datetime.fromisoformat(lib.replace("Z", "+00:00")) <= agora):
+                  sim = 1
+          print(f"sim={sim}")
+          PY
+      - name: Planejar (series que fecharam)
+        if: steps.tem.outputs.sim != '1'
+        run: python3 -c "import sys; sys.path.insert(0,'motor-en'); import longo_montar as m; print(m.planejar())"
+      - name: Algum plano novo?
+        id: tem2
+        run: |
+          if [ "${{ steps.tem.outputs.sim }}" = 1 ] || [ -n "$(git status --porcelain -- '*/longos/')" ]; then echo "sim=1" >> "$GITHUB_OUTPUT"; else echo "sim=0" >> "$GITHUB_OUTPUT"; fi
+      - name: Programas e pacotes
+        if: steps.tem2.outputs.sim == '1'
+        run: |
+          echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | sudo debconf-set-selections
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu ttf-mscorefonts-installer > /dev/null
+          pip install -q -r .github/requirements-canais.txt
+          npm install --prefix motor-ilustrado --no-audit --no-fund playwright@latest > /dev/null
+          cd motor-ilustrado && npx playwright install --with-deps chromium > /dev/null && cd ..
+      - name: Recuperar modelos, sons e narracoes
+        if: steps.tem2.outputs.sim == '1'
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            narracoes
+            sons
+            ~/.cache/huggingface
+            ~/.cache/torch
+            ~/.cache/hora-muerta
+          key: canais-longo-${{ github.run_id }}
+          restore-keys: |
+            canais-ilustrado-
+            canais-
+      - name: Montar e publicar
+        if: steps.tem2.outputs.sim == '1'
+        run: |
+          set -o pipefail
+          ARGS=""
+          [ "${{ github.event.inputs.modo }}" = "prova" ] && ARGS="--sem-subir"
+          [ -n "${{ github.event.inputs.plano }}" ] && ARGS="$ARGS --plano ${{ github.event.inputs.plano }}"
+          python motor-en/longo_montar.py $ARGS 2>&1 | tee /tmp/longo-log.txt
+      - name: Guardar planos no repositorio
+        if: always()
+        run: |
+          git config user.name "canais-bot"; git config user.email "canais-bot@users.noreply.github.com"
+          git add -- '*/longos/*.json' 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "longos: planos e publicados $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -q origin producao && git push -q origin HEAD:producao && break; sleep 5; done
+      - name: Enviar erro para a Release "logs"
+        if: failure()
+        run: |
+          tail -c 60000 /tmp/longo-log.txt > /tmp/longo_ERRO.txt 2>/dev/null || echo "sem log" > /tmp/longo_ERRO.txt
+          gh release view logs > /dev/null 2>&1 || gh release create logs --title "Logs de erro" --notes "Ultimo erro de cada tarefa"
+          gh release upload logs /tmp/longo_ERRO.txt --clobber

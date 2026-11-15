@@ -55,6 +55,24 @@ def montar_um(base, fatias, saida_mp4):
     os.remove(lista)
 
 
+def guardar_para_longo(cid, cod, base):
+    """Guarda roteiro + tempos + trilha (voz e sons) na Release longo-<canal>: o video LONGO (motor-en/longo_montar.py)
+    redesenha a parte em 16:9 com a MESMA voz, sem gravar de novo (nao gasta a cota de narracao)."""
+    arqs = [base + s for s in ("_roteiro.json", "_tempos.json", "_trilha.m4a")]
+    if not all(os.path.exists(a) for a in arqs) or not os.environ.get("GH_TOKEN"):
+        return
+    tag = f"longo-{cid}"
+    try:
+        if subprocess.run(["gh", "release", "view", tag], capture_output=True).returncode != 0:
+            subprocess.run(["gh", "release", "create", tag, "--title", f"Pecas do video longo ({cid})",
+                            "--notes", "Voz/trilha, tempos e roteiro de cada parte publicada (gerado pelo GitHub Actions)"],
+                           check=True, capture_output=True)
+        subprocess.run(["gh", "release", "upload", tag, *arqs, "--clobber"], check=True, capture_output=True)
+        print(f"pecas do longo guardadas: {cod} -> {tag}", flush=True)
+    except Exception as e:
+        print("guardar pecas do longo falhou (o Short subiu):", e, flush=True)
+
+
 def main():
     canal, prep, pasta_fatias = sys.argv[1], sys.argv[2], sys.argv[3]
     subir = "--sem-subir" not in sys.argv
@@ -125,6 +143,8 @@ def main():
             prod.guardar(cod, base, up, vid) if hm else prod.guardar(c, cod, base, up, vid)
         except Exception as e:
             print("copia do painel falhou (o video subiu):", e, flush=True)
+        if vid:
+            guardar_para_longo(PAINEL.get(canal, canal), cod, base)
     if falhas:
         print("\n".join(falhas), flush=True)
         return 1

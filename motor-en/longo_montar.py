@@ -1,0 +1,376 @@
+#!/usr/bin/env python3
+"""VIDEO LONGO automatico (16:9) dos canais de historia, no formato aprovado pelo Pedro (15/11/2026):
+- Old Tales: 1 serie por longo (5 partes + abertura + epilogo). Os extras sao roteiros do motor ilustrado escritos
+  pelo roteirista em old-tales/longos/<serie>.json (campos "abertura" e "epilogo").
+- Hora Muerta e Signal Lost: coletanea assumida ("3 relatos..."), 3+ series inteiras, 10 a 14 min. O plano e criado
+  sozinho quando as series fecham.
+- PISO DURO: nada abaixo de 10 min sobe (motor-en/longo.py trava). Legenda fora da voz ou chiado no fim: nao sobe.
+
+Cada longo e um arquivo <canal>/longos/<nome>.json ("plano"):
+  {"titulo", "descricao", "tags", "capa_texto", "series": [slug], "partes": [{"codigo", "roteiro", "youtube", "rotulo"}],
+   "abertura": caminho ou roteiro, "epilogo": caminho ou roteiro, "liberar_em": ISO UTC, "feito": {...}}
+De onde vem cada parte (na ordem): Release longo-<canal> (voz guardada na producao: redesenha em 16:9 sem gravar voz),
+Release teste-ilustrado (<COD>-horizontal.mp4 ja pronto) ou, por ultimo, voz nova a partir do roteiro.
+Na parte que nao e a ultima da serie, a ultima fala ("Part two, tomorrow") sai do longo.
+
+Uso: python motor-en/longo_montar.py              -> planeja e monta/sobe o primeiro longo pronto (GitHub Actions)
+     python motor-en/longo_montar.py --sem-subir  -> monta e guarda na Release teste-longo, sem publicar
+     python motor-en/longo_montar.py --plano <arquivo>  -> so esse plano (mesmo sem estar liberado)
+"""
+import datetime as dt
+import glob
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+import urllib.request
+
+AQUI = os.path.dirname(os.path.abspath(__file__))
+RAIZ = os.path.dirname(AQUI)
+sys.path.insert(0, AQUI)
+sys.path.insert(0, os.path.join(RAIZ, "motor-ilustrado"))
+import longo  # noqa: E402
+
+REPO = os.environ.get("GITHUB_REPOSITORY", "opradopedro/canais-dark")
+DADOS = "https://opradopedro.github.io/canais-dark/dados.json"
+CANAIS = {"old-tales": {"cid": "cl", "pref": "CL", "idioma": "en", "token": "YT_REFRESH_TOKEN_CLASSICS"},
+          "signal-lost": {"cid": "sv", "pref": "SV", "idioma": "en", "token": "YT_REFRESH_TOKEN_SURVIVAL"},
+          "hora-muerta": {"cid": "hm", "pref": "HM", "idioma": "es", "token": "YT_REFRESH_TOKEN_ES"}}
+FIM_DE_PARTE = re.compile(r"\b(part|parte)\s+\w+\s*[,.:!]?\s*(tomorrow|next|ma[nñ]ana|sale|is coming)", re.I)
+FONTE = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+TITULO_COLETANEA = {"hora-muerta": "{n} relatos de terror para escuchar en la oscuridad",
+                    "signal-lost": "{n} true scary stories to listen to in the dark"}
+
+
+def agora():
+    return dt.datetime.now(dt.timezone.utc)
+
+
+def run(*cmd):
+    print("+", " ".join(map(str, cmd))[:300], flush=True)
+    subprocess.run(list(map(str, cmd)), check=True)
+
+
+def baixar(tag, nome, destino):
+    url = f"https://github.com/{REPO}/releases/download/{tag}/{nome}"
+    try:
+        with urllib.request.urlopen(url, timeout=300) as r, open(destino, "wb") as f:
+            shutil.copyfileobj(r, f)
+        return os.path.getsize(destino) > 0
+    except Exception:
+        return False
+
+
+def publico(vid):
+    try:
+        urllib.request.urlopen("https://www.youtube.com/oembed?format=json&url=https://www.youtube.com/watch?v=" + vid,
+                               timeout=30)
+        return True
+    except Exception:
+        return False
+
+
+def ler(caminho):
+    return json.load(open(caminho, encoding="utf-8"))
+
+
+def gravar(caminho, dados):
+    json.dump(dados, open(caminho, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
+
+def achar_roteiro(rel):
+    """O roteiro pode ter ido de stories/ para arquivo/ depois de publicado."""
+    arq = os.path.join(RAIZ, rel)
+    if os.path.exists(arq):
+        return arq
+    alt = os.path.join(RAIZ, os.path.dirname(os.path.dirname(rel)), "arquivo", os.path.basename(rel))
+    return alt if os.path.exists(alt) else arq
+
+
+# ------------------------------------------------------------------ planejar
+def _series_publicadas(dados, cid):
+    """{slug: {"partes": n, "itens": [...], "visual"}} das series do canal com TODAS as partes publicadas."""
+    c = next((x for x in dados.get("canais", []) if x["id"] == cid), None)
+    if not c:
+        return {}
+    series = {}
+    for it in c["itens"]:
+        if not it.get("arquivo"):
+            continue
+        try:
+            h = ler(achar_roteiro(it["arquivo"]))
+        except Exception:
+            continue
+        slug = h.get("serie") or h.get("codigo")
+        s = series.setdefault(slug, {"partes": int(h.get("partes") or 1), "itens": {}, "visual": h.get("visual"),
+                                     "titulo": (h.get("serie_titulo") or "").split("|")[0].strip() or slug,
+                                     "palavras": 0})
+        m = re.search(r"(?:youtu\.be/|shorts/|v=)([\w-]{11})", it.get("youtube") or "")
+        s["itens"][int(h.get("parte") or 1)] = {"codigo": h.get("codigo"), "roteiro": it["arquivo"],
+                                               "youtube": m.group(1) if m else None, "estado": it.get("estado"),
+                                               "rotulo": h.get("titulo", "")}
+        s["palavras"] += longo._palavras(h)
+    return {k: v for k, v in series.items()
+            if v["visual"] == "ilustrado" and len(v["itens"]) >= v["partes"]
+            and all(v["itens"].get(i, {}).get("estado") == "publicado" for i in range(1, v["partes"] + 1))}
+
+
+def _ja_planejadas(pasta):
+    feitas = set()
+    for f in glob.glob(os.path.join(pasta, "longos", "*.json")):
+        try:
+            p = ler(f)
+        except Exception:
+            continue
+        if p.get("partes"):
+            feitas.update(p.get("series") or [])
+    return feitas
+
+
+def planejar():
+    """Cria/completa os planos das series que fecharam. Devolve a lista de arquivos mexidos."""
+    try:
+        dados = json.load(urllib.request.urlopen(DADOS, timeout=60))
+    except Exception as e:
+        print("dados.json falhou, nao planejo nesta rodada:", e, flush=True)
+        return []
+    mexidos = []
+    for canal, cfg in CANAIS.items():
+        pasta = os.path.join(RAIZ, canal)
+        os.makedirs(os.path.join(pasta, "longos"), exist_ok=True)
+        prontas = _series_publicadas(dados, cfg["cid"])
+        ja = _ja_planejadas(pasta)
+        livres = [(k, v) for k, v in prontas.items() if k not in ja]
+        livres.sort(key=lambda kv: kv[1]["itens"][1]["codigo"] or "")
+        if canal == "old-tales":
+            for slug, s in livres:
+                arq = os.path.join(pasta, "longos", slug + ".json")
+                if not os.path.exists(arq):
+                    print(f"[{canal}] serie {slug} fechou mas FALTAM OS EXTRAS (old-tales/longos/{slug}.json): "
+                          "o roteirista escreve abertura e epilogo (ROTEIROS.md)", flush=True)
+                    continue
+                p = ler(arq)
+                p["series"] = [slug]
+                p["partes"] = [dict(s["itens"][i], rotulo=f"Part {i}") for i in range(1, s["partes"] + 1)]
+                p.setdefault("liberar_em", agora().strftime("%Y-%m-%dT%H:%M:%SZ"))
+                gravar(arq, p)
+                mexidos.append(arq)
+                print(f"[{canal}] plano completo: {slug}", flush=True)
+            continue
+        # coletanea: series inteiras em ordem ate ~10min30 (o plano pede no minimo 3 series)
+        ritmo = longo.RITMO.get(canal, 1.7)
+        grupo, soma = [], longo.EXTRAS_S / 2
+        for slug, s in livres:
+            grupo.append((slug, s))
+            soma += s["palavras"] / ritmo
+            if soma >= longo.MARGEM_PLANO_S and len(grupo) >= 3:
+                n = len(glob.glob(os.path.join(pasta, "longos", "coletanea-*.json"))) + 1
+                nomes = [g[1]["titulo"] for g in grupo]
+                p = {"titulo": TITULO_COLETANEA[canal].format(n=len(grupo)),
+                     "descricao": "\n".join(f"{i + 1}. {t}" for i, t in enumerate(nomes)),
+                     "capa_texto": TITULO_COLETANEA[canal].format(n=len(grupo)).split(" para ")[0].split(" to ")[0].upper(),
+                     "series": [g[0] for g in grupo],
+                     "partes": [dict(g[1]["itens"][i], rotulo=g[1]["titulo"] if i == 1 else "")
+                                for g in grupo for i in range(1, g[1]["partes"] + 1)],
+                     "liberar_em": agora().strftime("%Y-%m-%dT%H:%M:%SZ")}
+                arq = os.path.join(pasta, "longos", f"coletanea-{n:02d}.json")
+                gravar(arq, p)
+                mexidos.append(arq)
+                print(f"[{canal}] coletanea planejada: {nomes} (~{soma / 60:.1f} min)", flush=True)
+                grupo, soma = [], longo.EXTRAS_S / 2
+    return mexidos
+
+
+def pronto(p):
+    if p.get("feito") or not p.get("partes"):
+        return False
+    lib = p.get("liberar_em")
+    if lib and dt.datetime.fromisoformat(lib.replace("Z", "+00:00")) > agora():
+        return False
+    ids = [x.get("youtube") for x in p["partes"] if x.get("youtube")]
+    if not lib and len(ids) < len(p["partes"]):
+        return False
+    return all(publico(v) for v in ids)
+
+
+# ------------------------------------------------------------------ montar
+def _roteiro_de(valor, pasta, nome):
+    if isinstance(valor, dict):
+        arq = os.path.join(pasta, nome + ".json")
+        gravar(arq, valor)
+        return arq
+    return achar_roteiro(valor)
+
+
+def peca_parte(parte, cid, pasta):
+    import longo_partes
+    cod = parte["codigo"]
+    loc = {n: os.path.join(pasta, f"{cod}_{n}") for n in ("roteiro.json", "tempos.json", "trilha.m4a")}
+    if all(baixar(f"longo-{cid}", f"{cod}_{n}", loc[n]) for n in loc):
+        print(f"{cod}: voz guardada na producao, redesenho em 16:9", flush=True)
+        return longo_partes.de_trilha(loc["roteiro.json"], loc["tempos.json"], loc["trilha.m4a"], pasta)
+    h, tp = os.path.join(pasta, f"{cod}-horizontal.mp4"), os.path.join(pasta, f"{cod}_tempos.json")
+    if baixar("teste-ilustrado", f"{cod}-horizontal.mp4", h) and baixar("teste-ilustrado", f"{cod}_tempos.json", tp):
+        print(f"{cod}: 16:9 ja pronto (Release teste-ilustrado)", flush=True)
+        return h, tp, True
+    print(f"{cod}: sem voz guardada, gravo do roteiro", flush=True)
+    return longo_partes.do_roteiro(achar_roteiro(parte["roteiro"]), pasta)
+
+
+def cortar_fim(h, tp, rot, pasta):
+    """Tira a ultima fala ("Part two, tomorrow") da parte que nao fecha a serie."""
+    segs = ler(tp)["segs"]
+    r = ler(rot) if rot and os.path.exists(rot) else {}
+    nao_final = int(r.get("parte") or 0) < int(r.get("partes") or 0)
+    if not segs or not (nao_final or FIM_DE_PARTE.search(segs[-1].get("text", ""))):
+        return h
+    corte = max(1.0, float(segs[-1]["t0"]) - 0.15)
+    saida = h.replace(".mp4", "_corte.mp4")
+    run("ffmpeg", "-v", "error", "-y", "-i", h, "-t", f"{corte:.2f}", "-af", f"afade=t=out:st={max(0, corte - 0.6):.2f}:d=0.6",
+        "-c:v", "libx264", "-crf", "20", "-preset", "medium", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", saida)
+    print(f"cortei a ultima fala em {corte:.1f}s: {segs[-1].get('text', '')[:60]}", flush=True)
+    return saida
+
+
+def juntar(pecas, saida):
+    """Junta tudo em 1920x1080 30 fps, som 48 kHz estereo (as pecas podem vir de motores com tamanhos diferentes)."""
+    ent, filt = [], []
+    for i, p in enumerate(pecas):
+        ent += ["-i", p]
+        filt.append(f"[{i}:v]scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,"
+                    f"setsar=1,fps=30,format=yuv420p[v{i}];[{i}:a]aresample=48000,aformat=channel_layouts=stereo[a{i}]")
+    filt.append("".join(f"[v{i}][a{i}]" for i in range(len(pecas))) + f"concat=n={len(pecas)}:v=1:a=1[v][a]")
+    run("ffmpeg", "-v", "error", "-y", *ent, "-filter_complex", ";".join(filt), "-map", "[v]", "-map", "[a]",
+        "-c:v", "libx264", "-crf", "20", "-preset", "medium", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", saida)
+
+
+def capa(video, t, texto, saida):
+    """Thumbnail 1280x720: um quadro do video + o texto grande a esquerda (faixa escura para ler no celular)."""
+    quadro = saida.replace(".jpg", "_q.png")
+    run("ffmpeg", "-v", "error", "-y", "-ss", f"{t:.2f}", "-i", video, "-frames:v", "1", "-vf", "scale=1280:720", quadro)
+    palavras, linhas, atual = texto.upper().split(), [], ""
+    for w in palavras:  # quebra em linhas de ate ~14 letras
+        if atual and len(atual) + 1 + len(w) > 14:
+            linhas.append(atual)
+            atual = w
+        else:
+            atual = (atual + " " + w).strip()
+    linhas.append(atual)
+    tam = 118 if len(linhas) <= 2 else 92
+    vf = ["drawbox=x=0:y=0:w=760:h=720:color=black@0.45:t=fill"]
+    y0 = 360 - len(linhas) * tam * 0.6
+    for i, l in enumerate(linhas):
+        l = l.replace("'", "’").replace(":", "\\:")
+        vf.append(f"drawtext=fontfile={FONTE}:text='{l}':fontsize={tam}:fontcolor=white:borderw=8:bordercolor=black:"
+                  f"x=48:y={y0 + i * tam * 1.15:.0f}")
+    run("ffmpeg", "-v", "error", "-y", "-i", quadro, "-vf", ",".join(vf), "-q:v", "3", saida)
+    return saida
+
+
+def mmss(s):
+    s = int(s)
+    return f"{s // 3600}:{s % 3600 // 60:02d}:{s % 60:02d}" if s >= 3600 else f"{s // 60}:{s % 60:02d}"
+
+
+def subir(canal, p, mp4, jpg, capitulos, pasta):
+    cfg = CANAIS[canal]
+    import yt_upload as yt
+    yt.configurar(cfg["pref"], cfg["idioma"])
+    os.environ["YT_TOKEN_VAR"] = cfg["token"]
+    cj = os.path.join(RAIZ, canal, "canal.json")
+    c = ler(cj) if os.path.exists(cj) else {}
+    cap = "\n".join(f"{mmss(t)} {nome}" for t, nome in capitulos)
+    rotulo = "Capítulos" if cfg["idioma"] == "es" else "Chapters"
+    up = {"arquivo": mp4, "titulo": p["titulo"], "descripcion": f"{p.get('descricao', '')}\n\n{rotulo}:\n{cap}".strip(),
+          "tags": p.get("tags") or c.get("tags_longo") or [], "categoria": str(c.get("categoria", "24")),
+          "sintetico": False, "miniatura": jpg, "privacidad": "public"}
+    if p.get("serie_titulo"):
+        up["serie_titulo"] = p["serie_titulo"]
+    upj = os.path.join(pasta, "longo_upload.json")
+    gravar(upj, up)
+    return yt.subir(upj, c.get("canal_titulo"))["id"]
+
+
+def montar(arq, publicar=True):
+    import checar_fim
+    import longo_partes
+    canal = os.path.basename(os.path.dirname(os.path.dirname(os.path.abspath(arq))))
+    cfg = CANAIS[canal]
+    p = ler(arq)
+    pasta = tempfile.mkdtemp(prefix="longo-")
+    print(f"\n=== LONGO {canal}: {p['titulo']} ===", flush=True)
+    pecas, capitulos, t, falhas = [], [], 0.0, []
+    intro = "Intro" if cfg["idioma"] == "en" else "Introducción"
+    lista = []
+    if p.get("abertura"):
+        lista.append(("abertura", p["abertura"], intro))
+    lista += [("parte", x, x.get("rotulo") or "") for x in p["partes"]]
+    if p.get("epilogo"):
+        lista.append(("epilogo", p["epilogo"], "What happened next" if cfg["idioma"] == "en" else "Lo que pasó después"))
+    for tipo, x, rotulo in lista:
+        if tipo == "parte":
+            h, tp, ok = peca_parte(x, cfg["cid"], pasta)
+            rot = os.path.join(pasta, f"{x['codigo']}_roteiro.json")
+            h = cortar_fim(h, tp, rot if os.path.exists(rot) else achar_roteiro(x["roteiro"]), pasta)
+            nome = x["codigo"]
+        else:
+            h, tp, ok = longo_partes.do_roteiro(_roteiro_de(x, pasta, tipo), pasta)
+            nome = tipo
+        if not ok:
+            falhas.append(f"{nome}: LEGENDA FORA DA VOZ")
+        if rotulo or not capitulos:
+            capitulos.append((t, rotulo or intro))
+        pecas.append(h)
+        t += longo.duracao(h)
+    if falhas:
+        sys.exit("LONGO NAO SUBIU: " + "; ".join(falhas))
+    final = os.path.join(pasta, re.sub(r"\W+", "-", os.path.basename(arq)[:-5]) + ".mp4")
+    juntar(pecas, final)
+    fim = checar_fim.conferir(final)
+    print("FIM DO LONGO", "OK" if fim["ok"] else "COM CHIADO", json.dumps(fim, ensure_ascii=False), flush=True)
+    if not fim["ok"]:
+        sys.exit("LONGO NAO SUBIU: chiado no fim")
+    if longo.trava(final) != 0:  # PISO DURO de 10 min (Pedro, 15/11)
+        sys.exit("LONGO NAO SUBIU: menos de 10 min")
+    meio = capitulos[1][0] if len(capitulos) > 1 else 5.0
+    jpg = capa(final, meio + float(p.get("capa_t", 6.0)), p.get("capa_texto") or p["titulo"], final.replace(".mp4", ".jpg"))
+    dur = longo.duracao(final)
+    if not publicar:
+        if subprocess.run(["gh", "release", "view", "teste-longo"], capture_output=True).returncode != 0:
+            run("gh", "release", "create", "teste-longo", "--title", "Provas do video longo", "--notes", "Nao publicado.")
+        run("gh", "release", "upload", "teste-longo", final, jpg, "--clobber")
+        print(f"PROVA DO LONGO pronta ({dur / 60:.1f} min) na Release teste-longo", flush=True)
+        return None
+    vid = subir(canal, p, final, jpg, capitulos, pasta)
+    p["feito"] = {"youtube": vid, "quando": agora().strftime("%Y-%m-%dT%H:%M:%SZ"), "min": round(dur / 60, 1)}
+    gravar(arq, p)
+    print(f"LONGO PUBLICADO https://youtu.be/{vid} ({dur / 60:.1f} min)", flush=True)
+    return vid
+
+
+def main():
+    a = sys.argv[1:]
+    publicar = "--sem-subir" not in a
+    if "--plano" in a:
+        montar(os.path.join(RAIZ, a[a.index("--plano") + 1]) if not os.path.isabs(a[a.index("--plano") + 1])
+               else a[a.index("--plano") + 1], publicar)
+        return 0
+    planejar()
+    for canal in CANAIS:
+        for arq in sorted(glob.glob(os.path.join(RAIZ, canal, "longos", "*.json"))):
+            try:
+                p = ler(arq)
+            except Exception:
+                continue
+            if pronto(p):
+                montar(arq, publicar)
+                return 0  # um longo por execucao (tempo de desenho)
+    print("nenhum longo pronto para montar agora", flush=True)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

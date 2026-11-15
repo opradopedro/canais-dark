@@ -1,0 +1,52 @@
+{
+ "_obs": "Video longo do Wukong (formato do Pedro 15/11: 1 serie por longo). Partes = provas CLX01-05 publicadas como CL058-062. Sai sozinho depois da parte 5 (17/11 14h BRT).",
+ "titulo": "The Monkey King: The Complete Story of Sun Wukong | Journey to the West",
+ "descricao": "Born from a stone. Taught by an immortal. He robbed a dragon king, erased his name from the Book of Death and fought all of Heaven, until the Buddha made him a bet he couldn't win.\n\nThe complete myth of Sun Wukong, all 5 parts in one video, plus what happened after Five Finger Mountain.",
+ "tags": [
+  "sun wukong",
+  "monkey king",
+  "journey to the west",
+  "chinese mythology",
+  "mythology",
+  "black myth wukong",
+  "old tales"
+ ],
+ "capa_texto": "THE MONKEY KING",
+ "series": [
+  "wukong-ilustrado"
+ ],
+ "partes": [
+  {
+   "codigo": "CLX01",
+   "roteiro": "motor-ilustrado/testes/wukong-1.json",
+   "youtube": "v-n1Cl_N4iQ",
+   "rotulo": "Part 1: Born from stone"
+  },
+  {
+   "codigo": "CLX02",
+   "roteiro": "motor-ilustrado/testes/wukong-2.json",
+   "youtube": "I1M9TO4T2EM",
+   "rotulo": "Part 2: The immortal master"
+  },
+  {
+   "codigo": "CLX03",
+   "roteiro": "motor-ilustrado/testes/wukong-3.json",
+   "youtube": "FjIuotp3THk",
+   "rotulo": "Part 3: The Dragon King and the Book of Death"
+  },
+  {
+   "codigo": "CLX04",
+   "roteiro": "motor-ilustrado/testes/wukong-4.json",
+   "rotulo": "Part 4: War with Heaven",
+   "youtube": "K1MP6gLwRgU"
+  },
+  {
+   "codigo": "CLX05",
+   "roteiro": "motor-ilustrado/testes/wukong-5.json",
+   "rotulo": "Part 5: The Buddha's palm"
+  }
+ ],
+ "abertura": "old-tales/longos/wukong-abertura.json",
+ "epilogo": "old-tales/longos/wukong-epilogo.json",
+ "liberar_em": "2026-11-17T17:30:00Z"
+}

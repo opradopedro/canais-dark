@@ -1,0 +1,155 @@
+{
+ "codigo": "CLXAB",
+ "_obs": "Abertura do video longo do Wukong (so no longo, nao vira Short).",
+ "visual": "ilustrado",
+ "mundo": "wukong",
+ "tema": "mito",
+ "serie": "wukong-ilustrado",
+ "paleta": {
+  "cartao": "#efe3c8",
+  "tinta": "#2a1d10",
+  "destaque": "#b8231c"
+ },
+ "elenco": {
+  "wukong": {
+   "tipo": "macaco",
+   "pelo": "#9a6430",
+   "rosto_cor": "#f2d6b2",
+   "olhos_ouro": true
+  },
+  "wk_armado": {
+   "tipo": "macaco",
+   "pelo": "#9a6430",
+   "rosto_cor": "#f2d6b2",
+   "olhos_ouro": true,
+   "tiara": true,
+   "arma": "bastao",
+   "armadura": "#d8a431",
+   "faixa": "#b8231c"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "He was born from a stone, and he refused to *die*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "pico-pedra",
+    "cam": {
+     "z": [
+      1.1,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "brilho",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "wukong",
+      "pose": "parado",
+      "rosto": "determinado",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He robbed a dragon king, tore his name out of Death's book, and beat Heaven's whole *army*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo-batalha-ceu",
+    "cam": {
+     "z": [
+      1.2,
+      1.4
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@1.0",
+     "poeira",
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "u": 0.45,
+      "v": 0.93,
+      "esc": 1.1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "This is the complete story of Sun Wukong, the Monkey King.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "ceu-portao",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado",
+     "brilho"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "triunfo",
+      "rosto": "riso",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.1
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Sun Wukong",
+     "sub": "The Monkey King",
+     "t0": 0.8
+    }
+   }
+  },
+  {
+   "texto": "All five parts, and what happened after the *mountain*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "montanha-prisao",
+    "cam": {
+     "z": [
+      1.1,
+      1.25
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "deitado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.8,
+      "esc": 1.0
+     }
+    ]
+   }
+  }
+ ]
+}

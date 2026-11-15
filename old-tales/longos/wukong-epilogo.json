@@ -1,0 +1,725 @@
+{
+ "codigo": "CLXEP",
+ "_obs": "Epilogo do video longo do Wukong: o que aconteceu depois da montanha (so no longo).",
+ "visual": "ilustrado",
+ "mundo": "wukong",
+ "tema": "mito",
+ "serie": "wukong-ilustrado",
+ "paleta": {
+  "cartao": "#efe3c8",
+  "tinta": "#2a1d10",
+  "destaque": "#b8231c"
+ },
+ "elenco": {
+  "wukong": {
+   "tipo": "macaco",
+   "pelo": "#9a6430",
+   "rosto_cor": "#f2d6b2",
+   "olhos_ouro": true
+  },
+  "demonio": {
+   "tipo": "humano",
+   "rosto_cor": "#8a9a8a",
+   "cabelo": "careca",
+   "armadura": "#2a2a30",
+   "faixa": "#5a1010",
+   "arma": "espada",
+   "elmo": true
+  },
+  "wk_armado": {
+   "tipo": "macaco",
+   "pelo": "#9a6430",
+   "rosto_cor": "#f2d6b2",
+   "olhos_ouro": true,
+   "tiara": true,
+   "arma": "bastao",
+   "armadura": "#d8a431",
+   "faixa": "#b8231c"
+  },
+  "buda": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c070",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a2a5a",
+   "manto": "#e07a20",
+   "olhos_ouro": true
+  },
+  "tang": {
+   "tipo": "humano",
+   "rosto_cor": "#f0d4b0",
+   "cabelo": "careca",
+   "manto": "#b8231c",
+   "roupa": "tunica",
+   "roupa_cor": "#d8a431"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "The mountain was gone. But the hardest part of his story was still *ahead*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "montanha-prisao",
+    "cam": {
+     "z": [
+      1.2,
+      1.4
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "poeira",
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "triunfo",
+      "rosto": "riso",
+      "u": 0.42,
+      "v": 0.93,
+      "esc": 1.1
+     },
+     {
+      "id": "tang",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.72,
+      "v": 0.93,
+      "esc": 0.95
+     }
+    ]
+   }
+  },
+  {
+   "texto": "On the first day, Wukong killed six bandits on the road, and the monk was *horrified*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "cidade-humana",
+    "cam": {
+     "z": [
+      1.2,
+      1.35
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@1.2",
+     "poeira"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "u": 0.42,
+      "v": 0.93,
+      "esc": 1.05
+     },
+     {
+      "id": "tang",
+      "pose": "susto",
+      "rosto": "choque",
+      "u": 0.72,
+      "v": 0.93,
+      "esc": 0.95
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Tang Sanzang didn't trust him. So he gave the monkey a gift: a golden *headband*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "trilha-lenhador",
+    "cam": {
+     "z": [
+      1.2,
+      1.35
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "brilho"
+    ],
+    "atores": [
+     {
+      "id": "tang",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "u": 0.66,
+      "v": 0.93,
+      "esc": 1.0
+     },
+     {
+      "id": "wk_armado",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "u": 0.36,
+      "v": 0.93,
+      "esc": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The moment Wukong put it on, it locked onto his skull. Forever.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "trilha-lenhador",
+    "cam": {
+     "z": [
+      1.6,
+      1.8
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "susto",
+      "rosto": "choque",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "One short prayer from the monk, and it squeezed until he rolled on the *ground*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "trilha-lenhador",
+    "cam": {
+     "z": [
+      1.3,
+      1.5
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@0.8",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "deitado",
+      "rosto": "dor",
+      "u": 0.4,
+      "v": 0.86,
+      "esc": 1.1
+     },
+     {
+      "id": "tang",
+      "pose": "sentar",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 0.95
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "The Tight Headband",
+     "valor": "1 prayer",
+     "sub": "was all it took to stop the Monkey King",
+     "t0": 1.0
+    }
+   }
+  },
+  {
+   "texto": "The strongest being in Heaven now had to walk to India. On *foot*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "trilha-lenhador",
+    "cam": {
+     "z": [
+      1.05,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "tang",
+      "pose": "andar",
+      "rosto": "determinado",
+      "u": [
+       0.55,
+       0.65
+      ],
+      "v": 0.93,
+      "esc": 0.9
+     },
+     {
+      "id": "wk_armado",
+      "pose": "andar",
+      "rosto": "triste",
+      "u": [
+       0.35,
+       0.45
+      ],
+      "v": 0.93,
+      "esc": 0.9
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Journey to the West",
+     "valor": "14 years",
+     "sub": "on the road to bring back the sacred scriptures",
+     "t0": 1.2
+    }
+   }
+  },
+  {
+   "texto": "Two more fallen spirits joined them: a greedy pig, and a quiet river monster.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar-tempestade",
+    "cam": {
+     "z": [
+      1.1,
+      1.25
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "tang",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.6,
+      "v": 0.93,
+      "esc": 0.95
+     },
+     {
+      "id": "wk_armado",
+      "pose": "parado",
+      "rosto": "riso",
+      "u": 0.38,
+      "v": 0.93,
+      "esc": 1.0
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Zhu Bajie & Sha Wujing",
+     "sub": "Pigsy and Sandy, his new brothers",
+     "t0": 1.4
+    }
+   }
+  },
+  {
+   "texto": "Demons hunted the monk, because one bite of him meant living *forever*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "caverna-cortina",
+    "cam": {
+     "z": [
+      1.3,
+      1.5
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "u": 0.62,
+      "v": 0.93,
+      "esc": 1.1
+     },
+     {
+      "id": "tang",
+      "pose": "agachar",
+      "rosto": "medo",
+      "u": 0.32,
+      "v": 0.94,
+      "esc": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "texto": "But Wukong's golden eyes saw through every disguise, and his staff did the *rest*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "caverna-cortina",
+    "cam": {
+     "z": [
+      1.2,
+      1.4
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "flash@0.9",
+     "tremor@0.9",
+     "faiscas"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "u": 0.42,
+      "v": 0.93,
+      "esc": 1.1
+     },
+     {
+      "id": "demonio",
+      "pose": "cair",
+      "rosto": "dor",
+      "u": 0.7,
+      "v": 0.94,
+      "esc": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Once, a demon called the White Bone Spirit fooled the monk three times.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "floresta-macacos",
+    "cam": {
+     "z": [
+      1.2,
+      1.4
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "neblina",
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "u": 0.62,
+      "v": 0.93,
+      "esc": 1.0
+     },
+     {
+      "id": "tang",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.35,
+      "v": 0.93,
+      "esc": 0.95
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "White Bone Spirit",
+     "sub": "a demon with three disguises",
+     "t0": 1.4
+    }
+   }
+  },
+  {
+   "texto": "Wukong killed her three times, and the monk sent him *away* for it.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "floresta-macacos",
+    "cam": {
+     "z": [
+      1.4,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "chorar",
+      "rosto": "triste",
+      "u": 0.45,
+      "v": 0.93,
+      "esc": 1.15
+     }
+    ]
+   }
+  },
+  {
+   "texto": "They only begged him to come back after the monk was turned into a *tiger*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "caverna-cortina",
+    "cam": {
+     "z": [
+      1.2,
+      1.35
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "vermelho",
+     "tremor@1.3"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "correr",
+      "rosto": "determinado",
+      "u": [
+       0.3,
+       0.5
+      ],
+      "v": 0.93,
+      "esc": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "They survived eighty-one disasters before they finally reached the Buddha.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "templo-mestre",
+    "cam": {
+     "z": [
+      1.1,
+      1.25
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "brilho",
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "buda",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.6,
+      "v": 0.93,
+      "esc": 1.1
+     },
+     {
+      "id": "wk_armado",
+      "pose": "curvar",
+      "rosto": "calmo",
+      "u": 0.36,
+      "v": 0.93,
+      "esc": 0.95
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "81 trials",
+     "valor": "81",
+     "sub": "disasters on the road to the West",
+     "t0": 1.0
+    }
+   }
+  },
+  {
+   "texto": "And the Buddha gave the monkey a new title: Victorious Fighting *Buddha*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "salao-jade",
+    "cam": {
+     "z": [
+      1.2,
+      1.4
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado",
+     "brilho"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "triunfo",
+      "rosto": "sorriso",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.15
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Victorious Fighting Buddha",
+     "sub": "Sun Wukong's final title",
+     "t0": 1.2
+    }
+   }
+  },
+  {
+   "texto": "He touched his head. The golden headband was simply *gone*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "salao-jade",
+    "cam": {
+     "z": [
+      1.7,
+      1.9
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "brilho"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "parado",
+      "rosto": "riso",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "This story was printed in China more than four hundred years ago.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "templo-mestre",
+    "cam": {
+     "z": [
+      1.05,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "neblina"
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Journey to the West",
+     "valor": "1592",
+     "sub": "the oldest known printed edition",
+     "t0": 0.8
+    }
+   }
+  },
+  {
+   "texto": "It inspired Goku in Dragon Ball, and in 2024 a game about him sold ten million copies in three days.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "ceu-portao",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "wk_armado",
+      "pose": "triunfo",
+      "rosto": "riso",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.1
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Black Myth: Wukong",
+     "valor": "10 million",
+     "sub": "copies sold in 3 days (2024)",
+     "t0": 2.0
+    }
+   }
+  },
+  {
+   "texto": "Not bad for a monkey born from a *stone*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "pico-pedra",
+    "cam": {
+     "z": [
+      1.2,
+      1.4
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "brilho",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "wukong",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Which part of his story was your favorite? Tell me in the comments.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "pico-pedra",
+    "cam": {
+     "z": [
+      1.05,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado",
+     "neblina"
+    ]
+   }
+  }
+ ]
+}
