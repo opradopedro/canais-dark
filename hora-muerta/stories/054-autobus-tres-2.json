@@ -368,7 +368,7 @@
     "atores": [
      {
       "id": "lucia",
-      "pose": "sentar",
+      "pose": "parado",
       "rosto": "triste",
       "v": 0.93,
       "esc": 1.0,

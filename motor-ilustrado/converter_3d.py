@@ -73,7 +73,8 @@ SERIES = {
 DIA = {"dia", "nascer_sol", "entardecer", "nublado"}
 PERIODO = {False: "at night, dark blue moonlight, deep shadows", True: "in pale overcast daylight"}
 
-POSE = [("Idle", "parado"), ("Walking_Backwards", "andar"), ("Walking", "andar"), ("Running", "correr"), ("Sit", "sentar"),
+POSE = [("Idle", "parado"), ("Walking_Backwards", "andar"), ("Walking", "andar"), ("Running", "correr"), ("Sit", "parado"),  # sentado sem cadeira desenhada flutua (Pedro 15/11): fica em pe
+       
         ("Lie", "deitado"), ("Crouch", "agachar"), ("Sneak", "agachar"), ("PickUp", "agachar"), ("Interact", "apontar"),
         ("Holding", "apontar"), ("Work", "apontar"), ("Waving", "apontar"), ("Melee", "lutar"), ("Hit", "susto"),
         ("Death", "cair"), ("Jump", "pular")]

@@ -29,7 +29,14 @@ def montar(rot_path, tempos_path, pasta_fundos, saida):
                 sys.exit(f"FUNDO FALTANDO: {arq} (rode motor-ilustrado/fundos.py)")
             fundos[fid] = "file://" + os.path.abspath(arq)
             cenas.append(c)
-    estado = {"dur": float(tp["dur"]), "fps": 30, "fundos": fundos, "elenco": rot.get("elenco", {}),
+    # calibragem de cada fundo (tamanho do boneco e linha do chao), em cenarios/<mundo>.json
+    meta = {}
+    cp = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cenarios", f"{mundo}.json")
+    if os.path.exists(cp):
+        for cid, c in json.load(open(cp, encoding="utf-8")).get("cenarios", {}).items():
+            if c.get("pessoa"):
+                meta[f"{mundo}/{cid}"] = {"pessoa": c["pessoa"], "chao": c.get("chao")}
+    estado = {"dur": float(tp["dur"]), "fps": 30, "fundos": fundos, "elenco": rot.get("elenco", {}), "meta": meta,
               "paleta": rot.get("paleta", {}), "cenas": cenas, "segs": segs, "legenda": tp.get("legenda")}
     json.dump(estado, open(saida, "w", encoding="utf-8"), ensure_ascii=False)
     return estado

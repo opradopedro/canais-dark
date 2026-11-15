@@ -7,72 +7,101 @@
   "cemiterio-entrada": {
    "lugar": "cemiterio/entrada (noite)",
    "prompt": "the rusty iron gate at the entrance of an old cemetery, in an old small-town American cemetery, at night, dark blue moonlight, deep shadows",
-   "seed": 135
+   "seed": 135,
+   "chao": 0.93,
+   "pessoa": 0.47
   },
   "cemiterio-entrada-dia": {
    "lugar": "cemiterio/entrada (dia)",
    "prompt": "the rusty iron gate at the entrance of an old cemetery, in an old small-town American cemetery, in pale overcast daylight",
-   "seed": 142
+   "seed": 142,
+   "chao": 0.93,
+   "pessoa": 0.48
   },
   "cemiterio-mausoleu-dia": {
    "lugar": "cemiterio/mausoleu (dia)",
    "prompt": "an old stone mausoleum chapel with a heavy wooden door, in an old small-town American cemetery, in pale overcast daylight",
-   "seed": 149
+   "seed": 149,
+   "chao": 0.9,
+   "pessoa": 0.38
   },
   "cemiterio-entre_cruzes": {
    "lugar": "cemiterio/entre_cruzes (noite)",
    "prompt": "a narrow path between rows of old graves and crosses, in an old small-town American cemetery, at night, dark blue moonlight, deep shadows",
-   "seed": 156
+   "seed": 156,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "cemiterio-cruz_grande": {
    "lugar": "cemiterio/cruz_grande (noite)",
    "prompt": "a large stone cross over an old grave, in an old small-town American cemetery, at night, dark blue moonlight, deep shadows",
-   "seed": 163
+   "seed": 163,
+   "chao": 0.9,
+   "pessoa": 0.34
   },
   "cemiterio-fundo-dia": {
    "lugar": "cemiterio/fundo (dia)",
    "prompt": "the far back corner of a cemetery with crooked forgotten headstones, in an old small-town American cemetery, in pale overcast daylight",
-   "seed": 170
+   "seed": 170,
+   "chao": 0.93,
+   "pessoa": 0.47
   },
   "cemiterio-arvore_morta": {
    "lugar": "cemiterio/arvore_morta (noite)",
    "prompt": "a dead twisted tree among old graves, in an old small-town American cemetery, at night, dark blue moonlight, deep shadows",
-   "seed": 177
+   "seed": 177,
+   "chao": 0.9,
+   "pessoa": 0.4
   },
   "cemiterio-fundo": {
    "lugar": "cemiterio/fundo (noite)",
    "prompt": "the far back corner of a cemetery with crooked forgotten headstones, in an old small-town American cemetery, at night, dark blue moonlight, deep shadows",
-   "seed": 184
+   "seed": 184,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "cemiterio-mausoleu": {
    "lugar": "cemiterio/mausoleu (noite)",
    "prompt": "an old stone mausoleum chapel with a heavy wooden door, in an old small-town American cemetery, at night, dark blue moonlight, deep shadows",
-   "seed": 142
+   "seed": 142,
+   "chao": 0.9,
+   "pessoa": 0.3
   },
   "bairro-frente_casa": {
    "lugar": "bairro/frente_casa (noite)",
    "prompt": "the front yard and porch of a small one-story house with a lit porch light, in an old small-town American cemetery, at night, dark blue moonlight, deep shadows",
-   "seed": 177
+   "seed": 177,
+   "chao": 0.9,
+   "pessoa": 0.36
   },
   "cemiterio-entre_cruzes-dia": {
    "lugar": "cemiterio/entre_cruzes (dia)",
    "prompt": "a narrow path between rows of old graves and crosses, in an old small-town American cemetery, in pale overcast daylight",
-   "seed": 142
+   "seed": 142,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "cemiterio-cruz_grande-dia": {
    "lugar": "cemiterio/cruz_grande (dia)",
    "prompt": "a large stone cross over an old grave, in an old small-town American cemetery, in pale overcast daylight",
-   "seed": 149
+   "seed": 149,
+   "chao": 0.9,
+   "pessoa": 0.34
   },
   "cemiterio-arvore_morta-dia": {
    "lugar": "cemiterio/arvore_morta (dia)",
    "prompt": "a dead twisted tree among old graves, in an old small-town American cemetery, in pale overcast daylight",
-   "seed": 163
+   "seed": 163,
+   "chao": 0.9,
+   "pessoa": 0.4
   },
   "casa_interior-quarto": {
    "lugar": "casa_interior/quarto (noite)",
    "prompt": "a simple bedroom with a bed, a nightstand lamp and a closed closet, in an old small-town American cemetery, at night, dark blue moonlight, deep shadows",
-   "seed": 184
+   "seed": 184,
+   "chao": 0.88,
+   "pessoa": 0.58
   }
- }
+ },
+ "_calibragem": "chao/pessoa conferidos a olho em 15/11 (boneco do tamanho da cama/porta/mesa do fundo, Pedro)"
 }

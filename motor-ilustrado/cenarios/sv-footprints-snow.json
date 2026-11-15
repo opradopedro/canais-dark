@@ -7,92 +7,129 @@
   "floresta-fundo": {
    "lugar": "floresta/fundo (noite)",
    "prompt": "deep inside a dense pine forest, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, at night, dark blue moonlight, deep shadows",
-   "seed": 137
+   "seed": 137,
+   "chao": 0.93,
+   "pessoa": 0.4
   },
   "casa_interior-sala": {
    "lugar": "casa_interior/sala (noite)",
    "prompt": "a modest living room with an old sofa, a small TV, a rug and framed family photos, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, at night, dark blue moonlight, deep shadows",
-   "seed": 144
+   "seed": 144,
+   "chao": 0.92,
+   "pessoa": 0.58
   },
   "floresta-clareira-dia": {
    "lugar": "floresta/clareira (dia)",
    "prompt": "a small clearing in a pine forest, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, in pale overcast daylight",
-   "seed": 151
+   "seed": 151,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "floresta-trilha": {
    "lugar": "floresta/trilha (noite)",
    "prompt": "a narrow dirt trail between tall pine trees, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, at night, dark blue moonlight, deep shadows",
-   "seed": 158
+   "seed": 158,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "casa_interior-janela": {
    "lugar": "casa_interior/janela (noite)",
    "prompt": "a living room window with thin curtains, the dark street visible outside, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, at night, dark blue moonlight, deep shadows",
-   "seed": 165
+   "seed": 165,
+   "chao": 0.95,
+   "pessoa": 0.5
   },
   "floresta-trilha-dia": {
    "lugar": "floresta/trilha (dia)",
    "prompt": "a narrow dirt trail between tall pine trees, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, in pale overcast daylight",
-   "seed": 172
+   "seed": 172,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "floresta-entre_arvores-dia": {
    "lugar": "floresta/entre_arvores (dia)",
    "prompt": "dense tall tree trunks close together, dark gaps between them, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, in pale overcast daylight",
-   "seed": 179
+   "seed": 179,
+   "chao": 0.93,
+   "pessoa": 0.38
   },
   "floresta-toco-dia": {
    "lugar": "floresta/toco (dia)",
    "prompt": "a large tree stump with an axe and stacked firewood beside a small cabin, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, in pale overcast daylight",
-   "seed": 186
+   "seed": 186,
+   "chao": 0.93,
+   "pessoa": 0.55
   },
   "casa_interior-cozinha": {
    "lugar": "casa_interior/cozinha (noite)",
    "prompt": "a small home kitchen with a table, two chairs, a fridge and a window over the sink, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, at night, dark blue moonlight, deep shadows",
-   "seed": 193
+   "seed": 193,
+   "chao": 0.93,
+   "pessoa": 0.58
   },
   "casa_interior-porta": {
    "lugar": "casa_interior/porta (noite)",
    "prompt": "the inside of a modest house's front door, a small entry hall with a coat hook and a little table, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, at night, dark blue moonlight, deep shadows",
-   "seed": 200
+   "seed": 200,
+   "chao": 0.93,
+   "pessoa": 0.47
   },
   "casa_interior-quarto": {
    "lugar": "casa_interior/quarto (noite)",
    "prompt": "a simple bedroom with a bed, a nightstand lamp and a closed closet, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, at night, dark blue moonlight, deep shadows",
-   "seed": 207
+   "seed": 207,
+   "chao": 0.92,
+   "pessoa": 0.62
   },
   "casa_interior-sofa": {
    "lugar": "casa_interior/sofa (noite)",
    "prompt": "a modest living room with an old sofa, a small TV, a rug and framed family photos, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, at night, dark blue moonlight, deep shadows",
-   "seed": 165
+   "seed": 165,
+   "chao": 0.92,
+   "pessoa": 0.6
   },
   "floresta-clareira": {
    "lugar": "floresta/clareira (noite)",
    "prompt": "a small clearing in a pine forest, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, at night, dark blue moonlight, deep shadows",
-   "seed": 151
+   "seed": 151,
+   "chao": 0.93,
+   "pessoa": 0.4
   },
   "estrada-indo": {
    "lugar": "estrada/indo (noite)",
    "prompt": "an empty highway stretching away into the distance, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, at night, dark blue moonlight, deep shadows",
-   "seed": 172
+   "seed": 172,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "estrada-curva-dia": {
    "lugar": "estrada/curva (dia)",
    "prompt": "a sharp mountain highway curve with a bent guardrail over a drop, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, in pale overcast daylight",
-   "seed": 179
+   "seed": 179,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "estrada-acostamento-dia": {
    "lugar": "estrada/acostamento (dia)",
    "prompt": "the gravel shoulder of a highway with a metal guardrail, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, in pale overcast daylight",
-   "seed": 186
+   "seed": 186,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "casa_interior-sala-dia": {
    "lugar": "casa_interior/sala (dia)",
    "prompt": "a modest living room with an old sofa, a small TV, a rug and framed family photos, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, in pale overcast daylight",
-   "seed": 193
+   "seed": 193,
+   "chao": 0.93,
+   "pessoa": 0.58
   },
   "casa_interior-quarto-dia": {
    "lugar": "casa_interior/quarto (dia)",
    "prompt": "a simple bedroom with a bed, a nightstand lamp and a closed closet, at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere, in pale overcast daylight",
-   "seed": 200
+   "seed": 200,
+   "chao": 0.9,
+   "pessoa": 0.65
   }
- }
+ },
+ "_calibragem": "chao/pessoa conferidos a olho em 15/11 (boneco do tamanho da cama/porta/mesa do fundo, Pedro)"
 }

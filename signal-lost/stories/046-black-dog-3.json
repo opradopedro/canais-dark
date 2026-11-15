@@ -126,7 +126,7 @@
     "atores": [
      {
       "id": "ruth",
-      "pose": "sentar",
+      "pose": "parado",
       "rosto": "triste",
       "v": 0.93,
       "esc": 1.0,
@@ -134,7 +134,7 @@
      },
      {
       "id": "kit",
-      "pose": "sentar",
+      "pose": "parado",
       "rosto": "medo",
       "v": 0.93,
       "esc": 1.0,
@@ -266,7 +266,7 @@
     "atores": [
      {
       "id": "ruth",
-      "pose": "sentar",
+      "pose": "parado",
       "rosto": "medo",
       "v": 0.93,
       "esc": 1.0,
@@ -322,7 +322,7 @@
     "atores": [
      {
       "id": "kit",
-      "pose": "sentar",
+      "pose": "parado",
       "rosto": "medo",
       "v": 0.93,
       "esc": 1.0,
@@ -352,7 +352,7 @@
     "atores": [
      {
       "id": "kit",
-      "pose": "sentar",
+      "pose": "parado",
       "rosto": "choque",
       "v": 0.93,
       "esc": 1.0,
@@ -389,7 +389,7 @@
     "atores": [
      {
       "id": "kit",
-      "pose": "sentar",
+      "pose": "parado",
       "rosto": "triste",
       "v": 0.93,
       "esc": 1.0,

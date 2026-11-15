@@ -195,7 +195,7 @@
     "atores": [
      {
       "id": "tomas",
-      "pose": "sentar",
+      "pose": "parado",
       "rosto": "determinado",
       "v": 0.93,
       "esc": 1.0,
@@ -361,7 +361,7 @@
     "atores": [
      {
       "id": "tomas",
-      "pose": "sentar",
+      "pose": "parado",
       "rosto": "triste",
       "v": 0.93,
       "esc": 1.0,

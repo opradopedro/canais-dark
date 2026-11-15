@@ -245,7 +245,7 @@
     "atores": [
      {
       "id": "rosa",
-      "pose": "sentar",
+      "pose": "parado",
       "rosto": "calmo",
       "v": 0.93,
       "esc": 1.0,
@@ -332,7 +332,7 @@
     "atores": [
      {
       "id": "rosa",
-      "pose": "sentar",
+      "pose": "parado",
       "rosto": "determinado",
       "v": 0.93,
       "esc": 1.0,

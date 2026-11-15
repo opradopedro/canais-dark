@@ -108,6 +108,17 @@ def main():
             r = yt.subir(upj) if hm else yt.subir(upj, c.get("canal_titulo"))
             vid = r["id"]
             print(f"AGENDADO {cod} https://youtu.be/{vid} publica em {up.get('publicar_em')} (UTC)", flush=True)
+        # motor ilustrado: guarda roteiro, tempos e trilha para o VIDEO LONGO (16:9 desenhado de novo das mesmas cenas)
+        try:
+            rj = json.load(open(base + "_roteiro.json", encoding="utf-8"))
+            if rj.get("visual") == "ilustrado":
+                if subprocess.run(["gh", "release", "view", "longo-insumos"], capture_output=True).returncode != 0:
+                    subprocess.run(["gh", "release", "create", "longo-insumos", "--title", "Insumos do video longo",
+                                    "--notes", "roteiro/tempos/trilha de cada parte ilustrada (para o longo 16:9)"], check=False)
+                subprocess.run(["gh", "release", "upload", "longo-insumos", base + "_roteiro.json", base + "_tempos.json",
+                                base + "_trilha.m4a", "--clobber"], check=False)
+        except Exception as e:
+            print("insumos do longo nao guardados:", e, flush=True)
         # copia para o painel (Release painel-<canal>), igual a producao normal (guardar do produce.py)
         try:
             os.environ[{"hora-muerta": "HM_VIDEOS", "old-tales": "CL_VIDEOS", "signal-lost": "SV_VIDEOS"}[canal]] = painel

@@ -7,47 +7,66 @@
   "floresta-fundo": {
    "lugar": "floresta/fundo (noite)",
    "prompt": "deep inside a dense pine forest, in a mountain pine forest of the sierra, at night, dark blue moonlight, deep shadows",
-   "seed": 103
+   "seed": 103,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "floresta-clareira-dia": {
    "lugar": "floresta/clareira (dia)",
    "prompt": "a small clearing in a pine forest, in a mountain pine forest of the sierra, in pale overcast daylight",
-   "seed": 110
+   "seed": 110,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "floresta-trilha-dia": {
    "lugar": "floresta/trilha (dia)",
    "prompt": "a narrow dirt trail between tall pine trees, in a mountain pine forest of the sierra, in pale overcast daylight",
-   "seed": 117
+   "seed": 117,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "floresta-entre_arvores": {
    "lugar": "floresta/entre_arvores (noite)",
    "prompt": "dense tall tree trunks close together, dark gaps between them, in a mountain pine forest of the sierra, at night, dark blue moonlight, deep shadows",
-   "seed": 124
+   "seed": 124,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "floresta-pe_torre-dia": {
    "lugar": "floresta/pe_torre (dia)",
    "prompt": "the base of a tall wooden fire lookout tower in a pine forest, a ladder going up, in a mountain pine forest of the sierra, in pale overcast daylight",
-   "seed": 131
+   "seed": 131,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "floresta-pe_torre": {
    "lugar": "floresta/pe_torre (noite)",
    "prompt": "the base of a tall wooden fire lookout tower in a pine forest, a ladder going up, in a mountain pine forest of the sierra, at night, dark blue moonlight, deep shadows",
-   "seed": 138
+   "seed": 138,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "floresta-trilha": {
    "lugar": "floresta/trilha (noite)",
    "prompt": "a narrow dirt trail between tall pine trees, in a mountain pine forest of the sierra, at night, dark blue moonlight, deep shadows",
-   "seed": 145
+   "seed": 145,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "floresta-clareira": {
    "lugar": "floresta/clareira (noite)",
    "prompt": "a small clearing in a pine forest, in a mountain pine forest of the sierra, at night, dark blue moonlight, deep shadows",
-   "seed": 152
+   "seed": 152,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "floresta-toco": {
    "lugar": "floresta/toco (noite)",
    "prompt": "a large tree stump with an axe and stacked firewood beside a small cabin, in a mountain pine forest of the sierra, at night, dark blue moonlight, deep shadows",
-   "seed": 159
+   "seed": 159,
+   "chao": 0.93,
+   "pessoa": 0.5
   }
- }
+ },
+ "_calibragem": "chao/pessoa conferidos a olho em 15/11 (boneco do tamanho da cama/porta/mesa do fundo, Pedro)"
 }

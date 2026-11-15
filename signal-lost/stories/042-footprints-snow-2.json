@@ -363,7 +363,7 @@
     "atores": [
      {
       "id": "sam",
-      "pose": "sentar",
+      "pose": "parado",
       "rosto": "determinado",
       "v": 0.93,
       "esc": 1.0,
@@ -371,7 +371,7 @@
      },
      {
       "id": "jess",
-      "pose": "sentar",
+      "pose": "parado",
       "rosto": "medo",
       "v": 0.93,
       "esc": 1.0,
@@ -430,7 +430,7 @@
     "atores": [
      {
       "id": "jess",
-      "pose": "sentar",
+      "pose": "parado",
       "rosto": "choque",
       "v": 0.93,
       "esc": 1.0,

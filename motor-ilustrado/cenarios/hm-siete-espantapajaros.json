@@ -7,72 +7,101 @@
   "vila-alto-dia": {
    "lugar": "vila/alto (dia)",
    "prompt": "a low hill above a wide cornfield, seven scarecrows on wooden poles standing in a row, on a dry farm in the Latin American countryside, in pale overcast daylight",
-   "seed": 100
+   "seed": 100,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "vila-moinho-dia": {
    "lugar": "vila/moinho (dia)",
    "prompt": "an old metal windmill at the edge of a cornfield, on a dry farm in the Latin American countryside, in pale overcast daylight",
-   "seed": 107
+   "seed": 107,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "vila-praca-dia": {
    "lugar": "vila/praca (dia)",
    "prompt": "a small town square with a kiosk, benches and an old church, on a dry farm in the Latin American countryside, in pale overcast daylight",
-   "seed": 114
+   "seed": 114,
+   "chao": 0.9,
+   "pessoa": 0.36
   },
   "vila-casa-dia": {
    "lugar": "vila/casa (dia)",
    "prompt": "the porch of a humble farmhouse with adobe walls, on a dry farm in the Latin American countryside, in pale overcast daylight",
-   "seed": 121
+   "seed": 121,
+   "chao": 0.9,
+   "pessoa": 0.42
   },
   "vila-taverna-dia": {
    "lugar": "vila/taverna (dia)",
    "prompt": "a small rural cantina with wooden tables, on a dry farm in the Latin American countryside, in pale overcast daylight",
-   "seed": 128
+   "seed": 128,
+   "chao": 0.92,
+   "pessoa": 0.5
   },
   "vila-mercado-dia": {
    "lugar": "vila/mercado (dia)",
    "prompt": "a narrow village market street with closed stalls, on a dry farm in the Latin American countryside, in pale overcast daylight",
-   "seed": 135
+   "seed": 135,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "vila-alto": {
    "lugar": "vila/alto (noite)",
    "prompt": "a low hill above a wide cornfield, seven scarecrows on wooden poles standing in a row, on a dry farm in the Latin American countryside, at night, dark blue moonlight, deep shadows",
-   "seed": 142
+   "seed": 142,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "vila-praca": {
    "lugar": "vila/praca (noite)",
    "prompt": "a small town square with a kiosk, benches and an old church, on a dry farm in the Latin American countryside, at night, dark blue moonlight, deep shadows",
-   "seed": 149
+   "seed": 149,
+   "chao": 0.9,
+   "pessoa": 0.36
   },
   "vila-moinho": {
    "lugar": "vila/moinho (noite)",
    "prompt": "an old metal windmill at the edge of a cornfield, on a dry farm in the Latin American countryside, at night, dark blue moonlight, deep shadows",
-   "seed": 156
+   "seed": 156,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "vila-casa": {
    "lugar": "vila/casa (noite)",
    "prompt": "the porch of a humble farmhouse with adobe walls, on a dry farm in the Latin American countryside, at night, dark blue moonlight, deep shadows",
-   "seed": 163
+   "seed": 163,
+   "chao": 0.92,
+   "pessoa": 0.38
   },
   "vila-poco-dia": {
    "lugar": "vila/poco (dia)",
    "prompt": "an old stone well in a dirt farmyard facing the cornfield, on a dry farm in the Latin American countryside, in pale overcast daylight",
-   "seed": 170
+   "seed": 170,
+   "chao": 0.88,
+   "pessoa": 0.55
   },
   "vila-poco": {
    "lugar": "vila/poco (noite)",
    "prompt": "an old stone well in a dirt farmyard facing the cornfield, on a dry farm in the Latin American countryside, at night, dark blue moonlight, deep shadows",
-   "seed": 121
+   "seed": 121,
+   "chao": 0.85,
+   "pessoa": 0.48
   },
   "vila-mercado": {
    "lugar": "vila/mercado (noite)",
    "prompt": "a narrow village market street with closed stalls, on a dry farm in the Latin American countryside, at night, dark blue moonlight, deep shadows",
-   "seed": 128
+   "seed": 128,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "vila-taverna": {
    "lugar": "vila/taverna (noite)",
    "prompt": "a small rural cantina with wooden tables, on a dry farm in the Latin American countryside, at night, dark blue moonlight, deep shadows",
-   "seed": 156
+   "seed": 156,
+   "chao": 0.9,
+   "pessoa": 0.45
   }
- }
+ },
+ "_calibragem": "chao/pessoa conferidos a olho em 15/11 (boneco do tamanho da cama/porta/mesa do fundo, Pedro)"
 }

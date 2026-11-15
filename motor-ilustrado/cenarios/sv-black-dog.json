@@ -7,47 +7,65 @@
   "bairro-rua": {
    "lugar": "bairro/rua (noite)",
    "prompt": "the middle of a quiet residential street with a few parked cars, on Alder Street, a quiet American suburban street, at night, dark blue moonlight, deep shadows",
-   "seed": 115
+   "seed": 115,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "bairro-frente_casa-dia": {
    "lugar": "bairro/frente_casa (dia)",
    "prompt": "the front yard and porch of a small one-story house with a lit porch light, on Alder Street, a quiet American suburban street, in pale overcast daylight",
-   "seed": 122
+   "seed": 122,
+   "chao": 0.9,
+   "pessoa": 0.36
   },
   "bairro-arvores-dia": {
    "lugar": "bairro/arvores (dia)",
    "prompt": "a row of tall dark trees at the edge of the street, on Alder Street, a quiet American suburban street, in pale overcast daylight",
-   "seed": 129
+   "seed": 129,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "bairro-calcada-dia": {
    "lugar": "bairro/calcada (dia)",
    "prompt": "a cracked sidewalk in front of a row of small houses, on Alder Street, a quiet American suburban street, in pale overcast daylight",
-   "seed": 136
+   "seed": 136,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "bairro-calcada": {
    "lugar": "bairro/calcada (noite)",
    "prompt": "a cracked sidewalk in front of a row of small houses, on Alder Street, a quiet American suburban street, at night, dark blue moonlight, deep shadows",
-   "seed": 143
+   "seed": 143,
+   "chao": 0.93,
+   "pessoa": 0.45
   },
   "bairro-fim_rua": {
    "lugar": "bairro/fim_rua (noite)",
    "prompt": "the dead end of a street with a chain-link fence and an empty lot, on Alder Street, a quiet American suburban street, at night, dark blue moonlight, deep shadows",
-   "seed": 150
+   "seed": 150,
+   "chao": 0.9,
+   "pessoa": 0.4
   },
   "bairro-poste": {
    "lugar": "bairro/poste (noite)",
    "prompt": "a street corner under a single old street lamp, on Alder Street, a quiet American suburban street, at night, dark blue moonlight, deep shadows",
-   "seed": 157
+   "seed": 157,
+   "chao": 0.92,
+   "pessoa": 0.32
   },
   "casa_interior-quarto": {
    "lugar": "casa_interior/quarto (noite)",
    "prompt": "a simple bedroom with a bed, a nightstand lamp and a closed closet, on Alder Street, a quiet American suburban street, at night, dark blue moonlight, deep shadows",
-   "seed": 164
+   "seed": 164,
+   "chao": 0.93,
+   "pessoa": 0.68
   },
   "casa_interior-janela": {
    "lugar": "casa_interior/janela (noite)",
    "prompt": "a living room window with thin curtains, the dark street visible outside, on Alder Street, a quiet American suburban street, at night, dark blue moonlight, deep shadows",
-   "seed": 171
+   "seed": 171,
+   "chao": 0.95,
+   "pessoa": 0.45
   },
   "bairro-frente_casa": {
    "lugar": "bairro/frente_casa (noite)",
@@ -89,5 +107,6 @@
    "prompt": "a street corner under a single old street lamp, on Alder Street, a quiet American suburban street, in pale overcast daylight",
    "seed": 185
   }
- }
+ },
+ "_calibragem": "chao/pessoa conferidos a olho em 15/11 (boneco do tamanho da cama/porta/mesa do fundo, Pedro)"
 }
