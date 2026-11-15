@@ -1,2 +1,2 @@
-motor-ilustrado/testes/wukong-5.json
-# 15/11: parte 5 (CL062), publica 17/11 17:00Z
+hora-muerta/stories/045-ojos-negros-1.json
+# 15/11: teste do HM045 convertido para o ilustrado (NAO publica)
