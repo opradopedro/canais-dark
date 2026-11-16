@@ -72,8 +72,26 @@
   .fala p { margin:0 0 8px; } .fala p:last-child { margin:0; }
   .dica { color:var(--mut); font-size:12px; margin-top:10px; }
 
+  /* cartao do canal: numeros + botoes Ir ao YouTube/TikTok (antes da lista) */
+  .cc { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:12px; margin-bottom:12px; }
+  .cc-top { display:flex; justify-content:space-between; align-items:baseline; gap:8px; margin-bottom:10px; }
+  .cc-top b { font-size:17px; } .cc-top span { color:var(--mut); font-size:12px; }
+  .plat { display:flex; align-items:center; gap:10px; min-height:52px; padding:8px 10px; border-radius:12px; text-decoration:none; color:var(--txt); margin-bottom:8px; }
+  .plat .ico { flex:none; width:34px; height:34px; border-radius:10px; display:grid; place-items:center; font-size:15px; font-weight:700; }
+  .plat div { flex:1; min-width:0; } .plat div b { display:block; font-size:14px; } .plat div span { display:block; color:var(--mut); font-size:12.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .plat em { flex:none; font-style:normal; font-weight:700; font-size:13px; padding:7px 12px; border-radius:999px; }
+  .plat.yt { background:#241516; border:1px solid #4a2324; } .plat.yt .ico { background:#ff4e45; color:#fff; } .plat.yt em { background:#ff4e45; color:#fff; }
+  .plat.tt { background:#0f2324; border:1px solid #1d4a4c; } .plat.tt .ico { background:#2fd3d6; color:#06292a; } .plat.tt em { background:#2fd3d6; color:#06292a; }
+  .plat.off { opacity:.45; pointer-events:none; }
+  .cc-fila { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .cc-fila button { min-height:44px; border-radius:12px; border:1px solid var(--line); background:var(--card2); font-size:13px; text-align:left; padding:6px 10px; }
+  .cc-fila button span { display:block; color:var(--mut); font-size:11.5px; }
+  .stats { display:flex; flex-wrap:wrap; gap:4px 10px; color:var(--mut); font-size:13px; margin-top:4px; }
+  .stats b { color:var(--txt); font-weight:600; } .stats .p-tt { color:#7fe3e5; }
+  .x { position:sticky; top:0; float:right; width:36px; height:36px; border-radius:50%; border:1px solid var(--line); background:var(--card2); font-size:16px; z-index:2; }
+
   /* plataforma (YouTube / TikTok) */
-  .seg { display:grid; grid-template-columns:1fr 1fr; gap:4px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:4px; margin-bottom:12px; }
+  .seg { position:sticky; top:calc(var(--hh, 112px) + 6px); z-index:4; box-shadow:0 6px 12px rgba(15,17,21,.9); display:grid; grid-template-columns:1fr 1fr; gap:4px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:4px; margin-bottom:12px; }
   .seg button { height:36px; border:0; border-radius:9px; background:none; color:var(--mut); font-size:14px; }
   .seg button.on { background:var(--card2); color:var(--txt); font-weight:700; }
   .links { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:0 0 12px; }
@@ -89,6 +107,7 @@
   .kpi b { display:block; font-size:19px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; } .kpi span { color:var(--mut); font-size:11.5px; display:block; }
   .kpi i { font-style:normal; font-size:11.5px; } .up { color:var(--ok); } .down { color:#e07b6f; }
   .graf { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:10px 10px 6px; }
+  .graf { touch-action:pan-y; }
   .graf .leit { font-size:13px; color:var(--mut); min-height:18px; margin-bottom:4px; } .graf .leit b { color:var(--txt); }
   .graf svg { display:block; width:100%; height:130px; overflow:visible; } .graf rect.hit { fill:transparent; cursor:pointer; }
   .graf text { fill:var(--mut); font-size:10px; }
@@ -134,35 +153,53 @@ function issue(tipo, c, it) {
   return `https://github.com/${DADOS.repo}/issues/new?` + new URLSearchParams({ title, body, labels: ["painel", tipo, c.id].join(",") });
 }
 
+// "ha 3 h", "ontem 21:00", "12/11"
+function rel(iso) {
+  if (!iso) return "";
+  const d = new Date(iso), min = (Date.now() - d) / 60000;
+  if (min < 0) return quando(iso);
+  if (min < 60) return `há ${Math.max(1, Math.round(min))} min`;
+  if (min < 24 * 60) return `há ${Math.round(min / 60)} h`;
+  if (min < 48 * 60) return "ontem " + d.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+  return d.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" });
+}
+const dataPub = it => it.publicado_em || it.publica_em || "";
+const maisNovo = (a, b) => (dataPub(b) > dataPub(a) ? 1 : dataPub(b) < dataPub(a) ? -1 : (b.codigo || "") > (a.codigo || "") ? 1 : -1);
 function linha(it, i) {
-  const estado = { roteiro: "roteiro", agendado: "sai " + quando(it.publica_em), publicado: "publicado" }[it.estado];
-  const tt = it.tiktok && it.tiktok.views != null ? ` · TikTok 👁 ${k(it.tiktok.views)}` : "";
-  const sub = it.estado === "publicado" ? `👁 ${k(it.views)} · 👍 ${k(it.likes)} · 💬 ${k(it.comentarios)}${tt}`
-            : (it.partes > 1 ? `${it.serie} · parte ${it.parte}/${it.partes}` : (it.formato || it.codigo));
+  const estado = { roteiro: "roteiro", agendado: "sai " + quando(it.publica_em), publicado: "publicado " + rel(dataPub(it)) }[it.estado];
+  const tt = it.tiktok && it.tiktok.views != null ? `<span class="p-tt">♪ <b>${k(it.tiktok.views)}</b></span>` : "";
+  const sub = it.estado === "publicado"
+    ? `<div class="stats"><span>▶ <b>${k(it.views)}</b> views</span><span>👍 ${k(it.likes)}</span><span>💬 ${k(it.comentarios)}</span>${tt}</div>`
+    : `<div class="sub">${esc(it.codigo)} · ${esc(it.partes > 1 ? `${it.serie} · parte ${it.parte}/${it.partes}` : (it.formato || ""))}</div>`;
   const ped = (PEDIDOS[it.codigo] || []).length ? `<div class="ped">● ${PEDIDOS[it.codigo].length} pedido(s) aberto(s)</div>` : "";
   const mini = it.capa ? `style="background-image:url('${esc(it.capa)}')"` : "";
   return `<button class="item" onclick="abrir(${i})"><div class="mini" ${mini}>${it.capa ? "" : (it.estado === "roteiro" ? "📝" : "🎬")}</div>
-    <div class="info"><span class="tag ${it.estado}">${esc(estado)}</span><div class="tit">${esc(it.titulo)}</div>
-    <div class="sub">${esc(it.codigo)} · ${esc(sub)}</div>${ped}</div></button>`;
+    <div class="info"><span class="tag ${it.estado}">${esc(it.estado === "publicado" ? it.codigo + " · " + estado : estado)}</span><div class="tit">${esc(it.titulo)}</div>
+    ${sub}${ped}</div></button>`;
 }
 
 let LISTA = [];
 function render() {
   const c = canal();
   document.getElementById("chips").innerHTML = DADOS.canais.map(x =>
-    `<button class="chip ${x.id === c.id ? "on" : ""}" onclick="CANAL='${x.id}';localStorage.setItem('canal','${x.id}');render()">${esc(x.nome)}</button>`).join("");
+    `<button class="chip ${x.id === c.id ? "on" : ""}" onclick="CANAL='${x.id}';try{localStorage.setItem('canal','${x.id}')}catch(e){};render();scrollTo(0,0)">${esc(x.nome)}</button>`).join("");
   document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.s === SECAO));
   const fila = c.itens.filter(i => i.estado !== "publicado").sort((a, b) => (a.publica_em || "9") < (b.publica_em || "9") ? -1 : 1);
-  const pub = c.itens.filter(i => i.estado === "publicado").reverse();
+  const pub = c.itens.filter(i => i.estado === "publicado").sort(maisNovo);
   const prox = fila.find(i => i.estado === "agendado");
   const total = pub.reduce((s, i) => s + (i.views || 0), 0);
-  const resumo = `<div class="resumo">
-      <button class="num" onclick="secao('fila')"><b>${fila.length}</b><span>na fila ›</span></button>
-      <button class="num" onclick="${prox ? `abrirCod('${prox.codigo}')` : `secao('fila')`}"><b>${prox ? quando(prox.publica_em).split(",")[0] : "—"}</b><span>próximo post ›</span></button>
-      <button class="num" onclick="secao('postados')"><b>${k(total)}</b><span>views ›</span></button></div>`;
-  const t = c.tiktok, tp = t && t.perfil;
-  const tiktok = t && SECAO !== "metricas" ? `<button class="tt" style="width:100%;text-align:left" onclick="PLAT='tt';guardar();secao('postados')"><b>TikTok</b> @${esc(t.handle)}
-      <span>${tp ? `${k(tp.seguidores)} seguidores · ${k(t.views)} views · ${t.posts} posts · ${k(tp.curtidas)} curtidas` : `${t.posts} posts`} ›</span></button>` : "";
+  const t = c.tiktok, tp = t && t.perfil, yc = c.yt_canal;
+  const ytLinha = yc ? `${k(yc.inscritos)} inscritos · ${k(yc.views)} views · ${yc.videos} vídeos` : `${k(total)} views · ${pub.length} publicados`;
+  const ttLinha = t ? (tp ? `${k(tp.seguidores)} seguidores · ${k(t.views)} views · ${t.posts} posts` : `${t.posts} posts`) : "ainda sem conta";
+  const resumo = `<div class="cc">
+      <div class="cc-top"><b>${esc(c.nome)}</b><span>atualizado ${esc(rel(DADOS.gerado))}</span></div>
+      ${c.id === "gta" ? "" : `<a class="plat yt ${yc ? "" : "off"}" href="${esc((yc && yc.link) || "#")}" target="_blank"><span class="ico">▶</span>
+        <div><b>YouTube</b><span>${ytLinha}</span></div><em>Ir ›</em></a>
+      <a class="plat tt ${t ? "" : "off"}" href="${esc((t && t.link) || "#")}" target="_blank"><span class="ico">♪</span>
+        <div><b>TikTok${t ? " @" + esc(t.handle) : ""}</b><span>${ttLinha}</span></div><em>Ir ›</em></a>`}
+      <div class="cc-fila"><button onclick="secao('fila')"><b>${fila.length}</b> na fila<span>roteiros e agendados ›</span></button>
+        <button onclick="${prox ? `abrirCod('${prox.codigo}')` : `secao('fila')`}"><b>${prox ? esc(quando(prox.publica_em)) : "—"}</b><span>próximo post ›</span></button></div></div>`;
+  const tiktok = "";
   const aviso = c.aviso_youtube ? `<div class="aviso">${esc(c.aviso_youtube)}</div>` : "";
   let corpo;
   if (SECAO === "ideia") {
@@ -176,26 +213,21 @@ function render() {
   } else if (SECAO === "postados" && c.tiktok) {
     LISTA = pub;
     if (PLAT === "tt") {
-      const l = (c.tiktok.lista || []).slice().reverse();
+      const l = (c.tiktok.lista || []).slice().sort((a, b) => (b.quando || "") > (a.quando || "") ? 1 : -1);
       corpo = seletor() + (l.length ? l.map(linhaTT).join("") : `<div class="vazio">Nada postado no TikTok ainda.</div>`);
     } else corpo = seletor() + (pub.length ? pub.map(linha).join("") : `<div class="vazio">Nada publicado ainda.</div>`);
   } else {
     LISTA = SECAO === "fila" ? fila : pub;
     corpo = LISTA.length ? LISTA.map(linha).join("") : `<div class="vazio">${SECAO === "fila" ? "Nenhum roteiro na fila." : "Nada publicado ainda."}</div>`;
   }
-  document.getElementById("main").innerHTML = (SECAO === "metricas" ? aviso : aviso + resumo + tiktok) + botoesCanal(c) + corpo;
+  document.getElementById("main").innerHTML = aviso + (SECAO === "ideia" ? "" : resumo) + corpo;
+  document.documentElement.style.setProperty("--hh", document.querySelector("header").offsetHeight + "px");
 }
 
 function guardar() { try { localStorage.setItem("plat", PLAT); } catch (e) {} }
 function seletor() {
   return `<div class="seg"><button class="${PLAT === "yt" ? "on" : ""}" onclick="PLAT='yt';guardar();render()">▶ YouTube</button>
     <button class="${PLAT === "tt" ? "on" : ""}" onclick="PLAT='tt';guardar();render()">♪ TikTok</button></div>`;
-}
-function botoesCanal(c) {
-  const yt = c.yt_canal && c.yt_canal.link, tt = c.tiktok && c.tiktok.link;
-  if (!yt && !tt) return "";
-  return `<div class="links"><a class="l-yt ${yt ? "" : "l-off"}" href="${esc(yt || "#")}" target="_blank">▶ Ir ao YouTube</a>
-    <a class="l-tt ${tt ? "" : "l-off"}" href="${esc(tt || "#")}" target="_blank">♪ Ir ao TikTok</a></div>`;
 }
 const pct = (a, b) => b ? (100 * a / b).toFixed(1).replace(".", ",") + "%" : "—";
 const eng = (a, b) => b >= 20 ? pct(a, b) : "— (poucas views)";
@@ -206,9 +238,9 @@ const engaj = x => (x.likes || 0) + (x.comentarios || 0) + (x.compart || 0);
 function linhaTT(p) {
   const mini = p.capa ? `style="background-image:url('${esc(p.capa)}')"` : "";
   return `<a class="item" style="text-decoration:none;color:inherit" href="${esc(p.link)}" target="_blank"><div class="mini" ${mini}>${p.capa ? "" : "♪"}</div>
-    <div class="info"><span class="tag publicado">TikTok · ${esc(quando(p.quando))}</span><div class="tit">${esc(p.titulo || p.codigo || "Vídeo no TikTok")}</div>
-    <div class="sub">${esc(p.codigo || "")}${p.codigo ? " · " : ""}👁 ${k(p.views)} · ❤️ ${k(p.likes)} · 💬 ${k(p.comentarios)} · ↗ ${k(p.compart)}</div>
-    <div class="sub">engajamento ${eng(engaj(p), p.views)}${p.yt_views != null ? ` · no YouTube 👁 ${k(p.yt_views)}` : ""}</div></div></a>`;
+    <div class="info"><span class="tag publicado">${esc((p.codigo ? p.codigo + " · " : "") + "postado " + rel(p.quando))}</span><div class="tit">${esc(p.titulo || p.codigo || "Vídeo no TikTok")}</div>
+    <div class="stats"><span class="p-tt">♪ <b>${k(p.views)}</b> views</span><span>❤️ ${k(p.likes)}</span><span>💬 ${k(p.comentarios)}</span><span>↗ ${k(p.compart)}</span></div>
+    <div class="sub">engajamento ${eng(engaj(p), p.views)}${p.yt_views != null ? ` · no YouTube ▶ ${k(p.yt_views)}` : ""}</div></div></a>`;
 }
 
 // grafico de barras de uma serie (toque/passe o dedo numa barra para ver o numero)
@@ -325,9 +357,9 @@ function metricasTT(c) {
 function abrir(i) {
   const c = canal(), it = LISTA[i];
   const video = it.video ? `<video class="video" src="${esc(it.video)}" ${it.capa ? `poster="${esc(it.capa)}"` : ""} controls playsinline preload="metadata"></video>` : "";
-  const quandoTxt = { roteiro: "Ainda é roteiro: o vídeo é feito no dia de postar.", agendado: "Agendado para " + quando(it.publica_em), publicado: "Publicado" }[it.estado];
+  const quandoTxt = { roteiro: "Ainda é roteiro: o vídeo é feito no dia de postar.", agendado: "Agendado para " + quando(it.publica_em), publicado: `Publicado ${rel(dataPub(it))} · ▶ ${k(it.views)} views · 👍 ${k(it.likes)} · 💬 ${k(it.comentarios)}` }[it.estado];
   const peds = (PEDIDOS[it.codigo] || []).map(p => `<a class="btn larga" href="${p.url}" target="_blank">● ${esc(p.titulo)}</a>`).join("");
-  document.getElementById("folha").innerHTML = `<div class="puxador"></div>${video}
+  document.getElementById("folha").innerHTML = `<button class="x" onclick="history.back()" aria-label="Fechar">✕</button><div class="puxador"></div>${video}
     <span class="tag ${it.estado}">${esc(it.codigo)}</span><h3>${esc(it.titulo)}</h3><div class="dica" style="margin-top:0">${esc(quandoTxt)}</div>
     <div class="acoes">
       ${it.estado !== "publicado" ? `<a class="btn pri" href="${issue("pedido", c, it)}" target="_blank">✏️ Pedir mudança</a>` : ""}
@@ -337,7 +369,7 @@ function abrir(i) {
       ${it.tiktok ? `<a class="btn larga" href="${esc(it.tiktok.tiktok)}" target="_blank">♪ TikTok: ${k(it.tiktok.views)} views · ${k(it.tiktok.likes)} curtidas</a>` : ""}
       ${peds}
     </div>
-    <div class="fala">${it.roteiro.map(l => `<p>${esc(l).replace(/\{(when_next|next_card|next_day|next_date|dia_siguiente|fecha_siguiente)\}/g, "<i>[dia da próxima parte]</i>")}</p>`).join("")}</div>
+    <div class="fala">${(it.roteiro || []).length ? "" : "<p>Roteiro não está mais no repositório (vídeo antigo).</p>"}${(it.roteiro || []).map(l => `<p>${esc(l).replace(/\{(when_next|next_card|next_day|next_date|dia_siguiente|fecha_siguiente)\}/g, "<i>[dia da próxima parte]</i>")}</p>`).join("")}</div>
     <div class="dica">Pedidos em vídeo que ainda não saiu são aplicados antes de ele subir.</div>`;
   document.getElementById("det").classList.add("aberta");
   history.pushState({ det: 1 }, "");
@@ -352,7 +384,8 @@ window.onpopstate = fechar;  // botao voltar do celular fecha o detalhe
 function secao(s) { SECAO = s; render(); scrollTo(0, 0); }
 
 async function iniciar() {
-  DADOS = await (await fetch("dados.json?" + Date.now())).json();
+  try { DADOS = await (await fetch("dados.json?" + Date.now())).json(); }
+  catch (e) { document.getElementById("main").innerHTML = `<div class="vazio">Não consegui carregar os dados. Toque em ↻ para tentar de novo.</div>`; return; }
   PEDIDOS = {};
   try {
     const r = await fetch(`https://api.github.com/repos/${DADOS.repo}/issues?state=open&labels=painel&per_page=100`);

@@ -53,16 +53,29 @@ def youtube(modulo, token_var, prefixo):
         ids = [v["id"] for v in ja.values()]
         stats = {}
         for k in range(0, len(ids), 50):
-            r = m.get("videos", token, part="statistics", id=",".join(ids[k:k + 50]))
+            r = m.get("videos", token, part="statistics,snippet,status", id=",".join(ids[k:k + 50]))
             for v in r.get("items", []):
-                stats[v["id"]] = v.get("statistics", {})
+                stats[v["id"]] = dict(v.get("statistics", {}), publishedAt=v.get("snippet", {}).get("publishedAt"),
+                                      privacy=v.get("status", {}).get("privacyStatus"))
         for cod, v in ja.items():
             st = stats.get(v["id"], {})
             v.update(views=int(st.get("viewCount", 0)), likes=int(st.get("likeCount", 0)),
-                     comentarios=int(st.get("commentCount", 0)))
+                     comentarios=int(st.get("commentCount", 0)), publicado_em=st.get("publishedAt"),
+                     privacidade=st.get("privacy") or v.get("privacidade"))
         return ja, None, metricas_yt(m, token)
     except BaseException as e:  # sys.exit dos scripts antigos tambem
         return {}, str(e)[:200], None
+
+
+def estado_yt(v, agora):
+    """publicado (publico), agendado (privado com data futura) ou None (tirado do ar / privado sem data)."""
+    quando_pub = v.get("publishAt")
+    futuro = quando_pub and dt.datetime.fromisoformat(quando_pub.replace("Z", "+00:00")) > agora
+    if futuro:
+        return "agendado"
+    if v.get("privacidade") in ("public", "unlisted", None):
+        return "publicado"
+    return None
 
 
 def metricas_yt(m, token):
@@ -139,7 +152,7 @@ def main():
         ja, erro, met = youtube(modulo, tvar, pref)
         met = met or {}
         arq = assets(cid)
-        itens = []
+        itens, vistos = [], set()
         for f in sorted(glob.glob(os.path.join(RAIZ, pasta, "stories", "*.json"))):
             try:
                 h = json.load(open(f, encoding="utf-8"))
@@ -153,11 +166,13 @@ def main():
                   "autor": h.get("autor"), "arquivo": os.path.relpath(f, RAIZ).replace("\\", "/"),
                   "estado": "roteiro"}
             v = ja.get(cod)
+            vistos.add(cod)
+            est = estado_yt(v, agora) if v else None
+            if v and not est:
+                v = None  # tirado do ar: volta a ser so o roteiro (ou some, se ja foi publicado antes)
             if v:
-                quando_pub = v.get("publishAt")
-                futuro = quando_pub and dt.datetime.fromisoformat(quando_pub.replace("Z", "+00:00")) > agora
-                it.update(estado="agendado" if futuro else "publicado", youtube=f"https://youtu.be/{v['id']}",
-                          publica_em=quando_pub, views=v.get("views", 0), likes=v.get("likes", 0),
+                it.update(estado=est, youtube=f"https://youtu.be/{v['id']}", publica_em=v.get("publishAt"),
+                          publicado_em=v.get("publicado_em"), views=v.get("views", 0), likes=v.get("likes", 0),
                           comentarios=v.get("comentarios", 0))
             for p in (tt_canais.get(cid) or {}).get("posts", []):
                 if (v and p.get("youtube") == v.get("id")) or p.get("codigo") == cod:
@@ -168,6 +183,21 @@ def main():
                 it["capa"] = arq[cod + ".jpg"]
             elif v:  # sem capa leve na Release: usa a miniatura do proprio YouTube
                 it["capa"] = f"https://i.ytimg.com/vi/{v['id']}/hqdefault.jpg"
+            itens.append(it)
+        # videos no ar cujo roteiro ja saiu da pasta stories (ex.: Wukong ilustrado): entram pelo proprio YouTube
+        for cod, v in ja.items():
+            est = estado_yt(v, agora)
+            if cod in vistos or not est:
+                continue
+            it = {"codigo": cod, "titulo": v.get("titulo", ""), "roteiro": [], "estado": est, "arquivo": None,
+                  "youtube": f"https://youtu.be/{v['id']}", "publica_em": v.get("publishAt"), "publicado_em": v.get("publicado_em"),
+                  "views": v.get("views", 0), "likes": v.get("likes", 0), "comentarios": v.get("comentarios", 0),
+                  "capa": arq.get(cod + ".jpg") or f"https://i.ytimg.com/vi/{v['id']}/hqdefault.jpg"}
+            if cod + ".mp4" in arq:
+                it["video"] = arq[cod + ".mp4"]
+            for p in (tt_canais.get(cid) or {}).get("posts", []):
+                if p.get("youtube") == v["id"] or p.get("codigo") == cod:
+                    it["tiktok"] = {k2: p.get(k2) for k2 in ("tiktok", "views", "likes", "comentarios")}
             itens.append(it)
         ct = tt_canais.get(cid)
         resumo_tt = None
