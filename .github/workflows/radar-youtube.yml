@@ -7,10 +7,9 @@ name: Radar GTA - Shorts no YouTube
 
 on:
   schedule:
-    - cron: "20 15 * * *"   # 12h20 BRT
-    - cron: "20 18 * * *"   # 15h20 BRT
-    - cron: "20 21 * * *"   # 18h20 BRT
-    - cron: "20 0 * * *"    # 21h20 BRT
+    # De hora em hora: o script decide (regra do Pedro, 16/11): Reel novo do Insta sobe na rodada seguinte;
+    # atrasados por engajamento em horário sorteado; nunca 2 envios com menos de 1 hora entre eles.
+    - cron: "20 * * * *"
   workflow_dispatch:
 
 permissions:
