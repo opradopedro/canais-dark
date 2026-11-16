@@ -168,10 +168,13 @@ def _fim_mudas(pal, nota):
     """Ultima palavra com nota < 0,1 = a voz nao falou. A penultima so conta se for ~0 (< 0,02): no CL042 (13/11)
     o "tomorrow," falado de verdade, com tambor por baixo, deu nota 0,08 e barrou o video sem motivo."""
     fim = [(w, n) for w, n in zip(pal, nota) if re.sub(r"[^\wáéíóúñ]", "", w.lower()) and not re.search(r"\d", w)][-2:]
-    out = []
-    for k, (w, n) in enumerate(fim):
-        if n < (0.1 if k == len(fim) - 1 else 0.02):
-            out.append(w)
+    # 16/11 (CL046): "tomorrow," falado de verdade, tambor por baixo, deu nota ~0 no video mixado e barrou 2x o
+    # mesmo audio (a voz crua tinha passado no fim_mudo). A penultima so conta junto com a ultima muda.
+    if not fim or fim[-1][1] >= 0.1:
+        return []
+    out = [fim[-1][0]]
+    if len(fim) == 2 and fim[0][1] < 0.02:
+        out.insert(0, fim[0][0])
     return out
 
 
