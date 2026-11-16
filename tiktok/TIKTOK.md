@@ -14,12 +14,13 @@ O TikTok acompanha o YouTube. Todo vídeo que entra no ar no YouTube vai para a 
 - (15/11) Signal Lost: conta criada pelo Pedro. Só posta vídeo do motor NOVO (roteiro com `"visual": "ilustrado"`); o `fila.py` confere pelo dados.json + arquivo do roteiro (`so_visual`). Ligada na vidIQ em 15/11 (_000YWmW5XJxNaQwk5spdhkLeeujRfv_CCJ4).
 
 ## Passo a passo da rotina
+0. (16/11, Pedro: "isso não pode acontecer") `python tiktok/fila.py --pendentes`: para cada post enviado sem link, `vidiq_social_post_status` (grátis) e, se `completed`, `python tiktok/fila.py --marcar <youtube> <postId> <canal> <chave> <postUrl>` (mantém a hora original). Sem isso o painel mostra o vídeo como "não foi pro TikTok".
 1. `git pull origin producao` e `python tiktok/fila.py`. Lista vazia = nada a fazer.
 2. Para cada item: `vidiq_video_upload` com `url` = link do YouTube → `vidiq_job_poll` até `completed` (pega `uploadId`).
    Conferir que a duração do vídeo baixado bate com a do YouTube (ffprobe no `videoUrl`).
 3. `vidiq_social_post_draft_create` com `text` = `legenda`, `media` = o vídeo, destino TIKTOK com `platformAccountId` = `conta` e as 4 escolhas acima. SEM `publishAt`.
 4. `vidiq_social_post_publish` com o `postId` e a `revision`.
-5. `vidiq_social_post_status` com o `postId` (grátis) para pegar o `postUrl` e `python tiktok/fila.py --marcar <youtubeId> <postId> <canal> [codigo] <postUrl>` (o link é o que o painel usa para ler as views).
+5. `vidiq_social_post_status` com o `postId` (grátis) para pegar o `postUrl` (se ainda estiver processando, esperar ~30 s e tentar de novo até 5 vezes; se não vier, o passo 0 da próxima execução completa) e `python tiktok/fila.py --marcar <youtubeId> <postId> <canal> [codigo] <postUrl>` (o link é o que o painel usa para ler as views).
 5b. Em TODA execução (mesmo sem post novo): `python tiktok/estatisticas.py --salvar` (seguidores, views e curtidas lidos de graça na página pública do TikTok; não usa crédito da vidIQ). No fim, commit e push em producao: o painel atualiza sozinho com o `tiktok/estatisticas.json`.
 6. Falhou (conta desconectada, `canPublish` false): não marcar; avisar o Pedro na thread "Planejar vídeos longos e TikTok" com o link de reconectar (`vidiq_social_account_connect`, em bloco de código, porque ele não consegue copiar hyperlink).
 

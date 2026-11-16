@@ -59,10 +59,14 @@ def coletar():
         except Exception as e:
             c["erro"] = str(e)[:120]
         for chave, p in postados.items():
-            if p.get("canal") != cid or not p.get("tiktok"):
-                continue
+            if p.get("canal") != cid or not (p.get("tiktok") or (p.get("postId") and p.get("youtube"))):
+                continue  # sem link e sem postId = antigo/cancelado
             item = {"youtube": p.get("youtube"), "codigo": chave if re.match(r"[A-Z]{2}\d+$", chave) else None,
                     "tiktok": p["tiktok"], "quando": p.get("quando")}
+            if not p.get("tiktok"):
+                item["pendente"] = True  # enviado a vidIQ; link ainda nao gravado (a rotina completa)
+                c["posts"].append(item)
+                continue
             try:
                 n = video(p["tiktok"])
                 if n:

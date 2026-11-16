@@ -177,12 +177,23 @@ def salvar(est):
 def marcar(vid, post_id, canal, cod=None, link=None):
     est = carregar()
     chave = cod or vid
+    antes = est["postados"].get(chave) or {}
     est["postados"][chave] = {"postId": post_id, "youtube": vid, "canal": canal,
-                              "quando": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()}
+                              # se so esta completando o link depois, mantem a hora em que foi postado
+                              "quando": antes.get("quando") if antes.get("postId") == post_id and antes.get("quando")
+                              else dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()}
     if link:  # postUrl do vidiq_social_post_status: o painel le as views do TikTok por ele
         est["postados"][chave]["tiktok"] = link
     salvar(est)
     print("MARCADO", chave, vid)
+
+
+def pendentes():
+    """Posts enviados a vidIQ sem o link do TikTok gravado (o TikTok ainda processava quando a rotina acabou).
+    A rotina chama vidiq_social_post_status (gratis) para cada um e completa com --marcar ... <postUrl>."""
+    est = carregar()
+    return [{"chave": k, "postId": p["postId"], "youtube": p.get("youtube"), "canal": p.get("canal")}
+            for k, p in est["postados"].items() if p.get("postId") and p.get("youtube") and not p.get("tiktok")]
 
 
 def ignorar(vid, canal, motivo=""):
@@ -200,6 +211,8 @@ if __name__ == "__main__":
         link = next((x for x in a[4:] if x.startswith("https://")), None)
         cod = next((x for x in a[4:] if not x.startswith("https://")), None)
         marcar(a[1], a[2], a[3], cod, link)
+    elif a[:1] == ["--pendentes"]:
+        print(json.dumps(pendentes(), ensure_ascii=False, indent=1))
     elif len(a) >= 3 and a[0] == "--ignorar":
         ignorar(a[1], a[2], " ".join(a[3:]))
     else:

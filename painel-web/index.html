@@ -236,6 +236,9 @@ const dia = iso => iso ? new Date(iso).toLocaleDateString("pt-BR", { day: "2-dig
 const engaj = x => (x.likes || 0) + (x.comentarios || 0) + (x.compart || 0);
 
 function linhaTT(p) {
+  if (!p.link) return `<div class="item"><div class="mini" ${p.capa ? `style="background-image:url('${esc(p.capa)}')"` : ""}></div><div class="info">
+    <span class="tag agendado">${esc((p.codigo ? p.codigo + " · " : "") + "enviado " + rel(p.quando))}</span><div class="tit">${esc(p.titulo || p.codigo || "Vídeo no TikTok")}</div>
+    <div class="sub">O TikTok ainda não devolveu o link; os números aparecem na próxima atualização.</div></div></div>`;
   const mini = p.capa ? `style="background-image:url('${esc(p.capa)}')"` : "";
   return `<a class="item" style="text-decoration:none;color:inherit" href="${esc(p.link)}" target="_blank"><div class="mini" ${mini}>${p.capa ? "" : "♪"}</div>
     <div class="info"><span class="tag publicado">${esc((p.codigo ? p.codigo + " · " : "") + "postado " + rel(p.quando))}</span><div class="tit">${esc(p.titulo || p.codigo || "Vídeo no TikTok")}</div>

@@ -210,7 +210,7 @@ def main():
                 lista.append({"codigo": it.get("codigo") or p.get("codigo"), "titulo": it.get("titulo"),
                               "capa": it.get("capa") or (f"https://i.ytimg.com/vi/{p['youtube']}/hqdefault.jpg" if p.get("youtube") else None),
                               "youtube": it.get("youtube"), "yt_views": it.get("views"), "link": p.get("tiktok"),
-                              "quando": p.get("quando"), **{k: p.get(k) for k in ("views", "likes", "comentarios", "compart")}})
+                              "quando": p.get("quando"), "pendente": p.get("pendente"), **{k: p.get(k) for k in ("views", "likes", "comentarios", "compart")}})
             resumo_tt = {"handle": ct.get("handle"), "link": ct.get("link"), "perfil": ct.get("perfil"),
                          "views": ct.get("views", 0), "posts": len(ct.get("posts", [])), "lido_em": tt.get("gerado"),
                          "lista": lista}
