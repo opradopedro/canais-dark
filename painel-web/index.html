@@ -19,7 +19,7 @@
   header { position:sticky; top:0; z-index:5; background:rgba(15,17,21,.96); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
   .linha1 { display:flex; align-items:center; justify-content:space-between; padding:12px 16px 4px; }
   h1 { font-size:18px; margin:0; }
-  .ic { width:40px; height:40px; border-radius:12px; border:1px solid var(--line); background:var(--card); display:grid; place-items:center; font-size:18px; }
+  .ic { cursor:pointer; width:40px; height:40px; border-radius:12px; border:1px solid var(--line); background:var(--card); display:grid; place-items:center; font-size:18px; }
   .chips { display:flex; gap:8px; overflow-x:auto; padding:8px 16px 12px; scrollbar-width:none; }
   .chips::-webkit-scrollbar { display:none; }
   .chip { flex:none; height:38px; padding:0 14px; border-radius:999px; border:1px solid var(--line); background:var(--card); font-size:14px; }
@@ -123,7 +123,7 @@
 </head>
 <body>
 <header>
-  <div class="linha1"><h1>Painel dos canais</h1><button class="ic" onclick="iniciar()" aria-label="Atualizar">↻</button></div>
+  <div class="linha1"><h1>Painel dos canais</h1><button class="ic" id="btn-rec" onclick="recarregar()" aria-label="Atualizar">↻</button></div>
   <div class="chips" id="chips"></div>
 </header>
 <main id="main"><div class="vazio">carregando...</div></main>
@@ -386,6 +386,12 @@ function abrirCod(cod) {  // abre o detalhe de um video pelo codigo (ex.: o "pro
 window.onpopstate = fechar;  // botao voltar do celular fecha o detalhe
 function secao(s) { SECAO = s; render(); scrollTo(0, 0); }
 
+// ↻ recarrega a PAGINA inteira sem cache (o celular guardava a versao antiga por ate 10 min)
+function recarregar() {
+  document.getElementById("btn-rec").style.transform = "rotate(360deg)";
+  document.getElementById("btn-rec").style.transition = "transform .5s";
+  setTimeout(() => location.replace(location.pathname + "?v=" + Date.now()), 250);
+}
 async function iniciar() {
   try { DADOS = await (await fetch("dados.json?" + Date.now())).json(); }
   catch (e) { document.getElementById("main").innerHTML = `<div class="vazio">Não consegui carregar os dados. Toque em ↻ para tentar de novo.</div>`; return; }
