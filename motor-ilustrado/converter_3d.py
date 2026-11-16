@@ -60,6 +60,69 @@ LUGARES = {
     ("estrada", "curva"): "a sharp mountain highway curve with a bent guardrail over a drop",
 }
 
+# OLD TALES (Pedro 16/11: formato do Wukong ilustrado em todos os canais de historia). Acao/aventura, adulto, sem fogueira.
+ESTILO_CL = {
+    "china": "dark epic ancient Chinese fantasy illustration, misty mountains, jade green, lacquer red and gold accents, "
+             "dramatic moody light, realistic proportions, mature adult tone, not childish",
+    "grecia": "dark epic ancient Greek illustration, marble, bronze and deep red accents, dramatic moody light, "
+              "realistic proportions, mature adult tone, not childish",
+}
+LUGARES_CL = {
+    ("aldeia_china", "praca"): "the main square of an ancient Chinese village with tiled roofs and red lanterns",
+    ("aldeia_china", "casa"): "inside a humble ancient Chinese family house with a wooden table, chairs and paper windows",
+    ("aldeia_china", "templo"): "the steps of a small ancient Chinese village temple with red pillars",
+    ("aldeia_china", "jardim"): "a walled courtyard garden of an ancient Chinese house with a plum tree",
+    ("aldeia_china", "mercado"): "a narrow ancient Chinese market street with wooden stalls and hanging cloth",
+    ("aldeia_china", "poco"): "an old stone well in an ancient Chinese village courtyard",
+    ("palacio_ceu", "escada"): "a huge stone staircase leading up to an imperial palace gate",
+    ("palacio_ceu", "nuvens"): "an imperial palace with golden roofs seen from above, floating over a sea of clouds",
+    ("palacio_ceu", "colunas"): "a long hall of tall red lacquered columns in an imperial palace",
+    ("palacio_ceu", "salao"): "an imperial throne hall with a golden dragon throne on a raised platform",
+    ("submundo", "entrada"): "the gate of the underworld, a black stone arch between jagged rocks lit by blue spirit flames",
+    ("submundo", "livro"): "a dark underworld archive with an enormous open book on a stone lectern",
+    ("submundo", "juiz"): "the hall of the underworld judge, a high black desk under hanging chains",
+    ("submundo", "mesa"): "a long stone table with scrolls and an ink brush in a dim underworld office",
+    ("submundo", "pilares"): "huge black stone pillars in a misty underworld cavern",
+    ("submundo", "corredor"): "a long narrow underworld corridor with ghostly blue lanterns",
+    ("submundo", "fundo"): "the deepest pit of the underworld, a dark misty abyss",
+    ("esparta_cidade", "praca"): "the dusty training square of ancient Sparta with simple stone buildings",
+    ("esparta_cidade", "templo"): "the columns at the front of an ancient Greek temple",
+    ("esparta_cidade", "escada"): "wide stone steps of an ancient Greek temple",
+    ("esparta_cidade", "casa"): "inside a simple ancient Spartan house with a stone floor, a bench and a hearth",
+    ("esparta_cidade", "mercado"): "a small ancient Greek market street with clay jars and stalls",
+    ("mar_jangada", "mar"): "a dark rough sea with ancient warships",
+}
+LUGARES_CL_SERIE = {  # campo_batalha muda de cara em cada historia
+    "mulan": {"beira_mato": "the edge of a pine forest beside a military camp of tents with banners",
+              "acostamento": "a rocky mountain road where an ancient Chinese army column marches",
+              "curva": "a narrow mountain pass covered in snow",
+              "pe_torre": "the foot of a wooden watchtower in an ancient Chinese army camp",
+              "vindo": "a wide battlefield on the northern steppe, an enemy army approaching on the horizon",
+              "meio": "the middle of a wide battlefield on the northern steppe",
+              "indo": "a long road across the steppe toward distant mountains"},
+    "thermopylae": {"beira_mato": "the rocky slope above the narrow coastal pass of Thermopylae",
+                    "acostamento": "the old Phocian stone wall across the narrow pass of Thermopylae",
+                    "curva": "a narrow goat path winding over the mountain above Thermopylae",
+                    "pe_torre": "a Spartan camp behind a stone wall in a narrow pass",
+                    "vindo": "the narrow pass of Thermopylae between cliffs and the sea, a huge Persian army on the plain beyond",
+                    "meio": "the middle of the narrow pass of Thermopylae between steep cliffs and the sea",
+                    "indo": "the narrow pass of Thermopylae seen toward the sea at the far end"},
+}
+LUZ_CL = {"dia": ("dia", "in daylight"), "nublado": ("dia", "in daylight"),
+          "tempestade": ("tempestade", "under a dark stormy sky"), "chuva": ("tempestade", "under a dark stormy sky"),
+          "por_sol": ("dourado", "at sunset, golden orange light"), "entardecer": ("dourado", "at sunset, golden orange light"),
+          "nascer_sol": ("dourado", "at sunset, golden orange light"),
+          "noite": ("noite", "at night, blue moonlight and torches"), "madrugada": ("noite", "at night, blue moonlight and torches"),
+          "interior_noite": ("noite", "at night, blue moonlight and torches"), "fogueira": ("noite", "at night, blue moonlight and torches"),
+          "neve": ("neve", "in falling snow")}
+ROUPA_CL = {
+    "soldado_china": dict(armadura="#7a1c24", faixa="#1a1a1a", elmo="#3a3a40"),
+    "soldado_esparta": dict(armadura="#b8862a", manto="#8a1a14", elmo="#b8862a"),
+    "rei": dict(roupa="tunica", tiara=True),
+    "chines": dict(roupa="tunica"),
+    "casual": dict(roupa="tunica"),
+}
+
 SERIES = {
     "ojos-negros": "in a working-class neighborhood of a northern Latin American city",
     "siete-espantapajaros": "on a dry farm in the Latin American countryside",
@@ -83,6 +146,19 @@ ROSTO = {"neutro": "calmo", "desconfiado": "determinado", "susto": "choque", "br
 PLANO = {"close": ([1.45, 1.6], 0.58), "ombro": ([1.3, 1.45], 0.58), "nuca": ([1.3, 1.42], 0.58),
          "medio": ([1.15, 1.3], 0.6), "auto": ([1.12, 1.26], 0.6), "baixo": ([1.2, 1.32], 0.66),
          "aereo": ([1.0, 1.08], 0.45), "aberto": ([1.0, 1.12], 0.55)}
+def pose_de(acao):
+    a = acao or ""
+    if a.startswith("Melee") and ("Attack" in a):
+        return "golpe"
+    if a.startswith("Melee") or a.startswith("Dodge"):
+        return "lutar"
+    for k, p in (("Cheering", "triunfo"), ("Death", "cair"), ("Lie_StandUp", "agachar"), ("Push_Ups", "agachar"),
+                 ("Sit_Floor", "agachar"), ("Crouching", "agachar"), ("Sneaking", "agachar"), ("Ranged", "apontar")):
+        if a.startswith(k):
+            return p
+    return next((p for k, p in POSE if a.startswith(k)), "parado")
+
+
 PELE = ["#f2d6b2", "#e8c49a", "#d4a679", "#b8865a", "#9a6a44"]
 ROUPA = ["#3a4a5a", "#5a3a3a", "#3a5a4a", "#5a5040", "#40405a", "#6a5a3a"]
 
@@ -101,18 +177,20 @@ CRIATURAS = {
     "cao_negro": {"cao": dict(tipo="cao", pelo="#141414", olhos_cor="#ffd23a")},
     "sem_rosto": {"sem_rosto": dict(tipo="humano", rosto_cor="#e8e0d0", sem_rosto=True, cabelo="careca",
                                     roupa="jaqueta", roupa_cor="#2a3a2a")},
+    "coisa_com_chifres": {"demonio": dict(tipo="humano", rosto_cor="#6a1414", membro="#4a0e0e", roupa="trapos",
+                                          roupa_cor="#1a0a0a", olhos="vermelhos", cabelo="careca")},
     "rastejante": {"rastejante": dict(tipo="humano", rosto_cor="#4a3a2a", membro="#4a3a2a", roupa="trapos",
                                       roupa_cor="#2e2216", sem_rosto=True, cabelo="careca", desgaste=0.8)},
 }
 ESC_CRIATURA = {"olhos_no_escuro": 0.78, "alta": 1.5, "vulto": 1.25, "lobisomem": 1.3, "cao_negro": 1.2,
-                "sem_rosto": 1.0, "rastejante": 1.0, "espantalho": 1.1}
+                "sem_rosto": 1.0, "rastejante": 1.0, "espantalho": 1.1, "coisa_com_chifres": 1.35}
 
 
 def _h(s, n):
     return int(hashlib.md5(str(s).encode()).hexdigest(), 16) % n
 
 
-def elenco_2d(el3d):
+def elenco_2d(el3d, regiao=None):
     out = {}
     for k, e in el3d.items():
         s = e.get("semente", _h(k, 9999))
@@ -127,9 +205,22 @@ def elenco_2d(el3d):
             d.update(roupa="jaqueta", roupa_cor="#1f2a44")
         else:
             d.update(roupa="jaqueta", roupa_cor=ROUPA[_h(s + 2, len(ROUPA))])
+        if regiao:  # Old Tales: roupa de epoca
+            r = ROUPA_CL.get(roupa, {})
+            d.pop("roupa", None); d.pop("roupa_cor", None)
+            d.update(r)
+            if r.get("roupa") == "tunica":
+                d["roupa_cor"] = e.get("camisa") or ({"rei": "#d8a431" if regiao == "china" else "#5a2a6a"}.get(roupa)
+                                                    or ["#6a4a2a", "#3a4a5a", "#5a3a3a"][_h(s, 3)])
+            if e.get("pele"):
+                d["rosto_cor"] = e["pele"]
+            if e.get("cabelo_cor"):
+                d["cabelo_cor"] = e["cabelo_cor"]
+            if e.get("cabelo") == "longo" and regiao == "china":
+                d["cabelo"] = "coque"
         ac = e.get("acessorio")
         if ac == "barba":
-            d.update(barba_estilo="curta", barba=d["cabelo_cor"])
+            d.update(barba_estilo="chinesa" if regiao == "china" else ("cheia" if regiao else "curta"), barba=d["cabelo_cor"])
         if ac == "bone":
             d.update(chapeu="bone", chapeu_cor=ROUPA[_h(s + 3, len(ROUPA))])
         out[k] = d
@@ -178,7 +269,9 @@ def converter(path):
     serie = d["serie"]
     mundo = f"{pref}-{serie}"
     el3d = d.get("elenco", {})
-    elenco = elenco_2d(el3d)
+    cl = pref == "cl"
+    regiao = (d.get("paleta") if d.get("paleta") in ESTILO_CL else "china") if cl else None
+    elenco = elenco_2d(el3d, regiao)
     cenas = {c["linea"]: c.get("cena", c) for c in d.get("cenas", [])}
     eventos = {}
     for ev in d.get("eventos", []):
@@ -194,7 +287,16 @@ def converter(path):
         dia = c.get("luz") in DIA
         objs = c.get("objetos") or []
         cen, marca = c.get("cenario"), c.get("marca")
-        fid = f"{cen}-{marca}" + ("-onibus" if "onibus" in objs else "") + ("-dia" if dia else "")
+        if cl:
+            grupo, frase = LUZ_CL.get(c.get("luz"), ("dia", "in daylight"))
+            dia = grupo != "noite"
+            fid = f"{cen}-{marca}" + ("" if grupo == "dia" else f"-{grupo}")
+            if fid not in lugares:
+                base = (LUGARES_CL_SERIE.get(serie, {}).get(marca) if cen == "campo_batalha" else None) \
+                    or LUGARES_CL.get((cen, marca), f"{cen} {marca}".replace("_", " "))
+                lugares[fid] = {"lugar": f"{cen}/{marca} ({grupo})", "prompt": f"{base}, {frase}",
+                                "seed": 100 + len(lugares) * 7 + _h(mundo, 50)}
+        fid = fid if cl else f"{cen}-{marca}" + ("-onibus" if "onibus" in objs else "") + ("-dia" if dia else "")
         if fid not in lugares:
             base = LUGARES.get((cen, marca), f"{cen} {marca}".replace("_", " "))
             if "onibus" in objs:
@@ -208,8 +310,10 @@ def converter(path):
         atores = []
         for a in c.get("atores", []):
             acao = a.get("acao", "Idle_A")
-            pose = next((p for k, p in POSE if acao.startswith(k)), "parado")
+            pose = pose_de(acao)
             at = dict(id=a["id"], pose=pose, rosto=ROSTO.get(a.get("rosto"), "calmo"), v=0.8 if pose == "deitado" else 0.93, esc=1.0)
+            if cl:
+                at["arma"] = a.get("segura") or False
             if a.get("de") and a.get("para") and pose in ("andar", "correr"):
                 at["u"] = [0.3, 0.5]
             atores.append(at)
@@ -237,6 +341,8 @@ def converter(path):
         luz = c.get("luz", "")
         if not dia:
             fx.append("escuro")
+        if cl and c.get("luz") in ("tempestade", "chuva"):
+            fx.append("chuva")
         if "neblina" in luz or luz == "neve":
             fx.append("neblina")
         if luz in ("nascer_sol", "entardecer"):
@@ -264,7 +370,7 @@ def converter(path):
     cp = os.path.join(AQUI, "cenarios", f"{mundo}.json")
     m = json.load(open(cp, encoding="utf-8")) if os.path.exists(cp) else {
         "mundo": mundo, "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
-        "estilo": ESTILO_TERROR, "ordem": 20 + int(d["codigo"][2:]) // 2, "cenarios": {}}
+        "estilo": ESTILO_CL[regiao] if cl else ESTILO_TERROR, "ordem": 20 + int(d["codigo"][2:]) // 2, "cenarios": {}}
     for k, v in lugares.items():
         m["cenarios"].setdefault(k, v)
     json.dump(m, open(cp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

@@ -37,7 +37,7 @@ V3D = _vocab3d()
 
 
 # REGRA do Pedro (15/11): a serie seguinte a atual de HM e SV ja sai no motor ilustrado (fundo IA + boneco)
-ILUSTRADO_DESDE = {"hora-muerta": 45, "signal-lost": 38}
+ILUSTRADO_DESDE = {"hora-muerta": 45, "signal-lost": 38, "old-tales": 49}
 
 
 def conferir_ilustrado(n, h):

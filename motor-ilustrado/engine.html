@@ -261,11 +261,13 @@ function boneco(a, el, t, sx, sy, esc) {
   X.restore();
   perna(pose.lL); const mR = braco(pose.aR, true);
   // arma na mao da frente, na direcao do antebraco
-  if (el.arma && a.arma !== false) {
+  const arma = a.arma === false ? null : (typeof a.arma === 'string' ? a.arma : el.arma); // a.arma: o que segura NESTA cena
+  if (arma) {
     X.save(); X.translate(mR[2], mR[3]); X.rotate(-mR[4] + Math.PI / 2 * (a.arma_ang ?? 0));
-    if (el.arma === 'bastao') { X.fillStyle = '#b8231c'; X.fillRect(-6, -150, 12, 300); X.fillStyle = '#e8b830'; X.fillRect(-8, -160, 16, 34); X.fillRect(-8, 126, 16, 34); X.strokeStyle = '#3a1a08'; X.lineWidth = 3; X.strokeRect(-6, -150, 12, 300); }
-    else if (el.arma === 'lanca') { X.fillStyle = '#6a4a2a'; X.fillRect(-4, -200, 8, 300); X.fillStyle = '#ccd'; X.beginPath(); X.moveTo(0, -250); X.lineTo(14, -196); X.lineTo(-14, -196); X.fill(); }
-    else if (el.arma === 'espada') { X.fillStyle = '#ccd'; X.fillRect(-5, -150, 10, 130); X.fillStyle = '#6a4a2a'; X.fillRect(-16, -22, 32, 8); }
+    if (arma === 'escudo') { X.fillStyle = '#b8862a'; X.strokeStyle = '#4a2a08'; X.lineWidth = 5; X.beginPath(); X.arc(0, -10, 58, 0, 7); X.fill(); X.stroke(); X.beginPath(); X.arc(0, -10, 40, 0, 7); X.stroke(); }
+    else if (arma === 'bastao') { X.fillStyle = '#b8231c'; X.fillRect(-6, -150, 12, 300); X.fillStyle = '#e8b830'; X.fillRect(-8, -160, 16, 34); X.fillRect(-8, 126, 16, 34); X.strokeStyle = '#3a1a08'; X.lineWidth = 3; X.strokeRect(-6, -150, 12, 300); }
+    else if (arma === 'lanca') { X.fillStyle = '#6a4a2a'; X.fillRect(-4, -200, 8, 300); X.fillStyle = '#ccd'; X.beginPath(); X.moveTo(0, -250); X.lineTo(14, -196); X.lineTo(-14, -196); X.fill(); }
+    else if (arma === 'espada') { X.fillStyle = '#ccd'; X.fillRect(-5, -150, 10, 130); X.fillStyle = '#6a4a2a'; X.fillRect(-16, -22, 32, 8); }
     X.restore();
   }
   // cabeca (tudo dela no sistema local da cabeca)
@@ -334,15 +336,15 @@ function cartao(c, k, pal) {
   X.save(); X.globalAlpha = a;
   const fundo = pal.cartao || '#f3ead6', tinta = pal.tinta || '#2a1d10', dest = pal.destaque || '#b8231c';
   if (c.tipo === 'nome') {
-    const x = (VERT ? 40 : 90) - (1 - ent) * 300, y = VERT ? 200 : H - 330;
-    X.fillStyle = fundo; X.strokeStyle = tinta; X.lineWidth = 5; X.beginPath(); X.roundRect(x, y, 760, 175, 14); X.fill(); X.stroke();
+    const wn = VERT ? 760 : 760, x = (VERT ? (W - wn) / 2 : 90) - (1 - ent) * (VERT ? 900 : 300), y = VERT ? 200 : H - 330;
+    X.fillStyle = fundo; X.strokeStyle = tinta; X.lineWidth = 5; X.beginPath(); X.roundRect(x, y, wn, 175, 14); X.fill(); X.stroke();
     X.fillStyle = dest; X.fillRect(x, y, 14, 175);
-    X.fillStyle = tinta; X.font = '900 64px Georgia, serif'; X.fillText(c.titulo || '', x + 40, y + 80);
-    X.font = 'italic 40px Georgia, serif'; X.fillStyle = '#3a2a18'; X.fillText(c.sub || '', x + 40, y + 140);
+    X.fillStyle = tinta; let fn = 64; X.font = `900 ${fn}px Georgia, serif`; while (fn > 34 && X.measureText(c.titulo || '').width > wn - 70) { fn -= 4; X.font = `900 ${fn}px Georgia, serif`; } X.fillText(c.titulo || '', x + 40, y + 80);
+    let fs = 40; X.font = `italic ${fs}px Georgia, serif`; while (fs > 24 && X.measureText(c.sub || '').width > wn - 70) { fs -= 2; X.font = `italic ${fs}px Georgia, serif`; } X.fillStyle = '#3a2a18'; X.fillText(c.sub || '', x + 40, y + 140);
   } else { // fato: painel lateral com numero grande
     const w = 680, esq = c.lado === 'esq', x = VERT ? (W - w) / 2 + (esq ? -1 : 1) * (1 - ent) * 400 : esq ? 80 - (1 - ent) * 400 : W - w - 80 + (1 - ent) * 400, y = VERT ? 170 : 120;
     X.fillStyle = fundo; X.strokeStyle = tinta; X.lineWidth = 6; X.beginPath(); X.roundRect(x, y, w, 470, 18); X.fill(); X.stroke();
-    X.fillStyle = '#5a4630'; X.font = '700 36px Georgia, serif'; X.fillText((c.titulo || '').toUpperCase(), x + 40, y + 74);
+    X.fillStyle = '#5a4630'; let ft = 36; X.font = `700 ${ft}px Georgia, serif`; while (ft > 22 && X.measureText((c.titulo || '').toUpperCase()).width > w - 80) { ft -= 2; X.font = `700 ${ft}px Georgia, serif`; } X.fillText((c.titulo || '').toUpperCase(), x + 40, y + 74);
     X.fillStyle = dest; let fv = 130; X.font = `900 ${fv}px Georgia, serif`; while (fv > 60 && X.measureText(c.valor || '').width > w - 76) { fv -= 6; X.font = `900 ${fv}px Georgia, serif`; } X.fillText(c.valor || '', x + 36, y + 218); // numero sempre cabe no cartao
     X.fillStyle = tinta; X.font = '700 44px Georgia, serif';
     let yy = y + 300; let nq = 26; while (nq > 12 && quebrar(c.sub || '', nq).some(l => X.measureText(l).width > w - 76)) nq--; for (const l of quebrar(c.sub || '', nq)) { X.fillText(l, x + 40, yy); yy += 54; }
@@ -374,7 +376,7 @@ function legenda(t) {
   X.save(); X.font = `900 ${VERT ? 88 : 74}px "Arial Black", Arial, sans-serif`; X.textBaseline = 'middle'; X.lineJoin = 'round';
   const txt = at.map(w => w.w.toUpperCase()); const sp = X.measureText(' ').width;
   const larg = txt.reduce((a, w) => a + X.measureText(w).width, 0) + sp * (txt.length - 1);
-  const enc = Math.min(1, (W - 70) / larg); let x = W / 2 - larg / 2; const y = VERT ? H * 0.74 : H - 120;
+  const enc = Math.min(1, (W - (VERT ? 260 : 70)) / (larg * 1.08)); // VERT: fora dos ~9% que o TikTok corta de cada lado let x = W / 2 - larg / 2; const y = VERT ? H * 0.74 : H - 120;
   const pop = 1 + 0.08 * (1 - ease((t - at[0].a0) / 0.12));
   X.translate(W / 2, y); X.scale(pop * enc, pop * enc); X.translate(-W / 2, -y);
   at.forEach((w, i) => { const s = txt[i]; X.lineWidth = 14; X.strokeStyle = '#000'; X.strokeText(s, x, y); X.fillStyle = w.hi ? '#ffd23a' : '#fff'; X.fillText(s, x, y); x += X.measureText(s).width + sp; });

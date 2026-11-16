@@ -1,0 +1,158 @@
+{
+ "mundo": "cl-zhong-kui",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "dark epic ancient Chinese fantasy illustration, misty mountains, jade green, lacquer red and gold accents, dramatic moody light, realistic proportions, mature adult tone, not childish",
+ "ordem": 46,
+ "cenarios": {
+  "palacio_ceu-escada-tempestade": {
+   "lugar": "palacio_ceu/escada (tempestade)",
+   "prompt": "a huge stone staircase leading up to an imperial palace gate, under a dark stormy sky",
+   "seed": 148
+  },
+  "aldeia_china-templo": {
+   "lugar": "aldeia_china/templo (dia)",
+   "prompt": "the steps of a small ancient Chinese village temple with red pillars, in daylight",
+   "seed": 155
+  },
+  "aldeia_china-praca": {
+   "lugar": "aldeia_china/praca (dia)",
+   "prompt": "the main square of an ancient Chinese village with tiled roofs and red lanterns, in daylight",
+   "seed": 162
+  },
+  "aldeia_china-casa-noite": {
+   "lugar": "aldeia_china/casa (noite)",
+   "prompt": "inside a humble ancient Chinese family house with a wooden table, chairs and paper windows, at night, blue moonlight and torches",
+   "seed": 169
+  },
+  "aldeia_china-poco-dourado": {
+   "lugar": "aldeia_china/poco (dourado)",
+   "prompt": "an old stone well in an ancient Chinese village courtyard, at sunset, golden orange light",
+   "seed": 176
+  },
+  "palacio_ceu-nuvens": {
+   "lugar": "palacio_ceu/nuvens (dia)",
+   "prompt": "an imperial palace with golden roofs seen from above, floating over a sea of clouds, in daylight",
+   "seed": 183
+  },
+  "aldeia_china-jardim": {
+   "lugar": "aldeia_china/jardim (dia)",
+   "prompt": "a walled courtyard garden of an ancient Chinese house with a plum tree, in daylight",
+   "seed": 190
+  },
+  "palacio_ceu-colunas": {
+   "lugar": "palacio_ceu/colunas (dia)",
+   "prompt": "a long hall of tall red lacquered columns in an imperial palace, in daylight",
+   "seed": 197
+  },
+  "palacio_ceu-salao": {
+   "lugar": "palacio_ceu/salao (dia)",
+   "prompt": "an imperial throne hall with a golden dragon throne on a raised platform, in daylight",
+   "seed": 204
+  },
+  "aldeia_china-templo-tempestade": {
+   "lugar": "aldeia_china/templo (tempestade)",
+   "prompt": "the steps of a small ancient Chinese village temple with red pillars, under a dark stormy sky",
+   "seed": 211
+  },
+  "submundo-entrada-tempestade": {
+   "lugar": "submundo/entrada (tempestade)",
+   "prompt": "the gate of the underworld, a black stone arch between jagged rocks lit by blue spirit flames, under a dark stormy sky",
+   "seed": 218
+  },
+  "submundo-livro-noite": {
+   "lugar": "submundo/livro (noite)",
+   "prompt": "a dark underworld archive with an enormous open book on a stone lectern, at night, blue moonlight and torches",
+   "seed": 155
+  },
+  "submundo-juiz-noite": {
+   "lugar": "submundo/juiz (noite)",
+   "prompt": "the hall of the underworld judge, a high black desk under hanging chains, at night, blue moonlight and torches",
+   "seed": 162
+  },
+  "submundo-mesa-tempestade": {
+   "lugar": "submundo/mesa (tempestade)",
+   "prompt": "a long stone table with scrolls and an ink brush in a dim underworld office, under a dark stormy sky",
+   "seed": 169
+  },
+  "submundo-pilares-noite": {
+   "lugar": "submundo/pilares (noite)",
+   "prompt": "huge black stone pillars in a misty underworld cavern, at night, blue moonlight and torches",
+   "seed": 176
+  },
+  "submundo-corredor-noite": {
+   "lugar": "submundo/corredor (noite)",
+   "prompt": "a long narrow underworld corridor with ghostly blue lanterns, at night, blue moonlight and torches",
+   "seed": 183
+  },
+  "submundo-fundo-tempestade": {
+   "lugar": "submundo/fundo (tempestade)",
+   "prompt": "the deepest pit of the underworld, a dark misty abyss, under a dark stormy sky",
+   "seed": 190
+  },
+  "submundo-corredor-tempestade": {
+   "lugar": "submundo/corredor (tempestade)",
+   "prompt": "a long narrow underworld corridor with ghostly blue lanterns, under a dark stormy sky",
+   "seed": 197
+  },
+  "aldeia_china-praca-noite": {
+   "lugar": "aldeia_china/praca (noite)",
+   "prompt": "the main square of an ancient Chinese village with tiled roofs and red lanterns, at night, blue moonlight and torches",
+   "seed": 211
+  },
+  "aldeia_china-praca-tempestade": {
+   "lugar": "aldeia_china/praca (tempestade)",
+   "prompt": "the main square of an ancient Chinese village with tiled roofs and red lanterns, under a dark stormy sky",
+   "seed": 218
+  },
+  "palacio_ceu-nuvens-dourado": {
+   "lugar": "palacio_ceu/nuvens (dourado)",
+   "prompt": "an imperial palace with golden roofs seen from above, floating over a sea of clouds, at sunset, golden orange light",
+   "seed": 232
+  },
+  "palacio_ceu-colunas-noite": {
+   "lugar": "palacio_ceu/colunas (noite)",
+   "prompt": "a long hall of tall red lacquered columns in an imperial palace, at night, blue moonlight and torches",
+   "seed": 246
+  },
+  "palacio_ceu-salao-noite": {
+   "lugar": "palacio_ceu/salao (noite)",
+   "prompt": "an imperial throne hall with a golden dragon throne on a raised platform, at night, blue moonlight and torches",
+   "seed": 253
+  },
+  "palacio_ceu-escada-noite": {
+   "lugar": "palacio_ceu/escada (noite)",
+   "prompt": "a huge stone staircase leading up to an imperial palace gate, at night, blue moonlight and torches",
+   "seed": 260
+  },
+  "palacio_ceu-salao-tempestade": {
+   "lugar": "palacio_ceu/salao (tempestade)",
+   "prompt": "an imperial throne hall with a golden dragon throne on a raised platform, under a dark stormy sky",
+   "seed": 169
+  },
+  "palacio_ceu-nuvens-tempestade": {
+   "lugar": "palacio_ceu/nuvens (tempestade)",
+   "prompt": "an imperial palace with golden roofs seen from above, floating over a sea of clouds, under a dark stormy sky",
+   "seed": 176
+  },
+  "palacio_ceu-colunas-tempestade": {
+   "lugar": "palacio_ceu/colunas (tempestade)",
+   "prompt": "a long hall of tall red lacquered columns in an imperial palace, under a dark stormy sky",
+   "seed": 183
+  },
+  "palacio_ceu-salao-dourado": {
+   "lugar": "palacio_ceu/salao (dourado)",
+   "prompt": "an imperial throne hall with a golden dragon throne on a raised platform, at sunset, golden orange light",
+   "seed": 190
+  },
+  "palacio_ceu-escada": {
+   "lugar": "palacio_ceu/escada (dia)",
+   "prompt": "a huge stone staircase leading up to an imperial palace gate, in daylight",
+   "seed": 197
+  },
+  "aldeia_china-casa-dourado": {
+   "lugar": "aldeia_china/casa (dourado)",
+   "prompt": "inside a humble ancient Chinese family house with a wooden table, chairs and paper windows, at sunset, golden orange light",
+   "seed": 218
+  }
+ }
+}

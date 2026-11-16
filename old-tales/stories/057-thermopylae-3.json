@@ -23,6 +23,562 @@
  ],
  "elenco": {
   "leonidas": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "armadura": "#b8862a",
+   "manto": "#8a1a14",
+   "elmo": "#b8862a",
+   "barba_estilo": "cheia",
+   "barba": "#2a1a10"
+  },
+  "dienekes": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#1a1a1a",
+   "armadura": "#b8862a",
+   "manto": "#8a1a14",
+   "elmo": "#b8862a",
+   "barba_estilo": "cheia",
+   "barba": "#1a1a1a"
+  },
+  "efialtes": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "roupa_cor": "#6a4a2a"
+  },
+  "xerxes": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "longo",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "tunica",
+   "tiara": true,
+   "roupa_cor": "#5a2a6a",
+   "barba_estilo": "cheia",
+   "barba": "#4a2a14"
+  }
+ },
+ "codigo": "CL057",
+ "parte": 3,
+ "anterior": "CL056",
+ "titulo": "The last stand of the 300 ⚔️ Thermopylae Part 3 #story #shorts",
+ "capa": "GO TELL THE SPARTANS",
+ "descripcion": "Betrayed by a mountain path, Leonidas sends the allies home and stays with his 300, plus Thespians and Thebans, for the last stand on a small hill.\n\nWould you have stayed?\n\nFrom Herodotus, Histories, book 7 (chapters 175-228). Herodotus gives millions of Persians; modern historians estimate roughly 100,000 to 300,000.\n#thermopylae #sparta #300 #ancienthistory #shorts",
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "At dawn, the lookouts ran down the mountain *screaming*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-pe_torre-dourado",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.38,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "dienekes",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.15,
+      "arma": false,
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The Persians are behind us. Ephialtes showed them the path.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-meio-dourado",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "dienekes",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "leonidas",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The pass was lost. Everyone knew it.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-vindo-tempestade",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "chuva"
+    ]
+   }
+  },
+  {
+   "texto": "Leonidas sent most of the Greek allies home, to fight another day.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-acostamento",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "leonidas",
+      "pose": "apontar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Three hundred Spartans stayed. And seven hundred men from Thespiae refused to leave.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-meio",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "leonidas",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.32
+     },
+     {
+      "id": "dienekes",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "escudo",
+      "u": 0.68
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Who stayed to fight",
+     "valor": "1,000",
+     "sub": "300 Spartans and 700 Thespians",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "Stay, because what they did with their last morning still has no equal.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "esparta_cidade-praca-tempestade",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "chuva"
+    ]
+   }
+  },
+  {
+   "texto": "They didn't wait behind the wall anymore. They *charged*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-indo-tempestade",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "leonidas",
+      "pose": "correr",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.32
+     },
+     {
+      "id": "dienekes",
+      "pose": "correr",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "escudo",
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Out into the open, straight into the Persian army.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-vindo-tempestade",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "leonidas",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Their spears broke. They fought on with swords.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-meio-tempestade",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "dienekes",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "espada",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Leonidas fell. The Spartans fought four times to recover his body, and won it back.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-curva-tempestade",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "leonidas",
+      "pose": "cair",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then they pulled back to a small hill, back to back.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-pe_torre-tempestade",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "dienekes",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "escudo",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Herodotus says they fought with swords, then hands, then *teeth*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-pe_torre-tempestade",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "dienekes",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Until arrows covered the hill, and the last one fell.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-pe_torre-dourado",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "dienekes",
+      "pose": "cair",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Xerxes won the pass. But Greece had time to prepare.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-vindo-dourado",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "xerxes",
+      "pose": "triunfo",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "That same year, the Persian fleet was crushed at Salamis.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "chuva"
+    ]
+   }
+  },
+  {
+   "texto": "Later, the poet Simonides wrote a line for their stone.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "esparta_cidade-templo-dourado",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Simonides",
+     "sub": "Greek poet",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "Go tell the Spartans, stranger passing by, that here, obedient to their laws, we lie.",
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "campo_batalha-meio-dourado",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "dourado"
+    ]
+   }
+  },
+  {
+   "texto": "All because you woke up as one of three hundred.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "campo_batalha-vindo-tempestade",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "leonidas",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "mundo": "cl-thermopylae",
+ "elenco_3d": {
+  "leonidas": {
    "semente": 5501,
    "corpo": "forte",
    "cabelo": "longo",
@@ -51,88 +607,7 @@
    "acessorio": "barba"
   }
  },
- "codigo": "CL057",
- "parte": 3,
- "anterior": "CL056",
- "titulo": "The last stand of the 300 ⚔️ Thermopylae Part 3 #story #shorts",
- "capa": "GO TELL THE SPARTANS",
- "descripcion": "Betrayed by a mountain path, Leonidas sends the allies home and stays with his 300, plus Thespians and Thebans, for the last stand on a small hill.\n\nWould you have stayed?\n\nFrom Herodotus, Histories, book 7 (chapters 175-228). Herodotus gives millions of Persians; modern historians estimate roughly 100,000 to 300,000.\n#thermopylae #sparta #300 #ancienthistory #shorts",
- "visual": "3d",
- "lineas": [
-  {
-   "texto": "At dawn, the lookouts ran down the mountain *screaming*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The Persians are behind us. Ephialtes showed them the path.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The pass was lost. Everyone knew it.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Leonidas sent most of the Greek allies home, to fight another day.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Three hundred Spartans stayed. And seven hundred men from Thespiae refused to leave.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Stay, because what they did with their last morning still has no equal.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "They didn't wait behind the wall anymore. They *charged*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Out into the open, straight into the Persian army.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Their spears broke. They fought on with swords.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Leonidas fell. The Spartans fought four times to recover his body, and won it back.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Then they pulled back to a small hill, back to back.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Herodotus says they fought with swords, then hands, then *teeth*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Until arrows covered the hill, and the last one fell.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Xerxes won the pass. But Greece had time to prepare.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "That same year, the Persian fleet was crushed at Salamis.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Later, the poet Simonides wrote a line for their stone.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Go tell the Spartans, stranger passing by, that here, obedient to their laws, we lie.",
-   "pausa": 0.8
-  },
-  {
-   "texto": "All because you woke up as one of three hundred.",
-   "pausa": 0.3
-  }
- ],
- "cenas": [
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -413,5 +888,5 @@
    }
   }
  ],
- "eventos": []
+ "gancho_visual": true
 }

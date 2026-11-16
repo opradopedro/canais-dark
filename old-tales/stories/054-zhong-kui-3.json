@@ -22,6 +22,609 @@
  ],
  "elenco": {
   "zhongkui": {
+   "tipo": "humano",
+   "rosto_cor": "#c8865a",
+   "cabelo": "coque",
+   "cabelo_cor": "#141010",
+   "roupa": "tunica",
+   "roupa_cor": "#7a1c24",
+   "barba_estilo": "chinesa",
+   "barba": "#141010"
+  },
+  "imperador": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "tunica",
+   "tiara": true,
+   "roupa_cor": "#d8a431",
+   "barba_estilo": "chinesa",
+   "barba": "#1a1a1a"
+  },
+  "duping": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#2c4a6a"
+  },
+  "juiz": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "careca",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "roupa_cor": "#2c1d3a"
+  },
+  "xuhao": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "careca",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#3a2a4a"
+  }
+ },
+ "codigo": "CL054",
+ "parte": 3,
+ "anterior": "CL053",
+ "titulo": "He ate a demon in the Emperor's dream 👹 Zhong Kui Part 3 #story #shorts",
+ "capa": "HE ATE THE DEMON",
+ "descripcion": "In Emperor Xuanzong's fever dream, a small demon steals a jade flute. Then a giant with a wild beard tears it apart. The Emperor wakes up cured, and calls the greatest painter in China.\n\nWould you hang his face on your door?\n\nFrom the Chinese legend of Zhong Kui, as recorded by Shen Kuo in Mengxi Bitan (11th century) and in later Ming-era versions.\n#zhongkui #chinesemythology #mythology #ancientchina #shorts",
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "In the Emperor's dream, a tiny demon ran through the palace *laughing*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-salao-noite",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "xuhao",
+      "pose": "correr",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.15,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He wore one shoe, and hung the other from his belt.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-colunas-noite",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "xuhao",
+      "pose": "pular",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He stole the Emperor's *jade flute*, and the perfume pouch of his favorite consort.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-salao-noite",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "xuhao",
+      "pose": "agachar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The Emperor shouted for his guards. Nobody came.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-escada-noite",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "imperador",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The demon danced closer. My name is Xu Hao. I steal joy from people.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-salao-tempestade",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "xuhao",
+      "pose": "golpe",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "imperador",
+      "pose": "lutar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Xu Hao",
+     "sub": "the demon who steals joy",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "Stay, because that's when the floor started shaking.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-nuvens-tempestade",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "chuva"
+    ]
+   }
+  },
+  {
+   "texto": "A giant stormed into the hall, with a wild beard and a torn official's hat.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-salao-tempestade",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.38,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "zhongkui",
+      "pose": "correr",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "espada",
+      "u": [
+       0.3,
+       0.5
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He grabbed the little demon by the neck.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-colunas-tempestade",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "zhongkui",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "xuhao",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He tore out its *eye*, and swallowed the demon whole.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-salao-tempestade",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "zhongkui",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "espada",
+      "u": 0.32
+     },
+     {
+      "id": "xuhao",
+      "pose": "cair",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then he bowed to the Emperor.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-escada-noite",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "zhongkui",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "imperador",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "I am Zhong Kui. I died on the palace steps, rejected for my face.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-salao-noite",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "zhongkui",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "I swore to rid the world of demons.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-colunas-noite",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "zhongkui",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "espada",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The Emperor woke up drenched in sweat, and the fever was *gone*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-salao-dourado",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "imperador",
+      "pose": "agachar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He called Wu Daozi, the greatest painter of the empire.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-escada",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "imperador",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Wu Daozi",
+     "sub": "greatest painter of the Tang",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "Paint the man from my dream. Exactly as I saw him.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-salao",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "imperador",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Wu Daozi painted him so perfectly that the Emperor gasped.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-colunas",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "imperador",
+      "pose": "triunfo",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "For centuries after, families hung that face on their doors at New Year.",
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "aldeia_china-casa-dourado",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "dourado"
+    ]
+   }
+  },
+  {
+   "texto": "The face the Emperor rejected became the one that protected China.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "aldeia_china-praca-noite",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "zhongkui",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "espada",
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "mundo": "cl-zhong-kui",
+ "elenco_3d": {
+  "zhongkui": {
    "semente": 5201,
    "corpo": "forte",
    "cabelo": "longo",
@@ -60,88 +663,7 @@
    "camisa": "#3a2a4a"
   }
  },
- "codigo": "CL054",
- "parte": 3,
- "anterior": "CL053",
- "titulo": "He ate a demon in the Emperor's dream 👹 Zhong Kui Part 3 #story #shorts",
- "capa": "HE ATE THE DEMON",
- "descripcion": "In Emperor Xuanzong's fever dream, a small demon steals a jade flute. Then a giant with a wild beard tears it apart. The Emperor wakes up cured, and calls the greatest painter in China.\n\nWould you hang his face on your door?\n\nFrom the Chinese legend of Zhong Kui, as recorded by Shen Kuo in Mengxi Bitan (11th century) and in later Ming-era versions.\n#zhongkui #chinesemythology #mythology #ancientchina #shorts",
- "visual": "3d",
- "lineas": [
-  {
-   "texto": "In the Emperor's dream, a tiny demon ran through the palace *laughing*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "He wore one shoe, and hung the other from his belt.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "He stole the Emperor's *jade flute*, and the perfume pouch of his favorite consort.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The Emperor shouted for his guards. Nobody came.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The demon danced closer. My name is Xu Hao. I steal joy from people.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Stay, because that's when the floor started shaking.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "A giant stormed into the hall, with a wild beard and a torn official's hat.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "He grabbed the little demon by the neck.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "He tore out its *eye*, and swallowed the demon whole.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Then he bowed to the Emperor.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "I am Zhong Kui. I died on the palace steps, rejected for my face.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "I swore to rid the world of demons.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The Emperor woke up drenched in sweat, and the fever was *gone*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "He called Wu Daozi, the greatest painter of the empire.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Paint the man from my dream. Exactly as I saw him.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Wu Daozi painted him so perfectly that the Emperor gasped.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "For centuries after, families hung that face on their doors at New Year.",
-   "pausa": 0.8
-  },
-  {
-   "texto": "The face the Emperor rejected became the one that protected China.",
-   "pausa": 0.3
-  }
- ],
- "cenas": [
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -443,5 +965,5 @@
    }
   }
  ],
- "eventos": []
+ "gancho_visual": true
 }

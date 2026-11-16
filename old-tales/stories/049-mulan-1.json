@@ -22,6 +22,569 @@
  ],
  "elenco": {
   "mulan": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "longo",
+   "cabelo_cor": "#1a1410",
+   "armadura": "#7a1c24",
+   "faixa": "#1a1a1a",
+   "elmo": "#3a3a40"
+  },
+  "pai": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "roupa_cor": "#3a4a5a",
+   "barba_estilo": "chinesa",
+   "barba": "#8a8a8a"
+  },
+  "general": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#1a1a1a",
+   "armadura": "#7a1c24",
+   "faixa": "#1a1a1a",
+   "elmo": "#3a3a40",
+   "barba_estilo": "chinesa",
+   "barba": "#1a1a1a"
+  },
+  "imperador": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "tunica",
+   "tiara": true,
+   "roupa_cor": "#d8a431",
+   "barba_estilo": "chinesa",
+   "barba": "#1a1a1a"
+  }
+ },
+ "codigo": "CL049",
+ "parte": 1,
+ "titulo": "If they found out she was a woman, she died 🗡️ Mulan Part 1 #story #shorts",
+ "capa": "12 SCROLLS, 1 NAME",
+ "descripcion": "The army lists arrived in twelve scrolls, and every one had her father's name. He was old and sick. So Mulan bought a horse in four markets and rode to war in his place.\n\n> Part 2: {when_next}.\nWould you have gone in his place?\n\nFrom The Ballad of Mulan (Mulan ci), a Chinese folk poem from the Northern Wei era (5th-6th century), preserved in Guo Maoqian's Yuefu Shiji. A legend, not a historical record.\n#mulan #chinesehistory #legend #ancientchina #shorts",
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "Twelve army scrolls arrived in the village, and every single one had the same name.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-praca-tempestade",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "mulan",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.15,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Her *father's* name.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-casa-tempestade",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "pai",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The Khan was calling every family to war on the northern border.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-templo",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "general",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Mulan's father was old, and too sick to hold a sword.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-casa",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "pai",
+      "pose": "susto",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Hua Mulan",
+     "sub": "from the Ballad of Mulan",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "He had no grown son. She had no older brother.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "mulan",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "pai",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "At the loom, Mulan stopped weaving and only *sighed*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "mulan",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "If a woman was caught in the army, the punishment was death.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-praca-tempestade",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "general",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "espada",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "She went anyway.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-jardim-noite",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "mulan",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "espada",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In the east market she bought a horse. In the west, a saddle.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-mercado",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mulan",
+      "pose": "andar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In the south, a bridle. In the north, a long whip.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-mercado",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mulan",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because the poem says she left before dawn, without a goodbye.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-poco-noite",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
+  },
+  {
+   "texto": "She tied her hair like a man and put on her father's armor.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "mulan",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "espada",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "By sunset she camped beside the *Yellow River*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-beira_mato-dourado",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mulan",
+      "pose": "correr",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "The Yellow River",
+     "valor": "5,464 km",
+     "sub": "China's second longest river",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "She couldn't hear her mother calling her name anymore.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-acostamento-dourado",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mulan",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Only the roar of the river, and the cold.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-curva-noite",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "mulan",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The next night she reached the Black Mountains.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "campo_batalha-pe_torre-noite",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "mulan",
+      "pose": "correr",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And in the dark she heard *enemy horses*, neighing on the other side.",
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "campo_batalha-vindo-noite",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "mulan",
+      "pose": "lutar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "espada",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Thousands of them. Part two, {when_next}.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "campo_batalha-meio-tempestade",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "chuva"
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "mundo": "cl-mulan",
+ "elenco_3d": {
+  "mulan": {
    "semente": 4901,
    "corpo": "magro",
    "cabelo": "rabo",
@@ -50,87 +613,7 @@
    "acessorio": "barba"
   }
  },
- "codigo": "CL049",
- "parte": 1,
- "titulo": "If they found out she was a woman, she died 🗡️ Mulan Part 1 #story #shorts",
- "capa": "12 SCROLLS, 1 NAME",
- "descripcion": "The army lists arrived in twelve scrolls, and every one had her father's name. He was old and sick. So Mulan bought a horse in four markets and rode to war in his place.\n\n> Part 2: {when_next}.\nWould you have gone in his place?\n\nFrom The Ballad of Mulan (Mulan ci), a Chinese folk poem from the Northern Wei era (5th-6th century), preserved in Guo Maoqian's Yuefu Shiji. A legend, not a historical record.\n#mulan #chinesehistory #legend #ancientchina #shorts",
- "visual": "3d",
- "lineas": [
-  {
-   "texto": "Twelve army scrolls arrived in the village, and every single one had the same name.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Her *father's* name.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The Khan was calling every family to war on the northern border.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Mulan's father was old, and too sick to hold a sword.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "He had no grown son. She had no older brother.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "At the loom, Mulan stopped weaving and only *sighed*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "If a woman was caught in the army, the punishment was death.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "She went anyway.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "In the east market she bought a horse. In the west, a saddle.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "In the south, a bridle. In the north, a long whip.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Stay, because the poem says she left before dawn, without a goodbye.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "She tied her hair like a man and put on her father's armor.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "By sunset she camped beside the *Yellow River*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "She couldn't hear her mother calling her name anymore.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Only the roar of the river, and the cold.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The next night she reached the Black Mountains.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "And in the dark she heard *enemy horses*, neighing on the other side.",
-   "pausa": 0.8
-  },
-  {
-   "texto": "Thousands of them. Part two, {when_next}.",
-   "pausa": 0.3
-  }
- ],
- "cenas": [
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -428,5 +911,5 @@
    }
   }
  ],
- "eventos": []
+ "gancho_visual": true
 }

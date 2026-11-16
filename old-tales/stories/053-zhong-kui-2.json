@@ -22,6 +22,628 @@
  ],
  "elenco": {
   "zhongkui": {
+   "tipo": "humano",
+   "rosto_cor": "#c8865a",
+   "cabelo": "coque",
+   "cabelo_cor": "#141010",
+   "roupa": "tunica",
+   "roupa_cor": "#7a1c24",
+   "barba_estilo": "chinesa",
+   "barba": "#141010"
+  },
+  "imperador": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "tunica",
+   "tiara": true,
+   "roupa_cor": "#d8a431",
+   "barba_estilo": "chinesa",
+   "barba": "#1a1a1a"
+  },
+  "duping": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#2c4a6a"
+  },
+  "juiz": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "careca",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "roupa_cor": "#2c1d3a"
+  },
+  "xuhao": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "careca",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#3a2a4a"
+  },
+  "alta": {
+   "tipo": "humano",
+   "rosto_cor": "#2a2a2a",
+   "membro": "#1c1c1c",
+   "roupa": "trapos",
+   "roupa_cor": "#111",
+   "sem_rosto": true,
+   "cabelo": "careca"
+  },
+  "demonio": {
+   "tipo": "humano",
+   "rosto_cor": "#6a1414",
+   "membro": "#4a0e0e",
+   "roupa": "trapos",
+   "roupa_cor": "#1a0a0a",
+   "olhos": "vermelhos",
+   "cabelo": "careca"
+  }
+ },
+ "codigo": "CL053",
+ "parte": 2,
+ "anterior": "CL052",
+ "titulo": "The judge of the dead made him king of demons 👹 Zhong Kui Part 2 #story #shorts",
+ "capa": "KING OF DEMONS",
+ "descripcion": "In the Underworld, the judge of the dead saw the injustice done to Zhong Kui and gave him an army of ghosts. Centuries later, an emperor would need him.\n\n> Part 3: {when_next}.\nWould you have forgiven the Emperor?\n\nFrom the Chinese legend of Zhong Kui, as recorded by Shen Kuo in Mengxi Bitan (11th century) and in later Ming-era versions.\n#zhongkui #chinesemythology #mythology #ancientchina #shorts",
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "In the Underworld, a dead man arrived with his skull *cracked open*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "submundo-corredor-noite",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.44
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The judge of the dead opened the Book of Life and Death.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "submundo-livro-noite",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "juiz",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "First in the imperial exam. Rejected for his face. Died on the palace steps.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "submundo-juiz-noite",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "juiz",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "zhongkui",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The judge slammed the book shut. This was an *injustice*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "submundo-mesa-tempestade",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "juiz",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "So in the later legends, he gave Zhong Kui a new title.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "submundo-pilares-noite",
+    "cam": {
+     "z": [
+      1.0,
+      1.08
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
+  },
+  {
+   "texto": "Not scholar. Not minister. *King of Demons*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "submundo-juiz-noite",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "zhongkui",
+      "pose": "triunfo",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "espada",
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "His new title",
+     "valor": "King of Demons",
+     "sub": "hunter of evil spirits",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "His job: hunt every evil spirit that escapes into the human world.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "submundo-corredor-noite",
+    "cam": {
+     "z": [
+      1.3,
+      1.42
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "zhongkui",
+      "pose": "correr",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "espada",
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.86,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because Zhong Kui didn't hunt alone.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "submundo-fundo-tempestade",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "An army of ghosts marched behind him, carrying his banners.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "submundo-corredor-tempestade",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "zhongkui",
+      "pose": "andar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "espada",
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Demons who stole children. Spirits who brought fevers.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ghosts who hid in houses and whispered at night.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-praca-noite",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Zhong Kui found them, fought them, and *ate them*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-praca-tempestade",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "zhongkui",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "espada",
+      "u": 0.36
+     },
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "His sword never rusted. His beard was full of thunder.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "aldeia_china-templo-tempestade",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "zhongkui",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "espada",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Centuries passed in the world of the living.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-nuvens-dourado",
+    "cam": {
+     "z": [
+      1.08,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.45
+    },
+    "fx": [
+     "dourado"
+    ]
+   }
+  },
+  {
+   "texto": "A new Emperor took the throne, Xuanzong of Tang.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-salao",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "imperador",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Emperor Xuanzong",
+     "sub": "Tang dynasty",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "And one winter, the Emperor fell sick with a fever no doctor could cure.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "palacio_ceu-colunas-noite",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "imperador",
+      "pose": "deitado",
+      "rosto": "triste",
+      "v": 0.8,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Every night, he dreamed of a small demon in his palace.",
+   "pausa": 0.8,
+   "cena": {
+    "fundo": "palacio_ceu-salao-noite",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "xuhao",
+      "pose": "correr",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stealing his treasures, and laughing. Part three, {when_next}.",
+   "pausa": 0.3,
+   "cena": {
+    "fundo": "palacio_ceu-escada-noite",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "xuhao",
+      "pose": "pular",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "mundo": "cl-zhong-kui",
+ "elenco_3d": {
+  "zhongkui": {
    "semente": 5201,
    "corpo": "forte",
    "cabelo": "longo",
@@ -60,88 +682,7 @@
    "camisa": "#3a2a4a"
   }
  },
- "codigo": "CL053",
- "parte": 2,
- "anterior": "CL052",
- "titulo": "The judge of the dead made him king of demons 👹 Zhong Kui Part 2 #story #shorts",
- "capa": "KING OF DEMONS",
- "descripcion": "In the Underworld, the judge of the dead saw the injustice done to Zhong Kui and gave him an army of ghosts. Centuries later, an emperor would need him.\n\n> Part 3: {when_next}.\nWould you have forgiven the Emperor?\n\nFrom the Chinese legend of Zhong Kui, as recorded by Shen Kuo in Mengxi Bitan (11th century) and in later Ming-era versions.\n#zhongkui #chinesemythology #mythology #ancientchina #shorts",
- "visual": "3d",
- "lineas": [
-  {
-   "texto": "In the Underworld, a dead man arrived with his skull *cracked open*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The judge of the dead opened the Book of Life and Death.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "First in the imperial exam. Rejected for his face. Died on the palace steps.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "The judge slammed the book shut. This was an *injustice*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "So in the later legends, he gave Zhong Kui a new title.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Not scholar. Not minister. *King of Demons*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "His job: hunt every evil spirit that escapes into the human world.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Stay, because Zhong Kui didn't hunt alone.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "An army of ghosts marched behind him, carrying his banners.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Demons who stole children. Spirits who brought fevers.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Ghosts who hid in houses and whispered at night.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Zhong Kui found them, fought them, and *ate them*.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "His sword never rusted. His beard was full of thunder.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Centuries passed in the world of the living.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "A new Emperor took the throne, Xuanzong of Tang.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "And one winter, the Emperor fell sick with a fever no doctor could cure.",
-   "pausa": 0.5
-  },
-  {
-   "texto": "Every night, he dreamed of a small demon in his palace.",
-   "pausa": 0.8
-  },
-  {
-   "texto": "Stealing his treasures, and laughing. Part three, {when_next}.",
-   "pausa": 0.3
-  }
- ],
- "cenas": [
+ "cenas_3d": [
   {
    "linea": 0,
    "cena": {
@@ -432,5 +973,5 @@
    }
   }
  ],
- "eventos": []
+ "gancho_visual": true
 }

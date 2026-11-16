@@ -1,0 +1,133 @@
+{
+ "mundo": "cl-thermopylae",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "dark epic ancient Greek illustration, marble, bronze and deep red accents, dramatic moody light, realistic proportions, mature adult tone, not childish",
+ "ordem": 47,
+ "cenarios": {
+  "campo_batalha-vindo-tempestade": {
+   "lugar": "campo_batalha/vindo (tempestade)",
+   "prompt": "the narrow pass of Thermopylae between cliffs and the sea, a huge Persian army on the plain beyond, under a dark stormy sky",
+   "seed": 103
+  },
+  "campo_batalha-meio-tempestade": {
+   "lugar": "campo_batalha/meio (tempestade)",
+   "prompt": "the middle of the narrow pass of Thermopylae between steep cliffs and the sea, under a dark stormy sky",
+   "seed": 110
+  },
+  "campo_batalha-indo-dourado": {
+   "lugar": "campo_batalha/indo (dourado)",
+   "prompt": "the narrow pass of Thermopylae seen toward the sea at the far end, at sunset, golden orange light",
+   "seed": 117
+  },
+  "esparta_cidade-praca": {
+   "lugar": "esparta_cidade/praca (dia)",
+   "prompt": "the dusty training square of ancient Sparta with simple stone buildings, in daylight",
+   "seed": 124
+  },
+  "esparta_cidade-templo-tempestade": {
+   "lugar": "esparta_cidade/templo (tempestade)",
+   "prompt": "the columns at the front of an ancient Greek temple, under a dark stormy sky",
+   "seed": 131
+  },
+  "esparta_cidade-escada": {
+   "lugar": "esparta_cidade/escada (dia)",
+   "prompt": "wide stone steps of an ancient Greek temple, in daylight",
+   "seed": 138
+  },
+  "esparta_cidade-casa": {
+   "lugar": "esparta_cidade/casa (dia)",
+   "prompt": "inside a simple ancient Spartan house with a stone floor, a bench and a hearth, in daylight",
+   "seed": 145
+  },
+  "esparta_cidade-mercado": {
+   "lugar": "esparta_cidade/mercado (dia)",
+   "prompt": "a small ancient Greek market street with clay jars and stalls, in daylight",
+   "seed": 152
+  },
+  "campo_batalha-curva-dourado": {
+   "lugar": "campo_batalha/curva (dourado)",
+   "prompt": "a narrow goat path winding over the mountain above Thermopylae, at sunset, golden orange light",
+   "seed": 159
+  },
+  "campo_batalha-pe_torre-dourado": {
+   "lugar": "campo_batalha/pe_torre (dourado)",
+   "prompt": "a Spartan camp behind a stone wall in a narrow pass, at sunset, golden orange light",
+   "seed": 166
+  },
+  "campo_batalha-meio": {
+   "lugar": "campo_batalha/meio (dia)",
+   "prompt": "the middle of the narrow pass of Thermopylae between steep cliffs and the sea, in daylight",
+   "seed": 173
+  },
+  "campo_batalha-beira_mato": {
+   "lugar": "campo_batalha/beira_mato (dia)",
+   "prompt": "the rocky slope above the narrow coastal pass of Thermopylae, in daylight",
+   "seed": 180
+  },
+  "campo_batalha-acostamento": {
+   "lugar": "campo_batalha/acostamento (dia)",
+   "prompt": "the old Phocian stone wall across the narrow pass of Thermopylae, in daylight",
+   "seed": 187
+  },
+  "campo_batalha-vindo-dourado": {
+   "lugar": "campo_batalha/vindo (dourado)",
+   "prompt": "the narrow pass of Thermopylae between cliffs and the sea, a huge Persian army on the plain beyond, at sunset, golden orange light",
+   "seed": 194
+  },
+  "esparta_cidade-templo": {
+   "lugar": "esparta_cidade/templo (dia)",
+   "prompt": "the columns at the front of an ancient Greek temple, in daylight",
+   "seed": 124
+  },
+  "campo_batalha-indo-tempestade": {
+   "lugar": "campo_batalha/indo (tempestade)",
+   "prompt": "the narrow pass of Thermopylae seen toward the sea at the far end, under a dark stormy sky",
+   "seed": 131
+  },
+  "campo_batalha-curva-tempestade": {
+   "lugar": "campo_batalha/curva (tempestade)",
+   "prompt": "a narrow goat path winding over the mountain above Thermopylae, under a dark stormy sky",
+   "seed": 145
+  },
+  "campo_batalha-pe_torre-tempestade": {
+   "lugar": "campo_batalha/pe_torre (tempestade)",
+   "prompt": "a Spartan camp behind a stone wall in a narrow pass, under a dark stormy sky",
+   "seed": 152
+  },
+  "campo_batalha-meio-dourado": {
+   "lugar": "campo_batalha/meio (dourado)",
+   "prompt": "the middle of the narrow pass of Thermopylae between steep cliffs and the sea, at sunset, golden orange light",
+   "seed": 159
+  },
+  "campo_batalha-beira_mato-noite": {
+   "lugar": "campo_batalha/beira_mato (noite)",
+   "prompt": "the rocky slope above the narrow coastal pass of Thermopylae, at night, blue moonlight and torches",
+   "seed": 166
+  },
+  "campo_batalha-vindo-noite": {
+   "lugar": "campo_batalha/vindo (noite)",
+   "prompt": "the narrow pass of Thermopylae between cliffs and the sea, a huge Persian army on the plain beyond, at night, blue moonlight and torches",
+   "seed": 173
+  },
+  "campo_batalha-pe_torre-noite": {
+   "lugar": "campo_batalha/pe_torre (noite)",
+   "prompt": "a Spartan camp behind a stone wall in a narrow pass, at night, blue moonlight and torches",
+   "seed": 180
+  },
+  "esparta_cidade-praca-tempestade": {
+   "lugar": "esparta_cidade/praca (tempestade)",
+   "prompt": "the dusty training square of ancient Sparta with simple stone buildings, under a dark stormy sky",
+   "seed": 138
+  },
+  "mar_jangada-mar-tempestade": {
+   "lugar": "mar_jangada/mar (tempestade)",
+   "prompt": "a dark rough sea with ancient warships, under a dark stormy sky",
+   "seed": 180
+  },
+  "esparta_cidade-templo-dourado": {
+   "lugar": "esparta_cidade/templo (dourado)",
+   "prompt": "the columns at the front of an ancient Greek temple, at sunset, golden orange light",
+   "seed": 187
+  }
+ }
+}
