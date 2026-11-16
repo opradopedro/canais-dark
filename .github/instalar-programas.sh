@@ -4,6 +4,11 @@
 # 16/11: canais.yml (SYBI) caiu com "dpkg returned an error code (1)" no
 # ttf-mscorefonts-installer, antes de produzir qualquer coisa.
 set -u
+# PC do Pedro (runner self-hosted, pasta pc/): tudo ja foi instalado pelo pc/dentro-wsl.sh e nao ha sudo
+if [ "${RUNNER_ENVIRONMENT:-github-hosted}" != github-hosted ]; then
+  command -v ffmpeg > /dev/null && { echo "PC: programas ja instalados"; exit 0; }
+  echo "ERRO: ffmpeg nao esta instalado no PC (rode de novo o pc/instalar.ps1)"; exit 1
+fi
 echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | sudo debconf-set-selections
 
 for i in 1 2 3; do
