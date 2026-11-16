@@ -1,0 +1,44 @@
+name: Vigia do PC
+
+# Blindagem (Pedro, 16/11: "nao ficar sem video se o PC desligar, cair a energia..."):
+# se o canais.yml mandou um job para o PC (runner "canais-pc") e o PC sumiu, o job ficaria na fila do GitHub
+# por ate 24 h, travando as tentativas seguintes (que rodam na nuvem). Este vigia cancela essa execucao
+# quando o PC esta sem sinal ha mais de 20 min; a proxima tentativa do dia ja cai na nuvem.
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: vigia-pc
+  cancel-in-progress: true
+
+jobs:
+  vigiar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      R: ${{ github.repository }}
+    steps:
+      - name: Cancelar job preso esperando o PC
+        run: |
+          T=$(gh api repos/$R/releases/tags/pc-sinal --jq '.assets[]|select(.name=="sinal.txt")|.updated_at' 2>/dev/null || true)
+          AGORA=$(date -u +%s)
+          if [ -n "$T" ] && [ $(( AGORA - $(date -u -d "$T" +%s) )) -lt 1200 ]; then
+            echo "PC vivo (sinal $T): nada a fazer"; exit 0
+          fi
+          echo "PC sem sinal (ultimo: ${T:-nunca})"
+          for st in queued in_progress; do
+            for RUN in $(gh api "repos/$R/actions/workflows/canais.yml/runs?status=$st&per_page=20" --jq '.workflow_runs[].id'); do
+              PRESO=$(gh api "repos/$R/actions/runs/$RUN/jobs" --jq '[.jobs[] | select(.status=="queued" and (.labels | index("canais-pc")))] | length')
+              if [ "${PRESO:-0}" -gt 0 ]; then
+                echo "cancelando execucao $RUN (job esperando o PC desligado)"
+                gh api -X POST "repos/$R/actions/runs/$RUN/cancel" || true
+              fi
+            done
+          done
