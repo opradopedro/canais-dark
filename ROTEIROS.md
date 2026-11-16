@@ -199,6 +199,13 @@ que ainda é rascunho, escreva com o pronto mais parecido e anote no `PLANO-MUND
 
 ## Motor ILUSTRADO no Hora Muerta e no Signal Lost (REGRA do Pedro, 15/11: "a próxima série já no modelo novo")
 
+**OLD TALES também (REGRA do Pedro, 16/11: formato do Wukong ilustrado em TODOS os canais de história, Shorts e longos)**: desde
+**CL049** o fiscal barra Old Tales fora do ilustrado. Mesmo passo a passo abaixo (escreve em 3D e roda o converter_3d.py), que
+no CL veste roupa de época (soldado_china, soldado_esparta, rei, chines), põe na mão o que o ator `segura` em cada cena
+(espada, lanca, escudo) e faz um fundo por lugar e luz. Lugar novo de campo_batalha: descreva em `LUGARES_CL_SERIE` do
+converter. Depois do converter, ponha 1 a 3 cartões (`"cartao"` na cena: `nome` com titulo/sub, ou `fato` com
+titulo/valor/sub), como no Wukong. Cartão e legenda ficam sempre dentro da área que o TikTok mostra (o motor cuida).
+
 A partir de **HM045** e **SV038** (o fiscal barra), HM e SV saem no motor ilustrado: fundo ilustrado por IA (um por LUGAR,
 Release "fundos") + boneco 2D, câmera, criatura e legenda em código, vertical 9:16 nativo. O jeito de escrever NÃO muda:
 
