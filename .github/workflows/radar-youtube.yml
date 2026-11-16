@@ -1,0 +1,63 @@
+# Radar GTA VI: reposta no YouTube Shorts os Reels do Instagram (e a fila dos antigos).
+# Lê o branch radar-gta6-midia do claude-skills (público: agenda.json, youtube/plano.json, mp4)
+# e guarda o controle do que já subiu em gta6/youtube-publicados.json (aqui, branch producao).
+# Secrets: YT_CLIENT_ID e YT_CLIENT_SECRET (os mesmos dos outros canais) + YT_REFRESH_TOKEN_GTA.
+# Se o token do Radar foi gerado com outro app OAuth: YT_CLIENT_ID_GTA e YT_CLIENT_SECRET_GTA.
+name: Radar GTA - Shorts no YouTube
+
+on:
+  schedule:
+    - cron: "20 15 * * *"   # 12h20 BRT
+    - cron: "20 18 * * *"   # 15h20 BRT
+    - cron: "20 21 * * *"   # 18h20 BRT
+    - cron: "20 0 * * *"    # 21h20 BRT
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar-youtube
+  cancel-in-progress: false
+
+jobs:
+  postar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: producao
+          fetch-depth: 1
+          sparse-checkout: gta6
+
+      - name: Baixar o Radar (sem os mp4)
+        run: |
+          git clone --depth 1 --filter=blob:none --no-checkout -b radar-gta6-midia https://github.com/opradopedro/claude-skills.git "$RUNNER_TEMP/radar"
+          cd "$RUNNER_TEMP/radar"
+          git sparse-checkout set --no-cone '/*' '!/*.mp4' '!producao/**/*.mp4' '!aprovados' '!demo_short' '!refeitos'
+          git checkout radar-gta6-midia
+
+      - name: Postar no YouTube
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_CLIENT_ID_GTA: ${{ secrets.YT_CLIENT_ID_GTA }}
+          YT_CLIENT_SECRET_GTA: ${{ secrets.YT_CLIENT_SECRET_GTA }}
+          YT_REFRESH_TOKEN_GTA: ${{ secrets.YT_REFRESH_TOKEN_GTA }}
+          RADAR_PUBLICADOS: ${{ github.workspace }}/gta6/youtube-publicados.json
+        run: python3 "$RUNNER_TEMP/radar/pipeline/youtube_rotina.py"
+
+      - name: Salvar o controle
+        if: always()
+        run: |
+          git diff --quiet -- gta6/youtube-publicados.json && { echo "nada novo"; exit 0; }
+          git config user.name "radar-bot"
+          git config user.email "radar-bot@users.noreply.github.com"
+          git add gta6/youtube-publicados.json
+          git commit -m "Radar YouTube: Shorts postados ($(date -u +%Y-%m-%dT%H:%MZ))"
+          for i in 1 2 3 4; do
+            git pull --rebase origin producao && git push origin HEAD:producao && exit 0
+            git rebase --abort 2>/dev/null; sleep $((i * 10))
+          done
+          exit 1

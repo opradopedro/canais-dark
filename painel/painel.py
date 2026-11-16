@@ -95,6 +95,10 @@ def de_radar(raiz):
         except FileNotFoundError:
             return {}
     metricas, yt = ler("metricas.json"), ler("youtube/publicados.json")
+    try:  # 16/11: o GitHub Actions do canais-dark guarda os Shorts do Radar aqui
+        yt.update(json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "gta6", "youtube-publicados.json"), encoding="utf-8")))
+    except FileNotFoundError:
+        pass
     post = sorted([p for p in agenda if p.get("status") == "postado" and p.get("arquivo")], key=lambda p: p["data"] + p["hora"])[-POSTADOS_GTA:]
     fila = [p for p in agenda if p.get("status") == "pendente" and p.get("arquivo")]
     itens = []
