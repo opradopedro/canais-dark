@@ -19,7 +19,7 @@
 
  "categoria": "24",
  "crf": "26",
- "fila": 2,
+ "fila": 3,
  "_fila_obs": "Se ja houver 2 videos agendados no futuro (= 2 dias de conteudo), nao produz nada hoje.",
 
  "partes_por_vez": 1,

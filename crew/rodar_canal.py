@@ -218,8 +218,9 @@ def _rodar_uma(canal, resto_s=None):
             os.environ[cfg["pasta_var"]] = os.path.join(repo, "painel-saida", cfg["painel"])
             os.makedirs(os.environ[cfg["pasta_var"]], exist_ok=True)
     if os.environ.get("CANAIS_REPESCAGEM") and canal == "so-you-built-it":
-        # repescagem (2a tentativa do dia, canais.yml): so produz o formato que tiver menos de 2 dias agendados
-        cmd += ["--fila", "2"]
+        # repescagem (2a tentativa do dia, canais.yml): so produz o formato que tiver menos de 3 dias agendados
+        # (BLINDAGEM 16/11, Pedro: "nao ficar sem video se o PC ou o GitHub falhar": 3 dias de folga por canal)
+        cmd += ["--fila", "3"]
     limite = int(os.environ.get("CANAIS_TIMEOUT", "3300"))
     if resto_s:
         limite = max(600, min(limite, resto_s - 120))
