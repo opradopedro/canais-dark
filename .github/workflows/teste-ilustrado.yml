@@ -41,9 +41,7 @@ jobs:
           node-version: "22"
       - name: Programas e pacotes
         run: |
-          echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | sudo debconf-set-selections
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq ffmpeg fonts-dejavu ttf-mscorefonts-installer > /dev/null
+          bash .github/instalar-programas.sh
           pip install -q -r .github/requirements-canais.txt
           npm install --prefix motor-ilustrado --no-audit --no-fund playwright@latest
           cd motor-ilustrado && npx playwright install --with-deps chromium > /dev/null && cd ..
