@@ -4,10 +4,10 @@
 "tt": {
 "comentarios": 2,
 "compart": 1,
-"curtidas": 5,
+"curtidas": 6,
 "posts": 3,
 "seguidores": 3,
-"views": 116
+"views": 130
 },
 "yt": {
 "comentarios": 1,
@@ -24,7 +24,7 @@
 "curtidas": 7,
 "posts": 3,
 "seguidores": 3,
-"views": 162
+"views": 163
 },
 "yt": {
 "comentarios": 8,
@@ -45,8 +45,8 @@
 },
 "yt": {
 "comentarios": 1,
-"inscritos": 16,
-"likes": 86,
+"inscritos": 20,
+"likes": 93,
 "videos": 17,
 "views": 5566
 }
@@ -55,15 +55,15 @@
 "tt": {
 "comentarios": 2,
 "compart": 1,
-"curtidas": 30,
+"curtidas": 32,
 "posts": 5,
 "seguidores": 2,
-"views": 806
+"views": 877
 },
 "yt": {
 "comentarios": 30,
 "inscritos": 79,
-"likes": 1504,
+"likes": 1511,
 "videos": 48,
 "views": 62129
 }
