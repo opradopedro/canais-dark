@@ -70,42 +70,58 @@
   "bairro-frente_casa": {
    "lugar": "bairro/frente_casa (noite)",
    "prompt": "the front yard and porch of a small one-story house with a lit porch light, on Alder Street, a quiet American suburban street, at night, dark blue moonlight, deep shadows",
-   "seed": 178
+   "seed": 178,
+   "chao": 0.9,
+   "pessoa": 0.38
   },
   "bairro-fim_rua-dia": {
    "lugar": "bairro/fim_rua (dia)",
    "prompt": "the dead end of a street with a chain-link fence and an empty lot, on Alder Street, a quiet American suburban street, in pale overcast daylight",
-   "seed": 129
+   "seed": 129,
+   "chao": 0.92,
+   "pessoa": 0.42
   },
   "casa_interior-porta": {
    "lugar": "casa_interior/porta (noite)",
    "prompt": "the inside of a modest house's front door, a small entry hall with a coat hook and a little table, on Alder Street, a quiet American suburban street, at night, dark blue moonlight, deep shadows",
-   "seed": 150
+   "seed": 150,
+   "chao": 0.9,
+   "pessoa": 0.62
   },
   "casa_interior-sala": {
    "lugar": "casa_interior/sala (noite)",
    "prompt": "a modest living room with an old sofa, a small TV, a rug and framed family photos, on Alder Street, a quiet American suburban street, at night, dark blue moonlight, deep shadows",
-   "seed": 157
+   "seed": 157,
+   "chao": 0.9,
+   "pessoa": 0.56
   },
   "casa_interior-cozinha": {
    "lugar": "casa_interior/cozinha (noite)",
    "prompt": "a small home kitchen with a table, two chairs, a fridge and a window over the sink, on Alder Street, a quiet American suburban street, at night, dark blue moonlight, deep shadows",
-   "seed": 178
+   "seed": 178,
+   "chao": 0.9,
+   "pessoa": 0.64
   },
   "casa_interior-sala-dia": {
    "lugar": "casa_interior/sala (dia)",
    "prompt": "a modest living room with an old sofa, a small TV, a rug and framed family photos, on Alder Street, a quiet American suburban street, in pale overcast daylight",
-   "seed": 185
+   "seed": 185,
+   "chao": 0.9,
+   "pessoa": 0.58
   },
   "bairro-rua-dia": {
    "lugar": "bairro/rua (dia)",
    "prompt": "the middle of a quiet residential street with a few parked cars, on Alder Street, a quiet American suburban street, in pale overcast daylight",
-   "seed": 192
+   "seed": 192,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "bairro-poste-dia": {
    "lugar": "bairro/poste (dia)",
    "prompt": "a street corner under a single old street lamp, on Alder Street, a quiet American suburban street, in pale overcast daylight",
-   "seed": 185
+   "seed": 185,
+   "chao": 0.92,
+   "pessoa": 0.35
   }
  },
  "_calibragem": "chao/pessoa conferidos a olho em 15/11 (boneco do tamanho da cama/porta/mesa do fundo, Pedro)"

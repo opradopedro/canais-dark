@@ -7,67 +7,93 @@
   "estrada-ponto-onibus": {
    "lugar": "estrada/ponto com onibus (noite)",
    "prompt": "a lonely roadside bus stop with a small concrete shelter and one lamp, an old empty bus with dim green interior lights stopped there with its door open, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
-   "seed": 103
+   "seed": 103,
+   "chao": 0.88,
+   "pessoa": 0.42
   },
   "casa_interior-cozinha": {
    "lugar": "casa_interior/cozinha (noite)",
    "prompt": "a small home kitchen with a table, two chairs, a fridge and a window over the sink, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
-   "seed": 110
+   "seed": 110,
+   "chao": 0.9,
+   "pessoa": 0.7
   },
   "estrada-ponto": {
    "lugar": "estrada/ponto (noite)",
    "prompt": "a lonely roadside bus stop with a small concrete shelter and one lamp, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
-   "seed": 117
+   "seed": 117,
+   "chao": 0.9,
+   "pessoa": 0.42
   },
   "estrada-meio": {
    "lugar": "estrada/meio (noite)",
    "prompt": "the middle of an empty two-lane highway, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
-   "seed": 124
+   "seed": 124,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "estrada-acostamento": {
    "lugar": "estrada/acostamento (noite)",
    "prompt": "the gravel shoulder of a highway with a metal guardrail, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
-   "seed": 131
+   "seed": 131,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "estrada-vindo": {
    "lugar": "estrada/vindo (noite)",
    "prompt": "an empty highway stretching toward the viewer, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
-   "seed": 138
+   "seed": 138,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "estrada-curva": {
    "lugar": "estrada/curva (noite)",
    "prompt": "a sharp mountain highway curve with a bent guardrail over a drop, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
-   "seed": 145
+   "seed": 145,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "estrada-vindo-onibus": {
    "lugar": "estrada/vindo com onibus (noite)",
    "prompt": "an empty highway stretching toward the viewer, an old empty bus with dim green interior lights stopped there with its door open, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
-   "seed": 152
+   "seed": 152,
+   "chao": 0.93,
+   "pessoa": 0.4
   },
   "estrada-indo": {
    "lugar": "estrada/indo (noite)",
    "prompt": "an empty highway stretching away into the distance, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
-   "seed": 159
+   "seed": 159,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "casa_interior-quarto": {
    "lugar": "casa_interior/quarto (noite)",
    "prompt": "a simple bedroom with a bed, a nightstand lamp and a closed closet, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
-   "seed": 166
+   "seed": 166,
+   "chao": 0.92,
+   "pessoa": 0.68
   },
   "estrada-meio-onibus": {
    "lugar": "estrada/meio com onibus (noite)",
    "prompt": "the middle of an empty two-lane highway, an old empty bus with dim green interior lights stopped there with its door open, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
-   "seed": 124
+   "seed": 124,
+   "chao": 0.92,
+   "pessoa": 0.4
   },
   "estrada-indo-onibus": {
    "lugar": "estrada/indo com onibus (noite)",
    "prompt": "an empty highway stretching away into the distance, an old empty bus with dim green interior lights stopped there with its door open, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
-   "seed": 152
+   "seed": 152,
+   "chao": 0.93,
+   "pessoa": 0.4
   },
   "casa_interior-porta": {
    "lugar": "casa_interior/porta (noite)",
    "prompt": "the inside of a modest house's front door, a small entry hall with a coat hook and a little table, on a rural Latin American mountain highway, at night, dark blue moonlight, deep shadows",
-   "seed": 166
+   "seed": 166,
+   "chao": 0.9,
+   "pessoa": 0.68
   }
  }
 }
