@@ -5,7 +5,7 @@ Uso:
   python3 produce.py stories/001-espejo-1.json --saida /tmp/hm        # so produz o MP4
   python3 produce.py --proximo --subir --saida /tmp/hm                 # agenda a proxima serie inteira
 Com --proximo, pega a primeira serie (campo "serie") com parte ainda nao subida e agenda todas as partes em
-dias seguidos as 21h. Se ja houver --fila (padrao 2) videos agendados no futuro, nao faz nada (FILA CHEIA).
+dias seguidos as 21h. Se ja houver --fila (padrao 3) videos agendados no futuro, nao faz nada (FILA CHEIA).
 Opcoes: --publicar 2026-10-23T00:00:00Z (UTC, so a primeira parte; as outras vao para as 21h livres seguintes)
         | --publicar auto (padrao: proximo horario livre das 21h de Brasilia)
         --motor gemini|kokoro (padrao: gemini se houver GEMINI_API_KEY) | --teste (so quadros JPG de conferencia)
@@ -111,7 +111,7 @@ def main():
     ap.add_argument("historia", nargs="*"); ap.add_argument("--proximo", action="store_true")
     ap.add_argument("--saida", default="saida"); ap.add_argument("--subir", action="store_true")
     ap.add_argument("--publicar", default="auto"); ap.add_argument("--motor"); ap.add_argument("--teste", action="store_true")
-    ap.add_argument("--fila", type=int, default=2, help="com --proximo: nao produz se ja houver tantos videos agendados")
+    ap.add_argument("--fila", type=int, default=3, help="com --proximo: nao produz se ja houver tantos videos agendados")
     a = ap.parse_args()
     os.makedirs(a.saida, exist_ok=True)
 
