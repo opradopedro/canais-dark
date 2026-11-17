@@ -1,0 +1,429 @@
+{
+ "codigo": "YB070",
+ "mundo": "campo",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "gringa: Brasil (português): Programa Um Milhão de Cisternas (P1MC/ASA) no semiárido, cisterna de placa de 16 mil litros https://pt.wikipedia.org/wiki/Programa_Um_Milh%C3%A3o_de_Cisternas",
+ "titulo": "You built a rainwater cistern 🌧️ #engineering #shorts",
+ "capa": "YOU BUILT A CISTERN",
+ "descripcion": "How a roof, a gutter and a buried tank keep a family in water through an 8-month dry season, one problem at a time.\n\nWhat should we build next?\n\n#engineering #water #cistern #brazil #shorts",
+ "tags": [
+  "engineering",
+  "cistern",
+  "rainwater harvesting",
+  "water",
+  "brazil",
+  "how it works",
+  "off grid",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "You live on a farm where it barely rains for eight months a year.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you put a barrel under the roof to catch the rain.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "One storm fills it in minutes. A week later, it's empty again.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And all that open water turns into a mosquito nursery.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you dig a big hole and build a concrete tank underground.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A gutter and a pipe carry every drop from the roof straight into it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the first rain washes dust, leaves and bird droppings off the roof. Your water turns brown.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you add a first flush pipe. The dirtiest water fills it and never reaches the tank.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And a screen on the gutter stops the leaves.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then you seal it with a concrete lid. No sunlight, no mosquitoes.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Down there in the dark, the water stays cool and algae can't grow.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "When the tank is full, an overflow pipe sends the extra water away.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Forget the bucket. A hand pump brings the water up.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "In Brazil's dry northeast, families have built more than a million of these.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Each one holds sixteen thousand liters. Enough to drink and cook through the whole dry season.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just turned a roof into a water supply. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "campo",
+   "p": {
+    "foco": "geral",
+    "seca": 1,
+    "rotulo": "DRY SEASON",
+    "cor": "red",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "campo",
+   "p": {
+    "foco": "casa",
+    "calha": 1,
+    "tambor": 1,
+    "chuva": 1,
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "campo",
+   "p": {
+    "foco": "casa",
+    "calha": 1,
+    "tambor": 1,
+    "seca": 1,
+    "rotulo": "EMPTY",
+    "cor": "red",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "campo",
+   "p": {
+    "foco": "casa",
+    "calha": 1,
+    "tambor": 1,
+    "mosquito": [
+     0,
+     1
+    ],
+    "rotulo": "MOSQUITOES",
+    "cor": "red",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "campo",
+   "p": {
+    "foco": "cisterna",
+    "cisterna": 1,
+    "rotulo": "CISTERN",
+    "cor": "green",
+    "marcas": [
+     {
+      "t": "Underground tank",
+      "x": -1.6,
+      "y": -1.3,
+      "cor": "green"
+     }
+    ],
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "campo",
+   "p": {
+    "foco": "cisterna",
+    "cisterna": 1,
+    "calha": 1,
+    "chuva": 1,
+    "nivel": [
+     0,
+     0.45
+    ],
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "campo",
+   "p": {
+    "foco": "cisterna",
+    "cisterna": 1,
+    "calha": 1,
+    "chuva": 1,
+    "nivel": 0.45,
+    "sujo": [
+     0,
+     1
+    ],
+    "rotulo": "DIRTY WATER",
+    "cor": "red",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "campo",
+   "p": {
+    "foco": "casa",
+    "cisterna": 1,
+    "calha": 1,
+    "desvio": 1,
+    "chuva": 1,
+    "nivel": 0.5,
+    "sujo": [
+     1,
+     0
+    ],
+    "rotulo": "FIRST FLUSH",
+    "cor": "green",
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "campo",
+   "p": {
+    "foco": "casa",
+    "camera": {
+     "x": -4.6
+    },
+    "calha": 1,
+    "desvio": 1,
+    "filtro": 1,
+    "cisterna": 1,
+    "nivel": 0.5,
+    "marcas": [
+     {
+      "t": "Screen",
+      "x": -3.4,
+      "y": 3.1,
+      "cor": "green"
+     }
+    ],
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "campo",
+   "p": {
+    "foco": "cisterna",
+    "cisterna": 1,
+    "calha": 1,
+    "desvio": 1,
+    "filtro": 1,
+    "tampa": 1,
+    "nivel": 0.6,
+    "rotulo": "SEALED",
+    "cor": "green",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "campo",
+   "p": {
+    "foco": "cisterna",
+    "cisterna": 1,
+    "calha": 1,
+    "desvio": 1,
+    "tampa": 1,
+    "nivel": 0.7,
+    "marcas": [
+     {
+      "t": "Cool and dark",
+      "x": -1.6,
+      "y": -1.6
+     }
+    ],
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "campo",
+   "p": {
+    "foco": "cisterna",
+    "cisterna": 1,
+    "calha": 1,
+    "desvio": 1,
+    "tampa": 1,
+    "ladrao": 1,
+    "chuva": 1,
+    "nivel": [
+     0.7,
+     0.95
+    ],
+    "marcas": [
+     {
+      "t": "Overflow",
+      "x": 1.2,
+      "y": -0.9,
+      "cor": "green"
+     }
+    ],
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "campo",
+   "p": {
+    "foco": "cisterna",
+    "cisterna": 1,
+    "calha": 1,
+    "desvio": 1,
+    "tampa": 1,
+    "ladrao": 1,
+    "bomba": 1,
+    "nivel": 0.95,
+    "rotulo": "HAND PUMP",
+    "cor": "green",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "campo",
+   "p": {
+    "foco": "geral",
+    "cisterna": 1,
+    "calha": 1,
+    "desvio": 1,
+    "tampa": 1,
+    "bomba": 1,
+    "nivel": 0.95,
+    "seca": 1,
+    "rotulo": "1,000,000+ CISTERNS",
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "campo",
+   "p": {
+    "foco": "cisterna",
+    "cisterna": 1,
+    "calha": 1,
+    "desvio": 1,
+    "tampa": 1,
+    "bomba": 1,
+    "ladrao": 1,
+    "nivel": [
+     0.95,
+     0.5
+    ],
+    "seca": 1,
+    "rotulo": "16,000 LITERS",
+    "cor": "green",
+    "etapa": "c14"
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "campo",
+   "p": {
+    "foco": "geral",
+    "cisterna": 1,
+    "calha": 1,
+    "desvio": 1,
+    "tampa": 1,
+    "bomba": 1,
+    "ladrao": 1,
+    "filtro": 1,
+    "nivel": 0.6,
+    "etapa": "c15"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 12,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 15,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "rains",
+  "barrel",
+  "empty",
+  "mosquito",
+  "concrete tank",
+  "gutter",
+  "brown",
+  "first flush",
+  "screen",
+  "lid",
+  "overflow",
+  "hand pump",
+  "million",
+  "sixteen thousand"
+ ]
+}

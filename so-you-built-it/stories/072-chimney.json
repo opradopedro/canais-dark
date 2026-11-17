@@ -1,0 +1,420 @@
+{
+ "codigo": "YB072",
+ "mundo": "campo",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "autoral (backlog do temas.md: wood stove chimney); regra 3-2-10 (NFPA 211: 3 pés acima do telhado, 2 pés acima de tudo a 10 pés), creosoto e incêndio de chaminé https://en.wikipedia.org/wiki/Chimney_fire",
+ "titulo": "You built a wood stove chimney 🔥 #engineering #shorts",
+ "capa": "YOU BUILT A CHIMNEY",
+ "descripcion": "From a fire on the floor to a chimney that pulls smoke out, stays out of the wind and doesn't burn your roof, one problem at a time.\n\nWhat should we build next?\n\n#engineering #chimney #woodstove #fire #shorts",
+ "tags": [
+  "engineering",
+  "chimney",
+  "wood stove",
+  "fire",
+  "creosote",
+  "how it works",
+  "cabin",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Winter on your farm drops to minus twenty. You need heat.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you light a fire right in the middle of the floor.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It's warm, but the room fills with smoke in minutes.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Smoke carries carbon monoxide. You can't see it or smell it, and it can kill you.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you put the fire inside an iron box. A wood stove.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And a metal pipe carries the smoke up through the roof.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Hot smoke is lighter than cold air. It rises, and pulls fresh air into the fire. That's draft.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But your pipe barely clears the roof. The wind hits it and pushes the smoke back down.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you make it taller. Three feet above the roof, and higher than anything nearby.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then a black crust starts building up inside the pipe. Creosote.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "One cold night it catches fire, and flames roar out of the top.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Where the hot pipe touches the roof, the wood starts to burn.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you wrap the pipe in an insulated collar where it crosses the roof.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "You top it with a cap and a screen, so sparks and rain stay out.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And once a year, you sweep the creosote out.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a chimney that keeps your house warm, and standing. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "campo",
+   "p": {
+    "foco": "casa",
+    "rotulo": "-20°C",
+    "cor": "red",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "campo",
+   "p": {
+    "foco": "dentro",
+    "interior": 1,
+    "fogo": "chao",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "campo",
+   "p": {
+    "foco": "dentro",
+    "interior": 1,
+    "fogo": "chao",
+    "fumaca_dentro": [
+     0,
+     1
+    ],
+    "rotulo": "SMOKE",
+    "cor": "red",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "campo",
+   "p": {
+    "foco": "dentro",
+    "interior": 1,
+    "fogo": "chao",
+    "fumaca_dentro": 1,
+    "rotulo": "CARBON MONOXIDE",
+    "cor": "red",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "campo",
+   "p": {
+    "foco": "dentro",
+    "interior": 1,
+    "fogo": "fogao",
+    "fumaca_dentro": [
+     1,
+     0.6
+    ],
+    "rotulo": "WOOD STOVE",
+    "cor": "green",
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "campo",
+   "p": {
+    "foco": "casa",
+    "interior": 1,
+    "fogo": "fogao",
+    "chamine": "curta",
+    "fumaca": 1,
+    "fumaca_dentro": [
+     0.6,
+     0
+    ],
+    "rotulo": "CHIMNEY",
+    "cor": "green",
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "campo",
+   "p": {
+    "foco": "dentro",
+    "interior": 1,
+    "fogo": "fogao",
+    "chamine": "curta",
+    "fumaca": 1,
+    "tiragem": 1,
+    "rotulo": "DRAFT",
+    "cor": "green",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "campo",
+   "p": {
+    "foco": "chamine",
+    "interior": 1,
+    "fogo": "fogao",
+    "chamine": "curta",
+    "fumaca": 1,
+    "desce": 1,
+    "vento": 1,
+    "rotulo": "DOWNDRAFT",
+    "cor": "red",
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "campo",
+   "p": {
+    "foco": "chamine",
+    "interior": 1,
+    "fogo": "fogao",
+    "chamine": "alta",
+    "fumaca": 1,
+    "vento": 1,
+    "rotulo": "3 FT ABOVE THE ROOF",
+    "cor": "green",
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "campo",
+   "p": {
+    "foco": "chamine",
+    "interior": 1,
+    "fogo": "fogao",
+    "chamine": "alta",
+    "fumaca": 1,
+    "creosoto": [
+     0,
+     1
+    ],
+    "rotulo": "CREOSOTE",
+    "cor": "red",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "campo",
+   "p": {
+    "foco": "chamine",
+    "interior": 1,
+    "fogo": "fogao",
+    "chamine": "alta",
+    "fumaca": 1,
+    "creosoto": 1,
+    "fogo_chamine": 1,
+    "rotulo": "CHIMNEY FIRE",
+    "cor": "red",
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "campo",
+   "p": {
+    "foco": "chamine",
+    "interior": 1,
+    "fogo": "fogao",
+    "chamine": "alta",
+    "fumaca": 1,
+    "creosoto": 1,
+    "teto_queima": [
+     0,
+     1
+    ],
+    "rotulo": "ROOF ON FIRE",
+    "cor": "red",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "campo",
+   "p": {
+    "foco": "chamine",
+    "interior": 1,
+    "fogo": "fogao",
+    "chamine": "alta",
+    "fumaca": 1,
+    "colar": 1,
+    "rotulo": "INSULATED COLLAR",
+    "cor": "green",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "campo",
+   "p": {
+    "foco": "chamine",
+    "interior": 1,
+    "fogo": "fogao",
+    "chamine": "alta",
+    "fumaca": 1,
+    "colar": 1,
+    "chapeu": 1,
+    "faisca": 1,
+    "rotulo": "SPARK SCREEN",
+    "cor": "green",
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "campo",
+   "p": {
+    "foco": "chamine",
+    "interior": 1,
+    "fogo": "fogao",
+    "chamine": "alta",
+    "fumaca": 1,
+    "colar": 1,
+    "chapeu": 1,
+    "creosoto": [
+     1,
+     0
+    ],
+    "rotulo": "CLEAN IT YEARLY",
+    "cor": "green",
+    "etapa": "c14"
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "campo",
+   "p": {
+    "foco": "casa",
+    "interior": 1,
+    "fogo": "fogao",
+    "chamine": "alta",
+    "fumaca": 1,
+    "colar": 1,
+    "chapeu": 1,
+    "etapa": "c15"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 12,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 13,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 15,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "minus twenty",
+  "fire",
+  "smoke",
+  "carbon monoxide",
+  "wood stove",
+  "metal pipe",
+  "draft",
+  "wind",
+  "taller",
+  "creosote",
+  "flames",
+  "burn",
+  "collar",
+  "cap",
+  "sweep"
+ ]
+}

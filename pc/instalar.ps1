@@ -6,20 +6,27 @@
 # O que faz: cria um Linux separado (WSL "canais", em C:\canais-pc) so para os canais, instala FFmpeg/fontes/
 # Chromium, liga o PC ao GitHub como "runner" (label canais-pc) e cria uma tarefa do Windows que liga o robo
 # sempre que voce entra no PC. Se o PC desligar, o GitHub produz na nuvem como antes (ver .github/workflows/vigia-pc.yml).
-$ErrorActionPreference = 'Stop'
+# 'Continue': no PowerShell 5 o aviso do wsl.exe no stderr viraria erro fatal com 'Stop' (17/11)
+$ErrorActionPreference = 'Continue'
 $ProgressPreference = 'SilentlyContinue'   # download rapido no PowerShell 5
 $base = 'https://raw.githubusercontent.com/opradopedro/canais-dark/producao/pc'
 $dir = 'C:\canais-pc'
 New-Item -ItemType Directory -Force $dir | Out-Null
 
 Write-Host "`n== 1/5 WSL ==" -ForegroundColor Cyan
-& wsl.exe --status *> $null
+cmd /c "wsl.exe --status >nul 2>&1"
 if ($LASTEXITCODE -ne 0) {
   & wsl.exe --install --no-distribution
+  # WSL1 nao precisa de virtualizacao na BIOS; o recurso dele tambem e ligado aqui
+  & dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart | Out-Null
   Write-Host "`nWSL instalado. REINICIE o PC e rode este mesmo comando de novo." -ForegroundColor Yellow
   return
 }
-& wsl.exe --update *> $null
+cmd /c "wsl.exe --update >nul 2>&1"
+# Virtualizacao desligada na BIOS (comum em PC de casa): usa WSL1, que roda sem ela.
+$virt = (Get-CimInstance Win32_Processor | Select-Object -First 1).VirtualizationFirmwareEnabled
+$versao = if ($virt) { 2 } else { 1 }
+Write-Host "virtualizacao na BIOS: $virt -> WSL$versao"
 
 Write-Host "`n== 2/5 Memoria do WSL (6 GB de 8) ==" -ForegroundColor Cyan
 $cfg = Join-Path $env:USERPROFILE '.wslconfig'
@@ -28,19 +35,21 @@ if (-not (Test-Path $cfg)) {
 } else { Write-Host "ja existe $cfg (mantido como esta)" }
 
 Write-Host "`n== 3/5 Linux dos canais ==" -ForegroundColor Cyan
-$lista = ((& wsl.exe -l -q) -join "`n") -replace "`0", ''
+$lista = ((& wsl.exe -l -q 2>$null) -join "`n") -replace "`0", ''
 if ($lista -notmatch '(?m)^canais\s*$') {
   $tar = Join-Path $dir 'ubuntu.tar.gz'
   Write-Host "baixando Ubuntu 24.04 (~350 MB)..."
   Invoke-WebRequest 'https://cloud-images.ubuntu.com/wsl/releases/24.04/current/ubuntu-noble-wsl-amd64-wsl.rootfs.tar.gz' -OutFile $tar -UseBasicParsing
-  & wsl.exe --import canais (Join-Path $dir 'disco') $tar --version 2
+  if (-not (Test-Path $tar)) { Write-Host "Download do Ubuntu falhou. Tire um print e mande para o Claude." -ForegroundColor Red; return }
+  & wsl.exe --import canais (Join-Path $dir 'disco') $tar --version $versao
+  if ($LASTEXITCODE -ne 0) { Write-Host "Nao consegui criar o Linux (wsl --import). Tire um print e mande para o Claude." -ForegroundColor Red; return }
   Remove-Item $tar
 } else { Write-Host "Linux 'canais' ja existe" }
 
 Write-Host "`n== 4/5 Programas e ligacao com o GitHub (vai pedir um codigo) ==" -ForegroundColor Cyan
 & wsl.exe -d canais -u root -- bash -c "command -v curl >/dev/null || (apt-get update -qq && apt-get install -y -qq curl ca-certificates >/dev/null); curl -fsSL $base/dentro-wsl.sh -o /root/dentro-wsl.sh && bash /root/dentro-wsl.sh"
 if ($LASTEXITCODE -ne 0) { Write-Host "`nAlgo falhou acima. Tire um print e mande para o Claude." -ForegroundColor Red; return }
-& wsl.exe --terminate canais *> $null   # aplica o wsl.conf (Linux isolado do Windows)
+cmd /c "wsl.exe --terminate canais >nul 2>&1"   # aplica o wsl.conf (Linux isolado do Windows)
 
 Write-Host "`n== 5/5 Ligar sozinho ao entrar no PC ==" -ForegroundColor Cyan
 $acao = New-ScheduledTaskAction -Execute 'conhost.exe' -Argument '--headless wsl.exe -d canais -u root -- bash /opt/canais-pc/ligar.sh'
