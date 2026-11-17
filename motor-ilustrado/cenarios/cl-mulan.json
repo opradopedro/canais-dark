@@ -7,167 +7,233 @@
   "aldeia_china-praca-tempestade": {
    "lugar": "aldeia_china/praca (tempestade)",
    "prompt": "the main square of an ancient Chinese village with tiled roofs and red lanterns, under a dark stormy sky",
-   "seed": 145
+   "seed": 145,
+   "chao": 0.93,
+   "pessoa": 0.4
   },
   "aldeia_china-casa-tempestade": {
    "lugar": "aldeia_china/casa (tempestade)",
    "prompt": "inside a humble ancient Chinese family house with a wooden table, chairs and paper windows, under a dark stormy sky",
-   "seed": 152
+   "seed": 152,
+   "chao": 0.9,
+   "pessoa": 0.56
   },
   "aldeia_china-templo": {
    "lugar": "aldeia_china/templo (dia)",
    "prompt": "the steps of a small ancient Chinese village temple with red pillars, in daylight",
-   "seed": 159
+   "seed": 159,
+   "chao": 0.93,
+   "pessoa": 0.34
   },
   "aldeia_china-casa": {
    "lugar": "aldeia_china/casa (dia)",
    "prompt": "inside a humble ancient Chinese family house with a wooden table, chairs and paper windows, in daylight",
-   "seed": 166
+   "seed": 166,
+   "chao": 0.9,
+   "pessoa": 0.56
   },
   "aldeia_china-casa-noite": {
    "lugar": "aldeia_china/casa (noite)",
    "prompt": "inside a humble ancient Chinese family house with a wooden table, chairs and paper windows, at night, blue moonlight and torches",
-   "seed": 173
+   "seed": 173,
+   "chao": 0.9,
+   "pessoa": 0.56
   },
   "aldeia_china-jardim-noite": {
    "lugar": "aldeia_china/jardim (noite)",
    "prompt": "a walled courtyard garden of an ancient Chinese house with a plum tree, at night, blue moonlight and torches",
-   "seed": 180
+   "seed": 180,
+   "chao": 0.92,
+   "pessoa": 0.42
   },
   "aldeia_china-mercado": {
    "lugar": "aldeia_china/mercado (dia)",
    "prompt": "a narrow ancient Chinese market street with wooden stalls and hanging cloth, in daylight",
-   "seed": 187
+   "seed": 187,
+   "chao": 0.92,
+   "pessoa": 0.4
   },
   "aldeia_china-poco-noite": {
    "lugar": "aldeia_china/poco (noite)",
    "prompt": "an old stone well in an ancient Chinese village courtyard, at night, blue moonlight and torches",
-   "seed": 194
+   "seed": 194,
+   "chao": 0.92,
+   "pessoa": 0.36
   },
   "campo_batalha-beira_mato-dourado": {
    "lugar": "campo_batalha/beira_mato (dourado)",
    "prompt": "the edge of a pine forest beside a military camp of tents with banners, at sunset, golden orange light",
-   "seed": 201
+   "seed": 201,
+   "chao": 0.93,
+   "pessoa": 0.36
   },
   "campo_batalha-acostamento-dourado": {
    "lugar": "campo_batalha/acostamento (dourado)",
    "prompt": "a rocky mountain road where an ancient Chinese army column marches, at sunset, golden orange light",
-   "seed": 208
+   "seed": 208,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "campo_batalha-curva-noite": {
    "lugar": "campo_batalha/curva (noite)",
    "prompt": "a narrow mountain pass covered in snow, at night, blue moonlight and torches",
-   "seed": 215
+   "seed": 215,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "campo_batalha-pe_torre-noite": {
    "lugar": "campo_batalha/pe_torre (noite)",
    "prompt": "the foot of a wooden watchtower in an ancient Chinese army camp, at night, blue moonlight and torches",
-   "seed": 222
+   "seed": 222,
+   "chao": 0.92,
+   "pessoa": 0.38
   },
   "campo_batalha-vindo-noite": {
    "lugar": "campo_batalha/vindo (noite)",
    "prompt": "a wide battlefield on the northern steppe, an enemy army approaching on the horizon, at night, blue moonlight and torches",
-   "seed": 229
+   "seed": 229,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "campo_batalha-meio-tempestade": {
    "lugar": "campo_batalha/meio (tempestade)",
    "prompt": "the middle of a wide battlefield on the northern steppe, under a dark stormy sky",
-   "seed": 236
+   "seed": 236,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "campo_batalha-vindo-dourado": {
    "lugar": "campo_batalha/vindo (dourado)",
    "prompt": "a wide battlefield on the northern steppe, an enemy army approaching on the horizon, at sunset, golden orange light",
-   "seed": 145
+   "seed": 145,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "campo_batalha-curva": {
    "lugar": "campo_batalha/curva (dia)",
    "prompt": "a narrow mountain pass covered in snow, in daylight",
-   "seed": 152
+   "seed": 152,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "campo_batalha-pe_torre-neve": {
    "lugar": "campo_batalha/pe_torre (neve)",
    "prompt": "the foot of a wooden watchtower in an ancient Chinese army camp, in falling snow",
-   "seed": 159
+   "seed": 159,
+   "chao": 0.92,
+   "pessoa": 0.38
   },
   "campo_batalha-acostamento-noite": {
    "lugar": "campo_batalha/acostamento (noite)",
    "prompt": "a rocky mountain road where an ancient Chinese army column marches, at night, blue moonlight and torches",
-   "seed": 166
+   "seed": 166,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "campo_batalha-beira_mato-noite": {
    "lugar": "campo_batalha/beira_mato (noite)",
    "prompt": "the edge of a pine forest beside a military camp of tents with banners, at night, blue moonlight and torches",
-   "seed": 173
+   "seed": 173,
+   "chao": 0.93,
+   "pessoa": 0.36
   },
   "campo_batalha-indo-tempestade": {
    "lugar": "campo_batalha/indo (tempestade)",
    "prompt": "a long road across the steppe toward distant mountains, under a dark stormy sky",
-   "seed": 180
+   "seed": 180,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "campo_batalha-vindo-tempestade": {
    "lugar": "campo_batalha/vindo (tempestade)",
    "prompt": "a wide battlefield on the northern steppe, an enemy army approaching on the horizon, under a dark stormy sky",
-   "seed": 194
+   "seed": 194,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "campo_batalha-curva-tempestade": {
    "lugar": "campo_batalha/curva (tempestade)",
    "prompt": "a narrow mountain pass covered in snow, under a dark stormy sky",
-   "seed": 201
+   "seed": 201,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "campo_batalha-beira_mato-tempestade": {
    "lugar": "campo_batalha/beira_mato (tempestade)",
    "prompt": "the edge of a pine forest beside a military camp of tents with banners, under a dark stormy sky",
-   "seed": 208
+   "seed": 208,
+   "chao": 0.93,
+   "pessoa": 0.36
   },
   "campo_batalha-meio-dourado": {
    "lugar": "campo_batalha/meio (dourado)",
    "prompt": "the middle of a wide battlefield on the northern steppe, at sunset, golden orange light",
-   "seed": 222
+   "seed": 222,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "palacio_ceu-escada": {
    "lugar": "palacio_ceu/escada (dia)",
    "prompt": "a huge stone staircase leading up to an imperial palace gate, in daylight",
-   "seed": 229
+   "seed": 229,
+   "chao": 0.93,
+   "pessoa": 0.36
   },
   "palacio_ceu-salao": {
    "lugar": "palacio_ceu/salao (dia)",
    "prompt": "an imperial throne hall with a golden dragon throne on a raised platform, in daylight",
-   "seed": 236
+   "seed": 236,
+   "chao": 0.93,
+   "pessoa": 0.4
   },
   "palacio_ceu-colunas": {
    "lugar": "palacio_ceu/colunas (dia)",
    "prompt": "a long hall of tall red lacquered columns in an imperial palace, in daylight",
-   "seed": 152
+   "seed": 152,
+   "chao": 0.93,
+   "pessoa": 0.4
   },
   "campo_batalha-indo-dourado": {
    "lugar": "campo_batalha/indo (dourado)",
    "prompt": "a long road across the steppe toward distant mountains, at sunset, golden orange light",
-   "seed": 166
+   "seed": 166,
+   "chao": 0.93,
+   "pessoa": 0.42
   },
   "aldeia_china-praca-dourado": {
    "lugar": "aldeia_china/praca (dourado)",
    "prompt": "the main square of an ancient Chinese village with tiled roofs and red lanterns, at sunset, golden orange light",
-   "seed": 173
+   "seed": 173,
+   "chao": 0.93,
+   "pessoa": 0.4
   },
   "aldeia_china-jardim-dourado": {
    "lugar": "aldeia_china/jardim (dourado)",
    "prompt": "a walled courtyard garden of an ancient Chinese house with a plum tree, at sunset, golden orange light",
-   "seed": 180
+   "seed": 180,
+   "chao": 0.92,
+   "pessoa": 0.42
   },
   "aldeia_china-casa-dourado": {
    "lugar": "aldeia_china/casa (dourado)",
    "prompt": "inside a humble ancient Chinese family house with a wooden table, chairs and paper windows, at sunset, golden orange light",
-   "seed": 187
+   "seed": 187,
+   "chao": 0.9,
+   "pessoa": 0.56
   },
   "aldeia_china-praca": {
    "lugar": "aldeia_china/praca (dia)",
    "prompt": "the main square of an ancient Chinese village with tiled roofs and red lanterns, in daylight",
-   "seed": 201
+   "seed": 201,
+   "chao": 0.93,
+   "pessoa": 0.4
   },
   "aldeia_china-jardim": {
    "lugar": "aldeia_china/jardim (dia)",
    "prompt": "a walled courtyard garden of an ancient Chinese house with a plum tree, in daylight",
-   "seed": 208
+   "seed": 208,
+   "chao": 0.92,
+   "pessoa": 0.42
   }
  }
 }

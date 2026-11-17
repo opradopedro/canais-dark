@@ -7,7 +7,7 @@ on:
     branches: [producao]
     paths: ["motor-ilustrado/cenarios/**", "motor-ilustrado/fundos-manuais/**", "motor-ilustrado/teste.txt"]
   schedule:
-    - cron: "15 0 * * *"   # tenta de madrugada
+    - cron: "20 8 * * *"   # cota da Cloudflare zera a meia-noite do Pacifico (~08:00Z): 16/11 06:35Z deu 429, 17/11 07:58Z gerou 82
     - cron: "30 18 * * *"  # 16/11: a cota parece janela de 24 h (gastou 16:08-16:23Z em 15/11, ainda 429 as 06:35Z de 16/11)
   workflow_dispatch:
     inputs:

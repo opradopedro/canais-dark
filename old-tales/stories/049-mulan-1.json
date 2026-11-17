@@ -179,13 +179,7 @@
       "arma": false,
       "u": 0.5
      }
-    ],
-    "cartao": {
-     "tipo": "nome",
-     "titulo": "Hua Mulan",
-     "sub": "from the Ballad of Mulan",
-     "t0": 0.4
-    }
+    ]
    }
   },
   {
@@ -252,7 +246,13 @@
       "arma": false,
       "u": 0.5
      }
-    ]
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Hua Mulan",
+     "sub": "from the Ballad of Mulan",
+     "t0": 0.4
+    }
    }
   },
   {
