@@ -376,7 +376,8 @@ function legenda(t) {
   X.save(); X.font = `900 ${VERT ? 88 : 74}px "Arial Black", Arial, sans-serif`; X.textBaseline = 'middle'; X.lineJoin = 'round';
   const txt = at.map(w => w.w.toUpperCase()); const sp = X.measureText(' ').width;
   const larg = txt.reduce((a, w) => a + X.measureText(w).width, 0) + sp * (txt.length - 1);
-  const enc = Math.min(1, (W - (VERT ? 260 : 70)) / (larg * 1.08)); // VERT: fora dos ~9% que o TikTok corta de cada lado let x = W / 2 - larg / 2; const y = VERT ? H * 0.74 : H - 120;
+  const enc = Math.min(1, (W - (VERT ? 260 : 70)) / (larg * 1.08)); // VERT: fora dos ~9% que o TikTok corta de cada lado
+  let x = W / 2 - larg / 2; const y = VERT ? H * 0.74 : H - 120;
   const pop = 1 + 0.08 * (1 - ease((t - at[0].a0) / 0.12));
   X.translate(W / 2, y); X.scale(pop * enc, pop * enc); X.translate(-W / 2, -y);
   at.forEach((w, i) => { const s = txt[i]; X.lineWidth = 14; X.strokeStyle = '#000'; X.strokeText(s, x, y); X.fillStyle = w.hi ? '#ffd23a' : '#fff'; X.fillText(s, x, y); x += X.measureText(s).width + sp; });
