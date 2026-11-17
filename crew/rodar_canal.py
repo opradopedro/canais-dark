@@ -178,6 +178,8 @@ def _rodar(canal):
         res = _rodar_uma(canal, int(resto))
         if "FALHOU" not in res or "roteiro com erro" in res or "POUCA MEMORIA" in res:
             break
+        if "LIMITE DE NARRACOES" in res:
+            break  # cota de voz do dia acabou: repetir agora so gasta tempo (zera 5h no Brasil)
         print(f"[{canal}] tentativa {n} de {TENTATIVAS} falhou; tento de novo em 1 minuto", flush=True)
         print(res[-1500:], flush=True)
         time.sleep(60)
@@ -510,7 +512,11 @@ if __name__ == "__main__":
     texto = funcoes.get(qual, run)() or ""
     # no GitHub Actions, falha vira X vermelho e o GitHub manda e-mail ao Pedro. So falha quando o programa do canal
     # falhou de verdade: video barrado mas trocado pelo substituto nao e falha (vira aviso na issue, ver alertar).
-    if any(m in texto for m in ("FALHOU", "NAO RODEI")):
+    # "OK COM AVISO" (produce.py saiu 3): barrado agora, mas o canal tem video agendado, nada fica vazio.
+    # Nem a ULTIMA tentativa manda e-mail nesse caso (17/11: SV038 sem cota de voz deu X vermelho com fila cheia).
+    if "OK COM AVISO" in texto and "NAO RODEI" not in texto:
+        print("OK COM AVISO: video barrado nesta execucao, mas ha video agendado; sem e-mail")
+    elif any(m in texto for m in ("FALHOU", "NAO RODEI")):
         open(os.path.join(tempfile.gettempdir(), "canais-falhou.txt"), "w").write(texto)  # vai para a Release "logs"
         if os.environ.get("CANAIS_ULTIMA") or qual in ("teste", "metricas", "capas-yb"):
             sys.exit(1)  # ultima chance do dia: X vermelho e e-mail ao Pedro
