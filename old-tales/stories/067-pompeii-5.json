@@ -1,0 +1,1175 @@
+{
+ "formato": "POV",
+ "tema": "calmo",
+ "paleta": "grecia",
+ "piano": 0,
+ "origem": "gringa: Itália, o armário fechado há 2.000 anos aberto em Pompeia (anúncio do Parque Arqueológico, 29/10/2026, viral na imprensa italiana) https://www.internazionale.it/ultime-notizie-reuters/2026/10/29/pompeii-cupboard-opens-window-onto-life-before-vesuvius-erupted ; https://www.finestresullarte.info/archeologia/pompei-riemerge-armadio-di-una-donna-scomparsa-nell-eruzione-del-79-dc-ecco-cosa-conservava",
+ "serie": "pompeii",
+ "serie_titulo": "You Wake Up in Pompeii | Old Tales",
+ "partes": 5,
+ "tags": [
+  "old tales",
+  "history",
+  "story time",
+  "pompeii",
+  "vesuvius",
+  "ancient rome",
+  "roman history",
+  "volcano",
+  "pov history"
+ ],
+ "codigo": "CL067",
+ "parte": 5,
+ "anterior": "CL066",
+ "titulo": "What archaeologists found in Pompeii's closed cupboard 🌋 Part 5 #history #shorts",
+ "capa": "38 COINS",
+ "descripcion": "You survived the eruption. Pompeii didn't. 1,700 years later the city came back out of the ash, and in October 2026, so did Julia's cupboard.\n\nWould you have run, or stayed for your coins?\n\nSources: Pliny the Younger, Letters 6.16 and 6.20; Archaeological Park of Pompeii. The baker and Julia are fictional; the eruption and the finds are real.\n#pompeii #vesuvius #history #archaeology #shorts",
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "voce": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#8a6a3a"
+  },
+  "julia": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#7a2a3a"
+  },
+  "plinio_jovem": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "tunica",
+   "roupa_cor": "#e8e0d0"
+  },
+  "plinio": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "tiara": true,
+   "roupa_cor": "#5a2a6a",
+   "barba_estilo": "cheia",
+   "barba": "#8a8a8a"
+  },
+  "fugitivo": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#5a3a3a",
+   "barba_estilo": "cheia",
+   "barba": "#2a1a10"
+  },
+  "arqueologa": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#5a6a4a"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "You wake up on a road outside Pompeii, covered in ash, and the city is *gone*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-indo",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "agachar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.15,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Not burning. Not ruined. Gone, buried under up to six meters of ash and stone.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-alto",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Your skin burns. Your lungs ache. But you're alive.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-indo",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "agachar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Julia isn't next to you. Only her lamp, broken in the dust.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-indo",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "agachar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Thousands of people escaped on the first day. Historians found traces of survivors.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-meio",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "andar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "voce",
+      "pose": "andar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "They moved to Naples, Cumae, Puteoli. They started over.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "grecia_templo-mercado",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Rome sent help. But nobody ever rebuilt Pompeii.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "grecia_templo-templo",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because the city slept for almost seventeen centuries.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-alto-dourado",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": []
+   }
+  },
+  {
+   "texto": "People forgot exactly where it was. Farmers planted vineyards on top.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-alto",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In seventeen forty-eight, workers finally started digging it up.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Excavations began",
+     "valor": "1748",
+     "sub": "after 1,700 years",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "They found streets, bakeries, and bread still in the ovens.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-mercado",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "agachar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And in the ash, strange empty holes, in the shape of people.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In eighteen sixty-three, Giuseppe Fiorelli poured plaster into those holes.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "arqueologa",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Out came the last moments of the victims. Hands over faces. Parents holding children.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-pe_torre",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": []
+   }
+  },
+  {
+   "texto": "But science keeps surprising us.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "arqueologa",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In twenty twenty-four, DNA tested a famous cast called mother and child.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "arqueologa",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "DNA study",
+     "valor": "2024",
+     "sub": "rewrote the casts' stories",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "It was a man, holding a boy who wasn't his son.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-pe_torre",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "deitado",
+      "rosto": "triste",
+      "v": 0.8,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then, in October twenty twenty-six, archaeologists opened a house on the busiest street of Pompeii.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-mercado",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "arqueologa",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Inside, a wooden cupboard, closed since the eruption.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa-noite",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "arqueologa",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A child's necklace of tiny lucky charms. Perfume. Lead weights for a merchant's scale.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa-noite",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "arqueologa",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And a little basket with thirty-eight bronze coins.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa-noite",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "apontar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Cupboard, opened 2026",
+     "valor": "38",
+     "sub": "bronze coins",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "Nobody knows who lived there. Or if they made it out.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-escada-dourado",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "andar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "But you know one thing. Whoever closed it thought they were coming back.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa-dourado",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Would you have run, or stayed for your coins?",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-alto-dourado",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "mundo": "cl-pompeii",
+ "elenco_3d": {
+  "voce": {
+   "semente": 6301,
+   "corpo": "medio",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "camisa": "#8a6a3a"
+  },
+  "julia": {
+   "semente": 6302,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "casual",
+   "camisa": "#7a2a3a"
+  },
+  "plinio_jovem": {
+   "semente": 6303,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "camisa": "#e8e0d0"
+  },
+  "plinio": {
+   "semente": 6304,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "rei",
+   "acessorio": "barba"
+  },
+  "fugitivo": {
+   "semente": 6305,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "acessorio": "barba"
+  },
+  "arqueologa": {
+   "semente": 6306,
+   "corpo": "medio",
+   "cabelo": "rabo",
+   "roupa": "casual",
+   "camisa": "#5a6a4a"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "indo",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Lie_StandUp",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "alto",
+    "plano": "aberto",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "indo",
+    "plano": "close",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "indo",
+    "plano": "baixo",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "PickUp",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "aberto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Walking_A",
+      "rosto": "triste"
+     },
+     {
+      "id": "voce",
+      "acao": "Walking_B",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "mercado",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Work_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "templo",
+    "plano": "aberto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_B",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "alto",
+    "plano": "aberto",
+    "luz": "por_sol",
+    "atores": []
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "alto",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Digging",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Pickaxing",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "PickUp",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "baixo",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Crouching",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "arqueologa",
+      "acao": "Work_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "close",
+    "luz": "nublado",
+    "atores": []
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "arqueologa",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "arqueologa",
+      "acao": "Holding_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Lie_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "arqueologa",
+      "acao": "Walking_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "arqueologa",
+      "acao": "Interact",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "arqueologa",
+      "acao": "Holding_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Holding_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "escada",
+    "plano": "medio",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Walking_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 22,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "ombro",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 23,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "alto",
+    "plano": "medio",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  }
+ ],
+ "gancho_visual": true
+}

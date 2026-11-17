@@ -1,0 +1,1239 @@
+{
+ "formato": "POV",
+ "tema": "calmo",
+ "paleta": "grecia",
+ "piano": 0,
+ "origem": "gringa: Itália, o armário fechado há 2.000 anos aberto em Pompeia (anúncio do Parque Arqueológico, 29/10/2026, viral na imprensa italiana) https://www.internazionale.it/ultime-notizie-reuters/2026/10/29/pompeii-cupboard-opens-window-onto-life-before-vesuvius-erupted ; https://www.finestresullarte.info/archeologia/pompei-riemerge-armadio-di-una-donna-scomparsa-nell-eruzione-del-79-dc-ecco-cosa-conservava",
+ "serie": "pompeii",
+ "serie_titulo": "You Wake Up in Pompeii | Old Tales",
+ "partes": 5,
+ "tags": [
+  "old tales",
+  "history",
+  "story time",
+  "pompeii",
+  "vesuvius",
+  "ancient rome",
+  "roman history",
+  "volcano",
+  "pov history"
+ ],
+ "codigo": "CL063",
+ "parte": 1,
+ "titulo": "You wake up in Pompeii, the day the mountain wakes up 🌋 Part 1 #history #shorts",
+ "capa": "POMPEII, 79 AD",
+ "descripcion": "In October 2026, archaeologists opened a cupboard in Pompeii that stayed shut for 2,000 years. Today you live the days before Vesuvius erupted, next door to the woman who closed it.\n\n> Part 2: {when_next}.\nWould you have left the city?\n\nSources: Pliny the Younger, Letters 6.16 and 6.20; Archaeological Park of Pompeii. The baker and Julia are fictional; the eruption and the finds are real.\n#pompeii #vesuvius #history #ancientrome #shorts",
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "voce": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#8a6a3a"
+  },
+  "julia": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#7a2a3a"
+  },
+  "plinio_jovem": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "tunica",
+   "roupa_cor": "#e8e0d0"
+  },
+  "plinio": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "tiara": true,
+   "roupa_cor": "#5a2a6a",
+   "barba_estilo": "cheia",
+   "barba": "#8a8a8a"
+  },
+  "fugitivo": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#5a3a3a",
+   "barba_estilo": "cheia",
+   "barba": "#2a1a10"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "In October twenty twenty-six, archaeologists opened a cupboard that stayed *shut for two thousand years*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa-noite",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.15,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Whoever closed it never came back for the money inside. Today, you find out why.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-alto-tempestade",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "You wake up in Pompeii, in the year seventy-nine.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca-dourado",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A Roman town of about eleven thousand people, under a green mountain.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Pompeii, 79 AD",
+     "valor": "~11,000",
+     "sub": "people under Vesuvius",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "The mountain is called *Vesuvius*. Nobody here thinks it's dangerous.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-alto",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Its slopes are covered in vineyards. The wine is famous across the empire.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-alto",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "You work at a bakery on the busiest street in town.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-mercado",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Before sunrise, you stamp your boss's name on every loaf and slide it in the oven.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-mercado-dourado",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Next door lives Julia, a widow who sells weights and scales to merchants.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-mercado",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Julia",
+     "sub": "widow, sells weights and scales",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "She keeps her savings in a wooden cupboard: thirty-eight bronze coins.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because the town is already sending warnings. And nobody listens.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Seventeen years ago, an earthquake cracked half of Pompeii.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-templo-tempestade",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "lutar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Earthquake",
+     "valor": "62 AD",
+     "sub": "17 years before",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "Temples still have scaffolding. The aqueduct still leaks.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-templo",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "This week, the ground shakes again. Small tremors, every night.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa-noite",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In Campania, people say, the earth always moves. Go back to sleep.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa-noite",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pliny, a Roman writer, will later say the shaking lasted for days.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-escada",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "plinio_jovem",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Someday, archaeologists will find eighty-one of these loaves, still in the oven.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-mercado",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "On the walls, people scribble jokes, insults and love notes.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "One says: Successus the weaver loves the innkeeper's slave girl.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "triunfo",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Julia laughs at you. The gods are angry at Rome, not at bakers.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-mercado",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "triunfo",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Just after midday, you hear a sound like a thousand doors slamming at once.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "pular",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The bread trembles on the shelves. The whole street goes silent.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-mercado",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "lutar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Everyone turns toward Vesuvius.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Its top has just *blown open*. Part two, {when_next}.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-alto-tempestade",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "correr",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 20,
+   "en": 0.3
+  }
+ ],
+ "mundo": "cl-pompeii",
+ "elenco_3d": {
+  "voce": {
+   "semente": 6301,
+   "corpo": "medio",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "camisa": "#8a6a3a"
+  },
+  "julia": {
+   "semente": 6302,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "casual",
+   "camisa": "#7a2a3a"
+  },
+  "plinio_jovem": {
+   "semente": 6303,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "camisa": "#e8e0d0"
+  },
+  "plinio": {
+   "semente": 6304,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "rei",
+   "acessorio": "barba"
+  },
+  "fugitivo": {
+   "semente": 6305,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "acessorio": "barba"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Holding_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "alto",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Lie_StandUp",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "aberto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Walking_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "alto",
+    "plano": "aberto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_B",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "alto",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Work_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Work_B",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "medio",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Working_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Interact",
+      "rosto": "desconfiado"
+     },
+     {
+      "id": "voce",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Holding_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "ombro",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "templo",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "templo",
+    "plano": "aberto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Walking_B",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     },
+     {
+      "id": "voce",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "escada",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "plinio_jovem",
+      "acao": "Holding_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "PickUp",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Interact",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Cheering",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Cheering",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Jump_Full_Short",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "baixo",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Dodge_Left",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 22,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "ombro",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     },
+     {
+      "id": "voce",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 23,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "alto",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Running_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  }
+ ],
+ "gancho_visual": true
+}

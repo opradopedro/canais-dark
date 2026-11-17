@@ -1,0 +1,1224 @@
+{
+ "formato": "POV",
+ "tema": "calmo",
+ "paleta": "grecia",
+ "piano": 0,
+ "origem": "gringa: Itália, o armário fechado há 2.000 anos aberto em Pompeia (anúncio do Parque Arqueológico, 29/10/2026, viral na imprensa italiana) https://www.internazionale.it/ultime-notizie-reuters/2026/10/29/pompeii-cupboard-opens-window-onto-life-before-vesuvius-erupted ; https://www.finestresullarte.info/archeologia/pompei-riemerge-armadio-di-una-donna-scomparsa-nell-eruzione-del-79-dc-ecco-cosa-conservava",
+ "serie": "pompeii",
+ "serie_titulo": "You Wake Up in Pompeii | Old Tales",
+ "partes": 5,
+ "tags": [
+  "old tales",
+  "history",
+  "story time",
+  "pompeii",
+  "vesuvius",
+  "ancient rome",
+  "roman history",
+  "volcano",
+  "pov history"
+ ],
+ "codigo": "CL064",
+ "parte": 2,
+ "anterior": "CL063",
+ "titulo": "The sky over Pompeii started falling, one stone at a time 🌋 Part 2 #history #shorts",
+ "capa": "THE SKY FALLS",
+ "descripcion": "Vesuvius just exploded. A column of rock rises 30 km and the sky over Pompeii starts raining pumice, for 18 hours.\n\n> Part 3: {when_next}.\nWould you stay inside or run?\n\nSources: Pliny the Younger, Letters 6.16 and 6.20; Archaeological Park of Pompeii. The baker and Julia are fictional; the eruption and the finds are real.\n#pompeii #vesuvius #history #ancientrome #shorts",
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "voce": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#8a6a3a"
+  },
+  "julia": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#7a2a3a"
+  },
+  "plinio_jovem": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "tunica",
+   "roupa_cor": "#e8e0d0"
+  },
+  "plinio": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "tiara": true,
+   "roupa_cor": "#5a2a6a",
+   "barba_estilo": "cheia",
+   "barba": "#8a8a8a"
+  },
+  "fugitivo": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#5a3a3a",
+   "barba_estilo": "cheia",
+   "barba": "#2a1a10"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "A mountain above a Roman town just *exploded*, and you're standing in the street below it.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca-tempestade",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.15,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In the next eighteen hours, the sky over Pompeii will fall, one stone at a time.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-alto-tempestade",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A column of smoke and rock shoots straight up, higher than any bird can fly.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-alto-tempestade",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Across the bay, a teenager named Pliny watches it from his uncle's villa.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "grecia_templo-escada",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "plinio_jovem",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Pliny the Younger",
+     "sub": "17, the only eyewitness who wrote it down",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "He'll write that it looked like an umbrella pine: a tall trunk, then spreading branches.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "grecia_templo-templo",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "plinio_jovem",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Scientists today say the column reached over thirty kilometers high.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-alto-tempestade",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "chuva"
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Eruption column",
+     "valor": "30+ km",
+     "sub": "high",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "For a minute, nothing happens. People just stare.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "fugitivo",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then the light goes strange. The sun turns brown, then gray.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca-tempestade",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And something starts tapping on the roof tiles.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa-tempestade",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stones. Light, white stones, full of holes, like hard foam.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-mercado-tempestade",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "agachar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It's *pumice*, volcanic rock full of gas bubbles.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-mercado-tempestade",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It doesn't hurt much at first. It bounces off your shoulders.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca-tempestade",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "lutar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because the stones never stopped falling.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca-tempestade",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "After one hour, they cover your sandals. After three, your knees.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-mercado-tempestade",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Some estimates say up to fifteen centimeters every hour.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca-tempestade",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "chuva"
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Pumice fall",
+     "valor": "~15 cm",
+     "sub": "every hour",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "Julia drags you inside her house. We wait, she says. It will stop.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa-noite",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "voce",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "She locks her coins in the cupboard and turns the little key.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa-noite",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Outside, carts are jammed at the city gates. Mules scream.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-escada-tempestade",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "correr",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "By evening, it's dark as midnight, and lamps barely light a step ahead.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca-noite",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "tocha",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then you hear wood cracking above your head.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa-noite",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The roof beams are bending under the weight of the stones.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa-noite",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Across town, the first roofs are already *collapsing*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-templo-tempestade",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "cair",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Julia looks at you. For the first time, she's scared.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa-noite",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay inside and be crushed, or run into the falling sky? Part three, {when_next}.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa-noite",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "julia",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "mundo": "cl-pompeii",
+ "elenco_3d": {
+  "voce": {
+   "semente": 6301,
+   "corpo": "medio",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "camisa": "#8a6a3a"
+  },
+  "julia": {
+   "semente": 6302,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "casual",
+   "camisa": "#7a2a3a"
+  },
+  "plinio_jovem": {
+   "semente": 6303,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "camisa": "#e8e0d0"
+  },
+  "plinio": {
+   "semente": 6304,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "rei",
+   "acessorio": "barba"
+  },
+  "fugitivo": {
+   "semente": 6305,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "acessorio": "barba"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "alto",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "alto",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "escada",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "plinio_jovem",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "templo",
+    "plano": "ombro",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "plinio_jovem",
+      "acao": "Holding_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "alto",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "atores": []
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "aberto",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     },
+     {
+      "id": "fugitivo",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "auto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "PickUp",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Holding_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Dodge_Right",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "ombro",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Running_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Walking_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "atores": []
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Interact",
+      "rosto": "bravo"
+     },
+     {
+      "id": "voce",
+      "acao": "Running_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Work_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "escada",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Running_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Holding_A",
+      "rosto": "medo",
+      "segura": "tocha"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "templo",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Death_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 22,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 23,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     },
+     {
+      "id": "julia",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  }
+ ],
+ "gancho_visual": true
+}

@@ -1,0 +1,1154 @@
+{
+ "formato": "POV",
+ "tema": "calmo",
+ "paleta": "grecia",
+ "piano": 0,
+ "origem": "gringa: Itália, o armário fechado há 2.000 anos aberto em Pompeia (anúncio do Parque Arqueológico, 29/10/2026, viral na imprensa italiana) https://www.internazionale.it/ultime-notizie-reuters/2026/10/29/pompeii-cupboard-opens-window-onto-life-before-vesuvius-erupted ; https://www.finestresullarte.info/archeologia/pompei-riemerge-armadio-di-una-donna-scomparsa-nell-eruzione-del-79-dc-ecco-cosa-conservava",
+ "serie": "pompeii",
+ "serie_titulo": "You Wake Up in Pompeii | Old Tales",
+ "partes": 5,
+ "tags": [
+  "old tales",
+  "history",
+  "story time",
+  "pompeii",
+  "vesuvius",
+  "ancient rome",
+  "roman history",
+  "volcano",
+  "pov history"
+ ],
+ "codigo": "CL066",
+ "parte": 4,
+ "anterior": "CL065",
+ "titulo": "The burning cloud that ended Pompeii in minutes 🌋 Part 4 #history #shorts",
+ "capa": "THE CLOUD",
+ "descripcion": "The stones stopped falling. That was the worst sign. At dawn, a burning cloud rolled down Vesuvius, faster than a horse.\n\n> Part 5: {when_next}.\nWould you have gone back for the coins?\n\nSources: Pliny the Younger, Letters 6.16 and 6.20; Archaeological Park of Pompeii. The baker and Julia are fictional; the eruption and the finds are real.\n#pompeii #vesuvius #history #ancientrome #shorts",
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "voce": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#8a6a3a"
+  },
+  "julia": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#7a2a3a"
+  },
+  "plinio_jovem": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "tunica",
+   "roupa_cor": "#e8e0d0"
+  },
+  "plinio": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "tiara": true,
+   "roupa_cor": "#5a2a6a",
+   "barba_estilo": "cheia",
+   "barba": "#8a8a8a"
+  },
+  "fugitivo": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#5a3a3a",
+   "barba_estilo": "cheia",
+   "barba": "#2a1a10"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "Thirteen people are hiding in a garden in Pompeii, and a *burning cloud* is coming.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-pe_torre-noite",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.15,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It moves faster than a horse. Nobody who sees it close survives.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-vindo-tempestade",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "correr",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "At dawn, the stones finally stop falling.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-pe_torre",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "agachar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The silence is worse. The sun doesn't rise. The sky stays black.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca-noite",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Julia stands up. The cupboard, she says. My coins. Everything I have.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-pe_torre-noite",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "You grab her arm. Leave it. We go now, through the Nuceria gate.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-pe_torre-noite",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "julia",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because in Herculaneum, it had already happened.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-acostamento-noite",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
+  },
+  {
+   "texto": "Hours ago, a cloud of gas and ash rolled down the mountain.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-vindo-tempestade",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ]
+   }
+  },
+  {
+   "texto": "Scientists call it a pyroclastic surge. Hot enough to kill in seconds.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-alto-tempestade",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "chuva"
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Pyroclastic surge",
+     "valor": "100s of °C",
+     "sub": "kills in seconds",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "Now, behind Pompeii, the mountain makes a new sound. A deep roar.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-alto-tempestade",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "You look back. A wall of gray is rolling over the hills.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-vindo-tempestade",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It swallows the vineyards. Then the villas. Then the city walls.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-vindo-tempestade",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "chuva"
+    ]
+   }
+  },
+  {
+   "texto": "You run. Julia runs. The strangers stay behind.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-meio-tempestade",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "julia",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Rooftops vanish behind you, one after another, like candles going out.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca-tempestade",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The air turns hot. It burns your throat to breathe.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-mercado-tempestade",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "susto",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Julia trips in the deep pumice. You turn back and pull her up.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-mercado-tempestade",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "julia",
+      "pose": "cair",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "voce",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Twenty more steps to the gate. Fifteen. Ten.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-indo-tempestade",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "correr",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Some people lie down and cover their faces with their cloaks.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-meio-tempestade",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "deitado",
+      "rosto": "triste",
+      "v": 0.8,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Archaeologists will find them like that, centuries later.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-meio",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "deitado",
+      "rosto": "triste",
+      "v": 0.8,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In the garden behind you, the thirteen never got up again.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-pe_torre-tempestade",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "chuva"
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Garden of the Fugitives",
+     "valor": "13",
+     "sub": "victims found together",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "Today, their plaster casts are still there. You can visit them.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-pe_torre",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": []
+   }
+  },
+  {
+   "texto": "You reach the gate as the cloud hits the street behind it.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-escada-tempestade",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "pular",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "julia",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A wave of heat lifts you off your feet.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-escada-tempestade",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "cair",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And the whole world turns *black*. Part five, {when_next}.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-indo-noite",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 22,
+   "en": 0.3
+  }
+ ],
+ "mundo": "cl-pompeii",
+ "elenco_3d": {
+  "voce": {
+   "semente": 6301,
+   "corpo": "medio",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "camisa": "#8a6a3a"
+  },
+  "julia": {
+   "semente": 6302,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "casual",
+   "camisa": "#7a2a3a"
+  },
+  "plinio_jovem": {
+   "semente": 6303,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "camisa": "#e8e0d0"
+  },
+  "plinio": {
+   "semente": 6304,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "rei",
+   "acessorio": "barba"
+  },
+  "fugitivo": {
+   "semente": 6305,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "acessorio": "barba"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Running_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "auto",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Sit_Floor_StandUp",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "aberto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Interact",
+      "rosto": "bravo"
+     },
+     {
+      "id": "julia",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "acostamento",
+    "plano": "aberto",
+    "luz": "noite",
+    "atores": []
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": []
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "alto",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "atores": []
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "alto",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "ombro",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_B",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "atores": []
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Running_A",
+      "rosto": "medo"
+     },
+     {
+      "id": "julia",
+      "acao": "Running_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Running_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Hit_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "julia",
+      "acao": "Death_B",
+      "rosto": "susto"
+     },
+     {
+      "id": "voce",
+      "acao": "Dodge_Backward",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "indo",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Running_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Lie_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "close",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Lie_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "atores": []
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": []
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "escada",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Jump_Full_Long",
+      "rosto": "susto"
+     },
+     {
+      "id": "julia",
+      "acao": "Running_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 22,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "escada",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Death_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 23,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "indo",
+    "plano": "aberto",
+    "luz": "noite",
+    "atores": []
+   }
+  }
+ ],
+ "gancho_visual": true
+}

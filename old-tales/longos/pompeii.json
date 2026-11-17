@@ -1,0 +1,21 @@
+{
+ "_obs": "Video longo de Pompeia (formato do Pedro 15/11: 1 serie por longo). As partes CL063-CL067 entram sozinhas quando a parte 5 for publicada.",
+ "titulo": "You Wake Up in Pompeii: The Last 2 Days Before Vesuvius | Full Story",
+ "descricao": "Pompeii, 79 AD. The tremors, the umbrella-pine cloud, 18 hours of falling pumice, the admiral who sailed into the eruption, the burning cloud at dawn, and the cupboard archaeologists opened in 2026 with 38 coins still inside.\n\nAll 5 parts in one video, plus what is true in this story.\n\nSources: Pliny the Younger, Letters 6.16 and 6.20; Archaeological Park of Pompeii. The baker and Julia are fictional.",
+ "tags": [
+  "pompeii",
+  "vesuvius",
+  "ancient rome",
+  "roman history",
+  "pliny the younger",
+  "history documentary",
+  "old tales",
+  "pov history"
+ ],
+ "capa_texto": "POMPEII, 79 AD",
+ "series": [
+  "pompeii"
+ ],
+ "abertura": "old-tales/longos/pompeii-abertura.json",
+ "epilogo": "old-tales/longos/pompeii-epilogo.json"
+}

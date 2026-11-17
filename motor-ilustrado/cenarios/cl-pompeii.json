@@ -1,0 +1,208 @@
+{
+ "mundo": "cl-pompeii",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "dark epic ancient Roman illustration, Pompeii in 79 AD, red frescoed walls, terracotta roofs, marble and bronze, dramatic moody light, realistic proportions, mature adult tone, not childish",
+ "ordem": 51,
+ "cenarios": {
+  "esparta_cidade-casa-noite": {
+   "lugar": "esparta_cidade/casa (noite)",
+   "prompt": "inside a Roman house in Pompeii with red frescoed walls, a tall wooden cupboard, oil lamps and heavy roof beams, at night, dark, lit only by oil lamps and torches",
+   "seed": 115
+  },
+  "esparta_cidade-alto-tempestade": {
+   "lugar": "esparta_cidade/alto (tempestade)",
+   "prompt": "the green slopes of Mount Vesuvius covered in vineyards, above the Roman town of Pompeii, a giant eruption column of ash rising from its top, under a black sky raining volcanic ash and pumice stones, Vesuvius erupting",
+   "seed": 122
+  },
+  "esparta_cidade-praca-dourado": {
+   "lugar": "esparta_cidade/praca (dourado)",
+   "prompt": "the forum of Pompeii with tall columns, people in tunics, Mount Vesuvius behind it, at sunset, golden orange light",
+   "seed": 129
+  },
+  "esparta_cidade-praca": {
+   "lugar": "esparta_cidade/praca (dia)",
+   "prompt": "the forum of Pompeii with tall columns, people in tunics, Mount Vesuvius behind it, in daylight",
+   "seed": 136
+  },
+  "esparta_cidade-alto": {
+   "lugar": "esparta_cidade/alto (dia)",
+   "prompt": "the green slopes of Mount Vesuvius covered in vineyards, above the Roman town of Pompeii, in daylight",
+   "seed": 143
+  },
+  "esparta_cidade-mercado": {
+   "lugar": "esparta_cidade/mercado (dia)",
+   "prompt": "a busy Roman street in Pompeii with a bakery, stone grain mills and a brick bread oven, painted wall graffiti, in daylight",
+   "seed": 150
+  },
+  "esparta_cidade-mercado-dourado": {
+   "lugar": "esparta_cidade/mercado (dourado)",
+   "prompt": "a busy Roman street in Pompeii with a bakery, stone grain mills and a brick bread oven, painted wall graffiti, at sunset, golden orange light",
+   "seed": 157
+  },
+  "esparta_cidade-casa": {
+   "lugar": "esparta_cidade/casa (dia)",
+   "prompt": "inside a Roman house in Pompeii with red frescoed walls, a tall wooden cupboard, oil lamps and heavy roof beams, in daylight",
+   "seed": 164
+  },
+  "esparta_cidade-templo-tempestade": {
+   "lugar": "esparta_cidade/templo (tempestade)",
+   "prompt": "a Roman temple in Pompeii with cracked columns and wooden scaffolding, under a black sky raining volcanic ash and pumice stones, Vesuvius erupting",
+   "seed": 171
+  },
+  "esparta_cidade-templo": {
+   "lugar": "esparta_cidade/templo (dia)",
+   "prompt": "a Roman temple in Pompeii with cracked columns and wooden scaffolding, in daylight",
+   "seed": 178
+  },
+  "esparta_cidade-escada": {
+   "lugar": "esparta_cidade/escada (dia)",
+   "prompt": "the stone arch of a Roman city gate of Pompeii, the road leading out of town, in daylight",
+   "seed": 185
+  },
+  "esparta_cidade-praca-tempestade": {
+   "lugar": "esparta_cidade/praca (tempestade)",
+   "prompt": "the forum of Pompeii with tall columns, people in tunics, Mount Vesuvius behind it, under a black sky raining volcanic ash and pumice stones, Vesuvius erupting",
+   "seed": 115
+  },
+  "grecia_templo-escada": {
+   "lugar": "grecia_templo/escada (dia)",
+   "prompt": "the terrace of a Roman villa at Misenum overlooking the Bay of Naples, Vesuvius far across the water, in daylight",
+   "seed": 129
+  },
+  "grecia_templo-templo": {
+   "lugar": "grecia_templo/templo (dia)",
+   "prompt": "a Roman villa study with scrolls and wax tablets, a window over the Bay of Naples, in daylight",
+   "seed": 136
+  },
+  "esparta_cidade-casa-tempestade": {
+   "lugar": "esparta_cidade/casa (tempestade)",
+   "prompt": "inside a Roman house in Pompeii with red frescoed walls, a tall wooden cupboard, oil lamps and heavy roof beams, under a black sky raining volcanic ash and pumice stones, Vesuvius erupting",
+   "seed": 150
+  },
+  "esparta_cidade-mercado-tempestade": {
+   "lugar": "esparta_cidade/mercado (tempestade)",
+   "prompt": "a busy Roman street in Pompeii with a bakery, stone grain mills and a brick bread oven, painted wall graffiti, under a black sky raining volcanic ash and pumice stones, Vesuvius erupting",
+   "seed": 157
+  },
+  "esparta_cidade-escada-tempestade": {
+   "lugar": "esparta_cidade/escada (tempestade)",
+   "prompt": "the stone arch of a Roman city gate of Pompeii, the road leading out of town, under a black sky raining volcanic ash and pumice stones, Vesuvius erupting",
+   "seed": 171
+  },
+  "esparta_cidade-praca-noite": {
+   "lugar": "esparta_cidade/praca (noite)",
+   "prompt": "the forum of Pompeii with tall columns, people in tunics, Mount Vesuvius behind it, at night, dark, lit only by oil lamps and torches",
+   "seed": 178
+  },
+  "mar_jangada-mar-tempestade": {
+   "lugar": "mar_jangada/mar (tempestade)",
+   "prompt": "the Bay of Naples with Roman war galleys, Vesuvius erupting on the far shore, under a black sky raining volcanic ash and pumice stones, Vesuvius erupting",
+   "seed": 157
+  },
+  "mar_jangada-horizonte-tempestade": {
+   "lugar": "mar_jangada/horizonte (tempestade)",
+   "prompt": "the coastline of the Bay of Naples, the sea pulling back and leaving boats on the sand, under a black sky raining volcanic ash and pumice stones, Vesuvius erupting",
+   "seed": 164
+  },
+  "mar_jangada-proa-tempestade": {
+   "lugar": "mar_jangada/proa (tempestade)",
+   "prompt": "the bow of a Roman war galley pushing through rough water toward an erupting volcano, under a black sky raining volcanic ash and pumice stones, Vesuvius erupting",
+   "seed": 171
+  },
+  "mar_jangada-popa-tempestade": {
+   "lugar": "mar_jangada/popa (tempestade)",
+   "prompt": "the deck of a Roman war galley with oars and a sail, hot stones falling on it, under a black sky raining volcanic ash and pumice stones, Vesuvius erupting",
+   "seed": 178
+  },
+  "mar_jangada-mar-noite": {
+   "lugar": "mar_jangada/mar (noite)",
+   "prompt": "the Bay of Naples with Roman war galleys, Vesuvius erupting on the far shore, at night, dark, lit only by oil lamps and torches",
+   "seed": 185
+  },
+  "mar_jangada-popa-noite": {
+   "lugar": "mar_jangada/popa (noite)",
+   "prompt": "the deck of a Roman war galley with oars and a sail, hot stones falling on it, at night, dark, lit only by oil lamps and torches",
+   "seed": 192
+  },
+  "esparta_cidade-alto-noite": {
+   "lugar": "esparta_cidade/alto (noite)",
+   "prompt": "the green slopes of Mount Vesuvius covered in vineyards, above the Roman town of Pompeii, a giant eruption column of ash rising from its top, at night, dark, lit only by oil lamps and torches",
+   "seed": 199
+  },
+  "campo_batalha-vindo-noite": {
+   "lugar": "campo_batalha/vindo (noite)",
+   "prompt": "a huge wall of gray burning ash cloud rolling down the hills toward a Roman town, a pyroclastic surge from Vesuvius, at night, dark, lit only by oil lamps and torches",
+   "seed": 206
+  },
+  "campo_batalha-acostamento-noite": {
+   "lugar": "campo_batalha/acostamento (noite)",
+   "prompt": "the vaulted stone boathouses on the beach of Herculaneum, people crowded inside, at night, dark, lit only by oil lamps and torches",
+   "seed": 213
+  },
+  "campo_batalha-pe_torre-noite": {
+   "lugar": "campo_batalha/pe_torre (noite)",
+   "prompt": "a small walled Roman vineyard garden next to the city wall of Pompeii, at night, dark, lit only by oil lamps and torches",
+   "seed": 220
+  },
+  "campo_batalha-vindo-tempestade": {
+   "lugar": "campo_batalha/vindo (tempestade)",
+   "prompt": "a huge wall of gray burning ash cloud rolling down the hills toward a Roman town, a pyroclastic surge from Vesuvius, under a black sky raining volcanic ash and pumice stones, Vesuvius erupting",
+   "seed": 122
+  },
+  "campo_batalha-pe_torre": {
+   "lugar": "campo_batalha/pe_torre (dia)",
+   "prompt": "a small walled Roman vineyard garden next to the city wall of Pompeii, in daylight",
+   "seed": 129
+  },
+  "campo_batalha-meio-tempestade": {
+   "lugar": "campo_batalha/meio (tempestade)",
+   "prompt": "a Roman road just outside Pompeii covered in deep gray ash and pumice stones, under a black sky raining volcanic ash and pumice stones, Vesuvius erupting",
+   "seed": 157
+  },
+  "campo_batalha-indo-tempestade": {
+   "lugar": "campo_batalha/indo (tempestade)",
+   "prompt": "a road leading away from buried Pompeii, gray ash everywhere, Vesuvius smoking in the distance, under a black sky raining volcanic ash and pumice stones, Vesuvius erupting",
+   "seed": 178
+  },
+  "campo_batalha-meio": {
+   "lugar": "campo_batalha/meio (dia)",
+   "prompt": "a Roman road just outside Pompeii covered in deep gray ash and pumice stones, in daylight",
+   "seed": 185
+  },
+  "campo_batalha-pe_torre-tempestade": {
+   "lugar": "campo_batalha/pe_torre (tempestade)",
+   "prompt": "a small walled Roman vineyard garden next to the city wall of Pompeii, under a black sky raining volcanic ash and pumice stones, Vesuvius erupting",
+   "seed": 192
+  },
+  "campo_batalha-indo-noite": {
+   "lugar": "campo_batalha/indo (noite)",
+   "prompt": "a road leading away from buried Pompeii, gray ash everywhere, Vesuvius smoking in the distance, at night, dark, lit only by oil lamps and torches",
+   "seed": 206
+  },
+  "campo_batalha-indo": {
+   "lugar": "campo_batalha/indo (dia)",
+   "prompt": "a road leading away from buried Pompeii, gray ash everywhere, Vesuvius smoking in the distance, in daylight",
+   "seed": 115
+  },
+  "grecia_templo-mercado": {
+   "lugar": "grecia_templo/mercado (dia)",
+   "prompt": "a crowded Roman harbor market in Naples with refugees and carts, in daylight",
+   "seed": 136
+  },
+  "esparta_cidade-alto-dourado": {
+   "lugar": "esparta_cidade/alto (dourado)",
+   "prompt": "the green slopes of Mount Vesuvius covered in vineyards, above the Roman town of Pompeii, at sunset, golden orange light",
+   "seed": 150
+  },
+  "esparta_cidade-escada-dourado": {
+   "lugar": "esparta_cidade/escada (dourado)",
+   "prompt": "the stone arch of a Roman city gate of Pompeii, the road leading out of town, at sunset, golden orange light",
+   "seed": 192
+  },
+  "esparta_cidade-casa-dourado": {
+   "lugar": "esparta_cidade/casa (dourado)",
+   "prompt": "inside a Roman house in Pompeii with red frescoed walls, a tall wooden cupboard, oil lamps and heavy roof beams, at sunset, golden orange light",
+   "seed": 199
+  }
+ }
+}

@@ -1,0 +1,1046 @@
+{
+ "formato": "POV",
+ "tema": "calmo",
+ "paleta": "grecia",
+ "piano": 0,
+ "origem": "gringa: Itália, o armário fechado há 2.000 anos aberto em Pompeia (anúncio do Parque Arqueológico, 29/10/2026, viral na imprensa italiana) https://www.internazionale.it/ultime-notizie-reuters/2026/10/29/pompeii-cupboard-opens-window-onto-life-before-vesuvius-erupted ; https://www.finestresullarte.info/archeologia/pompei-riemerge-armadio-di-una-donna-scomparsa-nell-eruzione-del-79-dc-ecco-cosa-conservava",
+ "serie": "pompeii",
+ "serie_titulo": "You Wake Up in Pompeii | Old Tales",
+ "tags": [
+  "old tales",
+  "history",
+  "story time",
+  "pompeii",
+  "vesuvius",
+  "ancient rome",
+  "roman history",
+  "volcano",
+  "pov history"
+ ],
+ "codigo": "CL063E",
+ "parte": 6,
+ "titulo": "Pompeii (epilogo do longo)",
+ "_obs": "Epilogo do video longo de Pompeia: o que e verdade nessa historia (so no longo).",
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "voce": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#8a6a3a"
+  },
+  "julia": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#7a2a3a"
+  },
+  "plinio_jovem": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "tunica",
+   "roupa_cor": "#e8e0d0"
+  },
+  "plinio": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "tiara": true,
+   "roupa_cor": "#5a2a6a",
+   "barba_estilo": "cheia",
+   "barba": "#8a8a8a"
+  },
+  "fugitivo": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#5a3a3a",
+   "barba_estilo": "cheia",
+   "barba": "#2a1a10"
+  },
+  "arqueologa": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#5a6a4a"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "So how much of what you just lived really happened?",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.15,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The eruption, almost all of it. Our baker and Julia are invented. The rest comes from sources.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-mercado",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "julia",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pliny the Younger wrote two letters to the historian Tacitus, about twenty-five years later.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "grecia_templo-templo",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "plinio_jovem",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "They are the only eyewitness account of the eruption that survived.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "grecia_templo-escada",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "plinio_jovem",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In them, the umbrella pine cloud, the pillows on heads, and his uncle's last voyage.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-proa-tempestade",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "plinio",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pliny the Elder died on the beach at Stabiae, probably from the fumes, or his heart.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-horizonte-tempestade",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "plinio",
+      "pose": "cair",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He was fifty-six, and the author of the biggest encyclopedia of the ancient world.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "grecia_templo-templo",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "plinio",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Pliny the Elder",
+     "sub": "23-79 AD, Natural History",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "What about the date? For centuries, schoolbooks said August twenty-fourth.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "arqueologa",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "But in twenty eighteen, archaeologists found a charcoal note on a wall.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-casa",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "arqueologa",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Dated mid-October, written in a house still being repaired.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-templo",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "arqueologa",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Add autumn fruits found in the ruins, and many experts now think it was October.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-mercado",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "arqueologa",
+      "pose": "agachar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "How many died? About eleven hundred victims have been found in Pompeii.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-pe_torre",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "deitado",
+      "rosto": "triste",
+      "v": 0.8,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Victims found in Pompeii",
+     "valor": "~1,100",
+     "sub": "a third of the city still buried",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "But a third of the city is still unexcavated.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "arqueologa",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And many died on the roads, never counted.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-meio",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": []
+   }
+  },
+  {
+   "texto": "In Herculaneum, the boathouses held more than three hundred skeletons, found in the nineteen eighties and nineties.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-acostamento-noite",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "arqueologa",
+      "pose": "agachar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Their bones let scientists measure the heat. Hundreds of degrees, in seconds.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-vindo-tempestade",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "chuva"
+    ]
+   }
+  },
+  {
+   "texto": "And Vesuvius? It's still active. It erupted again in nineteen forty-four, during World War Two.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-alto-tempestade",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Today, more than six hundred thousand people live in the red zone around it.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "campo_batalha-indo",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Vesuvius red zone today",
+     "valor": "600,000+",
+     "sub": "people",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "Italy has an evacuation plan for them. It needs about seventy-two hours.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-escada",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "fugitivo",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The volcano will give a warning. The question is whether people will listen this time.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-alto-dourado",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Would you live in the shadow of Vesuvius? Tell us in the comments.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "esparta_cidade-praca-dourado",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "voce",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [],
+ "mundo": "cl-pompeii",
+ "elenco_3d": {
+  "voce": {
+   "semente": 6301,
+   "corpo": "medio",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "camisa": "#8a6a3a"
+  },
+  "julia": {
+   "semente": 6302,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "casual",
+   "camisa": "#7a2a3a"
+  },
+  "plinio_jovem": {
+   "semente": 6303,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "camisa": "#e8e0d0"
+  },
+  "plinio": {
+   "semente": 6304,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "rei",
+   "acessorio": "barba"
+  },
+  "fugitivo": {
+   "semente": 6305,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "acessorio": "barba"
+  },
+  "arqueologa": {
+   "semente": 6306,
+   "corpo": "medio",
+   "cabelo": "rabo",
+   "roupa": "casual",
+   "camisa": "#5a6a4a"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Work_A",
+      "rosto": "neutro"
+     },
+     {
+      "id": "julia",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "templo",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "plinio_jovem",
+      "acao": "Holding_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "escada",
+    "plano": "ombro",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "plinio_jovem",
+      "acao": "Idle_B",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "proa",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "plinio",
+      "acao": "Waving",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "horizonte",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "plinio",
+      "acao": "Death_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "grecia_templo",
+    "marca": "templo",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "plinio",
+      "acao": "Holding_B",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "arqueologa",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "arqueologa",
+      "acao": "Interact",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "templo",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "arqueologa",
+      "acao": "Work_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "mercado",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "arqueologa",
+      "acao": "PickUp",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "pe_torre",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Lie_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "aberto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "arqueologa",
+      "acao": "Digging",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "meio",
+    "plano": "aberto",
+    "luz": "nublado",
+    "atores": []
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "acostamento",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "arqueologa",
+      "acao": "Crouching",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "vindo",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "atores": []
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "alto",
+    "plano": "aberto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "campo_batalha",
+    "marca": "indo",
+    "plano": "aberto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Walking_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "escada",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "fugitivo",
+      "acao": "Running_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "alto",
+    "plano": "medio",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "esparta_cidade",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "voce",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  }
+ ],
+ "gancho_visual": true
+}
