@@ -1,0 +1,390 @@
+{
+ "codigo": "YB074",
+ "formato": "Curiosidade",
+ "origem": "gringa: Argentina, os 'molinos' de vento dos pampas (vídeos e reportagens sobre os moinhos que ainda dão água ao gado) https://es.wikipedia.org/wiki/Molino_de_viento ; bomba de pistão com válvula de retenção, cauda e mola de recolhimento (Aermotor, 1888)",
+ "titulo": "How a farm windmill pumps water with no motor 🌬️ #engineering #shorts",
+ "capa": "NO MOTOR?",
+ "descripcion": "It doesn't make electricity. A crank, a steel rod and a piston below the water table do all the work.\n\nWhat should we explain next?\n\n#engineering #windmill #howitworks #farm #shorts",
+ "tags": [
+  "engineering",
+  "windmill",
+  "wind pump",
+  "how it works",
+  "farm",
+  "water well",
+  "shorts"
+ ],
+ "mundo": "campo",
+ "autor": "claude",
+ "lineas": [
+  {
+   "texto": "How does a farm windmill pull water from deep underground, with no motor at all?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Most people think it makes electricity. It doesn't.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "In the Argentine pampas, these windmills are called molinos, and they're everywhere.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The wheel has up to eighteen steel blades, angled like a fan.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Even a light breeze is enough to turn it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Behind the wheel, a crank turns the spin into an up-and-down motion.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That motion moves a long steel rod, straight down into the well.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "At the bottom, below the water table, the rod pulls a piston inside a cylinder.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "On the way up, the piston lifts the water above it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A one-way valve stops it from falling back down.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Stroke after stroke, the water climbs the pipe to the surface.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It flows into a storage tank, so the cows can drink on days with no wind.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The tail keeps the wheel facing the wind, like a weather vane.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And in a storm, a spring folds the wheel sideways, so it doesn't tear itself apart.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Between eighteen fifty and nineteen thirty, America installed millions of them.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": 0.6,
+    "haste": 1,
+    "foco": "moinho",
+    "rotulo": "NO MOTOR?",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": 0.6,
+    "haste": 1,
+    "foco": "moinho",
+    "rotulo": "NO ELECTRICITY",
+    "cor": "red",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": 0.6,
+    "haste": 1,
+    "foco": "geral",
+    "rotulo": "MOLINOS",
+    "etapa": "c2",
+    "camera": {
+     "x": 6.5,
+     "d": 30
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": 0.3,
+    "haste": 1,
+    "foco": "moinho",
+    "rotulo": "18 BLADES",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": [
+     0.1,
+     0.5
+    ],
+    "haste": 1,
+    "foco": "moinho",
+    "vento": 0.6,
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": 0.6,
+    "haste": 1,
+    "foco": "moinho",
+    "camera": {
+     "y": 6.5,
+     "d": 9
+    },
+    "rotulo": "CRANK",
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": 0.6,
+    "haste": 1,
+    "foco": "poco",
+    "rotulo": "PUMP ROD",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": 0.6,
+    "haste": 1,
+    "foco": "pistao",
+    "rotulo": "PISTON",
+    "marcas": [
+     {
+      "t": "Water table",
+      "x": 6.5,
+      "y": -3.7
+     }
+    ],
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": 0.6,
+    "haste": 1,
+    "foco": "pistao",
+    "sobe": [
+     0,
+     0.4
+    ],
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": 0.6,
+    "haste": 1,
+    "foco": "pistao",
+    "sobe": 0.4,
+    "rotulo": "ONE-WAY VALVE",
+    "cor": "green",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": 0.6,
+    "haste": 1,
+    "foco": "poco",
+    "sobe": [
+     0.4,
+     1
+    ],
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": 0.6,
+    "haste": 1,
+    "foco": "caixa",
+    "sobe": 1,
+    "caixa": "chao",
+    "cano_poco": 1,
+    "enche_caixa": 1,
+    "caixa_nivel": [
+     0.3,
+     0.8
+    ],
+    "rotulo": "STORAGE",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": 0.6,
+    "haste": 1,
+    "foco": "moinho",
+    "vento": 1,
+    "rotulo": "TAIL",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": 1,
+    "haste": 1,
+    "foco": "moinho",
+    "chuva": 1,
+    "vento": 1,
+    "dobra": [
+     0,
+     1
+    ],
+    "rotulo": "STORM MODE",
+    "cor": "green",
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": 0.5,
+    "haste": 1,
+    "foco": "geral",
+    "etapa": "c14",
+    "camera": {
+     "x": 6.5,
+     "d": 30
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "moinho_poco": 1,
+    "gira": 0.5,
+    "haste": 1,
+    "foco": "moinho",
+    "etapa": "c15"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 11,
+   "en": 0.6
+  }
+ ],
+ "destaque": [
+  "no motor",
+  "electricity",
+  "molinos",
+  "eighteen",
+  "breeze",
+  "crank",
+  "steel rod",
+  "piston",
+  "lifts",
+  "one-way valve",
+  "climbs",
+  "storage tank",
+  "tail",
+  "spring",
+  "millions"
+ ]
+}

@@ -1,0 +1,371 @@
+{
+ "codigo": "YB076",
+ "formato": "Curiosidade",
+ "origem": "autoral; lençol freático sazonal, cone de rebaixamento; seca de 2022 na Califórnia: mais de mil poços domésticos secos (California DWR, Dry Well Reporting System)",
+ "titulo": "Why your well runs dry every summer 💧 #engineering #shorts",
+ "capa": "WHY DID IT DRY UP?",
+ "descripcion": "The well didn't break. The water underground moved, and it usually comes back with the autumn rain.\n\nWhat should we explain next?\n\n#engineering #waterwell #groundwater #howitworks #shorts",
+ "tags": [
+  "engineering",
+  "water well",
+  "groundwater",
+  "water table",
+  "drought",
+  "how it works",
+  "shorts"
+ ],
+ "mundo": "campo",
+ "autor": "claude",
+ "lineas": [
+  {
+   "texto": "Why does a well that worked for years suddenly pull up air in August?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The well didn't break. The water underground moved.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Under every farm there's a water table, where the soil is soaked like a sponge.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A well works only if its bottom sits below that line.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "In spring, rain soaks in and the water table rises.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "In summer, there's little rain, and the sun and plants drink the topsoil dry.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A single big tree can pull hundreds of liters of water a day out of the ground.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then everyone starts pumping more for gardens and animals.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Each pump sucks down a cone of dry soil around its well.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The water table sinks below the bottom of shallow wells.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The bucket comes up empty, even though the ground still holds water deeper down.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's why old farmers dug wells at the end of summer, when the water was lowest.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Modern wells go much deeper, into rock layers called aquifers.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "In California's twenty twenty-two drought, more than a thousand household wells went dry.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So if your well runs dry, don't panic. It usually comes back with the autumn rain.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "poco",
+    "lencol": -7.8,
+    "bombeia": 1,
+    "seca": 1,
+    "rotulo": "DRY?",
+    "cor": "red",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "poco",
+    "lencol": [
+     -7.8,
+     -4
+    ],
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "fundo",
+    "lencol": -4,
+    "marcas": [
+     {
+      "t": "Water table",
+      "x": 0,
+      "y": -3.6
+     }
+    ],
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "poco",
+    "lencol": -4,
+    "rotulo": "BELOW THE LINE",
+    "cor": "green",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "fundo",
+    "chuva": 1,
+    "lencol": [
+     -4,
+     -2.6
+    ],
+    "rotulo": "SPRING",
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "geral",
+    "seca": [
+     0,
+     1
+    ],
+    "lencol": [
+     -2.6,
+     -4.5
+    ],
+    "rotulo": "SUMMER",
+    "cor": "red",
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "geral",
+    "seca": 1,
+    "lencol": -4.5,
+    "rotulo": "100s OF LITERS",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "poco",
+    "seca": 1,
+    "bombeia": 1,
+    "lencol": [
+     -4.5,
+     -5.5
+    ],
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "poco",
+    "seca": 1,
+    "bombeia": 1,
+    "lencol": -5.5,
+    "rotulo": "CONE OF DEPRESSION",
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "fundo",
+    "seca": 1,
+    "lencol": [
+     -5.5,
+     -7.8
+    ],
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "poco",
+    "seca": 1,
+    "lencol": -7.8,
+    "bombeia": 1,
+    "rotulo": "EMPTY",
+    "cor": "red",
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "poco",
+    "seca": 1,
+    "lencol": -7.8,
+    "rotulo": "DIG IN SEPTEMBER",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "fundo",
+    "lencol": -6,
+    "marcas": [
+     {
+      "t": "Aquifer",
+      "x": 2,
+      "y": -8.5
+     }
+    ],
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "geral",
+    "seca": 1,
+    "lencol": -7.8,
+    "rotulo": "1,000+ DRY WELLS",
+    "cor": "red",
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "poco",
+    "chuva": 1,
+    "lencol": [
+     -7.8,
+     -4
+    ],
+    "etapa": "c14"
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "bomba_mao": 1,
+    "foco": "poco",
+    "lencol": -4,
+    "etapa": "c15"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 12,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 14,
+   "en": 0.6
+  }
+ ],
+ "destaque": [
+  "pull up air",
+  "moved",
+  "water table",
+  "below",
+  "rises",
+  "summer",
+  "hundreds of liters",
+  "pumping",
+  "cone",
+  "sinks",
+  "empty",
+  "end of summer",
+  "aquifers",
+  "a thousand",
+  "autumn rain"
+ ]
+}

@@ -1,0 +1,443 @@
+{
+ "codigo": "YB075",
+ "formato": "Evolucao",
+ "origem": "gringa: Índia, biodigestores caseiros de esterco ('gobar gas'; cerca de 5 milhões em sítios indianos, programa nacional do MNRE; modelo de tambor flutuante do KVIC) https://en.wikipedia.org/wiki/Biogas#India",
+ "titulo": "You built a biogas digester 🐄 #engineering #shorts",
+ "capa": "YOU BUILT A BIOGAS PLANT",
+ "descripcion": "From a stinking pile of cow manure to free cooking gas and fertilizer, one problem at a time.\n\nWhat should we build next?\n\n#engineering #biogas #farm #offgrid #shorts",
+ "tags": [
+  "engineering",
+  "biogas",
+  "methane",
+  "cow manure",
+  "farm",
+  "off grid",
+  "how it works",
+  "shorts"
+ ],
+ "mundo": "campo",
+ "autor": "claude",
+ "lineas": [
+  {
+   "texto": "Your four cows make fifty kilos of manure a day, and the farm stinks.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Flies everywhere. And you're still buying gas to cook.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you dump the manure into a pit and mix it with water.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Problem solved? Not really. The open pit stinks even worse.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But look closely: the mud is bubbling.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Bacteria that live without air are eating the manure, and burping gas.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "About sixty percent of that gas is methane, the same fuel as in your stove.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you seal the pit under a brick dome.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now the gas collects at the top, and the smell stays inside.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you add a steel drum on top that rises as gas fills it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Its weight pushes the gas down a pipe to your kitchen.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "You open the valve, and a clean blue flame lights up.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the tank fills up with old, used-up slurry.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you add an outlet, and every new bucket pushes old slurry out.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That slurry is one of the best fertilizers your fields will ever get.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "India has around five million of these on family farms.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a biogas digester. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "campo",
+   "p": {
+    "foco": "esterco",
+    "esterco": 1,
+    "cheiro_esterco": 1,
+    "rotulo": "50 KG A DAY",
+    "cor": "red",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "campo",
+   "p": {
+    "foco": "esterco",
+    "esterco": 1,
+    "cheiro_esterco": 1,
+    "moscas_esterco": [
+     0,
+     1
+    ],
+    "rotulo": "FLIES",
+    "cor": "red",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "campo",
+   "p": {
+    "bio": 1,
+    "bio_nivel": [
+     0.1,
+     0.6
+    ],
+    "esterco": [
+     0.6,
+     0.15
+    ],
+    "foco": "bio",
+    "bio_aberto": 1,
+    "rotulo": "PIT",
+    "cor": "green",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "campo",
+   "p": {
+    "bio": 1,
+    "bio_nivel": 0.6,
+    "esterco": 0.15,
+    "foco": "bio",
+    "bio_aberto": 1,
+    "cheiro_esterco": 1,
+    "rotulo": "STINKS",
+    "cor": "red",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "campo",
+   "p": {
+    "bio": 1,
+    "bio_nivel": 0.6,
+    "esterco": 0.15,
+    "foco": "bio",
+    "bio_aberto": 1,
+    "bolhas": [
+     0.2,
+     1
+    ],
+    "camera": {
+     "d": 8
+    },
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "campo",
+   "p": {
+    "bio": 1,
+    "bio_nivel": 0.6,
+    "esterco": 0.15,
+    "foco": "bio",
+    "bio_aberto": 1,
+    "bolhas": 1,
+    "rotulo": "NO OXYGEN",
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "campo",
+   "p": {
+    "bio": 1,
+    "bio_nivel": 0.6,
+    "esterco": 0.15,
+    "foco": "bio",
+    "bio_aberto": 1,
+    "bolhas": 1,
+    "rotulo": "~60% METHANE",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "campo",
+   "p": {
+    "bio": 1,
+    "bio_nivel": 0.6,
+    "esterco": 0.15,
+    "foco": "bio",
+    "bolhas": 1,
+    "rotulo": "SEALED DOME",
+    "cor": "green",
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "campo",
+   "p": {
+    "bio": 1,
+    "bio_nivel": 0.6,
+    "esterco": 0.15,
+    "foco": "bio",
+    "bolhas": 1,
+    "gas": [
+     0,
+     0.8
+    ],
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "campo",
+   "p": {
+    "bio": 1,
+    "bio_nivel": 0.6,
+    "esterco": 0.15,
+    "foco": "bio",
+    "bolhas": 1,
+    "gas": 0.8,
+    "gasometro": [
+     0,
+     1
+    ],
+    "rotulo": "GAS HOLDER",
+    "cor": "green",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "campo",
+   "p": {
+    "bio": 1,
+    "bio_nivel": 0.6,
+    "esterco": 0.15,
+    "foco": "geral",
+    "gas": 0.8,
+    "gasometro": 1,
+    "gas_cano": 1,
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "campo",
+   "p": {
+    "bio": 1,
+    "bio_nivel": 0.6,
+    "esterco": 0.6,
+    "foco": "dentro",
+    "interior": 1,
+    "fogo": "fogao",
+    "chama_azul": 1,
+    "gas_cano": 1,
+    "gasometro": 1,
+    "rotulo": "FREE GAS",
+    "cor": "green",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "campo",
+   "p": {
+    "bio": 1,
+    "bio_nivel": [
+     0.6,
+     1
+    ],
+    "esterco": 0.6,
+    "foco": "bio",
+    "gas": 0.3,
+    "gasometro": 0.4,
+    "gas_cano": 1,
+    "rotulo": "FULL",
+    "cor": "red",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "campo",
+   "p": {
+    "bio": 1,
+    "bio_nivel": [
+     1,
+     0.7
+    ],
+    "esterco": 0.6,
+    "foco": "bio",
+    "gas": 0.7,
+    "gasometro": 0.9,
+    "gas_cano": 1,
+    "biofert": [
+     0,
+     0.6
+    ],
+    "rotulo": "OUTLET",
+    "cor": "green",
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "campo",
+   "p": {
+    "bio": 1,
+    "bio_nivel": 0.6,
+    "esterco": 0.6,
+    "foco": "geral",
+    "gas": 0.7,
+    "gasometro": 0.9,
+    "gas_cano": 1,
+    "biofert": 1,
+    "rotulo": "FERTILIZER",
+    "etapa": "c14"
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "campo",
+   "p": {
+    "bio": 1,
+    "bio_nivel": 0.6,
+    "esterco": 0.6,
+    "foco": "geral",
+    "gas": 0.7,
+    "gasometro": 0.9,
+    "gas_cano": 1,
+    "biofert": 1,
+    "rotulo": "~5 MILLION IN INDIA",
+    "etapa": "c15"
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "campo",
+   "p": {
+    "bio": 1,
+    "bio_nivel": 0.6,
+    "esterco": 0.6,
+    "foco": "bio",
+    "gas": 0.8,
+    "gasometro": 1,
+    "gas_cano": 1,
+    "biofert": 1,
+    "bolhas": 1,
+    "etapa": "c16"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 12,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 13,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 16,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "fifty kilos",
+  "stinks",
+  "flies",
+  "pit",
+  "bubbling",
+  "without air",
+  "methane",
+  "brick dome",
+  "collects",
+  "steel drum",
+  "pipe",
+  "blue flame",
+  "slurry",
+  "outlet",
+  "fertilizers",
+  "five million"
+ ]
+}

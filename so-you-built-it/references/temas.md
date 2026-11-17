@@ -107,3 +107,10 @@ Marque `[x]` quando o roteiro entrar em `stories/`. Um tema por roteiro, sem rep
 - [x] Roman arch bridge (YB049) · [x] Street over a leaking water main (YB051, terreno) · [x] Culvert (YB052) · [x] Flood water floats a car (YB053) · [x] Dutch dike (YB055) · [x] Expansion joint (YB056)
 
 - Como a cola gruda (adesão, coesão, super cola): IDEIA DO PEDRO (issue #25) -> YB065, mundo `cola`.
+
+## Semana de 30/11 a 02/12 (rotina de terça 17/11, por claude): peças novas no mundo `campo`
+- [x] You built a water tower (YB073 Evolucao, autoral: balde, bomba de alavanca, tanque no chão sem pressão, 6 m de pernas, 10 m ≈ 1 bar, travas contra vento, boia/chave que desliga a bomba)
+- [x] How a farm windmill pumps water with no motor (YB074 Curiosidade, gringa Argentina: "molinos" dos pampas; manivela, haste, pistão abaixo do lençol, válvula de retenção, tanque, cauda e recolhimento na tempestade)
+- [x] You built a biogas digester (YB075 Evolucao, gringa Índia: esterco, poço aberto fede, bactérias sem ar, ~60% metano, cúpula de tijolo, tambor flutuante KVIC, chama azul, saída de biofertilizante, ~5 milhões na Índia)
+- [x] Why your well runs dry every summer (YB076 Curiosidade, autoral: lençol sobe na primavera e desce no verão, árvores e bombas, cone de rebaixamento, poço raso x aquífero, seca de 2022 na Califórnia)
+- Ideias que sobraram para o `campo`: silo de grãos que explode (C), pivô de irrigação (E/C), caixa d'água que congela (C), cerca elétrica (C).

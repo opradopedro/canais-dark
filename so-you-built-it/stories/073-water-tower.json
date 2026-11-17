@@ -1,0 +1,451 @@
+{
+ "codigo": "YB073",
+ "formato": "Evolucao",
+ "origem": "autoral (PLANO-KIRO-MUNDOS, mundo campo: caixa d'água elevada); 10 m de coluna d'água ≈ 0,98 bar (hidrostática)",
+ "titulo": "You built a water tower 💧 #engineering #shorts",
+ "capa": "YOU BUILT A WATER TOWER",
+ "descripcion": "From carrying buckets to a tank on steel legs that pushes water into your house with no pump at all, one problem at a time.\n\nWhat should we build next?\n\n#engineering #watertower #howitworks #farm #shorts",
+ "tags": [
+  "engineering",
+  "water tower",
+  "water pressure",
+  "farm",
+  "how it works",
+  "off grid",
+  "shorts"
+ ],
+ "mundo": "campo",
+ "autor": "claude",
+ "lineas": [
+  {
+   "texto": "Your farm has a well, but your kitchen sink is bone dry.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you carry buckets from the well, twenty trips a day.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Your back gives up first.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you install a hand pump on the well.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Better, but you still have to pump every time you want a glass of water.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you put a big tank next to the house, and fill it once a day. Problem solved!",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But when you open the tap, the water barely dribbles out.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Water only pushes as hard as the height above it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you lift the tank onto steel legs, six meters up.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Every ten meters of height gives you about one bar of pressure.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now the tap blasts.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But in the first storm, the full tank sways like a tree.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you add cross braces between the legs.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And one day you forget the pump running, and water pours over the top.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you add a float switch that shuts the pump off when it's full.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's why water towers sit on hills and rooftops all over the world.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a water tower. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "campo",
+   "p": {
+    "foco": "geral",
+    "poco": 1,
+    "rotulo": "NO WATER",
+    "cor": "red",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "foco": "poco",
+    "rotulo": "20 BUCKETS",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "foco": "poco",
+    "cor": "red",
+    "rotulo": "OUCH",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "foco": "poco",
+    "bomba_mao": 1,
+    "bombeia": 1,
+    "rotulo": "HAND PUMP",
+    "cor": "green",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "foco": "poco",
+    "bomba_mao": 1,
+    "bombeia": 1,
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "foco": "caixa",
+    "caixa": "chao",
+    "bomba_mao": 1,
+    "bombeia": 1,
+    "cano_poco": 1,
+    "enche_caixa": 1,
+    "caixa_nivel": [
+     0.2,
+     0.9
+    ],
+    "rotulo": "TANK",
+    "cor": "green",
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "foco": "torneira",
+    "caixa": "chao",
+    "cano_poco": 1,
+    "cano_casa": 1,
+    "torneira": 0.12,
+    "rotulo": "DRIBBLE",
+    "cor": "red",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "foco": "caixa_casa",
+    "caixa": "chao",
+    "cano_poco": 1,
+    "cano_casa": 1,
+    "torneira": 0.12,
+    "pressao": 0.3,
+    "marcas": [
+     {
+      "t": "Same height",
+      "x": 1.5,
+      "y": 1.6
+     }
+    ],
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "caixa": "alta",
+    "cano_poco": 1,
+    "cano_casa": 1,
+    "foco": "caixa_casa",
+    "caixa_h": [
+     0,
+     6
+    ],
+    "rotulo": "6 METERS",
+    "cor": "green",
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "caixa": "alta",
+    "cano_poco": 1,
+    "cano_casa": 1,
+    "foco": "caixa",
+    "pressao": 1,
+    "rotulo": "10 m ≈ 1 BAR",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "caixa": "alta",
+    "cano_poco": 1,
+    "cano_casa": 1,
+    "foco": "torneira",
+    "torneira": 1,
+    "pressao": 1,
+    "rotulo": "PRESSURE",
+    "cor": "green",
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "caixa": "alta",
+    "cano_poco": 1,
+    "cano_casa": 1,
+    "foco": "caixa",
+    "chuva": 1,
+    "vento": 1,
+    "caixa_nivel": 1,
+    "rotulo": "STORM",
+    "cor": "red",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "caixa": "alta",
+    "cano_poco": 1,
+    "cano_casa": 1,
+    "foco": "caixa",
+    "escora": 1,
+    "chuva": 0.5,
+    "rotulo": "BRACES",
+    "cor": "green",
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "caixa": "alta",
+    "cano_poco": 1,
+    "cano_casa": 1,
+    "foco": "caixa",
+    "escora": 1,
+    "enche_caixa": 1,
+    "caixa_nivel": 1,
+    "rotulo": "OVERFLOW",
+    "cor": "red",
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "caixa": "alta",
+    "cano_poco": 1,
+    "cano_casa": 1,
+    "foco": "caixa",
+    "escora": 1,
+    "boia": 1,
+    "caixa_nivel": [
+     0.6,
+     0.95
+    ],
+    "rotulo": "FLOAT SWITCH",
+    "cor": "green",
+    "etapa": "c14"
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "caixa": "alta",
+    "cano_poco": 1,
+    "cano_casa": 1,
+    "foco": "geral",
+    "escora": 1,
+    "boia": 1,
+    "torneira": 1,
+    "etapa": "c15"
+   }
+  },
+  {
+   "linea": 16,
+   "comp": "campo",
+   "p": {
+    "poco": 1,
+    "lencol": -4,
+    "caixa": "alta",
+    "cano_poco": 1,
+    "cano_casa": 1,
+    "foco": "caixa_casa",
+    "escora": 1,
+    "boia": 1,
+    "torneira": 1,
+    "pressao": 0.6,
+    "etapa": "c16"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 12,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 13,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 14,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 16,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "bone dry",
+  "buckets",
+  "hand pump",
+  "tank",
+  "dribbles",
+  "height",
+  "six meters",
+  "one bar",
+  "blasts",
+  "sways",
+  "cross braces",
+  "pours",
+  "float switch",
+  "water tower"
+ ]
+}
