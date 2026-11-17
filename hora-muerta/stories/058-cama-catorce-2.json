@@ -1,0 +1,1023 @@
+{
+ "formato": "Regla",
+ "origem": "autoral",
+ "serie": "cama-catorce",
+ "serie_titulo": "La cama catorce | Hora Muerta",
+ "partes": 2,
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda",
+  "hospital",
+  "enfermera",
+  "turno de noche"
+ ],
+ "codigo": "HM058",
+ "parte": 2,
+ "anterior": "HM057",
+ "titulo": "La cama catorce ya tenía mi nombre 🏥 Parte 2 #terror #shorts",
+ "capa": "NO VOLTEES",
+ "descripcion": "Una cosa con cuernos llama a Elena con la voz de su jefa desde una cama que no existe. En el cajón de doña Pilar hay un cuaderno que empieza en 1979.\n\n¿Tú habrías volteado?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "elena": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#6f9fb8"
+  },
+  "pilar": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "roupa_cor": "#e8eef2"
+  },
+  "demonio": {
+   "tipo": "humano",
+   "rosto_cor": "#6a1414",
+   "membro": "#4a0e0e",
+   "roupa": "trapos",
+   "roupa_cor": "#1a0a0a",
+   "olhos": "vermelhos",
+   "cabelo": "careca"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "Desde una cama que no existe, una cosa con cuernos *imita a su jefa*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-maca",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.55
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Si Elena contesta, será la siguiente en esa cama.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-maca",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Elena no contesta. Busca a tientas el interruptor.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-recepcao",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "elena",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "La luz parpadea y regresa. El pasillo está vacío.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-corredor",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "elena",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pero las camillas del fondo están *movidas*, formando una fila.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-fundo",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "elena",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "El timbre de la catorce sigue sonando.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-recepcao",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "elena",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Abre el cajón de doña Pilar buscando un teléfono.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-recepcao",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "elena",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Adentro hay un cuaderno viejo con horas anotadas. Cientos.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-recepcao",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "elena",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Quédate, porque la primera hoja es de mil novecientos setenta y nueve.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-porta",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "elena",
+      "pose": "apontar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ese año, en el piso tres, una enfermera contestó el timbre.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-corredor",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "pilar",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "La encontraron en una cama que nadie había puesto ahí. La catorce.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-maca",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "pilar",
+      "pose": "deitado",
+      "rosto": "triste",
+      "v": 0.8,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Desde entonces, cada enfermera anota la hora y no va.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-recepcao",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "elena",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Elena escribe: dos cincuenta. Y la pluma tiembla.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-recepcao",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "elena",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A las tres en punto, el timbre se calla.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-corredor",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "elena",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y algo respira detrás de ella, muy cerca.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-recepcao",
+    "cam": {
+     "z": [
+      1.3,
+      1.42
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "elena",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Elena no voltea. Mira solo el cuaderno.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-recepcao",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "elena",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Así se queda hasta que sale el sol.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-entrada-dia",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "dourado"
+    ]
+   }
+  },
+  {
+   "texto": "En la mañana, doña Pilar llega y lee la hoja.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-recepcao-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "pilar",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "elena",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Sonríe triste. Bien hecho, dice. Por eso sigues aquí.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-recepcao-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "pilar",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Elena se voltea para irse. Y ve la cama catorce, tendida, *con su nombre*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-maca-dia",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "elena",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Si un día oyes un timbre que no existe, no vayas.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "hospital-corredor",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "elena",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 14,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 19,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "hm-cama-catorce",
+ "elenco_3d": {
+  "elena": {
+   "semente": 5711,
+   "corpo": "magro",
+   "cabelo": "rabo",
+   "roupa": "vestido"
+  },
+  "pilar": {
+   "semente": 5712,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "vestido"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "maca",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "elena",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "maca",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "recepcao",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "elena",
+      "acao": "Interact",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "corredor",
+    "plano": "aberto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "elena",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "fundo",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "elena",
+      "acao": "Walking_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "recepcao",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "elena",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "recepcao",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "elena",
+      "acao": "Work_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "recepcao",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "elena",
+      "acao": "Holding_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "porta",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "elena",
+      "acao": "Holding_B",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "corredor",
+    "plano": "aberto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "pilar",
+      "acao": "Walking_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "maca",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "pilar",
+      "acao": "Lie_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "recepcao",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "elena",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "recepcao",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "elena",
+      "acao": "Work_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "corredor",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "elena",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "recepcao",
+    "plano": "nuca",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "elena",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "recepcao",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "elena",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "entrada",
+    "plano": "aberto",
+    "luz": "nascer_sol",
+    "atores": []
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "recepcao",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "pilar",
+      "acao": "Holding_A",
+      "rosto": "desconfiado"
+     },
+     {
+      "id": "elena",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "recepcao",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "pilar",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "maca",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "elena",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "hospital",
+    "marca": "corredor",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "elena",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  }
+ ],
+ "gancho_visual": true
+}

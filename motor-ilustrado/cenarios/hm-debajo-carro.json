@@ -1,0 +1,53 @@
+{
+ "mundo": "hm-debajo-carro",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "eerie horror story illustration, dark moody atmosphere, muted desaturated colors with cold blue shadows, realistic proportions, unsettling and lonely, mature adult tone, not childish",
+ "ordem": 47,
+ "cenarios": {
+  "bairro-rua": {
+   "lugar": "bairro/rua (noite)",
+   "prompt": "an almost empty supermarket parking lot at night, one small old car parked alone under a light, dark gap under the car, in a big supermarket parking lot on the edge of a northern Mexican city, at night, dark blue moonlight, deep shadows",
+   "seed": 102
+  },
+  "bairro-calcada": {
+   "lugar": "bairro/calcada (noite)",
+   "prompt": "the front sidewalk of a closed supermarket with shopping carts lined up and a glass entrance, in a big supermarket parking lot on the edge of a northern Mexican city, at night, dark blue moonlight, deep shadows",
+   "seed": 109
+  },
+  "bairro-poste": {
+   "lugar": "bairro/poste (noite)",
+   "prompt": "a single flickering lamp post over painted parking spaces, one lonely car beneath it, in a big supermarket parking lot on the edge of a northern Mexican city, at night, dark blue moonlight, deep shadows",
+   "seed": 116
+  },
+  "bairro-fim_rua": {
+   "lugar": "bairro/fim_rua (noite)",
+   "prompt": "the far empty corner of a supermarket parking lot with a chain-link fence and weeds, in a big supermarket parking lot on the edge of a northern Mexican city, at night, dark blue moonlight, deep shadows",
+   "seed": 123
+  },
+  "bairro-frente_casa": {
+   "lugar": "bairro/frente_casa (noite)",
+   "prompt": "the glass entrance doors of a closed supermarket, lit from inside, a security guard booth, in a big supermarket parking lot on the edge of a northern Mexican city, at night, dark blue moonlight, deep shadows",
+   "seed": 116
+  },
+  "casa_interior-sala": {
+   "lugar": "casa_interior/sala (noite)",
+   "prompt": "a small security office in a supermarket with a desk, an old chair and a wall of CCTV monitors, in a big supermarket parking lot on the edge of a northern Mexican city, at night, dark blue moonlight, deep shadows",
+   "seed": 123
+  },
+  "bairro-rua-dia": {
+   "lugar": "bairro/rua (dia)",
+   "prompt": "an almost empty supermarket parking lot at night, one small old car parked alone under a light, dark gap under the car, in a big supermarket parking lot on the edge of a northern Mexican city, in pale overcast daylight",
+   "seed": 130
+  },
+  "bairro-fim_rua-dia": {
+   "lugar": "bairro/fim_rua (dia)",
+   "prompt": "the far empty corner of a supermarket parking lot with a chain-link fence and weeds, in a big supermarket parking lot on the edge of a northern Mexican city, in pale overcast daylight",
+   "seed": 137
+  },
+  "casa_interior-quarto": {
+   "lugar": "casa_interior/quarto (noite)",
+   "prompt": "a simple bedroom with a bed, a nightstand lamp and a closed closet, dark space under the bed, at night, dark blue moonlight, deep shadows",
+   "seed": 151
+  }
+ }
+}

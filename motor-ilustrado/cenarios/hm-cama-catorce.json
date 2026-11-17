@@ -1,0 +1,48 @@
+{
+ "mundo": "hm-cama-catorce",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "eerie horror story illustration, dark moody atmosphere, muted desaturated colors with cold blue shadows, realistic proportions, unsettling and lonely, mature adult tone, not childish",
+ "ordem": 48,
+ "cenarios": {
+  "hospital-corredor": {
+   "lugar": "hospital/corredor (noite)",
+   "prompt": "a long old public hospital corridor with green tiled walls, flickering ceiling lights and empty gurneys along the wall, on the third floor of an old public hospital in a Mexican city, at night, cold fluorescent light, deep shadows",
+   "seed": 125
+  },
+  "hospital-maca": {
+   "lugar": "hospital/maca (noite)",
+   "prompt": "an empty hospital bed with white sheets in a dim ward, a call button with a red light above it, a small sign with the number 14, on the third floor of an old public hospital in a Mexican city, at night, cold fluorescent light, deep shadows",
+   "seed": 132
+  },
+  "hospital-recepcao": {
+   "lugar": "hospital/recepcao (noite)",
+   "prompt": "a night nurses' station in an old public hospital, a desk with paper charts, a call-light board on the wall, on the third floor of an old public hospital in a Mexican city, at night, cold fluorescent light, deep shadows",
+   "seed": 139
+  },
+  "hospital-fundo": {
+   "lugar": "hospital/fundo (noite)",
+   "prompt": "the dark far end of a hospital corridor, a row of empty gurneys disappearing into shadow, on the third floor of an old public hospital in a Mexican city, at night, cold fluorescent light, deep shadows",
+   "seed": 146
+  },
+  "hospital-porta": {
+   "lugar": "hospital/porta (noite)",
+   "prompt": "a closed hospital ward door with a small window and a faded room number, on the third floor of an old public hospital in a Mexican city, at night, cold fluorescent light, deep shadows",
+   "seed": 153
+  },
+  "hospital-entrada-dia": {
+   "lugar": "hospital/entrada (dia)",
+   "prompt": "the entrance hall of an old public hospital with plastic chairs and a tiled floor, on the third floor of an old public hospital in a Mexican city, early morning daylight through the windows",
+   "seed": 160
+  },
+  "hospital-recepcao-dia": {
+   "lugar": "hospital/recepcao (dia)",
+   "prompt": "a night nurses' station in an old public hospital, a desk with paper charts, a call-light board on the wall, on the third floor of an old public hospital in a Mexican city, early morning daylight through the windows",
+   "seed": 167
+  },
+  "hospital-maca-dia": {
+   "lugar": "hospital/maca (dia)",
+   "prompt": "an empty hospital bed with white sheets in a dim ward, a call button with a red light above it, a small sign with the number 14, on the third floor of an old public hospital in a Mexican city, early morning daylight through the windows",
+   "seed": 174
+  }
+ }
+}

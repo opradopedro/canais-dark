@@ -1,0 +1,1147 @@
+{
+ "formato": "Regla",
+ "origem": "gringa: EUA, lenda do 'homem debaixo do carro' que voltou a circular no TikTok em 2026 https://inkl.com/news/from-plague-doctors-to-dangerous-dares-tiktok-scare-videos-parents-should-know-about (história nossa, estacionamento de supermercado em Monterrey)",
+ "serie": "debajo-carro",
+ "serie_titulo": "Lo que espera debajo del carro | Hora Muerta",
+ "partes": 2,
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda",
+  "estacionamiento",
+  "debajo del carro",
+  "leyenda urbana"
+ ],
+ "codigo": "HM055",
+ "parte": 1,
+ "titulo": "Nunca camines directo a tu carro de noche 🚗 Parte 1 #terror #shorts",
+ "capa": "MIRA DEBAJO",
+ "descripcion": "Sofía sale del súper a medianoche y su carro es el último del estacionamiento. La regla dice: mira debajo antes de acercarte. Ella se rió.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú miras debajo de tu carro?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "sofia": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "longo",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#3a5a4a"
+  },
+  "ramiro": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#1f2a44",
+   "chapeu": "bone",
+   "chapeu_cor": "#3a5a4a"
+  },
+  "amiga": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#3a5a4a"
+  },
+  "rastejante": {
+   "tipo": "humano",
+   "rosto_cor": "#4a3a2a",
+   "membro": "#4a3a2a",
+   "roupa": "trapos",
+   "roupa_cor": "#2e2216",
+   "sem_rosto": true,
+   "cabelo": "careca",
+   "desgaste": 0.8
+  }
+ },
+ "lineas": [
+  {
+   "texto": "Si tu carro está solo en el estacionamiento, nunca camines directo a la puerta.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.15
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Primero mira debajo. Porque algo puede estar *esperando ahí*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Sofía cierra la caja del súper a las doce y media.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sofia",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Su carro es el último del estacionamiento, bajo una lámpara que parpadea.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-poste",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sofia",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Su compañera le contó la regla que circula en los videos.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "amiga",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "sofia",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Lleva las llaves en la mano. Mira debajo del carro desde lejos.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "amiga",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y si ves algo, no te agaches. Regresa adentro.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "amiga",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Sofía se rió. Nadie se esconde debajo de un carro.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "sofia",
+      "pose": "triunfo",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Esa noche, a las doce cuarenta, el estacionamiento está en silencio.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-fim_rua",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sofia",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A diez pasos del carro, Sofía escucha algo *raspando* el asfalto.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sofia",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Un sonido lento, como uñas sobre piedra.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.86,
+      "esc": 0.8,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Quédate, porque lo que vio después no tiene explicación.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-poste",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sofia",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Se detiene. Saca el celular y prende la linterna.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sofia",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Apunta la luz hacia abajo, entre las llantas.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sofia",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Al principio solo ve una bolsa de basura.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-fim_rua",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sofia",
+      "pose": "agachar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pero la bolsa *respira*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Dos manos grises, muy largas, se estiran sobre el asfalto.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "sofia",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Los dedos se cierran justo donde ella iba a poner el pie.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-poste",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sofia",
+      "pose": "lutar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Sofía retrocede. Las manos vuelven a esconderse.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sofia",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Entonces su celular vibra. Un mensaje de un número desconocido.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sofia",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Dice: ¿por qué no te subes, Sofía?",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "sofia",
+      "pose": "apontar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Alguien sabe su nombre. Parte dos, {dia_siguiente}.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "sofia",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 16,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 20,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "hm-debajo-carro",
+ "elenco_3d": {
+  "sofia": {
+   "semente": 5511,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "casual"
+  },
+  "ramiro": {
+   "semente": 5512,
+   "corpo": "forte",
+   "cabelo": "grisalho",
+   "roupa": "guarda",
+   "acessorio": "bone"
+  },
+  "amiga": {
+   "semente": 5513,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "casual"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Walking_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "rastejante"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [],
+    "criatura": {
+     "tipo": "rastejante"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Work_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "poste",
+    "plano": "aberto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Walking_B",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "amiga",
+      "acao": "Interact",
+      "rosto": "desconfiado",
+      "segura": "celular"
+     },
+     {
+      "id": "sofia",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "amiga",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "amiga",
+      "acao": "Waving",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Cheering",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "fim_rua",
+    "plano": "aberto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Walking_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "ombro",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "atores": [],
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "poste"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "poste",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "medio",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Holding_A",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Crouching",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "fim_rua",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Crouching",
+      "rosto": "desconfiado",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [],
+    "criatura": {
+     "tipo": "rastejante"
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "rastejante"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "poste",
+    "plano": "medio",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "rastejante"
+    }
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "auto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Walking_Backwards",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Interact",
+      "rosto": "desconfiado",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "ombro",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Holding_B",
+      "rosto": "susto",
+      "segura": "celular"
+     }
+    ],
+    "criatura": {
+     "tipo": "rastejante"
+    }
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "medio",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "sofia",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "celular"
+     }
+    ]
+   }
+  }
+ ],
+ "gancho_visual": true
+}
