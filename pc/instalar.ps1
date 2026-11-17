@@ -24,7 +24,8 @@ if ($LASTEXITCODE -ne 0) {
 }
 cmd /c "wsl.exe --update >nul 2>&1"
 # Virtualizacao desligada na BIOS (comum em PC de casa): usa WSL1, que roda sem ela.
-$virt = (Get-CimInstance Win32_Processor | Select-Object -First 1).VirtualizationFirmwareEnabled
+# com o hipervisor do Windows ligado, Win32_Processor diz False mesmo com a BIOS certa: confere os dois
+$virt = (Get-CimInstance Win32_ComputerSystem).HypervisorPresent -or (Get-CimInstance Win32_Processor | Select-Object -First 1).VirtualizationFirmwareEnabled
 $versao = if ($virt) { 2 } else { 1 }
 Write-Host "virtualizacao na BIOS: $virt -> WSL$versao"
 
