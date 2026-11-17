@@ -1,0 +1,437 @@
+{
+ "codigo": "YB071",
+ "mundo": "campo",
+ "formato": "Evolucao",
+ "autor": "claude",
+ "origem": "autoral (backlog do temas.md: composting toilet / outhouse); OMS/WHO: latrina de fossa a 30 m do poço e fundo acima do lençol; VIP latrine (respiro preto aquecido pelo sol) https://en.wikipedia.org/wiki/Ventilated_improved_pit_latrine",
+ "titulo": "You built an outhouse 🚽 #engineering #shorts",
+ "capa": "YOU BUILT AN OUTHOUSE",
+ "descripcion": "From a stinky hole to a pit latrine that doesn't smell, doesn't attract flies and doesn't poison your well, one problem at a time.\n\nWhat should we build next?\n\n#engineering #outhouse #toilet #offgrid #shorts",
+ "tags": [
+  "engineering",
+  "outhouse",
+  "pit latrine",
+  "toilet",
+  "off grid",
+  "farm",
+  "how it works",
+  "shorts"
+ ],
+ "lineas": [
+  {
+   "texto": "Your farm is miles away from the nearest sewer.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you build a little wooden outhouse over a shallow hole.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "In a few months, the hole is full.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And the smell brings flies from every corner of the farm.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you dig a much deeper pit, about two meters down.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now it lasts for years. But it still stinks.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you run a black pipe from the pit up past the roof.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The sun heats the pipe, the air inside rises, and pulls the smell out through the top.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A handful of ash or sawdust after each use keeps the flies away.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But your drinking water comes from a well just a few steps away.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Rain soaks through the pit and carries germs down to the groundwater.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you move the outhouse at least thirty meters from the well, and downhill.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And you keep the bottom of the pit well above the water table.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "When it's almost full, you cover it with soil, plant a tree, and dig a new one.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Almost two billion people around the world still use one every day.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a toilet with no sewer at all. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "campo",
+   "p": {
+    "foco": "geral",
+    "rotulo": "NO SEWER",
+    "cor": "red",
+    "etapa": "c0"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "campo",
+   "p": {
+    "foco": "privada",
+    "privada": 1,
+    "fossa_seca": 0.8,
+    "rotulo": "OUTHOUSE",
+    "etapa": "c1"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "campo",
+   "p": {
+    "foco": "privada",
+    "privada": 1,
+    "fossa_seca": 0.8,
+    "enche": [
+     0.2,
+     1
+    ],
+    "rotulo": "FULL",
+    "cor": "red",
+    "etapa": "c2"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "campo",
+   "p": {
+    "foco": "privada",
+    "privada": 1,
+    "fossa_seca": 0.8,
+    "enche": 1,
+    "cheiro": 1,
+    "moscas": [
+     0,
+     1
+    ],
+    "rotulo": "FLIES",
+    "cor": "red",
+    "etapa": "c3"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "campo",
+   "p": {
+    "foco": "privada",
+    "privada": 1,
+    "fossa_seca": [
+     0.8,
+     2.2
+    ],
+    "enche": 0.1,
+    "rotulo": "DEEP PIT",
+    "cor": "green",
+    "etapa": "c4"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "campo",
+   "p": {
+    "foco": "privada",
+    "privada": 1,
+    "fossa_seca": 2.2,
+    "enche": 0.35,
+    "cheiro": 1,
+    "etapa": "c5"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "campo",
+   "p": {
+    "foco": "privada",
+    "privada": 1,
+    "fossa_seca": 2.2,
+    "enche": 0.35,
+    "respiro": 1,
+    "cheiro": [
+     1,
+     0
+    ],
+    "rotulo": "VENT PIPE",
+    "cor": "green",
+    "etapa": "c6"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "campo",
+   "p": {
+    "foco": "privada",
+    "privada": 1,
+    "fossa_seca": 2.2,
+    "enche": 0.35,
+    "respiro": 1,
+    "marcas": [
+     {
+      "t": "Warm air rises",
+      "x": 4.75,
+      "y": 3.2,
+      "cor": "green"
+     }
+    ],
+    "etapa": "c7"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "campo",
+   "p": {
+    "foco": "privada",
+    "privada": 1,
+    "fossa_seca": 2.2,
+    "enche": 0.4,
+    "respiro": 1,
+    "cal": 1,
+    "moscas": [
+     1,
+     0
+    ],
+    "rotulo": "SAWDUST",
+    "cor": "green",
+    "etapa": "c8"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "campo",
+   "p": {
+    "foco": "poco",
+    "privada": 1,
+    "privada_x": [
+     4.2,
+     8.6
+    ],
+    "fossa_seca": 2.2,
+    "enche": 0.5,
+    "respiro": 1,
+    "poco": 1,
+    "lencol": -4,
+    "rotulo": "WELL",
+    "etapa": "c9"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "campo",
+   "p": {
+    "foco": "poco",
+    "privada": 1,
+    "privada_x": 8.6,
+    "fossa_seca": 2.2,
+    "enche": 0.5,
+    "respiro": 1,
+    "poco": 1,
+    "lencol": -4,
+    "chuva": 1,
+    "contamina": [
+     0,
+     1
+    ],
+    "rotulo": "GERMS",
+    "cor": "red",
+    "etapa": "c10"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "campo",
+   "p": {
+    "foco": "poco",
+    "camera": {
+     "x": 5.5,
+     "d": 25
+    },
+    "privada": 1,
+    "privada_x": [
+     8.6,
+     1.0
+    ],
+    "fossa_seca": 2.2,
+    "enche": 0.2,
+    "respiro": 1,
+    "poco": 1,
+    "lencol": -4,
+    "contamina": [
+     1,
+     0
+    ],
+    "rotulo": "30 METERS AWAY",
+    "cor": "green",
+    "etapa": "c11"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "campo",
+   "p": {
+    "foco": "fundo",
+    "privada": 1,
+    "privada_x": 1.0,
+    "fossa_seca": 2.2,
+    "enche": 0.2,
+    "respiro": 1,
+    "poco": 1,
+    "lencol": -4,
+    "marcas": [
+     {
+      "t": "Water table",
+      "x": 6,
+      "y": -4.4
+     }
+    ],
+    "etapa": "c12"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "campo",
+   "p": {
+    "foco": "privada",
+    "camera": {
+     "x": 1.0
+    },
+    "privada": 1,
+    "privada_x": 1.0,
+    "fossa_seca": 2.2,
+    "enche": [
+     0.6,
+     1
+    ],
+    "cal": 1,
+    "respiro": 1,
+    "etapa": "c13"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "campo",
+   "p": {
+    "foco": "geral",
+    "privada": 1,
+    "privada_x": 1.0,
+    "respiro": 1,
+    "poco": 1,
+    "rotulo": "~1.8 BILLION PEOPLE",
+    "etapa": "c14"
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "campo",
+   "p": {
+    "foco": "privada",
+    "camera": {
+     "x": 1.0
+    },
+    "privada": 1,
+    "privada_x": 1.0,
+    "fossa_seca": 2.2,
+    "enche": 0.2,
+    "cal": 1,
+    "respiro": 1,
+    "etapa": "c15"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 15,
+   "en": 0.05
+  }
+ ],
+ "destaque": [
+  "no sewer",
+  "outhouse",
+  "full",
+  "flies",
+  "deeper pit",
+  "stinks",
+  "black pipe",
+  "rises",
+  "sawdust",
+  "well",
+  "germs",
+  "thirty meters",
+  "water table",
+  "two billion"
+ ]
+}

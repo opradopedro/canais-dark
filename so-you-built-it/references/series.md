@@ -83,3 +83,12 @@ Estoque antes: 18 roteiros prontos (YB043-YB046, YB049, YB052-YB064) + 4 agendad
 | YB068 | Curiosidade | raiz de árvore levanta a calçada (terreno, calcada, raiz, trinca, manta) | autoral | FEITO |
 | YB069 | Curiosidade | por que pontes de madeira antigas tinham telhado (riacho, tabuas, podre, `telhado` novo) | gringa: Suíça https://en.wikipedia.org/wiki/Covered_bridge | FEITO |
 Ficaram 5 (não 8): os mundos fixos já cobriram quase todos os temas (bomba manual, lastro, porta do micro-ondas já saíram). Kamakura (Japão) foi descartado porque o mundo `iglu` mostra blocos e "You built an igloo". Para mais Evolução e Curiosidade nova falta MUNDO NOVO (ver PLANO-KIRO-MUNDOS.md).
+
+## Evolução no mundo novo `campo` (YB070-YB072) — por: claude (17/11/2026, e-mail de ESTOQUE BAIXO Evolucao)
+Estoque antes: 1 Evolução (YB008) e 16 Curiosidades prontas. Mundo novo `campo` (sítio sem o sobrado, PLANO-KIRO-MUNDOS.md item 6) feito pelo Claude, com prévia conferida.
+| Código | Formato | Tema | Origem | Estado |
+|---|---|---|---|---|
+| YB070 | Evolucao | cisterna de chuva (tambor, mosquito, cisterna enterrada, desvio das primeiras águas, tela, tampa, extravasor, bomba) | gringa: Brasil, Programa Um Milhão de Cisternas https://pt.wikipedia.org/wiki/Programa_Um_Milh%C3%A3o_de_Cisternas | FEITO |
+| YB071 | Evolucao | privada/fossa seca (cheia, moscas, fossa funda, respiro VIP, serragem, poço contaminado, 30 m do poço) | autoral (backlog) | FEITO |
+| YB072 | Evolucao | chaminé de fogão a lenha (fumaça na casa, CO, fogão, tiragem, vento, 3 pés acima, creosoto, fogo na chaminé, colar, chapéu) | autoral (backlog) | FEITO |
+O `campo` ainda destrava: caixa d'água elevada, silo de grãos, moinho que puxa água, poço (Curiosidade).
