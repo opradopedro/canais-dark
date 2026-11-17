@@ -394,6 +394,20 @@ def run(ctx=None, *_a, **_k):
     return _entregar(ctx, _rodar("signal-lost") + "\n\n" + _rodar("old-tales"))
 
 
+
+def _com_cenas(pasta):
+    """Roteiros que a previa (motor flat/3D antigo) sabe desenhar: os do motor ilustrado/cartoon nao tem 'cenas'.
+    16/11: o teste ficava vermelho (KeyError 'cenas') porque o ultimo roteiro do SV/HM ja e ilustrado."""
+    import glob, json
+    ok = []
+    for f in sorted(glob.glob(os.path.join(pasta, "*.json"))):
+        try:
+            if json.load(open(f, encoding="utf-8")).get("cenas"):
+                ok.append(f)
+        except Exception:
+            pass
+    return ok
+
 def run_teste(ctx=None, *_a, **_k):
     """Confere o ambiente SEM publicar e SEM gastar narracao: chaves, canais certos, previa das cenas, sons."""
     repo = _repo(); _carregar_env(repo)
@@ -403,8 +417,10 @@ def run_teste(ctx=None, *_a, **_k):
                             os.path.join(repo, canal)], cwd=repo, capture_output=True, text=True, encoding="utf-8", errors="replace")
         ok &= r.returncode == 0
         out.append(f"[{canal}] YouTube: " + (r.stdout.strip().replace("\n", " ") if r.returncode == 0 else "ERRO " + r.stderr.strip()[-300:]))
-        hist = sorted(__import__("glob").glob(os.path.join(repo, canal, "stories", "*.json")))
-        if hist:
+        hist = _com_cenas(os.path.join(repo, canal, "stories"))
+        if not hist:
+            out.append(f"[{canal}] previa das cenas: pulada (roteiros so do motor ilustrado/3D, sem 'cenas')")
+        else:
             r = subprocess.run([sys.executable, os.path.join(repo, "motor-en", "previa.py"), hist[-1],
                                 os.path.join(tempfile.gettempdir(), "previa-teste")], cwd=repo,
                                capture_output=True, text=True, encoding="utf-8", errors="replace")
@@ -432,8 +448,10 @@ def run_teste(ctx=None, *_a, **_k):
         ok &= r.returncode == 0
         resumo = (r.stdout.strip().replace("\n", " ")[:160]) if r.returncode == 0 else "ERRO " + r.stderr.strip()[-300:]
         out.append(f"[{canal}] YouTube ({acao}): {resumo}")
-        hist = sorted(__import__("glob").glob(os.path.join(repo, canal, "stories", "*.json")))
-        if hist:
+        hist = _com_cenas(os.path.join(repo, canal, "stories"))
+        if not hist:
+            out.append(f"[{canal}] previa das cenas: pulada (roteiros so do motor ilustrado/3D, sem 'cenas')")
+        else:
             r = subprocess.run([sys.executable, os.path.join(repo, "motor-en", "previa.py"), hist[-1],
                                 os.path.join(tempfile.gettempdir(), "previa-teste-" + canal)], cwd=repo,
                                capture_output=True, text=True, encoding="utf-8", errors="replace")
