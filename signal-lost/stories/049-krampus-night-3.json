@@ -1,0 +1,929 @@
+{
+ "formato": "Survivor",
+ "origem": "gringa: Áustria/Alemanha, Krampusnacht (5 de dezembro), temporada de vídeos de Krampus que sobe todo fim de novembro https://en.wikipedia.org/wiki/Krampus (história nossa, cidadezinha na Pensilvânia)",
+ "serie": "krampus-night",
+ "serie_titulo": "The Night of the Birch | Signal Lost",
+ "partes": 3,
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "krampus",
+  "krampusnacht",
+  "winter horror",
+  "small town rules"
+ ],
+ "codigo": "SV049",
+ "parte": 3,
+ "anterior": "SV048",
+ "titulo": "The birch sticks were never for us 🔔 Part 3 #horror #shorts",
+ "capa": "GUARD YOUR BIRCH",
+ "descripcion": "The horned thing was inside Owen's kitchen. The only thing he could reach was an old broom made of birch twigs, and he finally understood the rule.\n\nWould you have stolen your neighbor's bundle?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "owen": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#40405a",
+   "barba_estilo": "curta",
+   "barba": "#2a1a10"
+  },
+  "price": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#5a3a3a"
+  },
+  "demonio": {
+   "tipo": "humano",
+   "rosto_cor": "#6a1414",
+   "membro": "#4a0e0e",
+   "roupa": "trapos",
+   "roupa_cor": "#1a0a0a",
+   "olhos": "vermelhos",
+   "cabelo": "careca"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "A long black hand is coming through Owen's cat door, reaching for the *light switch*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.55
+     }
+    ]
+   }
+  },
+  {
+   "texto": "If the lights come on and it sees his face, he belongs to it.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Owen grabs the only thing near him. A kitchen broom.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Birch twigs. Tied with red ribbon. The old kind.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He remembers what the neighbors said. Never take the sticks back in.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "price",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Because the birch isn't for you. It's for him.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because Owen did the only thing left.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He pushes the broom through the cat door, into the hand.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The hand freezes. Then it takes the birch, slowly, like a gift.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The bells move away. Down the steps. Down the street.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.86,
+      "esc": 1.08,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "At dawn, the whole town is outside, shoveling snow, like nothing happened.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "andar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Mr. Price's house is dark, and the front door is wide open.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The baker explains it over coffee.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Every year, it takes one. If you give it the birch, it skips you.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada-dia",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "If you steal someone's bundle, it takes you instead.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "So who stole Owen's sticks? Mr. Price, the night before.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-janela-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "On Mr. Price's porch, the bundle of birch is moving.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa-dia",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Something inside is tapping, three times.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "So on December fifth, guard your birch. Your neighbors are guarding theirs.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 7,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 17,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "sv-krampus-night",
+ "elenco_3d": {
+  "owen": {
+   "semente": 4711,
+   "corpo": "medio",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "acessorio": "barba"
+  },
+  "price": {
+   "semente": 4712,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "casual"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "PickUp",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Holding_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "price",
+      "acao": "Interact",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "baixo",
+    "luz": "neve",
+    "atores": [],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "ombro",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Holding_B",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Dodge_Forward",
+      "rosto": "bravo"
+     }
+    ],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "aberto",
+    "luz": "neve",
+    "atores": [],
+    "criatura": {
+     "tipo": "coisa_com_chifres",
+     "marca": "fim_rua"
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "auto",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Walking_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "medio",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Idle_B",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "baixo",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Walking_Backwards",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "close",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "medio",
+    "luz": "neve",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  }
+ ],
+ "gancho_visual": true
+}

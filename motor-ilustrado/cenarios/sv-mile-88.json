@@ -1,0 +1,48 @@
+{
+ "mundo": "sv-mile-88",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "eerie horror story illustration, dark moody atmosphere, muted desaturated colors with cold blue shadows, realistic proportions, unsettling and lonely, mature adult tone, not childish",
+ "ordem": 45,
+ "cenarios": {
+  "estrada-ponto": {
+   "lugar": "estrada/ponto (noite)",
+   "prompt": "a small run-down highway rest stop with one old gas pump under a flickering light and a big rig truck, at night, dark blue moonlight, deep shadows",
+   "seed": 114
+  },
+  "estrada-acostamento": {
+   "lugar": "estrada/acostamento (noite)",
+   "prompt": "the gravel shoulder of a highway with a metal guardrail, at a lonely truck rest stop on a desert highway in Nevada, old gas pump, big rig trucks parked in a row, at night, dark blue moonlight, deep shadows",
+   "seed": 121
+  },
+  "estrada-meio": {
+   "lugar": "estrada/meio (noite)",
+   "prompt": "the middle of an empty two-lane highway, on a lonely foggy desert highway in Nevada, at night, dark blue moonlight, deep shadows",
+   "seed": 128
+  },
+  "estrada-vindo": {
+   "lugar": "estrada/vindo (noite)",
+   "prompt": "an empty highway stretching toward the viewer, on a lonely foggy desert highway in Nevada, at night, dark blue moonlight, deep shadows",
+   "seed": 135
+  },
+  "estrada-indo": {
+   "lugar": "estrada/indo (noite)",
+   "prompt": "an empty highway stretching away into the distance, on a lonely foggy desert highway in Nevada, at night, dark blue moonlight, deep shadows",
+   "seed": 142
+  },
+  "estrada-curva": {
+   "lugar": "estrada/curva (noite)",
+   "prompt": "a sharp mountain highway curve with a bent guardrail over a drop, on a lonely foggy desert highway in Nevada, at night, dark blue moonlight, deep shadows",
+   "seed": 149
+  },
+  "casa_interior-cozinha-dia": {
+   "lugar": "casa_interior/cozinha (dia)",
+   "prompt": "a roadside truck stop diner with a counter, stools and coffee pots, early morning, in pale overcast daylight",
+   "seed": 142
+  },
+  "estrada-ponto-dia": {
+   "lugar": "estrada/ponto (dia)",
+   "prompt": "a small run-down highway rest stop with one old gas pump under a flickering light and a big rig truck, in pale overcast daylight",
+   "seed": 149
+  }
+ }
+}

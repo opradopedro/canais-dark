@@ -1,0 +1,73 @@
+{
+ "mundo": "sv-krampus-night",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "eerie horror story illustration, dark moody atmosphere, muted desaturated colors with cold blue shadows, realistic proportions, unsettling and lonely, mature adult tone, not childish",
+ "ordem": 43,
+ "cenarios": {
+  "bairro-frente_casa": {
+   "lugar": "bairro/frente_casa (noite)",
+   "prompt": "the front yard and porch of a small one-story house with a lit porch light, in a small snowy mountain town in Pennsylvania with old Austrian-style wooden houses, birch-stick bundles on every porch, at night, dark blue moonlight, deep shadows",
+   "seed": 111
+  },
+  "bairro-rua": {
+   "lugar": "bairro/rua (noite)",
+   "prompt": "the middle of a quiet residential street with a few parked cars, in a small snowy mountain town in Pennsylvania with old Austrian-style wooden houses, birch-stick bundles on every porch, at night, dark blue moonlight, deep shadows",
+   "seed": 118
+  },
+  "bairro-rua-dia": {
+   "lugar": "bairro/rua (dia)",
+   "prompt": "the middle of a quiet residential street with a few parked cars, in a small snowy mountain town in Pennsylvania with old Austrian-style wooden houses, birch-stick bundles on every porch, in pale overcast daylight",
+   "seed": 125
+  },
+  "bairro-frente_casa-dia": {
+   "lugar": "bairro/frente_casa (dia)",
+   "prompt": "the front yard and porch of a small one-story house with a lit porch light, in a small snowy mountain town in Pennsylvania with old Austrian-style wooden houses, birch-stick bundles on every porch, in pale overcast daylight",
+   "seed": 132
+  },
+  "bairro-calcada-dia": {
+   "lugar": "bairro/calcada (dia)",
+   "prompt": "a cracked sidewalk in front of a row of small houses, in a small snowy mountain town in Pennsylvania with old Austrian-style wooden houses, birch-stick bundles on every porch, in pale overcast daylight",
+   "seed": 139
+  },
+  "casa_interior-sala": {
+   "lugar": "casa_interior/sala (noite)",
+   "prompt": "a modest living room with an old sofa, a small TV, a rug and framed family photos, in a small snowy mountain town in Pennsylvania with old Austrian-style wooden houses, birch-stick bundles on every porch, at night, dark blue moonlight, deep shadows",
+   "seed": 146
+  },
+  "casa_interior-janela": {
+   "lugar": "casa_interior/janela (noite)",
+   "prompt": "a living room window with thin curtains, the dark street visible outside, in a small snowy mountain town in Pennsylvania with old Austrian-style wooden houses, birch-stick bundles on every porch, at night, dark blue moonlight, deep shadows",
+   "seed": 153
+  },
+  "bairro-poste": {
+   "lugar": "bairro/poste (noite)",
+   "prompt": "a street corner under a single old street lamp, in a small snowy mountain town in Pennsylvania with old Austrian-style wooden houses, birch-stick bundles on every porch, at night, dark blue moonlight, deep shadows",
+   "seed": 160
+  },
+  "bairro-calcada": {
+   "lugar": "bairro/calcada (noite)",
+   "prompt": "a cracked sidewalk in front of a row of small houses, in a small snowy mountain town in Pennsylvania with old Austrian-style wooden houses, birch-stick bundles on every porch, at night, dark blue moonlight, deep shadows",
+   "seed": 167
+  },
+  "casa_interior-porta": {
+   "lugar": "casa_interior/porta (noite)",
+   "prompt": "the inside of a modest house's front door, a small entry hall with a coat hook and a little table, in a small snowy mountain town in Pennsylvania with old Austrian-style wooden houses, birch-stick bundles on every porch, at night, dark blue moonlight, deep shadows",
+   "seed": 139
+  },
+  "casa_interior-cozinha": {
+   "lugar": "casa_interior/cozinha (noite)",
+   "prompt": "a small home kitchen with a table, two chairs, a fridge and a window over the sink, in a small snowy mountain town in Pennsylvania with old Austrian-style wooden houses, birch-stick bundles on every porch, at night, dark blue moonlight, deep shadows",
+   "seed": 153
+  },
+  "casa_interior-sala-dia": {
+   "lugar": "casa_interior/sala (dia)",
+   "prompt": "a modest living room with an old sofa, a small TV, a rug and framed family photos, in a small snowy mountain town in Pennsylvania with old Austrian-style wooden houses, birch-stick bundles on every porch, in pale overcast daylight",
+   "seed": 146
+  },
+  "casa_interior-janela-dia": {
+   "lugar": "casa_interior/janela (dia)",
+   "prompt": "a living room window with thin curtains, the dark street visible outside, in a small snowy mountain town in Pennsylvania with old Austrian-style wooden houses, birch-stick bundles on every porch, in pale overcast daylight",
+   "seed": 160
+  }
+ }
+}

@@ -113,3 +113,18 @@ Tom: tensão de sobrevivência, sem gore; susto na penúltima frase de cada part
 - SV044 parte 1/3: Kit se muda para Alder Street; todas as casas deixam uma tigela na calçada às 9; ele ri e não deixa; 2:00 um cão preto enorme senta no meio da rua olhando para a casa dele, sem piscar. FEITO
 - SV045 parte 2/3: 2ª noite o cão está no gramado; 3ª noite na varanda; a vizinha liga desesperada: "put the bowl out now"; ele põe; o cão come, mas a tigela é devolvida com uma chave de casa dentro: a dele. FEITO
 - SV046 parte 3/3: a vizinha explica: a casa dele era do homem que alimentou na mão em 2009; o cão não quer comida, quer ser convidado; Kit tranca tudo; 3:00 batidas na porta com voz do pai dele; ele não abre; de manhã, a casa da vizinha aberta e vazia, e a tigela dela na varanda de Kit. FEITO
+
+## Semana de 28/11 a 02/12/2026 (SV047-SV051) — por: claude (rotina de terça, 17/11). Estoque antes: até SV046 (27/11). 1 gringa (Áustria/Alemanha), 1 autoral. Motor ilustrado (escrito em 3D + converter_3d.py). A partir do SV047: 185-205 palavras por parte.
+
+## krampus-night (SV047-SV049) The Night of the Birch — origem: gringa: Áustria/Alemanha, Krampusnacht (5/12), temporada de vídeos de Krampus que sobe no fim de novembro https://en.wikipedia.org/wiki/Krampus (história nossa, cidadezinha na Pensilvânia fundada por austríacos)
+- Ilustrado: bairro com neve (frente_casa, rua, calcada, poste) + casa_interior (janela, porta, cozinha, sala); criatura coisa_com_chifres; Owen, 29, recém-chegado (semente 4711, barba); Mr. Price, vizinho (4712).
+- Regras: deixar o feixe de bétula na varanda antes de escurecer; sino = fique dentro; nunca responda a quem pede "the naughty one"; nunca leve os galhos de volta para dentro.
+- SV047 parte 1/3: os vizinhos dão o feixe e as regras; Owen ri; meia-noite, sinos e correntes; uma coisa alta com chifres cheira cada varanda; na casa ao lado falta o feixe; bate 3 vezes e pede educadamente "the naughty one"; a porta abre. FEITO
+- SV048 parte 2/3: Mr. Price abre sorrindo e aponta para a casa de Owen; o feixe de Owen sumiu; porta dos fundos acorrentada por fora; batidas educadas, a voz da mãe; uma mão preta entra pela portinha do gato e procura o interruptor. FEITO
+- SV049 parte 3/3: Owen pega a vassoura de bétula e entrega pela portinha; a coisa aceita e vai embora; de manhã a casa de Price está aberta e vazia; a padeira explica: quem rouba o feixe do vizinho é levado no lugar; foi Price quem roubou; na varanda de Price, o feixe se mexe e bate 3 vezes. FEITO
+
+## mile-88 (SV050-SV051) Don't Stop at Mile 88 — origem: autoral
+- Ilustrado: estrada (ponto = posto de descanso, acostamento = fila de caminhões, meio, vindo, indo, curva) + casa_interior cozinha = lanchonete de estrada; criatura lobisomem (coisa de quatro patas com boné de caminhoneiro); Dana, 38, caminhoneira (semente 5011, boné); velho caminhoneiro (5012).
+- Regras do rádio PX: não pare no 88; se o rádio disser seu nome, desligue.
+- SV050 parte 1/2: neblina, combustível acabando, a única saída é a milha 88; posto vazio, 5 caminhões empoeirados com as portas abertas; o rádio: "Dana, you dropped your keys" (as chaves estão na mão dela); algo sai de baixo do 1º caminhão de quatro, de boné. FEITO
+- SV051 parte 2/2: ela pula na cabine, motor morre; a coisa no capô, boné de empresa fechada em 1999; os 5 rádios chamam o nome dela; ela arranca o rádio, a coisa para; o motor pega; de manhã, o velho: 5 caminhões sumiram ali desde 99; na poeira da porta dela, uma mão e o número seis. FEITO

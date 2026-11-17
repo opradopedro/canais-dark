@@ -1,0 +1,941 @@
+{
+ "formato": "Survivor",
+ "origem": "gringa: Áustria/Alemanha, Krampusnacht (5 de dezembro), temporada de vídeos de Krampus que sobe todo fim de novembro https://en.wikipedia.org/wiki/Krampus (história nossa, cidadezinha na Pensilvânia)",
+ "serie": "krampus-night",
+ "serie_titulo": "The Night of the Birch | Signal Lost",
+ "partes": 3,
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "krampus",
+  "krampusnacht",
+  "winter horror",
+  "small town rules"
+ ],
+ "codigo": "SV048",
+ "parte": 2,
+ "anterior": "SV047",
+ "titulo": "My neighbor pointed the horned thing at my house 🔔 Part 2 #horror #shorts",
+ "capa": "NOT ME",
+ "descripcion": "On the night of December 5, Owen watched his neighbor open the door to the horned thing, and point across the street. Then Owen noticed his own birch sticks were gone.\n\n> Part 3: {when_next}.\nWould you answer the door?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "owen": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#40405a",
+   "barba_estilo": "curta",
+   "barba": "#2a1a10"
+  },
+  "price": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#5a3a3a"
+  },
+  "demonio": {
+   "tipo": "humano",
+   "rosto_cor": "#6a1414",
+   "membro": "#4a0e0e",
+   "roupa": "trapos",
+   "roupa_cor": "#1a0a0a",
+   "olhos": "vermelhos",
+   "cabelo": "careca"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "A horned thing in chains is standing in the *open doorway* next door.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.55
+     }
+    ]
+   }
+  },
+  {
+   "texto": "If it sees Owen at the window, his house is next.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-janela",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He drops to the floor. Through the gap, he watches.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-janela",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "His neighbor, Mr. Price, is standing in the doorway in his robe.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "price",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He's smiling, like he's been waiting for this.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "price",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The thing bends down, until its horns scrape the porch roof.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Mr. Price points across the street. Right at Owen's house.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "price",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because Owen's bundle of birch was still on his porch. Wasn't it?",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "agachar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He crawls to the front door and looks through the peephole.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The porch is empty. Someone took his sticks.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-calcada",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
+  },
+  {
+   "texto": "Bells. Chains. Coming up the frozen street, toward him.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-rua",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Owen runs to the back door. Locked from outside. A chain around the handle.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then, knocking at the front. Three times. Polite.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Good evening. I'm here for the naughty one.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Owen holds his breath. Rule two: never answer.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The voice tries again, now in his mother's voice. Owen, sweetie, it's cold.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "bairro-frente_casa",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He bites his own hand to stay quiet.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then, from the kitchen, a sound. The cat door. Something is squeezing through.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "owen",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And a long, black hand reaches for the light switch. Part three, {when_next}.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": 1
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 11,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 17,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "sv-krampus-night",
+ "elenco_3d": {
+  "owen": {
+   "semente": 4711,
+   "corpo": "medio",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "acessorio": "barba"
+  },
+  "price": {
+   "semente": 4712,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "casual"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "medio",
+    "luz": "neve",
+    "atores": [
+     {
+      "id": "price",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Crouching",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "auto",
+    "luz": "neve",
+    "atores": [
+     {
+      "id": "price",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "close",
+    "luz": "neve",
+    "atores": [
+     {
+      "id": "price",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "baixo",
+    "luz": "neve",
+    "atores": [],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "medio",
+    "luz": "neve",
+    "atores": [
+     {
+      "id": "price",
+      "acao": "Interact",
+      "rosto": "sorriso"
+     }
+    ],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Sneaking",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "ombro",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Crawling",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "calcada",
+    "plano": "aberto",
+    "luz": "neve",
+    "atores": []
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "rua",
+    "plano": "baixo",
+    "luz": "neve",
+    "atores": [],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Running_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "close",
+    "luz": "neve",
+    "atores": [],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Idle_B",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "bairro",
+    "marca": "frente_casa",
+    "plano": "baixo",
+    "luz": "neve",
+    "atores": [],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Crouching",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "owen",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [],
+    "criatura": {
+     "tipo": "coisa_com_chifres"
+    }
+   }
+  }
+ ],
+ "gancho_visual": true
+}

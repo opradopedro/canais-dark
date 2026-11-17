@@ -1,0 +1,933 @@
+{
+ "formato": "Survivor",
+ "origem": "autoral",
+ "serie": "mile-88",
+ "serie_titulo": "Don't Stop at Mile 88 | Signal Lost",
+ "partes": 2,
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "truckers",
+  "highway horror",
+  "rest stop",
+  "cb radio"
+ ],
+ "codigo": "SV050",
+ "parte": 1,
+ "titulo": "Truckers never stop at the rest stop on mile 88 🚛 Part 1 #horror #shorts",
+ "capa": "MILE 88",
+ "descripcion": "Dana heard the rule on the CB radio her first week: never stop at mile 88. Tonight her fuel light came on in the fog, and mile 88 was the only exit.\n\n> Part 2: {when_next}.\nWould you have stopped?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #survival #creepypasta",
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "dana": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "longo",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#3a4a5a",
+   "chapeu": "bone",
+   "chapeu_cor": "#40405a"
+  },
+  "velho": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#40405a",
+   "barba_estilo": "curta",
+   "barba": "#8a8a8a"
+  },
+  "nahual": {
+   "tipo": "macaco",
+   "pelo": "#1c1a1a",
+   "rosto_cor": "#3a3030",
+   "olhos": "vermelhos"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "Truckers on Route 41 have one rule: never stop at the *rest stop at mile 88*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.49
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Because the people who park there at night don't drive away.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-acostamento",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.3,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Dana, thirty-eight, hauls frozen food across Nevada.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-meio",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "dana",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "She heard the rule on the CB radio her first week on the job.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-vindo",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "dana",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Don't stop at eighty-eight. And if your radio says your name, turn it off.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-meio",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "dana",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Tonight, the fog is so thick she can barely see her own headlights.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-indo",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
+  },
+  {
+   "texto": "And her fuel light just came on.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-meio",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "dana",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The only exit for forty miles is mile eighty-eight.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-curva",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "dana",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because what was waiting there wasn't a gas pump.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "dana",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The rest stop is empty. One flickering light. A single old pump.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "dana",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Five trucks are parked in a row, engines off, cabs dark.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-acostamento",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "dana",
+      "pose": "andar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Dana fills the tank as fast as she can.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "dana",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then she notices the trucks are covered in dust. Months of it.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-acostamento",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "dana",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And every driver's door is open.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-acostamento",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ]
+   }
+  },
+  {
+   "texto": "Behind her, the CB radio crackles.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "dana",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A man's voice, calm, says: Dana, you dropped your keys.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "dana",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "She looks down. Her keys are in her hand.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-ponto",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "dana",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Something is crawling out from under the first truck. On all fours. Toward her.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-acostamento",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "dana",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.3,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And it's wearing a trucker's cap. Part two, {when_next}.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "estrada-acostamento",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "nahual",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.3,
+      "vira": 1
+     }
+    ]
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 14,
+   "en": 0.4
+  },
+  {
+   "tipo": "susto",
+   "linea": 17,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "mundo": "sv-mile-88",
+ "elenco_3d": {
+  "dana": {
+   "semente": 5011,
+   "corpo": "forte",
+   "cabelo": "rabo",
+   "roupa": "casual",
+   "acessorio": "bone"
+  },
+  "velho": {
+   "semente": 5012,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "casual",
+   "acessorio": "barba"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "medio",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "dana",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "lobisomem",
+     "marca": "acostamento"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "atores": [],
+    "criatura": {
+     "tipo": "lobisomem"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "meio",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "dana",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "vindo",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "dana",
+      "acao": "Holding_A",
+      "rosto": "desconfiado",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "meio",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "dana",
+      "acao": "Idle_B",
+      "rosto": "desconfiado",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "indo",
+    "plano": "aberto",
+    "luz": "noite_neblina",
+    "atores": []
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "meio",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "dana",
+      "acao": "Interact",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "curva",
+    "plano": "aberto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "dana",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "ombro",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "dana",
+      "acao": "Walking_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "aberto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "dana",
+      "acao": "Idle_B",
+      "rosto": "desconfiado",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "aberto",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "dana",
+      "acao": "Walking_A",
+      "rosto": "desconfiado",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "medio",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "dana",
+      "acao": "Work_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "dana",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "atores": []
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "ombro",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "dana",
+      "acao": "Idle_B",
+      "rosto": "susto",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "dana",
+      "acao": "Holding_B",
+      "rosto": "medo",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "ponto",
+    "plano": "baixo",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "dana",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "medio",
+    "luz": "noite_neblina",
+    "atores": [
+     {
+      "id": "dana",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "lobisomem"
+    }
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "estrada",
+    "marca": "acostamento",
+    "plano": "close",
+    "luz": "noite_neblina",
+    "atores": [],
+    "criatura": {
+     "tipo": "lobisomem"
+    }
+   }
+  }
+ ],
+ "gancho_visual": true
+}
