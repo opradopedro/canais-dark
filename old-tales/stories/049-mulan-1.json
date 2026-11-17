@@ -61,6 +61,14 @@
    "roupa_cor": "#d8a431",
    "barba_estilo": "chinesa",
    "barba": "#1a1a1a"
+  },
+  "mulan_civil": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "longo",
+   "cabelo_cor": "#1a1410",
+   "roupa": "tunica",
+   "roupa_cor": "#3a5a6a"
   }
  },
  "codigo": "CL049",
@@ -88,7 +96,7 @@
     ],
     "atores": [
      {
-      "id": "mulan",
+      "id": "mulan_civil",
       "pose": "parado",
       "rosto": "choque",
       "v": 0.93,
@@ -200,7 +208,7 @@
     ],
     "atores": [
      {
-      "id": "mulan",
+      "id": "mulan_civil",
       "pose": "parado",
       "rosto": "triste",
       "v": 0.93,
@@ -238,7 +246,7 @@
     ],
     "atores": [
      {
-      "id": "mulan",
+      "id": "mulan_civil",
       "pose": "parado",
       "rosto": "triste",
       "v": 0.93,
@@ -302,12 +310,12 @@
     ],
     "atores": [
      {
-      "id": "mulan",
+      "id": "mulan_civil",
       "pose": "golpe",
       "rosto": "raiva",
       "v": 0.93,
       "esc": 1.0,
-      "arma": "espada",
+      "arma": false,
       "u": 0.5
      }
     ]
@@ -329,7 +337,7 @@
     "fx": [],
     "atores": [
      {
-      "id": "mulan",
+      "id": "mulan_civil",
       "pose": "andar",
       "rosto": "determinado",
       "v": 0.93,
@@ -356,7 +364,7 @@
     "fx": [],
     "atores": [
      {
-      "id": "mulan",
+      "id": "mulan_civil",
       "pose": "agachar",
       "rosto": "calmo",
       "v": 0.93,

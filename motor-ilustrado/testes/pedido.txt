@@ -1,3 +1,4 @@
 old-tales/stories/049-mulan-1.json
 # 15/11: teste do HM045 convertido para o ilustrado (NAO publica)
 # 17/11: prova do Old Tales ilustrado (Mulan, CL049)
+# 17/11 20h: Mulan sem armadura antes de se alistar
