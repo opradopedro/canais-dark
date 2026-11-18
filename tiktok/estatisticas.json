@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-17T23:11:44Z",
+ "gerado": "2026-11-18T00:11:44Z",
  "canais": {
   "hm": {
    "handle": "horamuerta.relatos",
@@ -102,7 +102,7 @@
      "codigo": "CL062",
      "tiktok": "https://www.tiktok.com/@oldtales.retold/video/7709190038160166164",
      "quando": "2026-11-17T17:14:37+00:00",
-     "views": 89,
+     "views": 94,
      "likes": 1,
      "comentarios": 0,
      "compart": 0
@@ -113,7 +113,7 @@
     "curtidas": 11,
     "videos": 5
    },
-   "views": 454
+   "views": 459
   },
   "yb": {
    "handle": "so.you.built.it",
@@ -144,7 +144,7 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@so.you.built.it/video/7708187432671399188",
      "quando": "2026-11-15T00:24:07+00:00",
-     "views": 220,
+     "views": 221,
      "likes": 10,
      "comentarios": 1,
      "compart": 0
@@ -194,18 +194,28 @@
      "codigo": "YB003",
      "tiktok": "https://www.tiktok.com/@so.you.built.it/video/7709251361468255509",
      "quando": "2026-11-17T21:12:54+00:00",
-     "views": 35,
-     "likes": 2,
+     "views": 60,
+     "likes": 3,
+     "comentarios": 0,
+     "compart": 0
+    },
+    {
+     "youtube": "zEpcEwvYo1s",
+     "codigo": null,
+     "tiktok": "https://www.tiktok.com/@so.you.built.it/video/7709282058585132296",
+     "quando": "2026-11-17T23:12:18+00:00",
+     "views": 14,
+     "likes": 0,
      "comentarios": 0,
      "compart": 0
     }
    ],
    "perfil": {
     "seguidores": 4,
-    "curtidas": 82,
-    "videos": 8
+    "curtidas": 83,
+    "videos": 9
    },
-   "views": 2490
+   "views": 2530
   },
   "sv": {
    "handle": "siganllost.tales",
