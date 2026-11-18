@@ -277,7 +277,12 @@ def mmss(s):
 
 def subir(canal, p, mp4, jpg, capitulos, pasta):
     cfg = CANAIS[canal]
-    import yt_upload as yt
+    # o motor-en/yt_upload.py, sempre: longo_partes poe hora-muerta/scripts na frente do sys.path e o
+    # "import yt_upload" pegava o do Hora Muerta, que nao tem configurar() (17/11: Wukong montado e nao subiu)
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("yt_upload_motor_en", os.path.join(AQUI, "yt_upload.py"))
+    yt = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(yt)
     yt.configurar(cfg["pref"], cfg["idioma"])
     os.environ["YT_TOKEN_VAR"] = cfg["token"]
     cj = os.path.join(RAIZ, canal, "canal.json")
