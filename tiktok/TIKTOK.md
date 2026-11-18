@@ -25,3 +25,4 @@ O TikTok acompanha o YouTube. Todo vídeo que entra no ar no YouTube vai para a 
 6. Falhou (conta desconectada, `canPublish` false): não marcar; avisar o Pedro na thread "Planejar vídeos longos e TikTok" com o link de reconectar (`vidiq_social_account_connect`, em bloco de código, porque ele não consegue copiar hyperlink).
 
 Post agendado na vidIQ não pode ser cancelado nem mudado (por isso a regra de nunca agendar). Se um vídeo do YouTube for tirado do ar, apagar o do TikTok pelo app.
+- (18/11) Vídeo LONGO/horizontal do YouTube não vai para o TikTok: as partes verticais já foram como Shorts. O `fila.py` pula vídeo com oEmbed mais largo que alto. Wukong completo (oLniZLIqrKs) em `ignorar`.

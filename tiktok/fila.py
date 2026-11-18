@@ -130,10 +130,10 @@ def ainda_publico(vid):
     """Segunda conferencia, na hora de postar: o oEmbed so responde para video publico."""
     try:
         u = "https://www.youtube.com/oembed?format=json&url=https://www.youtube.com/watch?v=" + vid
-        urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=30)
-        return True
+        r = urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=30)
+        return json.load(r)
     except Exception:
-        return False
+        return None
 
 
 def carregar():
@@ -159,8 +159,11 @@ def fila():
                 continue  # Signal Lost: video do motor antigo nao vai
             if n >= MAX_POR_RODADA.get(cid, 1):
                 break
-            if not ainda_publico(v["id"]):
+            oe = ainda_publico(v["id"])
+            if not oe:
                 continue
+            if oe.get("width", 0) > oe.get("height", 0):
+                continue  # 18/11: video horizontal = longo do YouTube; TikTok ja recebe as partes verticais
             saida.append({"youtubeId": v["id"], "codigo": v["id"], "agora": True,  # compatibilidade: sempre na hora
                           "quando": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat(), "canal": cid, "conta": cfg["conta"], "nome": cfg["nome"],
                           "youtube": "https://www.youtube.com/shorts/" + v["id"], "titulo": v["titulo"],
