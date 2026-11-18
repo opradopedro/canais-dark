@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-18T17:12:16Z",
+ "gerado": "2026-11-18T21:11:55Z",
  "canais": {
   "hm": {
    "handle": "horamuerta.relatos",
@@ -92,7 +92,7 @@
      "codigo": "CL060",
      "tiktok": "https://www.tiktok.com/@oldtales.retold/video/7708447342977912084",
      "quando": "2026-11-15T17:12:34+00:00",
-     "views": 187,
+     "views": 188,
      "likes": 6,
      "comentarios": 0,
      "compart": 0
@@ -112,7 +112,7 @@
      "codigo": "CL062",
      "tiktok": "https://www.tiktok.com/@oldtales.retold/video/7709190038160166164",
      "quando": "2026-11-17T17:14:37+00:00",
-     "views": 134,
+     "views": 139,
      "likes": 3,
      "comentarios": 0,
      "compart": 0
@@ -123,7 +123,7 @@
     "curtidas": 13,
     "videos": 5
    },
-   "views": 501
+   "views": 507
   },
   "yb": {
    "handle": "so.you.built.it",
@@ -214,18 +214,18 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@so.you.built.it/video/7709282058585132296",
      "quando": "2026-11-17T23:12:18+00:00",
-     "views": 99,
-     "likes": 1,
+     "views": 113,
+     "likes": 2,
      "comentarios": 0,
      "compart": 0
     }
    ],
    "perfil": {
     "seguidores": 4,
-    "curtidas": 90,
+    "curtidas": 91,
     "videos": 9
    },
-   "views": 2747
+   "views": 2761
   },
   "sv": {
    "handle": "siganllost.tales",
