@@ -293,7 +293,7 @@
 "comentarios": 1,
 "inscritos": 3,
 "likes": 19,
-"videos": 21,
+"videos": 22,
 "views": 2871
 }
 },
@@ -309,7 +309,7 @@
 "yt": {
 "comentarios": 10,
 "inscritos": 52,
-"likes": 236,
+"likes": 234,
 "videos": 30,
 "views": 11656
 }
@@ -335,9 +335,9 @@
 "tt": {
 "comentarios": 4,
 "compart": 1,
-"curtidas": 92,
+"curtidas": null,
 "posts": 9,
-"seguidores": 4,
+"seguidores": null,
 "views": 2777
 },
 "yt": {
