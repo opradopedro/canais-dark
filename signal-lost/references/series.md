@@ -128,3 +128,11 @@ Tom: tensão de sobrevivência, sem gore; susto na penúltima frase de cada part
 - Regras do rádio PX: não pare no 88; se o rádio disser seu nome, desligue.
 - SV050 parte 1/2: neblina, combustível acabando, a única saída é a milha 88; posto vazio, 5 caminhões empoeirados com as portas abertas; o rádio: "Dana, you dropped your keys" (as chaves estão na mão dela); algo sai de baixo do 1º caminhão de quatro, de boné. FEITO
 - SV051 parte 2/2: ela pula na cabine, motor morre; a coisa no capô, boné de empresa fechada em 1999; os 5 rádios chamam o nome dela; ela arranca o rádio, a coisa para; o motor pega; de manhã, o velho: 5 caminhões sumiram ali desde 99; na poeira da porta dela, uma mão e o número seis. FEITO
+
+## Semana de 03/12 a 04/12/2026 (SV052-SV053) — por: claude (rotina de sexta, 20/11). Estoque antes: até SV051 (02/12). 1 gringa (Japão). Motor ilustrado (escrito em 3D + converter_3d.py).
+
+## hide-alone (SV052-SV053) Hide and Seek Alone — origem: gringa: Japão, "hitori kakurenbo" (esconde-esconde sozinho), ritual dos fóruns japoneses (2channel, anos 2000) que continua viral https://en.wikipedia.org/wiki/Hitori_kakurenbo (história nossa, apartamento de estudante em Ohio)
+- Ilustrado: casa_interior (sala, quarto, porta, janela, cozinha = banheiro com banheira) de um apartamento pequeno; criatura rastejante (a boneca que vira coisa); Theo, 22, estudante que faz live (semente 5211, curto).
+- Regras do jogo: boneca com arroz e um pedaço de unha, costurada com linha vermelha; às 3:00 diga "you're it" 3 vezes e esconda-se com água salgada na boca; para terminar, ache a boneca, cuspa a água nela e diga "I win" 3 vezes; nunca saia de casa no meio.
+- SV052 parte 1/2: Theo faz a live para ganhar seguidores; prepara a boneca, a banheira; 3:00 "you're it"; esconde no armário; o chat avisa que a boneca não está mais na banheira; passos molhados; a TV liga sozinha; a porta do armário abre uma fresta; algo pequeno e molhado rasteja. FALTA
+- SV053 parte 2/2: o chat manda terminar o jogo; banheira vazia, rastros molhados até o armário de onde ele saiu; a boneca sentada na cama de frente para a câmera; ele cospe e diz "I win"; a live cai; de manhã queima a boneca; a gravação mostra que, enquanto ele estava no banheiro, alguém dentro do armário sussurrava "you're it". FALTA
