@@ -1,0 +1,472 @@
+{
+ "codigo": "YB077",
+ "formato": "Evolucao",
+ "origem": "autoral (PLANO-KIRO-MUNDOS, mundo cidade: galeria pluvial); abaulamento típico de rua ~2% (≈10 cm em meia pista de 5 m)",
+ "titulo": "You built a city street. Then it rained. 🌧️ #engineering #shorts",
+ "capa": "YOU BUILT A STORM DRAIN",
+ "descripcion": "From a flat street that floods to curbs, storm drains and a pipe as tall as a person, one problem at a time.\n\nWhat should we build next?\n\n#engineering #howitworks #stormdrain #city #shorts",
+ "tags": [
+  "engineering",
+  "storm drain",
+  "city",
+  "flooding",
+  "how it works",
+  "civil engineering",
+  "shorts"
+ ],
+ "destaque": [
+  "storm",
+  "floating",
+  "crown",
+  "gutters",
+  "floods",
+  "storm drains",
+  "pipe",
+  "fills",
+  "manhole",
+  "tall",
+  "downhill",
+  "dry",
+  "tunnels",
+  "slot",
+  "storm drain"
+ ],
+ "mundo": "cidade",
+ "autor": "claude",
+ "lineas": [
+  {
+   "texto": "Your new city street is flat asphalt, wall to wall. Then the first storm hits.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The water has nowhere to go. It sits there, and the cars start floating.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you build the road higher in the middle, with a curb on each side.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Just ten centimeters of crown, and the rain runs straight to the gutters.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the gutters carry all of it downhill, and the lowest corner floods.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you cut storm drains into the curb on every block.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And under the street, a pipe carries the water away to the river.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then a real storm comes, and that little pipe fills up in minutes.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The pressure builds until the manhole cover shoots into the air.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you dig a pipe almost as tall as a person.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And you tilt it downhill, so gravity moves the water with no pumps at all.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now the street stays dry, even in a downpour.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "For the biggest storms, some cities hide giant tunnels even deeper.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's why every curb in the world has a little slot in it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a storm drain. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "cidade",
+   "p": {
+    "foco": "rua",
+    "carros": 4,
+    "chuva": 1,
+    "alaga": [
+     0,
+     0.25
+    ],
+    "rotulo": "FLAT STREET",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "cidade",
+   "p": {
+    "foco": "rua",
+    "carros": 4,
+    "chuva": 1,
+    "alaga": [
+     0.25,
+     0.6
+    ],
+    "boia": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "cidade",
+   "p": {
+    "foco": "rua",
+    "carros": 4,
+    "chuva": 0,
+    "alaga": [
+     0.6,
+     0
+    ],
+    "boia": 0,
+    "meiofio": 1,
+    "abaulado": 1,
+    "rotulo": "CROWN + CURBS",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "cidade",
+   "p": {
+    "foco": "rua",
+    "carros": 4,
+    "chuva": 1,
+    "alaga": 0,
+    "boia": 0,
+    "meiofio": 1,
+    "abaulado": 1,
+    "marcas": [
+     {
+      "t": "Gutter",
+      "x": -5.4,
+      "y": 0.6
+     },
+     {
+      "t": "Gutter",
+      "x": 5.4,
+      "y": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "cidade",
+   "p": {
+    "foco": "geral",
+    "carros": 4,
+    "chuva": 1,
+    "alaga": [
+     0,
+     0.3
+    ],
+    "boia": 0,
+    "meiofio": 1,
+    "abaulado": 1,
+    "rotulo": "LOW CORNER",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "cidade",
+   "p": {
+    "foco": "sub",
+    "carros": 4,
+    "chuva": 1,
+    "alaga": [
+     0.3,
+     0
+    ],
+    "boia": 0,
+    "meiofio": 1,
+    "abaulado": 1,
+    "boca": 1,
+    "rotulo": "STORM DRAINS",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "cidade",
+   "p": {
+    "foco": "sub",
+    "carros": 4,
+    "chuva": 1,
+    "alaga": 0,
+    "boia": 0,
+    "meiofio": 1,
+    "abaulado": 1,
+    "boca": 1,
+    "galeria": "pequena",
+    "galeria_cheia": [
+     0,
+     0.4
+    ],
+    "escoa": 1
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "cidade",
+   "p": {
+    "foco": "sub",
+    "carros": 4,
+    "chuva": 1,
+    "alaga": 0,
+    "boia": 0,
+    "meiofio": 1,
+    "abaulado": 1,
+    "boca": 1,
+    "galeria": "pequena",
+    "galeria_cheia": [
+     0.4,
+     1
+    ],
+    "escoa": 1,
+    "rotulo": "PIPE FULL",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "cidade",
+   "p": {
+    "foco": "rua",
+    "carros": 4,
+    "chuva": 1,
+    "alaga": [
+     0,
+     0.2
+    ],
+    "boia": 0,
+    "meiofio": 1,
+    "abaulado": 1,
+    "boca": 1,
+    "galeria": "pequena",
+    "galeria_cheia": 1,
+    "escoa": 1,
+    "pv": 1,
+    "tampa_voa": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "cidade",
+   "p": {
+    "foco": "sub",
+    "carros": 4,
+    "chuva": 1,
+    "alaga": 0,
+    "boia": 0,
+    "meiofio": 1,
+    "abaulado": 1,
+    "boca": 1,
+    "galeria": "grande",
+    "galeria_cheia": [
+     0,
+     0.45
+    ],
+    "escoa": 1,
+    "pv": 1,
+    "tampa_voa": 0,
+    "rotulo": "BIG PIPE",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "cidade",
+   "p": {
+    "foco": "sub",
+    "carros": 4,
+    "chuva": 1,
+    "alaga": 0,
+    "boia": 0,
+    "meiofio": 1,
+    "abaulado": 1,
+    "boca": 1,
+    "galeria": "grande",
+    "galeria_cheia": 0.45,
+    "escoa": 1,
+    "pv": 1,
+    "tampa_voa": 0,
+    "marcas": [
+     {
+      "t": "Downhill",
+      "x": 0,
+      "y": -4.1
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "cidade",
+   "p": {
+    "foco": "rua",
+    "carros": 4,
+    "chuva": 1,
+    "alaga": 0,
+    "boia": 0,
+    "meiofio": 1,
+    "abaulado": 1,
+    "boca": 1,
+    "galeria": "grande",
+    "galeria_cheia": 0.45,
+    "escoa": 1,
+    "pv": 1,
+    "tampa_voa": 0
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "cidade",
+   "p": {
+    "foco": "fundo",
+    "carros": 4,
+    "chuva": 1,
+    "alaga": 0,
+    "boia": 0,
+    "meiofio": 1,
+    "abaulado": 1,
+    "boca": 1,
+    "galeria": "grande",
+    "galeria_cheia": 0.45,
+    "escoa": 1,
+    "pv": 1,
+    "tampa_voa": 0,
+    "tunel": 1,
+    "enche_tunel": [
+     0,
+     0.5
+    ],
+    "rotulo": "EVEN DEEPER"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "cidade",
+   "p": {
+    "foco": "sub",
+    "carros": 4,
+    "chuva": 0.6,
+    "alaga": 0,
+    "boia": 0,
+    "meiofio": 1,
+    "abaulado": 1,
+    "boca": 1,
+    "galeria": "grande",
+    "galeria_cheia": 0.45,
+    "escoa": 1,
+    "pv": 1,
+    "tampa_voa": 0,
+    "tunel": 0,
+    "enche_tunel": 0
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "cidade",
+   "p": {
+    "foco": "geral",
+    "carros": 4,
+    "chuva": 0,
+    "alaga": 0,
+    "boia": 0,
+    "meiofio": 1,
+    "abaulado": 1,
+    "boca": 1,
+    "galeria": "grande",
+    "galeria_cheia": 0.45,
+    "escoa": 1,
+    "pv": 1,
+    "tampa_voa": 0,
+    "tunel": 0,
+    "enche_tunel": 0
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 14,
+   "en": 0.05
+  }
+ ]
+}

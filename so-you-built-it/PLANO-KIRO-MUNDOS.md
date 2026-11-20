@@ -68,3 +68,6 @@ Com pelo menos 3 mundos novos no ar, o Claude confere as prévias e liga a regra
 `ROTEIROS.md` e no `validar_roteiros.py`: o mesmo mundo no máximo 2 vezes em cada 7 roteiros seguidos, e
 `terreno` + `riacho` juntos no máximo 2 em cada 7. Assim a rotina de roteiros passa a espalhar os vídeos pelos
 cenários novos sozinha, sem tirar a casa do canal.
+
+
+- `cidade`: FEITO 20/11 pelo Claude (rotina de roteiros). Roteiros: YB077 galeria pluvial; seguintes na mesma rotina. Prévia boa: rua/alagamento (foco rua), galeria e bocas (foco sub), túnel com trem (foco metro). Sem semáforo/laço indutivo ainda (cruzamento não cabe no corte; ficaria para uma peça nova).
