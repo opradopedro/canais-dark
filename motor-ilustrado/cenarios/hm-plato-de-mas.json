@@ -1,0 +1,48 @@
+{
+ "mundo": "hm-plato-de-mas",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "eerie horror story illustration, dark moody atmosphere, muted desaturated colors with cold blue shadows, realistic proportions, unsettling and lonely, mature adult tone, not childish",
+ "ordem": 50,
+ "cenarios": {
+  "casa_interior-cozinha": {
+   "lugar": "casa_interior/cozinha (noite)",
+   "prompt": "an old family dining room with a long wooden table set for dinner, one extra plate and an empty high-backed chair at the head of the table, inside an old family house in Saltillo, Mexico, worn tiles, religious pictures and a long wooden dining table, at night, dark blue moonlight, deep shadows",
+   "seed": 107
+  },
+  "casa_interior-porta-dia": {
+   "lugar": "casa_interior/porta (dia)",
+   "prompt": "the inside of a modest house's front door, a small entry hall with a coat hook and a little table, inside an old family house in Saltillo, Mexico, worn tiles, religious pictures and a long wooden dining table, in pale overcast daylight",
+   "seed": 114
+  },
+  "casa_interior-sala-dia": {
+   "lugar": "casa_interior/sala (dia)",
+   "prompt": "a modest living room with an old sofa, a small TV, a rug and framed family photos, inside an old family house in Saltillo, Mexico, worn tiles, religious pictures and a long wooden dining table, in pale overcast daylight",
+   "seed": 121
+  },
+  "casa_interior-cozinha-dia": {
+   "lugar": "casa_interior/cozinha (dia)",
+   "prompt": "an old family dining room with a long wooden table set for dinner, one extra plate and an empty high-backed chair at the head of the table, inside an old family house in Saltillo, Mexico, worn tiles, religious pictures and a long wooden dining table, in pale overcast daylight",
+   "seed": 128
+  },
+  "casa_interior-sala": {
+   "lugar": "casa_interior/sala (noite)",
+   "prompt": "a modest living room with an old sofa, a small TV, a rug and framed family photos, inside an old family house in Saltillo, Mexico, worn tiles, religious pictures and a long wooden dining table, at night, dark blue moonlight, deep shadows",
+   "seed": 135
+  },
+  "casa_interior-quarto": {
+   "lugar": "casa_interior/quarto (noite)",
+   "prompt": "a simple bedroom with a bed, a nightstand lamp and a closed closet, inside an old family house in Saltillo, Mexico, worn tiles, religious pictures and a long wooden dining table, at night, dark blue moonlight, deep shadows",
+   "seed": 142
+  },
+  "casa_interior-porta": {
+   "lugar": "casa_interior/porta (noite)",
+   "prompt": "the inside of a modest house's front door, a small entry hall with a coat hook and a little table, inside an old family house in Saltillo, Mexico, worn tiles, religious pictures and a long wooden dining table, at night, dark blue moonlight, deep shadows",
+   "seed": 149
+  },
+  "casa_interior-janela": {
+   "lugar": "casa_interior/janela (noite)",
+   "prompt": "a living room window with thin curtains, the dark street visible outside, inside an old family house in Saltillo, Mexico, worn tiles, religious pictures and a long wooden dining table, at night, dark blue moonlight, deep shadows",
+   "seed": 121
+  }
+ }
+}
