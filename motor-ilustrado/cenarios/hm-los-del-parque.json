@@ -1,0 +1,48 @@
+{
+ "mundo": "hm-los-del-parque",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "eerie horror story illustration, dark moody atmosphere, muted desaturated colors with cold blue shadows, realistic proportions, unsettling and lonely, mature adult tone, not childish",
+ "ordem": 49,
+ "cenarios": {
+  "floresta-entre_arvores": {
+   "lugar": "floresta/entre_arvores (noite)",
+   "prompt": "dense tall tree trunks close together, dark gaps between them, in a pine forest campground of a national park in the mountains of northern Mexico, at night, dark blue moonlight, deep shadows",
+   "seed": 128
+  },
+  "floresta-clareira": {
+   "lugar": "floresta/clareira (noite)",
+   "prompt": "a small clearing in a pine forest with a lone orange dome tent and a camera on a tripod, in a pine forest campground of a national park in the mountains of northern Mexico, at night, dark blue moonlight, deep shadows",
+   "seed": 135
+  },
+  "floresta-trilha-dia": {
+   "lugar": "floresta/trilha (dia)",
+   "prompt": "a narrow dirt trail between tall pine trees, in a pine forest campground of a national park in the mountains of northern Mexico, in pale overcast daylight",
+   "seed": 142
+  },
+  "floresta-pe_torre-dia": {
+   "lugar": "floresta/pe_torre (dia)",
+   "prompt": "a small wooden park ranger station cabin with a porch, a notice board covered in old missing person posters, in a pine forest campground of a national park in the mountains of northern Mexico, in pale overcast daylight",
+   "seed": 149
+  },
+  "floresta-toco-dia": {
+   "lugar": "floresta/toco (dia)",
+   "prompt": "a large tree stump with an axe and stacked firewood beside the park ranger cabin, in a pine forest campground of a national park in the mountains of northern Mexico, in pale overcast daylight",
+   "seed": 156
+  },
+  "floresta-clareira-dia": {
+   "lugar": "floresta/clareira (dia)",
+   "prompt": "a small clearing in a pine forest with a lone orange dome tent and a camera on a tripod, in a pine forest campground of a national park in the mountains of northern Mexico, in pale overcast daylight",
+   "seed": 163
+  },
+  "floresta-fundo": {
+   "lugar": "floresta/fundo (noite)",
+   "prompt": "deep inside a dense pine forest, in a pine forest campground of a national park in the mountains of northern Mexico, at night, dark blue moonlight, deep shadows",
+   "seed": 170
+  },
+  "floresta-trilha": {
+   "lugar": "floresta/trilha (noite)",
+   "prompt": "a narrow dirt trail between tall pine trees, in a pine forest campground of a national park in the mountains of northern Mexico, at night, dark blue moonlight, deep shadows",
+   "seed": 149
+  }
+ }
+}

@@ -1,0 +1,1146 @@
+{
+ "formato": "Regla",
+ "origem": "gringa: EUA, rumor das 'pessoas ferais que vivem nos parques nacionais' que voltou a pegar fogo no TikTok https://news.yahoo.com/rumors-feral-people-national-parks-152401823.html (história nossa, parque nacional da serra no norte do México)",
+ "serie": "los-del-parque",
+ "serie_titulo": "Los descalzos del parque | Hora Muerta",
+ "partes": 2,
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda",
+  "parque nacional",
+  "acampar",
+  "bosque"
+ ],
+ "autor": "claude",
+ "elenco": {
+  "ivonne": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#3a4a5a"
+  },
+  "efrain": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#1f2a44",
+   "chapeu": "bone",
+   "chapeu_cor": "#3a4a5a"
+  },
+  "alta": {
+   "tipo": "humano",
+   "rosto_cor": "#2a2a2a",
+   "membro": "#1c1c1c",
+   "roupa": "trapos",
+   "roupa_cor": "#111",
+   "sem_rosto": true,
+   "cabelo": "careca"
+  }
+ },
+ "codigo": "HM059",
+ "parte": 1,
+ "titulo": "Nunca saludes a quien camina descalzo en el bosque 🌲 Parte 1 #terror #shorts",
+ "capa": "NO LO SALUDES",
+ "descripcion": "Ivonne subió sola a la sierra a fotografiar estrellas. El guardaparque le dio tres reglas, y la primera era no saludar a nadie descalzo entre los árboles.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú le habrías abierto?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 11,
+   "en": 0.3
+  },
+  {
+   "tipo": "susto",
+   "linea": 20,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "Si acampas en el parque y ves a alguien *descalzo* entre los árboles, no lo saludes.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-entre_arvores",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.44
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Porque si le devuelves el saludo, esa noche viene a tu tienda.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ivonne, fotógrafa, sube sola a la sierra.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-trilha-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "ivonne",
+      "pose": "andar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "El guardaparque, don Efraín, le da tres reglas.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "efrain",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "ivonne",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Si ves a alguien descalzo entre los árboles, no lo saludes.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "efrain",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Si te llaman por tu nombre de noche, no contestes.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-toco-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "efrain",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y nunca apagues la lámpara de tu tienda.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "ivonne",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y yo nunca subo de noche. Nunca.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "efrain",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ivonne monta la tienda en un claro, lejos de todos.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "ivonne",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A la una y media, pone la cámara a disparar sola.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "ivonne",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Entonces ve a un hombre parado entre los pinos.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-entre_arvores",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "ivonne",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Muy flaco. Descalzo. Sonriendo, sin moverse.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-entre_arvores",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ivonne casi levanta la mano para saludar. Pero se acuerda.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "ivonne",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Quédate, porque en la mañana encontró algo en la tierra.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "ivonne",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Huellas de pies *descalzos*, en círculo, alrededor de su tienda.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira-dia",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "ivonne",
+      "pose": "agachar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Dieron vueltas toda la noche, junto a su cabeza.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-trilha-dia",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "ivonne",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "La segunda noche, Ivonne revisa las fotos de la cámara.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "ivonne",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Alrededor de la tienda, hay gente.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Seis personas descalzas, paradas, mirándola dormir.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-fundo",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "ivonne",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Afuera, alguien rasca la lona.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "ivonne",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Una voz de hombre dice: Ivonne, soy Efraín. *Ábreme*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-clareira",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "ivonne",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pero don Efraín nunca sube de noche. Parte dos, {dia_siguiente}.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-entre_arvores",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "ivonne",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": -1
+     }
+    ]
+   }
+  }
+ ],
+ "mundo": "hm-los-del-parque",
+ "elenco_3d": {
+  "ivonne": {
+   "semente": 5911,
+   "corpo": "medio",
+   "cabelo": "rabo",
+   "roupa": "casual"
+  },
+  "efrain": {
+   "semente": 5912,
+   "corpo": "forte",
+   "cabelo": "grisalho",
+   "roupa": "guarda",
+   "acessorio": "bone"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "entre_arvores",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "ivonne",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "entre_arvores"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [],
+    "criatura": {
+     "tipo": "vulto"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "auto",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "ivonne",
+      "acao": "Walking_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "medio",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "efrain",
+      "acao": "Interact",
+      "rosto": "desconfiado"
+     },
+     {
+      "id": "ivonne",
+      "acao": "Idle_B",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "close",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "efrain",
+      "acao": "Waving",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "toco",
+    "plano": "ombro",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "efrain",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "auto",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "ivonne",
+      "acao": "Holding_A",
+      "rosto": "neutro",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "medio",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "efrain",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "aberto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "ivonne",
+      "acao": "Work_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "medio",
+    "luz": "lua_cheia",
+    "atores": [
+     {
+      "id": "ivonne",
+      "acao": "Interact",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "entre_arvores",
+    "plano": "ombro",
+    "luz": "lua_cheia",
+    "atores": [
+     {
+      "id": "ivonne",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "entre_arvores"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "entre_arvores",
+    "plano": "close",
+    "luz": "lua_cheia",
+    "atores": [],
+    "criatura": {
+     "tipo": "vulto"
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "close",
+    "luz": "lua_cheia",
+    "atores": [
+     {
+      "id": "ivonne",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "medio",
+    "luz": "neblina_baixa",
+    "atores": [
+     {
+      "id": "ivonne",
+      "acao": "Crouching",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "baixo",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "ivonne",
+      "acao": "Crouching",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "auto",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "ivonne",
+      "acao": "Walking_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "ivonne",
+      "acao": "Holding_A",
+      "rosto": "desconfiado",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "aberto",
+    "luz": "lua_cheia",
+    "atores": [],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "clareira"
+    }
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "fundo",
+    "plano": "baixo",
+    "luz": "lua_cheia",
+    "atores": [
+     {
+      "id": "ivonne",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "fundo"
+    }
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "ivonne",
+      "acao": "Crouching",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "vulto"
+    }
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "clareira",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "ivonne",
+      "acao": "Hit_A",
+      "rosto": "susto",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "clareira"
+    }
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "entre_arvores",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "ivonne",
+      "acao": "Idle_B",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "entre_arvores"
+    }
+   }
+  }
+ ],
+ "gancho_visual": true
+}

@@ -132,6 +132,9 @@ SERIES = {
     "night-groundskeeper": "in an old small-town American cemetery",
     "footprints-snow": "at an isolated farmhouse in snowy woods during a blizzard, deep snow everywhere",
     "black-dog": "on Alder Street, a quiet American suburban street",
+    "los-del-parque": "in a pine forest campground of a national park in the mountains of northern Mexico",
+    "plato-de-mas": "inside an old family house in Saltillo, Mexico, worn tiles, religious pictures and a long wooden dining table",
+    "hide-alone": "inside a small cheap student apartment in Ohio, cluttered, a ring light and a laptop streaming",
 }
 DIA = {"dia", "nascer_sol", "entardecer", "nublado"}
 PERIODO = {False: "at night, dark blue moonlight, deep shadows", True: "in pale overcast daylight"}
