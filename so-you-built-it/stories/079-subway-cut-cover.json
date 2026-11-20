@@ -1,0 +1,419 @@
+{
+ "codigo": "YB079",
+ "formato": "Evolucao",
+ "origem": "autoral (método 'cut and cover': Linha 1 de Budapeste 1896, metrô de Paris 1900, IRT de Nova York 1904) https://en.wikipedia.org/wiki/Cut-and-cover",
+ "titulo": "You built a subway under the street 🚇 #engineering #shorts",
+ "capa": "YOU BUILT A SUBWAY",
+ "descripcion": "From a jammed avenue to a trench with concrete walls, steel struts and a roof that puts the street back on top. That's cut and cover, one problem at a time.\n\nWhat should we build next?\n\n#engineering #subway #metro #howitworks #shorts",
+ "tags": [
+  "engineering",
+  "subway",
+  "metro",
+  "cut and cover",
+  "how it works",
+  "civil engineering",
+  "shorts"
+ ],
+ "destaque": [
+  "jammed",
+  "trains",
+  "trench",
+  "slide",
+  "concrete walls",
+  "dig",
+  "bending",
+  "struts",
+  "groundwater",
+  "seal",
+  "roof",
+  "tracks",
+  "Cut and cover",
+  "subway"
+ ],
+ "mundo": "cidade",
+ "autor": "claude",
+ "lineas": [
+  {
+   "texto": "Your city's main avenue is jammed every morning, and the buses can't move.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you decide to run trains under the street.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The cheapest way: close the avenue, rip it open, and dig a trench.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But at four meters, the dirt walls slide into the hole.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So before digging, you pour concrete walls deep into the ground.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then you dig out the dirt between them.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the soil pushes so hard that the walls start bending inward.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you brace them with steel struts across the trench.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then, seven meters down, you hit groundwater, and the trench starts filling.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you pump it out day and night, and seal the floor with concrete.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then you cast a concrete roof over the top and put the street back on it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Cars drive on top again, and down below, you lay the tracks.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Cut and cover. That's how the first subways in Budapest, Paris and New York were built.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Today, deep lines use tunnel boring machines, but shallow stations are still built this way.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a subway. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "rua",
+    "carros": 6,
+    "engarrafa": 1,
+    "rotulo": "TRAFFIC JAM",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "geral",
+    "carros": 6,
+    "engarrafa": 1
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "metro",
+    "carros": 0,
+    "engarrafa": 0,
+    "vala": [
+     0,
+     0.5
+    ],
+    "rotulo": "CUT",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "metro",
+    "carros": 0,
+    "engarrafa": 0,
+    "vala": 0.5,
+    "desaba": [
+     0,
+     1
+    ],
+    "rotulo": "COLLAPSE",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "metro",
+    "carros": 0,
+    "engarrafa": 0,
+    "vala": 0,
+    "desaba": 0,
+    "paredes": 1,
+    "rotulo": "WALLS FIRST",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "metro",
+    "carros": 0,
+    "engarrafa": 0,
+    "vala": [
+     0,
+     1
+    ],
+    "desaba": 0,
+    "paredes": 1
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "metro",
+    "carros": 0,
+    "engarrafa": 0,
+    "vala": 1,
+    "desaba": 0,
+    "paredes": 1,
+    "carga": 1,
+    "rotulo": "PUSHING",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "metro",
+    "carros": 0,
+    "engarrafa": 0,
+    "vala": 1,
+    "desaba": 0,
+    "paredes": 1,
+    "carga": 0,
+    "escoras": [
+     0,
+     3
+    ],
+    "rotulo": "STRUTS",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "metro",
+    "carros": 0,
+    "engarrafa": 0,
+    "vala": 1,
+    "desaba": 0,
+    "paredes": 1,
+    "carga": 0,
+    "escoras": 3,
+    "lencol": -3,
+    "infiltra": [
+     0,
+     1
+    ],
+    "rotulo": "GROUNDWATER",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "metro",
+    "carros": 0,
+    "engarrafa": 0,
+    "vala": 1,
+    "desaba": 0,
+    "paredes": 1,
+    "carga": 0,
+    "escoras": 3,
+    "lencol": -3,
+    "infiltra": [
+     1,
+     0
+    ],
+    "rotulo": "PUMP + SEAL",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "metro",
+    "carros": 0,
+    "engarrafa": 0,
+    "vala": 1,
+    "desaba": 0,
+    "paredes": 1,
+    "carga": 0,
+    "escoras": 0,
+    "lencol": -3,
+    "infiltra": 0,
+    "laje": 1,
+    "rotulo": "COVER",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "metro",
+    "carros": 4,
+    "engarrafa": 0,
+    "vala": 1,
+    "desaba": 0,
+    "paredes": 1,
+    "carga": 0,
+    "escoras": 0,
+    "lencol": -3,
+    "infiltra": 0,
+    "laje": 1,
+    "trilho": 1
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "metro",
+    "carros": 4,
+    "engarrafa": 0,
+    "vala": 1,
+    "desaba": 0,
+    "paredes": 1,
+    "carga": 0,
+    "escoras": 0,
+    "lencol": -3,
+    "infiltra": 0,
+    "laje": 1,
+    "trilho": 1,
+    "trem": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "geral",
+    "carros": 4,
+    "engarrafa": 0,
+    "vala": 1,
+    "desaba": 0,
+    "paredes": 1,
+    "carga": 0,
+    "escoras": 0,
+    "lencol": -3,
+    "infiltra": 0,
+    "laje": 1,
+    "trilho": 1,
+    "trem": 1
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "metro",
+    "carros": 4,
+    "engarrafa": 0,
+    "vala": 1,
+    "desaba": 0,
+    "paredes": 1,
+    "carga": 0,
+    "escoras": 0,
+    "lencol": -3,
+    "infiltra": 0,
+    "laje": 1,
+    "trilho": 1,
+    "trem": 1
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 14,
+   "en": 0.05
+  }
+ ]
+}

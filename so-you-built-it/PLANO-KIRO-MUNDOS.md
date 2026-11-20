@@ -70,4 +70,4 @@ Com pelo menos 3 mundos novos no ar, o Claude confere as prévias e liga a regra
 cenários novos sozinha, sem tirar a casa do canal.
 
 
-- `cidade`: FEITO 20/11 pelo Claude (rotina de roteiros). Roteiros: YB077 galeria pluvial; seguintes na mesma rotina. Prévia boa: rua/alagamento (foco rua), galeria e bocas (foco sub), túnel com trem (foco metro). Sem semáforo/laço indutivo ainda (cruzamento não cabe no corte; ficaria para uma peça nova).
+- `cidade`: FEITO 20/11 pelo Claude (rotina de roteiros). Roteiros: YB077 galeria pluvial, YB079 metrô cut and cover, YB080 G-Cans (Tóquio), YB081 esgoto. Prévia boa: rua/alagamento (foco rua), galeria e bocas (foco sub), túnel com trem (foco metro). Sem semáforo/laço indutivo ainda (cruzamento não cabe no corte; ficaria para uma peça nova).

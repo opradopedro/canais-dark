@@ -1,0 +1,489 @@
+{
+ "codigo": "YB081",
+ "formato": "Evolucao",
+ "origem": "autoral (esgoto de tijolo oval do séc. XIX, rede combinada vs separada, transbordamento em chuva forte) https://en.wikipedia.org/wiki/Combined_sewer",
+ "titulo": "You built a sewer under the city 🐀 #engineering #shorts",
+ "capa": "YOU BUILT A SEWER",
+ "descripcion": "From waste in the street to an egg-shaped brick tunnel, a treatment plant and a second pipe just for rain, one problem at a time.\n\nWhat should we build next?\n\n#engineering #sewer #city #howitworks #shorts",
+ "tags": [
+  "engineering",
+  "sewer",
+  "city",
+  "sanitation",
+  "how it works",
+  "civil engineering",
+  "shorts"
+ ],
+ "destaque": [
+  "waste",
+  "stink",
+  "channel",
+  "overflows",
+  "brick tunnel",
+  "egg-shaped",
+  "pipe",
+  "river",
+  "plant",
+  "storm",
+  "manholes",
+  "rain",
+  "one pipe",
+  "sewer"
+ ],
+ "mundo": "cidade",
+ "autor": "claude",
+ "lineas": [
+  {
+   "texto": "Your city has a million people, and every home dumps its waste in the street.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The stink is awful, and every rain washes it into the river you drink from.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you dig a channel down the middle of the street to carry it away.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But an open channel still stinks, and it overflows in every storm.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you bury it: a brick tunnel under the street.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "You make it egg-shaped. Narrow at the bottom, so even a trickle flows fast and keeps it clean.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And you connect every building with its own pipe.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the sewer still dumps everything into the river, right next to the city.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you send it far downstream, to a plant that cleans it first.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then a big storm hits, and rainwater pours into the same pipe.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Sewage shoots out of the manholes and floods the streets.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you build a second pipe, just for rain.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now the rain goes to the river, and the sewage goes to the plant.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Many old cities still share one pipe, and still overflow in big storms.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a sewer. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "rua",
+    "carros": 2,
+    "sujo": [
+     0,
+     1
+    ],
+    "moscas": 1,
+    "rotulo": "NO SEWER",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "rua",
+    "carros": 2,
+    "sujo": 1,
+    "moscas": 1,
+    "chuva": 1,
+    "alaga": 0.15,
+    "rotulo": "DIRTY RIVER",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "rua",
+    "carros": 2,
+    "sujo": 0.3,
+    "moscas": 1,
+    "chuva": 0,
+    "alaga": 0,
+    "valeta": 1,
+    "rotulo": "OPEN CHANNEL",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "rua",
+    "carros": 2,
+    "sujo": [
+     0.3,
+     0.9
+    ],
+    "moscas": 1,
+    "chuva": 1,
+    "alaga": 0,
+    "valeta": 1,
+    "rotulo": "OVERFLOW",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "esgoto",
+    "carros": 2,
+    "sujo": 0,
+    "moscas": 0,
+    "chuva": 0,
+    "alaga": 0,
+    "valeta": 0,
+    "esgoto": 1,
+    "esgoto_nivel": 0.3,
+    "rotulo": "BRICK SEWER",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "esgoto",
+    "carros": 2,
+    "sujo": 0,
+    "moscas": 0,
+    "chuva": 0,
+    "alaga": 0,
+    "valeta": 0,
+    "esgoto": 1,
+    "esgoto_nivel": [
+     0.3,
+     0.15
+    ],
+    "marcas": [
+     {
+      "t": "Egg shape",
+      "x": -3.2,
+      "y": -6.4
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "sub",
+    "carros": 2,
+    "sujo": 0,
+    "moscas": 0,
+    "chuva": 0,
+    "alaga": 0,
+    "valeta": 0,
+    "esgoto": 1,
+    "esgoto_nivel": 0.15,
+    "ligacoes": 1
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "geral",
+    "carros": 2,
+    "sujo": 0,
+    "moscas": 0,
+    "chuva": 0,
+    "alaga": 0,
+    "valeta": 0,
+    "esgoto": 1,
+    "esgoto_nivel": 0.15,
+    "ligacoes": 1,
+    "rotulo": "STILL THE RIVER",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "esgoto",
+    "carros": 2,
+    "sujo": 0,
+    "moscas": 0,
+    "chuva": 0,
+    "alaga": 0,
+    "valeta": 0,
+    "esgoto": 1,
+    "esgoto_nivel": 0.15,
+    "ligacoes": 1,
+    "tratamento": 1,
+    "marcas": [
+     {
+      "t": "To treatment",
+      "x": -3.2,
+      "y": -6.4,
+      "cor": "green"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "esgoto",
+    "carros": 2,
+    "sujo": 0,
+    "moscas": 0,
+    "chuva": 1,
+    "alaga": 0,
+    "valeta": 0,
+    "esgoto": 1,
+    "esgoto_nivel": [
+     0.2,
+     1
+    ],
+    "ligacoes": 1,
+    "tratamento": 1,
+    "rotulo": "PIPE FULL",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "rua",
+    "carros": 2,
+    "sujo": 0,
+    "moscas": 0,
+    "chuva": 1,
+    "alaga": [
+     0,
+     0.2
+    ],
+    "valeta": 0,
+    "esgoto": 1,
+    "esgoto_nivel": 1,
+    "ligacoes": 1,
+    "tratamento": 1,
+    "pv": 1,
+    "tampa_voa": [
+     0,
+     1
+    ],
+    "transborda": 1
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "sub",
+    "carros": 2,
+    "sujo": 0,
+    "moscas": 0,
+    "chuva": 1,
+    "alaga": 0,
+    "valeta": 0,
+    "esgoto": 1,
+    "esgoto_nivel": 0.3,
+    "ligacoes": 1,
+    "tratamento": 1,
+    "pv": 1,
+    "tampa_voa": 0,
+    "transborda": 0,
+    "boca": 1,
+    "galeria": "grande",
+    "galeria_cheia": 0.5,
+    "rotulo": "RAIN PIPE",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "sub",
+    "carros": 2,
+    "sujo": 0,
+    "moscas": 0,
+    "chuva": 1,
+    "alaga": 0,
+    "valeta": 0,
+    "esgoto": 1,
+    "esgoto_nivel": 0.3,
+    "ligacoes": 1,
+    "tratamento": 1,
+    "pv": 1,
+    "tampa_voa": 0,
+    "transborda": 0,
+    "boca": 1,
+    "galeria": "grande",
+    "galeria_cheia": 0.5,
+    "escoa": 1
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "geral",
+    "carros": 2,
+    "sujo": 0,
+    "moscas": 0,
+    "chuva": 0.6,
+    "alaga": 0,
+    "valeta": 0,
+    "esgoto": 1,
+    "esgoto_nivel": 0.3,
+    "ligacoes": 1,
+    "tratamento": 1,
+    "pv": 1,
+    "tampa_voa": 0,
+    "transborda": 0,
+    "boca": 1,
+    "galeria": "grande",
+    "galeria_cheia": 0.5,
+    "escoa": 1
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "foco": "esgoto",
+    "carros": 2,
+    "sujo": 0,
+    "moscas": 0,
+    "chuva": 0,
+    "alaga": 0,
+    "valeta": 0,
+    "esgoto": 1,
+    "esgoto_nivel": 0.3,
+    "ligacoes": 1,
+    "tratamento": 1,
+    "pv": 1,
+    "tampa_voa": 0,
+    "transborda": 0,
+    "boca": 1,
+    "galeria": "grande",
+    "galeria_cheia": 0.5,
+    "escoa": 1
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 14,
+   "en": 0.05
+  }
+ ]
+}

@@ -142,7 +142,7 @@ function monta() {
     box(0.9, -YG - 0.2, 0.05, basic(0x1c1c1c), s * (RX - 0.55), (YG + 0.2) / 2 - 0.05, ZF + 0.005, W3.bocas);
     box(Math.abs(s * (RX - 0.55)) - 1.0, 0.36, 0.05, basic(0x1c1c1c), s * ((RX - 0.55) + 1.0) / 2, YG, ZF + 0.006, W3.bocas);
   }
-  W3.bocaAgua = [-1, 1].map(s => { const m = box(0.7, 1, 0.02, aguaM(0.8), s * (RX - 0.55), 0, ZF + 0.02, W3.bocas); return m; });
+  W3.bocaAgua = [-1, 1].map(s => { const m = box(0.7, 1, 0.02, aguaM(0.8), s * (RX - 0.55), 0, ZF + 0.045, W3.bocas); return m; });
   W3.pv = grupo(); box(1.0, -YG - 1.1, 0.05, basic(0x1e1e1e), XPV, (YG + 1.1) / 2 - 0.15, ZF + 0.004, W3.pv);
   W3.tampa = cyl(0.55, 0.55, 0.08, ferro, 24, W3.pv); W3.tampa.position.set(XPV, 0.05, Z1 - 0.7);
   W3.jato = [...Array(40)].map((_, i) => { const m = new T3.Mesh(new T3.SphereGeometry(0.1, 6, 5), basic(0x6fc0ff)); m.userData.f = rnd(i * 3.3); scene.add(m); return m; });
@@ -152,11 +152,11 @@ function monta() {
   W3.poco = grupo(); box(3.0, -YT, 0.05, basic(0x121416), XPO, YT / 2, ZF + 0.004, W3.poco);
   for (const s of [-1, 1]) box(0.35, -YT, 0.06, anelC, XPO + s * 1.67, YT / 2, ZF + 0.006, W3.poco);
   box(Math.abs(XPO - XT) - RT, 1.6, 0.05, basic(0x121416), (XPO + XT - RT) / 2, YT, ZF + 0.005, W3.poco);
-  W3.pocoAgua = box(3.0, 1, 0.02, aguaM(0.85), XPO, 0, ZF + 0.012, W3.poco);
+  W3.pocoAgua = box(3.0, 1, 0.01, aguaM(0.85), XPO, 0, ZF + 0.04, W3.poco);
   W3.tq = grupo(); box(XTQ1 - XTQ0, YTQ1 - YTQ0, 0.05, basic(0x1a1c1f), (XTQ0 + XTQ1) / 2, (YTQ0 + YTQ1) / 2, ZF + 0.004, W3.tq);
-  for (let k = 0; k < 6; k++) box(0.55, YTQ1 - YTQ0, 0.07, anelC, XTQ0 + 1.0 + k * 1.95, (YTQ0 + YTQ1) / 2, ZF + 0.01, W3.tq);
+  for (let k = 0; k < 6; k++) box(0.55, YTQ1 - YTQ0, 0.03, anelC, XTQ0 + 1.0 + k * 1.95, (YTQ0 + YTQ1) / 2, ZF + 0.05, W3.tq);
   box(XTQ0 - XT - RT + 0.2, 1.4, 0.05, basic(0x121416), (XT + RT + XTQ0) / 2, YT - 0.3, ZF + 0.005, W3.tq);
-  W3.tqAgua = box(XTQ1 - XTQ0, 1, 0.02, aguaM(0.75), (XTQ0 + XTQ1) / 2, 0, ZF + 0.008, W3.tq);
+  W3.tqAgua = box(XTQ1 - XTQ0, 1, 0.02, aguaM(0.75), (XTQ0 + XTQ1) / 2, 0, ZF + 0.04, W3.tq);
   W3.bombas = grupo(); for (let k = 0; k < 3; k++) { box(0.8, 1.1, 0.1, mat(0x2f6fb5, { metalness: 0.4 }), XTQ1 - 0.8, YTQ1 - 1 - k * 1.5, ZF + 0.03, W3.bombas); }
   box(0.4, -YTQ1 + 0.2, 0.05, basic(0x1a1c1f), XTQ1 - 0.2, YTQ1 / 2, ZF + 0.004, W3.bombas);
 
@@ -182,7 +182,7 @@ function monta() {
   W3.valaTras = uvMundo(box(VX1 - VX0, 1, 0.1, terra, 0, 0, Z0 + 0.05, W3.vala), 2.2);
   W3.valaLado = [-1, 1].map(s => uvMundo(box(0.06, 1, Z1 - Z0, terra, s * (VX1 - 0.03), 0, (Z0 + Z1) / 2, W3.vala), 2.2));
   W3.desab = [-1, 1].map(s => { const sh = new T3.Shape(); sh.moveTo(0, 0); sh.lineTo(-s * 2.6, 0); sh.lineTo(0, 3.2); sh.closePath(); const me = new T3.Mesh(new T3.ExtrudeGeometry(sh, { depth: Z1 - Z0, bevelEnabled: false }), tmat('terra', { relevo: 5 })); me.position.set(s * VX1, 0, Z0); me.castShadow = true; uvMundo(me, 2); scene.add(me); return me; });
-  W3.paredes = grupo(); for (const s of [-1, 1]) uvMundo(box(0.6, -VY + 2.2, Z1 - Z0, conc, s * (VX1 - 0.3), (VY - 2.2) / 2, (Z0 + Z1) / 2, W3.paredes), 1.5);
+  W3.paredes = grupo(); for (const s of [-1, 1]) uvMundo(box(0.6, -VY + 2.2, Z1 - Z0 + 0.14, conc, s * (VX1 - 0.3), (VY - 2.2) / 2, (Z0 + Z1) / 2 + 0.07, W3.paredes), 1.5);
   W3.escoras = [-1.6, -3.4, -5.2].map(yy => { const g = grupo(); box(VX1 - VX0 - 1.2, 0.35, 0.35, mat(0xd8a12a, { metalness: 0.5, roughness: 0.4 }), 0, yy, Z1 - 0.6, g); box(VX1 - VX0 - 1.2, 0.35, 0.35, mat(0xd8a12a, { metalness: 0.5, roughness: 0.4 }), 0, yy, Z0 + 1.2, g); return g; });
   W3.infil = box(VX1 - VX0 - 0.1, 1, Z1 - Z0, aguaM(0.6), 0, 0, (Z0 + Z1) / 2, W3.vala);
   W3.laje = grupo(); uvMundo(box(VX1 - VX0, 0.6, Z1 - Z0, conc, 0, -1.4, (Z0 + Z1) / 2, W3.laje), 1.5);
@@ -229,7 +229,7 @@ function atualiza(t, ctx) {
   W3.asfM.visible = !va || laje;
   // lencol
   const len = p.lencol === undefined ? null : V(p.lencol, lt); W3.lencol.visible = len !== null;
-  const corta = len !== null && va > 0.02 && !laje; W3.lencol.visible = len !== null && !corta; W3.lencolLados.forEach(m => m.visible = corta);
+  const corta = len !== null && va > 0.02; W3.lencol.visible = len !== null && !corta; W3.lencolLados.forEach(m => m.visible = corta);
   if (len !== null) { const h = len - Y.argila; [W3.lencol, ...W3.lencolLados].forEach(m => { m.scale.y = h; m.position.y = Y.argila + h / 2; }); }
   // drenagem
   W3.galP.visible = p.galeria === 'pequena'; W3.galG.visible = p.galeria === 'grande';
@@ -270,8 +270,8 @@ function atualiza(t, ctx) {
 
 const FOCO = {
   geral: { x: 0, y: -2.5, d: 30, h: 3 }, rua: { x: 0, y: 1.0, d: 15, h: 2.6 }, sub: { x: 0, y: -2.2, d: 13, h: 1.2 },
-  cano: { x: 3.0, y: -1.0, d: 7.5, h: 0.8 }, esgoto: { x: -3.0, y: -3.2, d: 9, h: 1 }, metro: { x: 0, y: -3.2, d: 17, h: 1.6 },
-  fundo: { x: 0, y: -8, d: 34, h: 1 }, tunel: { x: -3, y: -10.5, d: 24, h: 0.6 }, tanque: { x: 9.5, y: -11.5, d: 19, h: 0.4 },
+  cano: { x: 3.0, y: -1.0, d: 7.5, h: 0.8 }, esgoto: { x: -3.0, y: -3.2, d: 9, h: 1 }, metro: { x: 0, y: -3.4, d: 21, h: 1.6 },
+  fundo: { x: 0, y: -8, d: 34, h: 1 }, tunel: { x: -3, y: -10.5, d: 24, h: 0.6 }, tanque: { x: 10.2, y: -11.5, d: 23, h: 0.4 },
   poco: { x: -9, y: -6.5, d: 26, h: 0.5 },
 };
 function camera(t, ctx) { cameraPadrao(t, ctx, { x: 0, y: -2.2, d: 13, a: 0, h: 1.2, zFoco: Z1 }, p => FOCO[p.foco] || {}); }
@@ -294,7 +294,7 @@ function overlay(t, ctx) {
     if (p.tanque && p.bombas) { const [ax, ay] = proj(XTQ1 - 0.2, YTQ1 + 1 + q * 5, ZF + 0.05), [bx, by] = proj(XTQ1 - 0.2, YTQ1 + 2.2 + q * 5, ZF + 0.05); seta(ax, ay, bx, by, '#6fc0ff'); }
     x.globalAlpha = 1; }
   // empurrao da terra na vala
-  if (W3.vala.visible && !p.laje && (V(p.desaba, lt) > 0.02 || p.carga)) { for (const sg of [-1, 1]) for (const yy of [-1.5, -3.5]) { const [ax, ay] = proj(sg * (VX1 + 2.2), yy, ZF), [bx, by] = proj(sg * (VX1 + 0.6), yy, ZF); seta(ax, ay, bx, by, COL.red); } }
+  if (W3.vala.visible && !p.laje && (V(p.desaba, lt) > 0.02 || p.carga)) { for (const sg of [-1, 1]) for (const yy of [-1.5, -3.5]) { const [ax, ay] = proj(sg * (VX1 - 0.1), yy, ZF + 0.1), [bx, by] = proj(sg * (VX1 - 1.5), yy, ZF + 0.1); seta(ax, ay, bx, by, COL.red); } }
   // moscas
   const mo = V(p.moscas, lt);
   if (mo > 0.02) { x.fillStyle = '#111'; for (let i = 0; i < 16 * mo; i++) { const [px, py] = proj(XE + Math.sin(t * 2.3 + i * 1.9) * 1.6, 0.9 + Math.cos(t * 3.1 + i) * 0.6, Z1 - 0.6); x.beginPath(); x.arc(px, py, 5, 0, 6.28); x.fill(); } }
