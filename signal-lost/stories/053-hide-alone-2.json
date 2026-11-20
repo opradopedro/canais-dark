@@ -1,0 +1,1013 @@
+{
+ "formato": "Survivor",
+ "origem": "gringa: Japão, 'hitori kakurenbo' (esconde-esconde sozinho), ritual dos fóruns japoneses (2channel) que continua viral https://en.wikipedia.org/wiki/Hitori_kakurenbo (história nossa, apartamento de estudante em Ohio)",
+ "serie": "hide-alone",
+ "serie_titulo": "Hide and Seek Alone | Signal Lost",
+ "partes": 2,
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "japanese urban legend",
+  "hitori kakurenbo",
+  "hide and seek alone",
+  "3am challenge"
+ ],
+ "autor": "claude",
+ "elenco": {
+  "theo": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#3a4a5a"
+  },
+  "rastejante": {
+   "tipo": "humano",
+   "rosto_cor": "#4a3a2a",
+   "membro": "#4a3a2a",
+   "roupa": "trapos",
+   "roupa_cor": "#2e2216",
+   "sem_rosto": true,
+   "cabelo": "careca",
+   "desgaste": 0.8
+  }
+ },
+ "codigo": "SV053",
+ "parte": 2,
+ "anterior": "SV052",
+ "titulo": "The doll wasn't the only one hiding 🪡 Part 2 #horror #shorts",
+ "capa": "I WIN",
+ "descripcion": "Theo had to end the game before sunrise: find the doll, spit the salt water, say I win three times. Two hundred viewers watched. One of them sent him a clip the next morning.\n\nWho was he playing with?\n\nNarrated fiction. New story every day.\n#horror #horrorstories #scarystories #creepypasta #japanesehorror",
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 12,
+   "en": 0.3
+  },
+  {
+   "tipo": "susto",
+   "linea": 19,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "visual": "ilustrado",
+ "lineas": [
+  {
+   "texto": "A soaked doll just crawled into Theo's closet and whispered: *found you*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.15
+     }
+    ]
+   }
+  },
+  {
+   "texto": "If he doesn't end the game before sunrise, it doesn't end.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Two hundred people are watching him live.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The chat spams the rule. Find the doll. Spit the salt water. Say I win.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Theo kicks the closet door open. The doll is gone.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Only a wet trail on the floor, going back to the bathroom.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because the bathroom was worse.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The tub is empty. Not a drop of water left.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then one message gets pinned by nobody.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Look at your bed.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Theo walks back. The doll is sitting on his pillow.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Facing the camera. Holding the scissors he used to cut the thread.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He spits the salt water on it and says it three times. I win. I win. I *win*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The doll falls over. The stream cuts to black.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "At sunrise, Theo burns the doll, like the rules say.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-janela-dia",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He thinks it's over.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then a viewer sends him a clip from the recording.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sofa-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It's from the three minutes he was in the bathroom.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "His closet is empty. The door is closed.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": []
+   }
+  },
+  {
+   "texto": "And from inside, a voice that is not the doll's whispers: *you're it*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "So, who was he playing with? Send this to someone who streams at night.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "theo",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "mundo": "sv-hide-alone",
+ "elenco_3d": {
+  "theo": {
+   "semente": 5211,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "casual"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Crouching",
+      "rosto": "medo",
+      "segura": "celular"
+     }
+    ],
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "quarto"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [],
+    "criatura": {
+     "tipo": "rastejante"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Holding_A",
+      "rosto": "medo",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Idle_B",
+      "rosto": "susto",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Hit_B",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Walking_A",
+      "rosto": "medo",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "ombro",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Walking_B",
+      "rosto": "medo",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Idle_B",
+      "rosto": "medo",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Walking_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "quarto"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [],
+    "criatura": {
+     "tipo": "rastejante"
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Melee_1H_Attack_Chop",
+      "rosto": "bravo"
+     }
+    ],
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "quarto"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Idle_B",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "aberto",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Idle_B",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sofa",
+    "plano": "close",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Holding_A",
+      "rosto": "desconfiado",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "ombro",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": []
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [],
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "quarto"
+    }
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "theo",
+      "acao": "Idle_B",
+      "rosto": "medo",
+      "segura": "celular"
+     }
+    ]
+   }
+  }
+ ],
+ "gancho_visual": true
+}

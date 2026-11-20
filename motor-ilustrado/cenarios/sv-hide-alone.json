@@ -1,0 +1,58 @@
+{
+ "mundo": "sv-hide-alone",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "eerie horror story illustration, dark moody atmosphere, muted desaturated colors with cold blue shadows, realistic proportions, unsettling and lonely, mature adult tone, not childish",
+ "ordem": 46,
+ "cenarios": {
+  "casa_interior-quarto": {
+   "lugar": "casa_interior/quarto (noite)",
+   "prompt": "a simple bedroom with a bed, a nightstand lamp and a sliding closet door left slightly open, inside a small cheap student apartment in Ohio, cluttered, a ring light and a laptop streaming, at night, dark blue moonlight, deep shadows",
+   "seed": 132
+  },
+  "casa_interior-cozinha": {
+   "lugar": "casa_interior/cozinha (noite)",
+   "prompt": "a small cramped apartment bathroom with a full white bathtub, a phone on a mini tripod pointed at the tub, inside a small cheap student apartment in Ohio, cluttered, a ring light and a laptop streaming, at night, dark blue moonlight, deep shadows",
+   "seed": 139
+  },
+  "casa_interior-sala-dia": {
+   "lugar": "casa_interior/sala (dia)",
+   "prompt": "a modest living room with an old sofa, a small TV, a rug and framed family photos, inside a small cheap student apartment in Ohio, cluttered, a ring light and a laptop streaming, in pale overcast daylight",
+   "seed": 146
+  },
+  "casa_interior-sala": {
+   "lugar": "casa_interior/sala (noite)",
+   "prompt": "a modest living room with an old sofa, a small TV, a rug and framed family photos, inside a small cheap student apartment in Ohio, cluttered, a ring light and a laptop streaming, at night, dark blue moonlight, deep shadows",
+   "seed": 153
+  },
+  "casa_interior-porta": {
+   "lugar": "casa_interior/porta (noite)",
+   "prompt": "the inside of a modest house's front door, a small entry hall with a coat hook and a little table, inside a small cheap student apartment in Ohio, cluttered, a ring light and a laptop streaming, at night, dark blue moonlight, deep shadows",
+   "seed": 160
+  },
+  "casa_interior-sofa": {
+   "lugar": "casa_interior/sofa (noite)",
+   "prompt": "a modest living room with an old sofa, a small TV, a rug and framed family photos, inside a small cheap student apartment in Ohio, cluttered, a ring light and a laptop streaming, at night, dark blue moonlight, deep shadows",
+   "seed": 167
+  },
+  "casa_interior-janela-dia": {
+   "lugar": "casa_interior/janela (dia)",
+   "prompt": "a living room window with thin curtains, the dark street visible outside, inside a small cheap student apartment in Ohio, cluttered, a ring light and a laptop streaming, in pale overcast daylight",
+   "seed": 160
+  },
+  "casa_interior-sofa-dia": {
+   "lugar": "casa_interior/sofa (dia)",
+   "prompt": "a modest living room with an old sofa, a small TV, a rug and framed family photos, inside a small cheap student apartment in Ohio, cluttered, a ring light and a laptop streaming, in pale overcast daylight",
+   "seed": 174
+  },
+  "casa_interior-cozinha-dia": {
+   "lugar": "casa_interior/cozinha (dia)",
+   "prompt": "a small cramped apartment bathroom with a full white bathtub, a phone on a mini tripod pointed at the tub, inside a small cheap student apartment in Ohio, cluttered, a ring light and a laptop streaming, in pale overcast daylight",
+   "seed": 181
+  },
+  "casa_interior-quarto-dia": {
+   "lugar": "casa_interior/quarto (dia)",
+   "prompt": "a simple bedroom with a bed, a nightstand lamp and a sliding closet door left slightly open, inside a small cheap student apartment in Ohio, cluttered, a ring light and a laptop streaming, in pale overcast daylight",
+   "seed": 188
+  }
+ }
+}
