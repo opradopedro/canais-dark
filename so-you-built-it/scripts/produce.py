@@ -251,7 +251,7 @@ def revisar(base, idioma):
     # TRAVA DO FIM (05/11): chiado/estrondo no ultimo segundo do MP4 final NAO SOBE (motor-en/checar_fim.py)
     import checar_fim
     try:
-        fim = checar_fim.conferir(base + ".mp4")
+        fim = checar_fim.consertar(base + ".mp4")  # 21/11: so volume alto no fim se conserta sozinho
     except Exception as e:
         fim = {"ok": False, "motivo": f"nao consegui medir: {str(e)[:150]}"}
     print(("FIM DO VIDEO OK " if fim["ok"] else "CHIADO NO FIM DO VIDEO ") + json.dumps(fim, ensure_ascii=False), flush=True)

@@ -17,7 +17,7 @@ Regra (no MP4 que vai para o YouTube, depois de tudo pronto):
   - chiado: energia acima de 3 kHz nos ultimos 2 s acima do maximo normal do corpo (percentil 99 + 3 dB) por
     0,15 s ou mais (um "s" da fala dura 1 janela; chiado dura varias).
 
-Uso: python motor-en/checar_fim.py video.mp4 [mais.mp4 ...]   -> imprime o laudo; sai 1 se algum reprovar.
+Uso: python motor-en/checar_fim.py [--consertar] video.mp4 [mais.mp4 ...]   -> imprime o laudo; sai 1 se algum reprovar.
 No codigo: checar_fim.conferir(mp4) -> {"ok": bool, "motivo": str, ...}
 """
 import subprocess, sys
@@ -93,6 +93,54 @@ def conferir(mp4, cauda=2.0, final=0.7):
             "agudo_fim_db": round(agudo_fim, 1), "agudo_corpo_db": round(ref_agudo, 1)}
 
 
+CONSERTAVEL = ("estouro no fim", "ultimo ")
+
+
+def consertar(mp4, voltas=5):
+    """CONSERTO AUTOMATICO do fim (21/11: SV040 barrado 3 dias seguidos porque a ULTIMA PALAVRA da voz saiu 1,5 dB
+    mais alta que a fala; nao era chiado nem susto). So mexe quando o laudo reprova APENAS por volume (estouro no fim /
+    ultimo trecho alto): abaixa o volume dos ultimos 2 s so onde passa do limite (a fala continua inteira, so um
+    pouco mais baixa) e confere de novo. Chiado agudo, estatica e som solto NAO sao consertados aqui (voz nova).
+    Devolve o laudo final (o MP4 e reescrito no lugar, video copiado sem recodificar)."""
+    import os, tempfile
+    r = conferir(mp4)
+    if r["ok"]:
+        return r
+    partes = [m.strip() for m in r["motivo"].split(";")]
+    if not all(m.startswith(CONSERTAVEL) for m in partes):
+        return r
+    for volta in range(1, voltas + 1):
+        a = _audio(mp4).astype(np.float64)
+        dur = len(a) / SR
+        rms, _ = _janelas(a)
+        t = np.arange(len(rms)) * JAN
+        corpo = (t >= 1.0) & (t < dur - 3.0)
+        ref = float(np.percentile(rms[corpo], 90))
+        alvo = np.full(len(rms), np.inf)
+        alvo[t >= dur - 2.4] = ref - 0.5 - 0.5 * volta
+        alvo[t >= dur - 1.0] = ref - 12.0 - volta
+        g = np.minimum(0.0, alvo - rms)  # dB por janela
+        g = np.minimum(g, np.minimum(np.roll(g, 1), np.roll(g, -1)))  # vizinhas tambem (sem degrau na borda)
+        q = int(SR * JAN)
+        centros = (np.arange(len(g)) + 0.5) * q
+        ganho = 10 ** (np.interp(np.arange(len(a)), centros, g) / 20)
+        b = (a * ganho).astype(np.float32)
+        d = tempfile.mkdtemp()
+        raw, novo = os.path.join(d, "a.f32"), os.path.join(d, "novo.mp4")
+        b.tofile(raw)
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", mp4, "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", raw,
+                        "-map", "0:v:0", "-map", "1:a:0", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ac", "2",
+                        "-movflags", "+faststart", "-shortest", novo], check=True)
+        os.replace(novo, mp4)
+        os.remove(raw); os.rmdir(d)
+        r = conferir(mp4)
+        print(f"conserto do fim, volta {volta}: {'OK' if r['ok'] else r['motivo']}", flush=True)
+        if r["ok"]:
+            r["consertado"] = volta
+            return r
+    return r
+
+
 def exigir(mp4):
     """Para o produce.py: levanta erro (NAO SUBIU) se o fim do video tiver chiado/estrondo."""
     r = conferir(mp4)
@@ -104,8 +152,9 @@ def exigir(mp4):
 
 if __name__ == "__main__":
     ruim = 0
-    for f in sys.argv[1:]:
-        r = conferir(f)
+    arrumar = "--consertar" in sys.argv
+    for f in [x for x in sys.argv[1:] if x != "--consertar"]:
+        r = consertar(f) if arrumar else conferir(f)
         ruim += not r["ok"]
         print(("OK       " if r["ok"] else "REPROVADO"), f, r)
     sys.exit(1 if ruim else 0)

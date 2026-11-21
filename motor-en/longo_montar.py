@@ -334,7 +334,7 @@ def montar(arq, publicar=True):
         sys.exit("LONGO NAO SUBIU: " + "; ".join(falhas))
     final = os.path.join(pasta, re.sub(r"\W+", "-", os.path.basename(arq)[:-5]) + ".mp4")
     juntar(pecas, final)
-    fim = checar_fim.conferir(final)
+    fim = checar_fim.consertar(final)  # 21/11: so volume alto no fim se conserta sozinho
     print("FIM DO LONGO", "OK" if fim["ok"] else "COM CHIADO", json.dumps(fim, ensure_ascii=False), flush=True)
     if not fim["ok"]:
         sys.exit("LONGO NAO SUBIU: chiado no fim")

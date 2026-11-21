@@ -14,6 +14,7 @@ on:
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: radar-youtube
@@ -37,7 +38,11 @@ jobs:
           git sparse-checkout set --no-cone '/*' '!/*.mp4' '!producao/**/*.mp4' '!aprovados' '!demo_short' '!refeitos'
           git checkout radar-gta6-midia
 
+      # 21/11: uma falha solta (ex.: 18/11 01h, HTTP 400 do YouTube) NAO manda e-mail: a rodada da proxima hora tenta
+      # de novo. So fica vermelho (e-mail) no passo "Avisar" quando falhar 3 rodadas seguidas.
       - name: Postar no YouTube
+        id: postar
+        continue-on-error: true
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
@@ -60,3 +65,20 @@ jobs:
             git rebase --abort 2>/dev/null; sleep $((i * 10))
           done
           exit 1
+
+      - name: Avisar se falhou 3 rodadas seguidas
+        if: steps.postar.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          R: ${{ github.repository }}
+        run: |
+          SEGUIDAS=1
+          for RUN in $(gh api "repos/$R/actions/workflows/radar-youtube.yml/runs?status=completed&per_page=3" --jq '.workflow_runs[].id'); do
+            [ "$RUN" = "${{ github.run_id }}" ] && continue
+            F=$(gh api "repos/$R/actions/runs/$RUN/jobs" --jq '[.jobs[].steps[]? | select(.name=="Postar no YouTube" and .conclusion=="failure")] | length' 2>/dev/null || echo 0)
+            [ "${F:-0}" -gt 0 ] || break
+            SEGUIDAS=$((SEGUIDAS + 1))
+          done
+          echo "falhas seguidas: $SEGUIDAS"
+          if [ "$SEGUIDAS" -ge 3 ]; then echo "::error::Radar GTA: o envio ao YouTube falhou $SEGUIDAS rodadas seguidas"; exit 1; fi
+          echo "falha solta: a proxima rodada tenta de novo (sem e-mail)"
