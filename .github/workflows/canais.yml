@@ -40,9 +40,11 @@ on:
     paths: [".github/disparar.txt"]
 
 concurrency:
-  # horarios do dia: uma fila so (um por vez). Disparo manual (teste-cartoon, privado:, subir:): fila propria por
-  # tarefa, para um horario agendado que chega depois nao cancelar o disparo que ainda esperava
-  group: canais-${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tarefa || 'producao' }}
+  # UMA FILA POR CANAL (21/11). Antes era uma fila so para todos: quando o GitHub atrasava os crons, 3+ execucoes de
+  # canais diferentes se acumulavam e o GitHub CANCELAVA a que esperava (so cabe 1 na espera por fila), ou seja, uma
+  # tentativa de outro canal sumia (19/11 e 20/11). Agora cada canal tem a sua fila: so uma execucao do MESMO canal
+  # substitui a outra (a mais nova faz o mesmo trabalho). Disparo manual: fila propria por tarefa, como antes.
+  group: canais-${{ github.event_name == 'schedule' && fromJSON('{"15 7 * * *":"old-tales","50 9 * * *":"old-tales","20 12 * * *":"old-tales","30 14 * * *":"old-tales","30 8 * * *":"signal-lost","10 13 * * *":"signal-lost","10 16 * * *":"signal-lost","0 19 * * *":"signal-lost","35 12 * * *":"so-you-built-it","45 16 * * *":"so-you-built-it","30 17 * * *":"so-you-built-it","20 19 * * *":"so-you-built-it","0 17 * * *":"hora-muerta","10 20 * * *":"hora-muerta","30 22 * * *":"hora-muerta","50 1 * * *":"hora-muerta","15 3 * * *":"metricas"}')[github.event.schedule] || github.event.inputs.tarefa || 'producao' }}
   cancel-in-progress: false
 
 permissions:
@@ -327,8 +329,10 @@ jobs:
           git config user.name "canais-bot"
           git config user.email "canais-bot@users.noreply.github.com"
           git add metricas/*.csv
-          git diff --cached --quiet || git commit -m "metricas $(date -u +%F)"
-          git push
+          git diff --cached --quiet && exit 0
+          git commit -m "metricas $(date -u +%F)"
+          for i in 1 2 3 4; do git pull --rebase -q origin producao && git push -q origin HEAD:producao && exit 0; git rebase --abort 2>/dev/null; sleep $((i*10)); done
+          exit 1
 
   # ---------------- Producao diaria no motor cartoon (canal com "motor_visual": "cartoon") ----------------
   # O job "rodar" preparou voz, legenda alinhada, capa e horario (artefato cartoon-prod). Aqui: desenho em 10 fatias
