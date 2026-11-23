@@ -334,6 +334,11 @@ jobs:
           for i in 1 2 3 4; do git pull --rebase -q origin producao && git push -q origin HEAD:producao && exit 0; git rebase --abort 2>/dev/null; sleep $((i*10)); done
           exit 1
 
+      # PC: apaga o video e os arquivos de quem ja subiu ("AGENDADO <COD>" no log); o que nao subiu fica (Pedro, 23/11)
+      - name: Limpar videos ja enviados (PC)
+        if: always() && runner.environment != 'github-hosted'
+        run: bash pc/limpar.sh || true
+
   # ---------------- Producao diaria no motor cartoon (canal com "motor_visual": "cartoon") ----------------
   # O job "rodar" preparou voz, legenda alinhada, capa e horario (artefato cartoon-prod). Aqui: desenho em 10 fatias
   # paralelas (cada uma ~1/10 dos quadros) e depois juntar, conferir (legenda + fim) e agendar no YouTube.
@@ -464,6 +469,11 @@ jobs:
           T="${{ needs.rodar.outputs.tarefa }}"
           tail -c 60000 /tmp/montar-log.txt > "/tmp/${T}_ERRO.txt" 2>/dev/null || echo "sem log" > "/tmp/${T}_ERRO.txt"
           gh release upload logs "/tmp/${T}_ERRO.txt" --clobber || true
+
+      # PC: apaga o video e os arquivos de quem ja subiu ("AGENDADO <COD>" no log); o que nao subiu fica (Pedro, 23/11)
+      - name: Limpar videos ja enviados (PC)
+        if: always() && runner.environment != 'github-hosted'
+        run: bash pc/limpar.sh || true
 
   # ---------------- Entrega 3: prova em paralelo do motor-cartoon (Release 'teste-cartoon', NAO publica no YouTube) ----------------
   cartoon-audio:
