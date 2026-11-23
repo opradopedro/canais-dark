@@ -58,5 +58,13 @@ su - sinal -c "gh release view pc-sinal -R $REPO > /dev/null 2>&1 || gh release 
 mkdir -p /opt/canais-pc
 curl -fsSL $BASE/ligar.sh -o /opt/canais-pc/ligar.sh
 curl -fsSL $BASE/sinal.sh -o /opt/canais-pc/sinal.sh
+curl -fsSL $BASE/limpar.sh -o /opt/canais-pc/limpar.sh
 chmod 755 /opt/canais-pc/*.sh
+
+echo "-- limpeza automatica depois de cada job (apaga so video que ja subiu; Pedro, 23/11)"
+ENVF=/home/canais/runner/.env
+touch "$ENVF"
+sed -i '/^ACTIONS_RUNNER_HOOK_JOB_COMPLETED=/d' "$ENVF"
+echo "ACTIONS_RUNNER_HOOK_JOB_COMPLETED=/opt/canais-pc/limpar.sh" >> "$ENVF"
+chown canais:canais "$ENVF"
 echo "OK dentro do Linux"

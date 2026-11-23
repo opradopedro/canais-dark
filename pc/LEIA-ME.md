@@ -16,6 +16,13 @@ Hora Muerta) roda primeiro no PC dele, com o GitHub Actions na nuvem de reserva.
   juntar/conferir/agendar rodam no PC.
 - 3 dias de vídeos agendados por canal (PR #27): o PC desligado por 1 ou 2 dias não deixa horário vazio.
 
+## Limpeza (Pedro, 23/11: "exclua sempre os que já foram postados")
+- `pc/limpar.sh` roda depois de cada job no PC (hook `ACTIONS_RUNNER_HOOK_JOB_COMPLETED` no `~/runner/.env`, posto
+  pelo `dentro-wsl.sh`) e também como último passo dos jobs `rodar` e `prod-cartoon-montar` do `canais.yml`.
+- Só apaga o vídeo e os arquivos de um código que aparece como `AGENDADO <COD>` no log (já subiu). O que não subiu fica.
+- Com menos de 5 GB livres, apaga também os caches de pip/npm.
+- O `instalar.ps1` liga o modo sparse do disco do WSL2: o espaço apagado volta para o Windows sozinho.
+
 ## Instalar (uma vez, PowerShell como administrador)
 ```
 irm https://raw.githubusercontent.com/opradopedro/canais-dark/producao/pc/instalar.ps1 | iex

@@ -51,6 +51,11 @@ Write-Host "`n== 4/5 Programas e ligacao com o GitHub (vai pedir um codigo) ==" 
 & wsl.exe -d canais -u root -- bash -c "command -v curl >/dev/null || (apt-get update -qq && apt-get install -y -qq curl ca-certificates >/dev/null); curl -fsSL $base/dentro-wsl.sh -o /root/dentro-wsl.sh && bash /root/dentro-wsl.sh"
 if ($LASTEXITCODE -ne 0) { Write-Host "`nAlgo falhou acima. Tire um print e mande para o Claude." -ForegroundColor Red; return }
 cmd /c "wsl.exe --terminate canais >nul 2>&1"   # aplica o wsl.conf (Linux isolado do Windows)
+# disco do WSL2 devolve ao Windows o espaco dos videos apagados (sem isso o ext4.vhdx so cresce; Pedro, 23/11)
+if ($versao -eq 2) {
+  & wsl.exe --manage canais --set-sparse true 2>$null | Out-Null
+  if ($LASTEXITCODE -eq 0) { Write-Host "disco do Linux em modo sparse (encolhe sozinho)" } else { Write-Host "AVISO: nao consegui ligar o modo sparse (WSL antigo?)" -ForegroundColor Yellow }
+}
 
 Write-Host "`n== 5/5 Ligar sozinho ao entrar no PC ==" -ForegroundColor Cyan
 $acao = New-ScheduledTaskAction -Execute 'conhost.exe' -Argument '--headless wsl.exe -d canais -u root -- bash /opt/canais-pc/ligar.sh'
