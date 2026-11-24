@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-24T21:13:42Z",
+ "gerado": "2026-11-24T23:12:18Z",
  "canais": {
   "hm": {
    "handle": "horamuerta.relatos",
@@ -60,7 +60,7 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@horamuerta.relatos/video/7711562952381402386",
      "quando": "2026-11-24T02:42:58+00:00",
-     "views": 59,
+     "views": 65,
      "likes": 2,
      "comentarios": 0,
      "compart": 0
@@ -70,18 +70,28 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@horamuerta.relatos/video/7711787107831909653",
      "quando": "2026-11-24T17:13:20+00:00",
-     "views": 20,
+     "views": 31,
+     "likes": 0,
+     "comentarios": 0,
+     "compart": 0
+    },
+    {
+     "youtube": "8JooUVuVJrc",
+     "codigo": null,
+     "tiktok": "https://www.tiktok.com/@horamuerta.relatos/video/7711849085724101894",
+     "quando": "2026-11-24T21:13:54+00:00",
+     "views": 14,
      "likes": 0,
      "comentarios": 0,
      "compart": 0
     }
    ],
    "perfil": {
-    "seguidores": 7,
+    "seguidores": 8,
     "curtidas": 18,
-    "videos": 7
+    "videos": 8
    },
-   "views": 589
+   "views": 620
   },
   "cl": {
    "handle": "oldtales.retold",
@@ -142,18 +152,28 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@oldtales.retold/video/7711787108356148500",
      "quando": "2026-11-24T17:13:21+00:00",
-     "views": 85,
-     "likes": 2,
+     "views": 146,
+     "likes": 4,
+     "comentarios": 0,
+     "compart": 0
+    },
+    {
+     "youtube": "7LTK2a-aoFQ",
+     "codigo": null,
+     "tiktok": "https://www.tiktok.com/@oldtales.retold/video/7711849108289391893",
+     "quando": "2026-11-24T21:13:54+00:00",
+     "views": 42,
+     "likes": 0,
      "comentarios": 0,
      "compart": 0
     }
    ],
    "perfil": {
     "seguidores": 3,
-    "curtidas": 15,
-    "videos": 6
+    "curtidas": 17,
+    "videos": 7
    },
-   "views": 596
+   "views": 699
   },
   "yb": {
    "handle": "so.you.built.it",
@@ -274,7 +294,7 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@so.you.built.it/video/7711787135434558740",
      "quando": "2026-11-24T17:13:21+00:00",
-     "views": 69,
+     "views": 101,
      "likes": 2,
      "comentarios": 0,
      "compart": 0
@@ -284,18 +304,38 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@so.you.built.it/video/7711787148835441941",
      "quando": "2026-11-24T17:13:21+00:00",
-     "views": 85,
+     "views": 88,
      "likes": 2,
      "comentarios": 0,
      "compart": 2
+    },
+    {
+     "youtube": "iKavscO_XAY",
+     "codigo": null,
+     "tiktok": "https://www.tiktok.com/@so.you.built.it/video/7711849128715799829",
+     "quando": "2026-11-24T21:13:54+00:00",
+     "views": 32,
+     "likes": 3,
+     "comentarios": 0,
+     "compart": 0
+    },
+    {
+     "youtube": "w8MOTzm9p3o",
+     "codigo": null,
+     "tiktok": "https://www.tiktok.com/@so.you.built.it/video/7711849140518456577",
+     "quando": "2026-11-24T21:13:54+00:00",
+     "views": 32,
+     "likes": 2,
+     "comentarios": 0,
+     "compart": 0
     }
    ],
    "perfil": {
     "seguidores": 5,
-    "curtidas": 103,
-    "videos": 13
+    "curtidas": 108,
+    "videos": 15
    },
-   "views": 3203
+   "views": 3302
   },
   "sv": {
    "handle": "siganllost.tales",
@@ -306,7 +346,7 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@siganllost.tales/video/7711562981129145620",
      "quando": "2026-11-24T02:42:58+00:00",
-     "views": 62,
+     "views": 67,
      "likes": 4,
      "comentarios": 0,
      "compart": 0
@@ -316,7 +356,17 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@siganllost.tales/video/7711787126731623700",
      "quando": "2026-11-24T17:13:21+00:00",
-     "views": 27,
+     "views": 39,
+     "likes": 2,
+     "comentarios": 0,
+     "compart": 0
+    },
+    {
+     "youtube": "lHEJIgWmfQM",
+     "codigo": null,
+     "tiktok": "https://www.tiktok.com/@siganllost.tales/video/7711849077285195026",
+     "quando": "2026-11-24T21:13:54+00:00",
+     "views": 12,
      "likes": 0,
      "comentarios": 0,
      "compart": 0
@@ -324,10 +374,10 @@
    ],
    "perfil": {
     "seguidores": 0,
-    "curtidas": 4,
-    "videos": 2
+    "curtidas": 6,
+    "videos": 3
    },
-   "views": 89
+   "views": 118
   }
  }
 }
