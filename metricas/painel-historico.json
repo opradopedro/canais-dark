@@ -643,18 +643,18 @@
 "comentarios": 1,
 "inscritos": 3,
 "likes": 25,
-"videos": 23,
-"views": 3560
+"videos": 24,
+"views": 3395
 }
 },
 "hm": {
 "tt": {
 "comentarios": 2,
 "compart": 1,
-"curtidas": 16,
-"posts": 5,
-"seguidores": 6,
-"views": 510
+"curtidas": 18,
+"posts": 6,
+"seguidores": 7,
+"views": 563
 },
 "yt": {
 "comentarios": 10,
@@ -668,34 +668,34 @@
 "tt": {
 "comentarios": 0,
 "compart": 0,
-"curtidas": 0,
-"posts": 0,
+"curtidas": 3,
+"posts": 1,
 "seguidores": 0,
-"views": 0
+"views": 55
 },
 "yt": {
 "comentarios": 1,
 "inscritos": 25,
 "likes": 116,
 "videos": 24,
-"views": 7479
+"views": 7501
 }
 },
 "yb": {
 "tt": {
 "comentarios": 4,
 "compart": 1,
-"curtidas": 94,
-"posts": 9,
+"curtidas": 99,
+"posts": 11,
 "seguidores": 5,
-"views": 2815
+"views": 3049
 },
 "yt": {
 "comentarios": 26,
-"inscritos": 90,
-"likes": 1268,
+"inscritos": 91,
+"likes": 1271,
 "videos": 64,
-"views": 73922
+"views": 74677
 }
 }
 }
