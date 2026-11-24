@@ -20,6 +20,7 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
 
@@ -136,6 +137,24 @@ def ainda_publico(vid):
         return None
 
 
+def e_short(vid):
+    """24/11: o oEmbed passou a responder 200x113 (deitado) ate para Short, e a regra de 18/11 (pular video
+    mais largo que alto) barrou TUDO de 18 a 24/11: TikTok 6 dias parado. Agora: youtube.com/shorts/<id> responde
+    200 para Short e redireciona (303) para /watch quando e video normal (longo)."""
+    class SemSeguir(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, *a, **k):
+            return None
+    op = urllib.request.build_opener(SemSeguir)
+    try:
+        r = op.open(urllib.request.Request("https://www.youtube.com/shorts/" + vid,
+                                           headers={"User-Agent": "Mozilla/5.0"}), timeout=30)
+        return r.status == 200
+    except urllib.error.HTTPError as e:
+        if e.code in (301, 302, 303, 307, 308):
+            return "/shorts/" in (e.headers.get("Location") or "")
+        raise
+
+
 def carregar():
     est = json.load(open(ESTADO, encoding="utf-8"))
     est.setdefault("ignorar_youtube", {})
@@ -162,8 +181,8 @@ def fila():
             oe = ainda_publico(v["id"])
             if not oe:
                 continue
-            if oe.get("width", 0) > oe.get("height", 0):
-                continue  # 18/11: video horizontal = longo do YouTube; TikTok ja recebe as partes verticais
+            if not e_short(v["id"]):
+                continue  # 18/11: longo do YouTube nao vai; TikTok ja recebe as partes verticais (Shorts)
             saida.append({"youtubeId": v["id"], "codigo": v["id"], "agora": True,  # compatibilidade: sempre na hora
                           "quando": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat(), "canal": cid, "conta": cfg["conta"], "nome": cfg["nome"],
                           "youtube": "https://www.youtube.com/shorts/" + v["id"], "titulo": v["titulo"],
@@ -171,6 +190,30 @@ def fila():
                           "no_youtube_desde": v["publicado"].isoformat()})
             n += 1
     return saida
+
+
+def atrasados(horas=8):
+    """Para o vigia: Shorts publicos no YouTube ha mais de <horas> que ainda nao foram para o TikTok."""
+    est = carregar()
+    feitos = {p.get("youtube") for p in est["postados"].values() if p.get("youtube")}
+    ign = set(est["ignorar_youtube"])
+    agora = dt.datetime.now(dt.timezone.utc)
+    out = []
+    for cid, cfg in CONTAS.items():
+        if not cfg.get("conta"):
+            continue
+        vis = visuais(cid) if cfg.get("so_visual") else None
+        for v in publicos(cfg["yt"]):
+            if v["publicado"] < INICIO or v["id"] in feitos or v["id"] in ign:
+                continue
+            if agora - v["publicado"] < dt.timedelta(hours=horas):
+                continue
+            if vis is not None and vis.get(v["id"]) != cfg["so_visual"]:
+                continue
+            if not e_short(v["id"]):
+                continue
+            out.append({"canal": cid, "youtube": v["id"], "titulo": v["titulo"], "no_youtube_desde": v["publicado"].isoformat()})
+    return out
 
 
 def salvar(est):
