@@ -1,0 +1,1237 @@
+{
+ "formato": "Regla",
+ "origem": "gringa: EUA, ritual 'Baby Blue' do TikTok (#babyblue ~188 mi de views; bebê fantasma no espelho do banheiro) https://www.dexerto.com/entertainment/what-is-the-baby-blue-trend-on-tiktok-disturbing-fad-goes-viral-2197028/ (história nossa, Guadalajara)",
+ "serie": "bebe-azul",
+ "serie_titulo": "Bebé azul | Hora Muerta",
+ "partes": 2,
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda urbana",
+  "ritual",
+  "espejo",
+  "bebé azul",
+  "baby blue"
+ ],
+ "autor": "claude",
+ "codigo": "HM064",
+ "parte": 2,
+ "anterior": "HM063",
+ "titulo": "Su madre vino por el bebé azul 🍼 Parte 2 #terror #shorts",
+ "capa": "DÁMELO",
+ "descripcion": "La mujer sin cara del espejo quiere a su bebé de vuelta antes del amanecer. Y Camila fue la que lo cargó.\n\n¿Tú lo habrías devuelto?\n\nHistoria de ficción narrada, inspirada en un reto viral. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 12,
+   "en": 0.3
+  },
+  {
+   "tipo": "susto",
+   "linea": 21,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "visual": "ilustrado",
+ "elenco": {
+  "camila": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#3a4a5a"
+  },
+  "dani": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#5a5040"
+  },
+  "alta": {
+   "tipo": "humano",
+   "rosto_cor": "#2a2a2a",
+   "membro": "#1c1c1c",
+   "roupa": "trapos",
+   "roupa_cor": "#111",
+   "sem_rosto": true,
+   "cabelo": "careca"
+  },
+  "rastejante": {
+   "tipo": "humano",
+   "rosto_cor": "#4a3a2a",
+   "membro": "#4a3a2a",
+   "roupa": "trapos",
+   "roupa_cor": "#2e2216",
+   "sem_rosto": true,
+   "cabelo": "careca",
+   "desgaste": 0.8
+  }
+ },
+ "lineas": [
+  {
+   "texto": "Una mujer sin cara quiere a su *bebé*, y Camila lo cargó.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.72
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Si no se lo devuelven antes del amanecer, se lleva a quien lo cargó.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Dani grita que se vayan. Camila no se mueve.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "dani",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "camila",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "En el espejo, la mujer alta da un paso hacia ellas.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "camila",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Camila voltea. Detrás de ellas no hay nadie.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "camila",
+      "pose": "lutar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Salen corriendo y cierran el baño con llave.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "dani",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "camila",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Desde adentro, algo raspa la puerta. Despacio.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "camila",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Dani revisa el video, temblando.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sofa",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "dani",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "camila",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "En la vuelta trece se ve algo más.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sofa",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "dani",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Unas manos grises salen del espejo y le dan el bebé.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "camila",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Quédate, porque esas manos no se fueron.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "camila",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A las tres, un llanto sale de debajo del sillón.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sofa",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "dani",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Algo pequeño y azul se arrastra por la sala hacia Camila.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "camila",
+      "pose": "andar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "rastejante",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Hay que devolverlo con las mismas manos.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "camila",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Lo carga sin mirarlo. Pesa más que antes.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "camila",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Abre el baño. El espejo está empañado.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "camila",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Escrito en el vapor, dice: *dámelo*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "camila",
+      "pose": "apontar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Camila lo deja en el lavabo y apaga la luz.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "camila",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Siente dedos fríos en las muñecas. Y luego, nada.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-cozinha",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "camila",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Al amanecer, el baño está seco. Dani borra el video.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "dani",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "camila",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pero esa noche, Camila despierta con los brazos *pesados*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "camila",
+      "pose": "apontar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y desde el baño, una voz le canta: bebé azul.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-quarto",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "camila",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.5,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Mándaselo a quien cree que esto es puro cuento.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "camila",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "mundo": "hm-bebe-azul",
+ "elenco_3d": {
+  "camila": {
+   "semente": 6311,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "roupa": "casual"
+  },
+  "dani": {
+   "semente": 6312,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "casual"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "alta",
+     "marca": "cozinha"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [],
+    "criatura": {
+     "tipo": "alta",
+     "marca": "cozinha"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "dani",
+      "acao": "Interact",
+      "rosto": "medo"
+     },
+     {
+      "id": "camila",
+      "acao": "Idle_B",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "ombro",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "alta",
+     "marca": "cozinha"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "auto",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "dani",
+      "acao": "Running_A",
+      "rosto": "medo"
+     },
+     {
+      "id": "camila",
+      "acao": "Running_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sofa",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "dani",
+      "acao": "Idle_B",
+      "rosto": "medo",
+      "segura": "celular"
+     },
+     {
+      "id": "camila",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sofa",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "dani",
+      "acao": "Idle_A",
+      "rosto": "susto",
+      "segura": "celular"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Holding_A",
+      "rosto": "sorriso"
+     }
+    ],
+    "criatura": {
+     "tipo": "alta",
+     "marca": "cozinha"
+    }
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sofa",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "dani",
+      "acao": "Crouching",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Walking_Backwards",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "rastejante",
+     "marca": "sala"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Holding_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "ombro",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Holding_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Holding_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Interact",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "cozinha",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Idle_A",
+      "rosto": "olhos_fechados"
+     }
+    ],
+    "criatura": {
+     "tipo": "alta",
+     "marca": "cozinha"
+    }
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "dani",
+      "acao": "Idle_B",
+      "rosto": "triste",
+      "segura": "celular"
+     },
+     {
+      "id": "camila",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Holding_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "quarto",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Lie_StandUp",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "alta",
+     "marca": "quarto"
+    }
+   }
+  },
+  {
+   "linea": 22,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "camila",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  }
+ ],
+ "gancho_visual": true
+}
