@@ -160,6 +160,24 @@ def planejar():
                 mexidos.append(arq)
                 print(f"[{canal}] plano completo: {slug}", flush=True)
             continue
+        # 24/11: coletanea que saiu CURTA (< 10 min na montagem) ganha a proxima serie inteira publicada e
+        # volta para a fila. Assim nunca fica falhando todo dia nem sobe abaixo do piso.
+        for f in sorted(glob.glob(os.path.join(pasta, "longos", "coletanea-*.json"))):
+            p = ler(f)
+            if p.get("feito") or not p.get("curto") or not livres:
+                continue
+            slug, s = livres.pop(0)
+            p["series"] = (p.get("series") or []) + [slug]
+            p["partes"] += [dict(s["itens"][i], rotulo=s["titulo"] if i == 1 else "") for i in range(1, s["partes"] + 1)]
+            n = len(p["series"])
+            p["titulo"] = TITULO_COLETANEA[canal].format(n=n)
+            p["capa_texto"] = p["titulo"].split(" para ")[0].split(" to ")[0].upper()
+            linhas = [l for l in (p.get("descricao") or "").split("\n") if l.strip()]
+            p["descricao"] = "\n".join(linhas + [f"{len(linhas) + 1}. {s['titulo']}"])
+            p["aumentado"] = p.pop("curto")
+            gravar(f, p)
+            mexidos.append(f)
+            print(f"[{canal}] {os.path.basename(f)} estava curta: entrou a serie {slug} ({n} relatos)", flush=True)
         # coletanea: series inteiras em ordem ate ~10min30 (o plano pede no minimo 3 series)
         ritmo = longo.RITMO.get(canal, 1.7)
         grupo, soma = [], longo.EXTRAS_S / 2
@@ -185,8 +203,8 @@ def planejar():
 
 
 def pronto(p):
-    if p.get("feito") or not p.get("partes"):
-        return False
+    if p.get("feito") or p.get("curto") or not p.get("partes"):
+        return False  # "curto": espera a proxima serie entrar (planejar)
     lib = p.get("liberar_em")
     if lib and dt.datetime.fromisoformat(lib.replace("Z", "+00:00")) > agora():
         return False
@@ -409,6 +427,11 @@ def montar(arq, publicar=True):
     if not fim["ok"]:
         sys.exit("LONGO NAO SUBIU: chiado no fim")
     if longo.trava(final) != 0:  # PISO DURO de 10 min (Pedro, 15/11)
+        if p.get("titulo", "").split(" ")[0].isdigit() and canal in TITULO_COLETANEA:
+            # coletanea: marca e o planejar junta a proxima serie publicada (nao remonta todo dia a toa)
+            p["curto"] = {"min": round(longo.duracao(final) / 60, 1), "quando": agora().strftime("%Y-%m-%dT%H:%M:%SZ")}
+            gravar(arq, p)
+            print("coletanea marcada como CURTA: a proxima serie publicada entra nela", flush=True)
         sys.exit("LONGO NAO SUBIU: menos de 10 min")
     meio = capitulos[1][0] if len(capitulos) > 1 else 5.0
     jpg = capa(final, meio + float(p.get("capa_t", 6.0)), p.get("capa_texto") or p["titulo"], final.replace(".mp4", ".jpg"))
