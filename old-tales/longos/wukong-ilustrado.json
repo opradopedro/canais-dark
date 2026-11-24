@@ -48,5 +48,11 @@
  ],
  "abertura": "old-tales/longos/wukong-abertura.json",
  "epilogo": "old-tales/longos/wukong-epilogo.json",
- "liberar_em": "2026-11-17T17:30:00Z"
+ "liberar_em": "2026-11-17T17:30:00Z",
+ "feito": {
+  "youtube": "oLniZLIqrKs",
+  "quando": "2026-11-18T00:42:00Z",
+  "min": 10.2,
+  "obs": "24/11: o 'feito' nao era gravado (push falhava) e o Wukong subiu de novo 11 vezes (18-23/11). Copias tiradas do ar pelo limpar_duplicados."
+ }
 }
