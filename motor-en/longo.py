@@ -26,7 +26,9 @@ EXTRAS_S = 60           # abertura + epilogo + cartoes extras (estimativa conser
 # palavras faladas por segundo, medido nos videos prontos (ROTEIROS.md 'Duracao')
 UMA_SERIE = {"old-tales"}  # 1 serie = 1 longo
 MAXIMO_COLETANEA_S = 14 * 60
-RITMO = {"hora-muerta": 1.7, "signal-lost": 1.7, "old-tales": 2.3, "so-you-built-it": 3.1}
+# 24/11: HM/SV 1.7 -> 1.95. Medido no longo coletanea-01 do HM (1103 palavras = 575 s, ja sem as falas
+# "Parte X sai..." que o montador corta). Com 1.7 o plano achou 11 min e o video saiu com 9.6 min.
+RITMO = {"hora-muerta": 1.95, "signal-lost": 1.95, "old-tales": 2.3, "so-you-built-it": 3.1}
 
 
 def duracao(mp4):
