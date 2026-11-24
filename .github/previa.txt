@@ -1,1 +1,2 @@
-hora-muerta/stories/051-nahual-panteon-1.json
+so-you-built-it/stories/082-city-water-supply.json
+so-you-built-it/stories/083-manhole-round.json

@@ -1,0 +1,318 @@
+{
+ "codigo": "YB083",
+ "formato": "Curiosidade",
+ "origem": "autoral (por que tampa de bueiro é redonda; largura constante do círculo) https://en.wikipedia.org/wiki/Manhole_cover",
+ "titulo": "Why manhole covers are round ⭕ #engineering #shorts",
+ "capa": "WHY ROUND?",
+ "descripcion": "A square lid can fall through its own hole. A circle can't, no matter how you turn it. Here's the trick hiding under every street.\n\n#engineering #manhole #city #howitworks #shorts",
+ "tags": [
+  "engineering",
+  "manhole",
+  "manhole cover",
+  "city",
+  "how it works",
+  "geometry",
+  "shorts"
+ ],
+ "destaque": [
+  "round",
+  "safety",
+  "shaft",
+  "lip",
+  "square",
+  "diagonal",
+  "same width",
+  "can't fall",
+  "cast iron",
+  "any way",
+  "roll",
+  "stronger",
+  "hinge",
+  "interviews",
+  "round"
+ ],
+ "mundo": "cidade",
+ "autor": "claude",
+ "lineas": [
+  {
+   "texto": "Why is almost every manhole cover on Earth round?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It's not for looks. It's a safety trick.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Under the cover, a shaft drops down to the pipes, sometimes ten meters deep.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The lid rests on a small lip, just a bit narrower than the lid itself.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A square lid has a problem. Turn it on its edge, and it slips through its own hole.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The diagonal of a square is longer than its side, so it fits down the shaft.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A circle is the same width in every direction.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "No matter how you tilt it, it can't fall in.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That matters, because a cast iron lid can weigh as much as a grown man.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Round lids don't need lining up, either. Drop one in any way, and it fits.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Workers can roll it on its edge instead of carrying it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And a round shaft is stronger, because the soil presses evenly all around it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Some cities do use square or triangle covers, but they need a deep lip or a hinge.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Big tech companies once asked this in job interviews, to see how people think.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So next time you step on one, you'll know why it's round.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "pv": 1,
+    "rotulo": "WHY ROUND?",
+    "cor": "white"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "pv": 1
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "pv": 1,
+    "esgoto": 1,
+    "esgoto_nivel": 0.3,
+    "agua": 1
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "pv": 1,
+    "rotulo": "LIP",
+    "cor": "white"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "pv": 1,
+    "rotulo": "SQUARE FALLS IN",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "pv": 1,
+    "esgoto": 1,
+    "esgoto_nivel": 0.3
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "pv": 1,
+    "rotulo": "SAME WIDTH",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "pv": 1
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 3,
+    "foco": "rua",
+    "pv": 1,
+    "rotulo": "CAST IRON",
+    "cor": "white"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 3,
+    "foco": "rua",
+    "pv": 1
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 1,
+    "foco": "geral",
+    "pv": 1
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "pv": 1,
+    "esgoto": 1,
+    "esgoto_nivel": 0.3,
+    "marcas": [
+     {
+      "t": "Soil",
+      "x": 0,
+      "y": -3
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "pv": 1,
+    "rotulo": "SQUARE? ADD HINGE",
+    "cor": "white"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 4,
+    "foco": "geral",
+    "pv": 1,
+    "engarrafa": 1
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "pv": 1
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "geral",
+    "pv": 1
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 11,
+   "en": 0.6
+  }
+ ]
+}

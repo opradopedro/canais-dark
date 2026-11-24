@@ -1,0 +1,408 @@
+{
+ "codigo": "YB082",
+ "formato": "Evolucao",
+ "origem": "gringa: México, a Cidade do México perde 30-40% da água potável em vazamentos (SACMEX), crise de água 2024-2026 https://npr.org/2024/03/08/1234928040/mexico-city-water-problems",
+ "titulo": "You built a city water supply 🚰 #engineering #shorts",
+ "capa": "YOU BUILT A WATER SUPPLY",
+ "descripcion": "From dry wells to one big pipe, pumps, a loop, valves on every block and sensors that hear leaks, one problem at a time. Mexico City still loses up to 40% of its water to leaks.\n\nWhat should we build next?\n\n#engineering #water #city #howitworks #shorts",
+ "tags": [
+  "engineering",
+  "water supply",
+  "water main",
+  "city",
+  "civil engineering",
+  "how it works",
+  "mexico city",
+  "shorts"
+ ],
+ "destaque": [
+  "wells",
+  "pipe",
+  "trickle",
+  "pressure",
+  "pumps",
+  "bursts",
+  "loop",
+  "two directions",
+  "valves",
+  "one block",
+  "crack",
+  "soil",
+  "hole",
+  "forty percent",
+  "sensors",
+  "water supply"
+ ],
+ "mundo": "cidade",
+ "autor": "claude",
+ "lineas": [
+  {
+   "texto": "Your city has a million people, and every well in town is drying up.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you dam a river in the hills and run one big pipe into town.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But the houses at the far end only get a trickle.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Water loses pressure as it travels, and every tap along the way takes a little.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you add pumps that push the water hard, day and night.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then one pipe bursts, and the whole city goes dry.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you lay a second pipe and connect the two in a loop.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now water reaches every street from two directions.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And you add valves every few blocks.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "When a pipe breaks, you close two valves, and only one block loses water.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But all that pressure finds every tiny crack in old pipes.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Water seeps out day and night and washes the soil away.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Until the street drops into a hole.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Mexico City loses thirty to forty percent of its drinking water to leaks like these.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you put sensors that listen for leaks, and lower the pressure at night, when nobody's using it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a city water supply. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "geral",
+    "rotulo": "DRY WELLS",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "cano",
+    "agua": 1,
+    "pressao": [
+     0,
+     0.6
+    ],
+    "rotulo": "WATER MAIN",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "cano",
+    "agua": 1,
+    "pressao": [
+     0.6,
+     0.1
+    ],
+    "rotulo": "LOW PRESSURE",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "agua": 1,
+    "pressao": 0.15
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "cano",
+    "agua": 1,
+    "pressao": [
+     0.2,
+     1
+    ],
+    "rotulo": "PUMPS",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "agua": 1,
+    "pressao": 0,
+    "estoura": [
+     0,
+     1
+    ],
+    "rotulo": "BURST",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "agua": 1,
+    "anel": 1,
+    "pressao": 0.8,
+    "rotulo": "LOOP",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "agua": 1,
+    "anel": 1,
+    "pressao": 1
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "cano",
+    "agua": 1,
+    "anel": 1,
+    "pressao": 1,
+    "registro": 1,
+    "rotulo": "VALVES",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "agua": 1,
+    "anel": 1,
+    "registro": 1,
+    "pressao": 0.7,
+    "rotulo": "ONE BLOCK OFF",
+    "cor": "white"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "cano",
+    "agua": 1,
+    "anel": 1,
+    "registro": 1,
+    "pressao": 1,
+    "vaza": [
+     0,
+     0.5
+    ],
+    "rotulo": "LEAK",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "agua": 1,
+    "anel": 1,
+    "registro": 1,
+    "pressao": 1,
+    "vaza": [
+     0.5,
+     1
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "agua": 1,
+    "anel": 1,
+    "registro": 1,
+    "vaza": 1,
+    "buraco": [
+     0,
+     1
+    ],
+    "rotulo": "SINKHOLE",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "geral",
+    "agua": 1,
+    "anel": 1,
+    "vaza": 1,
+    "buraco": 1,
+    "rotulo": "UP TO 40% LOST",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "cano",
+    "agua": 1,
+    "anel": 1,
+    "registro": 1,
+    "pressao": 0.5,
+    "vaza": [
+     1,
+     0
+    ],
+    "rotulo": "LEAK SENSORS",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "geral",
+    "agua": 1,
+    "anel": 1,
+    "registro": 1,
+    "pressao": 0.6
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 6,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 12,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 14,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 15,
+   "en": 0.05
+  }
+ ]
+}

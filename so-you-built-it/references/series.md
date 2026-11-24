@@ -92,3 +92,11 @@ Estoque antes: 1 Evolução (YB008) e 16 Curiosidades prontas. Mundo novo `campo
 | YB071 | Evolucao | privada/fossa seca (cheia, moscas, fossa funda, respiro VIP, serragem, poço contaminado, 30 m do poço) | autoral (backlog) | FEITO |
 | YB072 | Evolucao | chaminé de fogão a lenha (fumaça na casa, CO, fogão, tiragem, vento, 3 pés acima, creosoto, fogo na chaminé, colar, chapéu) | autoral (backlog) | FEITO |
 O `campo` ainda destrava: caixa d'água elevada, silo de grãos, moinho que puxa água, poço (Curiosidade).
+
+## Semana de 06/12 a 08/12/2026 (YB082-YB083) — por: claude (rotina de terça, 24/11)
+Estoque antes: 20 roteiros prontos (9 Evolução até YB081, 11 Curiosidades) + 6 agendados até 26/11 = até ~06/12. Mundo `cidade` (sem peça nova; prévia pedida em .github/previa.txt). 1 gringa, 1 autoral.
+| Código | Formato | Tema | Origem | Estado |
+|---|---|---|---|---|
+| YB082 | Evolucao | rede de água da cidade (poços secos, adutora, pressão baixa no fim, bombas, estouro, anel, registros, vazamento e buraco, sensores e pressão menor à noite) (cidade: agua, pressao, estoura, anel, registro, vaza, buraco) | gringa: México, Cidade do México perde 30-40% da água em vazamentos https://npr.org/2024/03/08/1234928040/mexico-city-water-problems | FEITO |
+| YB083 | Curiosidade | por que tampa de bueiro é redonda (largura constante, quadrado cai pela diagonal, rolar, poço redondo mais forte) (cidade: pv) | autoral https://en.wikipedia.org/wiki/Manhole_cover | FEITO |
+Evolução continua o gargalo: com YB082 são 10 (até ~06/12). Próximas no `cidade` sem peça nova são poucas; para mais, mundo novo (oficina/fábrica do PLANO-KIRO-MUNDOS.md).
