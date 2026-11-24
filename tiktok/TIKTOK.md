@@ -25,4 +25,6 @@ O TikTok acompanha o YouTube. Todo vídeo que entra no ar no YouTube vai para a 
 6. Falhou (conta desconectada, `canPublish` false): não marcar; avisar o Pedro na thread "Planejar vídeos longos e TikTok" com o link de reconectar (`vidiq_social_account_connect`, em bloco de código, porque ele não consegue copiar hyperlink).
 
 Post agendado na vidIQ não pode ser cancelado nem mudado (por isso a regra de nunca agendar). Se um vídeo do YouTube for tirado do ar, apagar o do TikTok pelo app.
-- (18/11) Vídeo LONGO/horizontal do YouTube não vai para o TikTok: as partes verticais já foram como Shorts. O `fila.py` pula vídeo com oEmbed mais largo que alto. Wukong completo (oLniZLIqrKs) em `ignorar`.
+- (18/11) Vídeo LONGO do YouTube não vai para o TikTok: as partes verticais já foram como Shorts. Wukong completo (oLniZLIqrKs) em `ignorar`.
+- (24/11) O teste do longo pelo oEmbed (largura > altura) quebrou: o YouTube passou a responder 200x113 até para Short e o `fila.py` pulou TUDO de 18 a 24/11 (TikTok 6 dias parado, a rotina dizia "nenhum vídeo público novo"). Agora o teste é `youtube.com/shorts/<id>`: 200 = Short, redireciona para /watch = longo.
+- (24/11) TRAVA: no fim de TODA execução rodar `python vigia/postagens.py`. Se listar "TikTok: N Short(s) no ar no YouTube e fora do TikTok" e o `fila.py` voltou vazio, é defeito no `fila.py`: consertar na hora e avisar o Pedro. Nunca encerrar dizendo "nada novo" sem esse vigia limpo para o TikTok. O GitHub também roda esse vigia 2x por dia (`vigia-postagens.yml`) e manda e-mail se algo parou.

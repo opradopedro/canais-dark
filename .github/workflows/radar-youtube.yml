@@ -61,7 +61,7 @@ jobs:
           git add gta6/youtube-publicados.json
           git commit -m "Radar YouTube: Shorts postados ($(date -u +%Y-%m-%dT%H:%MZ))"
           for i in 1 2 3 4; do
-            git pull --rebase origin producao && git push origin HEAD:producao && exit 0
+            git pull --rebase --autostash origin producao && git push origin HEAD:producao && exit 0
             git rebase --abort 2>/dev/null; sleep $((i * 10))
           done
           exit 1

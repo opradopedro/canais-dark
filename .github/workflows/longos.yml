@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       modo:
-        description: "publicar (padrao) ou prova (monta e guarda na Release teste-longo, sem publicar)"
+        description: "publicar (padrao), prova (monta e guarda na Release teste-longo, sem publicar) ou limpar (so tira do ar longos repetidos)"
         default: publicar
       plano:
         description: "opcional: caminho de um plano (ex.: old-tales/longos/wukong-ilustrado.json), mesmo antes de liberar"
@@ -51,9 +51,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Tirar do ar longos repetidos (trava de 24/11)
+        run: python3 motor-en/longo_montar.py --limpar
       - name: Ha longo para fazer?
         id: tem
         run: |
+          [ "${{ github.event.inputs.modo }}" = "limpar" ] && { echo "sim=0" >> "$GITHUB_OUTPUT"; echo "PULAR=1" >> "$GITHUB_ENV"; exit 0; }
           if [ -n "${{ github.event.inputs.plano }}" ]; then echo "sim=1" >> "$GITHUB_OUTPUT"; exit 0; fi
           # so instala o pesado quando algum plano esta liberado ou alguma serie pode ter fechado
           python3 - <<'PY' >> "$GITHUB_OUTPUT"
@@ -71,11 +74,12 @@ jobs:
           print(f"sim={sim}")
           PY
       - name: Planejar (series que fecharam)
-        if: steps.tem.outputs.sim != '1'
+        if: steps.tem.outputs.sim != '1' && env.PULAR != '1'
         run: python3 -c "import sys; sys.path.insert(0,'motor-en'); import longo_montar as m; print(m.planejar())"
       - name: Algum plano novo?
         id: tem2
         run: |
+          if [ "$PULAR" = 1 ]; then echo "sim=0" >> "$GITHUB_OUTPUT"; exit 0; fi
           if [ "${{ steps.tem.outputs.sim }}" = 1 ] || [ -n "$(git status --porcelain -- '*/longos/')" ]; then echo "sim=1" >> "$GITHUB_OUTPUT"; else echo "sim=0" >> "$GITHUB_OUTPUT"; fi
       - name: Programas e pacotes
         if: steps.tem2.outputs.sim == '1'
@@ -125,7 +129,10 @@ jobs:
           git add -- '*/longos/*.json' 2>/dev/null || true
           git diff --cached --quiet && exit 0
           git commit -m "longos: planos e publicados $(date -u +%F)"
-          for i in 1 2 3; do git pull --rebase -q origin producao && git push -q origin HEAD:producao && break; sleep 5; done
+          # 24/11: sem --autostash o pull falhava ("unstaged changes" do npm install), o "feito" nunca chegava ao
+          # repo e o Wukong subiu 11 vezes. Agora: autostash e, se nao gravar, o passo FALHA (e-mail + Release logs).
+          for i in 1 2 3 4 5; do git pull --rebase --autostash -q origin producao && git push -q origin HEAD:producao && exit 0; sleep 10; done
+          echo "::error::Planos dos longos NAO foram gravados no repo"; exit 1
       - name: Enviar erro para a Release "logs"
         if: failure()
         run: |

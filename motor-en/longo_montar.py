@@ -275,16 +275,86 @@ def mmss(s):
     return f"{s // 3600}:{s % 3600 // 60:02d}:{s % 60:02d}" if s >= 3600 else f"{s // 60}:{s % 60:02d}"
 
 
-def subir(canal, p, mp4, jpg, capitulos, pasta):
+def _yt(canal):
+    """o motor-en/yt_upload.py, sempre: longo_partes poe hora-muerta/scripts na frente do sys.path e o
+    "import yt_upload" pegava o do Hora Muerta, que nao tem configurar() (17/11: Wukong montado e nao subiu)"""
     cfg = CANAIS[canal]
-    # o motor-en/yt_upload.py, sempre: longo_partes poe hora-muerta/scripts na frente do sys.path e o
-    # "import yt_upload" pegava o do Hora Muerta, que nao tem configurar() (17/11: Wukong montado e nao subiu)
     import importlib.util
     spec = importlib.util.spec_from_file_location("yt_upload_motor_en", os.path.join(AQUI, "yt_upload.py"))
     yt = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(yt)
     yt.configurar(cfg["pref"], cfg["idioma"])
     os.environ["YT_TOKEN_VAR"] = cfg["token"]
+    return yt
+
+
+def videos_do_canal(yt, token, quantos=100):
+    """[{id, titulo, privacidade, publicado}] dos ultimos envios do canal (custa ~2 unidades por 50)."""
+    ch = yt.get("channels", token, part="contentDetails", mine="true")["items"][0]
+    up = ch["contentDetails"]["relatedPlaylists"]["uploads"]
+    ids, page = [], None
+    while len(ids) < quantos:
+        q = {"part": "contentDetails", "playlistId": up, "maxResults": 50}
+        if page:
+            q["pageToken"] = page
+        r = yt.get("playlistItems", token, **q)
+        ids += [i["contentDetails"]["videoId"] for i in r.get("items", [])]
+        page = r.get("nextPageToken")
+        if not page:
+            break
+    out = []
+    for k in range(0, len(ids), 50):
+        for v in yt.get("videos", token, part="snippet,status", id=",".join(ids[k:k + 50])).get("items", []):
+            out.append({"id": v["id"], "titulo": v["snippet"]["title"], "privacidade": v["status"]["privacyStatus"],
+                        "publicado": v["snippet"].get("publishedAt", "")})
+    return out
+
+
+def _mesmo(a, b):
+    return re.sub(r"\W+", " ", a or "").strip().lower() == re.sub(r"\W+", " ", b or "").strip().lower()
+
+
+def ja_subiu(canal, titulo):
+    """TRAVA (24/11): o Wukong subiu 11 vezes porque o "feito" nao chegou ao repo. Antes de subir, olha o
+    proprio canal: se ja existe video com o mesmo titulo, devolve o id dele e NAO sobe de novo."""
+    yt = _yt(canal)
+    tok = yt.access_token()
+    achados = [v for v in videos_do_canal(yt, tok) if _mesmo(v["titulo"], titulo)]
+    if not achados:
+        return None
+    achados.sort(key=lambda v: v["publicado"])
+    return achados[0]["id"]
+
+
+def limpar_duplicados():
+    """Tira do ar (privado, nao apaga) as copias repetidas dos longos ja publicados: fica so o do "feito"."""
+    tirados = []
+    for canal in CANAIS:
+        planos = []
+        for arq in glob.glob(os.path.join(RAIZ, canal, "longos", "*.json")):
+            try:
+                p = ler(arq)
+            except Exception:
+                continue
+            if p.get("feito", {}).get("youtube") and p.get("titulo"):
+                planos.append(p)
+        if not planos or not os.environ.get(CANAIS[canal]["token"]):
+            continue
+        yt = _yt(canal)
+        tok = yt.access_token()
+        vids = videos_do_canal(yt, tok)
+        for p in planos:
+            for v in vids:
+                if v["id"] != p["feito"]["youtube"] and v["privacidade"] != "private" and _mesmo(v["titulo"], p["titulo"]):
+                    yt.tirar_do_ar(v["id"], tok)
+                    tirados.append(f"{canal} {v['id']}")
+    print("LONGOS REPETIDOS TIRADOS DO AR:", ", ".join(tirados) if tirados else "nenhum", flush=True)
+    return tirados
+
+
+def subir(canal, p, mp4, jpg, capitulos, pasta):
+    cfg = CANAIS[canal]
+    yt = _yt(canal)
     cj = os.path.join(RAIZ, canal, "canal.json")
     c = ler(cj) if os.path.exists(cj) else {}
     cap = "\n".join(f"{mmss(t)} {nome}" for t, nome in capitulos)
@@ -349,7 +419,11 @@ def montar(arq, publicar=True):
         run("gh", "release", "upload", "teste-longo", final, jpg, "--clobber")
         print(f"PROVA DO LONGO pronta ({dur / 60:.1f} min) na Release teste-longo", flush=True)
         return None
-    vid = subir(canal, p, final, jpg, capitulos, pasta)
+    vid = ja_subiu(canal, p["titulo"])
+    if vid:
+        print(f"LONGO JA ESTAVA NO CANAL ({vid}): nao subo de novo, so marco como feito", flush=True)
+    else:
+        vid = subir(canal, p, final, jpg, capitulos, pasta)
     p["feito"] = {"youtube": vid, "quando": agora().strftime("%Y-%m-%dT%H:%M:%SZ"), "min": round(dur / 60, 1)}
     gravar(arq, p)
     print(f"LONGO PUBLICADO https://youtu.be/{vid} ({dur / 60:.1f} min)", flush=True)
@@ -359,6 +433,9 @@ def montar(arq, publicar=True):
 def main():
     a = sys.argv[1:]
     publicar = "--sem-subir" not in a
+    if "--limpar" in a:
+        limpar_duplicados()
+        return 0
     if "--plano" in a:
         montar(os.path.join(RAIZ, a[a.index("--plano") + 1]) if not os.path.isabs(a[a.index("--plano") + 1])
                else a[a.index("--plano") + 1], publicar)
@@ -371,6 +448,14 @@ def main():
             except Exception:
                 continue
             if pronto(p):
+                if publicar and p.get("titulo"):
+                    vid = ja_subiu(canal, p["titulo"])
+                    if vid:
+                        p["feito"] = {"youtube": vid, "quando": agora().strftime("%Y-%m-%dT%H:%M:%SZ"),
+                                      "obs": "ja estava no canal; nao montado de novo"}
+                        gravar(arq, p)
+                        print(f"[{canal}] {os.path.basename(arq)} ja estava no canal ({vid}): marcado como feito", flush=True)
+                        continue
                 montar(arq, publicar)
                 return 0  # um longo por execucao (tempo de desenho)
     print("nenhum longo pronto para montar agora", flush=True)

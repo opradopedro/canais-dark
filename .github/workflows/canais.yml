@@ -274,7 +274,7 @@ jobs:
           git add "$F"
           git diff --cached --quiet && exit 0
           git commit -m "capas feitas SYBI $(date -u +%F)"
-          for i in 1 2 3; do git pull --rebase -q origin producao && git push -q origin HEAD:producao && break; sleep 5; done
+          for i in 1 2 3; do git pull --rebase --autostash -q origin producao && git push -q origin HEAD:producao && break; sleep 5; done
 
       # se der erro, o log vai para a Release publica "logs" (Kiro e Claude leem sem entrar no GitHub)
       - name: Enviar o erro para a Release "logs"
@@ -331,7 +331,7 @@ jobs:
           git add metricas/*.csv
           git diff --cached --quiet && exit 0
           git commit -m "metricas $(date -u +%F)"
-          for i in 1 2 3 4; do git pull --rebase -q origin producao && git push -q origin HEAD:producao && exit 0; git rebase --abort 2>/dev/null; sleep $((i*10)); done
+          for i in 1 2 3 4; do git pull --rebase --autostash -q origin producao && git push -q origin HEAD:producao && exit 0; git rebase --abort 2>/dev/null; sleep $((i*10)); done
           exit 1
 
   # ---------------- Producao diaria no motor cartoon (canal com "motor_visual": "cartoon") ----------------
