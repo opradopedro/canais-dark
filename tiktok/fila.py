@@ -68,6 +68,10 @@ def visuais(cid):
                 pass
     return out
 MAX_POR_RODADA = {"yb": 2}  # por conta, por execucao (o resto fica para a proxima). Padrao: 1
+# 25/11: com fila atrasada (Short no ar ha mais de 8 h e fora do TikTok) a conta posta ate 3 por execucao,
+# para o atraso sumir em 1 rodada em vez de arrastar dias (o vigia mandava e-mail enquanto a fila drenava).
+MAX_ATRASADO = 3
+ATRASO_H = 8
 NS = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015",
       "media": "http://search.yahoo.com/mrss/"}
 
@@ -176,7 +180,8 @@ def fila():
                 continue
             if vis is not None and vis.get(v["id"]) != cfg["so_visual"]:
                 continue  # Signal Lost: video do motor antigo nao vai
-            if n >= MAX_POR_RODADA.get(cid, 1):
+            velho = dt.datetime.now(dt.timezone.utc) - v["publicado"] >= dt.timedelta(hours=ATRASO_H)
+            if n >= (max(MAX_ATRASADO, MAX_POR_RODADA.get(cid, 1)) if velho else MAX_POR_RODADA.get(cid, 1)):
                 break
             oe = ainda_publico(v["id"])
             if not oe:

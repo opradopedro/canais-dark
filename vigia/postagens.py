@@ -56,9 +56,27 @@ def checar():
         atr = []
         prob.append(f"TikTok: nao consegui conferir a fila ({e})")
     por = collections.Counter(a["canal"] for a in atr)
+    # 25/11: fila atrasada que esta ANDANDO (a conta recebeu post nas ultimas 8 h) e nao passa de 3 dias e
+    # recuperacao, nao defeito: o fila.py posta ate 3 por rodada para zerar. So falha se a conta parou de
+    # receber post ou se o atraso passou de 3 dias (a fila nao esta drenando).
+    ultimo = {}
+    try:
+        for p in fila.carregar()["postados"].values():
+            q = p.get("quando")
+            if q and p.get("canal"):
+                t = dt.datetime.fromisoformat(q.replace("Z", "+00:00"))
+                ultimo[p["canal"]] = max(ultimo.get(p["canal"], t), t)
+    except Exception:
+        pass
     for cid, n in por.items():
         velho = min(a["no_youtube_desde"] for a in atr if a["canal"] == cid)
-        prob.append(f"{fila.CONTAS[cid]['nome']} TikTok: {n} Short(s) no ar no YouTube e fora do TikTok (o mais antigo desde {velho[:16]}Z)")
+        idade = (AGORA - dt.datetime.fromisoformat(velho)).total_seconds() / 3600
+        hp = (AGORA - ultimo[cid]).total_seconds() / 3600 if cid in ultimo else 999
+        txt = f"{fila.CONTAS[cid]['nome']} TikTok: {n} Short(s) no ar no YouTube e fora do TikTok (o mais antigo desde {velho[:16]}Z)"
+        if hp <= 8 and idade <= 72:
+            ok.append(txt + f" - recuperando, ultimo post ha {hp:.0f} h")
+        else:
+            prob.append(txt + (f" - nenhum post ha {hp:.0f} h" if hp > 8 else " - atraso passou de 3 dias"))
     for cid in fila.CONTAS:
         if cid not in por:
             ok.append(f"{fila.CONTAS[cid]['nome']} TikTok: em dia")
