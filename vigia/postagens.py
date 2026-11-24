@@ -21,7 +21,7 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, "tiktok"))
 import fila  # noqa: E402
 
-PRAZO_H = {"hm": 30, "cl": 30, "sv": 30, "yb": 16}  # HM/CL/SV 1 Short por dia, SYBI 2 por dia
+PRAZO_H = {"hm": 30, "cl": 30, "sv": 30, "yb": 24}  # HM/CL/SV 1 Short por dia; SYBI 2 por dia (21Z e 23Z: maior intervalo normal 22 h)
 AGORA = dt.datetime.now(dt.timezone.utc)
 
 
