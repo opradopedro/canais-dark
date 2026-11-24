@@ -1,0 +1,1050 @@
+{
+ "formato": "Survivor",
+ "origem": "autoral",
+ "serie": "lookout-rules",
+ "serie_titulo": "The Lookout Rules | Signal Lost",
+ "partes": 3,
+ "tags": [
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "horror shorts",
+  "narrated horror",
+  "fire lookout",
+  "forest ranger",
+  "rules horror",
+  "scary rules"
+ ],
+ "autor": "claude",
+ "paleta": "sv",
+ "codigo": "SV054",
+ "parte": 1,
+ "titulo": "Never let anyone up the fire tower after dark 🔥 Part 1 #horror #shorts",
+ "capa": "LET ME IN",
+ "descripcion": "The new fire lookout found three rules taped to the radio. On her third night she broke the first one, and something started climbing the hundred and twenty steps of her tower.\n\n> Part 2: {when_next}.\nWould you have reported the light?\n\nNarrated fiction. New part every day.\n#horror #horrorstories #scarystories #creepypasta #rules",
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 15,
+   "en": 0.3
+  },
+  {
+   "tipo": "susto",
+   "linea": 20,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "visual": "ilustrado",
+ "elenco": {
+  "nell": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#5a3a3a"
+  },
+  "alta": {
+   "tipo": "humano",
+   "rosto_cor": "#2a2a2a",
+   "membro": "#1c1c1c",
+   "roupa": "trapos",
+   "roupa_cor": "#111",
+   "sem_rosto": true,
+   "cabelo": "careca"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "Nobody climbs the Kettle Ridge fire tower after *dark*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-janela",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.44
+     }
+    ]
+   }
+  },
+  {
+   "texto": "If Nell opens the hatch for what climbs, she never comes down.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Nell, thirty-four, is a fire lookout, alone above the trees.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre-dia",
+    "cam": {
+     "z": [
+      1.0,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "nell",
+      "pose": "andar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The last lookout quit in the middle of the season.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "nell",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He left three rules taped to the radio.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "nell",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "If you see a fire with no smoke, don't report it.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-fundo",
+    "cam": {
+     "z": [
+      1.12,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.55
+    },
+    "fx": [
+     "escuro"
+    ]
+   }
+  },
+  {
+   "texto": "If you hear steps at night, lock the hatch, stay quiet.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nell",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "If the radio calls you by your first name, it isn't dispatch.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-janela",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nell",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Nell laughs at the sheet.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nell",
+      "pose": "triunfo",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "On her third night, she sees it.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-janela",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nell",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A small orange light in the valley. No smoke.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-fundo",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "She calls it in anyway. Rule one, broken.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nell",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Dispatch checks the cameras. Nothing.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nell",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because the next night, the light is closer.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-janela",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nell",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Halfway up the ridge. Swinging, like a lantern.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-trilha",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "neblina"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "At one in the morning, the stairs start to *creak*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "One step. Then another. Something heavy.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nell",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The tower has a hundred and twenty steps.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-sala",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nell",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "At a hundred and nineteen, it stops, right under the hatch.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nell",
+      "pose": "agachar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Three soft knocks on the floor beneath her feet.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nell",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then her own voice, from below: Nell, it's cold out here. *Let me in*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "casa_interior-porta",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "nell",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Nobody else is on this mountain. Part two, {when_next}.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "floresta-pe_torre",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "alta",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.25,
+      "vira": 1
+     }
+    ]
+   }
+  }
+ ],
+ "mundo": "sv-lookout-rules",
+ "elenco_3d": {
+  "nell": {
+   "semente": 6411,
+   "corpo": "magro",
+   "cabelo": "rabo",
+   "roupa": "casual"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "radio"
+     }
+    ],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "janela"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "pe_torre"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "aberto",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Walking_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "medio",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Idle_B",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "close",
+    "luz": "entardecer",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Interact",
+      "rosto": "desconfiado",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "fundo",
+    "plano": "aberto",
+    "luz": "noite",
+    "atores": []
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Crouching",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Idle_A",
+      "rosto": "desconfiado",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Cheering",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "ombro",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Idle_B",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "fundo",
+    "plano": "medio",
+    "luz": "noite_neblina",
+    "atores": [],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "fundo"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Interact",
+      "rosto": "neutro",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Idle_A",
+      "rosto": "desconfiado",
+      "segura": "radio"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "janela",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "trilha",
+    "plano": "medio",
+    "luz": "noite_neblina",
+    "atores": [],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "trilha"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "pe_torre"
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Idle_A",
+      "rosto": "medo",
+      "segura": "lanterna"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "sala",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Crouching",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "casa_interior",
+    "marca": "porta",
+    "plano": "ombro",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "nell",
+      "acao": "Walking_Backwards",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "porta"
+    }
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "floresta",
+    "marca": "pe_torre",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [],
+    "criatura": {
+     "tipo": "vulto",
+     "marca": "pe_torre"
+    }
+   }
+  }
+ ],
+ "gancho_visual": true
+}

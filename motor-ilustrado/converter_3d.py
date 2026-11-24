@@ -135,6 +135,7 @@ SERIES = {
     "los-del-parque": "in a pine forest campground of a national park in the mountains of northern Mexico",
     "plato-de-mas": "inside an old family house in Saltillo, Mexico, worn tiles, religious pictures and a long wooden dining table",
     "hide-alone": "inside a small cheap student apartment in Ohio, cluttered, a ring light and a laptop streaming",
+    "lookout-rules": "on Kettle Ridge, a remote pine mountain in Montana, around a tall wooden fire lookout tower with a glass cab on top",
     "bebe-azul": "inside a small shared student apartment in Guadalajara, Mexico, cheap furniture, posters, a phone flashlight",
 }
 DIA = {"dia", "nascer_sol", "entardecer", "nublado"}
