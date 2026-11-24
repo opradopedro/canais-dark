@@ -272,6 +272,10 @@ Cada série vira um vídeo longo no YouTube. **PISO DURO: nenhum longo sai com m
   redesenha cada parte em 16:9 com a voz guardada (Release `longo-<canal>`), tira o "Part two, tomorrow", junta abertura
   + partes + epílogo, faz a capa e os capítulos, confere legenda, fim e a trava de 10 min, e publica. O plano ganha
   `"feito"` com o link.
+- **Confere antes de montar (24/11):** antes de desenhar, o montador soma a duração real da voz de cada parte (sem o
+  "Parte X sai...") e os extras. Coletânea HM/SV que não chega a 10 min ganha sozinha a próxima série publicada
+  (título vira "4 relatos...") e espera ela ir ao ar; nunca fica falhando todo dia. Old Tales abaixo de 10 min não é
+  montado e o erro pede epílogo maior: o roteirista resolve na rotina seguinte.
 - No TikTok, 2 min também é bom: só vídeo com mais de 1 min entra no Creator Rewards.
 
 ### Retenção dentro de cada parte (vale para os 4 canais)
@@ -287,6 +291,16 @@ Cada série vira um vídeo longo no YouTube. **PISO DURO: nenhum longo sai com m
   maiores, prefira séries de 2 a 3 partes (4 só em história muito longa). Old Tales: sempre 5 partes (1 série = 1 longo).
 - O último susto continua na **penúltima** frase (trava de chiado no fim) e a legenda continua presa na voz.
 - Shorts aceita até 3 min: nunca passe de ~2min10 numa parte.
+
+## Trava que barra vídeo = robô conserta sozinho (REGRA do Pedro, 24/11: "não pode só não subir, tem que refazer do jeito certo")
+Vale para todos os canais e fluxos (Shorts, longos, TikTok, Radar). Uma trava (legenda fora da voz, chiado no fim,
+duração, vídeo repetido) nunca é o fim da linha:
+1. **Prevenir:** conferir ANTES do trabalho caro (duração prevista antes de desenhar, título antes de subir).
+2. **Consertar sozinho:** refazer do jeito certo (Shorts: refaz voz/alinhamento até 2 voltas e abaixa o volume do fim;
+   longo curto: junta mais uma série; longo repetido: não sobe e marca feito).
+3. **Não deixar buraco:** enquanto conserta, a fila de 3 dias agendados segura o horário; a próxima execução tenta de novo.
+4. **Só avisar o Pedro** (e-mail / Release "logs") quando o conserto automático não resolver, dizendo o que falta.
+Toda trava nova TEM que vir com o conserto automático dela; trava que só barra não entra no repo.
 
 ## Estoque mínimo (REGRA do Pedro, 03/11: "nunca mais" aviso de ESTOQUE BAIXO)
 - (Hora Muerta, Signal Lost e Old Tales: conta SÓ roteiro 3D; os do estilo antigo são reserva, ver "Estilo 3D".)

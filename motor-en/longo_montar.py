@@ -387,6 +387,41 @@ def subir(canal, p, mp4, jpg, capitulos, pasta):
     return yt.subir(upj, c.get("canal_titulo"))["id"]
 
 
+def prever_s(p, cfg):
+    """24/11: duracao do longo ANTES de desenhar (46 min de render). Usa os tempos da voz ja gravada de cada parte
+    (Release longo-<canal>), descontando a fala "Parte X sai..." que o montador corta. Sem tempos, estima pelo
+    roteiro. Abertura/epilogo pelo numero de palavras. Devolve segundos."""
+    canal_ritmo = {"hm": "hora-muerta", "sv": "signal-lost", "cl": "old-tales"}.get(cfg["cid"], "")
+    ritmo = longo.RITMO.get(canal_ritmo, 1.9)
+    total = 0.0
+    with tempfile.TemporaryDirectory() as tmp:
+        for x in p.get("partes") or []:
+            tp = os.path.join(tmp, x["codigo"] + ".json")
+            try:
+                rot = ler(achar_roteiro(x["roteiro"]))
+            except Exception:
+                rot = {}
+            if baixar(f"longo-{cfg['cid']}", f"{x['codigo']}_tempos.json", tp):
+                segs = ler(tp).get("segs") or []
+                nao_final = int(rot.get("parte") or 0) < int(rot.get("partes") or 0)
+                if segs and (nao_final or FIM_DE_PARTE.search(segs[-1].get("text", ""))):
+                    total += max(1.0, float(segs[-1]["t0"]) - 0.15)
+                else:
+                    total += float(ler(tp).get("dur") or (segs[-1]["t1"] if segs else 0))
+            else:
+                total += longo._palavras(rot) / ritmo
+    for k in ("abertura", "epilogo"):
+        v = p.get(k)
+        if isinstance(v, dict):
+            total += longo._palavras(v) / ritmo
+        elif isinstance(v, str):
+            try:
+                total += longo._palavras(ler(v if os.path.isabs(v) else os.path.join(RAIZ, v))) / ritmo
+            except Exception:
+                total += 30
+    return total
+
+
 def montar(arq, publicar=True):
     import checar_fim
     import longo_partes
@@ -479,6 +514,21 @@ def main():
                         gravar(arq, p)
                         print(f"[{canal}] {os.path.basename(arq)} ja estava no canal ({vid}): marcado como feito", flush=True)
                         continue
+                # 24/11 (Pedro): erro de duracao nao pode nem acontecer. Confere ANTES de desenhar e, se nao
+                # chega a 10 min, CONSERTA sozinho: coletanea ganha a proxima serie; Old Tales pede mais extras.
+                prev = prever_s(p, CANAIS[canal])
+                print(f"[{canal}] {os.path.basename(arq)}: previsto {prev / 60:.1f} min antes de montar", flush=True)
+                if prev < longo.MINIMO_S:
+                    if canal in TITULO_COLETANEA:
+                        p["curto"] = {"previsto_min": round(prev / 60, 1),
+                                      "quando": agora().strftime("%Y-%m-%dT%H:%M:%SZ")}
+                        gravar(arq, p)
+                        print(f"[{canal}] curta demais: vai ganhar a proxima serie publicada (sem desenhar a toa)",
+                              flush=True)
+                        planejar()
+                        continue
+                    sys.exit(f"LONGO NAO MONTADO {os.path.basename(arq)}: previsto {prev / 60:.1f} min (< 10). "
+                             f"Old Tales: o roteirista precisa aumentar abertura/epilogo (ROTEIROS.md). Nada subiu.")
                 montar(arq, publicar)
                 return 0  # um longo por execucao (tempo de desenho)
     print("nenhum longo pronto para montar agora", flush=True)
