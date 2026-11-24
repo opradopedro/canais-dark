@@ -28,7 +28,8 @@ UMA_SERIE = {"old-tales"}  # 1 serie = 1 longo
 MAXIMO_COLETANEA_S = 14 * 60
 # 24/11: HM/SV 1.7 -> 1.95. Medido no longo coletanea-01 do HM (1103 palavras = 575 s, ja sem as falas
 # "Parte X sai..." que o montador corta). Com 1.7 o plano achou 11 min e o video saiu com 9.6 min.
-RITMO = {"hora-muerta": 1.95, "signal-lost": 1.95, "old-tales": 2.3, "so-you-built-it": 3.1}
+# Old Tales 2.3 -> 2.6: Wukong longo = 1575 palavras em 612 s (2.57).
+RITMO = {"hora-muerta": 1.95, "signal-lost": 1.95, "old-tales": 2.6, "so-you-built-it": 3.1}
 
 
 def duracao(mp4):
