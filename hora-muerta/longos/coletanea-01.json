@@ -1,0 +1,55 @@
+{
+ "titulo": "3 relatos de terror para escuchar en la oscuridad",
+ "descricao": "1. Los niños de ojos negros\n2. Los siete espantapájaros\n3. La voz que imita",
+ "capa_texto": "3 RELATOS DE TERROR",
+ "series": [
+  "ojos-negros",
+  "siete-espantapajaros",
+  "voz-del-monte"
+ ],
+ "partes": [
+  {
+   "codigo": "HM045",
+   "roteiro": "hora-muerta/stories/045-ojos-negros-1.json",
+   "youtube": "Ci1AVk3OPgc",
+   "estado": "publicado",
+   "rotulo": "Los niños de ojos negros"
+  },
+  {
+   "codigo": "HM046",
+   "roteiro": "hora-muerta/stories/046-ojos-negros-2.json",
+   "youtube": "WvqOKE2IO20",
+   "estado": "publicado",
+   "rotulo": ""
+  },
+  {
+   "codigo": "HM047",
+   "roteiro": "hora-muerta/stories/047-siete-espantapajaros-1.json",
+   "youtube": "LrLRR6XiT-4",
+   "estado": "publicado",
+   "rotulo": "Los siete espantapájaros"
+  },
+  {
+   "codigo": "HM048",
+   "roteiro": "hora-muerta/stories/048-siete-espantapajaros-2.json",
+   "youtube": "8JooUVuVJrc",
+   "estado": "publicado",
+   "rotulo": ""
+  },
+  {
+   "codigo": "HM049",
+   "roteiro": "hora-muerta/stories/049-voz-del-monte-1.json",
+   "youtube": "6ksPoD0b2zQ",
+   "estado": "publicado",
+   "rotulo": "La voz que imita"
+  },
+  {
+   "codigo": "HM050",
+   "roteiro": "hora-muerta/stories/050-voz-del-monte-2.json",
+   "youtube": "_-EFTZzrUjM",
+   "estado": "publicado",
+   "rotulo": ""
+  }
+ ],
+ "liberar_em": "2026-11-24T03:27:50Z"
+}
