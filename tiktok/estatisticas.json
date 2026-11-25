@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-24T23:12:18Z",
+ "gerado": "2026-11-25T00:14:49Z",
  "canais": {
   "hm": {
    "handle": "horamuerta.relatos",
@@ -60,8 +60,8 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@horamuerta.relatos/video/7711562952381402386",
      "quando": "2026-11-24T02:42:58+00:00",
-     "views": 65,
-     "likes": 2,
+     "views": 72,
+     "likes": 3,
      "comentarios": 0,
      "compart": 0
     },
@@ -70,7 +70,7 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@horamuerta.relatos/video/7711787107831909653",
      "quando": "2026-11-24T17:13:20+00:00",
-     "views": 31,
+     "views": 34,
      "likes": 0,
      "comentarios": 0,
      "compart": 0
@@ -80,18 +80,42 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@horamuerta.relatos/video/7711849085724101894",
      "quando": "2026-11-24T21:13:54+00:00",
-     "views": 14,
+     "views": 28,
      "likes": 0,
      "comentarios": 0,
      "compart": 0
+    },
+    {
+     "youtube": "6ksPoD0b2zQ",
+     "codigo": null,
+     "tiktok": "https://www.tiktok.com/@horamuerta.relatos/video/7711880028384021767",
+     "quando": "2026-11-24T23:13:28+00:00",
+     "views": 0,
+     "likes": 0,
+     "comentarios": 0,
+     "compart": 0
+    },
+    {
+     "youtube": "_-EFTZzrUjM",
+     "codigo": null,
+     "tiktok": null,
+     "quando": "2026-11-25T00:13:34+00:00",
+     "pendente": true
+    },
+    {
+     "youtube": "0k0vIkGm7-U",
+     "codigo": null,
+     "tiktok": null,
+     "quando": "2026-11-25T00:13:34+00:00",
+     "pendente": true
     }
    ],
    "perfil": {
     "seguidores": 8,
-    "curtidas": 18,
-    "videos": 8
+    "curtidas": 19,
+    "videos": 10
    },
-   "views": 620
+   "views": 644
   },
   "cl": {
    "handle": "oldtales.retold",
@@ -152,7 +176,7 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@oldtales.retold/video/7711787108356148500",
      "quando": "2026-11-24T17:13:21+00:00",
-     "views": 146,
+     "views": 179,
      "likes": 4,
      "comentarios": 0,
      "compart": 0
@@ -162,18 +186,49 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@oldtales.retold/video/7711849108289391893",
      "quando": "2026-11-24T21:13:54+00:00",
-     "views": 42,
-     "likes": 0,
+     "views": 63,
+     "likes": 3,
      "comentarios": 0,
      "compart": 0
+    },
+    {
+     "youtube": "VKxkDINsTTs",
+     "codigo": null,
+     "tiktok": "https://www.tiktok.com/@oldtales.retold/video/7711880048692972807",
+     "quando": "2026-11-24T23:13:28+00:00",
+     "views": 14,
+     "likes": 1,
+     "comentarios": 0,
+     "compart": 0
+    },
+    {
+     "youtube": "A8LX5rvtjJw",
+     "codigo": null,
+     "tiktok": null,
+     "quando": "2026-11-25T00:13:34+00:00",
+     "pendente": true
+    },
+    {
+     "youtube": "AE3BtV22QUE",
+     "codigo": null,
+     "tiktok": null,
+     "quando": "2026-11-25T00:13:34+00:00",
+     "pendente": true
+    },
+    {
+     "youtube": "Uu90A4JAfck",
+     "codigo": null,
+     "tiktok": null,
+     "quando": "2026-11-25T00:13:34+00:00",
+     "pendente": true
     }
    ],
    "perfil": {
     "seguidores": 3,
-    "curtidas": 17,
-    "videos": 7
+    "curtidas": 21,
+    "videos": 11
    },
-   "views": 699
+   "views": 767
   },
   "yb": {
    "handle": "so.you.built.it",
@@ -294,7 +349,7 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@so.you.built.it/video/7711787135434558740",
      "quando": "2026-11-24T17:13:21+00:00",
-     "views": 101,
+     "views": 103,
      "likes": 2,
      "comentarios": 0,
      "compart": 0
@@ -304,7 +359,7 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@so.you.built.it/video/7711787148835441941",
      "quando": "2026-11-24T17:13:21+00:00",
-     "views": 88,
+     "views": 89,
      "likes": 2,
      "comentarios": 0,
      "compart": 2
@@ -314,8 +369,8 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@so.you.built.it/video/7711849128715799829",
      "quando": "2026-11-24T21:13:54+00:00",
-     "views": 32,
-     "likes": 3,
+     "views": 47,
+     "likes": 6,
      "comentarios": 0,
      "compart": 0
     },
@@ -324,18 +379,59 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@so.you.built.it/video/7711849140518456577",
      "quando": "2026-11-24T21:13:54+00:00",
-     "views": 32,
-     "likes": 2,
+     "views": 65,
+     "likes": 3,
      "comentarios": 0,
      "compart": 0
+    },
+    {
+     "youtube": "cZMIGUv5Khg",
+     "codigo": null,
+     "tiktok": "https://www.tiktok.com/@so.you.built.it/video/7711880070670994709",
+     "quando": "2026-11-24T23:13:28+00:00",
+     "views": 0,
+     "likes": 0,
+     "comentarios": 0,
+     "compart": 0
+    },
+    {
+     "youtube": "q0Pkmf3yapo",
+     "codigo": null,
+     "tiktok": "https://www.tiktok.com/@so.you.built.it/video/7711880089494883604",
+     "quando": "2026-11-24T23:13:28+00:00",
+     "views": 0,
+     "likes": 0,
+     "comentarios": 0,
+     "compart": 0
+    },
+    {
+     "youtube": "rHbK0LdYcf0",
+     "codigo": null,
+     "tiktok": null,
+     "quando": "2026-11-25T00:13:34+00:00",
+     "pendente": true
+    },
+    {
+     "youtube": "Df8O_c3SMzk",
+     "codigo": null,
+     "tiktok": null,
+     "quando": "2026-11-25T00:13:34+00:00",
+     "pendente": true
+    },
+    {
+     "youtube": "JO0z83Y5EOs",
+     "codigo": null,
+     "tiktok": null,
+     "quando": "2026-11-25T00:13:35+00:00",
+     "pendente": true
     }
    ],
    "perfil": {
     "seguidores": 5,
-    "curtidas": 108,
-    "videos": 15
+    "curtidas": 112,
+    "videos": 20
    },
-   "views": 3302
+   "views": 3353
   },
   "sv": {
    "handle": "siganllost.tales",
@@ -346,7 +442,7 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@siganllost.tales/video/7711562981129145620",
      "quando": "2026-11-24T02:42:58+00:00",
-     "views": 67,
+     "views": 69,
      "likes": 4,
      "comentarios": 0,
      "compart": 0
@@ -356,7 +452,7 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@siganllost.tales/video/7711787126731623700",
      "quando": "2026-11-24T17:13:21+00:00",
-     "views": 39,
+     "views": 44,
      "likes": 2,
      "comentarios": 0,
      "compart": 0
@@ -366,18 +462,35 @@
      "codigo": null,
      "tiktok": "https://www.tiktok.com/@siganllost.tales/video/7711849077285195026",
      "quando": "2026-11-24T21:13:54+00:00",
-     "views": 12,
+     "views": 26,
      "likes": 0,
      "comentarios": 0,
      "compart": 0
+    },
+    {
+     "youtube": "gzebKCkHirg",
+     "codigo": null,
+     "tiktok": "https://www.tiktok.com/@siganllost.tales/video/7711880064073256213",
+     "quando": "2026-11-24T23:13:28+00:00",
+     "views": 1,
+     "likes": 0,
+     "comentarios": 0,
+     "compart": 0
+    },
+    {
+     "youtube": "G2KHQrXabro",
+     "codigo": null,
+     "tiktok": null,
+     "quando": "2026-11-25T00:13:35+00:00",
+     "pendente": true
     }
    ],
    "perfil": {
     "seguidores": 0,
     "curtidas": 6,
-    "videos": 3
+    "videos": 5
    },
-   "views": 118
+   "views": 140
   }
  }
 }
