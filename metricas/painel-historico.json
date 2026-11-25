@@ -707,7 +707,7 @@
 "curtidas": 65,
 "posts": 13,
 "seguidores": 3,
-"views": 1986
+"views": 2034
 },
 "yt": {
 "comentarios": 1,
@@ -724,7 +724,7 @@
 "curtidas": 35,
 "posts": 12,
 "seguidores": 9,
-"views": 982
+"views": 985
 },
 "yt": {
 "comentarios": 10,
@@ -738,10 +738,10 @@
 "tt": {
 "comentarios": 0,
 "compart": 0,
-"curtidas": 10,
-"posts": 7,
-"seguidores": 0,
-"views": 348
+"curtidas": null,
+"posts": 6,
+"seguidores": null,
+"views": 352
 },
 "yt": {
 "comentarios": 1,
@@ -756,14 +756,14 @@
 "comentarios": 5,
 "compart": 3,
 "curtidas": 116,
-"posts": 24,
+"posts": 25,
 "seguidores": 5,
 "views": 3474
 },
 "yt": {
 "comentarios": 26,
 "inscritos": 94,
-"likes": 1319,
+"likes": 1322,
 "videos": 68,
 "views": 76769
 }
