@@ -704,10 +704,10 @@
 "tt": {
 "comentarios": 2,
 "compart": 1,
-"curtidas": 65,
+"curtidas": 66,
 "posts": 13,
 "seguidores": 3,
-"views": 2034
+"views": 2078
 },
 "yt": {
 "comentarios": 1,
@@ -721,16 +721,16 @@
 "tt": {
 "comentarios": 2,
 "compart": 3,
-"curtidas": 35,
-"posts": 12,
+"curtidas": 39,
+"posts": 13,
 "seguidores": 9,
-"views": 985
+"views": 1031
 },
 "yt": {
 "comentarios": 10,
 "inscritos": 67,
 "likes": 291,
-"videos": 37,
+"videos": 38,
 "views": 14456
 }
 },
@@ -738,16 +738,16 @@
 "tt": {
 "comentarios": 0,
 "compart": 0,
-"curtidas": null,
-"posts": 6,
-"seguidores": null,
-"views": 352
+"curtidas": 10,
+"posts": 8,
+"seguidores": 0,
+"views": 363
 },
 "yt": {
 "comentarios": 1,
 "inscritos": 26,
 "likes": 117,
-"videos": 25,
+"videos": 26,
 "views": 7533
 }
 },
@@ -758,12 +758,12 @@
 "curtidas": 116,
 "posts": 25,
 "seguidores": 5,
-"views": 3474
+"views": 3475
 },
 "yt": {
 "comentarios": 26,
 "inscritos": 94,
-"likes": 1322,
+"likes": 1333,
 "videos": 68,
 "views": 76769
 }
