@@ -78,6 +78,31 @@
    "lugar": "aldeia_china/praca (noite)",
    "prompt": "the fortress town of Chentang Pass in ancient China, thick stone walls and a gate tower facing the sea, at night, blue moonlight and torches",
    "seed": 178
+  },
+  "aldeia_china-praca-tempestade": {
+   "lugar": "aldeia_china/praca (tempestade)",
+   "prompt": "the fortress town of Chentang Pass in ancient China, thick stone walls and a gate tower facing the sea, under a dark stormy sky",
+   "seed": 143
+  },
+  "aldeia_china-quarto-noite": {
+   "lugar": "aldeia_china/quarto (noite)",
+   "prompt": "the bedroom of a noble lady in an ancient Chinese mansion at night, silk curtains, a candle, moonlight through paper windows, at night, blue moonlight and torches",
+   "seed": 157
+  },
+  "aldeia_china-templo": {
+   "lugar": "aldeia_china/templo (dia)",
+   "prompt": "a small ancient Chinese mountain temple with red pillars on a green misty peak, incense smoke, a clay statue of a boy warrior, in daylight",
+   "seed": 164
+  },
+  "aldeia_china-templo-dourado": {
+   "lugar": "aldeia_china/templo (dourado)",
+   "prompt": "a small ancient Chinese mountain temple with red pillars on a green misty peak, incense smoke, a clay statue of a boy warrior, at sunset, golden orange light",
+   "seed": 171
+  },
+  "aldeia_china-templo-tempestade": {
+   "lugar": "aldeia_china/templo (tempestade)",
+   "prompt": "a small ancient Chinese mountain temple with red pillars on a green misty peak, incense smoke, a clay statue of a boy warrior, under a dark stormy sky",
+   "seed": 178
   }
  }
 }
