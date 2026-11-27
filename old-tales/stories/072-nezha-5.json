@@ -1,0 +1,1327 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "origem": "gringa: China, Ne Zha 2 (2025) virou a maior bilheteria de animação da história (mais de US$ 2 bilhões) e o mito de Nezha segue viral no Douyin/Bilibili https://en.wikipedia.org/wiki/Ne_Zha_2 ; mito: Fengshen Yanyi (Investiture of the Gods, séc. XVI), caps. 12-14 https://en.wikipedia.org/wiki/Nezha",
+ "serie": "nezha",
+ "serie_titulo": "Nezha vs the Dragon King | Old Tales",
+ "partes": 5,
+ "tags": [
+  "old tales",
+  "mythology",
+  "chinese mythology",
+  "nezha",
+  "ne zha",
+  "investiture of the gods",
+  "dragon king",
+  "ancient china",
+  "story time"
+ ],
+ "codigo": "CL072",
+ "parte": 5,
+ "anterior": "CL071",
+ "titulo": "Reborn from a lotus, he hunted his own father 🪷 Nezha Part 5 #mythology #shorts",
+ "capa": "REBORN FROM A LOTUS",
+ "descripcion": "His master built him a new body out of lotus flowers. It couldn't bleed, and it couldn't die. And the first thing Nezha did with it was hunt the father who burned his temple.\n\nWas Nezha a hero or a monster?\n\nFrom the Chinese myth of Nezha as told in Fengshen Yanyi (Investiture of the Gods, 16th century), chapters 12 to 14. Other versions differ in details. Ne Zha 2 (2025) became the highest-grossing animated film ever.\n#nezha #chinesemythology #mythology #nezha2 #shorts",
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 11,
+   "en": 0.3
+  },
+  {
+   "tipo": "golpe",
+   "linea": 17,
+   "en": 0.3
+  }
+ ],
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "nezha": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "coque",
+   "cabelo_cor": "#141010",
+   "roupa": "tunica",
+   "roupa_cor": "#b8282a"
+  },
+  "lijing": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a1a1a",
+   "armadura": "#7a1c24",
+   "faixa": "#1a1a1a",
+   "elmo": "#3a3a40",
+   "barba_estilo": "chinesa",
+   "barba": "#1a1a1a"
+  },
+  "yin": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "coque",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#6a3a5a"
+  },
+  "taiyi": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "roupa_cor": "#e8e0d0",
+   "barba_estilo": "chinesa",
+   "barba": "#8a8a8a"
+  },
+  "aobing": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "coque",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "tunica",
+   "roupa_cor": "#2a5a8a"
+  },
+  "aoguang": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "coque",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "tiara": true,
+   "roupa_cor": "#1f4a6a",
+   "barba_estilo": "chinesa",
+   "barba": "#8a8a8a"
+  },
+  "shiji": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "coque",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#d8d0c0"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "His father burned his temple, so Nezha came back in a body that can't *die*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-jardim-noite",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.15,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And the first thing he wants is his father's head.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-jardim-tempestade",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Taiyi lays lotus flowers on the ground, shaped like a boy.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-jardim-noite",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "taiyi",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Lotus roots for bones. Lotus leaves for skin.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-jardim-noite",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "taiyi",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "New body",
+     "valor": "Lotus",
+     "sub": "roots for bones, leaves for skin",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "He calls the soul back, and Nezha stands up, taller than before.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-jardim-dourado",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "agachar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A lotus body has no blood. Poison and curses slide right off it.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-jardim-dourado",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then Taiyi gives him two new weapons.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-jardim",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "taiyi",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The Fire-Tipped Spear, and the Wind Fire Wheels.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-jardim",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Wind Fire Wheels",
+     "sub": "Nezha's flying wheels of fire",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "Nezha says thank you. Then he flies straight to Chentang Pass.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-praca",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "correr",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Li Jing! You burned my temple! Come out!",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-praca",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because a father and son are about to try to kill each other.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-praca-tempestade",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Li Jing charges with his halberd. Nezha knocks it out of his hands.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-praca-tempestade",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.32
+     },
+     {
+      "id": "lijing",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The great general runs, and his son chases him across the sky.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-nuvens-tempestade",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then an old Taoist steps out of the clouds. Randeng.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-nuvens-tempestade",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "taiyi",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He hands Li Jing a small golden pagoda. Throw it, he says.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-nuvens-tempestade",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Nezha attacks again, and the pagoda falls over him like a cage.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-nuvens-tempestade",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Inside, fire burns him until he begs. I give up! Father!",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-nuvens-tempestade",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Randeng makes them swear peace. Li Jing keeps the pagoda forever.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-colunas-dourado",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "That's why statues show him holding it. The Pagoda-Bearing Heavenly King.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-templo",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Li Jing",
+     "sub": "the Pagoda-Bearing Heavenly King",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "Later, they fight side by side in the war that ended the Shang.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-praca-tempestade",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.32
+     },
+     {
+      "id": "lijing",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And Nezha became one of the most loved gods in China.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-templo",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "triunfo",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In twenty twenty-five, Ne Zha 2 made more than two billion dollars.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-templo",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Ne Zha 2 (2025)",
+     "valor": "$2B+",
+     "sub": "top animated film ever",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "The boy who killed a Dragon Prince and hunted his father.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-dourado",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "So tell me. Was Nezha a hero, or a monster?",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-dourado",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "mundo": "cl-nezha",
+ "elenco_3d": {
+  "nezha": {
+   "semente": 6801,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "cabelo_cor": "#141010",
+   "roupa": "chines",
+   "camisa": "#b8282a"
+  },
+  "lijing": {
+   "semente": 6802,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "roupa": "soldado_china",
+   "acessorio": "barba"
+  },
+  "yin": {
+   "semente": 6803,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "chines",
+   "camisa": "#6a3a5a"
+  },
+  "taiyi": {
+   "semente": 6804,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "chines",
+   "camisa": "#e8e0d0",
+   "acessorio": "barba"
+  },
+  "aobing": {
+   "semente": 6805,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "roupa": "chines",
+   "camisa": "#2a5a8a"
+  },
+  "aoguang": {
+   "semente": 6806,
+   "corpo": "idoso",
+   "cabelo": "longo",
+   "roupa": "rei",
+   "camisa": "#1f4a6a",
+   "acessorio": "barba"
+  },
+  "shiji": {
+   "semente": 6807,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "chines",
+   "camisa": "#d8d0c0"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "taiyi",
+      "acao": "Crouching",
+      "rosto": "determinado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "taiyi",
+      "acao": "Ranged_Magic_Spellcasting",
+      "rosto": "determinado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "baixo",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Lie_StandUp",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "ombro",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "taiyi",
+      "acao": "Interact",
+      "rosto": "neutro"
+     },
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Melee_2H_Attack_Spin",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Running_A",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Melee_2H_Attack_Stab",
+      "rosto": "bravo",
+      "segura": "lanca"
+     },
+     {
+      "id": "lijing",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "nuvens",
+    "plano": "auto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Running_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "nuvens",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "taiyi",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "nuvens",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Holding_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "nuvens",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Hit_B",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "nuvens",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Crouching",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "medio",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Holding_B",
+      "rosto": "neutro"
+     },
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "templo",
+    "plano": "ombro",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Holding_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "auto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Melee_2H_Attack_Spin",
+      "rosto": "bravo",
+      "segura": "lanca"
+     },
+     {
+      "id": "lijing",
+      "acao": "Melee_2H_Attack_Chop",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "templo",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Cheering",
+      "rosto": "sorriso",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "templo",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "sorriso",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 22,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "baixo",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 23,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "close",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "desconfiado",
+      "segura": "lanca"
+     }
+    ]
+   }
+  }
+ ],
+ "gancho_visual": true
+}

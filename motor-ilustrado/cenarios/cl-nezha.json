@@ -103,6 +103,26 @@
    "lugar": "aldeia_china/templo (tempestade)",
    "prompt": "a small ancient Chinese mountain temple with red pillars on a green misty peak, incense smoke, a clay statue of a boy warrior, under a dark stormy sky",
    "seed": 178
+  },
+  "aldeia_china-jardim-dourado": {
+   "lugar": "aldeia_china/jardim (dourado)",
+   "prompt": "a misty Taoist mountain cave hermitage with a lotus pond, pine trees and a stone altar, at sunset, golden orange light",
+   "seed": 143
+  },
+  "aldeia_china-jardim": {
+   "lugar": "aldeia_china/jardim (dia)",
+   "prompt": "a misty Taoist mountain cave hermitage with a lotus pond, pine trees and a stone altar, in daylight",
+   "seed": 150
+  },
+  "palacio_ceu-nuvens-tempestade": {
+   "lugar": "palacio_ceu/nuvens (tempestade)",
+   "prompt": "an imperial heavenly palace with golden roofs floating over a sea of clouds, under a dark stormy sky",
+   "seed": 171
+  },
+  "mar_jangada-mar-dourado": {
+   "lugar": "mar_jangada/mar (dourado)",
+   "prompt": "a rocky ancient Chinese coast where a river mouth meets the wild East Sea, huge waves, at sunset, golden orange light",
+   "seed": 192
   }
  }
 }
