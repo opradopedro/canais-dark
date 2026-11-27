@@ -48,6 +48,36 @@
    "lugar": "palacio_ceu/colunas (dourado)",
    "prompt": "the top of the stone gate tower of Chentang Pass, an ancient giant bow on a weapon rack, the sea below, at sunset, golden orange light",
    "seed": 157
+  },
+  "palacio_ceu-colunas-tempestade": {
+   "lugar": "palacio_ceu/colunas (tempestade)",
+   "prompt": "the top of the stone gate tower of Chentang Pass, an ancient giant bow on a weapon rack, the sea below, under a dark stormy sky",
+   "seed": 136
+  },
+  "palacio_ceu-nuvens-dourado": {
+   "lugar": "palacio_ceu/nuvens (dourado)",
+   "prompt": "an imperial heavenly palace with golden roofs floating over a sea of clouds, at sunset, golden orange light",
+   "seed": 143
+  },
+  "submundo-fundo-tempestade": {
+   "lugar": "submundo/fundo (tempestade)",
+   "prompt": "Skeleton Mountain, a barren black peak with a cave mouth surrounded by white bones, ancient Chinese fantasy, under a dark stormy sky",
+   "seed": 150
+  },
+  "aldeia_china-casa-tempestade": {
+   "lugar": "aldeia_china/casa (tempestade)",
+   "prompt": "inside the grand wooden hall of an ancient Chinese general's mansion at a fortress pass, red pillars, lanterns and weapon racks, under a dark stormy sky",
+   "seed": 157
+  },
+  "aldeia_china-jardim-tempestade": {
+   "lugar": "aldeia_china/jardim (tempestade)",
+   "prompt": "a misty Taoist mountain cave hermitage with a lotus pond, pine trees and a stone altar, under a dark stormy sky",
+   "seed": 164
+  },
+  "aldeia_china-praca-noite": {
+   "lugar": "aldeia_china/praca (noite)",
+   "prompt": "the fortress town of Chentang Pass in ancient China, thick stone walls and a gate tower facing the sea, at night, blue moonlight and torches",
+   "seed": 178
   }
  }
 }

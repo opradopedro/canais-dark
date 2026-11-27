@@ -1,0 +1,1375 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "origem": "gringa: China, Ne Zha 2 (2025) virou a maior bilheteria de animação da história (mais de US$ 2 bilhões) e o mito de Nezha segue viral no Douyin/Bilibili https://en.wikipedia.org/wiki/Ne_Zha_2 ; mito: Fengshen Yanyi (Investiture of the Gods, séc. XVI), caps. 12-14 https://en.wikipedia.org/wiki/Nezha",
+ "serie": "nezha",
+ "serie_titulo": "Nezha vs the Dragon King | Old Tales",
+ "partes": 5,
+ "tags": [
+  "old tales",
+  "mythology",
+  "chinese mythology",
+  "nezha",
+  "ne zha",
+  "investiture of the gods",
+  "dragon king",
+  "ancient china",
+  "story time"
+ ],
+ "codigo": "CL070",
+ "parte": 3,
+ "anterior": "CL069",
+ "titulo": "One arrow started a war with a goddess 🏹 Nezha Part 3 #mythology #shorts",
+ "capa": "ONE ARROW",
+ "descripcion": "Nezha pulled a bow no man could pull, and his arrow flew a thousand miles. It killed the disciple of Lady Shiji. Then four Dragon Kings came for his parents.\n\n> Part 4: {when_next}.\nWhat would you do in his place?\n\nFrom the Chinese myth of Nezha as told in Fengshen Yanyi (Investiture of the Gods, 16th century), chapters 12 to 14. Other versions differ in details.\n#nezha #chinesemythology #mythology #nezha2 #shorts",
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 4,
+   "en": 0.3
+  },
+  {
+   "tipo": "golpe",
+   "linea": 14,
+   "en": 0.3
+  }
+ ],
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "nezha": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "coque",
+   "cabelo_cor": "#141010",
+   "roupa": "tunica",
+   "roupa_cor": "#b8282a"
+  },
+  "lijing": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a1a1a",
+   "armadura": "#7a1c24",
+   "faixa": "#1a1a1a",
+   "elmo": "#3a3a40",
+   "barba_estilo": "chinesa",
+   "barba": "#1a1a1a"
+  },
+  "yin": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "coque",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#6a3a5a"
+  },
+  "taiyi": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "roupa_cor": "#e8e0d0",
+   "barba_estilo": "chinesa",
+   "barba": "#8a8a8a"
+  },
+  "aobing": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "coque",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "tunica",
+   "roupa_cor": "#2a5a8a"
+  },
+  "aoguang": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "coque",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "tiara": true,
+   "roupa_cor": "#1f4a6a",
+   "barba_estilo": "chinesa",
+   "barba": "#8a8a8a"
+  },
+  "shiji": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "coque",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#d8d0c0"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "This bow has waited on the tower for centuries, and no man can *pull* it.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-colunas-dourado",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.15,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "One arrow from it is about to make a goddess his enemy.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-colunas-tempestade",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The Qiankun Bow. Legend says it belonged to an ancient emperor.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-colunas-dourado",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Qiankun Bow",
+     "sub": "no man at Chentang could draw it",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "Nezha is seven. He pulls the string all the way back.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-colunas-dourado",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The arrow screams across the sky, over mountains.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-nuvens-dourado",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It lands on Skeleton Mountain and kills a boy.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "submundo-fundo-tempestade",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "shiji",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He was the disciple of Lady Shiji, an immortal thousands of years old.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "submundo-fundo-tempestade",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "shiji",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Lady Shiji",
+     "sub": "immortal of Skeleton Mountain",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "She reads the name on the arrow. Chentang Pass.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "submundo-fundo-tempestade",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "shiji",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "She flies to the fortress and grabs Li Jing by the collar.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-tempestade",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "shiji",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "lijing",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Li Jing swears he never touched the bow. Then he looks at his son.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-tempestade",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because Nezha does what he always does. He fights.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "submundo-fundo-tempestade",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "correr",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He throws the golden ring. Lady Shiji catches it with one hand.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "submundo-fundo-tempestade",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "shiji",
+      "pose": "lutar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He throws the red sash. She takes that too. Now he has nothing.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "submundo-fundo-tempestade",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "lutar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Nezha runs to the one place she can't follow. His master's cave.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-jardim-tempestade",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "correr",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Taiyi drops a golden cover over her, and it bursts into fire.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-jardim-tempestade",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "taiyi",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "shiji",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The Nine Dragon Fire Cover. Nine fire dragons circle inside it.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-jardim-tempestade",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "taiyi",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Nine Dragon Fire Cover",
+     "valor": "9",
+     "sub": "fire dragons inside",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "When the fire dies, Lady Shiji is gone. Only a stone is left.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-jardim-noite",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "taiyi",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "She was never human. She was a rock turned spirit.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-jardim-noite",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "taiyi",
+      "pose": "apontar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Nezha runs home, laughing. He's untouchable.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-praca-noite",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "correr",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "But the fortress gate is full of strangers.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-praca-noite",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The Dragon Kings of all four seas, with his parents in chains.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "aoguang",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "lijing",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     },
+     {
+      "id": "yin",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ao Guang smiles. Your parents answer for you in Heaven.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "aoguang",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Nezha looks at his mother. And he makes a terrible promise.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "yin",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "I did it. I'll pay with my own body. Part four, {when_next}.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "mundo": "cl-nezha",
+ "elenco_3d": {
+  "nezha": {
+   "semente": 6801,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "cabelo_cor": "#141010",
+   "roupa": "chines",
+   "camisa": "#b8282a"
+  },
+  "lijing": {
+   "semente": 6802,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "roupa": "soldado_china",
+   "acessorio": "barba"
+  },
+  "yin": {
+   "semente": 6803,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "chines",
+   "camisa": "#6a3a5a"
+  },
+  "taiyi": {
+   "semente": 6804,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "chines",
+   "camisa": "#e8e0d0",
+   "acessorio": "barba"
+  },
+  "aobing": {
+   "semente": 6805,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "roupa": "chines",
+   "camisa": "#2a5a8a"
+  },
+  "aoguang": {
+   "semente": 6806,
+   "corpo": "idoso",
+   "cabelo": "longo",
+   "roupa": "rei",
+   "camisa": "#1f4a6a",
+   "acessorio": "barba"
+  },
+  "shiji": {
+   "semente": 6807,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "chines",
+   "camisa": "#d8d0c0"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "close",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Ranged_Bow_Idle",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Ranged_Bow_Draw",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "medio",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "ombro",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Ranged_Bow_Draw",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "nuvens",
+    "plano": "auto",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Ranged_Bow_Release",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "fundo",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "shiji",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "fundo",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "shiji",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "fundo",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "shiji",
+      "acao": "Holding_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "shiji",
+      "acao": "Melee_Unarmed_Attack_Punch_A",
+      "rosto": "bravo"
+     },
+     {
+      "id": "lijing",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     },
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "fundo",
+    "plano": "auto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Running_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "fundo",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Throw",
+      "rosto": "bravo"
+     },
+     {
+      "id": "shiji",
+      "acao": "Melee_Block",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "submundo",
+    "marca": "fundo",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "auto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Running_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "taiyi",
+      "acao": "Ranged_Magic_Shoot",
+      "rosto": "bravo"
+     },
+     {
+      "id": "shiji",
+      "acao": "Hit_B",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "taiyi",
+      "acao": "Ranged_Magic_Spellcasting",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "taiyi",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     },
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "ombro",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "taiyi",
+      "acao": "Interact",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Running_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "aoguang",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     },
+     {
+      "id": "lijing",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     },
+     {
+      "id": "yin",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "aoguang",
+      "acao": "Holding_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 22,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     },
+     {
+      "id": "yin",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 23,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  }
+ ],
+ "gancho_visual": true
+}
