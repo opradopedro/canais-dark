@@ -1,10 +1,10 @@
 {
  "codigo": "YB086",
  "formato": "Curiosidade",
- "origem": "autoral (por que a pressão do chuveiro cai às 7 da manhã: pico de consumo, perda de carga na adutora, reservatórios elevados que seguram o pico)",
+ "origem": "autoral (por que a pressão do chuveiro cai às 7 da manhã: pico de consumo, perda de carga por atrito na adutora, bombas, estouro por pressão alta e rede em anel)",
  "titulo": "Why your shower gets weak at 7 AM 🚿 #engineering #shorts",
  "capa": "WHY SO WEAK?",
- "descripcion": "At 7 AM, half your city opens a tap at the same time. Here's what happens to the water in the pipe under your street, and the trick cities use to fight it.\n\nWhat should we explain next?\n\n#engineering #water #plumbing #howitworks #shorts",
+ "descripcion": "At 7 AM, half your city opens a tap at the same time. Here's what happens to the water in the pipe under your street, and how engineers fight it.\n\nWhat should we explain next?\n\n#engineering #water #plumbing #howitworks #shorts",
  "tags": [
   "engineering",
   "water pressure",
@@ -23,11 +23,10 @@
   "same time",
   "friction",
   "far end",
-  "water towers",
-  "night",
-  "gravity",
-  "peak",
   "pumps",
+  "burst",
+  "loop",
+  "both ends",
   "now you know"
  ],
  "mundo": "cidade",
@@ -70,19 +69,19 @@
    "pausa": 0.3
   },
   {
-   "texto": "That's why cities build water towers and hilltop tanks.",
+   "texto": "So the city fights back with pumps that push harder during the morning rush.",
    "pausa": 0.3
   },
   {
-   "texto": "At night, pumps fill them up while water is cheap and nobody needs it.",
+   "texto": "But push too hard, and old pipes burst.",
    "pausa": 0.3
   },
   {
-   "texto": "In the morning rush, gravity pushes that stored water back into the pipes.",
+   "texto": "So engineers add a second pipe and join the two in a loop.",
    "pausa": 0.3
   },
   {
-   "texto": "The tank covers the peak, so the pumps don't have to.",
+   "texto": "Now water reaches your street from both ends, and travels half as far.",
    "pausa": 0.3
   },
   {
@@ -217,9 +216,12 @@
     "meiofio": 1,
     "carros": 2,
     "agua": 1,
-    "foco": "geral",
-    "pressao": 0.6,
-    "rotulo": "WATER TOWERS",
+    "foco": "cano",
+    "pressao": [
+     0.3,
+     0.9
+    ],
+    "rotulo": "PUMPS",
     "cor": "green"
    }
   },
@@ -228,10 +230,16 @@
    "comp": "cidade",
    "p": {
     "meiofio": 1,
-    "carros": 0,
+    "carros": 2,
     "agua": 1,
-    "foco": "sub",
-    "pressao": 1
+    "foco": "rua",
+    "pressao": 0,
+    "estoura": [
+     0,
+     1
+    ],
+    "rotulo": "TOO MUCH",
+    "cor": "red"
    }
   },
   {
@@ -241,12 +249,10 @@
     "meiofio": 1,
     "carros": 2,
     "agua": 1,
-    "foco": "cano",
-    "pressao": [
-     0.4,
-     0.8
-    ],
-    "rotulo": "GRAVITY",
+    "foco": "sub",
+    "pressao": 0.7,
+    "anel": 1,
+    "rotulo": "LOOP",
     "cor": "green"
    }
   },
@@ -257,8 +263,8 @@
     "meiofio": 1,
     "carros": 2,
     "agua": 1,
-    "foco": "cano",
-    "pressao": 0.8,
+    "foco": "sub",
+    "pressao": 0.9,
     "anel": 1
    }
   },
@@ -303,6 +309,11 @@
   {
    "tipo": "certo",
    "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 10,
    "en": 0.6
   },
   {

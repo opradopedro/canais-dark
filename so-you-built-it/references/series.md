@@ -107,6 +107,6 @@ Estoque antes: 16 roteiros prontos (7 Evolução até YB082, 9 Curiosidades) + 6
 |---|---|---|---|---|
 | YB084 | Curiosidade | cratera de 50 m em Bangkok: argila mole, obra do metrô, areia que escorre, adutora rompida, a rua cai de uma vez (cidade: buraco, vala, paredes, escoras, lencol, infiltra, estoura) | gringa: Tailândia https://www.khaosodenglish.com/news/2025/09/24/bangkok-governor-reveals-massive-sinkhole-caused-by-subway-construction/ | FEITO |
 | YB085 | Evolucao | calçada: placa única racha, retração, juntas de controle, árvore levanta, barreira de raiz, gelo, caimento de 2% (terreno: calcada, trinca, junta, raiz, manta, chuva) | autoral | FEITO |
-| YB086 | Curiosidade | por que o chuveiro fica fraco às 7 h: pico de consumo, atrito na adutora, ponta da rede, caixas d'água elevadas enchem de noite (cidade: agua, pressao, anel) | autoral | FEITO |
+| YB086 | Curiosidade | por que o chuveiro fica fraco às 7 h: pico de consumo, atrito na adutora, ponta da rede, bombas, estouro, rede em anel (cidade: agua, pressao, estoura, anel) | autoral | FEITO |
 | YB087 | Evolucao | a rua aberta 5 vezes: água, esgoto, galeria, buracos nos remendos, escavadeira fura a adutora, mapa de faixas, poços de visita, registros, regra "dig once" (cidade: vala, agua, esgoto, galeria, boca, pv, registro, estoura, buraco) | autoral | FEITO |
 Evolução segue o gargalo (9 na fila com estas). Próximo passo continua sendo mundo novo (oficina/fábrica do PLANO-KIRO-MUNDOS.md).

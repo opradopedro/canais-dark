@@ -102,13 +102,17 @@
    "p": {
     "meiofio": 1,
     "carros": 2,
-    "foco": "geral",
-    "buraco": [
+    "foco": "rua",
+    "rotulo": "BANGKOK, 2025",
+    "cor": "red",
+    "vala": [
      0,
      1
     ],
-    "rotulo": "BANGKOK, 2025",
-    "cor": "red"
+    "desaba": [
+     0,
+     1
+    ]
    }
   },
   {
@@ -118,7 +122,8 @@
     "meiofio": 1,
     "carros": 3,
     "foco": "rua",
-    "buraco": 1
+    "vala": 1,
+    "desaba": 1
    }
   },
   {
@@ -128,9 +133,10 @@
     "meiofio": 1,
     "carros": 2,
     "foco": "rua",
-    "buraco": 1,
     "rotulo": "HOW?",
-    "cor": "white"
+    "cor": "white",
+    "vala": 1,
+    "desaba": 1
    }
   },
   {
@@ -216,11 +222,7 @@
     "vala": 1,
     "paredes": 1,
     "lencol": -2,
-    "infiltra": 1,
-    "buraco": [
-     0,
-     0.2
-    ]
+    "infiltra": 1
    }
   },
   {
@@ -229,8 +231,7 @@
    "p": {
     "meiofio": 1,
     "carros": 2,
-    "foco": "rua",
-    "buraco": 0.2
+    "foco": "rua"
    }
   },
   {
@@ -258,12 +259,16 @@
     "carros": 2,
     "foco": "rua",
     "agua": 1,
-    "buraco": [
-     0.2,
+    "rotulo": "COLLAPSE",
+    "cor": "red",
+    "vala": [
+     0,
      1
     ],
-    "rotulo": "COLLAPSE",
-    "cor": "red"
+    "desaba": [
+     0,
+     1
+    ]
    }
   },
   {
@@ -273,12 +278,16 @@
     "meiofio": 1,
     "carros": 2,
     "foco": "rua",
-    "buraco": [
+    "rotulo": "FILLED",
+    "cor": "green",
+    "vala": [
      1,
      0
     ],
-    "rotulo": "FILLED",
-    "cor": "green"
+    "desaba": [
+     1,
+     0
+    ]
    }
   },
   {
