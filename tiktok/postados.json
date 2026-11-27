@@ -555,13 +555,22 @@
    "postId": "1cb49ea6-c75b-45ce-91c7-feba47170787",
    "youtube": "MVR8SAyprak",
    "canal": "hm",
-   "quando": "2026-11-27T00:12:43+00:00"
+   "quando": "2026-11-27T00:12:43+00:00",
+   "tiktok": "https://www.tiktok.com/@horamuerta.relatos/video/7712637467786071304"
   },
   "SV045": {
    "postId": "8a1caacf-d08c-4c0b-993f-e1067b209b40",
    "youtube": "34nOp7IvwNc",
    "canal": "sv",
-   "quando": "2026-11-27T00:12:43+00:00"
+   "quando": "2026-11-27T00:12:43+00:00",
+   "tiktok": "https://www.tiktok.com/@siganllost.tales/video/7712637510744100114"
+  },
+  "CL055": {
+   "postId": "5beec35b-229e-4ba5-8564-fe24e05670e2",
+   "youtube": "X0ctoQ8dHYw",
+   "canal": "cl",
+   "quando": "2026-11-27T17:12:51+00:00",
+   "tiktok": "https://www.tiktok.com/@oldtales.retold/video/7712900148082396437"
   }
  },
  "ignorar_youtube": {
