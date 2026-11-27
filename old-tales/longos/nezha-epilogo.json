@@ -1,0 +1,1046 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "origem": "gringa: China, Ne Zha 2 (2025) virou a maior bilheteria de animação da história (mais de US$ 2 bilhões) e o mito de Nezha segue viral no Douyin/Bilibili https://en.wikipedia.org/wiki/Ne_Zha_2 ; mito: Fengshen Yanyi (Investiture of the Gods, séc. XVI), caps. 12-14 https://en.wikipedia.org/wiki/Nezha",
+ "serie": "nezha",
+ "serie_titulo": "Nezha vs the Dragon King | Old Tales",
+ "tags": [
+  "old tales",
+  "mythology",
+  "chinese mythology",
+  "nezha",
+  "ne zha",
+  "investiture of the gods",
+  "dragon king",
+  "ancient china",
+  "story time"
+ ],
+ "codigo": "CL068E",
+ "parte": 6,
+ "titulo": "Nezha (epilogo do longo)",
+ "_obs": "Epilogo do video longo do Nezha: de onde vem o mito e o que mudou (so no longo).",
+ "eventos": [],
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "nezha": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "coque",
+   "cabelo_cor": "#141010",
+   "roupa": "tunica",
+   "roupa_cor": "#b8282a"
+  },
+  "lijing": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a1a1a",
+   "armadura": "#7a1c24",
+   "faixa": "#1a1a1a",
+   "elmo": "#3a3a40",
+   "barba_estilo": "chinesa",
+   "barba": "#1a1a1a"
+  },
+  "yin": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "coque",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#6a3a5a"
+  },
+  "taiyi": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "roupa_cor": "#e8e0d0",
+   "barba_estilo": "chinesa",
+   "barba": "#8a8a8a"
+  },
+  "aobing": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "coque",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "tunica",
+   "roupa_cor": "#2a5a8a"
+  },
+  "aoguang": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "coque",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "tiara": true,
+   "roupa_cor": "#1f4a6a",
+   "barba_estilo": "chinesa",
+   "barba": "#8a8a8a"
+  },
+  "shiji": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "coque",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#d8d0c0"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "So where did a boy like Nezha come from?",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-templo",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.15,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "His roots are older than China's own version. They go back to India.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-templo",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In Buddhist stories, Nalakuvara is the son of a heavenly king who guards the north.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-nuvens",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Nalakuvara",
+     "sub": "the Buddhist prince behind Nezha",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "That king carries a small pagoda in his hand. Sound familiar?",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-nuvens",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "When the story reached China, the heavenly king became General Li Jing.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-praca",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "By the Song dynasty, a thousand years ago, monks already told how Nezha returned his flesh and bones.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-templo",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "taiyi",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Flesh and bones story",
+     "valor": "1,000 yrs",
+     "sub": "already told in the Song dynasty",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "The version you just heard comes from a sixteenth century novel, Investiture of the Gods.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "taiyi",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It turned a war between two real dynasties, the Shang and the Zhou, into a war of gods.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-praca-tempestade",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.32
+     },
+     {
+      "id": "lijing",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The battles are myth. But the Shang dynasty was real, and it did fall, around ten forty six BC.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-praca-tempestade",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Fall of the Shang",
+     "valor": "c. 1046 BC",
+     "sub": "a real war behind the myth",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "Nezha shows up again in Journey to the West, fighting the Monkey King for Heaven.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-nuvens-tempestade",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Today, he has temples all over China and Taiwan, where people call him the Third Prince.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-templo",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "yin",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "In Taiwan, dancers in giant Third Prince costumes party to techno music at temple festivals.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-templo",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "triunfo",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then the movies made him a superstar.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-dourado",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ne Zha, in twenty nineteen, made over seven hundred million dollars.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-dourado",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ne Zha 2, in twenty twenty-five, passed two billion. The biggest animated film ever made.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-dourado",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "triunfo",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Ne Zha 2 (2025)",
+     "valor": "$2B+",
+     "sub": "top animated film ever",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "The films changed a lot. Ao Bing becomes his best friend, not his victim.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-dourado",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "aobing",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "But the old myth is darker. A child kills, and a father burns his son's temple.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-templo-tempestade",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And it ends with a cage of fire, not a hug.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-nuvens-tempestade",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Which Nezha do you like more? The rebel from the old book, or the one from the movies?",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-dourado",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "mundo": "cl-nezha",
+ "elenco_3d": {
+  "nezha": {
+   "semente": 6801,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "cabelo_cor": "#141010",
+   "roupa": "chines",
+   "camisa": "#b8282a"
+  },
+  "lijing": {
+   "semente": 6802,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "roupa": "soldado_china",
+   "acessorio": "barba"
+  },
+  "yin": {
+   "semente": 6803,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "chines",
+   "camisa": "#6a3a5a"
+  },
+  "taiyi": {
+   "semente": 6804,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "chines",
+   "camisa": "#e8e0d0",
+   "acessorio": "barba"
+  },
+  "aobing": {
+   "semente": 6805,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "roupa": "chines",
+   "camisa": "#2a5a8a"
+  },
+  "aoguang": {
+   "semente": 6806,
+   "corpo": "idoso",
+   "cabelo": "longo",
+   "roupa": "rei",
+   "camisa": "#1f4a6a",
+   "acessorio": "barba"
+  },
+  "shiji": {
+   "semente": 6807,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "chines",
+   "camisa": "#d8d0c0"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "templo",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "desconfiado",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "templo",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "neutro",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "nuvens",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "nuvens",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Holding_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Walking_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "templo",
+    "plano": "ombro",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "taiyi",
+      "acao": "Interact",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "taiyi",
+      "acao": "Holding_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "auto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Melee_2H_Attack_Spin",
+      "rosto": "bravo",
+      "segura": "lanca"
+     },
+     {
+      "id": "lijing",
+      "acao": "Melee_2H_Attack_Chop",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Idle_A",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "nuvens",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Melee_2H_Attack_Stab",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "templo",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "yin",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "templo",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Cheering",
+      "rosto": "sorriso",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "close",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "sorriso",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "medio",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "sorriso",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "close",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Cheering",
+      "rosto": "sorriso",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "ombro",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "aobing",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "templo",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Melee_1H_Attack_Chop",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "nuvens",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Crouching",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "medio",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "desconfiado",
+      "segura": "lanca"
+     }
+    ]
+   }
+  }
+ ],
+ "gancho_visual": true
+}

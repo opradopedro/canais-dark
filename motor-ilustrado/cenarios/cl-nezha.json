@@ -123,6 +123,11 @@
    "lugar": "mar_jangada/mar (dourado)",
    "prompt": "a rocky ancient Chinese coast where a river mouth meets the wild East Sea, huge waves, at sunset, golden orange light",
    "seed": 192
+  },
+  "palacio_ceu-nuvens": {
+   "lugar": "palacio_ceu/nuvens (dia)",
+   "prompt": "an imperial heavenly palace with golden roofs floating over a sea of clouds, in daylight",
+   "seed": 136
   }
  }
 }

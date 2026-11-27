@@ -1,0 +1,21 @@
+{
+ "_obs": "Video longo do Nezha (formato do Pedro 15/11: 1 serie por longo). As partes CL068-CL072 entram sozinhas quando a parte 5 for publicada.",
+ "titulo": "Nezha vs the Dragon King: The Full Myth of the Boy Who Fought Heaven | Full Story",
+ "descricao": "Born from a ball of flesh after three and a half years. At seven, he killed a Dragon Prince, beat the Dragon King at the gate of Heaven, and shot an arrow that started a war with an immortal. Then he gave his body back to his parents, and came back from a lotus flower.\n\nAll 5 parts in one video, plus where the myth really comes from.\n\nFrom the Chinese myth of Nezha as told in Fengshen Yanyi (Investiture of the Gods, 16th century), chapters 12 to 14. Other versions differ in details.",
+ "tags": [
+  "nezha",
+  "ne zha",
+  "chinese mythology",
+  "dragon king",
+  "investiture of the gods",
+  "fengshen",
+  "mythology full story",
+  "old tales"
+ ],
+ "capa_texto": "NEZHA VS THE DRAGON KING",
+ "series": [
+  "nezha"
+ ],
+ "abertura": "old-tales/longos/nezha-abertura.json",
+ "epilogo": "old-tales/longos/nezha-epilogo.json"
+}
