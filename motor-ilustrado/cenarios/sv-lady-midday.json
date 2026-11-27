@@ -1,0 +1,33 @@
+{
+ "mundo": "sv-lady-midday",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "eerie horror story illustration, dark moody atmosphere, muted desaturated colors with cold blue shadows, realistic proportions, unsettling and lonely, mature adult tone, not childish",
+ "ordem": 48,
+ "cenarios": {
+  "vila-alto-dia": {
+   "lugar": "vila/alto (dia)",
+   "prompt": "a vast golden rye field on a Wisconsin farm in a summer heatwave, half harvested, sheaves on the ground, a lone path cut through the tall rye, a red barn far behind, in pale overcast daylight",
+   "seed": 145
+  },
+  "vila-casa-dia": {
+   "lugar": "vila/casa (dia)",
+   "prompt": "the wooden front porch of an old white farmhouse of Polish immigrants in rural Wisconsin, a rocking chair and an old iron dinner bell triangle hanging from a post, in pale overcast daylight",
+   "seed": 152
+  },
+  "vila-poco-dia": {
+   "lugar": "vila/poco (dia)",
+   "prompt": "a dusty Wisconsin farmyard with an old hand water pump, a wire fence and a gate to the rye field, a red tractor parked, in pale overcast daylight",
+   "seed": 159
+  },
+  "vila-praca-dia": {
+   "lugar": "vila/praca (dia)",
+   "prompt": "the main street of a tiny rural Wisconsin town with an old closed wooden church with an empty bell tower, in pale overcast daylight",
+   "seed": 152
+  },
+  "vila-quarto": {
+   "lugar": "vila/quarto (noite)",
+   "prompt": "a small farmhouse bedroom with a quilt on an iron bed and a window over the rye field, at night, dark blue moonlight, deep shadows",
+   "seed": 173
+  }
+ }
+}

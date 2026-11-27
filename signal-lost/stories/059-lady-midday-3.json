@@ -1,0 +1,1122 @@
+{
+ "formato": "Survivor",
+ "origem": "gringa: Polônia, Południca (Lady Midday), o espírito do meio-dia dos campos eslavos que volta a viralizar todo verão de colheita no TikTok polonês (#poludnica) https://en.wikipedia.org/wiki/Lady_Midday (história nossa, fazenda de imigrantes poloneses em Wisconsin)",
+ "serie": "lady-midday",
+ "serie_titulo": "Lady Midday | Signal Lost",
+ "partes": 3,
+ "tags": [
+  "horror",
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "shorts",
+  "folklore",
+  "lady midday",
+  "poludnica",
+  "slavic folklore",
+  "farm horror",
+  "rules"
+ ],
+ "paleta": "sv",
+ "codigo": "SV059",
+ "parte": 3,
+ "anterior": "SV058",
+ "titulo": "The church bell that should have saved her 🔔 Part 3 #horror #shorts",
+ "capa": "ONE O'CLOCK",
+ "descripcion": "Twelve fifty eight. The woman in white is waiting for Mara's answer, and the church in town has a secret about its bell.\n\nWould you have kept talking?\n\nNarrated fiction inspired by Slavic folklore (Południca, Lady Midday). New part every day.\n#horror #horrorstories #scarystories #creepypasta #folklore",
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 10,
+   "en": 0.3
+  },
+  {
+   "tipo": "susto",
+   "linea": 20,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "mara": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#40405a"
+  },
+  "halina": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "roupa_cor": "#3a5a6a"
+  },
+  "ben": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "jaqueta",
+   "roupa_cor": "#5a5040",
+   "chapeu": "bone",
+   "chapeu_cor": "#5a5040"
+  },
+  "sem_rosto": {
+   "tipo": "humano",
+   "rosto_cor": "#e8e0d0",
+   "sem_rosto": true,
+   "cabelo": "careca",
+   "roupa": "jaqueta",
+   "roupa_cor": "#2a3a2a"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "Two minutes to one, and a faceless woman is waiting for Mara's *answer*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.15
+     }
+    ]
+   }
+  },
+  {
+   "texto": "If the church bell rings first, she has to leave.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "So Mara keeps talking. About Grandma. About the farm. About anything.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The sickle rests on her shoulder, cold.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ben lies in the rye. His chest is still moving.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "ben",
+      "pose": "deitado",
+      "rosto": "triste",
+      "v": 0.8,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Twelve fifty nine. Mara counts the seconds in her head.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "One o'clock. And the town is silent.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "No bell. Nothing.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then Mara remembers. The church closed in the spring.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because they sold the bell for scrap.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca-dia",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The woman raises the sickle. Mara closes her eyes.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "lutar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And from the porch, a sound. Clang. Clang. Clang.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "halina",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Grandma is beating the old iron dinner bell with a wrench.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "halina",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The woman stops. She turns toward the sound.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And she walks back into the rye.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The grasshoppers start again. The wind comes back.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "agachar",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ben wakes up that night. He can't turn his head left.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "ben",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Grandma hangs the dinner bell on the field gate.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-poco-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "halina",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "She always comes back next August, she says. She finishes her rows.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "halina",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "That night, Mara looks out the window at the last uncut row.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-quarto",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It's gone. Cut by hand. And a rusty sickle lies across her bed.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-quarto",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Send this to someone who works through lunch.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-quarto",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "mundo": "sv-lady-midday",
+ "elenco_3d": {
+  "mara": {
+   "semente": 5711,
+   "corpo": "magro",
+   "cabelo": "rabo",
+   "roupa": "casual"
+  },
+  "halina": {
+   "semente": 5712,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "vestido"
+  },
+  "ben": {
+   "semente": 5713,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "acessorio": "bone"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "olhos_fechados"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "ben",
+      "acao": "Lie_Idle",
+      "rosto": "olhos_fechados"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "ombro",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "baixo",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "halina",
+      "acao": "Hammering",
+      "rosto": "determinado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "halina",
+      "acao": "Hammer",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Sit_Floor_Idle",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "ben",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "vila",
+    "marca": "poco",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "halina",
+      "acao": "Interact",
+      "rosto": "determinado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "ombro",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "halina",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     },
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "vila",
+    "marca": "quarto",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "vila",
+    "marca": "quarto",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "vila",
+    "marca": "quarto",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  }
+ ],
+ "gancho_visual": true
+}

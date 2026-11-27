@@ -1,0 +1,1143 @@
+{
+ "formato": "Survivor",
+ "origem": "gringa: Polônia, Południca (Lady Midday), o espírito do meio-dia dos campos eslavos que volta a viralizar todo verão de colheita no TikTok polonês (#poludnica) https://en.wikipedia.org/wiki/Lady_Midday (história nossa, fazenda de imigrantes poloneses em Wisconsin)",
+ "serie": "lady-midday",
+ "serie_titulo": "Lady Midday | Signal Lost",
+ "partes": 3,
+ "tags": [
+  "horror",
+  "horror stories",
+  "scary stories",
+  "creepypasta",
+  "survival horror",
+  "shorts",
+  "folklore",
+  "lady midday",
+  "poludnica",
+  "slavic folklore",
+  "farm horror",
+  "rules"
+ ],
+ "paleta": "sv",
+ "codigo": "SV058",
+ "parte": 2,
+ "anterior": "SV057",
+ "titulo": "She asks questions until the bell rings 🌾 Part 2 #horror #shorts",
+ "capa": "ANSWER HER",
+ "descripcion": "A faceless woman in white stopped Mara in the rye at noon and asked her a question. Grandma knows the only way out: keep answering until the church bell rings at one.\n\n> Part 3: {when_next}.\nWhat would you have answered?\n\nNarrated fiction inspired by Slavic folklore. New part every day.\n#horror #horrorstories #scarystories #creepypasta #folklore",
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 15,
+   "en": 0.3
+  },
+  {
+   "tipo": "susto",
+   "linea": 20,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "mara": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "longo",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#40405a"
+  },
+  "halina": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "roupa_cor": "#3a5a6a"
+  },
+  "ben": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "jaqueta",
+   "roupa_cor": "#5a5040",
+   "chapeu": "bone",
+   "chapeu_cor": "#5a5040"
+  },
+  "sem_rosto": {
+   "tipo": "humano",
+   "rosto_cor": "#e8e0d0",
+   "sem_rosto": true,
+   "cabelo": "careca",
+   "roupa": "jaqueta",
+   "roupa_cor": "#2a3a2a"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "A faceless woman with a *sickle* wants an answer, and Mara can't move.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.15
+     }
+    ]
+   }
+  },
+  {
+   "texto": "One wrong word, and the sickle comes down.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "What is the hardest work in the world, she asks again.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Mara's mouth is dry. Harvest, she says. The harvest.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The woman tilts her head. Then she asks another one.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "On the porch, Grandma Halina sees the empty row and drops her cup.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "halina",
+      "pose": "lutar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "She knows this. Her aunt was found in that field in nineteen thirty one.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "halina",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Head turned all the way back. Sickle marks in the dirt.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "halina",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The old women in Poland had a rule for this.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "halina",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Keep her talking. Never stop answering, until the bell rings at one.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "halina",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Mara answers everything. Why rye is cut green. How bread is made.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because at twelve forty, a tractor turns into the field.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "ben",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ben, the neighbor, came to help. He waves at Mara.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-poco-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "ben",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He can't see the woman. He shouts, hey, are you okay?",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "ben",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The woman turns her smooth face toward him.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And asks him a question, in Polish.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "ben",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ben laughs. He doesn't understand a word.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "ben",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The sickle flashes once in the sun.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "ben",
+      "pose": "cair",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ben falls into the rye without a sound.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then the woman turns back to Mara, closer now.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "You didn't finish your answer, she whispers.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Part three, {when_next}.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-alto-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "mara",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "sem_rosto",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.0,
+      "vira": -1
+     }
+    ]
+   }
+  }
+ ],
+ "mundo": "sv-lady-midday",
+ "elenco_3d": {
+  "mara": {
+   "semente": 5711,
+   "corpo": "magro",
+   "cabelo": "rabo",
+   "roupa": "casual"
+  },
+  "halina": {
+   "semente": 5712,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "vestido"
+  },
+  "ben": {
+   "semente": 5713,
+   "corpo": "forte",
+   "cabelo": "curto",
+   "roupa": "casual",
+   "acessorio": "bone"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "ombro",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "halina",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "halina",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "baixo",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "halina",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "ombro",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "halina",
+      "acao": "Holding_A",
+      "rosto": "determinado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "halina",
+      "acao": "Holding_B",
+      "rosto": "determinado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "ben",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "vila",
+    "marca": "poco",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "ben",
+      "acao": "Waving",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "ombro",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "ben",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "ben",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "ben",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "ben",
+      "acao": "Death_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "vila",
+    "marca": "alto",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "mara",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "sem_rosto",
+     "marca": "alto"
+    }
+   }
+  }
+ ],
+ "gancho_visual": true
+}
