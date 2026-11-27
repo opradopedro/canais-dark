@@ -1,0 +1,1388 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "origem": "gringa: China, Ne Zha 2 (2025) virou a maior bilheteria de animação da história (mais de US$ 2 bilhões) e o mito de Nezha segue viral no Douyin/Bilibili https://en.wikipedia.org/wiki/Ne_Zha_2 ; mito: Fengshen Yanyi (Investiture of the Gods, séc. XVI), caps. 12-14 https://en.wikipedia.org/wiki/Nezha",
+ "serie": "nezha",
+ "serie_titulo": "Nezha vs the Dragon King | Old Tales",
+ "partes": 5,
+ "tags": [
+  "old tales",
+  "mythology",
+  "chinese mythology",
+  "nezha",
+  "ne zha",
+  "investiture of the gods",
+  "dragon king",
+  "ancient china",
+  "story time"
+ ],
+ "codigo": "CL069",
+ "parte": 2,
+ "anterior": "CL068",
+ "titulo": "He beat up the Dragon King at the gate of Heaven 🐉 Nezha Part 2 #mythology #shorts",
+ "capa": "HE BEAT A DRAGON KING",
+ "descripcion": "Nezha killed the Dragon King's son and pulled out his dragon sinew. So Ao Guang flew to Heaven to destroy Nezha's family. Nezha got there first.\n\n> Part 3: {when_next}.\nWas Nezha right?\n\nFrom the Chinese myth of Nezha as told in Fengshen Yanyi (Investiture of the Gods, 16th century), chapters 12 to 14. Other versions differ in details.\n#nezha #chinesemythology #mythology #nezha2 #shorts",
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 5,
+   "en": 0.3
+  },
+  {
+   "tipo": "golpe",
+   "linea": 17,
+   "en": 0.3
+  }
+ ],
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "nezha": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "coque",
+   "cabelo_cor": "#141010",
+   "roupa": "tunica",
+   "roupa_cor": "#b8282a"
+  },
+  "lijing": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a1a1a",
+   "armadura": "#7a1c24",
+   "faixa": "#1a1a1a",
+   "elmo": "#3a3a40",
+   "barba_estilo": "chinesa",
+   "barba": "#1a1a1a"
+  },
+  "yin": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "coque",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#6a3a5a"
+  },
+  "taiyi": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "roupa_cor": "#e8e0d0",
+   "barba_estilo": "chinesa",
+   "barba": "#8a8a8a"
+  },
+  "aobing": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "coque",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "tunica",
+   "roupa_cor": "#2a5a8a"
+  },
+  "aoguang": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "coque",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "tiara": true,
+   "roupa_cor": "#1f4a6a",
+   "barba_estilo": "chinesa",
+   "barba": "#8a8a8a"
+  },
+  "shiji": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "coque",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#d8d0c0"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "A seven-year-old just killed a sea demon, and the *Dragon Prince* wants revenge.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "aobing",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.15,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "By tonight, one of these two boys will be dead.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "aobing",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ao Bing, the Dragon King's son, rises from the waves.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "aobing",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He points his spear. Who are you, to kill my father's guard?",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "aobing",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "lanca",
+      "u": 0.32
+     },
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Nezha just smiles. He was in my way.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The prince attacks. Nezha's red sash wraps him like a net.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "aobing",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Then the golden ring comes down on his head.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "aobing",
+      "pose": "cair",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The Dragon Prince falls, and turns back into a dragon.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "And Nezha does something even worse. He pulls out the dragon's *sinew*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "agachar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A dragon tendon makes a perfect belt. A gift for his father.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "lijing",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Li Jing goes white. Do you know what you've done?",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Killed in one day",
+     "valor": "2",
+     "sub": "the yaksha and the Dragon Prince",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "The Dragon King arrives, shaking with rage.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "aoguang",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "lijing",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Tomorrow, I tell the Jade Emperor. Your whole family will pay.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "aoguang",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because Nezha decides to stop him before Heaven.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-jardim-noite",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "correr",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Taiyi gives him a talisman that makes him invisible.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-jardim-noite",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "taiyi",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "At dawn, Nezha waits at the South Gate of Heaven, unseen.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-escada-dourado",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "South Heavenly Gate",
+     "sub": "the door to the Jade Emperor's court",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "The Dragon King walks up in his court robes. The gate isn't open.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-escada-dourado",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "aoguang",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Nezha jumps on his back and knocks him down with the ring.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-escada-dourado",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "dourado",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "aoguang",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He rips open the king's robe and tears off his scales, one by one.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-escada-dourado",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "aoguang",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Forty scales, until the old dragon is begging.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-escada-dourado",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "aoguang",
+      "pose": "cair",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Shrink, says Nezha. Become a little snake, or I'll beat you to death.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-escada-dourado",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The Dragon King becomes a tiny snake. Nezha drops him in his sleeve.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-escada-dourado",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "dourado"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He walks home proud. But on the fortress tower, an old bow is waiting.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-colunas-dourado",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "andar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A bow no man has ever pulled. Part three, {when_next}.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-colunas-dourado",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "mundo": "cl-nezha",
+ "elenco_3d": {
+  "nezha": {
+   "semente": 6801,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "cabelo_cor": "#141010",
+   "roupa": "chines",
+   "camisa": "#b8282a"
+  },
+  "lijing": {
+   "semente": 6802,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "roupa": "soldado_china",
+   "acessorio": "barba"
+  },
+  "yin": {
+   "semente": 6803,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "chines",
+   "camisa": "#6a3a5a"
+  },
+  "taiyi": {
+   "semente": 6804,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "chines",
+   "camisa": "#e8e0d0",
+   "acessorio": "barba"
+  },
+  "aobing": {
+   "semente": 6805,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "roupa": "chines",
+   "camisa": "#2a5a8a"
+  },
+  "aoguang": {
+   "semente": 6806,
+   "corpo": "idoso",
+   "cabelo": "longo",
+   "roupa": "rei",
+   "camisa": "#1f4a6a",
+   "acessorio": "barba"
+  },
+  "shiji": {
+   "semente": 6807,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "chines",
+   "camisa": "#d8d0c0"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "aobing",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     },
+     {
+      "id": "aobing",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "auto",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "aobing",
+      "acao": "Ranged_Magic_Raise",
+      "rosto": "bravo",
+      "segura": "lanca"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "aobing",
+      "acao": "Melee_2H_Idle",
+      "rosto": "bravo",
+      "segura": "lanca"
+     },
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Throw",
+      "rosto": "bravo"
+     },
+     {
+      "id": "aobing",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Melee_1H_Attack_Chop",
+      "rosto": "bravo"
+     },
+     {
+      "id": "aobing",
+      "acao": "Death_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "PickUp",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "ombro",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Holding_A",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "lijing",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "aoguang",
+      "acao": "Interact",
+      "rosto": "bravo"
+     },
+     {
+      "id": "lijing",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "aoguang",
+      "acao": "Holding_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Running_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "jardim",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "taiyi",
+      "acao": "Interact",
+      "rosto": "desconfiado"
+     },
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "auto",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "medio",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "aoguang",
+      "acao": "Walking_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "baixo",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Melee_1H_Attack_Jump_Chop",
+      "rosto": "bravo"
+     },
+     {
+      "id": "aoguang",
+      "acao": "Hit_B",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "close",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Melee_Unarmed_Attack_Punch_A",
+      "rosto": "bravo"
+     },
+     {
+      "id": "aoguang",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "medio",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "aoguang",
+      "acao": "Death_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "close",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "escada",
+    "plano": "ombro",
+    "luz": "nascer_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Holding_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 22,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "baixo",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Walking_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 23,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "colunas",
+    "plano": "close",
+    "luz": "por_sol",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Ranged_Bow_Idle",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  }
+ ],
+ "gancho_visual": true
+}

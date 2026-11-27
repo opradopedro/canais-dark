@@ -33,6 +33,21 @@
    "lugar": "palacio_ceu/salao (noite)",
    "prompt": "the underwater Crystal Palace of the Dragon King, a throne hall of glowing crystal, coral pillars, deep blue water light, at night, blue moonlight and torches",
    "seed": 164
+  },
+  "aldeia_china-jardim-noite": {
+   "lugar": "aldeia_china/jardim (noite)",
+   "prompt": "a misty Taoist mountain cave hermitage with a lotus pond, pine trees and a stone altar, at night, blue moonlight and torches",
+   "seed": 143
+  },
+  "palacio_ceu-escada-dourado": {
+   "lugar": "palacio_ceu/escada (dourado)",
+   "prompt": "the South Gate of Heaven, a colossal gate with golden roofs above a sea of clouds, at sunset, golden orange light",
+   "seed": 150
+  },
+  "palacio_ceu-colunas-dourado": {
+   "lugar": "palacio_ceu/colunas (dourado)",
+   "prompt": "the top of the stone gate tower of Chentang Pass, an ancient giant bow on a weapon rack, the sea below, at sunset, golden orange light",
+   "seed": 157
   }
  }
 }
