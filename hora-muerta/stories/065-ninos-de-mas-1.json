@@ -1,0 +1,1260 @@
+{
+ "formato": "Regla",
+ "origem": "gringa: EUA, relato viral no TikTok (@JMara, Michigan) da monitora de recreio que levou 14 crianças ao pátio e contou 19 na volta, as 'ghost kids' https://thenerdstash.com/?p=778522 ; https://www.chipchick.com/?p=378215 (história nossa, escola rural de Zacatecas)",
+ "serie": "ninos-de-mas",
+ "serie_titulo": "Los niños de más | Hora Muerta",
+ "partes": 2,
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda urbana",
+  "escuela",
+  "niños fantasma",
+  "ojos negros",
+  "zacatecas"
+ ],
+ "codigo": "HM065",
+ "parte": 1,
+ "titulo": "Salieron 14 niños al recreo. Volvieron 19 😨 Parte 1 #terror #shorts",
+ "capa": "VOLVIERON 19",
+ "descripcion": "Lucía, maestra suplente en una escuela de Zacatecas, sacó a catorce niños al recreo. Al volver contó diecinueve. La libreta de la maestra anterior tenía tres reglas.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú les preguntarías el nombre?\n\nHistoria de ficción narrada, inspirada en un relato viral. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 12,
+   "en": 0.3
+  },
+  {
+   "tipo": "susto",
+   "linea": 21,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "lucia": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "longo",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "jaqueta",
+   "roupa_cor": "#5a5040"
+  },
+  "ramiro": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#1f2a44"
+  },
+  "nino1": {
+   "tipo": "humano",
+   "rosto_cor": "#e6e2da",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#1a1a1a",
+   "roupa": "jaqueta",
+   "roupa_cor": "#2a2a2e",
+   "olhos": "pretos"
+  },
+  "nino2": {
+   "tipo": "humano",
+   "rosto_cor": "#e6e2da",
+   "cabelo": "normal",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "jaqueta",
+   "roupa_cor": "#4a4a50",
+   "olhos": "pretos"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "Catorce niños salieron al *recreo*. Volvieron diecinueve.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca-dia",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.44,
+      "v": 0.93,
+      "esc": 0.9
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.56,
+      "v": 0.93,
+      "esc": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y la última maestra que los contó nunca regresó a la escuela.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.44,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.56,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Lucía, de veintiséis, es suplente en una escuela de Zacatecas.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "andar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "La maestra Rebeca se fue a mitad de año.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "En el cajón del escritorio dejó una libreta con tres reglas.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Cuenta a los niños al salir y al volver.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Si vuelven más, no los mires a los ojos.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y nunca, nunca, les preguntes cómo se llaman.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Lucía piensa que es una broma para la nueva.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "El lunes saca a catorce alumnos al patio.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca-dia",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "apontar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Suena la campana y forman la fila.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ella cuenta otra vez. Diecinueve.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Al final de la fila hay cinco niños quietos, muy *pálidos*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca-dia",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.59,
+     "y": 0.66
+    },
+    "fx": [
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "lutar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.64,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": -1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.76,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ropa vieja, zapatos de otra época.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.44,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.56,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Quédate, porque lo peor no es que estén ahí.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.59,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.64,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": -1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.76,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y sus alumnos no los ven. Nadie voltea.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca-dia",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "andar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Los cinco se sientan atrás, sin mochilas.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.59,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.64,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": -1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.76,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Lucía se acerca al más chico. Se le olvida la regla.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.59,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "agachar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.64,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": -1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.76,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y le pregunta, despacio: ¿cómo te llamas?",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "El niño levanta la cara. Sus ojos son *negros*, enteros.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.44,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.56,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y contesta con la voz de una mujer adulta.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.59,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "lutar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.64,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": -1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.76,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Me llamo Rebeca. Y ahora te toca a ti, maestra Lucía.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.59,
+     "y": 0.58
+    },
+    "fx": [
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.64,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": -1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.76,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "¿Tú habrías preguntado? Parte dos, {dia_siguiente}.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa-dia",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.59,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lucia",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "nino1",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.64,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": -1
+     },
+     {
+      "id": "nino2",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.76,
+      "v": 0.93,
+      "esc": 0.78,
+      "vira": 1
+     }
+    ]
+   }
+  }
+ ],
+ "mundo": "hm-ninos-de-mas",
+ "elenco_3d": {
+  "lucia": {
+   "semente": 6511,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "roupa": "casual"
+  },
+  "ramiro": {
+   "semente": 6512,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "guarda"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "praca"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "nublado",
+    "atores": [],
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Walking_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Interact",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Holding_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "ombro",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Holding_B",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Holding_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Holding_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Interact",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Waving",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "praca"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "close",
+    "luz": "dia",
+    "atores": [],
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "praca"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "ombro",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "praca"
+    }
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Walking_Backwards",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "ombro",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Crouching",
+      "rosto": "desconfiado"
+     }
+    ],
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Crouching",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "nublado",
+    "atores": [],
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 22,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "nublado",
+    "atores": [
+     {
+      "id": "lucia",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "olhos_no_escuro",
+     "marca": "casa"
+    }
+   }
+  }
+ ],
+ "gancho_visual": true
+}

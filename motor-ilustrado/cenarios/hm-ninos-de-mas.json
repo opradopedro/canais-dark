@@ -1,0 +1,38 @@
+{
+ "mundo": "hm-ninos-de-mas",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "eerie horror story illustration, dark moody atmosphere, muted desaturated colors with cold blue shadows, realistic proportions, unsettling and lonely, mature adult tone, not childish",
+ "ordem": 52,
+ "cenarios": {
+  "vila-praca-dia": {
+   "lugar": "vila/praca (dia)",
+   "prompt": "the dirt schoolyard of a small rural primary school in Zacatecas, Mexico, a flagpole, a bell on a post and a low painted classroom building, in pale overcast daylight",
+   "seed": 143
+  },
+  "vila-casa-dia": {
+   "lugar": "vila/casa (dia)",
+   "prompt": "inside a humble rural Mexican primary school classroom, old wooden desks in rows, a green chalkboard, a teacher's desk, a window to the schoolyard, in pale overcast daylight",
+   "seed": 150
+  },
+  "vila-mercado-dia": {
+   "lugar": "vila/mercado (dia)",
+   "prompt": "the small cluttered janitor's room of an old rural school, brooms, a metal cabinet, old photos pinned to the wall, in pale overcast daylight",
+   "seed": 157
+  },
+  "vila-alto-dia": {
+   "lugar": "vila/alto (dia)",
+   "prompt": "a dry rocky hill with cactus and scrub behind a small rural school in Zacatecas, Mexico, in pale overcast daylight",
+   "seed": 164
+  },
+  "vila-praca": {
+   "lugar": "vila/praca (noite)",
+   "prompt": "the dirt schoolyard of a small rural primary school in Zacatecas, Mexico, a flagpole, a bell on a post and a low painted classroom building, at night, dark blue moonlight, deep shadows",
+   "seed": 171
+  },
+  "vila-casa": {
+   "lugar": "vila/casa (noite)",
+   "prompt": "inside a humble rural Mexican primary school classroom, old wooden desks in rows, a green chalkboard, a teacher's desk, a window to the schoolyard, at night, dark blue moonlight, deep shadows",
+   "seed": 178
+  }
+ }
+}
