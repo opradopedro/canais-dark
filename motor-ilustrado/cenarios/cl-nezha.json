@@ -1,0 +1,38 @@
+{
+ "mundo": "cl-nezha",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "dark epic ancient Chinese fantasy illustration, misty mountains, jade green, lacquer red and gold accents, dramatic moody light, realistic proportions, mature adult tone, not childish",
+ "ordem": 54,
+ "cenarios": {
+  "mar_jangada-mar-tempestade": {
+   "lugar": "mar_jangada/mar (tempestade)",
+   "prompt": "a dark rough sea with ancient warships, under a dark stormy sky",
+   "seed": 129
+  },
+  "aldeia_china-casa-noite": {
+   "lugar": "aldeia_china/casa (noite)",
+   "prompt": "inside a humble ancient Chinese family house with a wooden table, chairs and paper windows, at night, blue moonlight and torches",
+   "seed": 136
+  },
+  "aldeia_china-praca": {
+   "lugar": "aldeia_china/praca (dia)",
+   "prompt": "the main square of an ancient Chinese village with tiled roofs and red lanterns, in daylight",
+   "seed": 143
+  },
+  "aldeia_china-casa": {
+   "lugar": "aldeia_china/casa (dia)",
+   "prompt": "inside a humble ancient Chinese family house with a wooden table, chairs and paper windows, in daylight",
+   "seed": 150
+  },
+  "mar_jangada-mar": {
+   "lugar": "mar_jangada/mar (dia)",
+   "prompt": "a dark rough sea with ancient warships, in daylight",
+   "seed": 157
+  },
+  "palacio_ceu-salao-noite": {
+   "lugar": "palacio_ceu/salao (noite)",
+   "prompt": "an imperial throne hall with a golden dragon throne on a raised platform, at night, blue moonlight and torches",
+   "seed": 164
+  }
+ }
+}

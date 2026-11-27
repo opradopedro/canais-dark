@@ -1,0 +1,1322 @@
+{
+ "formato": "Myth",
+ "tema": "mito",
+ "paleta": "china",
+ "piano": 0,
+ "origem": "gringa: China, Ne Zha 2 (2025) virou a maior bilheteria de animação da história (mais de US$ 2 bilhões) e o mito de Nezha segue viral no Douyin/Bilibili https://en.wikipedia.org/wiki/Ne_Zha_2 ; mito: Fengshen Yanyi (Investiture of the Gods, séc. XVI), caps. 12-14 https://en.wikipedia.org/wiki/Nezha",
+ "serie": "nezha",
+ "serie_titulo": "Nezha vs the Dragon King | Old Tales",
+ "partes": 5,
+ "tags": [
+  "old tales",
+  "mythology",
+  "chinese mythology",
+  "nezha",
+  "ne zha",
+  "investiture of the gods",
+  "dragon king",
+  "ancient china",
+  "story time"
+ ],
+ "codigo": "CL068",
+ "parte": 1,
+ "titulo": "He was born inside a ball of flesh 🔥 Nezha Part 1 #mythology #shorts",
+ "capa": "BORN AS A BALL OF FLESH",
+ "descripcion": "Lady Yin was pregnant for three and a half years. What came out was a ball of flesh, and her husband cut it open with a sword. Inside was Nezha.\n\n> Part 2: {when_next}.\nWould you have opened it?\n\nFrom the Chinese myth of Nezha as told in Fengshen Yanyi (Investiture of the Gods, 16th century), chapters 12 to 14. Other versions differ in details.\n#nezha #chinesemythology #mythology #nezha2 #shorts",
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 7,
+   "en": 0.3
+  },
+  {
+   "tipo": "golpe",
+   "linea": 19,
+   "en": 0.3
+  }
+ ],
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "nezha": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "coque",
+   "cabelo_cor": "#141010",
+   "roupa": "tunica",
+   "roupa_cor": "#b8282a"
+  },
+  "lijing": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "coque",
+   "cabelo_cor": "#1a1a1a",
+   "armadura": "#7a1c24",
+   "faixa": "#1a1a1a",
+   "elmo": "#3a3a40",
+   "barba_estilo": "chinesa",
+   "barba": "#1a1a1a"
+  },
+  "yin": {
+   "tipo": "humano",
+   "rosto_cor": "#9a6a44",
+   "cabelo": "coque",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#6a3a5a"
+  },
+  "taiyi": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "roupa_cor": "#e8e0d0",
+   "barba_estilo": "chinesa",
+   "barba": "#8a8a8a"
+  },
+  "aobing": {
+   "tipo": "humano",
+   "rosto_cor": "#b8865a",
+   "cabelo": "coque",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "tunica",
+   "roupa_cor": "#2a5a8a"
+  },
+  "aoguang": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "coque",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "tiara": true,
+   "roupa_cor": "#1f4a6a",
+   "barba_estilo": "chinesa",
+   "barba": "#8a8a8a"
+  },
+  "shiji": {
+   "tipo": "humano",
+   "rosto_cor": "#e8c49a",
+   "cabelo": "coque",
+   "cabelo_cor": "#2a1a10",
+   "roupa": "tunica",
+   "roupa_cor": "#d8d0c0"
+  },
+  "demonio": {
+   "tipo": "humano",
+   "rosto_cor": "#6a1414",
+   "membro": "#4a0e0e",
+   "roupa": "trapos",
+   "roupa_cor": "#1a0a0a",
+   "olhos": "vermelhos",
+   "cabelo": "careca"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "How does a seven-year-old boy end up at war with a *Dragon King*?",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.15,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "It starts with a pregnancy that lasted three and a half years.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "yin",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ancient China. Chentang Pass, a fortress by the sea.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-praca",
+    "cam": {
+     "z": [
+      1.12,
+      1.26
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "General Li Jing's wife, Lady Yin, is expecting their third son.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "yin",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Months pass. Then years. The baby never comes.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "yin",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "fato",
+     "titulo": "Pregnancy",
+     "valor": "3.5 years",
+     "sub": "in the myth",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "One night, Lady Yin gives birth, and the room fills with red light.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "yin",
+      "pose": "deitado",
+      "rosto": "choque",
+      "v": 0.8,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "There's no baby. Just a glowing ball of *flesh*, spinning on the floor.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "lutar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Li Jing thinks it's a demon. He draws his sword and cuts it in half.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "lijing",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": "espada",
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Out jumps a boy, laughing, with a golden ring and a red sash.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-casa-noite",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "pular",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "lijing",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The next day, an old Taoist master knocks at the gate.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-praca",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "taiyi",
+      "pose": "andar",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Taiyi Zhenren. He names the boy Nezha and takes him as his student.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "aldeia_china-praca",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "taiyi",
+      "pose": "apontar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Stay, because seven years later, Nezha finds out what they do.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "correr",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The hottest summer anyone remembers. Nezha sneaks to the river mouth.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "correr",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He jumps in and swirls his red sash to cool off.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "pular",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "But that sash is no ordinary cloth. Every swirl shakes the whole sea.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Deep below, the Crystal Palace of the Dragon King starts to *crack*.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-salao-noite",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "aoguang",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ],
+    "cartao": {
+     "tipo": "nome",
+     "titulo": "Ao Guang",
+     "sub": "Dragon King of the East Sea",
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "texto": "The Dragon King sends his guard to see who dares.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "palacio_ceu-salao-noite",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "aoguang",
+      "pose": "apontar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.36
+     },
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A yaksha. A horned sea demon with an axe, rising out of the waves.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.36
+     },
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He swings at the boy. Nezha doesn't even step back.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.36
+     },
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "He throws the ring, and it hits like a falling mountain.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.3,
+      1.15
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "golpe",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.36
+     },
+     {
+      "id": "demonio",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.35,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "The yaksha sinks, dead, before he hits the water.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Now the sea is boiling, and the Dragon King's own son is coming.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.32
+     },
+     {
+      "id": "aobing",
+      "pose": "parado",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Would you run, or fight? Part two, {when_next}.",
+   "pausa": 0.4,
+   "cena": {
+    "fundo": "mar_jangada-mar-tempestade",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "chuva"
+    ],
+    "atores": [
+     {
+      "id": "nezha",
+      "pose": "lutar",
+      "rosto": "raiva",
+      "v": 0.93,
+      "esc": 1.0,
+      "arma": false,
+      "u": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "mundo": "cl-nezha",
+ "elenco_3d": {
+  "nezha": {
+   "semente": 6801,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "cabelo_cor": "#141010",
+   "roupa": "chines",
+   "camisa": "#b8282a"
+  },
+  "lijing": {
+   "semente": 6802,
+   "corpo": "forte",
+   "cabelo": "longo",
+   "roupa": "soldado_china",
+   "acessorio": "barba"
+  },
+  "yin": {
+   "semente": 6803,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "chines",
+   "camisa": "#6a3a5a"
+  },
+  "taiyi": {
+   "semente": 6804,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "chines",
+   "camisa": "#e8e0d0",
+   "acessorio": "barba"
+  },
+  "aobing": {
+   "semente": 6805,
+   "corpo": "magro",
+   "cabelo": "longo",
+   "roupa": "chines",
+   "camisa": "#2a5a8a"
+  },
+  "aoguang": {
+   "semente": 6806,
+   "corpo": "idoso",
+   "cabelo": "longo",
+   "roupa": "rei",
+   "camisa": "#1f4a6a",
+   "acessorio": "barba"
+  },
+  "shiji": {
+   "semente": 6807,
+   "corpo": "medio",
+   "cabelo": "longo",
+   "roupa": "chines",
+   "camisa": "#d8d0c0"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "yin",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Walking_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     },
+     {
+      "id": "yin",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "yin",
+      "acao": "Idle_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "yin",
+      "acao": "Lie_Idle",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "lijing",
+      "acao": "Melee_1H_Attack_Chop",
+      "rosto": "bravo",
+      "segura": "espada"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Jump_Full_Short",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "lijing",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "taiyi",
+      "acao": "Walking_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "aldeia_china",
+    "marca": "praca",
+    "plano": "ombro",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "taiyi",
+      "acao": "Interact",
+      "rosto": "sorriso"
+     },
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "auto",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Running_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "medio",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Running_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "baixo",
+    "luz": "dia",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Jump_Full_Long",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "auto",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "aoguang",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "palacio_ceu",
+    "marca": "salao",
+    "plano": "medio",
+    "luz": "noite",
+    "atores": [
+     {
+      "id": "aoguang",
+      "acao": "Interact",
+      "rosto": "bravo"
+     }
+    ],
+    "criatura": {
+     "tipo": "coisa_com_chifres",
+     "marca": "salao"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ],
+    "criatura": {
+     "tipo": "coisa_com_chifres",
+     "marca": "mar"
+    }
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Dodge_Left",
+      "rosto": "bravo"
+     }
+    ],
+    "criatura": {
+     "tipo": "coisa_com_chifres",
+     "marca": "mar"
+    }
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Melee_1H_Attack_Jump_Chop",
+      "rosto": "bravo"
+     }
+    ],
+    "criatura": {
+     "tipo": "coisa_com_chifres",
+     "marca": "mar"
+    }
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "baixo",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "close",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     },
+     {
+      "id": "aobing",
+      "acao": "Idle_A",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 22,
+   "cena": {
+    "cenario": "mar_jangada",
+    "marca": "mar",
+    "plano": "medio",
+    "luz": "tempestade",
+    "atores": [
+     {
+      "id": "nezha",
+      "acao": "Melee_Unarmed_Idle",
+      "rosto": "bravo"
+     }
+    ]
+   }
+  }
+ ],
+ "gancho_visual": true
+}
