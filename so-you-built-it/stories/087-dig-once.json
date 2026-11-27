@@ -1,0 +1,405 @@
+{
+ "codigo": "YB087",
+ "formato": "Evolucao",
+ "origem": "autoral (por que abrem a mesma rua várias vezes: redes enterradas, mapa de faixas por rede, poços de visita, registros e a regra 'dig once')",
+ "titulo": "You built a street. Then everyone dug it up. 🚧 #engineering #shorts",
+ "capa": "YOU BUILT A STREET",
+ "descripcion": "Water, sewer, storm drains, power and internet. Every crew digs its own trench, every patch gets weaker, and one day someone digs right through the water main. Here's how cities stop it.\n\nWhat should we build next?\n\n#engineering #city #infrastructure #howitworks #shorts",
+ "tags": [
+  "engineering",
+  "city",
+  "road",
+  "utilities",
+  "infrastructure",
+  "civil engineering",
+  "how it works",
+  "shorts"
+ ],
+ "destaque": [
+  "brand new",
+  "water",
+  "sewer",
+  "storm drains",
+  "weaker",
+  "potholes",
+  "nobody knows",
+  "water main",
+  "map",
+  "own lane",
+  "shafts",
+  "valves",
+  "same week",
+  "dig once",
+  "street"
+ ],
+ "mundo": "cidade",
+ "autor": "claude",
+ "lineas": [
+  {
+   "texto": "Your city street is brand new, smooth asphalt from curb to curb.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then the water company needs a pipe, so they dig it up.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "They patch it. Six months later, the sewer crew digs it up again.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then storm drains. Then power cables. Then internet.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Every patch is weaker than the road around it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Rain gets into the seams, and potholes open along every trench.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And nobody knows exactly where the old pipes are.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "One day, a crew digs right through the water main.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you draw a map, and give every pipe its own lane and its own depth.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Water on one side, sewer on the other, storm drain in the middle.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "You add shafts with round lids, so crews can reach the pipes without digging.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And valves, so one repair shuts off one block, not the whole street.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Finally, a rule. Every company digs in the same week, before the new asphalt goes down.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then nobody touches that street for five years.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just stopped your street from being dug up. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "geral",
+    "rotulo": "BRAND NEW",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "agua": 1,
+    "vala": [
+     0,
+     0.2
+    ],
+    "rotulo": "DIG #1",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "agua": 1,
+    "esgoto": 1,
+    "vala": [
+     0,
+     0.2
+    ],
+    "rotulo": "DIG #2",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "agua": 1,
+    "esgoto": 1,
+    "galeria": "pequena",
+    "boca": 1,
+    "vala": [
+     0,
+     0.2
+    ],
+    "rotulo": "DIG #3",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "agua": 1,
+    "esgoto": 1,
+    "galeria": "pequena",
+    "boca": 1,
+    "chuva": 0.5
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "agua": 1,
+    "esgoto": 1,
+    "galeria": "pequena",
+    "boca": 1,
+    "chuva": 1,
+    "buraco": [
+     0,
+     0.3
+    ],
+    "rotulo": "POTHOLES",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "agua": 1,
+    "esgoto": 1,
+    "galeria": "pequena",
+    "boca": 1
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "cano",
+    "agua": 1,
+    "esgoto": 1,
+    "galeria": "pequena",
+    "estoura": [
+     0,
+     1
+    ],
+    "rotulo": "OOPS",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "agua": 1,
+    "esgoto": 1,
+    "galeria": "pequena",
+    "boca": 1,
+    "rotulo": "UTILITY MAP",
+    "cor": "green",
+    "marcas": [
+     {
+      "t": "Sewer",
+      "x": -3.2,
+      "y": -6
+     },
+     {
+      "t": "Storm",
+      "x": 0,
+      "y": -3.6
+     },
+     {
+      "t": "Water",
+      "x": 3.4,
+      "y": -2.6
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "agua": 1,
+    "esgoto": 1,
+    "galeria": "pequena",
+    "boca": 1
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "agua": 1,
+    "esgoto": 1,
+    "galeria": "pequena",
+    "boca": 1,
+    "pv": 1,
+    "rotulo": "ACCESS",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "cano",
+    "agua": 1,
+    "esgoto": 1,
+    "galeria": "pequena",
+    "registro": 1,
+    "rotulo": "VALVES",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "agua": 1,
+    "esgoto": 1,
+    "galeria": "pequena",
+    "boca": 1,
+    "pv": 1,
+    "vala": [
+     0,
+     0.2
+    ],
+    "rotulo": "DIG ONCE",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "geral",
+    "agua": 1,
+    "esgoto": 1,
+    "galeria": "pequena",
+    "boca": 1,
+    "pv": 1
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "geral",
+    "agua": 1,
+    "esgoto": 1,
+    "galeria": "pequena",
+    "boca": 1,
+    "pv": 1
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 1,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 3,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 12,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 14,
+   "en": 0.05
+  }
+ ]
+}

@@ -1,0 +1,351 @@
+{
+ "codigo": "YB084",
+ "formato": "Curiosidade",
+ "origem": "gringa: Tailândia, cratera de 50 m em Bangkok (Samsen Road, em frente ao Hospital Vajira, 24/09/2025), ligada à obra da estação do metrô Purple Line https://www.khaosodenglish.com/news/2025/09/24/bangkok-governor-reveals-massive-sinkhole-caused-by-subway-construction/ ; https://www.enr.com/articles/61439-bangkok-sinkhole-forces-halt-of-22b-subway-extension",
+ "titulo": "The Bangkok street that fell 50 meters 🇹🇭 #engineering #shorts",
+ "capa": "50 METERS DOWN",
+ "descripcion": "In September 2025, a street in front of a Bangkok hospital collapsed into a hole 50 meters deep. The cause was hiding underground: soft wet soil draining into a subway dig.\n\nWhat should we explain next?\n\n#engineering #sinkhole #bangkok #subway #shorts",
+ "tags": [
+  "engineering",
+  "sinkhole",
+  "bangkok",
+  "subway",
+  "groundwater",
+  "civil engineering",
+  "how it works",
+  "shorts"
+ ],
+ "destaque": [
+  "fifty meters",
+  "hospital",
+  "vanish",
+  "soft clay",
+  "subway",
+  "leaking",
+  "running sand",
+  "drained",
+  "hiding",
+  "water main",
+  "all at once",
+  "concrete",
+  "groundwater",
+  "can't see"
+ ],
+ "mundo": "cidade",
+ "autor": "claude",
+ "lineas": [
+  {
+   "texto": "In September twenty twenty-five, a street in Bangkok fell into a hole fifty meters deep.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It swallowed power poles, cars and the road right outside a hospital.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Nobody was hurt. But how does a solid street just vanish?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Bangkok is built on soft clay and sand, soaked with water.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Right next to that street, crews were digging a new subway station.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Deep down, water and wet sand started leaking into the dig.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Sand mixed with water is called running sand. It flows like a liquid.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So hour after hour, soil drained out from under the road.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "On top, the asphalt still looked fine. It was hiding an empty space.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then a water main under the street broke, and added even more water.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The thin crust of road gave way, all at once.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Crews poured concrete and sand into the hole, and promised the road back in two weeks.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's why subway builders watch the groundwater day and night.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Because the scariest holes start where you can't see them.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "geral",
+    "buraco": [
+     0,
+     1
+    ],
+    "rotulo": "BANGKOK, 2025",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 3,
+    "foco": "rua",
+    "buraco": 1
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "buraco": 1,
+    "rotulo": "HOW?",
+    "cor": "white"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "lencol": -2,
+    "marcas": [
+     {
+      "t": "Soft clay",
+      "x": 0,
+      "y": -3
+     },
+     {
+      "t": "Wet sand",
+      "x": 0,
+      "y": -7
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "metro",
+    "vala": [
+     0,
+     1
+    ],
+    "paredes": 1,
+    "escoras": 2,
+    "lencol": -2,
+    "rotulo": "SUBWAY DIG",
+    "cor": "white"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "metro",
+    "vala": 1,
+    "paredes": 1,
+    "escoras": 2,
+    "lencol": -2,
+    "infiltra": [
+     0,
+     1
+    ],
+    "rotulo": "LEAK",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "metro",
+    "vala": 1,
+    "paredes": 1,
+    "escoras": 2,
+    "lencol": -2,
+    "infiltra": 1
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "vala": 1,
+    "paredes": 1,
+    "lencol": -2,
+    "infiltra": 1,
+    "buraco": [
+     0,
+     0.2
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "buraco": 0.2
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "cano",
+    "agua": 1,
+    "estoura": [
+     0,
+     1
+    ],
+    "vaza": 1,
+    "rotulo": "WATER MAIN",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "agua": 1,
+    "buraco": [
+     0.2,
+     1
+    ],
+    "rotulo": "COLLAPSE",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "rua",
+    "buraco": [
+     1,
+     0
+    ],
+    "rotulo": "FILLED",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "metro",
+    "vala": 1,
+    "paredes": 1,
+    "escoras": 3,
+    "lencol": -2,
+    "rotulo": "WATCH THE WATER",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "sub",
+    "lencol": -2
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "foco": "geral"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 0,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 11,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 12,
+   "en": 0.6
+  }
+ ]
+}

@@ -1,0 +1,314 @@
+{
+ "codigo": "YB086",
+ "formato": "Curiosidade",
+ "origem": "autoral (por que a pressão do chuveiro cai às 7 da manhã: pico de consumo, perda de carga na adutora, reservatórios elevados que seguram o pico)",
+ "titulo": "Why your shower gets weak at 7 AM 🚿 #engineering #shorts",
+ "capa": "WHY SO WEAK?",
+ "descripcion": "At 7 AM, half your city opens a tap at the same time. Here's what happens to the water in the pipe under your street, and the trick cities use to fight it.\n\nWhat should we explain next?\n\n#engineering #water #plumbing #howitworks #shorts",
+ "tags": [
+  "engineering",
+  "water pressure",
+  "shower",
+  "plumbing",
+  "water main",
+  "city",
+  "how it works",
+  "shorts"
+ ],
+ "destaque": [
+  "seven",
+  "weak",
+  "main",
+  "pushes",
+  "same time",
+  "friction",
+  "far end",
+  "water towers",
+  "night",
+  "gravity",
+  "peak",
+  "pumps",
+  "now you know"
+ ],
+ "mundo": "cidade",
+ "autor": "claude",
+ "lineas": [
+  {
+   "texto": "Why does your shower get weak at seven in the morning?",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It's not your shower. It's the pipe under your street.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Water reaches your home through a big pipe called a water main.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "A pump far away pushes it, and that push is the pressure you feel.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "At three in the morning, almost nobody uses water, so the push is strong.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But at seven, thousands of people shower, flush and make coffee at the same time.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The faster water moves, the more it rubs against the pipe walls.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That friction eats the pressure, a little more every block.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So the houses at the far end of the line feel it first.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "That's why cities build water towers and hilltop tanks.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "At night, pumps fill them up while water is cheap and nobody needs it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "In the morning rush, gravity pushes that stored water back into the pipes.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "The tank covers the peak, so the pumps don't have to.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "And if your shower is still weak, your house might simply be too far, or too high.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now you know.",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "agua": 1,
+    "foco": "rua",
+    "rotulo": "7 AM",
+    "cor": "white"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "agua": 1,
+    "foco": "cano",
+    "pressao": 0.8
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "agua": 1,
+    "foco": "cano",
+    "pressao": 1,
+    "rotulo": "WATER MAIN",
+    "cor": "white"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "agua": 1,
+    "foco": "cano",
+    "pressao": 1
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 0,
+    "agua": 1,
+    "foco": "sub",
+    "pressao": 1,
+    "rotulo": "3 AM",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 5,
+    "agua": 1,
+    "foco": "rua",
+    "pressao": [
+     1,
+     0.4
+    ],
+    "engarrafa": 1,
+    "rotulo": "7 AM",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "agua": 1,
+    "foco": "cano",
+    "pressao": 0.4
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "agua": 1,
+    "foco": "cano",
+    "pressao": [
+     0.5,
+     0.2
+    ],
+    "rotulo": "FRICTION",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "agua": 1,
+    "foco": "sub",
+    "pressao": 0.2
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "agua": 1,
+    "foco": "geral",
+    "pressao": 0.6,
+    "rotulo": "WATER TOWERS",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 0,
+    "agua": 1,
+    "foco": "sub",
+    "pressao": 1
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "agua": 1,
+    "foco": "cano",
+    "pressao": [
+     0.4,
+     0.8
+    ],
+    "rotulo": "GRAVITY",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "agua": 1,
+    "foco": "cano",
+    "pressao": 0.8,
+    "anel": 1
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "agua": 1,
+    "foco": "rua",
+    "pressao": 0.5
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "cidade",
+   "p": {
+    "meiofio": 1,
+    "carros": 2,
+    "agua": 1,
+    "foco": "geral"
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "certo",
+   "linea": 4,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 7,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 11,
+   "en": 0.6
+  }
+ ]
+}

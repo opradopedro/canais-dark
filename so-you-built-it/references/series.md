@@ -100,3 +100,13 @@ Estoque antes: 20 roteiros prontos (9 Evolução até YB081, 11 Curiosidades) + 
 | YB082 | Evolucao | rede de água da cidade (poços secos, adutora, pressão baixa no fim, bombas, estouro, anel, registros, vazamento e buraco, sensores e pressão menor à noite) (cidade: agua, pressao, estoura, anel, registro, vaza, buraco) | gringa: México, Cidade do México perde 30-40% da água em vazamentos https://npr.org/2024/03/08/1234928040/mexico-city-water-problems | FEITO |
 | YB083 | Curiosidade | por que tampa de bueiro é redonda (largura constante, quadrado cai pela diagonal, rolar, poço redondo mais forte) (cidade: pv) | autoral https://en.wikipedia.org/wiki/Manhole_cover | FEITO |
 Evolução continua o gargalo: com YB082 são 10 (até ~06/12). Próximas no `cidade` sem peça nova são poucas; para mais, mundo novo (oficina/fábrica do PLANO-KIRO-MUNDOS.md).
+
+## Semana de 09/12 a 11/12/2026 (YB084-YB087) — por: claude (rotina de sexta, 27/11)
+Estoque antes: 16 roteiros prontos (7 Evolução até YB082, 9 Curiosidades) + 6 agendados até 29/11 = até ~07/12. Sem mundo novo: tudo em `terreno` e `cidade` com peças que já existem; prévia pedida em .github/previa.txt. 1 gringa, 3 autorais (a semana anterior teve 1 gringa e 1 autoral; o resto do estoque é quase todo gringa).
+| Código | Formato | Tema | Origem | Estado |
+|---|---|---|---|---|
+| YB084 | Curiosidade | cratera de 50 m em Bangkok: argila mole, obra do metrô, areia que escorre, adutora rompida, a rua cai de uma vez (cidade: buraco, vala, paredes, escoras, lencol, infiltra, estoura) | gringa: Tailândia https://www.khaosodenglish.com/news/2025/09/24/bangkok-governor-reveals-massive-sinkhole-caused-by-subway-construction/ | FEITO |
+| YB085 | Evolucao | calçada: placa única racha, retração, juntas de controle, árvore levanta, barreira de raiz, gelo, caimento de 2% (terreno: calcada, trinca, junta, raiz, manta, chuva) | autoral | FEITO |
+| YB086 | Curiosidade | por que o chuveiro fica fraco às 7 h: pico de consumo, atrito na adutora, ponta da rede, caixas d'água elevadas enchem de noite (cidade: agua, pressao, anel) | autoral | FEITO |
+| YB087 | Evolucao | a rua aberta 5 vezes: água, esgoto, galeria, buracos nos remendos, escavadeira fura a adutora, mapa de faixas, poços de visita, registros, regra "dig once" (cidade: vala, agua, esgoto, galeria, boca, pv, registro, estoura, buraco) | autoral | FEITO |
+Evolução segue o gargalo (9 na fila com estas). Próximo passo continua sendo mundo novo (oficina/fábrica do PLANO-KIRO-MUNDOS.md).

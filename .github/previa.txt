@@ -1,2 +1,4 @@
-so-you-built-it/stories/082-city-water-supply.json
-so-you-built-it/stories/083-manhole-round.json
+so-you-built-it/stories/084-bangkok-sinkhole.json
+so-you-built-it/stories/085-sidewalk.json
+so-you-built-it/stories/086-shower-pressure.json
+so-you-built-it/stories/087-dig-once.json

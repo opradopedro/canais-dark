@@ -1,0 +1,335 @@
+{
+ "codigo": "YB085",
+ "formato": "Evolucao",
+ "origem": "autoral (calçada: retração do concreto, juntas de controle, raiz de árvore e barreira de raiz, caimento para a rua)",
+ "titulo": "You built a sidewalk. It cracked. 🧱 #engineering #shorts",
+ "capa": "YOU BUILT A SIDEWALK",
+ "descripcion": "One long slab, random cracks, grooves that decide where it breaks, a tree that lifts it, a plastic wall for the roots and a tiny slope for the rain, one problem at a time.\n\nWhat should we build next?\n\n#engineering #concrete #sidewalk #howitworks #shorts",
+ "tags": [
+  "engineering",
+  "sidewalk",
+  "concrete",
+  "control joints",
+  "tree roots",
+  "civil engineering",
+  "how it works",
+  "shorts"
+ ],
+ "destaque": [
+  "sidewalk",
+  "one slab",
+  "cracks",
+  "shrinks",
+  "tears",
+  "grooves",
+  "control joints",
+  "hide",
+  "shade",
+  "roots",
+  "trip",
+  "root barrier",
+  "downward",
+  "slope",
+  "ice",
+  "sidewalk"
+ ],
+ "mundo": "terreno",
+ "autor": "claude",
+ "lineas": [
+  {
+   "texto": "Your street needs a sidewalk, so you pour one long slab of concrete.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It looks perfect. For about a month.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then cracks shoot across it in random places.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Concrete shrinks as it dries, and again on every cold night.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "One long slab can't move, so it tears itself apart.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you cut grooves every few feet, called control joints.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It still cracks, but now it cracks inside the grooves, where you can't see it.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Then you plant a tree next to it for shade.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Ten years later, its roots grow right under the slab and push it up.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "One edge sticks up a few centimeters, and people trip on it every day.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you dig a plastic wall into the soil, a root barrier.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "It sends the roots downward, away from the concrete.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "But rain sits on the flat slab, and in winter it turns to ice.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "So you tilt the slab, just two percent, toward the street.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Now the water runs off before it can freeze.",
+   "pausa": 0.3
+  },
+  {
+   "texto": "Congratulations! You just built a sidewalk. What should we build next?",
+   "pausa": 0.3
+  }
+ ],
+ "cenas": [
+  {
+   "linea": 0,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "rotulo": "ONE SLAB",
+    "cor": "white"
+   }
+  },
+  {
+   "linea": 1,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1
+   }
+  },
+  {
+   "linea": 2,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "trinca": [
+     0,
+     1
+    ],
+    "rotulo": "CRACKS",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 3,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "trinca": 1
+   }
+  },
+  {
+   "linea": 4,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "trinca": 1,
+    "rotulo": "SHRINKS",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 5,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "rotulo": "CONTROL JOINTS",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 6,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1
+   }
+  },
+  {
+   "linea": 7,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": 0,
+    "rotulo": "SHADE",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 8,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": [
+     0,
+     1
+    ],
+    "trinca": [
+     0,
+     1
+    ],
+    "rotulo": "ROOTS",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 9,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": 1,
+    "trinca": 1,
+    "rotulo": "TRIP!",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 10,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "raiz": 0,
+    "manta": 1,
+    "rotulo": "ROOT BARRIER",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 11,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "manta": 1
+   }
+  },
+  {
+   "linea": 12,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "manta": 1,
+    "chuva": 1,
+    "umido": 1,
+    "rotulo": "ICE",
+    "cor": "red"
+   }
+  },
+  {
+   "linea": 13,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "manta": 1,
+    "chuva": 1,
+    "rotulo": "2% SLOPE",
+    "cor": "green"
+   }
+  },
+  {
+   "linea": 14,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "manta": 1,
+    "chuva": 0.5
+   }
+  },
+  {
+   "linea": 15,
+   "comp": "terreno",
+   "p": {
+    "foco": "calcada",
+    "calcada": 1,
+    "junta": 1,
+    "manta": 1
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "erro",
+   "linea": 2,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 5,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 8,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 9,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 10,
+   "en": 0.6
+  },
+  {
+   "tipo": "erro",
+   "linea": 12,
+   "en": 0.6
+  },
+  {
+   "tipo": "certo",
+   "linea": 13,
+   "en": 0.6
+  },
+  {
+   "tipo": "tada",
+   "linea": 15,
+   "en": 0.05
+  }
+ ]
+}
