@@ -1,0 +1,1218 @@
+{
+ "formato": "Regla",
+ "origem": "autoral",
+ "serie": "perro-velorio",
+ "serie_titulo": "El perro del velorio | Hora Muerta",
+ "partes": 2,
+ "tags": [
+  "historias de terror",
+  "relatos de terror",
+  "terror",
+  "creepypasta",
+  "shorts de terror",
+  "miedo",
+  "relatos cortos de terror",
+  "leyenda",
+  "velorio",
+  "perro negro",
+  "oaxaca",
+  "novenario"
+ ],
+ "codigo": "HM067",
+ "parte": 1,
+ "titulo": "Nunca le des de comer al perro de un velorio 🐕 Parte 1 #terror #shorts",
+ "capa": "NO LO ALIMENTES",
+ "descripcion": "En el velorio de su abuelo, Toño se quedó solo con el ataúd a las tres de la mañana. Entonces entró un perro negro y se sentó junto al muerto.\n\n▶ Parte 2: mañana, {fecha_siguiente}.\n¿Tú le habrías dado de comer?\n\nHistoria de ficción narrada. Nueva historia todos los días.\n#terror #historiasdeterror #relatosdeterror #relatoscortos",
+ "eventos": [
+  {
+   "tipo": "golpe",
+   "linea": 11,
+   "en": 0.3
+  },
+  {
+   "tipo": "susto",
+   "linea": 21,
+   "en": "fin",
+   "mas": 0.05
+  }
+ ],
+ "autor": "claude",
+ "visual": "ilustrado",
+ "elenco": {
+  "tono": {
+   "tipo": "humano",
+   "rosto_cor": "#f2d6b2",
+   "cabelo": "curtinho",
+   "cabelo_cor": "#4a2a14",
+   "roupa": "jaqueta",
+   "roupa_cor": "#5a5040"
+  },
+  "chayo": {
+   "tipo": "humano",
+   "rosto_cor": "#d4a679",
+   "cabelo": "normal",
+   "cabelo_cor": "#8a8a8a",
+   "roupa": "tunica",
+   "roupa_cor": "#6a5a2a"
+  },
+  "cao": {
+   "tipo": "cao",
+   "pelo": "#141414",
+   "olhos_cor": "#ffd23a"
+  }
+ },
+ "lineas": [
+  {
+   "texto": "Cuando un perro negro entra a un *velorio*, alguien más se va.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.75,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "cao",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.38
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y casi siempre es el que le dio de comer.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Toño, de diecisiete, vela a su abuelo en un pueblo de Oaxaca.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tono",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Velas, cempasúchil y el ataúd en medio de la sala.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tono",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "chayo",
+      "pose": "parado",
+      "rosto": "triste",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Su abuela Chayo le da las reglas.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "chayo",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.32
+     },
+     {
+      "id": "tono",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Nunca dejes solo al muerto.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "chayo",
+      "pose": "apontar",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Si entra un perro negro, nadie le da de comer.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.45,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "chayo",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Si aúlla, cubre los espejos y no digas su nombre.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.45,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "chayo",
+      "pose": "apontar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Toño asiente. Piensa que son cosas de viejos.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tono",
+      "pose": "parado",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A las tres, todos se quedan dormidos.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.26,
+      1.12
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tono",
+      "pose": "parado",
+      "rosto": "calmo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Toño está solo. La puerta de la calle se abre.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-praca",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Entra un perro negro, flaco, con los ojos *amarillos*.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.5",
+     "flash@0.5"
+    ],
+    "atores": [
+     {
+      "id": "tono",
+      "pose": "lutar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Camina al ataúd y se sienta junto a él.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tono",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "cao",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "No ladra. Solo mira a Toño.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Quédate, porque Toño hace lo que nadie debe hacer.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.3,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tono",
+      "pose": "parado",
+      "rosto": "determinado",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Le da un pedazo de pan dulce de la mesa.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tono",
+      "pose": "agachar",
+      "rosto": "sorriso",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "cao",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "El perro lo come sin quitarle los ojos de encima.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tono",
+      "pose": "agachar",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Levanta la cabeza y aúlla. Largo.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.32,
+      1.2
+     ],
+     "x": 0.53,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tono",
+      "pose": "lutar",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Nadie despierta. Un espejo está sin tapar.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tono",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "En el espejo, el perro no está. Está su abuelo, sentado.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.5,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tono",
+      "pose": "parado",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "El perro habla con la voz de don Chema.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.2,
+      1.32
+     ],
+     "x": 0.5,
+     "y": 0.66
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.5,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": 1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Gracias, mijo. Ahora llévame contigo.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.6,
+      1.45
+     ],
+     "x": 0.53,
+     "y": 0.58
+    },
+    "fx": [
+     "escuro",
+     "tremor@0.3",
+     "flash@0.3",
+     "vermelho"
+    ],
+    "atores": [
+     {
+      "id": "tono",
+      "pose": "susto",
+      "rosto": "choque",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "cao",
+      "pose": "agachar",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": -1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "¿Tú lo habrías hecho? Parte dos, {dia_siguiente}.",
+   "pausa": 0.5,
+   "cena": {
+    "fundo": "vila-casa",
+    "cam": {
+     "z": [
+      1.15,
+      1.3
+     ],
+     "x": 0.53,
+     "y": 0.6
+    },
+    "fx": [
+     "escuro"
+    ],
+    "atores": [
+     {
+      "id": "tono",
+      "pose": "parado",
+      "rosto": "medo",
+      "v": 0.93,
+      "esc": 1.0,
+      "u": 0.36
+     },
+     {
+      "id": "cao",
+      "pose": "parado",
+      "rosto": "calmo",
+      "u": 0.7,
+      "v": 0.93,
+      "esc": 1.2,
+      "vira": -1
+     }
+    ]
+   }
+  }
+ ],
+ "mundo": "hm-perro-velorio",
+ "elenco_3d": {
+  "tono": {
+   "semente": 6711,
+   "corpo": "magro",
+   "cabelo": "curto",
+   "roupa": "casual"
+  },
+  "chayo": {
+   "semente": 6712,
+   "corpo": "idoso",
+   "cabelo": "grisalho",
+   "roupa": "vestido"
+  }
+ },
+ "cenas_3d": [
+  {
+   "linea": 0,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 1,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "interior_noite",
+    "atores": [],
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 2,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "Idle_B",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 3,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "auto",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     },
+     {
+      "id": "chayo",
+      "acao": "Idle_A",
+      "rosto": "triste"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 4,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "chayo",
+      "acao": "Interact",
+      "rosto": "desconfiado"
+     },
+     {
+      "id": "tono",
+      "acao": "Idle_A",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 5,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "chayo",
+      "acao": "Holding_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 6,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "chayo",
+      "acao": "Holding_B",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 7,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "ombro",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "chayo",
+      "acao": "Holding_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 8,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "interior_noite",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "Idle_B",
+      "rosto": "sorriso"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 9,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "auto",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "Sit_Chair_Idle",
+      "rosto": "neutro"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 10,
+   "cena": {
+    "cenario": "vila",
+    "marca": "praca",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [],
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "praca"
+    }
+   }
+  },
+  {
+   "linea": 11,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 12,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 13,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [],
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 14,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "ombro",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "Idle_A",
+      "rosto": "desconfiado"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 15,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "PickUp",
+      "rosto": "sorriso"
+     }
+    ],
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 16,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "Crouching",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 17,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "Dodge_Backward",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 18,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 19,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "Idle_A",
+      "rosto": "susto"
+     }
+    ]
+   }
+  },
+  {
+   "linea": 20,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "baixo",
+    "luz": "madrugada",
+    "atores": [],
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 21,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "close",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "Hit_A",
+      "rosto": "susto"
+     }
+    ],
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "casa"
+    }
+   }
+  },
+  {
+   "linea": 22,
+   "cena": {
+    "cenario": "vila",
+    "marca": "casa",
+    "plano": "medio",
+    "luz": "madrugada",
+    "atores": [
+     {
+      "id": "tono",
+      "acao": "Idle_A",
+      "rosto": "medo"
+     }
+    ],
+    "criatura": {
+     "tipo": "cao_negro",
+     "marca": "casa"
+    }
+   }
+  }
+ ],
+ "gancho_visual": true
+}

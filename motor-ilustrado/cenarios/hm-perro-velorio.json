@@ -1,0 +1,43 @@
+{
+ "mundo": "hm-perro-velorio",
+ "_regra": "um fundo por lugar (Pedro 13/11); gerado por converter_3d.py",
+ "estilo": "eerie horror story illustration, dark moody atmosphere, muted desaturated colors with cold blue shadows, realistic proportions, unsettling and lonely, mature adult tone, not childish",
+ "ordem": 53,
+ "cenarios": {
+  "vila-casa": {
+   "lugar": "vila/casa (noite)",
+   "prompt": "a humble adobe house in a village of Oaxaca, Mexico, set up for a wake: a wooden coffin on a table, many candles, orange cempasuchil flowers, a crucifix and a mirror on the wall, at night, dark blue moonlight, deep shadows",
+   "seed": 138
+  },
+  "vila-praca": {
+   "lugar": "vila/praca (noite)",
+   "prompt": "a narrow dirt street of a small village in Oaxaca, Mexico, adobe houses with wooden doors, one street lamp, at night, dark blue moonlight, deep shadows",
+   "seed": 145
+  },
+  "vila-casa-dia": {
+   "lugar": "vila/casa (dia)",
+   "prompt": "a humble adobe house in a village of Oaxaca, Mexico, set up for a wake: a wooden coffin on a table, many candles, orange cempasuchil flowers, a crucifix and a mirror on the wall, in pale overcast daylight",
+   "seed": 145
+  },
+  "cemiterio-entre_cruzes-dia": {
+   "lugar": "cemiterio/entre_cruzes (dia)",
+   "prompt": "a narrow path between old painted graves and wooden crosses with orange marigolds in a village cemetery in Oaxaca, Mexico, in pale overcast daylight",
+   "seed": 152
+  },
+  "cemiterio-entre_cruzes": {
+   "lugar": "cemiterio/entre_cruzes (noite)",
+   "prompt": "a narrow path between old painted graves and wooden crosses with orange marigolds in a village cemetery in Oaxaca, Mexico, at night, dark blue moonlight, deep shadows",
+   "seed": 166
+  },
+  "cemiterio-fundo": {
+   "lugar": "cemiterio/fundo (noite)",
+   "prompt": "a freshly covered grave of loose dirt with a wooden cross and flowers at the back of a village cemetery in Oaxaca, Mexico, at night, dark blue moonlight, deep shadows",
+   "seed": 173
+  },
+  "vila-praca-dia": {
+   "lugar": "vila/praca (dia)",
+   "prompt": "a narrow dirt street of a small village in Oaxaca, Mexico, adobe houses with wooden doors, one street lamp, in pale overcast daylight",
+   "seed": 180
+  }
+ }
+}
