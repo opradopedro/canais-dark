@@ -548,7 +548,20 @@
    "postId": "012a8a2a-a52d-4dd6-99ad-9a2ee7dbe6ef",
    "youtube": "GiH0mY4lKZI",
    "canal": "yb",
-   "quando": "2026-11-26T23:13:06+00:00"
+   "quando": "2026-11-26T23:13:06+00:00",
+   "tiktok": "https://www.tiktok.com/@so.you.built.it/video/7712622048299846930"
+  },
+  "HM054": {
+   "postId": "1cb49ea6-c75b-45ce-91c7-feba47170787",
+   "youtube": "MVR8SAyprak",
+   "canal": "hm",
+   "quando": "2026-11-27T00:12:43+00:00"
+  },
+  "SV045": {
+   "postId": "8a1caacf-d08c-4c0b-993f-e1067b209b40",
+   "youtube": "34nOp7IvwNc",
+   "canal": "sv",
+   "quando": "2026-11-27T00:12:43+00:00"
   }
  },
  "ignorar_youtube": {
