@@ -838,5 +838,75 @@
 "views": 77859
 }
 }
+},
+"2026-11-27": {
+"cl": {
+"tt": {
+"comentarios": 2,
+"compart": 1,
+"curtidas": 74,
+"posts": 14,
+"seguidores": 4,
+"views": 2379
+},
+"yt": {
+"comentarios": 1,
+"inscritos": 3,
+"likes": 25,
+"videos": 26,
+"views": 3420
+}
+},
+"hm": {
+"tt": {
+"comentarios": 2,
+"compart": 3,
+"curtidas": 56,
+"posts": 14,
+"seguidores": 12,
+"views": 1283
+},
+"yt": {
+"comentarios": 10,
+"inscritos": 67,
+"likes": 294,
+"videos": 39,
+"views": 14526
+}
+},
+"sv": {
+"tt": {
+"comentarios": 0,
+"compart": 1,
+"curtidas": 12,
+"posts": 9,
+"seguidores": 0,
+"views": 430
+},
+"yt": {
+"comentarios": 2,
+"inscritos": 27,
+"likes": 118,
+"videos": 27,
+"views": 7628
+}
+},
+"yb": {
+"tt": {
+"comentarios": 5,
+"compart": 3,
+"curtidas": 131,
+"posts": 27,
+"seguidores": 5,
+"views": 3749
+},
+"yt": {
+"comentarios": 26,
+"inscritos": 94,
+"likes": 1344,
+"videos": 70,
+"views": 77859
+}
+}
 }
 }
