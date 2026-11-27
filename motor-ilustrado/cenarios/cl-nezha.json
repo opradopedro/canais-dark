@@ -6,32 +6,32 @@
  "cenarios": {
   "mar_jangada-mar-tempestade": {
    "lugar": "mar_jangada/mar (tempestade)",
-   "prompt": "a dark rough sea with ancient warships, under a dark stormy sky",
+   "prompt": "a rocky ancient Chinese coast where a river mouth meets the wild East Sea, huge waves, under a dark stormy sky",
    "seed": 129
   },
   "aldeia_china-casa-noite": {
    "lugar": "aldeia_china/casa (noite)",
-   "prompt": "inside a humble ancient Chinese family house with a wooden table, chairs and paper windows, at night, blue moonlight and torches",
+   "prompt": "inside the grand wooden hall of an ancient Chinese general's mansion at a fortress pass, red pillars, lanterns and weapon racks, at night, blue moonlight and torches",
    "seed": 136
   },
   "aldeia_china-praca": {
    "lugar": "aldeia_china/praca (dia)",
-   "prompt": "the main square of an ancient Chinese village with tiled roofs and red lanterns, in daylight",
+   "prompt": "the fortress town of Chentang Pass in ancient China, thick stone walls and a gate tower facing the sea, in daylight",
    "seed": 143
   },
   "aldeia_china-casa": {
    "lugar": "aldeia_china/casa (dia)",
-   "prompt": "inside a humble ancient Chinese family house with a wooden table, chairs and paper windows, in daylight",
+   "prompt": "inside the grand wooden hall of an ancient Chinese general's mansion at a fortress pass, red pillars, lanterns and weapon racks, in daylight",
    "seed": 150
   },
   "mar_jangada-mar": {
    "lugar": "mar_jangada/mar (dia)",
-   "prompt": "a dark rough sea with ancient warships, in daylight",
+   "prompt": "a rocky ancient Chinese coast where a river mouth meets the wild East Sea, huge waves, in daylight",
    "seed": 157
   },
   "palacio_ceu-salao-noite": {
    "lugar": "palacio_ceu/salao (noite)",
-   "prompt": "an imperial throne hall with a golden dragon throne on a raised platform, at night, blue moonlight and torches",
+   "prompt": "the underwater Crystal Palace of the Dragon King, a throne hall of glowing crystal, coral pillars, deep blue water light, at night, blue moonlight and torches",
    "seed": 164
   }
  }
