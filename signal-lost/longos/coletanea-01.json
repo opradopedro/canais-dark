@@ -1,0 +1,76 @@
+{
+ "titulo": "3 true scary stories to listen to in the dark",
+ "descricao": "1. Rules for the Night Groundskeeper\n2. Footprints in the Snow\n3. Don't Feed the Black Dog",
+ "capa_texto": "3 TRUE SCARY STORIES",
+ "series": [
+  "night-groundskeeper",
+  "footprints-snow",
+  "black-dog"
+ ],
+ "partes": [
+  {
+   "codigo": "SV038",
+   "roteiro": "signal-lost/stories/038-night-groundskeeper-1.json",
+   "youtube": "egghjZ7JYVU",
+   "estado": "publicado",
+   "rotulo": "Rules for the Night Groundskeeper"
+  },
+  {
+   "codigo": "SV039",
+   "roteiro": "signal-lost/stories/039-night-groundskeeper-2.json",
+   "youtube": "UgYJ8qvWatQ",
+   "estado": "publicado",
+   "rotulo": ""
+  },
+  {
+   "codigo": "SV040",
+   "roteiro": "signal-lost/stories/040-night-groundskeeper-3.json",
+   "youtube": "lHEJIgWmfQM",
+   "estado": "publicado",
+   "rotulo": ""
+  },
+  {
+   "codigo": "SV041",
+   "roteiro": "signal-lost/stories/041-footprints-snow-1.json",
+   "youtube": "gzebKCkHirg",
+   "estado": "publicado",
+   "rotulo": "Footprints in the Snow"
+  },
+  {
+   "codigo": "SV042",
+   "roteiro": "signal-lost/stories/042-footprints-snow-2.json",
+   "youtube": "G2KHQrXabro",
+   "estado": "publicado",
+   "rotulo": ""
+  },
+  {
+   "codigo": "SV043",
+   "roteiro": "signal-lost/stories/043-footprints-snow-3.json",
+   "youtube": "ekiDoa8uufg",
+   "estado": "publicado",
+   "rotulo": ""
+  },
+  {
+   "codigo": "SV044",
+   "roteiro": "signal-lost/stories/044-black-dog-1.json",
+   "youtube": "699tUerPSuc",
+   "estado": "publicado",
+   "rotulo": "Don't Feed the Black Dog"
+  },
+  {
+   "codigo": "SV045",
+   "roteiro": "signal-lost/stories/045-black-dog-2.json",
+   "youtube": "34nOp7IvwNc",
+   "estado": "publicado",
+   "rotulo": ""
+  },
+  {
+   "codigo": "SV046",
+   "roteiro": "signal-lost/stories/046-black-dog-3.json",
+   "youtube": "kZYzjNRw41g",
+   "estado": "publicado",
+   "rotulo": ""
+  }
+ ],
+ "liberar_em": "2026-11-28T00:40:48Z"
+}
